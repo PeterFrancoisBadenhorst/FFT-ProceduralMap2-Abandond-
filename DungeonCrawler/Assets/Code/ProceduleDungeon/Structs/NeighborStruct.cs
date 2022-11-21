@@ -9,6 +9,7 @@ namespace Assets.Code.ProceduleDungeon.Structs
 {
     public struct NeighborStruct
     {
+        public GameObject OriginObject { get; set; }
         public GameObject NorthNeighbor { get; set; }
         public GameObject EastNeighbor { get; set; }
         public GameObject SouthNeighbor { get; set; }

@@ -3,6 +3,7 @@ using Assets.Code.ProceduleDungeon.Utilities;
 using Unity.VisualScripting;
 using System.Collections.Generic;
 using Assets.Code.ProceduleDungeon.Mono.Behaviors;
+using Assets.Code.ProceduleDungeon.Structs;
 
 namespace Assets.Code.ProceduleDungeon.Mono.Managers
 {
@@ -13,7 +14,7 @@ namespace Assets.Code.ProceduleDungeon.Mono.Managers
         public int GridSize;
         public float GridScale;
 
-        private readonly List<GameObject> chunkPositions = new List<GameObject>();
+        private List<GameObject> gridRelations = new List<GameObject>();
 
         private void Start()
         {
@@ -21,20 +22,8 @@ namespace Assets.Code.ProceduleDungeon.Mono.Managers
         }
         private void SetUpGrid()
         {
-            var grid = GridCreate.SquareGrid2DHorizontal(GridSize, GridScale);
-            for (int i = 0; i < grid.Length; i++)
-            {
-                var t = Instantiate(TempPrefab, grid[i], Quaternion.identity, GridParent);
-                chunkPositions.Add(t);
-            }
-            
+            gridRelations = GridCreate.AssignDirectionIDAccordingToPresentNeighbors(GridCreate.FindChunkNeigbors(GridScale, GridCreate.PlaceGameObjectsAtGridPositions(GridCreate.SquareGrid2DHorizontal(GridSize, GridScale), GridParent)));
         }
-        private void FindChunkNeigbors()
-        {
-            for (int i = 0; i < chunkPositions.Count; i++)
-            {
-                chunkPositions[i].GetComponent<ChunkBehavior>().FindNeigbors(chunkPositions, i);
-            }
-        }
+
     }
 }

@@ -11,6 +11,6 @@ namespace Assets.Code.ProceduleDungeon.Mono.Behaviors
 {
     internal class ChunkBehavior :MonoBehaviour
     {
-        public NeighborStruct Neighbors;
+public DirectionIDStruct direction;
     }
 }
