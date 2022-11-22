@@ -1,6 +1,7 @@
 ﻿using Assets.Code.ProceduleDungeon.Mono.Behaviors;
 using Assets.Code.ProceduleDungeon.Structs;
 using System.Collections.Generic;
+using Assets.Code.ProceduleDungeon.Enums;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -59,7 +60,6 @@ namespace Assets.Code.ProceduleDungeon.Utilities
             }
             return createdTransforms.ToArray();
         }
-
         public static List<NeighborStruct> FindChunkNeigbors(float scale, List<GameObject> grid)
         {
             List<NeighborStruct> neighborStructs = new List<NeighborStruct>();
@@ -123,6 +123,135 @@ namespace Assets.Code.ProceduleDungeon.Utilities
                 gameObjects.Add(h);
             }
             return gameObjects;
+        }
+
+        public NeighborStruct FindChunkType(NeighborStruct chunk)
+        {
+            return new NeighborStruct();
+            switch (chunk.Direction)
+            {
+                /// this needs to change to an if statement
+                case DirectionTypeEnum.N:
+                    break;
+                case DirectionTypeEnum.NE:
+                    break;
+                case DirectionTypeEnum.NS:
+                    break;
+                case DirectionTypeEnum.NW:
+                    break;
+                case DirectionTypeEnum.NT:
+                    break;
+                case DirectionTypeEnum.NB:
+                    break;
+                case DirectionTypeEnum.NES:
+                    break;
+                case DirectionTypeEnum.NESW:
+                    break;
+                case DirectionTypeEnum.NESWT:
+                    break;
+                case DirectionTypeEnum.NESWB:
+                    break;
+                case DirectionTypeEnum.NESWBT:
+                    break;
+                case DirectionTypeEnum.NEW:
+                    break;
+                case DirectionTypeEnum.NEWT:
+                    break;
+                case DirectionTypeEnum.NEWB:
+                    break;
+                case DirectionTypeEnum.NET:
+                    break;
+                case DirectionTypeEnum.NETB:
+                    break;
+                case DirectionTypeEnum.NEB:
+                    break;
+                case DirectionTypeEnum.NEST:
+                    break;
+                case DirectionTypeEnum.NESTB:
+                    break;
+                case DirectionTypeEnum.NESB:
+                    break;
+                case DirectionTypeEnum.NSW:
+                    break;
+                case DirectionTypeEnum.NSWT:
+                    break;
+                case DirectionTypeEnum.NSWB:
+                    break;
+                case DirectionTypeEnum.NST:
+                    break;
+                case DirectionTypeEnum.NSTB:
+                    break;
+                case DirectionTypeEnum.NSB:
+                    break;
+                case DirectionTypeEnum.NSWTB:
+                    break;
+                case DirectionTypeEnum.NWT:
+                    break;
+                case DirectionTypeEnum.NWTB:
+                    break;
+                case DirectionTypeEnum.NWB:
+                    break;
+                case DirectionTypeEnum.NTB:
+                    break;
+                case DirectionTypeEnum.ES:
+                    break;
+                case DirectionTypeEnum.ESW:
+                    break;
+                case DirectionTypeEnum.ESWT:
+                    break;
+                case DirectionTypeEnum.ESWB:
+                    break;
+                case DirectionTypeEnum.ESWBT:
+                    break;
+                case DirectionTypeEnum.EW:
+                    break;
+                case DirectionTypeEnum.EWT:
+                    break;
+                case DirectionTypeEnum.EWB:
+                    break;
+                case DirectionTypeEnum.ET:
+                    break;
+                case DirectionTypeEnum.ETB:
+                    break;
+                case DirectionTypeEnum.EB:
+                    break;
+                case DirectionTypeEnum.EST:
+                    break;
+                case DirectionTypeEnum.ESTB:
+                    break;
+                case DirectionTypeEnum.ESB:
+                    break;
+                case DirectionTypeEnum.SW:
+                    break;
+                case DirectionTypeEnum.SWT:
+                    break;
+                case DirectionTypeEnum.SWB:
+                    break;
+                case DirectionTypeEnum.ST:
+                    break;
+                case DirectionTypeEnum.STB:
+                    break;
+                case DirectionTypeEnum.SB:
+                    break;
+                case DirectionTypeEnum.SWTB:
+                    break;
+                case DirectionTypeEnum.WT:
+                    break;
+                case DirectionTypeEnum.WTB:
+                    break;
+                case DirectionTypeEnum.WB:
+                    break;
+                case DirectionTypeEnum.TB:
+                    break;
+                case DirectionTypeEnum.S:
+                    break;
+                case DirectionTypeEnum.SWBT:
+                    break;
+                case DirectionTypeEnum.W:
+                    break;
+                case DirectionTypeEnum.T:
+                    break;
+            }
         }
     }
 }
