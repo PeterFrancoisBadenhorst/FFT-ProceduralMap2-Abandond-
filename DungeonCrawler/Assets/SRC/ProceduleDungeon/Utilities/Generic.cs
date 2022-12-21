@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 namespace Assets.SRC.ProceduleDungeon.Utilities
 {
-    internal class Generic
+    public class Generic
     {
         public static Vector3[] NeighborsPosition(float scale)
         {

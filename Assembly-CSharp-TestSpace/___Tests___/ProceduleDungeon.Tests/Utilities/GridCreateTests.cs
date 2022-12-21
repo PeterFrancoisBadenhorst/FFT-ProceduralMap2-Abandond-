@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Assembly_CSharp_TestSpace.___Tests___.ProceduleDungeon.Tests.Utilities
 {
-    internal class Generic
+    class GridCreateTests
     {
     }
 }
