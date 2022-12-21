@@ -8,6 +8,7 @@ namespace Assets.Code.ProceduleDungeon.Enums
 {
     public enum DirectionTypeEnum
     {
+        Collapsed,
         N,
         NE,
         NS,
@@ -68,5 +69,7 @@ namespace Assets.Code.ProceduleDungeon.Enums
         SWBT,
         W,
         T,
+        B,
+        Error,
     }
 }
