@@ -1,4 +1,4 @@
-﻿using Assets.Code.ProceduleDungeon.Structs;
+﻿using Assets.SRC.ProceduleDungeon.Structs;
 using JetBrains.Annotations;
 using System;
 using System.Collections.Generic;
@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
 
-namespace Assets.Code.ProceduleDungeon.Mono.Behaviors
+namespace Assets.SRC.ProceduleDungeon.Mono.Behaviors
 {
     internal class ChunkBehavior :MonoBehaviour
     {

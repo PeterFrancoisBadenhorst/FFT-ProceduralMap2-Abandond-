@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Assets.Code.ProceduleDungeon.Structs
+namespace Assets.SRC.ProceduleDungeon.Structs
 {
     internal struct DirectionIDStruct
     {

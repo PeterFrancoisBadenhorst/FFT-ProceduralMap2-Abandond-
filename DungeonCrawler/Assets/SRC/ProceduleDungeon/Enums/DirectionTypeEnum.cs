@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Assets.Code.ProceduleDungeon.Enums
+namespace Assets.SRC.ProceduleDungeon.Enums
 {
     public enum DirectionTypeEnum
     {

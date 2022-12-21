@@ -1,11 +1,11 @@
 ﻿using UnityEngine;
-using Assets.Code.ProceduleDungeon.Utilities;
+using Assets.SRC.ProceduleDungeon.Utilities;
 using Unity.VisualScripting;
 using System.Collections.Generic;
-using Assets.Code.ProceduleDungeon.Mono.Behaviors;
-using Assets.Code.ProceduleDungeon.Structs;
+using Assets.SRC.ProceduleDungeon.Mono.Behaviors;
+using Assets.SRC.ProceduleDungeon.Structs;
 
-namespace Assets.Code.ProceduleDungeon.Mono.Managers
+namespace Assets.SRC.ProceduleDungeon.Mono.Managers
 {
     internal class DungeonManager : MonoBehaviour
     {

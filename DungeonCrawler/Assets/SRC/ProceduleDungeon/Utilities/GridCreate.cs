@@ -1,12 +1,12 @@
-﻿using Assets.Code.ProceduleDungeon.Mono.Behaviors;
-using Assets.Code.ProceduleDungeon.Structs;
+﻿using Assets.SRC.ProceduleDungeon.Mono.Behaviors;
+using Assets.SRC.ProceduleDungeon.Structs;
 using System.Collections.Generic;
-using Assets.Code.ProceduleDungeon.Enums;
+using Assets.SRC.ProceduleDungeon.Enums;
 using Unity.VisualScripting;
 using UnityEngine;
 using System.Runtime.InteropServices.WindowsRuntime;
 
-namespace Assets.Code.ProceduleDungeon.Utilities
+namespace Assets.SRC.ProceduleDungeon.Utilities
 {
     internal class GridCreate
     {
