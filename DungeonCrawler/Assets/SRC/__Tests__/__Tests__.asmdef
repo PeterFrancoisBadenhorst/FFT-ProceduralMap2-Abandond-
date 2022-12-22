@@ -1,6 +1,6 @@
 {
     "name": "__Tests__",
-    "rootNamespace": "",
+    "rootNamespace": "Assets.SRC.Tests",
     "references": [
         "ProceduralMapGenerationAssembly",
         "UnityEngine.TestRunner",

@@ -1,16 +1,16 @@
-using NUnit.Framework;
 using System.Collections;
+using System.Collections.Generic;
+using NUnit.Framework;
+using UnityEngine;
 using UnityEngine.TestTools;
-using Assets.SRC.ProceduralMapGeneration.Utilities;
 
-namespace Assets.SRC.ProceduralMapGeneration.Utilities
+namespace Assets.SRC.ProceduralMapGeneration.Utilities.Tests
 {
-    public class NewTestScript
+    public class GridCreate_Tests
     {
-        private GenericUtilities Generic;
         // A Test behaves as an ordinary method
         [Test]
-        public void NewTestScriptSimplePasses()
+        public void GenericUtilitiesSimplePasses()
         {
             // Use the Assert class to test conditions
         }
@@ -18,7 +18,7 @@ namespace Assets.SRC.ProceduralMapGeneration.Utilities
         // A UnityTest behaves like a coroutine in Play Mode. In Edit Mode you can use
         // `yield return null;` to skip a frame.
         [UnityTest]
-        public IEnumerator NewTestScriptWithEnumeratorPasses()
+        public IEnumerator GenericUtilitiesWithEnumeratorPasses()
         {
             // Use the Assert class to test conditions.
             // Use yield to skip a frame.
