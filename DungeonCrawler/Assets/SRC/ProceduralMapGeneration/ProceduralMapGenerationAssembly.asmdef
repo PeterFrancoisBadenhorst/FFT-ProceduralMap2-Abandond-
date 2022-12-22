@@ -1,0 +1,14 @@
+{
+    "name": "ProceduralMapGenerationAssembly",
+    "rootNamespace": "Assets.SRC.ProceduralMapGeneration",
+    "references": [],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

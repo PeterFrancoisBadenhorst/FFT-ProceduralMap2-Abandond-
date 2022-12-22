@@ -1,12 +1,10 @@
-﻿using Assets.SRC.ProceduleDungeon.Mono.Behaviors;
-using Assets.SRC.ProceduleDungeon.Structs;
+﻿using Assets.SRC.ProceduralMapGeneration.Enums;
+using Assets.SRC.ProceduralMapGeneration.Mono.Behaviors;
+using Assets.SRC.ProceduralMapGeneration.Structs;
 using System.Collections.Generic;
-using Assets.SRC.ProceduleDungeon.Enums;
-using Unity.VisualScripting;
 using UnityEngine;
-using System.Runtime.InteropServices.WindowsRuntime;
 
-namespace Assets.SRC.ProceduleDungeon.Utilities
+namespace Assets.SRC.ProceduralMapGeneration.Utilities
 {
     internal class GridCreate
     {
@@ -64,7 +62,7 @@ namespace Assets.SRC.ProceduleDungeon.Utilities
         public static List<NeighborStruct> FindChunkNeigbors(float scale, List<GameObject> grid)
         {
             List<NeighborStruct> neighborStructs = new List<NeighborStruct>();
-            var neighborPositions = Generic.NeighborsPosition(scale);
+            var neighborPositions = GenericUtilities.NeighborsPosition(scale);
             for (int i = 0; i < grid.Count; i++)
             {
                 var neighbors = new NeighborStruct();

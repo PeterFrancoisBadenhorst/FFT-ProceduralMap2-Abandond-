@@ -1,12 +1,7 @@
-﻿using Assets.SRC.ProceduleDungeon.Enums;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Assets.SRC.ProceduralMapGeneration.Enums;
 using UnityEngine;
 
-namespace Assets.SRC.ProceduleDungeon.Structs
+namespace Assets.SRC.ProceduralMapGeneration.Structs
 {
     public struct NeighborStruct
     {
