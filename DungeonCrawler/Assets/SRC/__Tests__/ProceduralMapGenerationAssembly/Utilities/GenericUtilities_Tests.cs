@@ -1,28 +1,47 @@
-using System.Collections;
-using System.Collections.Generic;
+
 using NUnit.Framework;
+using FluentAssertions;
 using UnityEngine;
-using UnityEngine.TestTools;
 
 namespace Assets.SRC.ProceduralMapGeneration.Utilities.Test
 {
     public class GenericUtilities_Tests
     {
-        // A Test behaves as an ordinary method
-        [Test]
-        public void GenericUtilitiesSimplePasses()
+        private Vector3[] SetUpNeighbors(float scale)
         {
-            // Use the Assert class to test conditions
+            return new Vector3[]
+                {
+                    Vector3.right* scale,
+                    Vector3.forward * scale,
+                    Vector3.down* scale,
+                    Vector3.back* scale,
+                    Vector3.up* scale,
+                    Vector3.down* scale
+                 };
         }
 
-        // A UnityTest behaves like a coroutine in Play Mode. In Edit Mode you can use
-        // `yield return null;` to skip a frame.
-        [UnityTest]
-        public IEnumerator GenericUtilitiesWithEnumeratorPasses()
+
+        [TestCase(1)]
+        [TestCase(2)]
+        [TestCase(5)]
+        public void NeighborsPosition(float scale)
         {
-            // Use the Assert class to test conditions.
-            // Use yield to skip a frame.
-            yield return null;
+            var result = GenericUtilities.NeighborsPosition(scale);
+            result.Should().BeEquivalentTo(SetUpNeighbors(scale));
         }
     }
 }
+
+/*
+   public static Vector3[] NeighborsPosition(float scale)
+        {
+            var top = Vector3.up * scale;
+            var bottom = Vector3.down * scale;
+            var north = Vector3.right * scale;
+            var east = Vector3.forward * scale;
+            var west = Vector3.back * scale;
+            var south = -Vector3.left * scale;
+
+            return new Vector3[] { north, east, south, west, top, bottom };
+        }
+ */
