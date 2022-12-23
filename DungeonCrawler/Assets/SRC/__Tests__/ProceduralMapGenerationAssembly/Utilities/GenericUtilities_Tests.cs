@@ -9,11 +9,12 @@ namespace Assets.SRC.ProceduralMapGeneration.Utilities.Test
     {
         private Vector3[] SetUpNeighbors(float scale)
         {
+
             return new Vector3[]
                 {
                     Vector3.right* scale,
                     Vector3.forward * scale,
-                    Vector3.down* scale,
+                    Vector3.left* scale,
                     Vector3.back* scale,
                     Vector3.up* scale,
                     Vector3.down* scale
@@ -24,6 +25,8 @@ namespace Assets.SRC.ProceduralMapGeneration.Utilities.Test
         [TestCase(1)]
         [TestCase(2)]
         [TestCase(5)]
+        [TestCase(25)]
+        [TestCase(44.2f)]
         public void NeighborsPosition(float scale)
         {
             var result = GenericUtilities.NeighborsPosition(scale);
@@ -32,16 +35,3 @@ namespace Assets.SRC.ProceduralMapGeneration.Utilities.Test
     }
 }
 
-/*
-   public static Vector3[] NeighborsPosition(float scale)
-        {
-            var top = Vector3.up * scale;
-            var bottom = Vector3.down * scale;
-            var north = Vector3.right * scale;
-            var east = Vector3.forward * scale;
-            var west = Vector3.back * scale;
-            var south = -Vector3.left * scale;
-
-            return new Vector3[] { north, east, south, west, top, bottom };
-        }
- */

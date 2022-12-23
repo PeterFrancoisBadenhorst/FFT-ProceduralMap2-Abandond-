@@ -6,7 +6,7 @@ using UnityEngine;
 
 namespace Assets.SRC.ProceduralMapGeneration.Utilities
 {
-    internal class GridCreate
+    public class GridCreate
     {
         public static Vector3[] SquareGrid2DVertical(int gridSize, float scale)
         {

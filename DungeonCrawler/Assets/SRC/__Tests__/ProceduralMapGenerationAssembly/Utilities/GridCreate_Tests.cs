@@ -3,26 +3,60 @@ using System.Collections.Generic;
 using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.TestTools;
+using Assets.SRC.ProceduralMapGeneration.Utilities;
+using System.Linq;
+using FluentAssertions;
+using UnityEngine.Assertions.Must;
+using UnityEngine.UIElements;
+using Assets.SRC.ProceduralMapGeneration.Structs;
 
 namespace Assets.SRC.ProceduralMapGeneration.Utilities.Tests
 {
     public class GridCreate_Tests
     {
-        // A Test behaves as an ordinary method
-        [Test]
-        public void GenericUtilitiesSimplePasses()
+        [TestCase(1, 1)]
+        [TestCase(2, 5)]
+        [TestCase(2, 15)]
+        [TestCase(14, 0.5f)]
+        [TestCase(16, 22.34f)]
+        public void Validate_2DGridCreations_EntityCount_Vertical(int gridSize, float scale)
+           => GridCreate.SquareGrid2DVertical(gridSize, scale).Count<Vector3>().Should().Be((gridSize * gridSize));
+        [TestCase(1, 1)]
+        [TestCase(2, 5)]
+        [TestCase(2, 15)]
+        [TestCase(14, 0.5f)]
+        [TestCase(16, 22.34f)]
+        public void Validate_2DGridCreations_EntityCount_Horizontal(int gridSize, float scale)
+           => GridCreate.SquareGrid2DHorizontal(gridSize, scale).Count<Vector3>().Should().Be((gridSize * gridSize));
+        [TestCase(1, 1)]
+        [TestCase(2, 5)]
+        [TestCase(2, 15)]
+        [TestCase(14, 0.5f)]
+        [TestCase(16, 22.34f)]
+        public void Validate_3DGridCreations_EntityCount(int gridSize, float scale)
+            => GridCreate.SquareGrid3D(gridSize, scale).Count<Vector3>().Should().Be((gridSize * gridSize * gridSize));
+        [TestCase(1, 1)]
+        [TestCase(2, 5)]
+        [TestCase(2, 15)]
+        [TestCase(14, 0.5f)]
+        [TestCase(16, 22.34f)]
+        public void Validate_FindChunkNeigbors(int gridSize, float scale)
         {
-            // Use the Assert class to test conditions
+            Assert.Fail();
+            //var result = GridCreate.SquareGrid2DVertical(gridSize, scale);
+            //for (int i = 0; i < result.Count<Vector3>(); i++)
+            //{
+            //   var t= result[i];               
+            //}
         }
-
-        // A UnityTest behaves like a coroutine in Play Mode. In Edit Mode you can use
-        // `yield return null;` to skip a frame.
-        [UnityTest]
-        public IEnumerator GenericUtilitiesWithEnumeratorPasses()
+        [Test]
+        public void Validate_AssignDirectionIDAccordingToPresentNeighbors(List<NeighborStruct> objects)
         {
-            // Use the Assert class to test conditions.
-            // Use yield to skip a frame.
-            yield return null;
+            Assert.Fail();
+        }
+        public void Validate_FindChunkType()
+        {
+            Assert.Fail();
         }
     }
 }
