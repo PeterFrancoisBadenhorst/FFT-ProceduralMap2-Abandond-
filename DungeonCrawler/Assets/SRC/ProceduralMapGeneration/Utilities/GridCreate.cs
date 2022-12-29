@@ -127,12 +127,12 @@ namespace Assets.SRC.ProceduralMapGeneration.Utilities
         public DirectionTypeEnum FindChunkType(NeighborStruct chunk)
         {
 
-            if (!chunk.NorthNeighbor ||
-                   !chunk.EastNeighbor ||
-                   !chunk.SouthNeighbor ||
-                   !chunk.WestNeighbor ||
-                   !chunk.TopNeighbor ||
-                   !chunk.BottomNeighbor) return DirectionTypeEnum.Collapsed;
+            //if (!chunk.NorthNeighbor ||
+            //       !chunk.EastNeighbor ||
+            //       !chunk.SouthNeighbor ||
+            //       !chunk.WestNeighbor ||
+            //       !chunk.TopNeighbor ||
+            //       !chunk.BottomNeighbor) return DirectionTypeEnum.Collapsed;
 
             if (chunk.NorthNeighbor &&
                 !chunk.EastNeighbor &&
@@ -561,7 +561,8 @@ namespace Assets.SRC.ProceduralMapGeneration.Utilities
              chunk.TopNeighbor &&
              !chunk.BottomNeighbor) return DirectionTypeEnum.B;
 
-            return DirectionTypeEnum.Error;// should never reach this ༼ つ ◕_◕ ༽つ
+            // should never reach this ༼ つ ◕_◕ ༽つ
+            return DirectionTypeEnum.Error;
         }
     }
 
