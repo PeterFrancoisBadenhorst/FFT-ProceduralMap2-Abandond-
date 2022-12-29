@@ -23,7 +23,11 @@
         //  north, east, south, west, top, bottom
         NESW,
         //  north, east, south, west, top, bottom
+        NEWTB,
+        //  north, east, south, west, top, bottom
         NESWT,
+        //  north, east, south, west, top, bottom
+        EWTB,
         //  north, east, south, west, top, bottom
         NESWB,
         //  north, east, south, west, top, bottom

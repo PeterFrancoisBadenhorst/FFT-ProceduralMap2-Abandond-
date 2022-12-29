@@ -81,148 +81,112 @@ namespace Assets.SRC.ProceduralMapGeneration.Utilities.Tests
             returned.Direction = Enums.DirectionTypeEnum.Blank;
             return returned;
         }
-        //                              north, -, -, -, -, -
+        //                              north, east, south, west, top, bottom
         [TestCase(DirectionTypeEnum.N, true, false, false, false, false, false)]
-        //                              north, east, -, -, -, -
+        //                              north, east, south, west, top, bottom
         [TestCase(DirectionTypeEnum.NE, true, true, false, false, false, false)]
-        //                              north, -, south, -, -, -
+        //                              north, east, south, west, top, bottom
+        [TestCase(DirectionTypeEnum.NET, true, true, false, false, true, false)]
+        //                              north, east, south, west, top, bottom
+        [TestCase(DirectionTypeEnum.NEB, true, true, false, false, false, true)]
+        //                              north, east, south, west, top, bottom
+        [TestCase(DirectionTypeEnum.NEW, true, true, false, true, false, false)]
+        //                              north, east, south, west, top, bottom
+        [TestCase(DirectionTypeEnum.NEWT, true, true, false, true, true, false)]
+        //                              north, east, south, west, top, bottom
+        [TestCase(DirectionTypeEnum.NEWB, true, true, false, true, false, true)]
+        //                              north, east, south, west, top, bottom
+        [TestCase(DirectionTypeEnum.NEWTB, true, true, false, true, true, true)]//
+        //                              north, east, south, west, top, bottom
+        [TestCase(DirectionTypeEnum.NES, true, true, true, false, false, false)]
+        //                              north, east, south, west, top, bottom
+        [TestCase(DirectionTypeEnum.NEST, true, true, true, false, true, false)]
+        //                              north, east, south, west, top, bottom
+        [TestCase(DirectionTypeEnum.NESB, true, true, true, false, false, true)]
+        //                              north, east, south, west, top, bottom
+        [TestCase(DirectionTypeEnum.NESTB, true, true, true, false, true, true)]//
+        //                              north, east, south, west, top, bottom
+        [TestCase(DirectionTypeEnum.NETB, true, true, false, false, true, true)]
+        //                              north, east, south, west, top, bottom
         [TestCase(DirectionTypeEnum.NS, true, false, true, false, false, false)]
         //                              north, east, south, west, top, bottom
-        [TestCase(DirectionTypeEnum.NW, false, false, false, false, false, false)]
+        [TestCase(DirectionTypeEnum.NSW, true, false, true, true, false, false)]//
         //                              north, east, south, west, top, bottom
-        [TestCase(DirectionTypeEnum.NT, false, false, false, false, false, false)]
+        [TestCase(DirectionTypeEnum.NST, true, false, true, false, true, false)]
         //                              north, east, south, west, top, bottom
-        [TestCase(DirectionTypeEnum.NB, false, false, false, false, false, false)]
+        [TestCase(DirectionTypeEnum.NSB, true, false, true, false, false, true)]
         //                              north, east, south, west, top, bottom
-        [TestCase(DirectionTypeEnum.NES, false, false, false, false, false, false)]
+        [TestCase(DirectionTypeEnum.NSTB, true, false, true, false, true, true)]
         //                              north, east, south, west, top, bottom
-        [TestCase(DirectionTypeEnum.NEW, false, false, false, false, false, false)]
+        [TestCase(DirectionTypeEnum.NW, true, false, false, true, false, false)]
         //                              north, east, south, west, top, bottom
-        [TestCase(DirectionTypeEnum.NET, false, false, false, false, false, false)]
+        [TestCase(DirectionTypeEnum.NWT, true, false, false, true, true, false)]
         //                              north, east, south, west, top, bottom
-        [TestCase(DirectionTypeEnum.NEB, false, false, false, false, false, false)]
+        [TestCase(DirectionTypeEnum.NWB, true, false, false, true, false, true)]
         //                              north, east, south, west, top, bottom
-        [TestCase(DirectionTypeEnum.NEST, false, false, false, false, false, false)]
+        [TestCase(DirectionTypeEnum.NWTB, true, false, false, true, true, true)]
         //                              north, east, south, west, top, bottom
-        [TestCase(DirectionTypeEnum.NESB, false, false, false, false, false, false)]
+        [TestCase(DirectionTypeEnum.NT, true, false, false, false, true, false)]
         //                              north, east, south, west, top, bottom
-        [TestCase(DirectionTypeEnum.NETB, false, false, false, false, false, false)]
+        [TestCase(DirectionTypeEnum.NTB, true, false, false, false, true, true)]
         //                              north, east, south, west, top, bottom
-        [TestCase(DirectionTypeEnum.E, false, false, false, false, false, false)]
+        [TestCase(DirectionTypeEnum.NB, true, false, false, false, false, true)]
         //                              north, east, south, west, top, bottom
-        [TestCase(DirectionTypeEnum.ES, false, false, false, false, false, false)]
+        [TestCase(DirectionTypeEnum.E, false, true, false, false, false, false)]//
         //                              north, east, south, west, top, bottom
-        [TestCase(DirectionTypeEnum.EST, false, false, false, false, false, false)]
+        [TestCase(DirectionTypeEnum.ES, false, true, true, false, false, false)]
         //                              north, east, south, west, top, bottom
-        [TestCase(DirectionTypeEnum.ESB, false, false, false, false, false, false)]
+        [TestCase(DirectionTypeEnum.ESW, false, true, true, true, false, false)]
         //                              north, east, south, west, top, bottom
-        [TestCase(DirectionTypeEnum.EW, false, false, false, false, false, false)]
+        [TestCase(DirectionTypeEnum.EST, false, true, true, false, true, false)]
         //                              north, east, south, west, top, bottom
-        [TestCase(DirectionTypeEnum.EWT, false, false, false, false, false, false)]
+        [TestCase(DirectionTypeEnum.ESB, false, true, true, false, false, true)]
         //                              north, east, south, west, top, bottom
-        [TestCase(DirectionTypeEnum.EWB, false, false, false, false, false, false)]
+        [TestCase(DirectionTypeEnum.ESTB, false, true, true, false, true, true)]
         //                              north, east, south, west, top, bottom
-        [TestCase(DirectionTypeEnum.ET, false, false, false, false, false, false)]
+        [TestCase(DirectionTypeEnum.EW, false, true, false, true, false, false)]
         //                              north, east, south, west, top, bottom
-        [TestCase(DirectionTypeEnum.ETB, false, false, false, false, false, false)]
+        [TestCase(DirectionTypeEnum.EWT, false, true, false, true, true, false)]
         //                              north, east, south, west, top, bottom
-        [TestCase(DirectionTypeEnum.EB, false, false, false, false, false, false)]
+        [TestCase(DirectionTypeEnum.EWTB, false, true, false, true, true, true)]//
         //                              north, east, south, west, top, bottom
-        [TestCase(DirectionTypeEnum.ESW, false, false, false, false, false, false)]
+        [TestCase(DirectionTypeEnum.EWB, false, true, false, true, false, true)]
         //                              north, east, south, west, top, bottom
-        [TestCase(DirectionTypeEnum.Blank, false, false, false, false, false, false)]
+        [TestCase(DirectionTypeEnum.ET, false, true, false, false, true, false)]//
         //                              north, east, south, west, top, bottom
-        [TestCase(DirectionTypeEnum.Blank, false, false, false, false, false, false)]
+        [TestCase(DirectionTypeEnum.ETB, false, true, false, false, true, true)]
         //                              north, east, south, west, top, bottom
-        [TestCase(DirectionTypeEnum.Blank, false, false, false, false, false, false)]
+        [TestCase(DirectionTypeEnum.EB, false, true, false, false, false, true)]      
         //                              north, east, south, west, top, bottom
-        [TestCase(DirectionTypeEnum.Blank, false, false, false, false, false, false)]
+        [TestCase(DirectionTypeEnum.S, false, false, true, false, false, false)]
         //                              north, east, south, west, top, bottom
-        [TestCase(DirectionTypeEnum.Blank, false, false, false, false, false, false)]
+        [TestCase(DirectionTypeEnum.SW, false, false, true, true, false, false)]
         //                              north, east, south, west, top, bottom
-        [TestCase(DirectionTypeEnum.Blank, false, false, false, false, false, false)]
+        [TestCase(DirectionTypeEnum.SWT, false, false, true, true, true, false)]
         //                              north, east, south, west, top, bottom
-        [TestCase(DirectionTypeEnum.Blank, false, false, false, false, false, false)]
+        [TestCase(DirectionTypeEnum.SWB, false, false, true, true, false, true)]
         //                              north, east, south, west, top, bottom
-        [TestCase(DirectionTypeEnum.Blank, false, false, false, false, false, false)]
+        [TestCase(DirectionTypeEnum.SWTB, false, false, true, true, true, true)]
         //                              north, east, south, west, top, bottom
-        [TestCase(DirectionTypeEnum.Blank, false, false, false, false, false, false)]
+        [TestCase(DirectionTypeEnum.ST, false, false, true, false, true, false)]
         //                              north, east, south, west, top, bottom
-        [TestCase(DirectionTypeEnum.Blank, false, false, false, false, false, false)]
+        [TestCase(DirectionTypeEnum.STB, false, false, true, false, true, true)]
         //                              north, east, south, west, top, bottom
-        [TestCase(DirectionTypeEnum.Blank, false, false, false, false, false, false)]
+        [TestCase(DirectionTypeEnum.SB, false, false, true, false, false, true)]
         //                              north, east, south, west, top, bottom
-        [TestCase(DirectionTypeEnum.Blank, false, false, false, false, false, false)]
+        [TestCase(DirectionTypeEnum.W, false, false, false, true, false, false)]
         //                              north, east, south, west, top, bottom
-        [TestCase(DirectionTypeEnum.Blank, false, false, false, false, false, false)]
+        [TestCase(DirectionTypeEnum.WT, false, false, false, true, true, false)]
         //                              north, east, south, west, top, bottom
-        [TestCase(DirectionTypeEnum.Blank, false, false, false, false, false, false)]
+        [TestCase(DirectionTypeEnum.WTB, false, false, false, true, true, true)]
         //                              north, east, south, west, top, bottom
-        [TestCase(DirectionTypeEnum.Blank, false, false, false, false, false, false)]
+        [TestCase(DirectionTypeEnum.WB, false, false, false, true, false, true)]
         //                              north, east, south, west, top, bottom
-        [TestCase(DirectionTypeEnum.Blank, false, false, false, false, false, false)]
+        [TestCase(DirectionTypeEnum.T, false, false, false, false, true, false)]
         //                              north, east, south, west, top, bottom
-        [TestCase(DirectionTypeEnum.Blank, false, false, false, false, false, false)]
+        [TestCase(DirectionTypeEnum.TB, false, false, false, false, true, true)]
         //                              north, east, south, west, top, bottom
-        [TestCase(DirectionTypeEnum.Blank, false, false, false, false, false, false)]
-        //                              north, east, south, west, top, bottom
-        [TestCase(DirectionTypeEnum.Blank, false, false, false, false, false, false)]
-        //                              north, east, south, west, top, bottom
-        [TestCase(DirectionTypeEnum.Blank, false, false, false, false, false, false)]
-        //                              north, east, south, west, top, bottom
-        [TestCase(DirectionTypeEnum.Blank, false, false, false, false, false, false)]
-        //                              north, east, south, west, top, bottom
-        [TestCase(DirectionTypeEnum.Blank, false, false, false, false, false, false)]
-        //                              north, east, south, west, top, bottom
-        [TestCase(DirectionTypeEnum.Blank, false, false, false, false, false, false)]
-        //                              north, east, south, west, top, bottom
-        [TestCase(DirectionTypeEnum.Blank, false, false, false, false, false, false)]
-        //                              north, east, south, west, top, bottom
-        [TestCase(DirectionTypeEnum.Blank, false, false, false, false, false, false)]
-        //                              north, east, south, west, top, bottom
-        [TestCase(DirectionTypeEnum.Blank, false, false, false, false, false, false)]
-        //                              north, east, south, west, top, bottom
-        [TestCase(DirectionTypeEnum.Blank, false, false, false, false, false, false)]
-        //                              north, east, south, west, top, bottom
-        [TestCase(DirectionTypeEnum.Blank, false, false, false, false, false, false)]
-        //                              north, east, south, west, top, bottom
-        [TestCase(DirectionTypeEnum.Blank, false, false, false, false, false, false)]
-        //                              north, east, south, west, top, bottom
-        [TestCase(DirectionTypeEnum.Blank, false, false, false, false, false, false)]
-        //                              north, east, south, west, top, bottom
-        [TestCase(DirectionTypeEnum.Blank, false, false, false, false, false, false)]
-        //                              north, east, south, west, top, bottom
-        [TestCase(DirectionTypeEnum.Blank, false, false, false, false, false, false)]
-        //                              north, east, south, west, top, bottom
-        [TestCase(DirectionTypeEnum.Blank, false, false, false, false, false, false)]
-        //                              north, east, south, west, top, bottom
-        [TestCase(DirectionTypeEnum.Blank, false, false, false, false, false, false)]
-        //                              north, east, south, west, top, bottom
-        [TestCase(DirectionTypeEnum.Blank, false, false, false, false, false, false)]
-        //                              north, east, south, west, top, bottom
-        [TestCase(DirectionTypeEnum.Blank, false, false, false, false, false, false)]
-        //                              north, east, south, west, top, bottom
-        [TestCase(DirectionTypeEnum.Blank, false, false, false, false, false, false)]
-        //                              north, east, south, west, top, bottom
-        [TestCase(DirectionTypeEnum.Blank, false, false, false, false, false, false)]
-        //                              north, east, south, west, top, bottom
-        [TestCase(DirectionTypeEnum.Blank, false, false, false, false, false, false)]
-        //                              north, east, south, west, top, bottom
-        [TestCase(DirectionTypeEnum.Blank, false, false, false, false, false, false)]
-        //                              north, east, south, west, top, bottom
-        [TestCase(DirectionTypeEnum.Blank, false, false, false, false, false, false)]
-        //                              north, east, south, west, top, bottom
-        [TestCase(DirectionTypeEnum.Blank, false, false, false, false, false, false)]
-        //                              north, east, south, west, top, bottom
-        [TestCase(DirectionTypeEnum.Blank, false, false, false, false, false, false)]
-        //                              north, east, south, west, top, bottom
-        [TestCase(DirectionTypeEnum.Blank, false, false, false, false, false, false)]
-        //                              north, east, south, west, top, bottom
-        [TestCase(DirectionTypeEnum.Blank, false, false, false, false, false, false)]
-        //                              north, east, south, west, top, bottom
-        [TestCase(DirectionTypeEnum.Blank, false, false, false, false, false, false)]
-
-
+        [TestCase(DirectionTypeEnum.B, false, false, false, false, false, true)]//
 
         public void Validate_FindChunkType(DirectionTypeEnum proved, bool north, bool east, bool south, bool west, bool top, bool bottom)
         {
