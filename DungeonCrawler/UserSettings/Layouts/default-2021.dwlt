@@ -8,97 +8,23 @@ MonoBehaviour:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 12004, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_PixelRect:
-    serializedVersion: 2
-    x: 1197
-    y: 71
-    width: 800
-    height: 561
-  m_ShowMode: 0
-  m_Title: Package Manager
-  m_RootView: {fileID: 4}
-  m_MinSize: {x: 800, y: 271}
-  m_MaxSize: {x: 4000, y: 4021}
-  m_Maximized: 0
---- !u!114 &2
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12004, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: 
   m_EditorClassIdentifier: 
   m_PixelRect:
     serializedVersion: 2
-    x: 0
+    x: 1920
     y: 43
     width: 1920
     height: 989
   m_ShowMode: 4
-  m_Title: Console
-  m_RootView: {fileID: 12}
+  m_Title: Test Runner
+  m_RootView: {fileID: 9}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
   m_Maximized: 1
---- !u!114 &3
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: PackageManagerWindow
-  m_EditorClassIdentifier: 
-  m_Children: []
-  m_Position:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 800
-    height: 561
-  m_MinSize: {x: 800, y: 271}
-  m_MaxSize: {x: 4000, y: 4021}
-  m_ActualView: {fileID: 18}
-  m_Panes:
-  - {fileID: 18}
-  m_Selected: 0
-  m_LastSelected: 0
---- !u!114 &4
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Children:
-  - {fileID: 3}
-  m_Position:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 800
-    height: 561
-  m_MinSize: {x: 800, y: 271}
-  m_MaxSize: {x: 4000, y: 4021}
-  vertical: 0
-  controlID: 3458
---- !u!114 &5
+--- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -115,16 +41,16 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 754
-    width: 774
+    width: 100
     height: 185
   m_MinSize: {x: 201, y: 221}
   m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 24}
+  m_ActualView: {fileID: 21}
   m_Panes:
-  - {fileID: 24}
+  - {fileID: 21}
   m_Selected: 0
   m_LastSelected: 0
---- !u!114 &6
+--- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -137,19 +63,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Children:
-  - {fileID: 9}
-  - {fileID: 5}
+  - {fileID: 6}
+  - {fileID: 2}
   m_Position:
     serializedVersion: 2
-    x: 1146
+    x: 1820
     y: 0
-    width: 774
+    width: 100
     height: 939
   m_MinSize: {x: 100, y: 200}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 116
---- !u!114 &7
+  controlID: 23
+--- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -170,12 +96,12 @@ MonoBehaviour:
     height: 939
   m_MinSize: {x: 231, y: 271}
   m_MaxSize: {x: 10001, y: 10021}
-  m_ActualView: {fileID: 20}
+  m_ActualView: {fileID: 17}
   m_Panes:
-  - {fileID: 20}
+  - {fileID: 17}
   m_Selected: 0
   m_LastSelected: 0
---- !u!114 &8
+--- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -188,9 +114,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Children:
-  - {fileID: 7}
-  - {fileID: 15}
-  - {fileID: 6}
+  - {fileID: 4}
+  - {fileID: 12}
+  - {fileID: 3}
   m_Position:
     serializedVersion: 2
     x: 0
@@ -200,8 +126,8 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 200}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 0
-  controlID: 86
---- !u!114 &9
+  controlID: 103
+--- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -211,23 +137,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
+  m_Name: PackageManagerWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 774
+    width: 100
     height: 754
-  m_MinSize: {x: 275, y: 50}
+  m_MinSize: {x: 800, y: 250}
   m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 21}
+  m_ActualView: {fileID: 15}
   m_Panes:
-  - {fileID: 21}
-  m_Selected: 0
+  - {fileID: 18}
+  - {fileID: 15}
+  m_Selected: 1
   m_LastSelected: 0
---- !u!114 &10
+--- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -244,16 +171,16 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 376
+    width: 705
     height: 281
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
-  m_ActualView: {fileID: 22}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_ActualView: {fileID: 19}
   m_Panes:
-  - {fileID: 22}
+  - {fileID: 19}
   m_Selected: 0
   m_LastSelected: 0
---- !u!114 &11
+--- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -263,24 +190,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ConsoleWindow
+  m_Name: TestRunnerWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
     serializedVersion: 2
     x: 0
     y: 281
-    width: 762
+    width: 1436
     height: 658
   m_MinSize: {x: 102, y: 121}
   m_MaxSize: {x: 4002, y: 4021}
-  m_ActualView: {fileID: 25}
+  m_ActualView: {fileID: 16}
   m_Panes:
-  - {fileID: 25}
-  - {fileID: 19}
-  m_Selected: 0
-  m_LastSelected: 1
---- !u!114 &12
+  - {fileID: 22}
+  - {fileID: 16}
+  m_Selected: 1
+  m_LastSelected: 0
+--- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -293,9 +220,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Children:
-  - {fileID: 13}
-  - {fileID: 8}
-  - {fileID: 14}
+  - {fileID: 10}
+  - {fileID: 5}
+  - {fileID: 11}
   m_Position:
     serializedVersion: 2
     x: 0
@@ -308,7 +235,7 @@ MonoBehaviour:
   m_TopViewHeight: 30
   m_UseBottomView: 1
   m_BottomViewHeight: 20
---- !u!114 &13
+--- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -330,7 +257,7 @@ MonoBehaviour:
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
   m_LastLoadedLayoutName: 
---- !u!114 &14
+--- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -351,7 +278,7 @@ MonoBehaviour:
     height: 20
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
---- !u!114 &15
+--- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -364,19 +291,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Children:
-  - {fileID: 16}
-  - {fileID: 11}
+  - {fileID: 13}
+  - {fileID: 8}
   m_Position:
     serializedVersion: 2
     x: 384
     y: 0
-    width: 762
+    width: 1436
     height: 939
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 87
---- !u!114 &16
+  controlID: 104
+--- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -389,19 +316,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Children:
-  - {fileID: 10}
-  - {fileID: 17}
+  - {fileID: 7}
+  - {fileID: 14}
   m_Position:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 762
+    width: 1436
     height: 281
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 88
---- !u!114 &17
+  controlID: 105
+--- !u!114 &14
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -416,18 +343,18 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 376
+    x: 705
     y: 0
-    width: 386
+    width: 731
     height: 281
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
-  m_ActualView: {fileID: 23}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_ActualView: {fileID: 20}
   m_Panes:
-  - {fileID: 23}
+  - {fileID: 20}
   m_Selected: 0
   m_LastSelected: 0
---- !u!114 &18
+--- !u!114 &15
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -448,15 +375,15 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1197
-    y: 71
-    width: 800
-    height: 540
+    x: 3740
+    y: 73
+    width: 99
+    height: 733
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
     m_SaveData: []
---- !u!114 &19
+--- !u!114 &16
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -476,24 +403,24 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 384
+    x: 2304
     y: 354
-    width: 760
+    width: 1434
     height: 637
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
     m_SaveData: []
   m_Spl:
-    ID: 138
-    splitterInitialOffset: 0
+    ID: 204
+    splitterInitialOffset: 386
     currentActiveSplitter: -1
     realSizes:
-    - 425
-    - 142
+    - 314
+    - 253
     relativeSizes:
-    - 0.75
-    - 0.25
+    - 0.5537919
+    - 0.44620812
     minSizes:
     - 32
     - 32
@@ -545,15 +472,15 @@ MonoBehaviour:
       availableCategories: []
     m_SelectedOption: 0
   m_EditModeTestListGUI:
-    m_Window: {fileID: 19}
+    m_Window: {fileID: 16}
     m_NewResultList:
     - id: 1000
       uniqueId: '[DungeonCrawler][suite]'
       name: DungeonCrawler
       fullName: DungeonCrawler
-      resultStatus: 1
-      duration: 0.0816395
-      messages: 
+      resultStatus: 2
+      duration: 0.2018586
+      messages: One or more child tests had errors
       output: 
       stacktrace: 
       notRunnable: 0
@@ -567,9 +494,9 @@ MonoBehaviour:
       uniqueId: '[__Tests__.dll][suite]'
       name: __Tests__.dll
       fullName: C:/git/Unity.DungeonCrawler/DungeonCrawler/Library/ScriptAssemblies/__Tests__.dll
-      resultStatus: 0
-      duration: 0
-      messages: 
+      resultStatus: 2
+      duration: 0.1863109
+      messages: One or more child tests had errors
       output: 
       stacktrace: 
       notRunnable: 0
@@ -583,9 +510,9 @@ MonoBehaviour:
       uniqueId: __Tests__.dll/[Assets][suite]
       name: Assets
       fullName: Assets
-      resultStatus: 0
-      duration: 0
-      messages: 
+      resultStatus: 2
+      duration: 0.1848621
+      messages: One or more child tests had errors
       output: 
       stacktrace: 
       notRunnable: 0
@@ -599,9 +526,9 @@ MonoBehaviour:
       uniqueId: __Tests__.dll/Assets/[SRC][suite]
       name: SRC
       fullName: Assets.SRC
-      resultStatus: 0
-      duration: 0
-      messages: 
+      resultStatus: 2
+      duration: 0.1832593
+      messages: One or more child tests had errors
       output: 
       stacktrace: 
       notRunnable: 0
@@ -615,9 +542,9 @@ MonoBehaviour:
       uniqueId: __Tests__.dll/Assets/SRC/[ProceduralMapGeneration][suite]
       name: ProceduralMapGeneration
       fullName: Assets.SRC.ProceduralMapGeneration
-      resultStatus: 0
-      duration: 0
-      messages: 
+      resultStatus: 2
+      duration: 0.1809582
+      messages: One or more child tests had errors
       output: 
       stacktrace: 
       notRunnable: 0
@@ -631,9 +558,9 @@ MonoBehaviour:
       uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/[Utilities][suite]
       name: Utilities
       fullName: Assets.SRC.ProceduralMapGeneration.Utilities
-      resultStatus: 0
-      duration: 0
-      messages: 
+      resultStatus: 2
+      duration: 0.1767636
+      messages: One or more child tests had errors
       output: 
       stacktrace: 
       notRunnable: 0
@@ -647,8 +574,8 @@ MonoBehaviour:
       uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Test][suite]
       name: Test
       fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Test
-      resultStatus: 0
-      duration: 0
+      resultStatus: 1
+      duration: 0.0568269
       messages: 
       output: 
       stacktrace: 
@@ -663,8 +590,8 @@ MonoBehaviour:
       uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Test/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Test.GenericUtilities_Tests][suite]
       name: GenericUtilities_Tests
       fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Test.GenericUtilities_Tests
-      resultStatus: 0
-      duration: 0
+      resultStatus: 1
+      duration: 0.0528141
       messages: 
       output: 
       stacktrace: 
@@ -675,12 +602,28 @@ MonoBehaviour:
       categories: []
       parentId: 1013
       parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Test][suite]
-    - id: 1005
-      uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Test/GenericUtilities_Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Test.GenericUtilities_Tests.GenericUtilitiesSimplePasses]
-      name: GenericUtilitiesSimplePasses
-      fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Test.GenericUtilities_Tests.GenericUtilitiesSimplePasses
-      resultStatus: 0
-      duration: 0
+    - id: 1035
+      uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Test/GenericUtilities_Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Test.GenericUtilities_Tests.NeighborsPosition][suite]
+      name: NeighborsPosition
+      fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Test.GenericUtilities_Tests.NeighborsPosition
+      resultStatus: 1
+      duration: 0.0484398
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1029
+      parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Test/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Test.GenericUtilities_Tests][suite]
+    - id: 1030
+      uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Test/GenericUtilities_Tests/NeighborsPosition/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Test.GenericUtilities_Tests.NeighborsPosition(1)]
+      name: NeighborsPosition(1)
+      fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Test.GenericUtilities_Tests.NeighborsPosition(1)
+      resultStatus: 1
+      duration: 0.0372619
       messages: 
       output: 
       stacktrace: 
@@ -690,14 +633,14 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1004
-      parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Test/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Test.GenericUtilities_Tests][suite]
-    - id: 1006
-      uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Test/GenericUtilities_Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Test.GenericUtilities_Tests.GenericUtilitiesWithEnumeratorPasses]
-      name: GenericUtilitiesWithEnumeratorPasses
-      fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Test.GenericUtilities_Tests.GenericUtilitiesWithEnumeratorPasses
-      resultStatus: 0
-      duration: 0
+      parentId: 1035
+      parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Test/GenericUtilities_Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Test.GenericUtilities_Tests.NeighborsPosition][suite]
+    - id: 1031
+      uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Test/GenericUtilities_Tests/NeighborsPosition/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Test.GenericUtilities_Tests.NeighborsPosition(2)]
+      name: NeighborsPosition(2)
+      fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Test.GenericUtilities_Tests.NeighborsPosition(2)
+      resultStatus: 1
+      duration: 0.0003918
       messages: 
       output: 
       stacktrace: 
@@ -707,15 +650,66 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1004
-      parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Test/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Test.GenericUtilities_Tests][suite]
+      parentId: 1035
+      parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Test/GenericUtilities_Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Test.GenericUtilities_Tests.NeighborsPosition][suite]
+    - id: 1032
+      uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Test/GenericUtilities_Tests/NeighborsPosition/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Test.GenericUtilities_Tests.NeighborsPosition(5)]
+      name: NeighborsPosition(5)
+      fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Test.GenericUtilities_Tests.NeighborsPosition(5)
+      resultStatus: 1
+      duration: 0.0003352
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1035
+      parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Test/GenericUtilities_Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Test.GenericUtilities_Tests.NeighborsPosition][suite]
+    - id: 1033
+      uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Test/GenericUtilities_Tests/NeighborsPosition/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Test.GenericUtilities_Tests.NeighborsPosition(25)]
+      name: NeighborsPosition(25)
+      fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Test.GenericUtilities_Tests.NeighborsPosition(25)
+      resultStatus: 1
+      duration: 0.0003073
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1035
+      parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Test/GenericUtilities_Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Test.GenericUtilities_Tests.NeighborsPosition][suite]
+    - id: 1034
+      uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Test/GenericUtilities_Tests/NeighborsPosition/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Test.GenericUtilities_Tests.NeighborsPosition(44.2f)]
+      name: NeighborsPosition(44.2f)
+      fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Test.GenericUtilities_Tests.NeighborsPosition(44.2f)
+      resultStatus: 1
+      duration: 0.0002997
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1035
+      parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Test/GenericUtilities_Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Test.GenericUtilities_Tests.NeighborsPosition][suite]
     - id: 1012
       uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests][suite]
       name: Tests
       fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests
-      resultStatus: 0
-      duration: 0
-      messages: 
+      resultStatus: 2
+      duration: 0.1160263
+      messages: One or more child tests had errors
       output: 
       stacktrace: 
       notRunnable: 0
@@ -729,9 +723,9 @@ MonoBehaviour:
       uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests][suite]
       name: GridCreate_Tests
       fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests
-      resultStatus: 0
-      duration: 0
-      messages: 
+      resultStatus: 2
+      duration: 0.1081776
+      messages: One or more child tests had errors
       output: 
       stacktrace: 
       notRunnable: 0
@@ -741,12 +735,129 @@ MonoBehaviour:
       categories: []
       parentId: 1012
       parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests][suite]
+    - id: 1013
+      uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_2DGridCreations_EntityCount_Horizontal][suite]
+      name: Validate_2DGridCreations_EntityCount_Horizontal
+      fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_2DGridCreations_EntityCount_Horizontal
+      resultStatus: 1
+      duration: 0.0082938
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1001
+      parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests][suite]
+    - id: 1008
+      uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/Validate_2DGridCreations_EntityCount_Horizontal/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_2DGridCreations_EntityCount_Horizontal(1,1)]
+      name: Validate_2DGridCreations_EntityCount_Horizontal(1,1)
+      fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_2DGridCreations_EntityCount_Horizontal(1,1)
+      resultStatus: 1
+      duration: 0.0027005
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1013
+      parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_2DGridCreations_EntityCount_Horizontal][suite]
+    - id: 1009
+      uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/Validate_2DGridCreations_EntityCount_Horizontal/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_2DGridCreations_EntityCount_Horizontal(2,5)]
+      name: Validate_2DGridCreations_EntityCount_Horizontal(2,5)
+      fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_2DGridCreations_EntityCount_Horizontal(2,5)
+      resultStatus: 1
+      duration: 0.0001944
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1013
+      parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_2DGridCreations_EntityCount_Horizontal][suite]
+    - id: 1010
+      uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/Validate_2DGridCreations_EntityCount_Horizontal/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_2DGridCreations_EntityCount_Horizontal(2,15)]
+      name: Validate_2DGridCreations_EntityCount_Horizontal(2,15)
+      fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_2DGridCreations_EntityCount_Horizontal(2,15)
+      resultStatus: 1
+      duration: 0.0001773
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1013
+      parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_2DGridCreations_EntityCount_Horizontal][suite]
+    - id: 1011
+      uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/Validate_2DGridCreations_EntityCount_Horizontal/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_2DGridCreations_EntityCount_Horizontal(14,0.5f)]
+      name: Validate_2DGridCreations_EntityCount_Horizontal(14,0.5f)
+      fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_2DGridCreations_EntityCount_Horizontal(14,0.5f)
+      resultStatus: 1
+      duration: 0.0001849
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1013
+      parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_2DGridCreations_EntityCount_Horizontal][suite]
+    - id: 1012
+      uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/Validate_2DGridCreations_EntityCount_Horizontal/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_2DGridCreations_EntityCount_Horizontal(16,22.34f)]
+      name: Validate_2DGridCreations_EntityCount_Horizontal(16,22.34f)
+      fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_2DGridCreations_EntityCount_Horizontal(16,22.34f)
+      resultStatus: 1
+      duration: 0.0001853
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1013
+      parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_2DGridCreations_EntityCount_Horizontal][suite]
+    - id: 1007
+      uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_2DGridCreations_EntityCount_Vertical][suite]
+      name: Validate_2DGridCreations_EntityCount_Vertical
+      fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_2DGridCreations_EntityCount_Vertical
+      resultStatus: 1
+      duration: 0.008437
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1001
+      parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests][suite]
     - id: 1002
-      uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.GenericUtilitiesSimplePasses]
-      name: GenericUtilitiesSimplePasses
-      fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.GenericUtilitiesSimplePasses
-      resultStatus: 0
-      duration: 0
+      uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/Validate_2DGridCreations_EntityCount_Vertical/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_2DGridCreations_EntityCount_Vertical(1,1)]
+      name: Validate_2DGridCreations_EntityCount_Vertical(1,1)
+      fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_2DGridCreations_EntityCount_Vertical(1,1)
+      resultStatus: 1
+      duration: 0.0005198
       messages: 
       output: 
       stacktrace: 
@@ -756,14 +867,14 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1001
-      parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests][suite]
+      parentId: 1007
+      parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_2DGridCreations_EntityCount_Vertical][suite]
     - id: 1003
-      uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.GenericUtilitiesWithEnumeratorPasses]
-      name: GenericUtilitiesWithEnumeratorPasses
-      fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.GenericUtilitiesWithEnumeratorPasses
-      resultStatus: 0
-      duration: 0
+      uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/Validate_2DGridCreations_EntityCount_Vertical/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_2DGridCreations_EntityCount_Vertical(2,5)]
+      name: Validate_2DGridCreations_EntityCount_Vertical(2,5)
+      fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_2DGridCreations_EntityCount_Vertical(2,5)
+      resultStatus: 1
+      duration: 0.000177
       messages: 
       output: 
       stacktrace: 
@@ -773,15 +884,1607 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
+      parentId: 1007
+      parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_2DGridCreations_EntityCount_Vertical][suite]
+    - id: 1004
+      uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/Validate_2DGridCreations_EntityCount_Vertical/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_2DGridCreations_EntityCount_Vertical(2,15)]
+      name: Validate_2DGridCreations_EntityCount_Vertical(2,15)
+      fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_2DGridCreations_EntityCount_Vertical(2,15)
+      resultStatus: 1
+      duration: 0.0001726
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1007
+      parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_2DGridCreations_EntityCount_Vertical][suite]
+    - id: 1005
+      uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/Validate_2DGridCreations_EntityCount_Vertical/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_2DGridCreations_EntityCount_Vertical(14,0.5f)]
+      name: Validate_2DGridCreations_EntityCount_Vertical(14,0.5f)
+      fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_2DGridCreations_EntityCount_Vertical(14,0.5f)
+      resultStatus: 1
+      duration: 0.0001743
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1007
+      parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_2DGridCreations_EntityCount_Vertical][suite]
+    - id: 1006
+      uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/Validate_2DGridCreations_EntityCount_Vertical/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_2DGridCreations_EntityCount_Vertical(16,22.34f)]
+      name: Validate_2DGridCreations_EntityCount_Vertical(16,22.34f)
+      fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_2DGridCreations_EntityCount_Vertical(16,22.34f)
+      resultStatus: 1
+      duration: 0.0001737
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1007
+      parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_2DGridCreations_EntityCount_Vertical][suite]
+    - id: 1019
+      uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_3DGridCreations_EntityCount][suite]
+      name: Validate_3DGridCreations_EntityCount
+      fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_3DGridCreations_EntityCount
+      resultStatus: 1
+      duration: 0.0080601
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
       parentId: 1001
       parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests][suite]
-    m_ResultText: 
+    - id: 1014
+      uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/Validate_3DGridCreations_EntityCount/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_3DGridCreations_EntityCount(1,1)]
+      name: Validate_3DGridCreations_EntityCount(1,1)
+      fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_3DGridCreations_EntityCount(1,1)
+      resultStatus: 1
+      duration: 0.0004129
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1019
+      parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_3DGridCreations_EntityCount][suite]
+    - id: 1015
+      uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/Validate_3DGridCreations_EntityCount/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_3DGridCreations_EntityCount(2,5)]
+      name: Validate_3DGridCreations_EntityCount(2,5)
+      fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_3DGridCreations_EntityCount(2,5)
+      resultStatus: 1
+      duration: 0.0001736
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1019
+      parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_3DGridCreations_EntityCount][suite]
+    - id: 1016
+      uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/Validate_3DGridCreations_EntityCount/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_3DGridCreations_EntityCount(2,15)]
+      name: Validate_3DGridCreations_EntityCount(2,15)
+      fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_3DGridCreations_EntityCount(2,15)
+      resultStatus: 1
+      duration: 0.0001659
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1019
+      parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_3DGridCreations_EntityCount][suite]
+    - id: 1017
+      uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/Validate_3DGridCreations_EntityCount/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_3DGridCreations_EntityCount(14,0.5f)]
+      name: Validate_3DGridCreations_EntityCount(14,0.5f)
+      fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_3DGridCreations_EntityCount(14,0.5f)
+      resultStatus: 1
+      duration: 0.000215
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1019
+      parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_3DGridCreations_EntityCount][suite]
+    - id: 1018
+      uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/Validate_3DGridCreations_EntityCount/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_3DGridCreations_EntityCount(16,22.34f)]
+      name: Validate_3DGridCreations_EntityCount(16,22.34f)
+      fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_3DGridCreations_EntityCount(16,22.34f)
+      resultStatus: 1
+      duration: 0.0002319
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1019
+      parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_3DGridCreations_EntityCount][suite]
+    - id: 1222
+      uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_AssignDirectionIDAccordingToPresentNeighbors]
+      name: Validate_AssignDirectionIDAccordingToPresentNeighbors
+      fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_AssignDirectionIDAccordingToPresentNeighbors
+      resultStatus: 2
+      duration: 0.0002048
+      messages: No arguments were provided
+      output: 
+      stacktrace: 
+      notRunnable: 1
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1197
+      parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests][suite]
+    - id: 1025
+      uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkNeigbors][suite]
+      name: Validate_FindChunkNeigbors
+      fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkNeigbors
+      resultStatus: 2
+      duration: 0.0109308
+      messages: One or more child tests had errors
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1001
+      parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests][suite]
+    - id: 1020
+      uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/Validate_FindChunkNeigbors/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkNeigbors(1,1)]
+      name: Validate_FindChunkNeigbors(1,1)
+      fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkNeigbors(1,1)
+      resultStatus: 2
+      duration: 0.0028273
+      messages: 
+      output: 
+      stacktrace: 'at Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkNeigbors
+        (System.Int32 gridSize, System.Single scale) [0x00001] in C:\.git\Unity.DungeonCrawler\DungeonCrawler\Assets\SRC\__Tests__\ProceduralMapGenerationAssembly\Utilities\GridCreate_Tests.cs:60
+
+'
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1025
+      parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkNeigbors][suite]
+    - id: 1021
+      uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/Validate_FindChunkNeigbors/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkNeigbors(2,5)]
+      name: Validate_FindChunkNeigbors(2,5)
+      fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkNeigbors(2,5)
+      resultStatus: 2
+      duration: 0.0002882
+      messages: 
+      output: 
+      stacktrace: 'at Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkNeigbors
+        (System.Int32 gridSize, System.Single scale) [0x00001] in C:\.git\Unity.DungeonCrawler\DungeonCrawler\Assets\SRC\__Tests__\ProceduralMapGenerationAssembly\Utilities\GridCreate_Tests.cs:60
+
+'
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1025
+      parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkNeigbors][suite]
+    - id: 1022
+      uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/Validate_FindChunkNeigbors/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkNeigbors(2,15)]
+      name: Validate_FindChunkNeigbors(2,15)
+      fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkNeigbors(2,15)
+      resultStatus: 2
+      duration: 0.0002649
+      messages: 
+      output: 
+      stacktrace: 'at Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkNeigbors
+        (System.Int32 gridSize, System.Single scale) [0x00001] in C:\.git\Unity.DungeonCrawler\DungeonCrawler\Assets\SRC\__Tests__\ProceduralMapGenerationAssembly\Utilities\GridCreate_Tests.cs:60
+
+'
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1025
+      parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkNeigbors][suite]
+    - id: 1023
+      uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/Validate_FindChunkNeigbors/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkNeigbors(14,0.5f)]
+      name: Validate_FindChunkNeigbors(14,0.5f)
+      fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkNeigbors(14,0.5f)
+      resultStatus: 2
+      duration: 0.0002611
+      messages: 
+      output: 
+      stacktrace: 'at Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkNeigbors
+        (System.Int32 gridSize, System.Single scale) [0x00001] in C:\.git\Unity.DungeonCrawler\DungeonCrawler\Assets\SRC\__Tests__\ProceduralMapGenerationAssembly\Utilities\GridCreate_Tests.cs:60
+
+'
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1025
+      parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkNeigbors][suite]
+    - id: 1024
+      uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/Validate_FindChunkNeigbors/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkNeigbors(16,22.34f)]
+      name: Validate_FindChunkNeigbors(16,22.34f)
+      fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkNeigbors(16,22.34f)
+      resultStatus: 2
+      duration: 0.0002558
+      messages: 
+      output: 
+      stacktrace: 'at Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkNeigbors
+        (System.Int32 gridSize, System.Single scale) [0x00001] in C:\.git\Unity.DungeonCrawler\DungeonCrawler\Assets\SRC\__Tests__\ProceduralMapGenerationAssembly\Utilities\GridCreate_Tests.cs:60
+
+'
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1025
+      parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkNeigbors][suite]
+    - id: 1028
+      uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType][suite]
+      name: Validate_FindChunkType
+      fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType
+      resultStatus: 2
+      duration: 0.0669646
+      messages: One or more child tests had errors
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1001
+      parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests][suite]
+    - id: 1027
+      uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/Validate_FindChunkType/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType(N,True,False,False,False,False,False)]
+      name: Validate_FindChunkType(N,True,False,False,False,False,False)
+      fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType(N,True,False,False,False,False,False)
+      resultStatus: 1
+      duration: 0.0037749
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1080
+      parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType][suite]
+    - id: 1028
+      uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/Validate_FindChunkType/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType(NE,True,True,False,False,False,False)]
+      name: Validate_FindChunkType(NE,True,True,False,False,False,False)
+      fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType(NE,True,True,False,False,False,False)
+      resultStatus: 1
+      duration: 0.0003562
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1080
+      parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType][suite]
+    - id: 1029
+      uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/Validate_FindChunkType/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType(NET,True,True,False,False,True,False)]
+      name: Validate_FindChunkType(NET,True,True,False,False,True,False)
+      fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType(NET,True,True,False,False,True,False)
+      resultStatus: 2
+      duration: 0.0158609
+      messages: 'Expected _gridCreate.FindChunkType(result) to be DirectionTypeEnum.NET
+        {value: 19}, but found DirectionTypeEnum.NSWB {value: 27}.'
+      output: 
+      stacktrace: 'at FluentAssertions.Execution.LateBoundTestFramework.Throw (System.String
+        message) [0x0005c] in C:\.git\fluentassertions-unity\FluentAssertions\Packages\com.boundfoxstudios.fluentassertions\Runtime\FluentAssertions\Execution\LateBoundTestFramework.cs:22
+
+        at
+        FluentAssertions.Execution.TestFrameworkProvider.Throw (System.String message)
+        [0x00019] in C:\.git\fluentassertions-unity\FluentAssertions\Packages\com.boundfoxstudios.fluentassertions\Runtime\FluentAssertions\Execution\TestFrameworkProvider.cs:34
+
+        at
+        FluentAssertions.Execution.DefaultAssertionStrategy.HandleFailure (System.String
+        message) [0x00001] in C:\.git\fluentassertions-unity\FluentAssertions\Packages\com.boundfoxstudios.fluentassertions\Runtime\FluentAssertions\Execution\DefaultAssertionStrategy.cs:25
+
+        at
+        FluentAssertions.Execution.AssertionScope.FailWith (System.Func`1[TResult]
+        failReasonFunc) [0x00057] in C:\.git\fluentassertions-unity\FluentAssertions\Packages\com.boundfoxstudios.fluentassertions\Runtime\FluentAssertions\Execution\AssertionScope.cs:274
+
+        at
+        FluentAssertions.Execution.AssertionScope.FailWith (System.Func`1[TResult]
+        failReasonFunc) [0x00015] in C:\.git\fluentassertions-unity\FluentAssertions\Packages\com.boundfoxstudios.fluentassertions\Runtime\FluentAssertions\Execution\AssertionScope.cs:246
+
+        at
+        FluentAssertions.Execution.AssertionScope.FailWith (System.String message,
+        System.Object[] args) [0x00015] in C:\.git\fluentassertions-unity\FluentAssertions\Packages\com.boundfoxstudios.fluentassertions\Runtime\FluentAssertions\Execution\AssertionScope.cs:296
+
+        at
+        FluentAssertions.Primitives.EnumAssertions`2[TEnum,TAssertions].Be (TEnum
+        expected, System.String because, System.Object[] becauseArgs) [0x00001] in
+        C:\.git\fluentassertions-unity\FluentAssertions\Packages\com.boundfoxstudios.fluentassertions\Runtime\FluentAssertions\Primitives\EnumAssertions.cs:57
+
+        at
+        Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType
+        (Assets.SRC.ProceduralMapGeneration.Enums.DirectionTypeEnum proved, System.Boolean
+        north, System.Boolean east, System.Boolean south, System.Boolean west, System.Boolean
+        top, System.Boolean bottom) [0x0002f] in C:\.git\Unity.DungeonCrawler\DungeonCrawler\Assets\SRC\__Tests__\ProceduralMapGenerationAssembly\Utilities\GridCreate_Tests.cs:198
+
+'
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1080
+      parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType][suite]
+    - id: 1030
+      uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/Validate_FindChunkType/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType(NEB,True,True,False,False,False,True)]
+      name: Validate_FindChunkType(NEB,True,True,False,False,False,True)
+      fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType(NEB,True,True,False,False,False,True)
+      resultStatus: 2
+      duration: 0.0016056
+      messages: 'Expected _gridCreate.FindChunkType(result) to be DirectionTypeEnum.NEB
+        {value: 21}, but found DirectionTypeEnum.NET {value: 19}.'
+      output: 
+      stacktrace: 'at FluentAssertions.Execution.LateBoundTestFramework.Throw (System.String
+        message) [0x0005c] in C:\.git\fluentassertions-unity\FluentAssertions\Packages\com.boundfoxstudios.fluentassertions\Runtime\FluentAssertions\Execution\LateBoundTestFramework.cs:22
+
+        at
+        FluentAssertions.Execution.TestFrameworkProvider.Throw (System.String message)
+        [0x00019] in C:\.git\fluentassertions-unity\FluentAssertions\Packages\com.boundfoxstudios.fluentassertions\Runtime\FluentAssertions\Execution\TestFrameworkProvider.cs:34
+
+        at
+        FluentAssertions.Execution.DefaultAssertionStrategy.HandleFailure (System.String
+        message) [0x00001] in C:\.git\fluentassertions-unity\FluentAssertions\Packages\com.boundfoxstudios.fluentassertions\Runtime\FluentAssertions\Execution\DefaultAssertionStrategy.cs:25
+
+        at
+        FluentAssertions.Execution.AssertionScope.FailWith (System.Func`1[TResult]
+        failReasonFunc) [0x00057] in C:\.git\fluentassertions-unity\FluentAssertions\Packages\com.boundfoxstudios.fluentassertions\Runtime\FluentAssertions\Execution\AssertionScope.cs:274
+
+        at
+        FluentAssertions.Execution.AssertionScope.FailWith (System.Func`1[TResult]
+        failReasonFunc) [0x00015] in C:\.git\fluentassertions-unity\FluentAssertions\Packages\com.boundfoxstudios.fluentassertions\Runtime\FluentAssertions\Execution\AssertionScope.cs:246
+
+        at
+        FluentAssertions.Execution.AssertionScope.FailWith (System.String message,
+        System.Object[] args) [0x00015] in C:\.git\fluentassertions-unity\FluentAssertions\Packages\com.boundfoxstudios.fluentassertions\Runtime\FluentAssertions\Execution\AssertionScope.cs:296
+
+        at
+        FluentAssertions.Primitives.EnumAssertions`2[TEnum,TAssertions].Be (TEnum
+        expected, System.String because, System.Object[] becauseArgs) [0x00001] in
+        C:\.git\fluentassertions-unity\FluentAssertions\Packages\com.boundfoxstudios.fluentassertions\Runtime\FluentAssertions\Primitives\EnumAssertions.cs:57
+
+        at
+        Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType
+        (Assets.SRC.ProceduralMapGeneration.Enums.DirectionTypeEnum proved, System.Boolean
+        north, System.Boolean east, System.Boolean south, System.Boolean west, System.Boolean
+        top, System.Boolean bottom) [0x0002f] in C:\.git\Unity.DungeonCrawler\DungeonCrawler\Assets\SRC\__Tests__\ProceduralMapGenerationAssembly\Utilities\GridCreate_Tests.cs:198
+
+'
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1080
+      parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType][suite]
+    - id: 1031
+      uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/Validate_FindChunkType/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType(NEW,True,True,False,True,False,False)]
+      name: Validate_FindChunkType(NEW,True,True,False,True,False,False)
+      fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType(NEW,True,True,False,True,False,False)
+      resultStatus: 1
+      duration: 0.0003341
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1080
+      parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType][suite]
+    - id: 1032
+      uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/Validate_FindChunkType/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType(NEWT,True,True,False,True,True,False)]
+      name: Validate_FindChunkType(NEWT,True,True,False,True,True,False)
+      fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType(NEWT,True,True,False,True,True,False)
+      resultStatus: 1
+      duration: 0.0003036
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1080
+      parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType][suite]
+    - id: 1033
+      uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/Validate_FindChunkType/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType(NEWB,True,True,False,True,False,True)]
+      name: Validate_FindChunkType(NEWB,True,True,False,True,False,True)
+      fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType(NEWB,True,True,False,True,False,True)
+      resultStatus: 1
+      duration: 0.000295
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1080
+      parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType][suite]
+    - id: 1034
+      uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/Validate_FindChunkType/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType(NEWTB,True,True,False,True,True,True)]
+      name: Validate_FindChunkType(NEWTB,True,True,False,True,True,True)
+      fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType(NEWTB,True,True,False,True,True,True)
+      resultStatus: 2
+      duration: 0.0014953
+      messages: 'Expected _gridCreate.FindChunkType(result) to be DirectionTypeEnum.NEWTB
+        {value: 11}, but found DirectionTypeEnum.Error {value: 2}.'
+      output: 
+      stacktrace: 'at FluentAssertions.Execution.LateBoundTestFramework.Throw (System.String
+        message) [0x0005c] in C:\.git\fluentassertions-unity\FluentAssertions\Packages\com.boundfoxstudios.fluentassertions\Runtime\FluentAssertions\Execution\LateBoundTestFramework.cs:22
+
+        at
+        FluentAssertions.Execution.TestFrameworkProvider.Throw (System.String message)
+        [0x00019] in C:\.git\fluentassertions-unity\FluentAssertions\Packages\com.boundfoxstudios.fluentassertions\Runtime\FluentAssertions\Execution\TestFrameworkProvider.cs:34
+
+        at
+        FluentAssertions.Execution.DefaultAssertionStrategy.HandleFailure (System.String
+        message) [0x00001] in C:\.git\fluentassertions-unity\FluentAssertions\Packages\com.boundfoxstudios.fluentassertions\Runtime\FluentAssertions\Execution\DefaultAssertionStrategy.cs:25
+
+        at
+        FluentAssertions.Execution.AssertionScope.FailWith (System.Func`1[TResult]
+        failReasonFunc) [0x00057] in C:\.git\fluentassertions-unity\FluentAssertions\Packages\com.boundfoxstudios.fluentassertions\Runtime\FluentAssertions\Execution\AssertionScope.cs:274
+
+        at
+        FluentAssertions.Execution.AssertionScope.FailWith (System.Func`1[TResult]
+        failReasonFunc) [0x00015] in C:\.git\fluentassertions-unity\FluentAssertions\Packages\com.boundfoxstudios.fluentassertions\Runtime\FluentAssertions\Execution\AssertionScope.cs:246
+
+        at
+        FluentAssertions.Execution.AssertionScope.FailWith (System.String message,
+        System.Object[] args) [0x00015] in C:\.git\fluentassertions-unity\FluentAssertions\Packages\com.boundfoxstudios.fluentassertions\Runtime\FluentAssertions\Execution\AssertionScope.cs:296
+
+        at
+        FluentAssertions.Primitives.EnumAssertions`2[TEnum,TAssertions].Be (TEnum
+        expected, System.String because, System.Object[] becauseArgs) [0x00001] in
+        C:\.git\fluentassertions-unity\FluentAssertions\Packages\com.boundfoxstudios.fluentassertions\Runtime\FluentAssertions\Primitives\EnumAssertions.cs:57
+
+        at
+        Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType
+        (Assets.SRC.ProceduralMapGeneration.Enums.DirectionTypeEnum proved, System.Boolean
+        north, System.Boolean east, System.Boolean south, System.Boolean west, System.Boolean
+        top, System.Boolean bottom) [0x0002f] in C:\.git\Unity.DungeonCrawler\DungeonCrawler\Assets\SRC\__Tests__\ProceduralMapGenerationAssembly\Utilities\GridCreate_Tests.cs:198
+
+'
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1080
+      parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType][suite]
+    - id: 1035
+      uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/Validate_FindChunkType/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType(NES,True,True,True,False,False,False)]
+      name: Validate_FindChunkType(NES,True,True,True,False,False,False)
+      fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType(NES,True,True,True,False,False,False)
+      resultStatus: 1
+      duration: 0.0003276
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1080
+      parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType][suite]
+    - id: 1036
+      uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/Validate_FindChunkType/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType(NEST,True,True,True,False,True,False)]
+      name: Validate_FindChunkType(NEST,True,True,True,False,True,False)
+      fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType(NEST,True,True,True,False,True,False)
+      resultStatus: 1
+      duration: 0.0003076
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1080
+      parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType][suite]
+    - id: 1037
+      uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/Validate_FindChunkType/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType(NESB,True,True,True,False,False,True)]
+      name: Validate_FindChunkType(NESB,True,True,True,False,False,True)
+      fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType(NESB,True,True,True,False,False,True)
+      resultStatus: 2
+      duration: 0.0014612
+      messages: 'Expected _gridCreate.FindChunkType(result) to be DirectionTypeEnum.NESB
+        {value: 24}, but found DirectionTypeEnum.NESTB {value: 23}.'
+      output: 
+      stacktrace: 'at FluentAssertions.Execution.LateBoundTestFramework.Throw (System.String
+        message) [0x0005c] in C:\.git\fluentassertions-unity\FluentAssertions\Packages\com.boundfoxstudios.fluentassertions\Runtime\FluentAssertions\Execution\LateBoundTestFramework.cs:22
+
+        at
+        FluentAssertions.Execution.TestFrameworkProvider.Throw (System.String message)
+        [0x00019] in C:\.git\fluentassertions-unity\FluentAssertions\Packages\com.boundfoxstudios.fluentassertions\Runtime\FluentAssertions\Execution\TestFrameworkProvider.cs:34
+
+        at
+        FluentAssertions.Execution.DefaultAssertionStrategy.HandleFailure (System.String
+        message) [0x00001] in C:\.git\fluentassertions-unity\FluentAssertions\Packages\com.boundfoxstudios.fluentassertions\Runtime\FluentAssertions\Execution\DefaultAssertionStrategy.cs:25
+
+        at
+        FluentAssertions.Execution.AssertionScope.FailWith (System.Func`1[TResult]
+        failReasonFunc) [0x00057] in C:\.git\fluentassertions-unity\FluentAssertions\Packages\com.boundfoxstudios.fluentassertions\Runtime\FluentAssertions\Execution\AssertionScope.cs:274
+
+        at
+        FluentAssertions.Execution.AssertionScope.FailWith (System.Func`1[TResult]
+        failReasonFunc) [0x00015] in C:\.git\fluentassertions-unity\FluentAssertions\Packages\com.boundfoxstudios.fluentassertions\Runtime\FluentAssertions\Execution\AssertionScope.cs:246
+
+        at
+        FluentAssertions.Execution.AssertionScope.FailWith (System.String message,
+        System.Object[] args) [0x00015] in C:\.git\fluentassertions-unity\FluentAssertions\Packages\com.boundfoxstudios.fluentassertions\Runtime\FluentAssertions\Execution\AssertionScope.cs:296
+
+        at
+        FluentAssertions.Primitives.EnumAssertions`2[TEnum,TAssertions].Be (TEnum
+        expected, System.String because, System.Object[] becauseArgs) [0x00001] in
+        C:\.git\fluentassertions-unity\FluentAssertions\Packages\com.boundfoxstudios.fluentassertions\Runtime\FluentAssertions\Primitives\EnumAssertions.cs:57
+
+        at
+        Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType
+        (Assets.SRC.ProceduralMapGeneration.Enums.DirectionTypeEnum proved, System.Boolean
+        north, System.Boolean east, System.Boolean south, System.Boolean west, System.Boolean
+        top, System.Boolean bottom) [0x0002f] in C:\.git\Unity.DungeonCrawler\DungeonCrawler\Assets\SRC\__Tests__\ProceduralMapGenerationAssembly\Utilities\GridCreate_Tests.cs:198
+
+'
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1080
+      parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType][suite]
+    - id: 1038
+      uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/Validate_FindChunkType/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType(NESTB,True,True,True,False,True,True)]
+      name: Validate_FindChunkType(NESTB,True,True,True,False,True,True)
+      fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType(NESTB,True,True,True,False,True,True)
+      resultStatus: 2
+      duration: 0.001483
+      messages: 'Expected _gridCreate.FindChunkType(result) to be DirectionTypeEnum.NESTB
+        {value: 23}, but found DirectionTypeEnum.Error {value: 2}.'
+      output: 
+      stacktrace: 'at FluentAssertions.Execution.LateBoundTestFramework.Throw (System.String
+        message) [0x0005c] in C:\.git\fluentassertions-unity\FluentAssertions\Packages\com.boundfoxstudios.fluentassertions\Runtime\FluentAssertions\Execution\LateBoundTestFramework.cs:22
+
+        at
+        FluentAssertions.Execution.TestFrameworkProvider.Throw (System.String message)
+        [0x00019] in C:\.git\fluentassertions-unity\FluentAssertions\Packages\com.boundfoxstudios.fluentassertions\Runtime\FluentAssertions\Execution\TestFrameworkProvider.cs:34
+
+        at
+        FluentAssertions.Execution.DefaultAssertionStrategy.HandleFailure (System.String
+        message) [0x00001] in C:\.git\fluentassertions-unity\FluentAssertions\Packages\com.boundfoxstudios.fluentassertions\Runtime\FluentAssertions\Execution\DefaultAssertionStrategy.cs:25
+
+        at
+        FluentAssertions.Execution.AssertionScope.FailWith (System.Func`1[TResult]
+        failReasonFunc) [0x00057] in C:\.git\fluentassertions-unity\FluentAssertions\Packages\com.boundfoxstudios.fluentassertions\Runtime\FluentAssertions\Execution\AssertionScope.cs:274
+
+        at
+        FluentAssertions.Execution.AssertionScope.FailWith (System.Func`1[TResult]
+        failReasonFunc) [0x00015] in C:\.git\fluentassertions-unity\FluentAssertions\Packages\com.boundfoxstudios.fluentassertions\Runtime\FluentAssertions\Execution\AssertionScope.cs:246
+
+        at
+        FluentAssertions.Execution.AssertionScope.FailWith (System.String message,
+        System.Object[] args) [0x00015] in C:\.git\fluentassertions-unity\FluentAssertions\Packages\com.boundfoxstudios.fluentassertions\Runtime\FluentAssertions\Execution\AssertionScope.cs:296
+
+        at
+        FluentAssertions.Primitives.EnumAssertions`2[TEnum,TAssertions].Be (TEnum
+        expected, System.String because, System.Object[] becauseArgs) [0x00001] in
+        C:\.git\fluentassertions-unity\FluentAssertions\Packages\com.boundfoxstudios.fluentassertions\Runtime\FluentAssertions\Primitives\EnumAssertions.cs:57
+
+        at
+        Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType
+        (Assets.SRC.ProceduralMapGeneration.Enums.DirectionTypeEnum proved, System.Boolean
+        north, System.Boolean east, System.Boolean south, System.Boolean west, System.Boolean
+        top, System.Boolean bottom) [0x0002f] in C:\.git\Unity.DungeonCrawler\DungeonCrawler\Assets\SRC\__Tests__\ProceduralMapGenerationAssembly\Utilities\GridCreate_Tests.cs:198
+
+'
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1080
+      parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType][suite]
+    - id: 1039
+      uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/Validate_FindChunkType/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType(NETB,True,True,False,False,True,True)]
+      name: Validate_FindChunkType(NETB,True,True,False,False,True,True)
+      fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType(NETB,True,True,False,False,True,True)
+      resultStatus: 1
+      duration: 0.0002965
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1080
+      parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType][suite]
+    - id: 1040
+      uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/Validate_FindChunkType/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType(NS,True,False,True,False,False,False)]
+      name: Validate_FindChunkType(NS,True,False,True,False,False,False)
+      fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType(NS,True,False,True,False,False,False)
+      resultStatus: 1
+      duration: 0.0002983
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1080
+      parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType][suite]
+    - id: 1041
+      uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/Validate_FindChunkType/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType(NSW,True,False,True,True,False,False)]
+      name: Validate_FindChunkType(NSW,True,False,True,True,False,False)
+      fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType(NSW,True,False,True,True,False,False)
+      resultStatus: 2
+      duration: 0.0014509
+      messages: 'Expected _gridCreate.FindChunkType(result) to be DirectionTypeEnum.NSW
+        {value: 25}, but found DirectionTypeEnum.Error {value: 2}.'
+      output: 
+      stacktrace: 'at FluentAssertions.Execution.LateBoundTestFramework.Throw (System.String
+        message) [0x0005c] in C:\.git\fluentassertions-unity\FluentAssertions\Packages\com.boundfoxstudios.fluentassertions\Runtime\FluentAssertions\Execution\LateBoundTestFramework.cs:22
+
+        at
+        FluentAssertions.Execution.TestFrameworkProvider.Throw (System.String message)
+        [0x00019] in C:\.git\fluentassertions-unity\FluentAssertions\Packages\com.boundfoxstudios.fluentassertions\Runtime\FluentAssertions\Execution\TestFrameworkProvider.cs:34
+
+        at
+        FluentAssertions.Execution.DefaultAssertionStrategy.HandleFailure (System.String
+        message) [0x00001] in C:\.git\fluentassertions-unity\FluentAssertions\Packages\com.boundfoxstudios.fluentassertions\Runtime\FluentAssertions\Execution\DefaultAssertionStrategy.cs:25
+
+        at
+        FluentAssertions.Execution.AssertionScope.FailWith (System.Func`1[TResult]
+        failReasonFunc) [0x00057] in C:\.git\fluentassertions-unity\FluentAssertions\Packages\com.boundfoxstudios.fluentassertions\Runtime\FluentAssertions\Execution\AssertionScope.cs:274
+
+        at
+        FluentAssertions.Execution.AssertionScope.FailWith (System.Func`1[TResult]
+        failReasonFunc) [0x00015] in C:\.git\fluentassertions-unity\FluentAssertions\Packages\com.boundfoxstudios.fluentassertions\Runtime\FluentAssertions\Execution\AssertionScope.cs:246
+
+        at
+        FluentAssertions.Execution.AssertionScope.FailWith (System.String message,
+        System.Object[] args) [0x00015] in C:\.git\fluentassertions-unity\FluentAssertions\Packages\com.boundfoxstudios.fluentassertions\Runtime\FluentAssertions\Execution\AssertionScope.cs:296
+
+        at
+        FluentAssertions.Primitives.EnumAssertions`2[TEnum,TAssertions].Be (TEnum
+        expected, System.String because, System.Object[] becauseArgs) [0x00001] in
+        C:\.git\fluentassertions-unity\FluentAssertions\Packages\com.boundfoxstudios.fluentassertions\Runtime\FluentAssertions\Primitives\EnumAssertions.cs:57
+
+        at
+        Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType
+        (Assets.SRC.ProceduralMapGeneration.Enums.DirectionTypeEnum proved, System.Boolean
+        north, System.Boolean east, System.Boolean south, System.Boolean west, System.Boolean
+        top, System.Boolean bottom) [0x0002f] in C:\.git\Unity.DungeonCrawler\DungeonCrawler\Assets\SRC\__Tests__\ProceduralMapGenerationAssembly\Utilities\GridCreate_Tests.cs:198
+
+'
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1080
+      parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType][suite]
+    - id: 1042
+      uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/Validate_FindChunkType/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType(NST,True,False,True,False,True,False)]
+      name: Validate_FindChunkType(NST,True,False,True,False,True,False)
+      fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType(NST,True,False,True,False,True,False)
+      resultStatus: 1
+      duration: 0.0002964
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1080
+      parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType][suite]
+    - id: 1043
+      uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/Validate_FindChunkType/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType(NSB,True,False,True,False,False,True)]
+      name: Validate_FindChunkType(NSB,True,False,True,False,False,True)
+      fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType(NSB,True,False,True,False,False,True)
+      resultStatus: 1
+      duration: 0.0004322
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1080
+      parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType][suite]
+    - id: 1044
+      uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/Validate_FindChunkType/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType(NSTB,True,False,True,False,True,True)]
+      name: Validate_FindChunkType(NSTB,True,False,True,False,True,True)
+      fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType(NSTB,True,False,True,False,True,True)
+      resultStatus: 1
+      duration: 0.0003197
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1080
+      parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType][suite]
+    - id: 1045
+      uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/Validate_FindChunkType/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType(NW,True,False,False,True,False,False)]
+      name: Validate_FindChunkType(NW,True,False,False,True,False,False)
+      fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType(NW,True,False,False,True,False,False)
+      resultStatus: 1
+      duration: 0.0002883
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1080
+      parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType][suite]
+    - id: 1046
+      uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/Validate_FindChunkType/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType(NWT,True,False,False,True,True,False)]
+      name: Validate_FindChunkType(NWT,True,False,False,True,True,False)
+      fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType(NWT,True,False,False,True,True,False)
+      resultStatus: 1
+      duration: 0.000294
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1080
+      parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType][suite]
+    - id: 1047
+      uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/Validate_FindChunkType/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType(NWB,True,False,False,True,False,True)]
+      name: Validate_FindChunkType(NWB,True,False,False,True,False,True)
+      fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType(NWB,True,False,False,True,False,True)
+      resultStatus: 1
+      duration: 0.0002936
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1080
+      parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType][suite]
+    - id: 1048
+      uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/Validate_FindChunkType/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType(NWTB,True,False,False,True,True,True)]
+      name: Validate_FindChunkType(NWTB,True,False,False,True,True,True)
+      fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType(NWTB,True,False,False,True,True,True)
+      resultStatus: 1
+      duration: 0.0002961
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1080
+      parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType][suite]
+    - id: 1049
+      uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/Validate_FindChunkType/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType(NT,True,False,False,False,True,False)]
+      name: Validate_FindChunkType(NT,True,False,False,False,True,False)
+      fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType(NT,True,False,False,False,True,False)
+      resultStatus: 1
+      duration: 0.0002937
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1080
+      parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType][suite]
+    - id: 1050
+      uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/Validate_FindChunkType/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType(NTB,True,False,False,False,True,True)]
+      name: Validate_FindChunkType(NTB,True,False,False,False,True,True)
+      fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType(NTB,True,False,False,False,True,True)
+      resultStatus: 1
+      duration: 0.0002899
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1080
+      parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType][suite]
+    - id: 1051
+      uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/Validate_FindChunkType/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType(NB,True,False,False,False,False,True)]
+      name: Validate_FindChunkType(NB,True,False,False,False,False,True)
+      fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType(NB,True,False,False,False,False,True)
+      resultStatus: 1
+      duration: 0.0002878
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1080
+      parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType][suite]
+    - id: 1052
+      uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/Validate_FindChunkType/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType(E,False,True,False,False,False,False)]
+      name: Validate_FindChunkType(E,False,True,False,False,False,False)
+      fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType(E,False,True,False,False,False,False)
+      resultStatus: 2
+      duration: 0.0014844
+      messages: 'Expected _gridCreate.FindChunkType(result) to be DirectionTypeEnum.E
+        {value: 62}, but found DirectionTypeEnum.Error {value: 2}.'
+      output: 
+      stacktrace: 'at FluentAssertions.Execution.LateBoundTestFramework.Throw (System.String
+        message) [0x0005c] in C:\.git\fluentassertions-unity\FluentAssertions\Packages\com.boundfoxstudios.fluentassertions\Runtime\FluentAssertions\Execution\LateBoundTestFramework.cs:22
+
+        at
+        FluentAssertions.Execution.TestFrameworkProvider.Throw (System.String message)
+        [0x00019] in C:\.git\fluentassertions-unity\FluentAssertions\Packages\com.boundfoxstudios.fluentassertions\Runtime\FluentAssertions\Execution\TestFrameworkProvider.cs:34
+
+        at
+        FluentAssertions.Execution.DefaultAssertionStrategy.HandleFailure (System.String
+        message) [0x00001] in C:\.git\fluentassertions-unity\FluentAssertions\Packages\com.boundfoxstudios.fluentassertions\Runtime\FluentAssertions\Execution\DefaultAssertionStrategy.cs:25
+
+        at
+        FluentAssertions.Execution.AssertionScope.FailWith (System.Func`1[TResult]
+        failReasonFunc) [0x00057] in C:\.git\fluentassertions-unity\FluentAssertions\Packages\com.boundfoxstudios.fluentassertions\Runtime\FluentAssertions\Execution\AssertionScope.cs:274
+
+        at
+        FluentAssertions.Execution.AssertionScope.FailWith (System.Func`1[TResult]
+        failReasonFunc) [0x00015] in C:\.git\fluentassertions-unity\FluentAssertions\Packages\com.boundfoxstudios.fluentassertions\Runtime\FluentAssertions\Execution\AssertionScope.cs:246
+
+        at
+        FluentAssertions.Execution.AssertionScope.FailWith (System.String message,
+        System.Object[] args) [0x00015] in C:\.git\fluentassertions-unity\FluentAssertions\Packages\com.boundfoxstudios.fluentassertions\Runtime\FluentAssertions\Execution\AssertionScope.cs:296
+
+        at
+        FluentAssertions.Primitives.EnumAssertions`2[TEnum,TAssertions].Be (TEnum
+        expected, System.String because, System.Object[] becauseArgs) [0x00001] in
+        C:\.git\fluentassertions-unity\FluentAssertions\Packages\com.boundfoxstudios.fluentassertions\Runtime\FluentAssertions\Primitives\EnumAssertions.cs:57
+
+        at
+        Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType
+        (Assets.SRC.ProceduralMapGeneration.Enums.DirectionTypeEnum proved, System.Boolean
+        north, System.Boolean east, System.Boolean south, System.Boolean west, System.Boolean
+        top, System.Boolean bottom) [0x0002f] in C:\.git\Unity.DungeonCrawler\DungeonCrawler\Assets\SRC\__Tests__\ProceduralMapGenerationAssembly\Utilities\GridCreate_Tests.cs:198
+
+'
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1080
+      parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType][suite]
+    - id: 1053
+      uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/Validate_FindChunkType/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType(ES,False,True,True,False,False,False)]
+      name: Validate_FindChunkType(ES,False,True,True,False,False,False)
+      fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType(ES,False,True,True,False,False,False)
+      resultStatus: 1
+      duration: 0.0002891
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1080
+      parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType][suite]
+    - id: 1054
+      uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/Validate_FindChunkType/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType(ESW,False,True,True,True,False,False)]
+      name: Validate_FindChunkType(ESW,False,True,True,True,False,False)
+      fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType(ESW,False,True,True,True,False,False)
+      resultStatus: 1
+      duration: 0.0002931
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1080
+      parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType][suite]
+    - id: 1055
+      uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/Validate_FindChunkType/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType(EST,False,True,True,False,True,False)]
+      name: Validate_FindChunkType(EST,False,True,True,False,True,False)
+      fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType(EST,False,True,True,False,True,False)
+      resultStatus: 1
+      duration: 0.0002943
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1080
+      parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType][suite]
+    - id: 1056
+      uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/Validate_FindChunkType/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType(ESB,False,True,True,False,False,True)]
+      name: Validate_FindChunkType(ESB,False,True,True,False,False,True)
+      fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType(ESB,False,True,True,False,False,True)
+      resultStatus: 1
+      duration: 0.0002945
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1080
+      parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType][suite]
+    - id: 1057
+      uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/Validate_FindChunkType/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType(ESTB,False,True,True,False,True,True)]
+      name: Validate_FindChunkType(ESTB,False,True,True,False,True,True)
+      fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType(ESTB,False,True,True,False,True,True)
+      resultStatus: 1
+      duration: 0.00029
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1080
+      parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType][suite]
+    - id: 1058
+      uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/Validate_FindChunkType/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType(EW,False,True,False,True,False,False)]
+      name: Validate_FindChunkType(EW,False,True,False,True,False,False)
+      fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType(EW,False,True,False,True,False,False)
+      resultStatus: 1
+      duration: 0.0002825
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1080
+      parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType][suite]
+    - id: 1059
+      uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/Validate_FindChunkType/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType(EWT,False,True,False,True,True,False)]
+      name: Validate_FindChunkType(EWT,False,True,False,True,True,False)
+      fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType(EWT,False,True,False,True,True,False)
+      resultStatus: 1
+      duration: 0.0002889
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1080
+      parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType][suite]
+    - id: 1060
+      uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/Validate_FindChunkType/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType(EWTB,False,True,False,True,True,True)]
+      name: Validate_FindChunkType(EWTB,False,True,False,True,True,True)
+      fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType(EWTB,False,True,False,True,True,True)
+      resultStatus: 2
+      duration: 0.0014501
+      messages: 'Expected _gridCreate.FindChunkType(result) to be DirectionTypeEnum.EWTB
+        {value: 13}, but found DirectionTypeEnum.Error {value: 2}.'
+      output: 
+      stacktrace: 'at FluentAssertions.Execution.LateBoundTestFramework.Throw (System.String
+        message) [0x0005c] in C:\.git\fluentassertions-unity\FluentAssertions\Packages\com.boundfoxstudios.fluentassertions\Runtime\FluentAssertions\Execution\LateBoundTestFramework.cs:22
+
+        at
+        FluentAssertions.Execution.TestFrameworkProvider.Throw (System.String message)
+        [0x00019] in C:\.git\fluentassertions-unity\FluentAssertions\Packages\com.boundfoxstudios.fluentassertions\Runtime\FluentAssertions\Execution\TestFrameworkProvider.cs:34
+
+        at
+        FluentAssertions.Execution.DefaultAssertionStrategy.HandleFailure (System.String
+        message) [0x00001] in C:\.git\fluentassertions-unity\FluentAssertions\Packages\com.boundfoxstudios.fluentassertions\Runtime\FluentAssertions\Execution\DefaultAssertionStrategy.cs:25
+
+        at
+        FluentAssertions.Execution.AssertionScope.FailWith (System.Func`1[TResult]
+        failReasonFunc) [0x00057] in C:\.git\fluentassertions-unity\FluentAssertions\Packages\com.boundfoxstudios.fluentassertions\Runtime\FluentAssertions\Execution\AssertionScope.cs:274
+
+        at
+        FluentAssertions.Execution.AssertionScope.FailWith (System.Func`1[TResult]
+        failReasonFunc) [0x00015] in C:\.git\fluentassertions-unity\FluentAssertions\Packages\com.boundfoxstudios.fluentassertions\Runtime\FluentAssertions\Execution\AssertionScope.cs:246
+
+        at
+        FluentAssertions.Execution.AssertionScope.FailWith (System.String message,
+        System.Object[] args) [0x00015] in C:\.git\fluentassertions-unity\FluentAssertions\Packages\com.boundfoxstudios.fluentassertions\Runtime\FluentAssertions\Execution\AssertionScope.cs:296
+
+        at
+        FluentAssertions.Primitives.EnumAssertions`2[TEnum,TAssertions].Be (TEnum
+        expected, System.String because, System.Object[] becauseArgs) [0x00001] in
+        C:\.git\fluentassertions-unity\FluentAssertions\Packages\com.boundfoxstudios.fluentassertions\Runtime\FluentAssertions\Primitives\EnumAssertions.cs:57
+
+        at
+        Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType
+        (Assets.SRC.ProceduralMapGeneration.Enums.DirectionTypeEnum proved, System.Boolean
+        north, System.Boolean east, System.Boolean south, System.Boolean west, System.Boolean
+        top, System.Boolean bottom) [0x0002f] in C:\.git\Unity.DungeonCrawler\DungeonCrawler\Assets\SRC\__Tests__\ProceduralMapGenerationAssembly\Utilities\GridCreate_Tests.cs:198
+
+'
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1080
+      parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType][suite]
+    - id: 1061
+      uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/Validate_FindChunkType/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType(EWB,False,True,False,True,False,True)]
+      name: Validate_FindChunkType(EWB,False,True,False,True,False,True)
+      fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType(EWB,False,True,False,True,False,True)
+      resultStatus: 1
+      duration: 0.0002972
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1080
+      parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType][suite]
+    - id: 1062
+      uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/Validate_FindChunkType/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType(ET,False,True,False,False,True,False)]
+      name: Validate_FindChunkType(ET,False,True,False,False,True,False)
+      fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType(ET,False,True,False,False,True,False)
+      resultStatus: 2
+      duration: 0.0014356
+      messages: 'Expected _gridCreate.FindChunkType(result) to be DirectionTypeEnum.ET
+        {value: 44}, but found DirectionTypeEnum.Error {value: 2}.'
+      output: 
+      stacktrace: 'at FluentAssertions.Execution.LateBoundTestFramework.Throw (System.String
+        message) [0x0005c] in C:\.git\fluentassertions-unity\FluentAssertions\Packages\com.boundfoxstudios.fluentassertions\Runtime\FluentAssertions\Execution\LateBoundTestFramework.cs:22
+
+        at
+        FluentAssertions.Execution.TestFrameworkProvider.Throw (System.String message)
+        [0x00019] in C:\.git\fluentassertions-unity\FluentAssertions\Packages\com.boundfoxstudios.fluentassertions\Runtime\FluentAssertions\Execution\TestFrameworkProvider.cs:34
+
+        at
+        FluentAssertions.Execution.DefaultAssertionStrategy.HandleFailure (System.String
+        message) [0x00001] in C:\.git\fluentassertions-unity\FluentAssertions\Packages\com.boundfoxstudios.fluentassertions\Runtime\FluentAssertions\Execution\DefaultAssertionStrategy.cs:25
+
+        at
+        FluentAssertions.Execution.AssertionScope.FailWith (System.Func`1[TResult]
+        failReasonFunc) [0x00057] in C:\.git\fluentassertions-unity\FluentAssertions\Packages\com.boundfoxstudios.fluentassertions\Runtime\FluentAssertions\Execution\AssertionScope.cs:274
+
+        at
+        FluentAssertions.Execution.AssertionScope.FailWith (System.Func`1[TResult]
+        failReasonFunc) [0x00015] in C:\.git\fluentassertions-unity\FluentAssertions\Packages\com.boundfoxstudios.fluentassertions\Runtime\FluentAssertions\Execution\AssertionScope.cs:246
+
+        at
+        FluentAssertions.Execution.AssertionScope.FailWith (System.String message,
+        System.Object[] args) [0x00015] in C:\.git\fluentassertions-unity\FluentAssertions\Packages\com.boundfoxstudios.fluentassertions\Runtime\FluentAssertions\Execution\AssertionScope.cs:296
+
+        at
+        FluentAssertions.Primitives.EnumAssertions`2[TEnum,TAssertions].Be (TEnum
+        expected, System.String because, System.Object[] becauseArgs) [0x00001] in
+        C:\.git\fluentassertions-unity\FluentAssertions\Packages\com.boundfoxstudios.fluentassertions\Runtime\FluentAssertions\Primitives\EnumAssertions.cs:57
+
+        at
+        Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType
+        (Assets.SRC.ProceduralMapGeneration.Enums.DirectionTypeEnum proved, System.Boolean
+        north, System.Boolean east, System.Boolean south, System.Boolean west, System.Boolean
+        top, System.Boolean bottom) [0x0002f] in C:\.git\Unity.DungeonCrawler\DungeonCrawler\Assets\SRC\__Tests__\ProceduralMapGenerationAssembly\Utilities\GridCreate_Tests.cs:198
+
+'
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1080
+      parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType][suite]
+    - id: 1063
+      uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/Validate_FindChunkType/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType(ETB,False,True,False,False,True,True)]
+      name: Validate_FindChunkType(ETB,False,True,False,False,True,True)
+      fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType(ETB,False,True,False,False,True,True)
+      resultStatus: 1
+      duration: 0.0002894
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1080
+      parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType][suite]
+    - id: 1064
+      uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/Validate_FindChunkType/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType(EB,False,True,False,False,False,True)]
+      name: Validate_FindChunkType(EB,False,True,False,False,False,True)
+      fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType(EB,False,True,False,False,False,True)
+      resultStatus: 2
+      duration: 0.0014879
+      messages: 'Expected _gridCreate.FindChunkType(result) to be DirectionTypeEnum.EB
+        {value: 46}, but found DirectionTypeEnum.ET {value: 44}.'
+      output: 
+      stacktrace: 'at FluentAssertions.Execution.LateBoundTestFramework.Throw (System.String
+        message) [0x0005c] in C:\.git\fluentassertions-unity\FluentAssertions\Packages\com.boundfoxstudios.fluentassertions\Runtime\FluentAssertions\Execution\LateBoundTestFramework.cs:22
+
+        at
+        FluentAssertions.Execution.TestFrameworkProvider.Throw (System.String message)
+        [0x00019] in C:\.git\fluentassertions-unity\FluentAssertions\Packages\com.boundfoxstudios.fluentassertions\Runtime\FluentAssertions\Execution\TestFrameworkProvider.cs:34
+
+        at
+        FluentAssertions.Execution.DefaultAssertionStrategy.HandleFailure (System.String
+        message) [0x00001] in C:\.git\fluentassertions-unity\FluentAssertions\Packages\com.boundfoxstudios.fluentassertions\Runtime\FluentAssertions\Execution\DefaultAssertionStrategy.cs:25
+
+        at
+        FluentAssertions.Execution.AssertionScope.FailWith (System.Func`1[TResult]
+        failReasonFunc) [0x00057] in C:\.git\fluentassertions-unity\FluentAssertions\Packages\com.boundfoxstudios.fluentassertions\Runtime\FluentAssertions\Execution\AssertionScope.cs:274
+
+        at
+        FluentAssertions.Execution.AssertionScope.FailWith (System.Func`1[TResult]
+        failReasonFunc) [0x00015] in C:\.git\fluentassertions-unity\FluentAssertions\Packages\com.boundfoxstudios.fluentassertions\Runtime\FluentAssertions\Execution\AssertionScope.cs:246
+
+        at
+        FluentAssertions.Execution.AssertionScope.FailWith (System.String message,
+        System.Object[] args) [0x00015] in C:\.git\fluentassertions-unity\FluentAssertions\Packages\com.boundfoxstudios.fluentassertions\Runtime\FluentAssertions\Execution\AssertionScope.cs:296
+
+        at
+        FluentAssertions.Primitives.EnumAssertions`2[TEnum,TAssertions].Be (TEnum
+        expected, System.String because, System.Object[] becauseArgs) [0x00001] in
+        C:\.git\fluentassertions-unity\FluentAssertions\Packages\com.boundfoxstudios.fluentassertions\Runtime\FluentAssertions\Primitives\EnumAssertions.cs:57
+
+        at
+        Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType
+        (Assets.SRC.ProceduralMapGeneration.Enums.DirectionTypeEnum proved, System.Boolean
+        north, System.Boolean east, System.Boolean south, System.Boolean west, System.Boolean
+        top, System.Boolean bottom) [0x0002f] in C:\.git\Unity.DungeonCrawler\DungeonCrawler\Assets\SRC\__Tests__\ProceduralMapGenerationAssembly\Utilities\GridCreate_Tests.cs:198
+
+'
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1080
+      parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType][suite]
+    - id: 1065
+      uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/Validate_FindChunkType/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType(S,False,False,True,False,False,False)]
+      name: Validate_FindChunkType(S,False,False,True,False,False,False)
+      fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType(S,False,False,True,False,False,False)
+      resultStatus: 1
+      duration: 0.0003156
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1080
+      parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType][suite]
+    - id: 1066
+      uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/Validate_FindChunkType/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType(SW,False,False,True,True,False,False)]
+      name: Validate_FindChunkType(SW,False,False,True,True,False,False)
+      fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType(SW,False,False,True,True,False,False)
+      resultStatus: 1
+      duration: 0.0003017
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1080
+      parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType][suite]
+    - id: 1067
+      uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/Validate_FindChunkType/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType(SWT,False,False,True,True,True,False)]
+      name: Validate_FindChunkType(SWT,False,False,True,True,True,False)
+      fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType(SWT,False,False,True,True,True,False)
+      resultStatus: 1
+      duration: 0.0002913
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1080
+      parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType][suite]
+    - id: 1068
+      uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/Validate_FindChunkType/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType(SWB,False,False,True,True,False,True)]
+      name: Validate_FindChunkType(SWB,False,False,True,True,False,True)
+      fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType(SWB,False,False,True,True,False,True)
+      resultStatus: 1
+      duration: 0.0002902
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1080
+      parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType][suite]
+    - id: 1069
+      uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/Validate_FindChunkType/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType(SWTB,False,False,True,True,True,True)]
+      name: Validate_FindChunkType(SWTB,False,False,True,True,True,True)
+      fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType(SWTB,False,False,True,True,True,True)
+      resultStatus: 1
+      duration: 0.0002958
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1080
+      parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType][suite]
+    - id: 1070
+      uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/Validate_FindChunkType/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType(ST,False,False,True,False,True,False)]
+      name: Validate_FindChunkType(ST,False,False,True,False,True,False)
+      fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType(ST,False,False,True,False,True,False)
+      resultStatus: 1
+      duration: 0.0002923
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1080
+      parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType][suite]
+    - id: 1071
+      uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/Validate_FindChunkType/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType(STB,False,False,True,False,True,True)]
+      name: Validate_FindChunkType(STB,False,False,True,False,True,True)
+      fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType(STB,False,False,True,False,True,True)
+      resultStatus: 1
+      duration: 0.0002887
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1080
+      parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType][suite]
+    - id: 1072
+      uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/Validate_FindChunkType/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType(SB,False,False,True,False,False,True)]
+      name: Validate_FindChunkType(SB,False,False,True,False,False,True)
+      fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType(SB,False,False,True,False,False,True)
+      resultStatus: 1
+      duration: 0.0002834
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1080
+      parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType][suite]
+    - id: 1073
+      uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/Validate_FindChunkType/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType(W,False,False,False,True,False,False)]
+      name: Validate_FindChunkType(W,False,False,False,True,False,False)
+      fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType(W,False,False,False,True,False,False)
+      resultStatus: 1
+      duration: 0.0002914
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1080
+      parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType][suite]
+    - id: 1074
+      uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/Validate_FindChunkType/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType(WT,False,False,False,True,True,False)]
+      name: Validate_FindChunkType(WT,False,False,False,True,True,False)
+      fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType(WT,False,False,False,True,True,False)
+      resultStatus: 1
+      duration: 0.0002848
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1080
+      parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType][suite]
+    - id: 1075
+      uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/Validate_FindChunkType/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType(WTB,False,False,False,True,True,True)]
+      name: Validate_FindChunkType(WTB,False,False,False,True,True,True)
+      fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType(WTB,False,False,False,True,True,True)
+      resultStatus: 1
+      duration: 0.0002937
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1080
+      parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType][suite]
+    - id: 1076
+      uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/Validate_FindChunkType/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType(WB,False,False,False,True,False,True)]
+      name: Validate_FindChunkType(WB,False,False,False,True,False,True)
+      fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType(WB,False,False,False,True,False,True)
+      resultStatus: 1
+      duration: 0.0002813
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1080
+      parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType][suite]
+    - id: 1077
+      uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/Validate_FindChunkType/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType(T,False,False,False,False,True,False)]
+      name: Validate_FindChunkType(T,False,False,False,False,True,False)
+      fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType(T,False,False,False,False,True,False)
+      resultStatus: 1
+      duration: 0.0002855
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1080
+      parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType][suite]
+    - id: 1078
+      uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/Validate_FindChunkType/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType(TB,False,False,False,False,True,True)]
+      name: Validate_FindChunkType(TB,False,False,False,False,True,True)
+      fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType(TB,False,False,False,False,True,True)
+      resultStatus: 1
+      duration: 0.0002917
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1080
+      parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType][suite]
+    - id: 1079
+      uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/Validate_FindChunkType/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType(B,False,False,False,False,False,True)]
+      name: Validate_FindChunkType(B,False,False,False,False,False,True)
+      fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType(B,False,False,False,False,False,True)
+      resultStatus: 2
+      duration: 0.0014468
+      messages: 'Expected _gridCreate.FindChunkType(result) to be DirectionTypeEnum.B
+        {value: 66}, but found DirectionTypeEnum.Error {value: 2}.'
+      output: 
+      stacktrace: 'at FluentAssertions.Execution.LateBoundTestFramework.Throw (System.String
+        message) [0x0005c] in C:\.git\fluentassertions-unity\FluentAssertions\Packages\com.boundfoxstudios.fluentassertions\Runtime\FluentAssertions\Execution\LateBoundTestFramework.cs:22
+
+        at
+        FluentAssertions.Execution.TestFrameworkProvider.Throw (System.String message)
+        [0x00019] in C:\.git\fluentassertions-unity\FluentAssertions\Packages\com.boundfoxstudios.fluentassertions\Runtime\FluentAssertions\Execution\TestFrameworkProvider.cs:34
+
+        at
+        FluentAssertions.Execution.DefaultAssertionStrategy.HandleFailure (System.String
+        message) [0x00001] in C:\.git\fluentassertions-unity\FluentAssertions\Packages\com.boundfoxstudios.fluentassertions\Runtime\FluentAssertions\Execution\DefaultAssertionStrategy.cs:25
+
+        at
+        FluentAssertions.Execution.AssertionScope.FailWith (System.Func`1[TResult]
+        failReasonFunc) [0x00057] in C:\.git\fluentassertions-unity\FluentAssertions\Packages\com.boundfoxstudios.fluentassertions\Runtime\FluentAssertions\Execution\AssertionScope.cs:274
+
+        at
+        FluentAssertions.Execution.AssertionScope.FailWith (System.Func`1[TResult]
+        failReasonFunc) [0x00015] in C:\.git\fluentassertions-unity\FluentAssertions\Packages\com.boundfoxstudios.fluentassertions\Runtime\FluentAssertions\Execution\AssertionScope.cs:246
+
+        at
+        FluentAssertions.Execution.AssertionScope.FailWith (System.String message,
+        System.Object[] args) [0x00015] in C:\.git\fluentassertions-unity\FluentAssertions\Packages\com.boundfoxstudios.fluentassertions\Runtime\FluentAssertions\Execution\AssertionScope.cs:296
+
+        at
+        FluentAssertions.Primitives.EnumAssertions`2[TEnum,TAssertions].Be (TEnum
+        expected, System.String because, System.Object[] becauseArgs) [0x00001] in
+        C:\.git\fluentassertions-unity\FluentAssertions\Packages\com.boundfoxstudios.fluentassertions\Runtime\FluentAssertions\Primitives\EnumAssertions.cs:57
+
+        at
+        Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType
+        (Assets.SRC.ProceduralMapGeneration.Enums.DirectionTypeEnum proved, System.Boolean
+        north, System.Boolean east, System.Boolean south, System.Boolean west, System.Boolean
+        top, System.Boolean bottom) [0x0002f] in C:\.git\Unity.DungeonCrawler\DungeonCrawler\Assets\SRC\__Tests__\ProceduralMapGenerationAssembly\Utilities\GridCreate_Tests.cs:198
+
+'
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1080
+      parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkType][suite]
+    m_ResultText: 'DungeonCrawler (0,202s)
+
+      ---
+
+      One or more child tests
+      had errors'
     m_ResultStacktrace: 
     m_TestListState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: a5956722
-      m_LastClickedID: 577213861
-      m_ExpandedIDs: ec0879bfe2302bea5687b8fea5956722ffffff7f
+      m_SelectedIDs: 5687b8fe
+      m_LastClickedID: -21461162
+      m_ExpandedIDs: d1848d9d805c72aaec0879bfe2302beab6a497155a94ed15eba61432ba5e4c3fede227439a26754bffffff7f
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -807,7 +2510,7 @@ MonoBehaviour:
       selectedCategoryMask: 0
       availableCategories:
       - Uncategorized
---- !u!114 &20
+--- !u!114 &17
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -828,7 +2531,7 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 0
+    x: 1920
     y: 73
     width: 383
     height: 918
@@ -849,21 +2552,21 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/SRC/__Tests__/ProceduralMapGenerationAssembly/Utilities
+    - Assets/SRC
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 0
   m_StartGridSize: 64
   m_LastFolders: []
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: C:\git\Unity.DungeonCrawler\DungeonCrawler
+  m_LastProjectPath: C:\.git\Unity.DungeonCrawler\DungeonCrawler
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 0cc20000
     m_LastClickedID: 49676
-    m_ExpandedIDs: 000000002ab800002cb800002eb8000030b8000032b8000034b80000
+    m_ExpandedIDs: 00000000ae6a0000b06a0000b26a0000b46a0000b66a0000b86a0000ba6a0000bc6a0000be6a0000c06a0000c26a0000c46a0000c66a0000c86a0000ca6a0000cc6a0000ce6a0000d06a0000d26a0000d46a0000d66a0000d86a0000da6a0000dc6a0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -891,7 +2594,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: ffffffff000000002ab800002cb800002eb8000030b8000032b8000034b8000062b8000072b9000074b9000092b900009eb900001aba00001eba0000ffffff7f
+    m_ExpandedIDs: ffffffff00000000ae6a0000b06a0000b26a0000b46a0000b66a0000b86a0000ba6a0000bc6a0000be6a0000c06a0000c26a0000c46a0000c66a0000c86a0000ca6a0000cc6a0000ce6a0000d06a0000d26a0000d46a0000d66a0000d86a0000da6a0000dc6a0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -907,7 +2610,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 7}
+      m_ClientGUIView: {fileID: 4}
     m_SearchString: 
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
@@ -947,7 +2650,7 @@ MonoBehaviour:
     m_GridSize: 64
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 149
---- !u!114 &21
+--- !u!114 &18
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -968,7 +2671,7 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1146
+    x: 3066
     y: 73
     width: 773
     height: 733
@@ -989,7 +2692,7 @@ MonoBehaviour:
   m_LockTracker:
     m_IsLocked: 0
   m_PreviewWindow: {fileID: 0}
---- !u!114 &22
+--- !u!114 &19
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1010,9 +2713,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 384
+    x: 2304
     y: 73
-    width: 374
+    width: 703
     height: 260
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -1021,9 +2724,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 2cba0000
+      m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: d0bbffff
+      m_ExpandedIDs: 0ee2fdff58e6fdff2266feff086afeff949cfeff429efeff76f3feff60f4feff9a15ffff8416ffff4027ffff0e28ffff9634ffff6035ffff2a45fffff845ffffe057ffffaa58ffffb868ffff8669ffffc488ffff9489ffff34fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1047,7 +2750,7 @@ MonoBehaviour:
       m_IsLocked: 0
     m_CurrentSortingName: TransformSorting
   m_WindowGUID: 4c969a2b90040154d917609493e03593
---- !u!114 &23
+--- !u!114 &20
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1068,9 +2771,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 760
+    x: 3009
     y: 73
-    width: 384
+    width: 729
     height: 260
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -1136,8 +2839,8 @@ MonoBehaviour:
       floating: 0
       collapsed: 0
       displayed: 1
-      snapOffset: {x: -101, y: -171}
-      snapOffsetDelta: {x: -10, y: 0}
+      snapOffset: {x: -111, y: -171}
+      snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 3
       id: Orientation
       index: 0
@@ -1266,7 +2969,7 @@ MonoBehaviour:
   m_WindowGUID: cc27987af1a868c49b0894db9c0f5429
   m_Gizmos: 1
   m_OverrideSceneCullingMask: 6917529027641081856
-  m_SceneIsLit: 1
+  m_SceneIsLit: 0
   m_SceneLighting: 1
   m_2DMode: 0
   m_isRotationLocked: 0
@@ -1285,7 +2988,7 @@ MonoBehaviour:
   m_DoValidateTrueMetals: 0
   m_ExposureSliderValue: 0
   m_SceneViewState:
-    m_AlwaysRefresh: 0
+    m_AlwaysRefresh: 1
     showFog: 1
     showSkybox: 1
     showFlares: 1
@@ -1322,17 +3025,17 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.08717229, y: 0.89959055, z: -0.21045254, w: -0.3726226}
+    m_Target: {x: -0.6853479, y: 0.01899361, z: -0.017887432, w: -0.72775275}
     speed: 2
-    m_Value: {x: -0.08717229, y: 0.89959055, z: -0.21045254, w: -0.3726226}
+    m_Value: {x: -0.6853457, y: 0.018993549, z: -0.017887374, w: -0.7277504}
   m_Size:
-    m_Target: 10
+    m_Target: 15.593108
     speed: 2
-    m_Value: 10
+    m_Value: 15.593108
   m_Ortho:
-    m_Target: 0
+    m_Target: 1
     speed: 2
-    m_Value: 0
+    m_Value: 1
   m_CameraSettings:
     m_Speed: 1
     m_SpeedNormalized: 0.5
@@ -1353,7 +3056,7 @@ MonoBehaviour:
   m_SceneVisActive: 1
   m_LastLockedObject: {fileID: 0}
   m_ViewIsLockedToObject: 0
---- !u!114 &24
+--- !u!114 &21
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1374,9 +3077,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1146
+    x: 3740
     y: 827
-    width: 773
+    width: 99
     height: 164
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -1388,7 +3091,7 @@ MonoBehaviour:
   m_ShowGizmos: 0
   m_TargetDisplay: 0
   m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
-  m_TargetSize: {x: 773, y: 143}
+  m_TargetSize: {x: 99, y: 143}
   m_TextureFilterMode: 0
   m_TextureHideFlags: 61
   m_RenderIMGUI: 1
@@ -1403,8 +3106,8 @@ MonoBehaviour:
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
-    m_HBaseRangeMin: -386.5
-    m_HBaseRangeMax: 386.5
+    m_HBaseRangeMin: -49.5
+    m_HBaseRangeMax: 49.5
     m_VBaseRangeMin: -71.5
     m_VBaseRangeMax: 71.5
     m_HAllowExceedBaseRangeMin: 1
@@ -1424,29 +3127,29 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 21
-      width: 773
+      width: 99
       height: 143
     m_Scale: {x: 1, y: 1}
-    m_Translation: {x: 386.5, y: 71.5}
+    m_Translation: {x: 49.5, y: 71.5}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -386.5
+      x: -49.5
       y: -71.5
-      width: 773
+      width: 99
       height: 143
     m_MinimalGUI: 1
   m_defaultScale: 1
-  m_LastWindowPixelSize: {x: 773, y: 164}
+  m_LastWindowPixelSize: {x: 99, y: 164}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000000
   m_XRRenderMode: 0
   m_RenderTexture: {fileID: 0}
---- !u!114 &25
+--- !u!114 &22
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1467,9 +3170,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 384
+    x: 2304
     y: 354
-    width: 760
+    width: 1434
     height: 637
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:

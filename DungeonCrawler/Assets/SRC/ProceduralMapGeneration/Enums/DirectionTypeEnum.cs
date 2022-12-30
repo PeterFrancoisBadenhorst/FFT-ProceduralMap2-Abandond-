@@ -1,4 +1,6 @@
-﻿namespace Assets.SRC.ProceduralMapGeneration.Enums
+﻿using Assets.SRC.ProceduralMapGeneration.Enums;
+
+namespace Assets.SRC.ProceduralMapGeneration.Enums
 {
     public enum DirectionTypeEnum
     {
@@ -137,3 +139,4 @@
         //  north, east, south, west, top, bottom
     }
 }
+

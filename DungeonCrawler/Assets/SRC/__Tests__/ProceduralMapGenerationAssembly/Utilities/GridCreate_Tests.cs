@@ -17,15 +17,18 @@ namespace Assets.SRC.ProceduralMapGeneration.Utilities.Tests
     public class GridCreate_Tests
     {
         private GridCreate _gridCreate;
+        private GridCreate_Mocs _gridCreate_Mocs;
         [SetUp]
         public void SetUp()
         {
             _gridCreate = new GridCreate();
+            _gridCreate_Mocs = new GridCreate_Mocs();   
         }
         [TearDown]
         public void TearDown()
         {
             _gridCreate = null;
+            _gridCreate_Mocs = null;
         }
 
 
@@ -69,18 +72,8 @@ namespace Assets.SRC.ProceduralMapGeneration.Utilities.Tests
         {
             Assert.Fail();
         }
-        private NeighborStruct SetUpNeighborStruct(bool north, bool east, bool south, bool west, bool top, bool bottom)
-        {
-            NeighborStruct returned = new NeighborStruct();
-            if (north) returned.NorthNeighbor = new GameObject();
-            if (east) returned.EastNeighbor = new GameObject();
-            if (south) returned.SouthNeighbor = new GameObject();
-            if (west) returned.WestNeighbor = new GameObject();
-            if (top) returned.TopNeighbor = new GameObject();
-            if (bottom) returned.BottomNeighbor = new GameObject();
-            returned.Direction = Enums.DirectionTypeEnum.Blank;
-            return returned;
-        }
+        
+        #region Validate_FindChunkType Test Cases
         //                              north, east, south, west, top, bottom
         [TestCase(DirectionTypeEnum.N, true, false, false, false, false, false)]
         //                              north, east, south, west, top, bottom
@@ -96,7 +89,7 @@ namespace Assets.SRC.ProceduralMapGeneration.Utilities.Tests
         //                              north, east, south, west, top, bottom
         [TestCase(DirectionTypeEnum.NEWB, true, true, false, true, false, true)]
         //                              north, east, south, west, top, bottom
-        [TestCase(DirectionTypeEnum.NEWTB, true, true, false, true, true, true)]//
+        [TestCase(DirectionTypeEnum.NEWTB, true, true, false, true, true, true)]
         //                              north, east, south, west, top, bottom
         [TestCase(DirectionTypeEnum.NES, true, true, true, false, false, false)]
         //                              north, east, south, west, top, bottom
@@ -104,13 +97,13 @@ namespace Assets.SRC.ProceduralMapGeneration.Utilities.Tests
         //                              north, east, south, west, top, bottom
         [TestCase(DirectionTypeEnum.NESB, true, true, true, false, false, true)]
         //                              north, east, south, west, top, bottom
-        [TestCase(DirectionTypeEnum.NESTB, true, true, true, false, true, true)]//
+        [TestCase(DirectionTypeEnum.NESTB, true, true, true, false, true, true)]
         //                              north, east, south, west, top, bottom
         [TestCase(DirectionTypeEnum.NETB, true, true, false, false, true, true)]
         //                              north, east, south, west, top, bottom
         [TestCase(DirectionTypeEnum.NS, true, false, true, false, false, false)]
         //                              north, east, south, west, top, bottom
-        [TestCase(DirectionTypeEnum.NSW, true, false, true, true, false, false)]//
+        [TestCase(DirectionTypeEnum.NSW, true, false, true, true, false, false)]
         //                              north, east, south, west, top, bottom
         [TestCase(DirectionTypeEnum.NST, true, false, true, false, true, false)]
         //                              north, east, south, west, top, bottom
@@ -132,7 +125,7 @@ namespace Assets.SRC.ProceduralMapGeneration.Utilities.Tests
         //                              north, east, south, west, top, bottom
         [TestCase(DirectionTypeEnum.NB, true, false, false, false, false, true)]
         //                              north, east, south, west, top, bottom
-        [TestCase(DirectionTypeEnum.E, false, true, false, false, false, false)]//
+        [TestCase(DirectionTypeEnum.E, false, true, false, false, false, false)]
         //                              north, east, south, west, top, bottom
         [TestCase(DirectionTypeEnum.ES, false, true, true, false, false, false)]
         //                              north, east, south, west, top, bottom
@@ -148,11 +141,11 @@ namespace Assets.SRC.ProceduralMapGeneration.Utilities.Tests
         //                              north, east, south, west, top, bottom
         [TestCase(DirectionTypeEnum.EWT, false, true, false, true, true, false)]
         //                              north, east, south, west, top, bottom
-        [TestCase(DirectionTypeEnum.EWTB, false, true, false, true, true, true)]//
+        [TestCase(DirectionTypeEnum.EWTB, false, true, false, true, true, true)]
         //                              north, east, south, west, top, bottom
         [TestCase(DirectionTypeEnum.EWB, false, true, false, true, false, true)]
         //                              north, east, south, west, top, bottom
-        [TestCase(DirectionTypeEnum.ET, false, true, false, false, true, false)]//
+        [TestCase(DirectionTypeEnum.ET, false, true, false, false, true, false)]
         //                              north, east, south, west, top, bottom
         [TestCase(DirectionTypeEnum.ETB, false, true, false, false, true, true)]
         //                              north, east, south, west, top, bottom
@@ -186,12 +179,12 @@ namespace Assets.SRC.ProceduralMapGeneration.Utilities.Tests
         //                              north, east, south, west, top, bottom
         [TestCase(DirectionTypeEnum.TB, false, false, false, false, true, true)]
         //                              north, east, south, west, top, bottom
-        [TestCase(DirectionTypeEnum.B, false, false, false, false, false, true)]//
-
+        [TestCase(DirectionTypeEnum.B, false, false, false, false, false, true)]
+        #endregion
         public void Validate_FindChunkType(DirectionTypeEnum proved, bool north, bool east, bool south, bool west, bool top, bool bottom)
         {
             /// Given
-            var result = SetUpNeighborStruct(north, east, south, west, top, bottom);
+            var result = _gridCreate_Mocs.SetUpNeighborStruct(north, east, south, west, top, bottom);
             /// When
             result.Direction.Should().Be(Enums.DirectionTypeEnum.Blank);
             /// Then
