@@ -3,8 +3,9 @@ using UnityEngine;
 
 namespace Assets.SRC.ProceduralMapGeneration.Mono.Behaviors
 {
-    internal class ChunkBehavior : MonoBehaviour
+    public class ChunkBehavior : MonoBehaviour
     {
-        public DirectionIDStruct direction;
+        public DirectionIDStruct Direction;
+
     }
 }

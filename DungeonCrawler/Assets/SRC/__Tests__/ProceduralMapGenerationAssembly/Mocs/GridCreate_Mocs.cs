@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
+using Assets.SRC.ProceduralMapGeneration.Utilities;
 
 namespace Assets.SRC.ProceduralMapGeneration.Utilities.Tests
 {
@@ -22,5 +23,11 @@ namespace Assets.SRC.ProceduralMapGeneration.Utilities.Tests
             returned.Direction = Enums.DirectionTypeEnum.Blank;
             return returned;
         }
+        public List<NeighborStruct> CreatGameObjectList(float scale, int size)
+        {
+            GameObject parent = new GameObject();
+           return GridCreate.FindChunkNeigbors(scale, GridCreate.PlaceGameObjectsAtGridPositions(GridCreate.SquareGrid2DHorizontal(size, scale), parent.transform));
+        }
+
     }
 }

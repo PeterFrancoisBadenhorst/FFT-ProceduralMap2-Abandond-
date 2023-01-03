@@ -10,6 +10,7 @@ using UnityEngine.Assertions.Must;
 using UnityEngine.UIElements;
 using Assets.SRC.ProceduralMapGeneration.Structs;
 using Assets.SRC.ProceduralMapGeneration.Enums;
+using Assets.SRC.ProceduralMapGeneration.Mono.Behaviors;
 
 namespace Assets.SRC.ProceduralMapGeneration.Utilities.Tests
 {
@@ -18,46 +19,55 @@ namespace Assets.SRC.ProceduralMapGeneration.Utilities.Tests
     {
         private GridCreate _gridCreate;
         private GridCreate_Mocs _gridCreate_Mocs;
+
+
+        #region [SetUp]&&[TearDown]
         [SetUp]
         public void SetUp()
         {
             _gridCreate = new GridCreate();
-            _gridCreate_Mocs = new GridCreate_Mocs();   
+            _gridCreate_Mocs = new GridCreate_Mocs();
         }
+
         [TearDown]
         public void TearDown()
         {
             _gridCreate = null;
             _gridCreate_Mocs = null;
         }
+        #endregion
 
-
+        #region Validate_SquareGrid2DVertical Test Cases
         [TestCase(1, 1)]
         [TestCase(2, 5)]
         [TestCase(2, 15)]
         [TestCase(14, 0.5f)]
         [TestCase(16, 22.34f)]
-        public void Validate_2DGridCreations_EntityCount_Vertical(int gridSize, float scale)
+        #endregion
+        public void Validate_SquareGrid2DVertical(int gridSize, float scale)
            => GridCreate.SquareGrid2DVertical(gridSize, scale).Count<Vector3>().Should().Be((gridSize * gridSize));
+
+        #region Validate_SquareGrid2DHorizontal Test Cases
         [TestCase(1, 1)]
         [TestCase(2, 5)]
         [TestCase(2, 15)]
         [TestCase(14, 0.5f)]
         [TestCase(16, 22.34f)]
-        public void Validate_2DGridCreations_EntityCount_Horizontal(int gridSize, float scale)
+        #endregion
+        public void Validate_SquareGrid2DHorizontal(int gridSize, float scale)
            => GridCreate.SquareGrid2DHorizontal(gridSize, scale).Count<Vector3>().Should().Be((gridSize * gridSize));
+
+        #region Validate_SquareGrid3D Test Cases
         [TestCase(1, 1)]
         [TestCase(2, 5)]
         [TestCase(2, 15)]
         [TestCase(14, 0.5f)]
         [TestCase(16, 22.34f)]
-        public void Validate_3DGridCreations_EntityCount(int gridSize, float scale)
+        #endregion
+        public void Validate_SquareGrid3D(int gridSize, float scale)
             => GridCreate.SquareGrid3D(gridSize, scale).Count<Vector3>().Should().Be((gridSize * gridSize * gridSize));
-        [TestCase(1, 1)]
-        [TestCase(2, 5)]
-        [TestCase(2, 15)]
-        [TestCase(14, 0.5f)]
-        [TestCase(16, 22.34f)]
+
+        [Test]
         public void Validate_FindChunkNeigbors(int gridSize, float scale)
         {
             Assert.Fail();
@@ -67,12 +77,34 @@ namespace Assets.SRC.ProceduralMapGeneration.Utilities.Tests
             //   var t= result[i];               
             //}
         }
-        [Test]
-        public void Validate_AssignDirectionIDAccordingToPresentNeighbors(List<NeighborStruct> objects)
+        #region Validate_AssignDirectionIDAccordingToPresentNeighbors Test Cases
+        [TestCase(1, 1)]
+        [TestCase(2, 5)]
+        [TestCase(2, 15)]
+        [TestCase(14, 0.5f)]
+        [TestCase(16, 22.34f)]
+        #endregion
+        public void Validate_AssignDirectionIDAccordingToPresentNeighbors(int size,float scale)
         {
-            Assert.Fail();
+            // Given
+            List<GameObject> list = GridCreate.AssignDirectionIDAccordingToPresentNeighbors(_gridCreate_Mocs.CreatGameObjectList(scale, size));
+            for (int i = 0; i < list.Count; i++)
+            {
+                var t = list[i];
+                // Test for ChunkBehavior
+                if (!t.GetComponent<ChunkBehavior>()) Assert.Fail("Object does not have a 'ChunkBehavior' @ : " + i);
+                // Test For Direction Values being set
+                var g = t.GetComponent<ChunkBehavior>();
+                if (!g.Direction.NothID &&
+                    !g.Direction.EastID &&
+                    !g.Direction.SouthID &&
+                    !g.Direction.WestID &&
+                    !g.Direction.TopID &&
+                    !g.Direction.BottomID)
+                    Assert.Fail("Direction not being set at @ : " + i);
+            }
         }
-        
+
         #region Validate_FindChunkType Test Cases
         //                              north, east, south, west, top, bottom
         [TestCase(DirectionTypeEnum.N, true, false, false, false, false, false)]
@@ -149,7 +181,7 @@ namespace Assets.SRC.ProceduralMapGeneration.Utilities.Tests
         //                              north, east, south, west, top, bottom
         [TestCase(DirectionTypeEnum.ETB, false, true, false, false, true, true)]
         //                              north, east, south, west, top, bottom
-        [TestCase(DirectionTypeEnum.EB, false, true, false, false, false, true)]      
+        [TestCase(DirectionTypeEnum.EB, false, true, false, false, false, true)]
         //                              north, east, south, west, top, bottom
         [TestCase(DirectionTypeEnum.S, false, false, true, false, false, false)]
         //                              north, east, south, west, top, bottom

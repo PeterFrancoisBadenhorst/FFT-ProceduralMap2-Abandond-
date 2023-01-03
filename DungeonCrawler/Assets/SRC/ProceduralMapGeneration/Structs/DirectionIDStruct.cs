@@ -1,6 +1,6 @@
 ﻿namespace Assets.SRC.ProceduralMapGeneration.Structs
 {
-    internal struct DirectionIDStruct
+    public struct DirectionIDStruct
     {
         public bool NothID { get; set; }
         public bool EastID { get; set; }

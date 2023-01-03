@@ -118,7 +118,7 @@ namespace Assets.SRC.ProceduralMapGeneration.Utilities
 
                 GameObject h = new GameObject();
                 h.AddComponent<ChunkBehavior>();
-                h.GetComponent<ChunkBehavior>().direction = ids;
+                h.GetComponent<ChunkBehavior>().Direction = ids;
                 gameObjects.Add(h);
             }
             return gameObjects;
