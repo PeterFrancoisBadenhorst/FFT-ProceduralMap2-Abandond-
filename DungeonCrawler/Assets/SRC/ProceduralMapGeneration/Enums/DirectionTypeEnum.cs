@@ -7,131 +7,131 @@
         Collapsed,
         Error,
         // Actual Direction
-        N,
+        N,//
         //  north, east, south, west, top, bottom
-        NE,
+        NE,//
         //  north, east, south, west, top, bottom
-        NS,
+        NS,//
         //  north, east, south, west, top, bottom
-        NW,
+        NW,//
         //  north, east, south, west, top, bottom
-        NT,
+        NT,//
         //  north, east, south, west, top, bottom
-        NB,
+        NB,//
         //  north, east, south, west, top, bottom
-        NES,
+        NES,//
         //  north, east, south, west, top, bottom
-        NESW,
+        NESW,//
         //  north, east, south, west, top, bottom
-        NEWTB,
+        NEWTB,//
         //  north, east, south, west, top, bottom
-        NESWT,
+        NESWT,//
         //  north, east, south, west, top, bottom
-        EWTB,
+        EWTB,//
         //  north, east, south, west, top, bottom
-        NESWB,
+        NESWB,//
         //  north, east, south, west, top, bottom
-        NESWBT,
+        NESWBT,//
         //  north, east, south, west, top, bottom
-        NEW,
+        NEW,//
         //  north, east, south, west, top, bottom
-        NEWT,
+        NEWT,//
         //  north, east, south, west, top, bottom
-        NEWB,
+        NEWB,//
         //  north, east, south, west, top, bottom
-        NET,
+        NET,//
         //  north, east, south, west, top, bottom
-        NETB,
+        NETB,//
         //  north, east, south, west, top, bottom
-        NEB,
+        NEB,//
         //  north, east, south, west, top, bottom
-        NEST,
+        NEST,//
         //  north, east, south, west, top, bottom
-        NESTB,
+        NESTB,//
         //  north, east, south, west, top, bottom
-        NESB,
+        NESB,//
         //  north, east, south, west, top, bottom
-        NSW,
+        NSW,//
         //  north, east, south, west, top, bottom
-        NSWT,
+        NSWT,//
         //  north, east, south, west, top, bottom
-        NSWB,
+        NSWB,//
         //  north, east, south, west, top, bottom
-        NST,
+        NST,//
         //  north, east, south, west, top, bottom
-        NSTB,
+        NSTB,//
         //  north, east, south, west, top, bottom
-        NSB,
+        NSB,//
         //  north, east, south, west, top, bottom
-        NSWTB,
+        NSWTB,//
         //  north, east, south, west, top, bottom
-        NWT,
+        NWT,//
         //  north, east, south, west, top, bottom
-        NWTB,
+        NWTB,//
         //  north, east, south, west, top, bottom
-        NWB,
+        NWB,//
         //  north, east, south, west, top, bottom
-        NTB,
+        NTB,//
         //  north, east, south, west, top, bottom
-        ES,
+        ES,//
         //  north, east, south, west, top, bottom
-        ESW,
+        ESW,//
         //  north, east, south, west, top, bottom
-        ESWT,
+        ESWT,//
         //  north, east, south, west, top, bottom
-        ESWB,
+        ESWB,//
         //  north, east, south, west, top, bottom
-        ESWBT,
+        ESWBT,//
         //  north, east, south, west, top, bottom
-        EW,
+        EW,//
         //  north, east, south, west, top, bottom
-        EWT,
+        EWT,//
         //  north, east, south, west, top, bottom
-        EWB,
+        EWB,//
         //  north, east, south, west, top, bottom
-        ET,
+        ET,//
         //  north, east, south, west, top, bottom
-        ETB,
+        ETB,//
         //  north, east, south, west, top, bottom
-        EB,
+        EB,//
         //  north, east, south, west, top, bottom
-        EST,
+        EST,//
         //  north, east, south, west, top, bottom
-        ESTB,
+        ESTB,//
         //  north, east, south, west, top, bottom
-        ESB,
+        ESB,//
         //  north, east, south, west, top, bottom
-        SW,
+        SW,//
         //  north, east, south, west, top, bottom
-        SWT,
+        SWT,//
         //  north, east, south, west, top, bottom
-        SWB,
+        SWB,//
         //  north, east, south, west, top, bottom
-        ST,
+        ST,//
         //  north, east, south, west, top, bottom
-        STB,
+        STB,//
         //  north, east, south, west, top, bottom
-        SB,
+        SB,//
         //  north, east, south, west, top, bottom
-        SWTB,
+        SWTB,//
         //  north, east, south, west, top, bottom
-        WT,
+        WT,//
         //  north, east, south, west, top, bottom
-        WTB,
+        WTB,//
         //  north, east, south, west, top, bottom
-        WB,
+        WB,//
         //  north, east, south, west, top, bottom
-        TB,
+        TB,//
         //  north, east, south, west, top, bottom
-        S,
+        S,//
         //  north, east, south, west, top, bottom
-        E,
+        E,//
         //  north, east, south, west, top, bottom
-        SWBT,
+        SWBT,//
         //  north, east, south, west, top, bottom
-        W,
+        W,//
         //  north, east, south, west, top, bottom
-        T,
+        T,//
         //  north, east, south, west, top, bottom
         B,
         //  north, east, south, west, top, bottom
