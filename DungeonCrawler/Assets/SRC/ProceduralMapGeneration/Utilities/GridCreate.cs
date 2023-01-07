@@ -127,6 +127,10 @@ namespace Assets.SRC.ProceduralMapGeneration.Utilities
 
         public DirectionTypeEnum FindChunkType(NeighborStruct chunk)
         {
+            // WARNING
+            // There is a risk of mental and physical injuries from this if statement.
+            // I am not liable for what happens to you.
+            // Proceed with caution.
             if (chunk.Direction != DirectionTypeEnum.Collapsed || chunk.Direction == DirectionTypeEnum.Blank)
             {
                 // now to start the Scroll Olympics.
