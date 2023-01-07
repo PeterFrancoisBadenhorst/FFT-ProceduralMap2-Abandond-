@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Assets.SRC.ProceduralMapGeneration.Utilities
 {
-    public class PopulateTilePositions : MonoBehaviour
+    public class PopulateTilePositions 
     {
         public List<GameObject> SetChildTile(GameObject placeHolder, List<GameObject> parentObjects)
         {

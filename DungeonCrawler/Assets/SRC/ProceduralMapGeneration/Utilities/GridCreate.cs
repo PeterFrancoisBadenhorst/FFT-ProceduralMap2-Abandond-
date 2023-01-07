@@ -129,6 +129,10 @@ namespace Assets.SRC.ProceduralMapGeneration.Utilities
         {
             if (chunk.Direction != DirectionTypeEnum.Collapsed || chunk.Direction == DirectionTypeEnum.Blank)
             {
+                // now to start the Scroll Olympics.
+                // Ready.
+                // Set.
+                // And scroll.
                 if (chunk.NorthNeighbor && !chunk.EastNeighbor && !chunk.SouthNeighbor && !chunk.WestNeighbor && !chunk.TopNeighbor && !chunk.BottomNeighbor)
                     return DirectionTypeEnum.N;
                 if (chunk.NorthNeighbor && chunk.EastNeighbor && !chunk.SouthNeighbor && !chunk.WestNeighbor && !chunk.TopNeighbor && !chunk.BottomNeighbor)
@@ -257,21 +261,30 @@ namespace Assets.SRC.ProceduralMapGeneration.Utilities
                     return DirectionTypeEnum.T;
                 if (!chunk.NorthNeighbor && !chunk.EastNeighbor && !chunk.SouthNeighbor && !chunk.WestNeighbor && !chunk.TopNeighbor && chunk.BottomNeighbor)
                     return DirectionTypeEnum.B;
+                // Congratulations on the Scroll Olympics.
+                // Your Silver Medal will be sent by mail.
+                // If I ever send it.
+
+
+                return DirectionTypeEnum.Error;
                 // Well. . . Fuck.
                 // this is a problem.
-                // It should never reach this
-                // ༼ つ ◕_◕ ༽つ
-                return DirectionTypeEnum.Error;
+                // It should never reach this. . .
+                // (ㆆ _ ㆆ)
             }
             else if (chunk.Direction == DirectionTypeEnum.Error)
             {
-                // Well, something fucked out,
+                // Well, something really fucked out,
                 // Somewhere. . .
-                // throw exception
+                // (((φ(◎ロ◎;)φ)))
+                // I Should probably put some kind of exception here.
+                // But then it would make this exceptional.
                 return DirectionTypeEnum.Error;
             }
             else
                 return DirectionTypeEnum.Collapsed;
+            // Just like my dreams of getting a paid 6 month vacation twice a year.
+            // o(〒﹏〒)o
         }
     }
 
