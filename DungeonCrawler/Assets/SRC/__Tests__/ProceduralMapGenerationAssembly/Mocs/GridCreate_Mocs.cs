@@ -1,11 +1,7 @@
 ﻿using Assets.SRC.ProceduralMapGeneration.Structs;
-using System;
+using NUnit.Framework;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using UnityEngine;
-using Assets.SRC.ProceduralMapGeneration.Utilities;
 
 namespace Assets.SRC.ProceduralMapGeneration.Utilities.Tests
 {
@@ -25,8 +21,12 @@ namespace Assets.SRC.ProceduralMapGeneration.Utilities.Tests
         }
         public List<NeighborStruct> CreatGameObjectList(float scale, int size)
         {
-            GameObject parent = new GameObject();
-           return GridCreate.FindChunkNeigbors(scale, GridCreate.PlaceGameObjectsAtGridPositions(GridCreate.SquareGrid2DHorizontal(size, scale), parent.transform));
+            List<NeighborStruct> list = new List<NeighborStruct>();
+            return list;
+            //GridCreate gridCreate = new GridCreate();
+            //GameObject parent = new GameObject();
+            //return gridCreate.FindChunkNeigbors(scale, gridCreate.PlaceGameObjectsAtGridPositions(gridCreate.SquareGrid2DHorizontal(size, scale), parent.transform));
+           
         }
 
     }

@@ -1,6 +1,4 @@
-﻿using Assets.SRC.ProceduralMapGeneration.Enums;
-
-namespace Assets.SRC.ProceduralMapGeneration.Enums
+﻿namespace Assets.SRC.ProceduralMapGeneration.Enums
 {
     public enum DirectionTypeEnum
     {

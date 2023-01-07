@@ -1,22 +1,7 @@
 
-using NUnit.Framework;
-using FluentAssertions;
-using UnityEngine;
 using Assets.SRC.Tests.Assets.SRC.__Tests__.ProceduralMapGenerationAssembly.Mocs;
-using System.Collections;
-using System.Collections.Generic;
-using NUnit.Framework;
-using UnityEngine;
-using UnityEngine.TestTools;
-using Assets.SRC.ProceduralMapGeneration.Utilities;
-using System.Linq;
 using FluentAssertions;
-using UnityEngine.Assertions.Must;
-using UnityEngine.UIElements;
-using Assets.SRC.ProceduralMapGeneration.Structs;
-using Assets.SRC.ProceduralMapGeneration.Enums;
-using Assets.SRC.ProceduralMapGeneration.Mono.Behaviors;
-using Assets.SRC.ProceduralMapGeneration.Utilities.Tests;
+using NUnit.Framework;
 
 namespace Assets.SRC.ProceduralMapGeneration.Utilities.Test
 {
@@ -27,13 +12,13 @@ namespace Assets.SRC.ProceduralMapGeneration.Utilities.Test
         [SetUp]
         public void SetUp()
         {
-            _genericUtilities_Mocs= new GenericUtilities_Mocs();
+            _genericUtilities_Mocs = new GenericUtilities_Mocs();
         }
 
         [TearDown]
         public void TearDown()
         {
-            _genericUtilities_Mocs= null;
+            _genericUtilities_Mocs = null;
         }
         #endregion
 

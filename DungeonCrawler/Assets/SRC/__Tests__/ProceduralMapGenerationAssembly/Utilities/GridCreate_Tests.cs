@@ -1,16 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
-using NUnit.Framework;
-using UnityEngine;
-using UnityEngine.TestTools;
-using Assets.SRC.ProceduralMapGeneration.Utilities;
-using System.Linq;
-using FluentAssertions;
-using UnityEngine.Assertions.Must;
-using UnityEngine.UIElements;
-using Assets.SRC.ProceduralMapGeneration.Structs;
 using Assets.SRC.ProceduralMapGeneration.Enums;
 using Assets.SRC.ProceduralMapGeneration.Mono.Behaviors;
+using FluentAssertions;
+using NUnit.Framework;
+using System.Collections.Generic;
+using System.Linq;
+using UnityEngine;
 
 namespace Assets.SRC.ProceduralMapGeneration.Utilities.Tests
 {
@@ -45,7 +39,7 @@ namespace Assets.SRC.ProceduralMapGeneration.Utilities.Tests
         [TestCase(16, 22.34f)]
         #endregion
         public void Validate_SquareGrid2DVertical(int gridSize, float scale)
-           => GridCreate.SquareGrid2DVertical(gridSize, scale).Count<Vector3>().Should().Be((gridSize * gridSize));
+           => _gridCreate.SquareGrid2DVertical(gridSize, scale).Count<Vector3>().Should().Be((gridSize * gridSize));
 
         #region Validate_SquareGrid2DHorizontal Test Cases
         [TestCase(1, 1)]
@@ -55,7 +49,7 @@ namespace Assets.SRC.ProceduralMapGeneration.Utilities.Tests
         [TestCase(16, 22.34f)]
         #endregion
         public void Validate_SquareGrid2DHorizontal(int gridSize, float scale)
-           => GridCreate.SquareGrid2DHorizontal(gridSize, scale).Count<Vector3>().Should().Be((gridSize * gridSize));
+           => _gridCreate.SquareGrid2DHorizontal(gridSize, scale).Count<Vector3>().Should().Be((gridSize * gridSize));
 
         #region Validate_SquareGrid3D Test Cases
         [TestCase(1, 1)]
@@ -65,17 +59,20 @@ namespace Assets.SRC.ProceduralMapGeneration.Utilities.Tests
         [TestCase(16, 22.34f)]
         #endregion
         public void Validate_SquareGrid3D(int gridSize, float scale)
-            => GridCreate.SquareGrid3D(gridSize, scale).Count<Vector3>().Should().Be((gridSize * gridSize * gridSize));
+            => _gridCreate.SquareGrid3D(gridSize, scale).Count<Vector3>().Should().Be((gridSize * gridSize * gridSize));
 
         [Test]
-        public void Validate_FindChunkNeigbors(int gridSize, float scale)
+        public void Validate_FindChunkNeigbors()
         {
-            Assert.Fail();
-            //var result = GridCreate.SquareGrid2DVertical(gridSize, scale);
-            //for (int i = 0; i < result.Count<Vector3>(); i++)
-            //{
-            //   var t= result[i];               
-            //}
+            Assert.Fail("Not Implemented");
+            //  GridCreate.FindChunkNeigbors(GridScale, GridCreate.PlaceGameObjectsAtGridPositions(GridCreate.SquareGrid2DHorizontal(GridSize, GridScale), GridParent))
+        }
+
+        [Test]
+        public void Validate_PlaceGameObjectsAtGridPositions()
+        {
+            Assert.Fail("Not Implemented");
+            //GridCreate.PlaceGameObjectsAtGridPositions(GridCreate.SquareGrid2DHorizontal(GridSize, GridScale), GridParent)
         }
         #region Validate_AssignDirectionIDAccordingToPresentNeighbors Test Cases
         [TestCase(1, 1)]
@@ -84,25 +81,26 @@ namespace Assets.SRC.ProceduralMapGeneration.Utilities.Tests
         [TestCase(14, 0.5f)]
         [TestCase(16, 22.34f)]
         #endregion
-        public void Validate_AssignDirectionIDAccordingToPresentNeighbors(int size,float scale)
+        public void Validate_AssignDirectionIDAccordingToPresentNeighbors(int size, float scale)
         {
             // Given
-            List<GameObject> list = GridCreate.AssignDirectionIDAccordingToPresentNeighbors(_gridCreate_Mocs.CreatGameObjectList(scale, size));
-            for (int i = 0; i < list.Count; i++)
-            {
-                var t = list[i];
-                // Test for ChunkBehavior
-                if (!t.GetComponent<ChunkBehavior>()) Assert.Fail("Object does not have a 'ChunkBehavior' @ : " + i);
-                // Test For Direction Values being set
-                var g = t.GetComponent<ChunkBehavior>();
-                if (!g.Direction.NothID &&
-                    !g.Direction.EastID &&
-                    !g.Direction.SouthID &&
-                    !g.Direction.WestID &&
-                    !g.Direction.TopID &&
-                    !g.Direction.BottomID)
-                    Assert.Fail("Direction not being set at @ : " + i);
-            }
+            //List<GameObject> list = _gridCreate.AssignDirectionIDAccordingToPresentNeighbors(_gridCreate_Mocs.CreatGameObjectList(scale, size));
+            //for (int i = 0; i < list.Count; i++)
+            //{
+            //    var t = list[i];
+            //    // Test for ChunkBehavior
+            //    if (!t.GetComponent<ChunkBehavior>()) Assert.Fail("Object does not have a 'ChunkBehavior' @ : " + i);
+            //    // Test For Direction Values being set
+            //    var g = t.GetComponent<ChunkBehavior>();
+            //    if (!g.direction.NothID &&
+            //        !g.direction.EastID &&
+            //        !g.direction.SouthID &&
+            //        !g.direction.WestID &&
+            //        !g.direction.TopID &&
+            //        !g.direction.BottomID)
+            //        Assert.Fail("Direction not being set at @ : " + i);
+            //}
+            Assert.Fail();
         }
 
         #region Validate_FindChunkType Test Cases

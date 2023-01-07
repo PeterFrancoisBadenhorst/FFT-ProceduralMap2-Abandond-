@@ -1,4 +1,6 @@
-﻿using Assets.SRC.ProceduralMapGeneration.Utilities;
+﻿using Assets.SRC.ProceduralMapGeneration.Mono.Behaviors;
+using Assets.SRC.ProceduralMapGeneration.Structs;
+using Assets.SRC.ProceduralMapGeneration.Utilities;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -13,13 +15,21 @@ namespace Assets.SRC.ProceduralMapGeneration.Mono.Managers
 
         private List<GameObject> gridRelations = new List<GameObject>();
 
+        private readonly PopulateTilePositions _populateTilePositionsBehavior = new PopulateTilePositions();
+        private readonly GridCreate _gridCreate = new GridCreate();
         private void Start()
         {
             SetUpGrid();
         }
         private void SetUpGrid()
         {
-            gridRelations = GridCreate.AssignDirectionIDAccordingToPresentNeighbors(GridCreate.FindChunkNeigbors(GridScale, GridCreate.PlaceGameObjectsAtGridPositions(GridCreate.SquareGrid2DHorizontal(GridSize, GridScale), GridParent)));
+            gridRelations.Clear();
+            Vector3[] grid = _gridCreate.SquareGrid3D(GridSize, GridScale);
+            List<GameObject> objects = _gridCreate.PlaceGameObjectsAtGridPositions(grid, GridParent);
+            List<GameObject> listedObjects = _gridCreate.FindChunkNeigbors(GridScale, objects);
+
+            gridRelations = _gridCreate.AssignDirectionIDAccordingToPresentNeighbors(listedObjects);
+            _populateTilePositionsBehavior.SetChildTile(TempPrefab, gridRelations);
         }
 
     }

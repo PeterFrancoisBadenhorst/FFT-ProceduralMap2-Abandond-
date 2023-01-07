@@ -5,7 +5,9 @@ namespace Assets.SRC.ProceduralMapGeneration.Mono.Behaviors
 {
     public class ChunkBehavior : MonoBehaviour
     {
-        public DirectionIDStruct Direction;
-
+        [SerializeField]
+        public DirectionIDStruct direction;
+        [SerializeField]
+        public NeighborStruct neighborStruct;
     }
 }
