@@ -1,6 +1,7 @@
 ﻿using Assets.SRC.ProceduralMapGeneration.Mono.Behaviors;
 using Assets.SRC.ProceduralMapGeneration.Structs;
 using Assets.SRC.ProceduralMapGeneration.Utilities;
+using Assets.SRC.ProceduralMapGeneration.ScriptableObjects;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -12,6 +13,7 @@ namespace Assets.SRC.ProceduralMapGeneration.Mono.Managers
         public Transform GridParent;
         public int GridSize;
         public float GridScale;
+        public DirectionalTilesScriptableObject scriptRef;
 
         private List<GameObject> gridRelations = new List<GameObject>();
 
@@ -28,7 +30,12 @@ namespace Assets.SRC.ProceduralMapGeneration.Mono.Managers
             List<GameObject> objects = _gridCreate.PlaceGameObjectsAtGridPositions(grid, GridParent);
             List<GameObject> listedObjects = _gridCreate.FindChunkNeigbors(GridScale, objects);
 
-            gridRelations = _gridCreate.AssignDirectionIDAccordingToPresentNeighbors(listedObjects);
+            // gridRelations = _gridCreate.AssignDirectionIDAccordingToPresentNeighbors(listedObjects);
+            gridRelations = _gridCreate.AsignChunkTypes(listedObjects);
+
+
+
+
             _populateTilePositionsBehavior.SetChildTile(TempPrefab, gridRelations);
         }
 

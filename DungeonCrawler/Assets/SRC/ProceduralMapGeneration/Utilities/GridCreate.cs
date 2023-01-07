@@ -9,6 +9,7 @@ namespace Assets.SRC.ProceduralMapGeneration.Utilities
 {
     public class GridCreate
     {
+        #region Grids
         public Vector3[] SquareGrid2DVertical(int gridSize, float scale)
         {
             var createdTransforms = new List<Vector3>();
@@ -28,7 +29,7 @@ namespace Assets.SRC.ProceduralMapGeneration.Utilities
         public Vector3[] SquareGrid2DHorizontal(int gridSize, float scale)
         {
             var createdTransforms = new List<Vector3>();
-            var centre=gridSize / 2;
+            var centre = gridSize / 2;
             for (int X = 0; X < gridSize; X++)
             {
                 for (int Y = 0; Y < gridSize; Y++)
@@ -36,7 +37,7 @@ namespace Assets.SRC.ProceduralMapGeneration.Utilities
                     var t = new Vector3(
                         (X - centre) * scale,
                         0,
-                       (Y - centre) * scale 
+                       (Y - centre) * scale
                        );
                     Debug.Log(t);
                     createdTransforms.Add(t);
@@ -63,7 +64,9 @@ namespace Assets.SRC.ProceduralMapGeneration.Utilities
             }
             return createdTransforms.ToArray();
         }
-        public List<GameObject> FindChunkNeigbors(float scale, List<GameObject> grid)
+        #endregion
+
+        public List<GameObject> FindChunkNeigbors(float scale, List<GameObject> grid)// problem
         {
             var neighborPositions = GenericUtilities.NeighborsPosition(scale);
             for (int i = 0; i < grid.Count; i++)
@@ -88,12 +91,12 @@ namespace Assets.SRC.ProceduralMapGeneration.Utilities
                     else if (compared.z == pos.z + neighborPositions[5].z) neighbors.BottomNeighbor = grid[g];
 
                 }
-                var t =grid[i].AddComponent<ChunkBehavior>();
+                var t = grid[i].AddComponent<ChunkBehavior>();
                 t.neighborStruct = neighbors;
             }
             return grid;
         }
-        public List<GameObject> PlaceGameObjectsAtGridPositions(Vector3[] grid, Transform gridParent)
+        public List<GameObject> PlaceGameObjectsAtGridPositions(Vector3[] grid, Transform gridParent)//
         {
             List<GameObject> gameObjects = new List<GameObject>();
             for (int i = 0; i < grid.Length; i++)
@@ -106,34 +109,45 @@ namespace Assets.SRC.ProceduralMapGeneration.Utilities
             return gameObjects;
         }
 
-        public List<GameObject> AssignDirectionIDAccordingToPresentNeighbors(List<GameObject> objects)
-        {
-            for (int i = 0; i < objects.Count; i++)
-            {
-                DirectionIDStruct ids = new DirectionIDStruct();
-                var g =  objects[i].GetComponent<ChunkBehavior>();
+        //public List<GameObject> AssignDirectionIDAccordingToPresentNeighbors(List<GameObject> objects)//
+        //{
+        //    for (int i = 0; i < objects.Count; i++)
+        //    {
+        //        DirectionIDStruct ids = new DirectionIDStruct();
+        //        var g = objects[i].GetComponent<ChunkBehavior>();
 
-                if (g.neighborStruct.NorthNeighbor) ids.NothID = true;
-                if (g.neighborStruct.EastNeighbor) ids.EastID = true;
-                if (g.neighborStruct.SouthNeighbor) ids.SouthID = true;
-                if (g.neighborStruct.WestNeighbor) ids.WestID = true;
-                if (g.neighborStruct.TopNeighbor) ids.TopID = true;
-                if (g.neighborStruct.BottomNeighbor) ids.BottomID = true;
-             
-                g.direction = ids;
+        //        if (g.neighborStruct.NorthNeighbor) ids.NothID = true;
+        //        if (g.neighborStruct.EastNeighbor) ids.EastID = true;
+        //        if (g.neighborStruct.SouthNeighbor) ids.SouthID = true;
+        //        if (g.neighborStruct.WestNeighbor) ids.WestID = true;
+        //        if (g.neighborStruct.TopNeighbor) ids.TopID = true;
+        //        if (g.neighborStruct.BottomNeighbor) ids.BottomID = true;
+
+        //        g.neighborStruct.Direction = ids;
+        //    }
+        //    return objects;
+        //}
+
+        public List<GameObject> AsignChunkTypes(List<GameObject> grid)
+        {
+            for (int i = 0; i < grid.Count; i++)
+            {
+            Debug.Log("Finding Direction");
+                grid[i].GetComponent<ChunkBehavior>().neighborStruct.Direction = FindChunkType(grid[i].GetComponent<ChunkBehavior>().neighborStruct);
             }
-            return objects;
+            return grid;
         }
 
         public DirectionTypeEnum FindChunkType(NeighborStruct chunk)
         {
+            Debug.Log("Finding Direction");
             // WARNING
-            // There is a risk of mental and physical injuries from this if statement.
+            // There is a risk of mental and physical injury from this if statement.
             // I am not liable for what happens to you.
             // Proceed with caution.
             if (chunk.Direction != DirectionTypeEnum.Collapsed || chunk.Direction == DirectionTypeEnum.Blank)
             {
-                // now to start the Scroll Olympics.
+                // Now to start the Scroll Olympics.
                 // Ready.
                 // Set.
                 // And scroll.
