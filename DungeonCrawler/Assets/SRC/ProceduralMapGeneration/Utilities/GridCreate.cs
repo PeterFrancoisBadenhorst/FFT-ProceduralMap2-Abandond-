@@ -76,7 +76,7 @@ namespace Assets.SRC.ProceduralMapGeneration.Utilities
                     comparedChunk = grid[i].GetComponent<ChunkBehavior>();
                 else
                     comparedChunk = grid[i].AddComponent<ChunkBehavior>();
-
+                comparedChunk.neighborStruct.OriginObject = grid[i];
                 for (int o = 0; o < grid.Count; o++)
                 {
                     GameObject gameObject = grid[o];

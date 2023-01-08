@@ -33,9 +33,6 @@ namespace Assets.SRC.ProceduralMapGeneration.Mono.Managers
             // gridRelations = _gridCreate.AssignDirectionIDAccordingToPresentNeighbors(listedObjects);
             gridRelations = _gridCreate.AsignChunkTypes(listedObjects);
 
-
-
-
             _populateTilePositionsBehavior.SetChildTile(scriptRef, gridRelations);
         }
 
