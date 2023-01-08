@@ -2,10 +2,6 @@
 {
     public enum DirectionTypeEnum
     {
-        // Boiler plate values
-        Blank,
-        Collapsed,
-        Error,
         // Actual Direction
         N,//
         //  north, east, south, west, top, bottom
@@ -134,7 +130,11 @@
         T,//
         //  north, east, south, west, top, bottom
         B,
-        //  north, east, south, west, top, bottom
+
+        // Boiler plate values
+        Blank,
+        Collapsed,
+        Error,
     }
 }
 

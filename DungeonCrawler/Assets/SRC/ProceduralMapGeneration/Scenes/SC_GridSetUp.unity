@@ -456,7 +456,7 @@ MonoBehaviour:
     type: 3}
   GridParent: {fileID: 1649667191}
   GridSize: 3
-  GridScale: 5
+  GridScale: 1
   scriptRef: {fileID: 11400000, guid: 06745c89816422442a2913d5f404ad83, type: 2}
 --- !u!4 &1649667191
 Transform:

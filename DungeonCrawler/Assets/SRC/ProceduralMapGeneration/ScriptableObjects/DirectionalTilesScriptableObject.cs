@@ -71,5 +71,75 @@ namespace Assets.SRC.ProceduralMapGeneration.ScriptableObjects
         public GameObject W;
         public GameObject T;
         public GameObject B;
+
+        public List<GameObject> RetunObjectsAsAList()
+        {
+            List<GameObject> retunObjects = new List<GameObject>();
+            retunObjects.Add(NE);
+            retunObjects.Add(NS);
+            retunObjects.Add(NW);
+            retunObjects.Add(NT);
+            retunObjects.Add(NB);
+            retunObjects.Add(NES);
+            retunObjects.Add(NESW);
+            retunObjects.Add(NEWTB);
+            retunObjects.Add(NESWT);
+            retunObjects.Add(EWTB);
+            retunObjects.Add(NESWB);
+            retunObjects.Add(NESWBT);
+            retunObjects.Add(NEW);
+            retunObjects.Add(NEWT);
+            retunObjects.Add(NEWB);
+            retunObjects.Add(NET);
+            retunObjects.Add(NETB);
+            retunObjects.Add(NEB);
+            retunObjects.Add(NEST);
+            retunObjects.Add(NESTB);
+            retunObjects.Add(NESB);
+            retunObjects.Add(NSW);
+            retunObjects.Add(NSWT);
+            retunObjects.Add(NSWB);
+            retunObjects.Add(NST);
+            retunObjects.Add(NSTB);
+            retunObjects.Add(NSB);
+            retunObjects.Add(NSWTB);
+            retunObjects.Add(NWT);
+            retunObjects.Add(NWTB);
+            retunObjects.Add(NWB);
+            retunObjects.Add(NTB);
+            retunObjects.Add(ES);
+            retunObjects.Add(ESW);
+            retunObjects.Add(ESWT);
+            retunObjects.Add(ESWB);
+            retunObjects.Add(ESWBT);
+            retunObjects.Add(EW);
+            retunObjects.Add(EWT);
+            retunObjects.Add(EWB);
+            retunObjects.Add(ET);
+            retunObjects.Add(ETB);
+            retunObjects.Add(EB);
+            retunObjects.Add(EST);
+            retunObjects.Add(ESTB);
+            retunObjects.Add(ESB);
+            retunObjects.Add(SW);
+            retunObjects.Add(SWT);
+            retunObjects.Add(SWB);
+            retunObjects.Add(ST);
+            retunObjects.Add(STB);
+            retunObjects.Add(SB);
+            retunObjects.Add(SWTB);
+            retunObjects.Add(WT);
+            retunObjects.Add(WTB);
+            retunObjects.Add(WB);
+            retunObjects.Add(TB);
+            retunObjects.Add(S);
+            retunObjects.Add(E);
+            retunObjects.Add(SWBT);
+            retunObjects.Add(W);
+            retunObjects.Add(T);
+            retunObjects.Add(B);
+
+            return retunObjects;
+        }
     }
 }

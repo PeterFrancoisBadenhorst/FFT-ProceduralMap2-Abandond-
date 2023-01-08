@@ -26,7 +26,7 @@ namespace Assets.SRC.ProceduralMapGeneration.Mono.Managers
         private void SetUpGrid()
         {
             gridRelations.Clear();
-            Vector3[] grid = _gridCreate.SquareGrid2DHorizontal(GridSize, GridScale);
+            Vector3[] grid = _gridCreate.SquareGrid3D(GridSize, GridScale);
             List<GameObject> objects = _gridCreate.PlaceGameObjectsAtGridPositions(grid, GridParent);
             List<GameObject> listedObjects = _gridCreate.FindChunkNeigbors(GridScale, objects);
 
@@ -36,7 +36,7 @@ namespace Assets.SRC.ProceduralMapGeneration.Mono.Managers
 
 
 
-            _populateTilePositionsBehavior.SetChildTile(TempPrefab, gridRelations);
+            _populateTilePositionsBehavior.SetChildTile(scriptRef, gridRelations);
         }
 
     }
