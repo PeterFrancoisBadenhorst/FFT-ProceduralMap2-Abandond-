@@ -39,7 +39,6 @@ namespace Assets.SRC.ProceduralMapGeneration.Utilities
                         0,
                        (Y - centre) * scale
                        );
-                    Debug.Log(t);
                     createdTransforms.Add(t);
                 }
             }
@@ -68,33 +67,83 @@ namespace Assets.SRC.ProceduralMapGeneration.Utilities
 
         public List<GameObject> FindChunkNeigbors(float scale, List<GameObject> grid)// problem
         {
-            var neighborPositions = GenericUtilities.NeighborsPosition(scale);
+            GenericUtilities _genericUtilities = new GenericUtilities();
             for (int i = 0; i < grid.Count; i++)
             {
-                var neighbors = new NeighborStruct();
-                neighbors.OriginObject = grid[i];
-                var pos = grid[i].transform.position;
-                for (int g = 0; g < grid.Count; g++)
+                var comparedValues = _genericUtilities.NeighborsPosition(scale, grid[i].transform.position);
+                ChunkBehavior comparedChunk;
+                if (grid[i].GetComponent<ChunkBehavior>())
+                    comparedChunk = grid[i].GetComponent<ChunkBehavior>();
+                else
+                    comparedChunk = grid[i].AddComponent<ChunkBehavior>();
+
+                for (int o = 0; o < grid.Count; o++)
                 {
-                    var compared = grid[g].transform.position;
+                    GameObject gameObject = grid[o];
+                    if (!comparedChunk.neighborStruct.NorthNeighbor &&
+                       gameObject.transform.position == comparedValues[0])
+                        comparedChunk.neighborStruct.NorthNeighbor = grid[o].gameObject;
 
-                    if (compared.x == pos.x + neighborPositions[0].x) neighbors.NorthNeighbor = grid[g];
+                    if (!comparedChunk.neighborStruct.EastNeighbor &&
+                        gameObject.transform.position == comparedValues[1])
+                        comparedChunk.neighborStruct.EastNeighbor = grid[o].gameObject;
 
-                    else if (compared.y == pos.y + neighborPositions[1].y) neighbors.EastNeighbor = grid[g];
+                    if (!comparedChunk.neighborStruct.SouthNeighbor &&
+                        gameObject.transform.position == comparedValues[2])
+                        comparedChunk.neighborStruct.SouthNeighbor = grid[o].gameObject;
 
-                    else if (compared.x == pos.x + neighborPositions[2].x) neighbors.SouthNeighbor = grid[g];
+                    if (!comparedChunk.neighborStruct.WestNeighbor &&
+                        gameObject.transform.position == comparedValues[3])
+                        comparedChunk.neighborStruct.WestNeighbor = grid[o].gameObject;
 
-                    else if (compared.y == pos.y + neighborPositions[3].y) neighbors.WestNeighbor = grid[g];
+                    if (!comparedChunk.neighborStruct.TopNeighbor &&
+                       gameObject.transform.position == comparedValues[4])
+                        comparedChunk.neighborStruct.TopNeighbor = grid[o].gameObject;
 
-                    else if (compared.z == pos.z + neighborPositions[4].z) neighbors.TopNeighbor = grid[g];
-
-                    else if (compared.z == pos.z + neighborPositions[5].z) neighbors.BottomNeighbor = grid[g];
-
+                    if (!comparedChunk.neighborStruct.BottomNeighbor &&
+                       gameObject.transform.position == comparedValues[5])
+                        comparedChunk.neighborStruct.BottomNeighbor = grid[o].gameObject;
                 }
-                var t = grid[i].AddComponent<ChunkBehavior>();
-                t.neighborStruct = neighbors;
+                grid[i].GetComponent<ChunkBehavior>().neighborStruct = comparedChunk.neighborStruct;
             }
             return grid;
+
+
+
+
+
+
+
+
+
+
+
+            //var neighborPositions = GenericUtilities.NeighborsPosition(scale);
+            //for (int i = 0; i < grid.Count; i++)
+            //{
+            //    var neighbors = new NeighborStruct();
+            //    neighbors.OriginObject = grid[i];
+            //    var pos = grid[i].transform.position;
+            //    for (int g = 0; g < grid.Count; g++)
+            //    {
+            //        var compared = grid[g].transform.position;
+
+            //        if (compared.x == pos.x + neighborPositions[0].x) neighbors.NorthNeighbor = grid[g];
+
+            //        else if (compared.y == pos.y + neighborPositions[1].y) neighbors.EastNeighbor = grid[g];
+
+            //        else if (compared.x == pos.x + neighborPositions[2].x) neighbors.SouthNeighbor = grid[g];
+
+            //        else if (compared.y == pos.y + neighborPositions[3].y) neighbors.WestNeighbor = grid[g];
+
+            //        else if (compared.z == pos.z + neighborPositions[4].z) neighbors.TopNeighbor = grid[g];
+
+            //        else if (compared.z == pos.z + neighborPositions[5].z) neighbors.BottomNeighbor = grid[g];
+
+            //    }
+            //    var t = grid[i].AddComponent<ChunkBehavior>();
+            //    t.neighborStruct = neighbors;
+            //}
         }
         public List<GameObject> PlaceGameObjectsAtGridPositions(Vector3[] grid, Transform gridParent)//
         {
@@ -132,7 +181,6 @@ namespace Assets.SRC.ProceduralMapGeneration.Utilities
         {
             for (int i = 0; i < grid.Count; i++)
             {
-            Debug.Log("Finding Direction");
                 grid[i].GetComponent<ChunkBehavior>().neighborStruct.Direction = FindChunkType(grid[i].GetComponent<ChunkBehavior>().neighborStruct);
             }
             return grid;
@@ -140,7 +188,6 @@ namespace Assets.SRC.ProceduralMapGeneration.Utilities
 
         public DirectionTypeEnum FindChunkType(NeighborStruct chunk)
         {
-            Debug.Log("Finding Direction");
             // WARNING
             // There is a risk of mental and physical injury from this if statement.
             // I am not liable for what happens to you.

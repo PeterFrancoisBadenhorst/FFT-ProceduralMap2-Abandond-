@@ -12,7 +12,7 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.
     {
         public static GameObject InstantiateObject(GameObject gObject,Vector3 position,Quaternion rotation)
         {
-           return Instantiate(gObject, position, rotation);
+           return Instantiate(gObject, Vector3.zero, rotation);
         }
     }
 }

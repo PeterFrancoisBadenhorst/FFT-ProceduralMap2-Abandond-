@@ -11,14 +11,14 @@ namespace Assets.SRC.ProceduralMapGeneration.Utilities
          * T 0;1;0
          * B 0;-1;0
          */
-        public static Vector3[] NeighborsPosition(float scale)
+        public Vector3[] NeighborsPosition(float scale,Vector3 offset)
         {
-            var north = Vector3.right * scale;//    0 N 1;0;0 X
-            var east = Vector3.forward * scale;//   1 E 0;0;1 X
-            var south = Vector3.left * scale;//     2 S -1;0;0 O
-            var west = Vector3.back * scale;//      3 w 0;0;-1
-            var top = Vector3.up * scale;//         4 T 0;1;0
-            var bottom = Vector3.down * scale;//    5 B 0;-1;0
+            var north = (Vector3.forward * scale)+ offset;//    0 N 1;0;0 X
+            var east = (Vector3.right * scale) + offset;//   1 E 0;0;1 X
+            var south = (Vector3.back * scale) + offset;//     2 S -1;0;0 O
+            var west = (Vector3.left * scale) + offset;//      3 w 0;0;-1
+            var top = (Vector3.up * scale) + offset;//         4 T 0;1;0
+            var bottom = (Vector3.down * scale) + offset;//    5 B 0;-1;0
 
             return new Vector3[] { north, east, south, west, top, bottom };
         }

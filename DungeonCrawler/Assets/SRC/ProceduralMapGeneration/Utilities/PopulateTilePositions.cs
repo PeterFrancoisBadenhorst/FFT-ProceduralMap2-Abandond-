@@ -10,9 +10,8 @@ namespace Assets.SRC.ProceduralMapGeneration.Utilities
         {
             for (int i = 0; i < parentObjects.Count; i++)
             {
-                Debug.Log(parentObjects[i].transform.position);
                 GameObject t = UtilitiesBehaviour.InstantiateObject(placeHolder, parentObjects[i].transform.position, Quaternion.identity);
-                t.transform.position = parentObjects[i].transform.position;
+               // t.transform.position = parentObjects[i].transform.position;
                 t.transform.SetParent(parentObjects[i].transform, false);
                 parentObjects[i].isStatic = true;
                 parentObjects[i].name =  i + "   " + parentObjects[i].transform.position.ToString() ;

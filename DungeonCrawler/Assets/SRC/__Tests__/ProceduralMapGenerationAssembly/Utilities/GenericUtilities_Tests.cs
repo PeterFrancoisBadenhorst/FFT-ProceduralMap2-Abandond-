@@ -31,8 +31,9 @@ namespace Assets.SRC.ProceduralMapGeneration.Utilities.Test
         #endregion
         public void Validate_NeighborsPosition(float scale)
         {
-            var result = GenericUtilities.NeighborsPosition(scale);
-            result.Should().BeEquivalentTo(_genericUtilities_Mocs.SetUpNeighbors(scale));
+            //var result = GenericUtilities.NeighborsPosition(scale);
+            //result.Should().BeEquivalentTo(_genericUtilities_Mocs.SetUpNeighbors(scale));
+            Assert.Fail();
         }
     }
 }
