@@ -66,7 +66,7 @@ namespace Assets.SRC.ProceduralMapGeneration.Utilities
         }
         #endregion
 
-        public List<GameObject> FindChunkNeigbors(float scale, List<GameObject> grid)// problem
+        public List<GameObject> FindChunkNeigbors(float scale, List<GameObject> grid)
         {
             GenericUtilities _genericUtilities = new GenericUtilities();
             for (int i = 0; i < grid.Count; i++)
@@ -108,43 +108,6 @@ namespace Assets.SRC.ProceduralMapGeneration.Utilities
                 grid[i].GetComponent<ChunkBehavior>().neighborStruct = comparedChunk.neighborStruct;
             }
             return grid;
-
-
-
-
-
-
-
-
-
-
-
-            //var neighborPositions = GenericUtilities.NeighborsPosition(scale);
-            //for (int i = 0; i < grid.Count; i++)
-            //{
-            //    var neighbors = new NeighborStruct();
-            //    neighbors.OriginObject = grid[i];
-            //    var pos = grid[i].transform.position;
-            //    for (int g = 0; g < grid.Count; g++)
-            //    {
-            //        var compared = grid[g].transform.position;
-
-            //        if (compared.x == pos.x + neighborPositions[0].x) neighbors.NorthNeighbor = grid[g];
-
-            //        else if (compared.y == pos.y + neighborPositions[1].y) neighbors.EastNeighbor = grid[g];
-
-            //        else if (compared.x == pos.x + neighborPositions[2].x) neighbors.SouthNeighbor = grid[g];
-
-            //        else if (compared.y == pos.y + neighborPositions[3].y) neighbors.WestNeighbor = grid[g];
-
-            //        else if (compared.z == pos.z + neighborPositions[4].z) neighbors.TopNeighbor = grid[g];
-
-            //        else if (compared.z == pos.z + neighborPositions[5].z) neighbors.BottomNeighbor = grid[g];
-
-            //    }
-            //    var t = grid[i].AddComponent<ChunkBehavior>();
-            //    t.neighborStruct = neighbors;
-            //}
         }
         public List<GameObject> PlaceGameObjectsAtGridPositions(Vector3[] grid, Transform gridParent)//
         {
@@ -158,26 +121,7 @@ namespace Assets.SRC.ProceduralMapGeneration.Utilities
             }
             return gameObjects;
         }
-
-        //public List<GameObject> AssignDirectionIDAccordingToPresentNeighbors(List<GameObject> objects)//
-        //{
-        //    for (int i = 0; i < objects.Count; i++)
-        //    {
-        //        DirectionIDStruct ids = new DirectionIDStruct();
-        //        var g = objects[i].GetComponent<ChunkBehavior>();
-
-        //        if (g.neighborStruct.NorthNeighbor) ids.NothID = true;
-        //        if (g.neighborStruct.EastNeighbor) ids.EastID = true;
-        //        if (g.neighborStruct.SouthNeighbor) ids.SouthID = true;
-        //        if (g.neighborStruct.WestNeighbor) ids.WestID = true;
-        //        if (g.neighborStruct.TopNeighbor) ids.TopID = true;
-        //        if (g.neighborStruct.BottomNeighbor) ids.BottomID = true;
-
-        //        g.neighborStruct.Direction = ids;
-        //    }
-        //    return objects;
-        //}
-
+       
         public List<GameObject> AsignChunkTypes(List<GameObject> grid)
         {
             for (int i = 0; i < grid.Count; i++)
