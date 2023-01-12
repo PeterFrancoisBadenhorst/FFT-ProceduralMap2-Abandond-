@@ -1,6 +1,7 @@
 ﻿using Assets.SRC.ProceduralMapGeneration.Enums;
 using Assets.SRC.ProceduralMapGeneration.Mono.Behaviors;
 using Assets.SRC.ProceduralMapGeneration.Structs;
+using System;
 using System.Collections.Generic;
 using System.Runtime.InteropServices.WindowsRuntime;
 using UnityEngine;
@@ -188,154 +189,30 @@ namespace Assets.SRC.ProceduralMapGeneration.Utilities
 
         public DirectionTypeEnum FindChunkType(NeighborStruct chunk)
         {
-            // WARNING
-            // There is a risk of mental and physical injury from this if statement.
-            // I am not liable for what happens to you.
-            // Proceed with caution.
             if (chunk.Direction != DirectionTypeEnum.Collapsed || chunk.Direction == DirectionTypeEnum.Blank)
             {
-                // Now to start the Scroll Olympics.
-                // Ready.
-                // Set.
-                // And scroll.
-                if (chunk.NorthNeighbor && !chunk.EastNeighbor && !chunk.SouthNeighbor && !chunk.WestNeighbor && !chunk.TopNeighbor && !chunk.BottomNeighbor)
-                    return DirectionTypeEnum.N;
-                if (chunk.NorthNeighbor && chunk.EastNeighbor && !chunk.SouthNeighbor && !chunk.WestNeighbor && !chunk.TopNeighbor && !chunk.BottomNeighbor)
-                    return DirectionTypeEnum.NE;
-                if (chunk.NorthNeighbor && !chunk.EastNeighbor && chunk.SouthNeighbor && !chunk.WestNeighbor && !chunk.TopNeighbor && !chunk.BottomNeighbor)
-                    return DirectionTypeEnum.NS;
-                if (chunk.NorthNeighbor && !chunk.EastNeighbor && !chunk.SouthNeighbor && chunk.WestNeighbor && !chunk.TopNeighbor && !chunk.BottomNeighbor)
-                    return DirectionTypeEnum.NW;
-                if (chunk.NorthNeighbor && !chunk.EastNeighbor && !chunk.SouthNeighbor && !chunk.WestNeighbor && chunk.TopNeighbor && !chunk.BottomNeighbor)
-                    return DirectionTypeEnum.NT;
-                if (chunk.NorthNeighbor && !chunk.EastNeighbor && !chunk.SouthNeighbor && !chunk.WestNeighbor && !chunk.TopNeighbor && chunk.BottomNeighbor)
-                    return DirectionTypeEnum.NB;
-                if (chunk.NorthNeighbor && chunk.EastNeighbor && chunk.SouthNeighbor && !chunk.WestNeighbor && !chunk.TopNeighbor && !chunk.BottomNeighbor)
-                    return DirectionTypeEnum.NES;
-                if (chunk.NorthNeighbor && chunk.EastNeighbor && chunk.SouthNeighbor && chunk.WestNeighbor && !chunk.TopNeighbor && !chunk.BottomNeighbor)
-                    return DirectionTypeEnum.NESW;
-                if (chunk.NorthNeighbor && chunk.EastNeighbor && !chunk.SouthNeighbor && chunk.WestNeighbor && chunk.TopNeighbor && chunk.BottomNeighbor)
-                    return DirectionTypeEnum.NEWTB;
-                if (chunk.NorthNeighbor && chunk.EastNeighbor && chunk.SouthNeighbor && chunk.WestNeighbor && chunk.TopNeighbor && !chunk.BottomNeighbor)
-                    return DirectionTypeEnum.NESWT;
-                if (!chunk.NorthNeighbor && chunk.EastNeighbor && !chunk.SouthNeighbor && chunk.WestNeighbor && chunk.TopNeighbor && chunk.BottomNeighbor)
-                    return DirectionTypeEnum.EWTB;
-                if (chunk.NorthNeighbor && chunk.EastNeighbor && chunk.SouthNeighbor && chunk.WestNeighbor && !chunk.TopNeighbor && chunk.BottomNeighbor)
-                    return DirectionTypeEnum.NESWB;
-                if (chunk.NorthNeighbor && chunk.EastNeighbor && chunk.SouthNeighbor && chunk.WestNeighbor && chunk.TopNeighbor && chunk.BottomNeighbor)
-                    return DirectionTypeEnum.NESWBT;
-                if (chunk.NorthNeighbor && chunk.EastNeighbor && !chunk.SouthNeighbor && chunk.WestNeighbor && !chunk.TopNeighbor && !chunk.BottomNeighbor)
-                    return DirectionTypeEnum.NEW;
-                if (chunk.NorthNeighbor && chunk.EastNeighbor && !chunk.SouthNeighbor && chunk.WestNeighbor && chunk.TopNeighbor && !chunk.BottomNeighbor)
-                    return DirectionTypeEnum.NEWT;
-                if (chunk.NorthNeighbor && chunk.EastNeighbor && !chunk.SouthNeighbor && chunk.WestNeighbor && !chunk.TopNeighbor && chunk.BottomNeighbor)
-                    return DirectionTypeEnum.NEWB;
-                if (chunk.NorthNeighbor && chunk.EastNeighbor && !chunk.SouthNeighbor && !chunk.WestNeighbor && chunk.TopNeighbor && !chunk.BottomNeighbor)
-                    return DirectionTypeEnum.NET;
-                if (chunk.NorthNeighbor && chunk.EastNeighbor && !chunk.SouthNeighbor && !chunk.WestNeighbor && chunk.TopNeighbor && chunk.BottomNeighbor)
-                    return DirectionTypeEnum.NETB;
-                if (chunk.NorthNeighbor && chunk.EastNeighbor && !chunk.SouthNeighbor && !chunk.WestNeighbor && !chunk.TopNeighbor && chunk.BottomNeighbor)
-                    return DirectionTypeEnum.NEB;
-                if (chunk.NorthNeighbor && chunk.EastNeighbor && chunk.SouthNeighbor && !chunk.WestNeighbor && chunk.TopNeighbor && !chunk.BottomNeighbor)
-                    return DirectionTypeEnum.NEST;
-                if (chunk.NorthNeighbor && chunk.EastNeighbor && chunk.SouthNeighbor && !chunk.WestNeighbor && chunk.TopNeighbor && chunk.BottomNeighbor)
-                    return DirectionTypeEnum.NESTB;
-                if (chunk.NorthNeighbor && chunk.EastNeighbor && chunk.SouthNeighbor && !chunk.WestNeighbor && !chunk.TopNeighbor && chunk.BottomNeighbor)
-                    return DirectionTypeEnum.NESB;
-                if (chunk.NorthNeighbor && !chunk.EastNeighbor && chunk.SouthNeighbor && chunk.WestNeighbor && !chunk.TopNeighbor && !chunk.BottomNeighbor)
-                    return DirectionTypeEnum.NSW;
-                if (chunk.NorthNeighbor && !chunk.EastNeighbor && chunk.SouthNeighbor && chunk.WestNeighbor && chunk.TopNeighbor && !chunk.BottomNeighbor)
-                    return DirectionTypeEnum.NSWT;
-                if (chunk.NorthNeighbor && !chunk.EastNeighbor && chunk.SouthNeighbor && chunk.WestNeighbor && !chunk.TopNeighbor && chunk.BottomNeighbor)
-                    return DirectionTypeEnum.NSWB;
-                if (chunk.NorthNeighbor && !chunk.EastNeighbor && chunk.SouthNeighbor && !chunk.WestNeighbor && chunk.TopNeighbor && !chunk.BottomNeighbor)
-                    return DirectionTypeEnum.NST;
-                if (chunk.NorthNeighbor && !chunk.EastNeighbor && chunk.SouthNeighbor && !chunk.WestNeighbor && chunk.TopNeighbor && chunk.BottomNeighbor)
-                    return DirectionTypeEnum.NSTB;
-                if (chunk.NorthNeighbor && !chunk.EastNeighbor && chunk.SouthNeighbor && !chunk.WestNeighbor && !chunk.TopNeighbor && chunk.BottomNeighbor)
-                    return DirectionTypeEnum.NSB;
-                if (chunk.NorthNeighbor && !chunk.EastNeighbor && chunk.SouthNeighbor && chunk.WestNeighbor && chunk.TopNeighbor && chunk.BottomNeighbor)
-                    return DirectionTypeEnum.NSWTB;
-                if (chunk.NorthNeighbor && !chunk.EastNeighbor && !chunk.SouthNeighbor && chunk.WestNeighbor && chunk.TopNeighbor && !chunk.BottomNeighbor)
-                    return DirectionTypeEnum.NWT;
-                if (chunk.NorthNeighbor && !chunk.EastNeighbor && !chunk.SouthNeighbor && chunk.WestNeighbor && chunk.TopNeighbor && chunk.BottomNeighbor)
-                    return DirectionTypeEnum.NWTB;
-                if (chunk.NorthNeighbor && !chunk.EastNeighbor && !chunk.SouthNeighbor && chunk.WestNeighbor && !chunk.TopNeighbor && chunk.BottomNeighbor)
-                    return DirectionTypeEnum.NWB;
-                if (chunk.NorthNeighbor && !chunk.EastNeighbor && !chunk.SouthNeighbor && !chunk.WestNeighbor && chunk.TopNeighbor && chunk.BottomNeighbor)
-                    return DirectionTypeEnum.NTB;
-                if (!chunk.NorthNeighbor && chunk.EastNeighbor && chunk.SouthNeighbor && !chunk.WestNeighbor && !chunk.TopNeighbor && !chunk.BottomNeighbor)
-                    return DirectionTypeEnum.ES;
-                if (!chunk.NorthNeighbor && chunk.EastNeighbor && chunk.SouthNeighbor && chunk.WestNeighbor && !chunk.TopNeighbor && !chunk.BottomNeighbor)
-                    return DirectionTypeEnum.ESW;
-                if (!chunk.NorthNeighbor && chunk.EastNeighbor && chunk.SouthNeighbor && chunk.WestNeighbor && chunk.TopNeighbor && !chunk.BottomNeighbor)
-                    return DirectionTypeEnum.ESWT;
-                if (!chunk.NorthNeighbor && chunk.EastNeighbor && chunk.SouthNeighbor && chunk.WestNeighbor && !chunk.TopNeighbor && chunk.BottomNeighbor)
-                    return DirectionTypeEnum.ESWB;
-                if (!chunk.NorthNeighbor && chunk.EastNeighbor && chunk.SouthNeighbor && chunk.WestNeighbor && chunk.TopNeighbor && chunk.BottomNeighbor)
-                    return DirectionTypeEnum.ESWBT;
-                if (!chunk.NorthNeighbor && chunk.EastNeighbor && !chunk.SouthNeighbor && chunk.WestNeighbor && !chunk.TopNeighbor && !chunk.BottomNeighbor)
-                    return DirectionTypeEnum.EW;
-                if (!chunk.NorthNeighbor && chunk.EastNeighbor && !chunk.SouthNeighbor && chunk.WestNeighbor && chunk.TopNeighbor && !chunk.BottomNeighbor)
-                    return DirectionTypeEnum.EWT;
-                if (!chunk.NorthNeighbor && chunk.EastNeighbor && !chunk.SouthNeighbor && chunk.WestNeighbor && !chunk.TopNeighbor && chunk.BottomNeighbor)
-                    return DirectionTypeEnum.EWB;
-                if (!chunk.NorthNeighbor && chunk.EastNeighbor && !chunk.SouthNeighbor && !chunk.WestNeighbor && chunk.TopNeighbor && !chunk.BottomNeighbor)
-                    return DirectionTypeEnum.ET;
-                if (!chunk.NorthNeighbor && chunk.EastNeighbor && !chunk.SouthNeighbor && !chunk.WestNeighbor && chunk.TopNeighbor && chunk.BottomNeighbor)
-                    return DirectionTypeEnum.ETB;
-                if (!chunk.NorthNeighbor && chunk.EastNeighbor && !chunk.SouthNeighbor && !chunk.WestNeighbor && !chunk.TopNeighbor && chunk.BottomNeighbor)
-                    return DirectionTypeEnum.EB;
-                if (!chunk.NorthNeighbor && chunk.EastNeighbor && chunk.SouthNeighbor && !chunk.WestNeighbor && chunk.TopNeighbor && !chunk.BottomNeighbor)
-                    return DirectionTypeEnum.EST;
-                if (!chunk.NorthNeighbor && chunk.EastNeighbor && chunk.SouthNeighbor && !chunk.WestNeighbor && chunk.TopNeighbor && chunk.BottomNeighbor)
-                    return DirectionTypeEnum.ESTB;
-                if (!chunk.NorthNeighbor && chunk.EastNeighbor && chunk.SouthNeighbor && !chunk.WestNeighbor && !chunk.TopNeighbor && chunk.BottomNeighbor)
-                    return DirectionTypeEnum.ESB;
-                if (!chunk.NorthNeighbor && !chunk.EastNeighbor && chunk.SouthNeighbor && chunk.WestNeighbor && !chunk.TopNeighbor && !chunk.BottomNeighbor)
-                    return DirectionTypeEnum.SW;
-                if (!chunk.NorthNeighbor && !chunk.EastNeighbor && chunk.SouthNeighbor && chunk.WestNeighbor && chunk.TopNeighbor && !chunk.BottomNeighbor)
-                    return DirectionTypeEnum.SWT;
-                if (!chunk.NorthNeighbor && !chunk.EastNeighbor && chunk.SouthNeighbor && chunk.WestNeighbor && !chunk.TopNeighbor && chunk.BottomNeighbor)
-                    return DirectionTypeEnum.SWB;
-                if (!chunk.NorthNeighbor && !chunk.EastNeighbor && chunk.SouthNeighbor && !chunk.WestNeighbor && chunk.TopNeighbor && !chunk.BottomNeighbor)
-                    return DirectionTypeEnum.ST;
-                if (!chunk.NorthNeighbor && !chunk.EastNeighbor && chunk.SouthNeighbor && !chunk.WestNeighbor && chunk.TopNeighbor && chunk.BottomNeighbor)
-                    return DirectionTypeEnum.STB;
-                if (!chunk.NorthNeighbor && !chunk.EastNeighbor && chunk.SouthNeighbor && !chunk.WestNeighbor && !chunk.TopNeighbor && chunk.BottomNeighbor)
-                    return DirectionTypeEnum.SB;
-                if (!chunk.NorthNeighbor && !chunk.EastNeighbor && chunk.SouthNeighbor && chunk.WestNeighbor && chunk.TopNeighbor && chunk.BottomNeighbor)
-                    return DirectionTypeEnum.SWTB;
-                if (!chunk.NorthNeighbor && !chunk.EastNeighbor && !chunk.SouthNeighbor && chunk.WestNeighbor && chunk.TopNeighbor && !chunk.BottomNeighbor)
-                    return DirectionTypeEnum.WT;
-                if (!chunk.NorthNeighbor && !chunk.EastNeighbor && !chunk.SouthNeighbor && chunk.WestNeighbor && chunk.TopNeighbor && chunk.BottomNeighbor)
-                    return DirectionTypeEnum.WTB;
-                if (!chunk.NorthNeighbor && !chunk.EastNeighbor && !chunk.SouthNeighbor && chunk.WestNeighbor && !chunk.TopNeighbor && chunk.BottomNeighbor)
-                    return DirectionTypeEnum.WB;
-                if (!chunk.NorthNeighbor && !chunk.EastNeighbor && !chunk.SouthNeighbor && !chunk.WestNeighbor && chunk.TopNeighbor && chunk.BottomNeighbor)
-                    return DirectionTypeEnum.TB;
-                if (!chunk.NorthNeighbor && !chunk.EastNeighbor && chunk.SouthNeighbor && !chunk.WestNeighbor && !chunk.TopNeighbor && !chunk.BottomNeighbor)
-                    return DirectionTypeEnum.S;
-                if (!chunk.NorthNeighbor && chunk.EastNeighbor && !chunk.SouthNeighbor && !chunk.WestNeighbor && !chunk.TopNeighbor && !chunk.BottomNeighbor)
-                    return DirectionTypeEnum.E;
-                if (!chunk.NorthNeighbor && !chunk.EastNeighbor && chunk.SouthNeighbor && chunk.WestNeighbor && chunk.TopNeighbor && chunk.BottomNeighbor)
-                    return DirectionTypeEnum.SWBT;
-                if (!chunk.NorthNeighbor && !chunk.EastNeighbor && !chunk.SouthNeighbor && chunk.WestNeighbor && !chunk.TopNeighbor && !chunk.BottomNeighbor)
-                    return DirectionTypeEnum.W;
-                if (!chunk.NorthNeighbor && !chunk.EastNeighbor && !chunk.SouthNeighbor && !chunk.WestNeighbor && chunk.TopNeighbor && !chunk.BottomNeighbor)
-                    return DirectionTypeEnum.T;
-                if (!chunk.NorthNeighbor && !chunk.EastNeighbor && !chunk.SouthNeighbor && !chunk.WestNeighbor && !chunk.TopNeighbor && chunk.BottomNeighbor)
-                    return DirectionTypeEnum.B;
-                // Congratulations on the Scroll Olympics.
-                // Your Silver Medal will be sent by mail.
-                // If I ever send it.
+                string result = "";
 
+                if (chunk.NorthNeighbor)               
+                   result += "N";
+                
+                if (chunk.EastNeighbor)               
+                    result += "E";
+                
+                if (chunk.SouthNeighbor)                
+                    result += "S";
+                
+                if (chunk.WestNeighbor)               
+                    result += "W";
+                
+                if (chunk.TopNeighbor)                
+                    result += "T";
+                
+                if (chunk.BottomNeighbor)               
+                    result += "B";
+                
+               return (DirectionTypeEnum)Enum.Parse(typeof(DirectionTypeEnum), result);
 
-                return DirectionTypeEnum.Error;
-                // Well. . . Fuck.
-                // this is a problem.
-                // It should never reach this. . .
-                // (ㆆ _ ㆆ)
             }
             else if (chunk.Direction == DirectionTypeEnum.Error)
             {
@@ -347,7 +224,7 @@ namespace Assets.SRC.ProceduralMapGeneration.Utilities
                 return DirectionTypeEnum.Error;
             }
             else
-                return DirectionTypeEnum.Collapsed;
+                return chunk.Direction;
             // Just like my dreams of getting a paid 6 month vacation twice a year.
             // o(〒﹏〒)o
         }
