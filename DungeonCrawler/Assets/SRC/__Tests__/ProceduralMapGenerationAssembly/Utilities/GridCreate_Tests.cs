@@ -13,6 +13,10 @@ namespace Assets.SRC.ProceduralMapGeneration.Utilities.Tests
     {
         private GridCreate _gridCreate;
         private GridCreate_Mocs _gridCreate_Mocs;
+        private UnityEngine.Vector3[] gridPositions;
+        private List<GameObject> testGrid;
+
+        public Transform GridParent { get; private set; }
 
 
         #region [SetUp]&&[TearDown]
@@ -28,28 +32,50 @@ namespace Assets.SRC.ProceduralMapGeneration.Utilities.Tests
         {
             _gridCreate = null;
             _gridCreate_Mocs = null;
+            testGrid.Clear();
+            gridPositions= null;
         }
         #endregion
 
         #region Validate_SquareGrid2DVertical Test Cases
-        [TestCase(1, 1)]
+        [TestCase(1, 1),Order(1)]
         [TestCase(2, 5)]
         [TestCase(2, 15)]
         [TestCase(14, 0.5f)]
         [TestCase(16, 22.34f)]
         #endregion
         public void Validate_SquareGrid2DVertical(int gridSize, float scale)
-           => _gridCreate.SquareGrid2DVertical(gridSize, scale).Count<Vector3>().Should().Be((gridSize * gridSize));
+        {
+            gridPositions = _gridCreate.SquareGrid2DVertical(gridSize, scale);
+            gridPositions.Count<Vector3>().Should().Be((gridSize * gridSize));
+        }
 
         #region Validate_SquareGrid2DHorizontal Test Cases
-        [TestCase(1, 1)]
+        [TestCase(1, 1),Order(1)]
         [TestCase(2, 5)]
         [TestCase(2, 15)]
         [TestCase(14, 0.5f)]
         [TestCase(16, 22.34f)]
         #endregion
         public void Validate_SquareGrid2DHorizontal(int gridSize, float scale)
-           => _gridCreate.SquareGrid2DHorizontal(gridSize, scale).Count<Vector3>().Should().Be((gridSize * gridSize));
+        {
+            gridPositions = _gridCreate.SquareGrid2DHorizontal(gridSize, scale);
+            gridPositions.Count<Vector3>().Should().Be((gridSize * gridSize));
+        }
+    
+
+        #region Validate_SquareGrid3D Test Cases
+        [TestCase(1, 1),Order(1)]
+        [TestCase(2, 5)]
+        [TestCase(2, 15)]
+        [TestCase(14, 0.5f)]
+        [TestCase(16, 22.34f)]
+        #endregion
+        public void Validate_SquareGrid3D(int gridSize, float scale)
+    {
+        gridPositions = _gridCreate.SquareGrid3D(gridSize, scale);
+        gridPositions.Count<Vector3>().Should().Be((gridSize * gridSize));
+    }
 
         #region Validate_SquareGrid3D Test Cases
         [TestCase(1, 1)]
@@ -58,21 +84,23 @@ namespace Assets.SRC.ProceduralMapGeneration.Utilities.Tests
         [TestCase(14, 0.5f)]
         [TestCase(16, 22.34f)]
         #endregion
-        public void Validate_SquareGrid3D(int gridSize, float scale)
-            => _gridCreate.SquareGrid3D(gridSize, scale).Count<Vector3>().Should().Be((gridSize * gridSize * gridSize));
-
         [Test]
-        public void Validate_FindChunkNeigbors()
+        public void Validate_FindChunkNeigbors(int GridSize, float GridScale)
         {
             Assert.Fail("Not Implemented");
-            //  GridCreate.FindChunkNeigbors(GridScale, GridCreate.PlaceGameObjectsAtGridPositions(GridCreate.SquareGrid2DHorizontal(GridSize, GridScale), GridParent))
+            //GridCreate.FindChunkNeigbors(GridScale, GridCreate.PlaceGameObjectsAtGridPositions(GridCreate.SquareGrid2DHorizontal(GridSize, GridScale), GridParent));
         }
 
-        [Test]
+        [Test, Order(2)]
         public void Validate_PlaceGameObjectsAtGridPositions()
         {
-            Assert.Fail("Not Implemented");
-            //GridCreate.PlaceGameObjectsAtGridPositions(GridCreate.SquareGrid2DHorizontal(GridSize, GridScale), GridParent)
+            testGrid = _gridCreate.PlaceGameObjectsAtGridPositions(gridPositions, GridParent);
+            // Grid size check
+            testGrid.Count.Should().Be(gridPositions.Length);
+            // Position allocation check
+            for (int i = 0; i < testGrid.Count; i++)
+                testGrid[i].transform.position.Should().Be(gridPositions[i]);
+
         }
         #region Validate_AssignDirectionIDAccordingToPresentNeighbors Test Cases
         [TestCase(1, 1)]

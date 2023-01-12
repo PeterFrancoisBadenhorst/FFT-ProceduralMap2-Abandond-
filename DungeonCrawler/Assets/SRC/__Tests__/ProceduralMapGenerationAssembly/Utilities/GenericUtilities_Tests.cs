@@ -27,7 +27,7 @@ namespace Assets.SRC.ProceduralMapGeneration.Utilities.Test
         #endregion
 
         #region Validate_NeighborsPosition Test Cases
-        [TestCase(1, 1)]
+        [TestCase(1, 1), Order(0)]
         [TestCase(2, 5)]
         [TestCase(2, 15)]
         [TestCase(14, 0.5f)]
