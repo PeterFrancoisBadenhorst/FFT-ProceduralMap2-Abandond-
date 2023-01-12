@@ -7,6 +7,8 @@ namespace Assets.SRC.ProceduralMapGeneration.Utilities.Tests
 {
     internal class GridCreate_Mocs
     {
+        public UnityEngine.Vector3[] GridPositions;
+        public List<GameObject> TestGrid;
         public NeighborStruct SetUpNeighborStruct(bool north, bool east, bool south, bool west, bool top, bool bottom)
         {
             NeighborStruct returned = new NeighborStruct();
