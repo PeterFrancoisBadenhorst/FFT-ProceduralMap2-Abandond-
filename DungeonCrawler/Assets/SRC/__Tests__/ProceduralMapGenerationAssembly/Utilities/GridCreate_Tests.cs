@@ -119,7 +119,7 @@ namespace Assets.SRC.ProceduralMapGeneration.Utilities.Tests
                 grid2DV[i].transform.position.Should().Be(positions2DV[i]);
 
         }
-        #region Validate_SquareGrid3D Test Cases
+        #region Validate_FindChunkNeigbors Test Cases
         [Test, Order(2)]
         [TestCase(1, 1)]
         [TestCase(2, 5)]
@@ -158,35 +158,6 @@ namespace Assets.SRC.ProceduralMapGeneration.Utilities.Tests
                 t.neighborStruct.Direction.Should().NotBe(DirectionTypeEnum.Collapsed);
                 t.neighborStruct.Direction.Should().NotBe(DirectionTypeEnum.Blank);
             }
-        }
-
-        #region Validate_AssignDirectionIDAccordingToPresentNeighbors Test Cases
-        [TestCase(1, 1)]
-        [TestCase(2, 5)]
-        [TestCase(2, 15)]
-        [TestCase(14, 0.5f)]
-        [TestCase(16, 22.34f)]
-        #endregion
-        public void Validate_AssignDirectionIDAccordingToPresentNeighbors(int size, float scale)
-        {
-            // Given
-            //List<GameObject> list = _gridCreate.AssignDirectionIDAccordingToPresentNeighbors(_gridCreate_Mocs.CreatGameObjectList(scale, size));
-            //for (int i = 0; i < list.Count; i++)
-            //{
-            //    var t = list[i];
-            //    // Test for ChunkBehavior
-            //    if (!t.GetComponent<ChunkBehavior>()) Assert.Fail("Object does not have a 'ChunkBehavior' @ : " + i);
-            //    // Test For Direction Values being set
-            //    var g = t.GetComponent<ChunkBehavior>();
-            //    if (!g.direction.NothID &&
-            //        !g.direction.EastID &&
-            //        !g.direction.SouthID &&
-            //        !g.direction.WestID &&
-            //        !g.direction.TopID &&
-            //        !g.direction.BottomID)
-            //        Assert.Fail("Direction not being set at @ : " + i);
-            //}
-            Assert.Fail();
         }
 
         #region Validate_FindChunkType Test Cases
