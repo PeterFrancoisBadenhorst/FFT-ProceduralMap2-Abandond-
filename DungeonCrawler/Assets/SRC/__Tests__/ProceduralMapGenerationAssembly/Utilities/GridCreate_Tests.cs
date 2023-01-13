@@ -25,7 +25,7 @@ namespace Assets.SRC.ProceduralMapGeneration.Utilities.Tests
             _gridCreate = new GridCreate();
             _gridCreate_Mocs = new GridCreate_Mocs();
             //_gridCreate_Mocs.TestGrid.Clear();
-           // _gridCreate_Mocs.GridPositions = null;
+            // _gridCreate_Mocs.GridPositions = null;
         }
 
         [TearDown]
@@ -52,7 +52,7 @@ namespace Assets.SRC.ProceduralMapGeneration.Utilities.Tests
         }
 
         #region Validate_SquareGrid2DHorizontal Test Cases
-        [TestCase(1, 1),Order(1)]
+        [TestCase(1, 1), Order(1)]
         [TestCase(1, 1)]
         [TestCase(2, 5)]
         [TestCase(2, 15)]
@@ -64,10 +64,10 @@ namespace Assets.SRC.ProceduralMapGeneration.Utilities.Tests
             _gridCreate_Mocs.GridPositions = _gridCreate.SquareGrid2DHorizontal(gridSize, scale);
             _gridCreate_Mocs.GridPositions.Count<Vector3>().Should().Be((gridSize * gridSize));
         }
-    
+
 
         #region Validate_SquareGrid3D Test Cases
-        [TestCase(1, 1),Order(1)]
+        [Test, Order(1)]
         [TestCase(1, 1)]
         [TestCase(2, 5)]
         [TestCase(2, 15)]
@@ -75,11 +75,47 @@ namespace Assets.SRC.ProceduralMapGeneration.Utilities.Tests
         [TestCase(16, 22.34f)]
         #endregion
         public void Validate_SquareGrid3D(int gridSize, float scale)
-    {
+        {
             _gridCreate_Mocs.GridPositions = _gridCreate.SquareGrid3D(gridSize, scale);
-            _gridCreate_Mocs.GridPositions.Count<Vector3>().Should().Be((gridSize * gridSize));
-    }
+            _gridCreate_Mocs.GridPositions.Count<Vector3>().Should().Be((gridSize * gridSize* gridSize));
+        }
 
+        [Test, Order(2)]
+        [TestCase(1, 1)]
+        [TestCase(2, 5)]
+        [TestCase(2, 15)]
+        [TestCase(14, 0.5f)]
+        [TestCase(16, 22.34f)]
+        public void Validate_PlaceGameObjectsAtGridPositions(int gridSize, float scale)
+        {
+            // 3D Grid
+            var positions3D = _gridCreate.SquareGrid3D(gridSize, scale);
+            List<GameObject> grid3D = _gridCreate.PlaceGameObjectsAtGridPositions(positions3D, GridParent);
+            // Grid size check
+            grid3D.Count.Should().Be(positions3D.Length);
+            // Position allocation check
+            for (int i = 0; i < grid3D.Count; i++)
+                grid3D[i].transform.position.Should().Be(positions3D[i]);
+
+            // 2D H Grid
+            var positions2DH = _gridCreate.SquareGrid3D(gridSize, scale);
+            List<GameObject> grid2DH = _gridCreate.PlaceGameObjectsAtGridPositions(positions2DH, GridParent);
+            // Grid size check
+            grid2DH.Count.Should().Be(positions3D.Length);
+            // Position allocation check
+            for (int i = 0; i < grid2DH.Count; i++)
+                grid2DH[i].transform.position.Should().Be(positions2DH[i]);
+
+            // 2D V Grid
+            var positions2DV = _gridCreate.SquareGrid3D(gridSize, scale);
+            List<GameObject> grid2DV = _gridCreate.PlaceGameObjectsAtGridPositions(positions2DV, GridParent);
+            // Grid size check
+            grid2DV.Count.Should().Be(positions3D.Length);
+            // Position allocation check
+            for (int i = 0; i < grid2DV.Count; i++)
+                grid2DV[i].transform.position.Should().Be(positions2DV[i]);
+
+        }
         #region Validate_SquareGrid3D Test Cases
         [TestCase(1, 1)]
         [TestCase(2, 5)]
@@ -94,17 +130,6 @@ namespace Assets.SRC.ProceduralMapGeneration.Utilities.Tests
             //GridCreate.FindChunkNeigbors(GridScale, GridCreate.PlaceGameObjectsAtGridPositions(GridCreate.SquareGrid2DHorizontal(GridSize, GridScale), GridParent));
         }
 
-        [Test, Order(2)]
-        public void Validate_PlaceGameObjectsAtGridPositions()
-        {
-            _gridCreate_Mocs.TestGrid = _gridCreate.PlaceGameObjectsAtGridPositions(_gridCreate_Mocs.GridPositions, GridParent);
-            // Grid size check
-            _gridCreate_Mocs.TestGrid.Count.Should().Be(_gridCreate_Mocs.GridPositions.Length);
-            // Position allocation check
-            for (int i = 0; i < _gridCreate_Mocs.TestGrid.Count; i++)
-                _gridCreate_Mocs.TestGrid[i].transform.position.Should().Be(_gridCreate_Mocs.GridPositions[i]);
-
-        }
         #region Validate_AssignDirectionIDAccordingToPresentNeighbors Test Cases
         [TestCase(1, 1)]
         [TestCase(2, 5)]
