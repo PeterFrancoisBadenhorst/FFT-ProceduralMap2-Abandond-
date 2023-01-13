@@ -31,7 +31,7 @@ namespace Assets.SRC.ProceduralMapGeneration.Mono.Managers
             List<GameObject> listedObjects = _gridCreate.FindChunkNeigbors(GridScale, objects);
 
             // gridRelations = _gridCreate.AssignDirectionIDAccordingToPresentNeighbors(listedObjects);
-            gridRelations = _gridCreate.AsignChunkTypes(listedObjects);
+            gridRelations = _gridCreate.AssignChunkTypes(listedObjects);
 
             _populateTilePositionsBehavior.SetChildTile(scriptRef, gridRelations);
         }

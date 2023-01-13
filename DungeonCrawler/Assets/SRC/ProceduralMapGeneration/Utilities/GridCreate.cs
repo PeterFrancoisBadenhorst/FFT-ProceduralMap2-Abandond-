@@ -122,7 +122,7 @@ namespace Assets.SRC.ProceduralMapGeneration.Utilities
             return gameObjects;
         }
        
-        public List<GameObject> AsignChunkTypes(List<GameObject> grid)
+        public List<GameObject> AssignChunkTypes(List<GameObject> grid)
         {
             for (int i = 0; i < grid.Count; i++)
             {
