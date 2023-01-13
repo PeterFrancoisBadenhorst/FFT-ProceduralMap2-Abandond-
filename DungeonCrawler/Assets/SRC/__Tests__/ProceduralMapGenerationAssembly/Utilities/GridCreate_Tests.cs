@@ -4,6 +4,7 @@ using FluentAssertions;
 using NUnit.Framework;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -79,7 +80,7 @@ namespace Assets.SRC.ProceduralMapGeneration.Utilities.Tests
         public void Validate_SquareGrid3D(int gridSize, float scale)
         {
             _gridCreate_Mocs.GridPositions = _gridCreate.SquareGrid3D(gridSize, scale);
-            _gridCreate_Mocs.GridPositions.Count<Vector3>().Should().Be((gridSize * gridSize* gridSize));
+            _gridCreate_Mocs.GridPositions.Count<Vector3>().Should().Be((gridSize * gridSize * gridSize));
         }
         #region Validate_PlaceGameObjectsAtGridPositions Test Cases
         [Test, Order(2)]
@@ -124,26 +125,30 @@ namespace Assets.SRC.ProceduralMapGeneration.Utilities.Tests
         [TestCase(1, 1)]
         [TestCase(2, 5)]
         [TestCase(2, 15)]
-        [TestCase(14, 0.5f)]
-        [TestCase(16, 22.34f)]
+        [TestCase(6, 0.5f)]
+        [TestCase(10, 22.34f)]
         #endregion
         public void Validate_FindChunkNeigbors(int gridSize, float scale)
         {
             var positions3D = _gridCreate.SquareGrid3D(gridSize, scale);
-            var grid3D=_gridCreate.PlaceGameObjectsAtGridPositions(positions3D, GridParent);
+            var grid3D = _gridCreate.PlaceGameObjectsAtGridPositions(positions3D, GridParent);
             var positions2DH = _gridCreate.SquareGrid3D(gridSize, scale);
-            var grid2DH= _gridCreate.PlaceGameObjectsAtGridPositions(positions2DH, GridParent);
+            var grid2DH = _gridCreate.PlaceGameObjectsAtGridPositions(positions2DH, GridParent);
             var positions2DV = _gridCreate.SquareGrid3D(gridSize, scale);
-            var grid2DV=_gridCreate.PlaceGameObjectsAtGridPositions(positions2DV, GridParent);
+            var grid2DV = _gridCreate.PlaceGameObjectsAtGridPositions(positions2DV, GridParent);
 
             List<GameObject> test3D = _gridCreate.FindChunkNeigbors(scale, grid3D);
             List<GameObject> test2DH = _gridCreate.FindChunkNeigbors(scale, grid2DH);
             List<GameObject> test2DV = _gridCreate.FindChunkNeigbors(scale, grid2DV);
 
+            var testList = new List<List<GameObject>> { test3D, test2DH, test2DV };
+
+
+
             for (int i = 0; i < test3D.Count; i++)
             {
                 var t = test3D[i].GetComponent<ChunkBehavior>();
-                t.neighborStruct.Direction.Should().NotBe(DirectionTypeEnum.Collapsed);         
+                t.neighborStruct.Direction.Should().NotBe(DirectionTypeEnum.Collapsed);
                 t.neighborStruct.Direction.Should().NotBe(DirectionTypeEnum.Blank);
             }
             for (int i = 0; i < test2DH.Count; i++)
