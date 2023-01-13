@@ -27,6 +27,7 @@ namespace Assets.SRC.ProceduralMapGeneration.Utilities
             }
             return createdTransforms.ToArray();
         }
+
         public Vector3[] SquareGrid2DHorizontal(int gridSize, float scale)
         {
             var createdTransforms = new List<Vector3>();
@@ -45,6 +46,7 @@ namespace Assets.SRC.ProceduralMapGeneration.Utilities
             }
             return createdTransforms.ToArray();
         }
+
         public Vector3[] SquareGrid3D(int gridSize, float scale)
         {
             var createdTransforms = new List<Vector3>();
@@ -109,6 +111,7 @@ namespace Assets.SRC.ProceduralMapGeneration.Utilities
             }
             return grid;
         }
+
         public List<GameObject> PlaceGameObjectsAtGridPositions(Vector3[] grid, Transform gridParent)//
         {
             List<GameObject> gameObjects = new List<GameObject>();
