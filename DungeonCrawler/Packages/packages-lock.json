@@ -1,7 +1,7 @@
 {
   "dependencies": {
     "com.boundfoxstudios.fluentassertions": {
-      "version": "file:C:/.git/Unity.DungeonCrawler/CustomPackages/fluentassertions-unity/FluentAssertions/Packages/com.boundfoxstudios.fluentassertions",
+      "version": "file:C:/git/Unity.DungeonCrawler/CustomPackages/fluentassertions-unity/FluentAssertions/Packages/com.boundfoxstudios.fluentassertions",
       "depth": 0,
       "source": "local",
       "dependencies": {}
@@ -170,7 +170,7 @@
       "url": "https://packages.unity.com"
     },
     "minimal-mistakes": {
-      "version": "file:C:/.git/Unity.DungeonCrawler/CustomPackages/fluentassertions-unity/fluentassertions-master/docs",
+      "version": "file:C:/git/Unity.DungeonCrawler/CustomPackages/fluentassertions-unity/fluentassertions-master/docs",
       "depth": 0,
       "source": "local",
       "dependencies": {}
