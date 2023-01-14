@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "ICSwT/ZqPExS7p7uhHyE7FYHllIF1WYuSQ0WIHAnNNWnMN+I5ZypeMTPrEBsfHIfwuDqemp/GVNvXiJaPupZqg==",
+  "success": true,
+  "projectFilePath": "C:\\.git\\Unity.DungeonCrawler\\Tools\\NESWTB_ComboMaker\\NESWTB_ComboMaker\\NESWTB_ComboMaker.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\peter\\.nuget\\packages\\newtonsoft.json\\12.0.1\\newtonsoft.json.12.0.1.nupkg.sha512",
+    "C:\\Users\\peter\\.nuget\\packages\\newtonsoft.json.bson\\1.0.2\\newtonsoft.json.bson.1.0.2.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -11,7 +11,7 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.
 {
     internal class MapBuilder
     {
-        private MapBuilderHelperStruct dataKeeper=new MapBuilderHelperStruct();
+        private static MapBuilderHelperStruct dataKeeper=new MapBuilderHelperStruct();
 
 
 

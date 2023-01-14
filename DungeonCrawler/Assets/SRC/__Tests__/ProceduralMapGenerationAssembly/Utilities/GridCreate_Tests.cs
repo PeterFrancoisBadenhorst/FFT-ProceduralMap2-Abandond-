@@ -143,8 +143,6 @@ namespace Assets.SRC.ProceduralMapGeneration.Utilities.Tests
 
             var testList = new List<List<GameObject>> { test3D, test2DH, test2DV };
 
-
-
             for (int i = 0; i < test3D.Count; i++)
             {
                 var t = test3D[i].GetComponent<ChunkBehavior>();
