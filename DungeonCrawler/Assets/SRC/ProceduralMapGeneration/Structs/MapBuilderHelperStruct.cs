@@ -12,6 +12,6 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.
     {
         public List<GameObject> grid;
         public GameObject startObject;
-        public int previousTilePos;
+        public GameObject previousTilePos;
     }
 }

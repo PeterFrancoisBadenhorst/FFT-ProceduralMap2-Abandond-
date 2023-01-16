@@ -1,10 +1,12 @@
 ﻿using Assets.SRC.ProceduralMapGeneration.Enums;
 using Assets.SRC.ProceduralMapGeneration.Mono.Behaviors;
 using Assets.SRC.ProceduralMapGeneration.Structs;
+using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Structs;
 using System;
 using System.Collections.Generic;
 using System.Runtime.InteropServices.WindowsRuntime;
 using UnityEngine;
+using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Mono.Behaviors;
 
 namespace Assets.SRC.ProceduralMapGeneration.Utilities
 {
@@ -122,9 +124,13 @@ namespace Assets.SRC.ProceduralMapGeneration.Utilities
                 g.transform.parent = gridParent;
                 gameObjects.Add(g);
             }
+            for (int i = 0; i < gameObjects.Count; i++)
+            {
+                gameObjects[i].name = "Created";
+            }
             return gameObjects;
         }
-       
+
         public List<GameObject> AssignChunkTypes(List<GameObject> grid)
         {
             for (int i = 0; i < grid.Count; i++)
@@ -134,31 +140,91 @@ namespace Assets.SRC.ProceduralMapGeneration.Utilities
             return grid;
         }
 
+        public List<GameObject> CreateMapPatern(List<GameObject> grid)
+        {
+            var random = new System.Random();
+            List<GameObject> map = new List<GameObject>();
+            MapBuilderHelperStruct dataKeeper = new MapBuilderHelperStruct();
+            dataKeeper.startObject = grid[random.Next(grid.Count)];
+
+            if (!dataKeeper.previousTilePos)
+                dataKeeper.previousTilePos = dataKeeper.startObject;
+            for (int i = 0; i < (int)(grid.Count * 0.3f); i++)
+            {
+                if (!map.Contains(grid[i]))
+                {
+                    var t = dataKeeper.previousTilePos.GetComponent<ChunkBehavior>();
+                    List<GameObject> list = new List<GameObject>();
+
+                    map.Add(dataKeeper.previousTilePos);
+                    if (t.neighborStruct.NorthNeighbor && !map.Contains(t.neighborStruct.NorthNeighbor))
+                        list.Add(t.neighborStruct.NorthNeighbor);
+                    if (t.neighborStruct.EastNeighbor && !map.Contains(t.neighborStruct.EastNeighbor))
+                        list.Add(t.neighborStruct.EastNeighbor);
+                    if (t.neighborStruct.SouthNeighbor && !map.Contains(t.neighborStruct.SouthNeighbor))
+                        list.Add(t.neighborStruct.SouthNeighbor);
+                    if (t.neighborStruct.WestNeighbor && !map.Contains(t.neighborStruct.WestNeighbor))
+                        list.Add(t.neighborStruct.WestNeighbor);
+                    if (t.neighborStruct.TopNeighbor && !map.Contains(t.neighborStruct.TopNeighbor))
+                        list.Add(t.neighborStruct.TopNeighbor);
+                    if (t.neighborStruct.BottomNeighbor && !map.Contains(t.neighborStruct.BottomNeighbor))
+                        list.Add(t.neighborStruct.BottomNeighbor);
+                    var f = random.Next(list.Count);
+                    dataKeeper.previousTilePos = list[f];
+                    list.RemoveAt(f);
+                    for (int r = 0; r < list.Count; r++)
+                    {
+                        UtilitiesBehaviour.PurgeObject(list[r]);
+                    }
+                }
+            }
+            for (int i = 0; i < map.Count; i++)
+            {
+                map[i].name = "set tile";
+            }
+
+            return map;
+        }
+
+        public List<GameObject> CleanMap(int scale, List<GameObject> grid)
+        {
+            //for (int i = 0; i < grid.Count; i++)
+            //{
+            //    var h=grid[i];
+            //    if (grid[i].transform.childCount==0)
+            //    {
+            //        UtilitiesBehaviour.PurgeObject(h);
+            //    }
+            //}                       
+            //return FindChunkNeigbors(scale, grid);
+            return grid;
+        }
+
         public DirectionTypeEnum FindChunkType(NeighborStruct chunk)
         {
             if (chunk.Direction != DirectionTypeEnum.Collapsed || chunk.Direction == DirectionTypeEnum.Blank)
             {
                 string result = "";
 
-                if (chunk.NorthNeighbor)               
-                   result += "N";
-                
-                if (chunk.EastNeighbor)               
+                if (chunk.NorthNeighbor)
+                    result += "N";
+
+                if (chunk.EastNeighbor)
                     result += "E";
-                
-                if (chunk.SouthNeighbor)                
+
+                if (chunk.SouthNeighbor)
                     result += "S";
-                
-                if (chunk.WestNeighbor)               
+
+                if (chunk.WestNeighbor)
                     result += "W";
-                
-                if (chunk.TopNeighbor)                
+
+                if (chunk.TopNeighbor)
                     result += "T";
-                
-                if (chunk.BottomNeighbor)               
+
+                if (chunk.BottomNeighbor)
                     result += "B";
-                
-               return (DirectionTypeEnum)Enum.Parse(typeof(DirectionTypeEnum), result);
+
+                return (DirectionTypeEnum)Enum.Parse(typeof(DirectionTypeEnum), result);
 
             }
             else if (chunk.Direction == DirectionTypeEnum.Error)

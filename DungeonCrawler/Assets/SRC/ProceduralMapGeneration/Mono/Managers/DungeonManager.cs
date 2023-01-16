@@ -26,12 +26,14 @@ namespace Assets.SRC.ProceduralMapGeneration.Mono.Managers
         private void SetUpGrid()
         {
             gridRelations.Clear();
-            Vector3[] grid = _gridCreate.SquareGrid3D(GridSize, GridScale);//
-            List<GameObject> objects = _gridCreate.PlaceGameObjectsAtGridPositions(grid, GridParent);//
-            List<GameObject> listedObjects = _gridCreate.FindChunkNeigbors(GridScale, objects);
-
+            Vector3[] grid = _gridCreate.SquareGrid2DHorizontal(GridSize, GridScale);//
+             gridRelations = _gridCreate.PlaceGameObjectsAtGridPositions(grid, GridParent);//
+            gridRelations = _gridCreate.FindChunkNeigbors(GridScale, gridRelations);
+             gridRelations = _gridCreate.CreateMapPatern(gridRelations);
+            gridRelations = _gridCreate.CleanMap(GridSize, gridRelations);
+            //gridRelations = _gridCreate.FindChunkNeigbors(GridScale, gridRelations);
             // gridRelations = _gridCreate.AssignDirectionIDAccordingToPresentNeighbors(listedObjects);
-            gridRelations = _gridCreate.AssignChunkTypes(listedObjects);
+            gridRelations = _gridCreate.AssignChunkTypes(gridRelations);
 
             _populateTilePositionsBehavior.SetChildTile(scriptRef, gridRelations);
         }

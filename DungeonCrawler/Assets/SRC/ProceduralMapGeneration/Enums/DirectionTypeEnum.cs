@@ -27,7 +27,7 @@
         //  north, east, south, west, top, bottom
         NESWB,//
         //  north, east, south, west, top, bottom
-        NESWBT,//
+        NESWTB,//
         //  north, east, south, west, top, bottom
         NEW,//
         //  north, east, south, west, top, bottom
@@ -77,7 +77,7 @@
         //  north, east, south, west, top, bottom
         ESWB,//
         //  north, east, south, west, top, bottom
-        ESWBT,//
+        ESWTB,//
         //  north, east, south, west, top, bottom
         EW,//
         //  north, east, south, west, top, bottom
@@ -122,9 +122,7 @@
         S,//
         //  north, east, south, west, top, bottom
         E,//
-        //  north, east, south, west, top, bottom
-        SWBT,//
-        //  north, east, south, west, top, bottom
+        //  north, east, south, west, top, botto
         W,//
         //  north, east, south, west, top, bottom
         T,//
@@ -135,6 +133,7 @@
         Blank,
         Collapsed,
         Error,
+        Start,
     }
 }
 

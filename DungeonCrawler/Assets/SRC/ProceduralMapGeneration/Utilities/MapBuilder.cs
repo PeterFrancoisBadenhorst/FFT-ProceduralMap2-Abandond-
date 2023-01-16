@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Structs;
+using Assets.SRC.ProceduralMapGeneration.Mono.Behaviors;
 using NUnit.Framework;
 using UnityEngine;
 
@@ -22,9 +23,11 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.
             dataKeeper.startObject = grid[random.Next(grid.Count)];
             return grid;
         }
-        //public List<GameObject> CollapseStartTile()
-        //{
-
-        //}
+        
+        public List<GameObject> CollapseTile(List<GameObject> grid, GameObject tile)
+        {
+            var t = tile.GetComponent<ChunkBehavior>();
+            return grid;
+        }
     }
 }

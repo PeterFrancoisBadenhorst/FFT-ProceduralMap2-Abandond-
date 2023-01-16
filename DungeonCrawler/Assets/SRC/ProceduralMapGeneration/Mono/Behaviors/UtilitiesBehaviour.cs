@@ -10,9 +10,13 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.
 {
     internal class UtilitiesBehaviour : MonoBehaviour
     {
-        public static GameObject InstantiateObject(GameObject gObject,Vector3 position,Quaternion rotation)
+        public static GameObject InstantiateObject(GameObject gObject, Vector3 position, Quaternion rotation)
         {
-           return Instantiate(gObject, Vector3.zero, rotation);
+            return Instantiate(gObject, Vector3.zero, rotation);
+        }
+        public static void PurgeObject(GameObject obj)
+        {
+            Destroy(obj);
         }
     }
 }
