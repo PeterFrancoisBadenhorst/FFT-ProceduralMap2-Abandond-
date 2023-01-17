@@ -27,11 +27,13 @@ namespace Assets.SRC.ProceduralMapGeneration.Mono.Managers
         {
             gridRelations.Clear();
             Vector3[] grid = _gridCreate.SquareGrid2DHorizontal(GridSize, GridScale);//
+            //Vector3[] grid = _gridCreate.CreatePath(gridPre);
+            /// need to create map from this 
              gridRelations = _gridCreate.PlaceGameObjectsAtGridPositions(grid, GridParent);//
             gridRelations = _gridCreate.FindChunkNeigbors(GridScale, gridRelations);
              gridRelations = _gridCreate.CreateMapPatern(gridRelations);
             gridRelations = _gridCreate.CleanMap(GridSize, gridRelations);
-            //gridRelations = _gridCreate.FindChunkNeigbors(GridScale, gridRelations);
+            gridRelations = _gridCreate.FindChunkNeigbors(GridScale, gridRelations);
             // gridRelations = _gridCreate.AssignDirectionIDAccordingToPresentNeighbors(listedObjects);
             gridRelations = _gridCreate.AssignChunkTypes(gridRelations);
 

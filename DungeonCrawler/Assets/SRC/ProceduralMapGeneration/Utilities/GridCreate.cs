@@ -72,61 +72,69 @@ namespace Assets.SRC.ProceduralMapGeneration.Utilities
 
         public List<GameObject> FindChunkNeigbors(float scale, List<GameObject> grid)
         {
+            Dictionary<Vector3, GameObject> positions = new Dictionary<Vector3, GameObject>();
             GenericUtilities _genericUtilities = new GenericUtilities();
+
+            // Fill the dictionary with the positions and corresponding objects from the grid list
             for (int i = 0; i < grid.Count; i++)
             {
-                var comparedValues = _genericUtilities.NeighborsPosition(scale, grid[i].transform.position);
-                ChunkBehavior comparedChunk;
-                if (grid[i].GetComponent<ChunkBehavior>())
-                    comparedChunk = grid[i].GetComponent<ChunkBehavior>();
-                else
-                    comparedChunk = grid[i].AddComponent<ChunkBehavior>();
-                comparedChunk.neighborStruct.OriginObject = grid[i];
-                for (int o = 0; o < grid.Count; o++)
+                positions.Add(grid[i].transform.position, grid[i]);
+            }
+
+            for (int i = 0; i < grid.Count; i++)
+            {
+                if (grid[i].activeSelf)
                 {
-                    GameObject gameObject = grid[o];
-                    if (!comparedChunk.neighborStruct.NorthNeighbor &&
-                       gameObject.transform.position == comparedValues[0])
-                        comparedChunk.neighborStruct.NorthNeighbor = grid[o].gameObject;
 
-                    if (!comparedChunk.neighborStruct.EastNeighbor &&
-                        gameObject.transform.position == comparedValues[1])
-                        comparedChunk.neighborStruct.EastNeighbor = grid[o].gameObject;
+                    var comparedValues = _genericUtilities.NeighborsPosition(scale, grid[i].transform.position);
+                    ChunkBehavior comparedChunk;
+                    if (grid[i].GetComponent<ChunkBehavior>())
+                        comparedChunk = grid[i].GetComponent<ChunkBehavior>();
+                    else
+                        comparedChunk = grid[i].AddComponent<ChunkBehavior>();
+                    comparedChunk.neighborStruct.OriginObject = grid[i];
 
-                    if (!comparedChunk.neighborStruct.SouthNeighbor &&
-                        gameObject.transform.position == comparedValues[2])
-                        comparedChunk.neighborStruct.SouthNeighbor = grid[o].gameObject;
+                    // Look up the neighbors in the dictionary instead of iterating through the entire list
+                    if (positions.TryGetValue(comparedValues[0], out GameObject northNeighbor))
+                    {
+                        comparedChunk.neighborStruct.NorthNeighbor = northNeighbor;
+                    }
+                    if (positions.TryGetValue(comparedValues[1], out GameObject eastNeighbor))
+                    {
+                        comparedChunk.neighborStruct.EastNeighbor = eastNeighbor;
+                    }
+                    if (positions.TryGetValue(comparedValues[2], out GameObject southNeighbor))
+                    {
+                        comparedChunk.neighborStruct.SouthNeighbor = southNeighbor;
+                    }
+                    if (positions.TryGetValue(comparedValues[3], out GameObject westNeighbor))
+                    {
+                        comparedChunk.neighborStruct.WestNeighbor = westNeighbor;
+                    }
+                    if (positions.TryGetValue(comparedValues[4], out GameObject topNeighbor))
+                    {
+                        comparedChunk.neighborStruct.TopNeighbor = topNeighbor;
+                    }
+                    if (positions.TryGetValue(comparedValues[5], out GameObject bottomNeighbor))
+                    {
+                        comparedChunk.neighborStruct.BottomNeighbor = bottomNeighbor;
+                    }
 
-                    if (!comparedChunk.neighborStruct.WestNeighbor &&
-                        gameObject.transform.position == comparedValues[3])
-                        comparedChunk.neighborStruct.WestNeighbor = grid[o].gameObject;
-
-                    if (!comparedChunk.neighborStruct.TopNeighbor &&
-                       gameObject.transform.position == comparedValues[4])
-                        comparedChunk.neighborStruct.TopNeighbor = grid[o].gameObject;
-
-                    if (!comparedChunk.neighborStruct.BottomNeighbor &&
-                       gameObject.transform.position == comparedValues[5])
-                        comparedChunk.neighborStruct.BottomNeighbor = grid[o].gameObject;
+                    grid[i].GetComponent<ChunkBehavior>().neighborStruct = comparedChunk.neighborStruct;
                 }
-                grid[i].GetComponent<ChunkBehavior>().neighborStruct = comparedChunk.neighborStruct;
             }
             return grid;
         }
 
         public List<GameObject> PlaceGameObjectsAtGridPositions(Vector3[] grid, Transform gridParent)//
         {
-            List<GameObject> gameObjects = new List<GameObject>();
+            List<GameObject> gameObjects = new List<GameObject>(grid.Length);
             for (int i = 0; i < grid.Length; i++)
             {
-                var g = new GameObject();
+                var g = new GameObject("Created");
                 g.transform.position = grid[i];
                 g.transform.parent = gridParent;
                 gameObjects.Add(g);
-            }
-            for (int i = 0; i < gameObjects.Count; i++)
-            {
-                gameObjects[i].name = "Created";
             }
             return gameObjects;
         }
@@ -146,7 +154,6 @@ namespace Assets.SRC.ProceduralMapGeneration.Utilities
             List<GameObject> map = new List<GameObject>();
             MapBuilderHelperStruct dataKeeper = new MapBuilderHelperStruct();
             dataKeeper.startObject = grid[random.Next(grid.Count)];
-
             if (!dataKeeper.previousTilePos)
                 dataKeeper.previousTilePos = dataKeeper.startObject;
             for (int i = 0; i < (int)(grid.Count * 0.3f); i++)
@@ -174,7 +181,7 @@ namespace Assets.SRC.ProceduralMapGeneration.Utilities
                     list.RemoveAt(f);
                     for (int r = 0; r < list.Count; r++)
                     {
-                        UtilitiesBehaviour.PurgeObject(list[r]);
+                        list[r].SetActive(false);
                     }
                 }
             }
@@ -182,21 +189,20 @@ namespace Assets.SRC.ProceduralMapGeneration.Utilities
             {
                 map[i].name = "set tile";
             }
-
             return map;
         }
 
         public List<GameObject> CleanMap(int scale, List<GameObject> grid)
         {
-            //for (int i = 0; i < grid.Count; i++)
-            //{
-            //    var h=grid[i];
-            //    if (grid[i].transform.childCount==0)
-            //    {
-            //        UtilitiesBehaviour.PurgeObject(h);
-            //    }
-            //}                       
-            //return FindChunkNeigbors(scale, grid);
+            for (int i = 0; i < grid.Count; i++)
+            {
+                if (grid[i].transform.name == "Created")
+                {
+                    grid[i].SetActive(false);
+                }
+            }
+
+            return FindChunkNeigbors(scale, grid);
             return grid;
         }
 
