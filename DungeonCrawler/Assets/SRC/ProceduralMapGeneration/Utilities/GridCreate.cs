@@ -194,7 +194,7 @@ namespace Assets.SRC.ProceduralMapGeneration.Utilities
 
         public List<Vector3> CreatePath(List<Vector3> grid)
         {
-
+            return grid;
         }
 
         public List<GameObject> CleanMap(int scale, List<GameObject> grid)
