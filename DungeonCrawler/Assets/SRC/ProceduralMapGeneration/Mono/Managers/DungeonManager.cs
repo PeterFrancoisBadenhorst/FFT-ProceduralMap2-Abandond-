@@ -27,7 +27,7 @@ namespace Assets.SRC.ProceduralMapGeneration.Mono.Managers
         {
             gridRelations.Clear();
             Vector3[] grid = _gridCreate.SquareGrid2DHorizontal(GridSize, GridScale);//
-            //Vector3[] grid = _gridCreate.CreatePath(gridPre);
+            Vector3[] grid = _gridCreate.CreatePath(gridPre);
             /// need to create map from this 
              gridRelations = _gridCreate.PlaceGameObjectsAtGridPositions(grid, GridParent);//
             gridRelations = _gridCreate.FindChunkNeigbors(GridScale, gridRelations);
