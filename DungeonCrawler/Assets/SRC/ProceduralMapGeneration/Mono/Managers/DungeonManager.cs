@@ -4,6 +4,7 @@ using Assets.SRC.ProceduralMapGeneration.Utilities;
 using Assets.SRC.ProceduralMapGeneration.ScriptableObjects;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 namespace Assets.SRC.ProceduralMapGeneration.Mono.Managers
 {
@@ -13,6 +14,8 @@ namespace Assets.SRC.ProceduralMapGeneration.Mono.Managers
         public Transform GridParent;
         public int GridSize;
         public float GridScale;
+        [Range(0,100)]
+        public float Threshold;
         public DirectionalTilesScriptableObject scriptRef;
 
         private List<GameObject> gridRelations = new List<GameObject>();
@@ -27,12 +30,12 @@ namespace Assets.SRC.ProceduralMapGeneration.Mono.Managers
         {
             gridRelations.Clear();
             Vector3[] grid = _gridCreate.SquareGrid2DHorizontal(GridSize, GridScale);//
-           // Vector3[] grid = _gridCreate.CreatePath(gridPre);
+            Vector3[] mapGrid = _gridCreate.CreatePath(grid, GridScale,GridSize, Threshold);
             /// need to create map from this 
-             gridRelations = _gridCreate.PlaceGameObjectsAtGridPositions(grid, GridParent);//
+             gridRelations = _gridCreate.PlaceGameObjectsAtGridPositions(mapGrid, GridParent);//
             gridRelations = _gridCreate.FindChunkNeigbors(GridScale, gridRelations);
-             gridRelations = _gridCreate.CreateMapPatern(gridRelations);
-            gridRelations = _gridCreate.CleanMap(GridSize, gridRelations);
+             //gridRelations = _gridCreate.CreateMapPatern(gridRelations);
+           // gridRelations = _gridCreate.CleanMap(GridSize, gridRelations);
             gridRelations = _gridCreate.FindChunkNeigbors(GridScale, gridRelations);
             // gridRelations = _gridCreate.AssignDirectionIDAccordingToPresentNeighbors(listedObjects);
             gridRelations = _gridCreate.AssignChunkTypes(gridRelations);

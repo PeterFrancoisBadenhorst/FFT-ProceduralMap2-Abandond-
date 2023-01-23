@@ -4,10 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
+using UnityEngine.UIElements;
 
-namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Noise
+namespace Assets.SRC.ProceduralMapGeneration.Noise
 {
-    internal class PerlinNoiseGenerator
+    public class PerlinNoiseGenerator
     {
         public Texture2D GeneratePerlinNoise2DTexture(int size, float scale)
         {
@@ -43,8 +44,8 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.
         }
         private Color GeneratePerlinNoise2D(int x, int y, int size)
         {
-            float xpc = (float)x / size;
-            float ypc = (float)y / size;
+            float xpc = (float)x / size * size;
+            float ypc = (float)y / size * size;
             float sample = Mathf.PerlinNoise(xpc, ypc);
             return new Color(sample, sample, sample);
         }

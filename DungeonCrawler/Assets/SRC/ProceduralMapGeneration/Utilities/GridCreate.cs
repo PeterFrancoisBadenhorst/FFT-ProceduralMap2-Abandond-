@@ -7,6 +7,8 @@ using System.Collections.Generic;
 using System.Runtime.InteropServices.WindowsRuntime;
 using UnityEngine;
 using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Mono.Behaviors;
+using Assets.SRC.ProceduralMapGeneration.Noise;
+using System.Linq;
 
 namespace Assets.SRC.ProceduralMapGeneration.Utilities
 {
@@ -192,9 +194,23 @@ namespace Assets.SRC.ProceduralMapGeneration.Utilities
             return map;
         }
 
-        public List<Vector3> CreatePath(List<Vector3> grid)
+        public Vector3[] CreatePath(Vector3[] grid, float scale, int size, float threshold)
         {
-            return grid;
+            var _perlinNoiseGenerator = new PerlinNoiseGenerator();
+            var nm = _perlinNoiseGenerator.GeneratePerlinNoise2DTexture(size, scale);
+            List<Vector3> path = new List<Vector3>();
+            for (int i = 0; i < grid.Count(); i++)
+            {
+                Color t = nm.GetPixel((int)(grid[i].x / scale), (int)(grid[i].x / scale));
+                float g = (t.r + t.g + t.b) / 3;
+                if (g > 0.3f)
+                {
+                    path.Add(grid[i]);
+               }
+            }
+
+
+            return path.ToArray();
         }
 
         public List<GameObject> CleanMap(int scale, List<GameObject> grid)
