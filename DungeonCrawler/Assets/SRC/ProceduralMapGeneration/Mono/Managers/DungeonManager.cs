@@ -30,7 +30,7 @@ namespace Assets.SRC.ProceduralMapGeneration.Mono.Managers
         {
             gridRelations.Clear();
             Vector3[] grid = _gridCreate.SquareGrid2DHorizontal(GridSize, GridScale);//
-            Vector3[] mapGrid = _gridCreate.CreatePath(grid, GridScale,GridSize, Threshold);
+            Vector3[] mapGrid = _gridCreate.CreatePath(grid, GridScale,GridSize, Threshold);// this needs editing
             /// need to create map from this 
              gridRelations = _gridCreate.PlaceGameObjectsAtGridPositions(mapGrid, GridParent);//
             gridRelations = _gridCreate.FindChunkNeigbors(GridScale, gridRelations);

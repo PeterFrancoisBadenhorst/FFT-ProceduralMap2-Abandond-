@@ -196,6 +196,12 @@ namespace Assets.SRC.ProceduralMapGeneration.Utilities
 
         public Vector3[] CreatePath(Vector3[] grid, float scale, int size, float threshold)
         {
+            /// need to re factor this
+            /// this needs to remove random positions
+            /// then iterate through the positions to ensure that each positions is a valid position
+            /// then calculate if there are any islands and remove them
+            /// then compare to a set size that is we set it to 50% that we need 75% of that 50% in the main island
+            /// we can also increase the map size after this section
             var _perlinNoiseGenerator = new PerlinNoiseGenerator();
             var nm = _perlinNoiseGenerator.GeneratePerlinNoise2DTexture(size, scale);
             List<Vector3> path = new List<Vector3>();
