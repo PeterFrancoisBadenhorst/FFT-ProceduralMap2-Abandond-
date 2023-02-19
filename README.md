@@ -1,9 +1,12 @@
+<span style="color:red">** To Do **</span>
 # Introduction 
 This project is the main housing for most Unity Project from PFB.
-there are or will be a variety of mechanics within this project, all within thier respective assemblies. 
+There are or will be a variety of mechanics within this project, all within thier respective assemblies. 
 
 # Getting Started
 Please follow these pages to get up and running
+
+// these need to be fixed
 - [Instalation](Docs/Instalation.MD)
 - [Tools Instalation And Requirements](Docs/ToolsInstalationAndRequirements.md)
 - [Asset Creation Workflow](Docs/AssetCreationWorkflow.md)
@@ -14,7 +17,7 @@ Please follow these pages to get up and running
 TODO: Describe and show how to build your code and run the tests. 
 
 # Contribute
-TODO: Explain how other users and developers can contribute to make your code better. 
+[Project Layout](Docs/ProjectLayout.MD)
 
 If you want to learn more about creating good readme files then refer the following [guidelines](https://docs.microsoft.com/en-us/azure/devops/repos/git/create-a-readme?view=azure-devops). You can also seek inspiration from the below readme files:
 - [ASP.NET Core](https://github.com/aspnet/Home)
