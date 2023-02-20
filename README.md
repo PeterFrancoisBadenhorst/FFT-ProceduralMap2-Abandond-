@@ -6,12 +6,14 @@ There are or will be a variety of mechanics within this project, all within thie
 # Getting Started
 Please follow these pages to get up and running
 
-// these need to be fixed
-- [Instalation](Docs/Instalation.MD)
-- [Tools Instalation And Requirements](Docs/ToolsInstalationAndRequirements.md)
-- [Asset Creation Workflow](Docs/AssetCreationWorkflow.md)
-- [Mechanic Creation](Docs/MechanicCreation.md)
-- [Source](Source/Source_ReadMe.md)
+- [Asset Creation Workflow](Docs/General/AssetCreationWorkflow.md)
+- [Coding And Asset Standards](Docs/General/CodingAndAssetStandards.md)
+- [Instalation](Docs/General/Instalation.MD)
+- [Mechanic Creation](Docs/General/MechanicCreation.md)
+- [Project Layout](Docs/General/ProjectLayout.MD)
+- [Tools Instalation And Requirements](Docs/General/ToolsInstalationAndRequirements.md)
+
+
 
 # Build and Test
 TODO: Describe and show how to build your code and run the tests. 
