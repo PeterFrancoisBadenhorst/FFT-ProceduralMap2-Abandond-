@@ -7,11 +7,11 @@ There are or will be a variety of mechanics within this project, all within thie
 Please follow these pages to get up and running
 
 - [Asset Creation Workflow](Docs/General/AssetCreationWorkflow.md)
-- [Coding And Asset Standards](Docs/General/CodingAndAssetStandards.md)
-- [Instalation](Docs/General/Instalation.MD)
-- [Mechanic Creation](Docs/General/MechanicCreation.md)
-- [Project Layout](Docs/General/ProjectLayout.MD)
-- [Tools Instalation And Requirements](Docs/General/ToolsInstalationAndRequirements.md)
+- [Coding And Asset Standards](/Docs/General/CodingAndAssetStandards.md)
+- [Instalation](/Docs/General/Instalation.MD)
+- [Mechanic Creation](/Docs/General/MechanicCreation.md)
+- [Project Layout](/Docs/General/ProjectLayout.MD)
+- [Tools Instalation And Requirements](/Docs/General/ToolsInstalationAndRequirements.md)
 
 
 
