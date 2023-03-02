@@ -24,8 +24,7 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.
         }
         public static void PurgeObject(GameObject obj)
         {
-            //DestroyImmediate(obj);
-            DestroyObject(obj);
+            DestroyImmediate(obj);
         }
     }
 }

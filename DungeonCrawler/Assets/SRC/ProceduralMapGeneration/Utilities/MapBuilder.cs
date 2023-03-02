@@ -16,7 +16,7 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.
 {
     internal class MapBuilder
     {
-        private static MapBuilderHelperStruct dataKeeper=new MapBuilderHelperStruct();
+        private static MapBuilderStruct dataKeeper = new MapBuilderStruct();
 
 
 
@@ -27,7 +27,7 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.
             dataKeeper.startObject = grid[random.Next(grid.Count)];
             return grid;
         }
-        
+
         public List<GameObject> CollapseTile(List<GameObject> grid, GameObject tile)
         {
             var t = tile.GetComponent<ChunkBehavior>();

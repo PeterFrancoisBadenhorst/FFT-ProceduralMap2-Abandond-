@@ -14,7 +14,7 @@ using UnityEngine;
 
 namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Structs
 {
-    internal class MapBuilderHelperStruct
+    internal class MapBuilderStruct
     {
         public List<GameObject> grid;
         public GameObject startObject;

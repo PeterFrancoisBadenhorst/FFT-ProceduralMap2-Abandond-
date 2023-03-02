@@ -2,10 +2,10 @@
     "name": "__Tests__",
     "rootNamespace": "Assets.SRC.Tests",
     "references": [
-        "ProceduralMapGenerationAssembly",
         "UnityEngine.TestRunner",
-        "UnityEditor.TestRunner",
-        "BoundfoxStudios.FluentAssertions"
+        "BoundfoxStudios.FluentAssertions",
+        "ProceduralMapGenerationAssembly",
+        "SharedAssembly"
     ],
     "includePlatforms": [
         "Editor"
