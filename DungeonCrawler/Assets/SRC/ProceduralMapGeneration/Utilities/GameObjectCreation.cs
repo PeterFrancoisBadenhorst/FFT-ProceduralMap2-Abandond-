@@ -1,10 +1,18 @@
-﻿using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Exceptions;
+﻿using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Utilities;
+using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Structs;
+using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.ScriptableObjects;
+using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Noise;
+using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Mono.Managers;
+using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Mono.Behaviors;
+using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Enums;
+using Assets.SRC.ProceduralMapGeneration.Assets.SRC.Shared.Exceptions;
 using UnityEngine;
 
 namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Utilities
 {
     internal class GameObjectCreation
     {
+        private CustomExceptions exp = new CustomExceptions();
         public GameObject CreateGameObjectTile(GameObject baseObject, Material envMat)
         {
             var mf = baseObject.AddComponent<MeshFilter>();
@@ -24,7 +32,6 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.
 
         private Mesh GetMesh()
         {
-            CustomExceptions exp = new CustomExceptions();
             return exp.NotImplementedException();
         }
 

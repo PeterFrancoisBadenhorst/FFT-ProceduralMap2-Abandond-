@@ -1,8 +1,9 @@
 {
-    "name": "ProceduralMapGenerationAssembly",
-    "rootNamespace": "Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration",
+    "name": "SharedAssembly",
+    "rootNamespace": "Assets.SRC.ProceduralMapGeneration.Assets.SRC.Shared",
     "references": [
-        "GUID:c8b96face5b84184f970af0d8ce16ad5"
+        "GUID:640ff763efd33f647a53f31de14751e0",
+        "GUID:5dbdf6a093eebe54893fbc8c4286f299"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
