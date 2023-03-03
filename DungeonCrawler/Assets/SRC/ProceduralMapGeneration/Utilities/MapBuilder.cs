@@ -18,8 +18,6 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.
     {
         private static MapBuilderStruct dataKeeper = new MapBuilderStruct();
 
-
-
         public List<GameObject> ChooseStartTile(List<GameObject> grid)
         {
             dataKeeper.grid = grid;
