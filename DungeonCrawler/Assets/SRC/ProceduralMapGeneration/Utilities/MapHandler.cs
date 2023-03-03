@@ -58,7 +58,7 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.
         }
         public Vector3[] CreatePath(Vector3[] grid, float scale, int size, float threshold)
         {
-            /// need to re factor this
+            /// need to refactor this
             /// this needs to remove random positions
             /// then iterate through the positions to ensure that each positions is a valid position
             /// then calculate if there are any islands and remove them

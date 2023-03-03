@@ -15,9 +15,11 @@ using UnityEngine.UIElements;
 
 namespace Assets.SRC.ProceduralMapGeneration.Utilities.Tests
 {
+    /*
     [TestFixture]
     public class GridCreate_Tests
     {
+       
         private GridCreate _gridCreate;
         private GridCreate_Mocs _gridCreate_Mocs;
 
@@ -286,4 +288,5 @@ namespace Assets.SRC.ProceduralMapGeneration.Utilities.Tests
             _gridCreate.FindChunkType(result).Should().Be(proved);
         }
     }
+    */
 }

@@ -24,7 +24,7 @@ namespace Assets.SRC.ProceduralMapGeneration.Utilities.Tests
             if (west) returned.WestNeighbor = new GameObject();
             if (top) returned.TopNeighbor = new GameObject();
             if (bottom) returned.BottomNeighbor = new GameObject();
-            returned.Direction = Enums.DirectionTypeEnum.Blank;
+            returned.Direction = DirectionTypeEnum.Blank;
             return returned;
         }
         public List<NeighborStruct> CreatGameObjectList(float scale, int size)
