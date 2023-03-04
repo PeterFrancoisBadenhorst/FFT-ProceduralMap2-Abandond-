@@ -25,7 +25,7 @@
 |SO_ |ScriptableObject|
 |UI_ |UI Sprite|
 |SP_ |Sprite|
-|Mes_ |Mesh|
+|Mesh_ |Mesh|
 |CMesh_| Collider Mesh|
 |Anim_ |Animation|
 |ACon_ |Animation Controller|
