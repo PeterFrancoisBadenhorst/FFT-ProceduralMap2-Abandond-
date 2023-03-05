@@ -6,6 +6,7 @@ using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Nois
 using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Mono.Managers;
 using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Mono.Behaviors;
 using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Enums;
+using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Utilities;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
@@ -24,10 +25,12 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.
 
         private List<GameObject> gridRelations = new List<GameObject>();
 
+        private readonly System.Random random = new System.Random();
         private readonly PopulateTilePositions _populateTilePositionsBehavior = new PopulateTilePositions();
         private readonly GridCreate _gridCreate = new GridCreate();
         private readonly MapHandler _mapHandler = new MapHandler();
         private readonly ChunkHandler _chunkHandler= new ChunkHandler();
+        private readonly PathFinding _pathFinding = new PathFinding();
         private void Start()
         {
             SetUpGrid();
@@ -36,7 +39,8 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.
         {
             gridRelations.Clear();
             Vector3[] grid = _gridCreate.SquareGrid2DHorizontal(GridSize, GridScale);//
-            Vector3[] mapGrid = _mapHandler.CreatePath(grid, GridScale,GridSize, Threshold);// this needs editing
+            var startPos = grid[random.Next(0, grid.Length)];
+            Vector3[] mapGrid = _pathFinding.PathPositions(grid, grid[random.Next(0, grid.Length)], grid[random.Next(0, grid.Length)], GridScale);
             /// need to create map from this 
              gridRelations = _gridCreate.PlaceGameObjectsAtGridPositions(mapGrid, GridParent);//
             gridRelations = _chunkHandler.FindChunkNeigbors(GridScale, gridRelations);

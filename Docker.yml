@@ -1,0 +1,15 @@
+version: '2.15.1'
+services:
+  jellyfin:
+    image: jellyfin/jellyfin:latest 
+    container_name: jellyfin
+    user: 1000:1000 <<-- Should be 1000:1000
+    network_mode: 'bridge' 
+    ports: <<-- Add this
+      - 8096:8096 
+    volumes:
+      - jellyfin-cache:/cache
+      - jellyfin-cache:/cache
+    restart: 'unless-stopped'
+
+    C:\Users\Docker>docker-compose --version

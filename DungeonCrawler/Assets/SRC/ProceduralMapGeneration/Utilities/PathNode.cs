@@ -14,18 +14,18 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.
         private float h_cost = 0;
         private float f_cost = 0;
 
-        private PathNodeStruct neighborNodes=new PathNodeStruct(); 
+        private PathNodeStruct neighborNodes = new PathNodeStruct();
 
         public Vector3 ThisNodePos { get; set; }
-            public Vector3? CameFromNode { get; set; }
+        public PathNode CameFromNode { get; set; }
         public void SetNodeCost(Vector2 cost)
         {
-            g_cost= cost.x;
-            h_cost= cost.y;
+            g_cost = cost.x;
+            h_cost = cost.y;
         }
-        public void SetHcost(float cost)=>h_cost= cost;
+        public void SetHcost(float cost) => h_cost = cost;
 
-        public Vector3 GetNodeCost() =>new Vector3(g_cost, h_cost, f_cost);
+        public Vector3 GetNodeCost() => new Vector3(g_cost, h_cost, f_cost);
 
         public PathNodeStruct GetNodeNeighbors() => neighborNodes;
         public void SetNodeNeighbors(PathNodeStruct neighbors)
@@ -44,7 +44,7 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.
             neighborNodes.TopCost = neighbors.TopCost;
             neighborNodes.BottomCost = neighbors.BottomCost;
         }
-        
-        
+
+
     }
 }
