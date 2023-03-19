@@ -60,20 +60,4 @@
 
 
 
-docker run -d --name jellyfin  --net=host --volume x --volume jellyfin-cache:/cache --mount type=bind,source=D:\Media,target=/media --restart=unless-stopped jellyfin/jellyfin
-
-docker run -d --volume jellyfin-config:/config --volume jellyfin-cache:/cache --volume D:\Media:/media --net=host --restart=unless-stopped jellyfin/jellyfin
-
-version: '2.12' <<-- Should be the version you are running
-services:
-  jellyfin:
-    image: jellyfin/jellyfin:latest <<-- add :latest at the end
-    container_name: jellyfin
-    user: 1000:1000 <<-- Should be 1000:1000
-    network_mode: 'bridge' <<-- Should be bridge, not host
-    ports: <<-- Add this
-      - 8096:8096 <<-- Specify the port number
-    volumes:
-      - jellyfin-cache:/cache
-      - jellyfin-cache:/cache
-    restart: 'unless-stopped'
+docker run -d --name jellyfin --restart unless-stopped -p 8096:8096 -p 8920:8920 -v jellyfin-config:/config -v E:/Media:/media jellyfin/jellyfin

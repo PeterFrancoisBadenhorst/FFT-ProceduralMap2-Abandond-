@@ -10,13 +10,20 @@ using UnityEngine;
 
 namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Utilities
 {
+    /// <summary>
+    /// This whole fucker needs to be reworked :(
+    /// </summary>
     internal class PathFinding
     {
         private const float MOVEMENTCOST = 10;
         VectorMath vMath = new VectorMath();
 
-        public Vector3[] PathPositions(Vector3[] grid, Vector3 startPos, Vector3 endPos, float scale) => ConvertPathNodesToPositions(FindPath(grid, startPos, endPos, scale));
-
+        public Vector3[] PathPositions(Vector3[] grid, Vector3 startPos, Vector3 endPos, float scale)
+        {
+            Vector3[] Array = ConvertPathNodesToPositions(FindPath(grid, startPos, endPos, scale));
+            if (Array.Count() <= 0) throw new Exception("Broken Array returned");
+            else return Array;
+        }
 
         private Vector3[] ConvertPathNodesToPositions(List<PathNode> nodePath)
         {
@@ -27,29 +34,34 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.
             }
             return vList.ToArray();
         }
+
         private List<PathNode> FindPath(Vector3[] grid, Vector3 startPos, Vector3 endPos, float scale)
         {
-            Vector2 infin = new Vector2(float.MaxValue, float.MaxValue);
             PathNode startNode = new PathNode();
             PathNode endNode = new PathNode();
             startNode.ThisNodePos = startPos;
             endNode.ThisNodePos = endPos;
             List<PathNode> returnedPath = new List<PathNode>();
+            PathNode currentNode = new();
             var openList = new List<PathNode>();
             var closedList = new List<PathNode>();
+            currentNode = startNode;
             for (int i = 0; i < grid.Length; i++)
             {
                 PathNode tempNode = new PathNode();
                 tempNode.ThisNodePos = grid[i];
-                tempNode.SetNodeCost(infin);
                 tempNode.CameFromNode = null;
+                tempNode.SetFCost(vMath.CalculateDistanceBetweenTwoVectors(startPos, endPos) * MOVEMENTCOST * 2);
                 openList.Add(tempNode);
             }
             openList = GetNeighbors(openList, endNode, scale);
             startNode.SetNodeCost(new Vector2(0, vMath.CalculateDistanceBetweenTwoVectors(startPos, endPos) * MOVEMENTCOST * 2));
+            currentNode = FindNextNode(currentNode, endNode);
             while (openList.Count > 0)
             {
-                PathNode currentNode = GetLowestFCostNode(openList);
+                Debug.Log(openList.Count);
+                currentNode = GetLowestFCostNode(openList);
+                currentNode = FindNextNode(currentNode, endNode);
                 if (currentNode.ThisNodePos == endNode.ThisNodePos)
                 {
                     returnedPath = CalculatedPath(endNode);
@@ -58,15 +70,14 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.
                 closedList.Add(currentNode);
                 openList.Remove(currentNode);
                 currentNode.SetNodeNeighbors(RemoveClosedNeighbors(currentNode, closedList));
-                currentNode = FindNextNode(currentNode, endNode);
             }
             return returnedPath;
         }
         private PathNode FindNextNode(PathNode currentNode, PathNode endNode)
         {
             if (vMath.CalculateDistanceBetweenTwoVectors(currentNode.ThisNodePos, endNode.ThisNodePos) == 0) return endNode;
-            PathNode returnedNodePath=new PathNode();
-            float? evaluatedDistance = vMath.CalculateDistanceBetweenTwoVectors(currentNode.ThisNodePos,endNode.ThisNodePos)*MOVEMENTCOST;
+            PathNode returnedNodePath = new PathNode();
+            float? evaluatedDistance = vMath.CalculateDistanceBetweenTwoVectors(currentNode.ThisNodePos, endNode.ThisNodePos) * MOVEMENTCOST;
             var neighbors = currentNode.GetNodeNeighbors();
             if (neighbors.NorthCost < evaluatedDistance)
             {
@@ -166,22 +177,24 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.
                         new Vector3(
                             pathNode[o].ThisNodePos.x + scale,
                             pathNode[o].ThisNodePos.y,
-                            pathNode[o].ThisNodePos.z), 
+                            pathNode[o].ThisNodePos.z),
                         pathNode[i].ThisNodePos) == 0)//         N 1;0;0
                     {
                         temp.North = pathNode[i];
-                        temp.NorthCost = vMath.CalculateDistanceBetweenTwoVectors(pathNode[i].ThisNodePos, endNode.ThisNodePos) * MOVEMENTCOST;
+                        temp.NorthCost = vMath.CalculateDistanceBetweenTwoVectors(temp.North.ThisNodePos, endNode.ThisNodePos) * MOVEMENTCOST;
+                        Debug.Log("North Added");
                         break;
                     }
                     if (vMath.CalculateDistanceBetweenTwoVectors(
                         new Vector3(
-                            pathNode[o].ThisNodePos.x ,
+                            pathNode[o].ThisNodePos.x,
                             pathNode[o].ThisNodePos.y,
                             pathNode[o].ThisNodePos.z + scale),
                         pathNode[i].ThisNodePos) == 0)//         E 0;0;1
                     {
                         temp.East = pathNode[i];
-                        temp.EasthCost = vMath.CalculateDistanceBetweenTwoVectors(pathNode[i].ThisNodePos, endNode.ThisNodePos) * MOVEMENTCOST;
+                        temp.EasthCost = vMath.CalculateDistanceBetweenTwoVectors(temp.East.ThisNodePos, endNode.ThisNodePos) * MOVEMENTCOST;
+                        Debug.Log("East Added");
                         break;
                     }
                     if (vMath.CalculateDistanceBetweenTwoVectors(
@@ -192,7 +205,8 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.
                         pathNode[i].ThisNodePos) == 0)//         S -1;0;0
                     {
                         temp.South = pathNode[i];
-                        temp.SouthCost = vMath.CalculateDistanceBetweenTwoVectors(pathNode[i].ThisNodePos, endNode.ThisNodePos) * MOVEMENTCOST;
+                        temp.SouthCost = vMath.CalculateDistanceBetweenTwoVectors(temp.South.ThisNodePos, endNode.ThisNodePos) * MOVEMENTCOST;
+                        Debug.Log("South Added");
                         break;
                     }
                     if (vMath.CalculateDistanceBetweenTwoVectors(
@@ -203,29 +217,32 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.
                         pathNode[i].ThisNodePos) == 0)//         w 0;0;-1
                     {
                         temp.West = pathNode[i];
-                        temp.WestCost = vMath.CalculateDistanceBetweenTwoVectors(pathNode[i].ThisNodePos, endNode.ThisNodePos) * MOVEMENTCOST;
+                        temp.WestCost = vMath.CalculateDistanceBetweenTwoVectors(temp.West.ThisNodePos, endNode.ThisNodePos) * MOVEMENTCOST;
+                        Debug.Log("West Added");
                         break;
                     }
                     if (vMath.CalculateDistanceBetweenTwoVectors(
                         new Vector3(
-                            pathNode[o].ThisNodePos.x ,
+                            pathNode[o].ThisNodePos.x,
                             pathNode[o].ThisNodePos.y + scale,
                             pathNode[o].ThisNodePos.z),
                         pathNode[i].ThisNodePos) == 0)//         T 0;1;0
                     {
                         temp.Top = pathNode[i];
-                        temp.TopCost = vMath.CalculateDistanceBetweenTwoVectors(pathNode[i].ThisNodePos, endNode.ThisNodePos) * MOVEMENTCOST;
+                        temp.TopCost = vMath.CalculateDistanceBetweenTwoVectors(temp.Top.ThisNodePos, endNode.ThisNodePos) * MOVEMENTCOST;
+                        Debug.Log("Top Added");
                         break;
                     }
                     if (vMath.CalculateDistanceBetweenTwoVectors(
                         new Vector3(
-                            pathNode[o].ThisNodePos.x ,
+                            pathNode[o].ThisNodePos.x,
                             pathNode[o].ThisNodePos.y + scale,
                             pathNode[o].ThisNodePos.z),
                         pathNode[i].ThisNodePos) == 0)//         B 0;-1;0
                     {
                         temp.Bottom = pathNode[i];
-                        temp.BottomCost = vMath.CalculateDistanceBetweenTwoVectors(pathNode[i].ThisNodePos, endNode.ThisNodePos) * MOVEMENTCOST;
+                        temp.BottomCost = vMath.CalculateDistanceBetweenTwoVectors(temp.Bottom.ThisNodePos, endNode.ThisNodePos) * MOVEMENTCOST;
+                        Debug.Log("bottom Added");
                         break;
                     }
                 }

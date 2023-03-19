@@ -40,12 +40,11 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.
             gridRelations.Clear();
             Vector3[] grid = _gridCreate.SquareGrid2DHorizontal(GridSize, GridScale);//
             var startPos = grid[random.Next(0, grid.Length)];
-            Vector3[] mapGrid = _pathFinding.PathPositions(grid, grid[random.Next(0, grid.Length)], grid[random.Next(0, grid.Length)], GridScale);
-            /// need to create map from this 
-             gridRelations = _gridCreate.PlaceGameObjectsAtGridPositions(mapGrid, GridParent);//
+            Vector3[] mapGrid = _pathFinding.PathPositions(grid, grid[random.Next(0, grid.Length)], grid[random.Next(0, grid.Length)], GridScale);// this is returning nothing, assumpton is neighbors arnt being set
+            Debug.LogError(mapGrid.Length);
+             gridRelations = _gridCreate.PlaceGameObjectsAtGridPositions(mapGrid, GridParent);
             gridRelations = _chunkHandler.FindChunkNeigbors(GridScale, gridRelations);
-             //gridRelations = _gridCreate.CreateMapPatern(gridRelations);
-           // gridRelations = _gridCreate.CleanMap(GridSize, gridRelations);
+
             gridRelations = _chunkHandler.FindChunkNeigbors(GridScale, gridRelations);
             // gridRelations = _gridCreate.AssignDirectionIDAccordingToPresentNeighbors(listedObjects);
             gridRelations = _chunkHandler.AssignChunkTypes(gridRelations);

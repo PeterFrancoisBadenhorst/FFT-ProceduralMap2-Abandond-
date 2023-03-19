@@ -23,6 +23,8 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.
             g_cost = cost.x;
             h_cost = cost.y;
         }
+        public void SetFCost(float f) =>f_cost= f;
+
         public void SetHcost(float cost) => h_cost = cost;
 
         public Vector3 GetNodeCost() => new Vector3(g_cost, h_cost, f_cost);
