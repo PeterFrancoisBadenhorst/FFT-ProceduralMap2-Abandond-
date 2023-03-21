@@ -3,7 +3,10 @@ guid: bd91d4f2613b3584aae7760fca91eb5e
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - TempPrefab: {instanceID: 0}
+  - GridParent: {instanceID: 0}
+  - scriptRef: {fileID: 11400000, guid: 06745c89816422442a2913d5f404ad83, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
