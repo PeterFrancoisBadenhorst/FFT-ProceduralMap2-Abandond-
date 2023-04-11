@@ -110,12 +110,11 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.
                 // (((φ(◎ロ◎;)φ)))
                 // I Should probably put some kind of exception here.
                 // But then it would make this exceptional.
+                // o(〒﹏〒)o
                 return DirectionTypeEnum.Error;
             }
             else
                 return chunk.Direction;
-            // Just like my dreams of getting a paid 6 month vacation twice a year.
-            // o(〒﹏〒)o
         }
     }
 }

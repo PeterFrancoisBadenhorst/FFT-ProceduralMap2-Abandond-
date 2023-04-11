@@ -20,11 +20,14 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.
         public Transform GridParent;
         public int GridSize;
         public float GridScale;
+        public int MinTiles;
         [Range(0, 100)]
         public float Threshold;
         public DirectionalTilesScriptableObject scriptRef;
 
         private List<GameObject> gridRelations = new();
+        private bool overMinTiles = false;
+        private int maxTileOverAttempts = 5;
 
         private readonly System.Random random = new();
         private readonly PopulateTilePositions _populateTilePositionsBehavior = new();
@@ -43,7 +46,24 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.
             Vector3[] grid = _gridCreate.SquareGrid2DHorizontal(GridSize, GridScale);//
             //Vector3[] mapGrid = _pathFinding.PathPositions(grid, grid[random.Next(0, grid.Length)], grid[random.Next(0, grid.Length)], GridScale);// this is returning nothing, assumpton is neighbors arnt being set
             Vector3[] mapGrid = _newPathFinding.NodeGridCreator(grid, GridScale);
-            Debug.LogError(mapGrid.Length);
+            while (overMinTiles)
+            {
+                --maxTileOverAttempts;
+                Vector3[] temp = _newPathFinding.NodeGridCreator(grid, GridScale);
+                if (maxTileOverAttempts >= 0)
+                {
+                    if (temp.Length >= MinTiles)
+                    {
+                        mapGrid = temp;
+                        overMinTiles = true;
+                    }
+                }
+                else
+                {
+                    Debug.LogWarning("Min tile Could not be overcome.");
+                    mapGrid = temp;
+                }
+            }
             gridRelations = _gridCreate.PlaceGameObjectsAtGridPositions(mapGrid, GridParent);
             gridRelations = _chunkHandler.FindChunkNeigbors(GridScale, gridRelations);
 

@@ -76,7 +76,7 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.
             List<GameObject> gameObjects = new List<GameObject>(grid.Length);
             for (int i = 0; i < grid.Length; i++)
             {
-                var g = new GameObject("Created");
+                var g = new GameObject();
                 g.transform.position = grid[i];
                 g.transform.parent = gridParent;
                 gameObjects.Add(g);

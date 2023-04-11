@@ -100,40 +100,6 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.
             
             return convertedGeneratedList;
 
-            /*
-            var activeGrid = grid;
-            NewNode activeNode = null;
-            NewNode endNode = null;
-            bool pathMade = false;
-            List<Vector3> pathList = new();
-            NewNode pathNode = endNode;
-            for (int i = 0; i < activeGrid.Count; i++)
-            {
-                if (activeGrid[i].Position != positions[0])
-                {
-                    continue;                 // glitch happens before this
-                }
-                activeGrid[i] = activeNode;
-                break;
-            }
-
-            while (endNode == null)
-            {
-                activeNode = GetNextNode(activeNode);
-                if (activeNode.Position == positions[1])
-                {
-                    endNode = activeNode;
-                    break;
-                }
-            }
-            while (!pathMade)
-            {
-                pathMade = pathNode.Position == positions[0];
-                pathList.Add(pathNode.Position);
-                pathNode = pathNode.LastNode;
-            }
-            return pathList;
-            */
         }
 
         private NewNode GetNextNode(NewNode node)
