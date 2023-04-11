@@ -14,5 +14,6 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.
         public bool Closed { get; set; }
         public float fCost { get; set; }
         public float hCost { get; set; }
+        public NewNode LastNode { get; set; }
     }
 }

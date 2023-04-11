@@ -10,6 +10,7 @@ using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Asse
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.PathFinding;
 
 namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Mono.Managers
 {
@@ -19,18 +20,19 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.
         public Transform GridParent;
         public int GridSize;
         public float GridScale;
-        [Range(0,100)]
+        [Range(0, 100)]
         public float Threshold;
         public DirectionalTilesScriptableObject scriptRef;
 
-        private List<GameObject> gridRelations = new List<GameObject>();
+        private List<GameObject> gridRelations = new();
 
-        private readonly System.Random random = new System.Random();
-        private readonly PopulateTilePositions _populateTilePositionsBehavior = new PopulateTilePositions();
-        private readonly GridCreate _gridCreate = new GridCreate();
-        private readonly MapHandler _mapHandler = new MapHandler();
-        private readonly ChunkHandler _chunkHandler= new ChunkHandler();
-        private readonly PathFinding _pathFinding = new PathFinding();
+        private readonly System.Random random = new();
+        private readonly PopulateTilePositions _populateTilePositionsBehavior = new();
+        private readonly GridCreate _gridCreate = new();
+        private readonly MapHandler _mapHandler = new();
+        private readonly ChunkHandler _chunkHandler = new();
+        private readonly PathFinding _pathFinding = new();
+        private readonly NewPathFinding _newPathFinding = new();
         private void Start()
         {
             SetUpGrid();
@@ -39,10 +41,10 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.
         {
             gridRelations.Clear();
             Vector3[] grid = _gridCreate.SquareGrid2DHorizontal(GridSize, GridScale);//
-            var startPos = grid[random.Next(0, grid.Length)];
-            Vector3[] mapGrid = _pathFinding.PathPositions(grid, grid[random.Next(0, grid.Length)], grid[random.Next(0, grid.Length)], GridScale);// this is returning nothing, assumpton is neighbors arnt being set
+            //Vector3[] mapGrid = _pathFinding.PathPositions(grid, grid[random.Next(0, grid.Length)], grid[random.Next(0, grid.Length)], GridScale);// this is returning nothing, assumpton is neighbors arnt being set
+            Vector3[] mapGrid = _newPathFinding.NodeGridCreator(grid, GridScale);
             Debug.LogError(mapGrid.Length);
-             gridRelations = _gridCreate.PlaceGameObjectsAtGridPositions(mapGrid, GridParent);
+            gridRelations = _gridCreate.PlaceGameObjectsAtGridPositions(mapGrid, GridParent);
             gridRelations = _chunkHandler.FindChunkNeigbors(GridScale, gridRelations);
 
             gridRelations = _chunkHandler.FindChunkNeigbors(GridScale, gridRelations);
