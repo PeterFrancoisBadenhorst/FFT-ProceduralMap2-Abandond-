@@ -36,16 +36,18 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.
         private readonly ChunkHandler _chunkHandler = new();
         private readonly PathFinding _pathFinding = new();
         private readonly NewPathFinding _newPathFinding = new();
+
+        private readonly PathMapBuilder _pathMapBuilder = new();
         private void Start()
         {
-            SetUpGrid();
+            // SetUpGrid();
+            _pathMapBuilder.CreateMap(GridSize, GridScale, this.transform, scriptRef);
         }
         private void SetUpGrid()
         {
             gridRelations.Clear();
             Vector3[] grid = _gridCreate.SquareGrid2DHorizontal(GridSize, GridScale);//
-            //Vector3[] mapGrid = _pathFinding.PathPositions(grid, grid[random.Next(0, grid.Length)], grid[random.Next(0, grid.Length)], GridScale);// this is returning nothing, assumpton is neighbors arnt being set
-            Vector3[] mapGrid = _newPathFinding.NodeGridCreator(grid, GridScale);
+            Vector3[] mapGrid = _newPathFinding.NodeGridCreator(grid, GridScale);  // Map created here
             while (overMinTiles)
             {
                 --maxTileOverAttempts;
