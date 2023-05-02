@@ -28,7 +28,7 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.
         private void Start()
         {
             // SetUpGrid();
-            _pathMapBuilder.CreateMap(GridSize, GridScale, this.transform, scriptRef,(int)( (GridSize*GridSize)/ MapTotalFillPercentage));
+            _pathMapBuilder.CreateMap(GridSize, GridScale, this.transform, scriptRef,MapTotalFillPercentage);
         }
 
 

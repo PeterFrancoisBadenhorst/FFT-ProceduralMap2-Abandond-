@@ -455,7 +455,7 @@ MonoBehaviour:
   TempPrefab: {fileID: 634497862944897564, guid: d7c45261170f8854299ecc4ca174ccbd,
     type: 3}
   GridParent: {fileID: 1649667191}
-  GridSize: 64
+  GridSize: 8
   GridScale: 5
   MapTotalFillPercentage: 16
   scriptRef: {fileID: 11400000, guid: 06745c89816422442a2913d5f404ad83, type: 2}

@@ -21,7 +21,7 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.
         public void CreateMap(int GridSize, float GridScale, Transform GridParent, DirectionalTilesScriptableObject scriptRef, int MapTotalFillPercentage)
         {
             gridRelations.Clear();
-            Vector3[] grid = _gridCreate.SquareGrid2DHorizontal(GridSize, GridScale);//
+            Vector3[] grid = _gridCreate.SquareGrid3D(GridSize, GridScale);//
             Vector3[] mapGrid = _newPathFinding.NodeGridCreator(grid, GridScale);  // Map created here
             List<object> objects = new();
             List<Vector3> MapTotal = new List<Vector3>();
@@ -30,6 +30,7 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.
                 MapTotal.Add(mapGrid[i]);
             }
             Debug.Log($"Starting loop.");
+            MapTotalFillPercentage = grid.Length / MapTotalFillPercentage;
             int loopCount = 0;
             while (MapTotal.Count < MapTotalFillPercentage)
             {
