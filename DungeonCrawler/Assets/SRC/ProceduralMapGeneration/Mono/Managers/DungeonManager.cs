@@ -6,7 +6,6 @@ using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Nois
 using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Mono.Managers;
 using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Mono.Behaviors;
 using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Enums;
-using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Utilities;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
@@ -20,7 +19,8 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.
         public Transform GridParent;
         public int GridSize;
         public float GridScale;
-        public int Itterations;
+        [Range(10,75)]
+        public int MapTotalFillPercentage;
 
         public DirectionalTilesScriptableObject scriptRef;
 
@@ -28,7 +28,7 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.
         private void Start()
         {
             // SetUpGrid();
-            _pathMapBuilder.CreateMap(Itterations, GridSize, GridScale, this.transform, scriptRef);
+            _pathMapBuilder.CreateMap(GridSize, GridScale, this.transform, scriptRef,(int)( (GridSize*GridSize)/ MapTotalFillPercentage));
         }
 
 

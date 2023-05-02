@@ -18,7 +18,7 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.
         private readonly GridCreate _gridCreate = new();
         private readonly ChunkHandler _chunkHandler = new();
         private readonly NewPathFinding _newPathFinding = new();
-        public void CreateMap(int iterations, int GridSize, float GridScale, Transform GridParent, DirectionalTilesScriptableObject scriptRef)
+        public void CreateMap(int GridSize, float GridScale, Transform GridParent, DirectionalTilesScriptableObject scriptRef, int MapTotalFillPercentage)
         {
             gridRelations.Clear();
             Vector3[] grid = _gridCreate.SquareGrid2DHorizontal(GridSize, GridScale);//
@@ -29,19 +29,20 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.
             {
                 MapTotal.Add(mapGrid[i]);
             }
-            Debug.Log($"Starting loop. Iterations: {iterations}");
-            for (int h = 0; iterations > h; h++)
+            Debug.Log($"Starting loop.");
+            int loopCount = 0;
+            while (MapTotal.Count < MapTotalFillPercentage)
             {
-                Debug.Log($"Iteration {h + 1} of {iterations}");
-                List<Vector3> positions = new();
-                var temp = _newPathFinding.NodeGridCreator(grid, mapGrid, GridScale);
+                loopCount++;
+                Debug.Log($"Iteration {loopCount} as {MapTotal.Count} is less than {MapTotalFillPercentage}");
+                var tempGrid = (MapTotal.Count == 0) ? mapGrid : MapTotal.ToArray();
+                var temp = _newPathFinding.NodeGridCreator(grid, tempGrid, GridScale);
                 for (int g = 0; g < temp.Length; g++)
                 {
-                    positions.Add(temp[g]);
+                    MapTotal.Add(temp[g]);
                 }
-                objects.Add(positions);
+                MapTotal = MapTotal.Distinct().ToList();
             }
-            Debug.Log($"Loop complete. Objects count: {objects.Count}");
             mapGrid = MapTotal.Distinct().ToArray();
 
 

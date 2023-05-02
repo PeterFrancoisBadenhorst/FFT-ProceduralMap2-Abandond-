@@ -19,7 +19,7 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.
             {
                 int g = (int)parentObjects[i].GetComponent<ChunkBehavior>().neighborStruct.Direction;
 
-                GameObject t = UtilitiesBehaviour.InstantiateObject(j[g-1], parentObjects[i].transform.position, Quaternion.identity);
+                GameObject t = UtilitiesBehaviour.InstantiateObject(j[g], parentObjects[i].transform.position, Quaternion.identity);
 
                 t.transform.SetParent(parentObjects[i].transform, false);
                 parentObjects[i].isStatic = true;

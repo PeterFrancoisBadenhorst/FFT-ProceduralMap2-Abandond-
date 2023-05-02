@@ -29,7 +29,11 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.
         private readonly System.Random random = new System.Random();
         public Vector3[] NodeGridCreator(Vector3[] grid, Vector3[] baseMap, float scale)
         {
-            var ends = FindEnds(baseMap);   //[0] start [1]end
+            //[0] start [1]end
+            Vector3[] ends ={
+                    (baseMap[random.Next(0, baseMap.Length)]),
+                    (grid[random.Next(0, grid.Length)])
+                    }; 
             List<NewNode> nodes = new();
             for (int i = 0; i < grid.Length; i++)
             {
