@@ -27,7 +27,22 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.
         /// </summary>
         private readonly VectorMath vMath = new VectorMath();
         private readonly System.Random random = new System.Random();
-        public Vector3[] NodeGridCreator(Vector3[] grid, float scale)
+        public Vector3[] NodeGridCreator(Vector3[] grid, Vector3[] baseMap, float scale)
+        {
+            var ends = FindEnds(baseMap);   //[0] start [1]end
+            List<NewNode> nodes = new();
+            for (int i = 0; i < grid.Length; i++)
+            {
+                NewNode node = new();
+                node.Position = grid[i];
+                node.fCost = vMath.CalculateDistanceBetweenTwoVectors(node.Position, ends[1]);
+                nodes.Add(node);
+            }
+            nodes = SetNodeNeighbors(nodes, scale);              // glitch happens Here
+            List<Vector3> path = Findpath(nodes, ends);         // glitch  happends Before
+            return path.ToArray();
+        }
+            public Vector3[] NodeGridCreator(Vector3[] grid, float scale)
         {
             var ends = FindEnds(grid);   //[0] start [1]end
             List<NewNode> nodes = new();
