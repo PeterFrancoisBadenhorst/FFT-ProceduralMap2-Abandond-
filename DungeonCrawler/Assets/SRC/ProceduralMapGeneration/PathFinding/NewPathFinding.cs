@@ -33,7 +33,7 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.
             Vector3[] ends ={
                     (baseMap[random.Next(0, baseMap.Length)]),
                     (grid[random.Next(0, grid.Length)])
-                    }; 
+                    };
             List<NewNode> nodes = new();
             for (int i = 0; i < grid.Length; i++)
             {
@@ -46,7 +46,7 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.
             List<Vector3> path = Findpath(nodes, ends);         // glitch  happends Before
             return path.ToArray();
         }
-            public Vector3[] NodeGridCreator(Vector3[] grid, float scale)
+        public Vector3[] NodeGridCreator(Vector3[] grid, float scale)
         {
             var ends = FindEnds(grid);   //[0] start [1]end
             List<NewNode> nodes = new();
@@ -91,7 +91,7 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.
                 {
                     if (tempNode.fCost > ActiveNode.Neighbors[g].fCost)
                     {
-                        tempNode= ActiveNode.Neighbors[g];
+                        tempNode = ActiveNode.Neighbors[g];
                     }
                 }
                 tempNode.LastNode = ActiveNode;
@@ -116,7 +116,7 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.
             {
                 convertedGeneratedList.Add(generatedList[i].Position);
             }
-            
+
             return convertedGeneratedList;
 
         }

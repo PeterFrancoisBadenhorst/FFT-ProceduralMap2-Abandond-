@@ -1,76 +1,30 @@
-﻿using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Utilities;
-using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Structs;
-using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.ScriptableObjects;
-using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Noise;
-using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Mono.Managers;
-using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Mono.Behaviors;
-using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Enums;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using UnityEngine;
-using UnityEngine.UIElements;
+﻿using UnityEngine;
 
 namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Noise
 {
     public class PerlinNoiseGenerator
     {
+        // Generate a 2D Perlin noise texture
         public Texture2D GeneratePerlinNoise2DTexture(int size, float scale)
         {
+            // Create a new texture with the given size
             Texture2D noiseTexture2D = new Texture2D(size, size);
-            for (int X = 0; X < size; X++)
+
+            // Iterate over each pixel in the texture
+            for (int x = 0; x < size; x++)
             {
-                for (int Y = 0; Y < size; Y++)
+                for (int y = 0; y < size; y++)
                 {
-                    Color color = GeneratePerlinNoise2D(X, Y, (int)(size * scale));
-                    noiseTexture2D.SetPixel(X, Y, color);
+                    // Generate a Perlin noise value for the current pixel
+                    float sample = Mathf.PerlinNoise(x * scale, y * scale);
+                    // Set the pixel color to a grayscale value based on the noise value
+                    noiseTexture2D.SetPixel(x, y, new Color(sample, sample, sample));
                 }
             }
+
+            // Apply the changes to the texture and return it
             noiseTexture2D.Apply();
             return noiseTexture2D;
-        }
-        public Texture3D GeneratePerlinNoise3DTexture(int size, float scale)
-        {
-            Texture3D noiseTexture3D = new Texture3D(size, size, size, TextureFormat.RGBA32, false);
-            for (int X = 0; X < size; X++)
-            {
-                for (int Y = 0; Y < size; Y++)
-                {
-                    for (int Z = 0; Z < size; Z++)
-                    {
-                        Color color = GeneratePerlinNoise3D(new Vector3(X, Y, Z),
-                                                           (int)(size * scale));
-                        noiseTexture3D.SetPixel(X, Y, Z, color);
-                    }
-                }
-            }
-            noiseTexture3D.Apply();
-            return noiseTexture3D;
-        }
-        private Color GeneratePerlinNoise2D(int x, int y, int size)
-        {
-            float xpc = (float)x / size * size;
-            float ypc = (float)y / size * size;
-            float sample = Mathf.PerlinNoise(xpc, ypc);
-            return new Color(sample, sample, sample);
-        }
-        private Color GeneratePerlinNoise3D(Vector3 position, float scale)
-        {
-            position = position / scale;
-
-            float ab = Mathf.PerlinNoise(position.x, position.y);
-            float bc = Mathf.PerlinNoise(position.y, position.z);
-            float ac = Mathf.PerlinNoise(position.x, position.z);
-
-            float ba = Mathf.PerlinNoise(position.y, position.x);
-            float cb = Mathf.PerlinNoise(position.z, position.y);
-            float ca = Mathf.PerlinNoise(position.z, position.x);
-
-            float abc = (ab + bc + ac + ba + cb + ca) / 6;
-            return new Color(abc, abc, abc);
-
         }
     }
 }
