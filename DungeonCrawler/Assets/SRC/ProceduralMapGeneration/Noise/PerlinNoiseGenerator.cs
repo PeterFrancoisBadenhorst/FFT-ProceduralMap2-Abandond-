@@ -1,31 +1,18 @@
-﻿using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Utilities;
-using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Structs;
-using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.ScriptableObjects;
-using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Noise;
-using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Mono.Managers;
-using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Mono.Behaviors;
-using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Enums;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using UnityEngine;
-using UnityEngine.UIElements;
 
-namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Noise
+namespace PathFinding
 {
     public class PerlinNoiseGenerator
     {
         public Texture2D GeneratePerlinNoise2DTexture(int size, float scale)
         {
             Texture2D noiseTexture2D = new Texture2D(size, size);
-            for (int X = 0; X < size; X++)
+            for (int x = 0; x < size; x++)
             {
-                for (int Y = 0; Y < size; Y++)
+                for (int y = 0; y < size; y++)
                 {
-                    Color color = GeneratePerlinNoise2D(X, Y, (int)(size * scale));
-                    noiseTexture2D.SetPixel(X, Y, color);
+                    Color color = GeneratePerlinNoise2D(x, y, size * scale);
+                    noiseTexture2D.SetPixel(x, y, color);
                 }
             }
             noiseTexture2D.Apply();
@@ -34,15 +21,14 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.
         public Texture3D GeneratePerlinNoise3DTexture(int size, float scale)
         {
             Texture3D noiseTexture3D = new Texture3D(size, size, size, TextureFormat.RGBA32, false);
-            for (int X = 0; X < size; X++)
+            for (int x = 0; x < size; x++)
             {
-                for (int Y = 0; Y < size; Y++)
+                for (int y = 0; y < size; y++)
                 {
-                    for (int Z = 0; Z < size; Z++)
+                    for (int z = 0; z < size; z++)
                     {
-                        Color color = GeneratePerlinNoise3D(new Vector3(X, Y, Z),
-                                                           (int)(size * scale));
-                        noiseTexture3D.SetPixel(X, Y, Z, color);
+                        Color color = GeneratePerlinNoise3D(new Vector3(x, y, z), size * scale);
+                        noiseTexture3D.SetPixel(x, y, z, color);
                     }
                 }
             }
@@ -51,8 +37,8 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.
         }
         private Color GeneratePerlinNoise2D(int x, int y, int size)
         {
-            float xpc = (float)x / size * size;
-            float ypc = (float)y / size * size;
+            float xpc = (float)x / size;
+            float ypc = (float)y / size;
             float sample = Mathf.PerlinNoise(xpc, ypc);
             return new Color(sample, sample, sample);
         }
