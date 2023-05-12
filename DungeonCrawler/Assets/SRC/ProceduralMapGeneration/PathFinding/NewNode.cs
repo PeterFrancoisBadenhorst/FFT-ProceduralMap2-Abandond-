@@ -1,17 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using UnityEngine;
 
-namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.PathFinding
+namespace PathFinding
 {
-    internal class NewNode
+    public class NewNode
     {
         public Vector3 Position { get; set; }
-        public List<NewNode> Neighbors { get; set; }
-        public bool Closed { get; set; }
+        public List<NewNode> Neighbors { get; set; } = new List<NewNode>();
+        public bool Closed { get; set; } = false;
         public float fCost { get; set; }
         public float hCost { get; set; }
         public NewNode LastNode { get; set; }
