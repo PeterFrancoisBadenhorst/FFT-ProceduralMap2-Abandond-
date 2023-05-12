@@ -1,14 +1,8 @@
-﻿using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.ScriptableObjects;
-using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Utilities;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using UnityEngine;
-using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.PathFinding;
 
-namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.PathFinding
+namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.PathFinding
 {
     internal class PathMapBuilder
     {
@@ -18,43 +12,75 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.
         private readonly GridCreate _gridCreate = new();
         private readonly ChunkHandler _chunkHandler = new();
         private readonly NewPathFinding _newPathFinding = new();
-        public void CreateMap(int iterations, int GridSize, float GridScale, Transform GridParent, DirectionalTilesScriptableObject scriptRef)
+
+        /// <summary>
+        /// Creates a pathfinding map.
+        /// </summary>
+        /// <param name="iterations">The number of iterations to run.</param>
+        /// <param name="gridSize">The size of the grid.</param>
+        /// <param name="gridScale">The scale of the grid.</param>
+        /// <param name="gridParent">The parent transform for the grid.</param>
+        /// <param name="scriptRef">The reference to the directional tiles scriptable object.</param>
+        public void CreateMap(int iterations, int gridSize, float gridScale, Transform gridParent, DirectionalTilesScriptableObject scriptRef)
         {
+            // Clear the grid relations.
             gridRelations.Clear();
-            Vector3[] grid = _gridCreate.SquareGrid2DHorizontal(GridSize, GridScale);//
-            Vector3[] mapGrid = _newPathFinding.NodeGridCreator(grid, GridScale);  // Map created here
-            List<object> objects = new();
-            List<Vector3> MapTotal = new List<Vector3>();
+
+            // Create a 2D grid of squares.
+            Vector3[] grid = _gridCreate.SquareGrid2DHorizontal(gridSize, gridScale);
+
+            // Create a node grid from the 2D grid.
+            Vector3[] mapGrid = _newPathFinding.NodeGridCreator(grid, gridScale);
+
+            // Create a list of all the positions in the map grid.
+            List<Vector3> mapTotal = new List<Vector3>();
             for (int i = 0; i < mapGrid.Length; i++)
             {
-                MapTotal.Add(mapGrid[i]);
+                mapTotal.Add(mapGrid[i]);
             }
+
+            // Log that the loop is starting.
             Debug.Log($"Starting loop. Iterations: {iterations}");
-            for (int h = 0; iterations > h; h++)
+
+            // Iterate over the number of iterations.
+            for (int h = 0; h < iterations; h++)
             {
+                // Log the current iteration.
                 Debug.Log($"Iteration {h + 1} of {iterations}");
+
+                // Create a list of positions for the current iteration.
                 List<Vector3> positions = new();
-                var temp = _newPathFinding.NodeGridCreator(grid, mapGrid, GridScale);
+
+                // Create a node grid for the current iteration.
+                var temp = _newPathFinding.NodeGridCreator(grid, mapGrid, gridScale);
+
+                // Add the positions from the node grid to the list of positions for the current iteration.
                 for (int g = 0; g < temp.Length; g++)
                 {
                     positions.Add(temp[g]);
                 }
-                objects.Add(positions);
+
+                // Add the list of positions for the current iteration to the list of all the positions in the map grid.
+                mapTotal.AddRange(positions);
             }
-            Debug.Log($"Loop complete. Objects count: {objects.Count}");
-            mapGrid = MapTotal.Distinct().ToArray();
 
+            // Log that the loop is complete.
+            Debug.Log($"Loop complete. Objects count: {mapTotal.Count}");
 
-            gridRelations = _gridCreate.PlaceGameObjectsAtGridPositions(mapGrid, GridParent);
+            // Remove duplicate positions from the list of all the positions in the map grid.
+            mapGrid = mapTotal.Distinct().ToArray();
+
+            // Place game objects at the positions in the map grid.
+            gridRelations = _gridCreate.PlaceGameObjectsAtGridPositions(mapGrid, gridParent);
+
+            // Find the neighbors of each chunk.
             gridRelations = _chunkHandler.FindChunkNeigbors(GridScale, gridRelations);
 
-            gridRelations = _chunkHandler.FindChunkNeigbors(GridScale, gridRelations);
+            // Assign chunk types to each chunk.
+            _chunkHandler.AssignChunkTypes(gridRelations);
 
-            gridRelations = _chunkHandler.AssignChunkTypes(gridRelations);
-
+            // Set the child tile for each chunk.
             _populateTilePositionsBehavior.SetChildTile(scriptRef, gridRelations);
         }
-
-
     }
 }
