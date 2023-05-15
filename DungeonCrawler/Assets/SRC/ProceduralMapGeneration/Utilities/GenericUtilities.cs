@@ -10,6 +10,17 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.
 {
     public class GenericUtilities
     {
+        /// <summary>
+        /// This method returns a list of Vector3 objects that represent the positions of the neighbors of the current object.
+        /// </summary>
+        /// <param name="scale">The scale of the neighbors.</param>
+        /// <param name="offset">The offset of the neighbors.</param>
+        /// <returns>A list of Vector3 objects that represent the positions of the neighbors of the current object.</returns>
+        /// <remarks>
+        /// The method iterates over the six cardinal directions and returns the position of the neighbor in that direction. The scale and offset are used to adjust the position of the neighbor.
+        /// </remarks>
+        public Vector3[] NeighborsPosition(float scale,Vector3 offset)
+        {
         /*
          * N 1;0;0
          * E 0;0;1
@@ -18,8 +29,6 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.
          * T 0;1;0
          * B 0;-1;0
          */
-        public Vector3[] NeighborsPosition(float scale,Vector3 offset)
-        {
             var north = (Vector3.forward * scale)+ offset;//    0 N 1;0;0 
             var east = (Vector3.right * scale) + offset;//      1 E 0;0;1 
             var south = (Vector3.back * scale) + offset;//      2 S -1;0;0 

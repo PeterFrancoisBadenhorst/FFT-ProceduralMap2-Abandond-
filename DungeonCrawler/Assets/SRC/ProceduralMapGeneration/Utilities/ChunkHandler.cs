@@ -13,12 +13,17 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.
 {
     internal class ChunkHandler
     {
+        /// <summary>
+        /// This method finds the neighbors of the chunks in the grid.
+        /// </summary>
+        /// <param name="scale">The scale of the chunks.</param>
+        /// <param name="grid">The list of chunks.</param>
+        /// <returns>A list of chunks with their neighbors.</returns>
         public List<GameObject> FindChunkNeigbors(float scale, List<GameObject> grid)
         {
             Dictionary<Vector3, GameObject> positions = new Dictionary<Vector3, GameObject>();
             GenericUtilities _genericUtilities = new GenericUtilities();
 
-            // Fill the dictionary with the positions and corresponding objects from the grid list
             for (int i = 0; i < grid.Count; i++)
             {
                 positions.Add(grid[i].transform.position, grid[i]);
@@ -28,7 +33,6 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.
             {
                 if (grid[i].activeSelf)
                 {
-
                     var comparedValues = _genericUtilities.NeighborsPosition(scale, grid[i].transform.position);
                     ChunkBehavior comparedChunk;
                     if (grid[i].GetComponent<ChunkBehavior>())
@@ -37,7 +41,6 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.
                         comparedChunk = grid[i].AddComponent<ChunkBehavior>();
                     comparedChunk.neighborStruct.OriginObject = grid[i];
 
-                    // Look up the neighbors in the dictionary instead of iterating through the entire list
                     if (positions.TryGetValue(comparedValues[0], out GameObject northNeighbor))
                     {
                         comparedChunk.neighborStruct.NorthNeighbor = northNeighbor;
@@ -68,6 +71,11 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.
             }
             return grid;
         }
+        /// <summary>
+        /// This method assigns chunk types to the chunks in the grid.
+        /// </summary>
+        /// <param name="grid">The list of chunks.</param>
+        /// <returns>A list of chunks with their assigned chunk types.</returns>
         public List<GameObject> AssignChunkTypes(List<GameObject> grid)
         {
             for (int i = 0; i < grid.Count; i++)
@@ -76,6 +84,15 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.
             }
             return grid;
         }
+        /// <summary>
+        /// This method finds the neighbors of the chunks in the grid.
+        /// </summary>
+        /// <param name="scale">The scale of the chunks.</param>
+        /// <param name="grid">The list of chunks.</param>
+        /// <returns>A list of chunks with their neighbors.</returns>
+        /// <remarks>
+        /// This method iterates over the list of chunks and finds the neighbors of each chunk. The neighbors are determined by the scale of the chunks.
+        /// </remarks>
         public DirectionTypeEnum FindChunkType(NeighborStruct chunk)
         {
             if (chunk.Direction != DirectionTypeEnum.Collapsed || chunk.Direction == DirectionTypeEnum.Blank)
