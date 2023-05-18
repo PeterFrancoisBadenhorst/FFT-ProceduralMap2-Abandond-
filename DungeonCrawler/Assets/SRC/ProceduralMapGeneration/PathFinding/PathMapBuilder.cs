@@ -48,9 +48,13 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.
                 var temp = _newPathFinding.NodeGridCreator(grid, tempGrid, GridScale);
                 for (int g = 0; g < temp.Length; g++)
                 {
-                    MapTotal.Add(temp[g]);
+                    if (!MapTotal.Any(p => p.x == temp[g].x &&
+                                        p.y == temp[g].y &&
+                                        p.z == temp[g].z))
+                    {
+                        MapTotal.Add(temp[g]);
+                    }
                 }
-                MapTotal = MapTotal.Distinct().ToList();
             }
             mapGrid = MapTotal.Distinct().ToArray();
 
