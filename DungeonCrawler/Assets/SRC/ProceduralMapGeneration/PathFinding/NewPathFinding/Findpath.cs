@@ -1,4 +1,6 @@
+using System;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.PathFinding
@@ -25,71 +27,39 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.
         /// <param name="grid">The grid of points.</param>
         /// <param name="positions">The start and end positions.</param>
         /// <returns>A list of Vector3 objects representing the shortest path between the start and end points.</returns>
-        private List<Vector3> Findpath(List<NewNode> grid, Vector3[] positions)
+        public List<Vector3> Findpath(List<NewNode> grid, Vector3[] positions)
         {
-            List<NewNode> SortedListByPosistion = grid;
-            SortedListByPosistion.Reverse();
+            if (grid == null || grid.Count == 0) { throw new ArgumentNullException("grid"); }
+            if (positions == null || positions.Length == 0) { throw new ArgumentNullException("grid"); }
 
-            NewNode startPos = new();
-            NewNode endPos = new();
-            NewNode ActiveNode = null;
+            List<NewNode> sortedListByPosition = new List<NewNode>(grid);
+            sortedListByPosition.Reverse();
 
-            bool endPosFound = false;
-            bool startPosFound = false;
+            NewNode startPos = sortedListByPosition.Find(node => node.Position == positions[0]);
+            NewNode endPos = sortedListByPosition.Find(node => node.Position == positions[1]);
+            NewNode activeNode = startPos;
 
-            List<NewNode> generatedList = new();
-            List<Vector3> convertedGeneratedList = new();
+            List<NewNode> generatedList = new List<NewNode>();
+            List<Vector3> convertedGeneratedList = new List<Vector3>();
 
-            startPos.Position = positions[0];
-            endPos.Position = positions[1];
-
-            for (int i = 0; i < SortedListByPosistion.Count; i++)
+            while (activeNode.Position != endPos.Position)
             {
-                if (SortedListByPosistion[i].Position == startPos.Position)
-                {
-                    startPos = SortedListByPosistion[i];
-                    break;
-                }
+                NewNode tempNode = activeNode.Neighbors.OrderBy(node => node.fCost).First();
+                tempNode.LastNode = activeNode;
+                activeNode = tempNode;
             }
 
-            ActiveNode = startPos;
-
-            while (!endPosFound)
+            while (activeNode.Position != startPos.Position)
             {
-                NewNode tempNode = ActiveNode;
-
-                for (int g = 0; g < ActiveNode.Neighbors.Count; g++)
-                {
-                    if (tempNode.fCost > ActiveNode.Neighbors[g].fCost)
-                    {
-                        tempNode = ActiveNode.Neighbors[g];
-                    }
-                }
-
-                tempNode.LastNode = ActiveNode;
-                ActiveNode = tempNode;
-
-                if (ActiveNode.Position == endPos.Position)
-                {
-                    endPos = ActiveNode;
-                    endPosFound = true;
-                }
-            };
-
-            while (!startPosFound)
-            {
-                ActiveNode = ActiveNode.LastNode;
-                generatedList.Add(ActiveNode);
-
-                if (ActiveNode.Position == startPos.Position)
-                {
-                    startPosFound = true;
-                }
+                generatedList.Add(activeNode);
+                activeNode = activeNode.LastNode;
             }
 
-            for (int i = 0; i < generatedList.Count; i++)
+            generatedList.Reverse();
+
+            foreach (NewNode node in generatedList)
             {
-                convertedGeneratedList.Add(generatedList[i].Position);
+                convertedGeneratedList.Add(node.Position);
             }
 
             return convertedGeneratedList;
