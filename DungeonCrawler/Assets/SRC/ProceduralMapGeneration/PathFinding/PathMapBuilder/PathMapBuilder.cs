@@ -56,16 +56,11 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.
                     }
                 }
             }
-            mapGrid = MapTotal.Distinct().ToArray();
-
 
             gridRelations = _gridCreate.PlaceGameObjectsAtGridPositions(mapGrid, GridParent);
             gridRelations = _chunkHandler.FindChunkNeigbors(GridScale, gridRelations);
-
             gridRelations = _chunkHandler.FindChunkNeigbors(GridScale, gridRelations);
-
             gridRelations = _chunkHandler.AssignChunkTypes(gridRelations);
-
             _populateTilePositionsBehavior.SetChildTile(scriptRef, gridRelations);
         }
 
