@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CoverageSession xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Version="0.0.0.0">
+  <Summary numSequencePoints="4" visitedSequencePoints="4" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="100.0" branchCoverage="0.0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" maxCrapScore="1" minCrapScore="1" visitedClasses="1" numClasses="1" visitedMethods="1" numMethods="1" />
+  <Modules>
+    <Module>
+      <Summary numSequencePoints="4" visitedSequencePoints="4" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="100.0" branchCoverage="0.0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" maxCrapScore="1" minCrapScore="1" visitedClasses="1" numClasses="1" visitedMethods="1" numMethods="1" />
+      <ModuleTime>0001-01-01T00:00:00</ModuleTime>
+      <ModuleName>ProceduralMapGenerationAssembly</ModuleName>
+      <Files>
+        <File uid="1" fullPath="C:/git/Unity.DungeonCrawler/DungeonCrawler/Assets/SRC/ProceduralMapGeneration/Utilities/ChunkHandler/ChunkHandler.cs" />
+        <File uid="2" fullPath="C:/git/Unity.DungeonCrawler/DungeonCrawler/Assets/SRC/ProceduralMapGeneration/Utilities/GameObjectCreation/GameObjectCreation.cs" />
+        <File uid="3" fullPath="C:/git/Unity.DungeonCrawler/DungeonCrawler/Assets/SRC/ProceduralMapGeneration/Utilities/GenericUtilities/GenericUtilities.cs" />
+        <File uid="4" fullPath="C:/git/Unity.DungeonCrawler/DungeonCrawler/Assets/SRC/ProceduralMapGeneration/Utilities/GridCreate/GridCreate.cs" />
+        <File uid="5" fullPath="C:/git/Unity.DungeonCrawler/DungeonCrawler/Assets/SRC/ProceduralMapGeneration/Utilities/MapBuilder/MapBuilder.cs" />
+        <File uid="6" fullPath="C:/git/Unity.DungeonCrawler/DungeonCrawler/Assets/SRC/ProceduralMapGeneration/Utilities/MapHandler/MapHandler.cs" />
+        <File uid="7" fullPath="C:/git/Unity.DungeonCrawler/DungeonCrawler/Assets/SRC/ProceduralMapGeneration/Utilities/PopulateTilePositions/PopulateTilePositions.cs" />
+        <File uid="8" fullPath="C:/git/Unity.DungeonCrawler/DungeonCrawler/Assets/SRC/ProceduralMapGeneration/Structs/DirectionIDStruct/DirectionIDStruct.cs" />
+        <File uid="9" fullPath="C:/git/Unity.DungeonCrawler/DungeonCrawler/Assets/SRC/ProceduralMapGeneration/Structs/MapBuilderStruct/MapBuilderStruct.cs" />
+        <File uid="10" fullPath="C:/git/Unity.DungeonCrawler/DungeonCrawler/Assets/SRC/ProceduralMapGeneration/ScriptableObjects/DirectionalTilesScriptableObject/DirectionalTilesScriptableObject.cs" />
+        <File uid="11" fullPath="C:/git/Unity.DungeonCrawler/DungeonCrawler/Assets/SRC/ProceduralMapGeneration/PathFinding/NewPathFinding/FindEnds.cs" />
+        <File uid="12" fullPath="C:/git/Unity.DungeonCrawler/DungeonCrawler/Assets/SRC/ProceduralMapGeneration/PathFinding/NewPathFinding/Findpath.cs" />
+        <File uid="13" fullPath="C:/git/Unity.DungeonCrawler/DungeonCrawler/Assets/SRC/ProceduralMapGeneration/PathFinding/NewPathFinding/GetNextNode.cs" />
+        <File uid="14" fullPath="C:/git/Unity.DungeonCrawler/DungeonCrawler/Assets/SRC/ProceduralMapGeneration/PathFinding/NewPathFinding/NodeGridCreator.cs" />
+        <File uid="15" fullPath="C:/git/Unity.DungeonCrawler/DungeonCrawler/Assets/SRC/ProceduralMapGeneration/PathFinding/NewPathFinding/SetNodeNeighbors.cs" />
+        <File uid="16" fullPath="C:/git/Unity.DungeonCrawler/DungeonCrawler/Assets/SRC/ProceduralMapGeneration/PathFinding/NewPathFinding/Variables.cs" />
+        <File uid="17" fullPath="C:/git/Unity.DungeonCrawler/DungeonCrawler/Assets/SRC/ProceduralMapGeneration/PathFinding/PathMapBuilder/PathMapBuilder.cs" />
+        <File uid="18" fullPath="C:/git/Unity.DungeonCrawler/DungeonCrawler/Assets/SRC/ProceduralMapGeneration/Noise/PerlinNoiseGenerator/PerlinNoiseGenerator.cs" />
+      </Files>
+      <Classes>
+        <Class>
+          <Summary numSequencePoints="4" visitedSequencePoints="4" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="100.0" branchCoverage="0.0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" maxCrapScore="1" minCrapScore="1" visitedClasses="1" numClasses="1" visitedMethods="1" numMethods="1" />
+          <FullName>Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.PathFinding.NewPathFinding</FullName>
+          <Methods>
+            <Method visited="true" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="100.0" branchCoverage="0" crapScore="1" isConstructor="false" isStatic="false" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="4" visitedSequencePoints="4" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="100.0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" maxCrapScore="1" minCrapScore="1" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
+              <MetadataToken>100663346</MetadataToken>
+              <Name>UnityEngine.Vector3[] Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.PathFinding.NewPathFinding::FindEnds(UnityEngine.Vector3[])</Name>
+              <FileRef uid="11" />
+              <SequencePoints>
+                <SequencePoint vc="1" uspid="29938" ordinal="0" offset="0" sl="27" sc="9" el="27" ec="9" bec="0" bev="0" fileid="11">
+                  <TrackedMethodRefs>
+                    <TrackedMethodRef uid="0" vc="1" />
+                  </TrackedMethodRefs>
+                </SequencePoint>
+                <SequencePoint vc="1" uspid="29939" ordinal="0" offset="1" sl="28" sc="13" el="28" ec="13" bec="0" bev="0" fileid="11">
+                  <TrackedMethodRefs>
+                    <TrackedMethodRef uid="0" vc="1" />
+                  </TrackedMethodRefs>
+                </SequencePoint>
+                <SequencePoint vc="1" uspid="29940" ordinal="0" offset="64" sl="33" sc="13" el="33" ec="13" bec="0" bev="0" fileid="11">
+                  <TrackedMethodRefs>
+                    <TrackedMethodRef uid="0" vc="1" />
+                  </TrackedMethodRefs>
+                </SequencePoint>
+                <SequencePoint vc="1" uspid="29941" ordinal="0" offset="68" sl="34" sc="9" el="34" ec="9" bec="0" bev="0" fileid="11">
+                  <TrackedMethodRefs>
+                    <TrackedMethodRef uid="0" vc="1" />
+                  </TrackedMethodRefs>
+                </SequencePoint>
+              </SequencePoints>
+              <BranchPoints />
+            </Method>
+          </Methods>
+        </Class>
+      </Classes>
+      <TrackedMethods>
+        <TrackedMethod uid="0" token="100663305" name="System.Void Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding::Should_Return_A_List_Of_Two_Different_Vector3s_When_Given_A_List_Of_Vector3s()" strategy="Test" />
+      </TrackedMethods>
+    </Module>
+  </Modules>
+</CoverageSession>
