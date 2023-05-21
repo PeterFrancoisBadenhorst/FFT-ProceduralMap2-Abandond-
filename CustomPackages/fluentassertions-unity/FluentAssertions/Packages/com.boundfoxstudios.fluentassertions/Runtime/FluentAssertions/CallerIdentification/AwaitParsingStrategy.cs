@@ -1,46 +1,46 @@
 ﻿using System.Text;
 
-namespace FluentAssertions.CallerIdentification {
-
-internal class AwaitParsingStrategy : IParsingStrategy
+namespace FluentAssertions.CallerIdentification
 {
-    private const string KeywordToSkip = "await ";
-
-    public ParsingState Parse(char symbol, StringBuilder statement)
+    internal class AwaitParsingStrategy : IParsingStrategy
     {
-        if (IsLongEnoughToContainOurKeyword(statement) && EndsWithOurKeyword(statement))
+        private const string KeywordToSkip = "await ";
+
+        public ParsingState Parse(char symbol, StringBuilder statement)
         {
-            statement.Remove(statement.Length - KeywordToSkip.Length, KeywordToSkip.Length);
-        }
-
-        return ParsingState.InProgress;
-    }
-
-    private static bool EndsWithOurKeyword(StringBuilder statement)
-    {
-        var leftIndex = statement.Length - 1;
-        var rightIndex = KeywordToSkip.Length - 1;
-
-        for (var offset = 0; offset < KeywordToSkip.Length; offset++)
-        {
-            if (statement[leftIndex - offset] != KeywordToSkip[rightIndex - offset])
+            if (IsLongEnoughToContainOurKeyword(statement) && EndsWithOurKeyword(statement))
             {
-                return false;
+                statement.Remove(statement.Length - KeywordToSkip.Length, KeywordToSkip.Length);
             }
+
+            return ParsingState.InProgress;
         }
 
-        return true;
-    }
+        private static bool EndsWithOurKeyword(StringBuilder statement)
+        {
+            var leftIndex = statement.Length - 1;
+            var rightIndex = KeywordToSkip.Length - 1;
 
-    private static bool IsLongEnoughToContainOurKeyword(StringBuilder statement) => statement.Length >= KeywordToSkip.Length;
+            for (var offset = 0; offset < KeywordToSkip.Length; offset++)
+            {
+                if (statement[leftIndex - offset] != KeywordToSkip[rightIndex - offset])
+                {
+                    return false;
+                }
+            }
 
-    public bool IsWaitingForContextEnd()
-    {
-        return false;
-    }
+            return true;
+        }
 
-    public void NotifyEndOfLineReached()
-    {
+        private static bool IsLongEnoughToContainOurKeyword(StringBuilder statement) => statement.Length >= KeywordToSkip.Length;
+
+        public bool IsWaitingForContextEnd()
+        {
+            return false;
+        }
+
+        public void NotifyEndOfLineReached()
+        {
+        }
     }
-}
 }

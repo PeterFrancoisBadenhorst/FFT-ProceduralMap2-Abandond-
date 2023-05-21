@@ -1,23 +1,23 @@
-﻿namespace FluentAssertions.Equivalency {
-
-/// <summary>
-///  Convenient implementation of <see cref="IEquivalencyStep"/> that will only invoke
-/// </summary>
-public abstract class EquivalencyStep<T> : IEquivalencyStep
+﻿namespace FluentAssertions.Equivalency
 {
-    public EquivalencyResult Handle(Comparands comparands, IEquivalencyValidationContext context, IEquivalencyValidator nestedValidator)
+    /// <summary>
+    ///  Convenient implementation of <see cref="IEquivalencyStep"/> that will only invoke
+    /// </summary>
+    public abstract class EquivalencyStep<T> : IEquivalencyStep
     {
-        if (!typeof(T).IsAssignableFrom(comparands.GetExpectedType(context.Options)))
+        public EquivalencyResult Handle(Comparands comparands, IEquivalencyValidationContext context, IEquivalencyValidator nestedValidator)
         {
-            return EquivalencyResult.ContinueWithNext;
+            if (!typeof(T).IsAssignableFrom(comparands.GetExpectedType(context.Options)))
+            {
+                return EquivalencyResult.ContinueWithNext;
+            }
+
+            return OnHandle(comparands, context, nestedValidator);
         }
 
-        return OnHandle(comparands, context, nestedValidator);
+        /// <summary>
+        /// Implements <see cref="IEquivalencyStep.Handle"/>, but only gets called when the expected type matches <typeparamref name="T"/>.
+        /// </summary>
+        protected abstract EquivalencyResult OnHandle(Comparands comparands, IEquivalencyValidationContext context, IEquivalencyValidator nestedValidator);
     }
-
-    /// <summary>
-    /// Implements <see cref="IEquivalencyStep.Handle"/>, but only gets called when the expected type matches <typeparamref name="T"/>.
-    /// </summary>
-    protected abstract EquivalencyResult OnHandle(Comparands comparands, IEquivalencyValidationContext context, IEquivalencyValidator nestedValidator);
-}
 }

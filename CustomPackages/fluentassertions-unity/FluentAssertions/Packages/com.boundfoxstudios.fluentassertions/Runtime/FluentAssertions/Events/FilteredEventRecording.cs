@@ -3,43 +3,43 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace FluentAssertions.Events {
-
-internal class FilteredEventRecording : IEventRecording
+namespace FluentAssertions.Events
 {
-    private readonly OccurredEvent[] occurredEvents;
-
-    public FilteredEventRecording(IEventRecording eventRecorder, IEnumerable<OccurredEvent> events)
+    internal class FilteredEventRecording : IEventRecording
     {
-        EventObject = eventRecorder.EventObject;
-        EventName = eventRecorder.EventName;
-        EventHandlerType = eventRecorder.EventHandlerType;
+        private readonly OccurredEvent[] occurredEvents;
 
-        occurredEvents = events.ToArray();
-    }
-
-    public object EventObject { get; }
-
-    public string EventName { get; }
-
-    public Type EventHandlerType { get; }
-
-    IEnumerator IEnumerable.GetEnumerator()
-    {
-        return GetEnumerator();
-    }
-
-    public IEnumerator<OccurredEvent> GetEnumerator()
-    {
-        foreach (var occurredEvent in occurredEvents)
+        public FilteredEventRecording(IEventRecording eventRecorder, IEnumerable<OccurredEvent> events)
         {
-            yield return new OccurredEvent
+            EventObject = eventRecorder.EventObject;
+            EventName = eventRecorder.EventName;
+            EventHandlerType = eventRecorder.EventHandlerType;
+
+            occurredEvents = events.ToArray();
+        }
+
+        public object EventObject { get; }
+
+        public string EventName { get; }
+
+        public Type EventHandlerType { get; }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
+        }
+
+        public IEnumerator<OccurredEvent> GetEnumerator()
+        {
+            foreach (var occurredEvent in occurredEvents)
             {
-                EventName = EventName,
-                Parameters = occurredEvent.Parameters,
-                TimestampUtc = occurredEvent.TimestampUtc
-            };
+                yield return new OccurredEvent
+                {
+                    EventName = EventName,
+                    Parameters = occurredEvent.Parameters,
+                    TimestampUtc = occurredEvent.TimestampUtc
+                };
+            }
         }
     }
-}
 }

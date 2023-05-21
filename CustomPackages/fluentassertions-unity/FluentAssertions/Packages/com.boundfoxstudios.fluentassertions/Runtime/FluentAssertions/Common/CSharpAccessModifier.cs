@@ -1,13 +1,13 @@
-﻿namespace FluentAssertions.Common {
-
-public enum CSharpAccessModifier
+﻿namespace FluentAssertions.Common
 {
-    Public,
-    Private,
-    Protected,
-    Internal,
-    ProtectedInternal,
-    InvalidForCSharp,
-    PrivateProtected,
-}
+    public enum CSharpAccessModifier
+    {
+        Public,
+        Private,
+        Protected,
+        Internal,
+        ProtectedInternal,
+        InvalidForCSharp,
+        PrivateProtected,
+    }
 }

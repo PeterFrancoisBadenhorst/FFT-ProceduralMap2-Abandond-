@@ -1,19 +1,19 @@
 ﻿using System;
 
-namespace FluentAssertions {
-
-internal class Disposable : IDisposable
+namespace FluentAssertions
 {
-    private readonly Action action;
-
-    public Disposable(Action action)
+    internal class Disposable : IDisposable
     {
-        this.action = action;
-    }
+        private readonly Action action;
 
-    public void Dispose()
-    {
-        action();
+        public Disposable(Action action)
+        {
+            this.action = action;
+        }
+
+        public void Dispose()
+        {
+            action();
+        }
     }
-}
 }

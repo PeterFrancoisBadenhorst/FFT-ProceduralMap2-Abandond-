@@ -1,70 +1,70 @@
+using FluentAssertions.Execution;
 using System;
 using System.Collections;
 using System.Linq;
-using FluentAssertions.Execution;
 
-namespace FluentAssertions.Equivalency.Steps {
-
-public class EnumerableEquivalencyStep : IEquivalencyStep
+namespace FluentAssertions.Equivalency.Steps
 {
-    public EquivalencyResult Handle(Comparands comparands, IEquivalencyValidationContext context, IEquivalencyValidator nestedValidator)
+    public class EnumerableEquivalencyStep : IEquivalencyStep
     {
-        if (!IsCollection(comparands.GetExpectedType(context.Options)))
+        public EquivalencyResult Handle(Comparands comparands, IEquivalencyValidationContext context, IEquivalencyValidator nestedValidator)
         {
-            return EquivalencyResult.ContinueWithNext;
-        }
-
-        if (AssertSubjectIsCollection(comparands.Subject))
-        {
-            var validator = new EnumerableEquivalencyValidator(nestedValidator, context)
+            if (!IsCollection(comparands.GetExpectedType(context.Options)))
             {
-                Recursive = context.CurrentNode.IsRoot || context.Options.IsRecursive,
-                OrderingRules = context.Options.OrderingRules
-            };
+                return EquivalencyResult.ContinueWithNext;
+            }
 
-            validator.Execute(ToArray(comparands.Subject), ToArray(comparands.Expectation));
+            if (AssertSubjectIsCollection(comparands.Subject))
+            {
+                var validator = new EnumerableEquivalencyValidator(nestedValidator, context)
+                {
+                    Recursive = context.CurrentNode.IsRoot || context.Options.IsRecursive,
+                    OrderingRules = context.Options.OrderingRules
+                };
+
+                validator.Execute(ToArray(comparands.Subject), ToArray(comparands.Expectation));
+            }
+
+            return EquivalencyResult.AssertionCompleted;
         }
 
-        return EquivalencyResult.AssertionCompleted;
-    }
-
-    private static bool AssertSubjectIsCollection(object subject)
-    {
-        bool conditionMet = AssertionScope.Current
-            .ForCondition(subject is not null)
-            .FailWith("Expected a collection, but {context:Subject} is <null>.");
-
-        if (conditionMet)
+        private static bool AssertSubjectIsCollection(object subject)
         {
-            conditionMet = AssertionScope.Current
-            .ForCondition(IsCollection(subject.GetType()))
-            .FailWith("Expected a collection, but {context:Subject} is of a non-collection type.");
+            bool conditionMet = AssertionScope.Current
+                .ForCondition(subject is not null)
+                .FailWith("Expected a collection, but {context:Subject} is <null>.");
+
+            if (conditionMet)
+            {
+                conditionMet = AssertionScope.Current
+                .ForCondition(IsCollection(subject.GetType()))
+                .FailWith("Expected a collection, but {context:Subject} is of a non-collection type.");
+            }
+
+            return conditionMet;
         }
 
-        return conditionMet;
-    }
-
-    private static bool IsCollection(Type type)
-    {
-        return !typeof(string).IsAssignableFrom(type) && typeof(IEnumerable).IsAssignableFrom(type);
-    }
-
-    internal static object[] ToArray(object value)
-    {
-        if (value == null)
+        private static bool IsCollection(Type type)
         {
-            return null;
+            return !typeof(string).IsAssignableFrom(type) && typeof(IEnumerable).IsAssignableFrom(type);
         }
 
-        try
+        internal static object[] ToArray(object value)
         {
-            return ((IEnumerable)value).Cast<object>().ToArray();
-        }
-        catch (InvalidOperationException) when (value.GetType().Name.Equals("ImmutableArray`1", StringComparison.Ordinal))
-        {
-            // This is probably a default ImmutableArray<T>
-            return Array.Empty<object>();
+            if (value == null)
+            {
+                return null;
+            }
+
+            try
+            {
+                return ((IEnumerable)value).Cast<object>().ToArray();
+            }
+            catch (InvalidOperationException) when (value.GetType().Name.Equals("ImmutableArray`1", StringComparison.Ordinal))
+            {
+                // This is probably a default ImmutableArray<T>
+                return Array.Empty<object>();
+            }
         }
     }
-}
 }

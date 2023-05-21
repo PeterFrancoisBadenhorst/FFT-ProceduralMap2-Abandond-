@@ -3,78 +3,78 @@ using System.Globalization;
 using System.Linq;
 using System.Text;
 
-namespace FluentAssertions.Xml.Equivalency {
-
-internal sealed class Node
+namespace FluentAssertions.Xml.Equivalency
 {
-    private readonly List<Node> children = new();
-    private readonly string name;
-    private int count;
-
-    public static Node CreateRoot() => new Node(null, null);
-
-    private Node(Node parent, string name)
+    internal sealed class Node
     {
-        Parent = parent;
-        this.name = name;
-    }
+        private readonly List<Node> children = new();
+        private readonly string name;
+        private int count;
 
-    public string GetXPath()
-    {
-        var resultBuilder = new StringBuilder();
+        public static Node CreateRoot() => new Node(null, null);
 
-        foreach (Node location in GetPath().Reverse())
+        private Node(Node parent, string name)
         {
-            if (location.count > 1)
+            Parent = parent;
+            this.name = name;
+        }
+
+        public string GetXPath()
+        {
+            var resultBuilder = new StringBuilder();
+
+            foreach (Node location in GetPath().Reverse())
             {
-                resultBuilder.AppendFormat(CultureInfo.InvariantCulture, "/{0}[{1}]", location.name, location.count);
+                if (location.count > 1)
+                {
+                    resultBuilder.AppendFormat(CultureInfo.InvariantCulture, "/{0}[{1}]", location.name, location.count);
+                }
+                else
+                {
+                    resultBuilder.AppendFormat(CultureInfo.InvariantCulture, "/{0}", location.name);
+                }
             }
-            else
+
+            if (resultBuilder.Length == 0)
             {
-                resultBuilder.AppendFormat(CultureInfo.InvariantCulture, "/{0}", location.name);
+                return "/";
+            }
+
+            return resultBuilder.ToString();
+        }
+
+        private IEnumerable<Node> GetPath()
+        {
+            Node current = this;
+            while (current.Parent is not null)
+            {
+                yield return current;
+                current = current.Parent;
             }
         }
 
-        if (resultBuilder.Length == 0)
+        public Node Parent { get; }
+
+        public Node Push(string localName)
         {
-            return "/";
+            Node node = children.Find(e => e.name == localName)
+                        ?? AddChildNode(localName);
+
+            node.count++;
+
+            return node;
         }
 
-        return resultBuilder.ToString();
-    }
-
-    private IEnumerable<Node> GetPath()
-    {
-        Node current = this;
-        while (current.Parent is not null)
+        public void Pop()
         {
-            yield return current;
-            current = current.Parent;
+            children.Clear();
+        }
+
+        private Node AddChildNode(string name)
+        {
+            var node = new Node(this, name);
+            children.Add(node);
+            return node;
         }
     }
-
-    public Node Parent { get; }
-
-    public Node Push(string localName)
-    {
-        Node node = children.Find(e => e.name == localName)
-                    ?? AddChildNode(localName);
-
-        node.count++;
-
-        return node;
-    }
-
-    public void Pop()
-    {
-        children.Clear();
-    }
-
-    private Node AddChildNode(string name)
-    {
-        var node = new Node(this, name);
-        children.Add(node);
-        return node;
-    }
-}
 }

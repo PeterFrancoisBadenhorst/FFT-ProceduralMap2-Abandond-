@@ -1,22 +1,22 @@
-﻿namespace FluentAssertions.Equivalency.Steps {
-
-/// <summary>
-/// Represents a composite equivalency step that passes the execution to all user-supplied steps that can handle the
-/// current context.
-/// </summary>
-public class RunAllUserStepsEquivalencyStep : IEquivalencyStep
+﻿namespace FluentAssertions.Equivalency.Steps
 {
-    public EquivalencyResult Handle(Comparands comparands, IEquivalencyValidationContext context, IEquivalencyValidator nestedValidator)
+    /// <summary>
+    /// Represents a composite equivalency step that passes the execution to all user-supplied steps that can handle the
+    /// current context.
+    /// </summary>
+    public class RunAllUserStepsEquivalencyStep : IEquivalencyStep
     {
-        foreach (IEquivalencyStep step in context.Options.UserEquivalencySteps)
+        public EquivalencyResult Handle(Comparands comparands, IEquivalencyValidationContext context, IEquivalencyValidator nestedValidator)
         {
-            if (step.Handle(comparands, context, nestedValidator) == EquivalencyResult.AssertionCompleted)
+            foreach (IEquivalencyStep step in context.Options.UserEquivalencySteps)
             {
-                return EquivalencyResult.AssertionCompleted;
+                if (step.Handle(comparands, context, nestedValidator) == EquivalencyResult.AssertionCompleted)
+                {
+                    return EquivalencyResult.AssertionCompleted;
+                }
             }
-        }
 
-        return EquivalencyResult.ContinueWithNext;
+            return EquivalencyResult.ContinueWithNext;
+        }
     }
-}
 }

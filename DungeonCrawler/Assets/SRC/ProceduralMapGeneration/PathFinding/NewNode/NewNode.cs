@@ -11,6 +11,5 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.
         public bool Closed;                     // Whether the node has been visited
         public float fCost, hCost;              // Cost variables used in A* algorithm
         public NewNode LastNode;                // The last node visited in the path
-
     }
 }

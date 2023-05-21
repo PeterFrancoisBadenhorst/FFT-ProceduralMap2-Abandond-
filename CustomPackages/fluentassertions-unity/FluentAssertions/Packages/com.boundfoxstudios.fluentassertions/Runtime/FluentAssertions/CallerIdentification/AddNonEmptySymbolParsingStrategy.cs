@@ -1,58 +1,58 @@
 ﻿using System.Text;
 
-namespace FluentAssertions.CallerIdentification {
-
-internal class AddNonEmptySymbolParsingStrategy : IParsingStrategy
+namespace FluentAssertions.CallerIdentification
 {
-    private Mode mode = Mode.RemoveAllWhitespace;
-    private char? precedingSymbol;
-
-    public ParsingState Parse(char symbol, StringBuilder statement)
+    internal class AddNonEmptySymbolParsingStrategy : IParsingStrategy
     {
-        if (!char.IsWhiteSpace(symbol))
+        private Mode mode = Mode.RemoveAllWhitespace;
+        private char? precedingSymbol;
+
+        public ParsingState Parse(char symbol, StringBuilder statement)
         {
-            statement.Append(symbol);
-            mode = Mode.RemoveSuperfluousWhitespace;
-        }
-        else if (mode is Mode.RemoveSuperfluousWhitespace)
-        {
-            if (precedingSymbol is char value && !char.IsWhiteSpace(value))
+            if (!char.IsWhiteSpace(symbol))
             {
                 statement.Append(symbol);
+                mode = Mode.RemoveSuperfluousWhitespace;
             }
+            else if (mode is Mode.RemoveSuperfluousWhitespace)
+            {
+                if (precedingSymbol is char value && !char.IsWhiteSpace(value))
+                {
+                    statement.Append(symbol);
+                }
+            }
+            else
+            {
+                // skip the rest
+            }
+
+            precedingSymbol = symbol;
+
+            return ParsingState.GoToNextSymbol;
         }
-        else
+
+        public bool IsWaitingForContextEnd()
         {
-            // skip the rest
+            return false;
         }
 
-        precedingSymbol = symbol;
+        public void NotifyEndOfLineReached()
+        {
+            // Assume all new lines start with whitespace
+            mode = Mode.RemoveAllWhitespace;
+        }
 
-        return ParsingState.GoToNextSymbol;
+        private enum Mode
+        {
+            /// <summary>
+            /// Remove all whitespace until we find a non-whitespace character
+            /// </summary>
+            RemoveAllWhitespace,
+
+            /// <summary>
+            /// Only keep one whitespace character if more than one follow each other.
+            /// </summary>
+            RemoveSuperfluousWhitespace,
+        }
     }
-
-    public bool IsWaitingForContextEnd()
-    {
-        return false;
-    }
-
-    public void NotifyEndOfLineReached()
-    {
-        // Assume all new lines start with whitespace
-        mode = Mode.RemoveAllWhitespace;
-    }
-
-    private enum Mode
-    {
-        /// <summary>
-        /// Remove all whitespace until we find a non-whitespace character
-        /// </summary>
-        RemoveAllWhitespace,
-
-        /// <summary>
-        /// Only keep one whitespace character if more than one follow each other.
-        /// </summary>
-        RemoveSuperfluousWhitespace,
-    }
-}
 }

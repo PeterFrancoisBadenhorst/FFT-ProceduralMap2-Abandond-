@@ -1,40 +1,40 @@
 ﻿using System.Text;
 
-namespace FluentAssertions.CallerIdentification {
-
-internal class SingleLineCommentParsingStrategy : IParsingStrategy
+namespace FluentAssertions.CallerIdentification
 {
-    private bool isCommentContext;
-
-    public ParsingState Parse(char symbol, StringBuilder statement)
+    internal class SingleLineCommentParsingStrategy : IParsingStrategy
     {
-        if (isCommentContext)
+        private bool isCommentContext;
+
+        public ParsingState Parse(char symbol, StringBuilder statement)
         {
+            if (isCommentContext)
+            {
+                return ParsingState.GoToNextSymbol;
+            }
+
+            var doesSymbolStartComment = symbol == '/' && statement.Length > 0 && statement[statement.Length - 1] == '/';
+            if (!doesSymbolStartComment)
+            {
+                return ParsingState.InProgress;
+            }
+
+            isCommentContext = true;
+            statement.Remove(statement.Length - 1, 1);
             return ParsingState.GoToNextSymbol;
         }
 
-        var doesSymbolStartComment = symbol == '/' && statement.Length > 0 && statement[statement.Length - 1] == '/';
-        if (!doesSymbolStartComment)
+        public bool IsWaitingForContextEnd()
         {
-            return ParsingState.InProgress;
+            return isCommentContext;
         }
 
-        isCommentContext = true;
-        statement.Remove(statement.Length - 1, 1);
-        return ParsingState.GoToNextSymbol;
-    }
-
-    public bool IsWaitingForContextEnd()
-    {
-        return isCommentContext;
-    }
-
-    public void NotifyEndOfLineReached()
-    {
-        if (isCommentContext)
+        public void NotifyEndOfLineReached()
         {
-            isCommentContext = false;
+            if (isCommentContext)
+            {
+                isCommentContext = false;
+            }
         }
     }
-}
 }

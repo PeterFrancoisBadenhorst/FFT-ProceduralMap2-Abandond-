@@ -2,20 +2,20 @@
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace FluentAssertions.Common {
-
-/// <summary>
-/// Default implementation for <see cref="IClock"/> for production use.
-/// </summary>
-internal class Clock : IClock
+namespace FluentAssertions.Common
 {
-    public void Delay(TimeSpan timeToDelay) => Task.Delay(timeToDelay).GetAwaiter().GetResult();
-
-    public Task DelayAsync(TimeSpan delay, CancellationToken cancellationToken)
+    /// <summary>
+    /// Default implementation for <see cref="IClock"/> for production use.
+    /// </summary>
+    internal class Clock : IClock
     {
-        return Task.Delay(delay, cancellationToken);
-    }
+        public void Delay(TimeSpan timeToDelay) => Task.Delay(timeToDelay).GetAwaiter().GetResult();
 
-    public ITimer StartTimer() => new StopwatchTimer();
-}
+        public Task DelayAsync(TimeSpan delay, CancellationToken cancellationToken)
+        {
+            return Task.Delay(delay, cancellationToken);
+        }
+
+        public ITimer StartTimer() => new StopwatchTimer();
+    }
 }

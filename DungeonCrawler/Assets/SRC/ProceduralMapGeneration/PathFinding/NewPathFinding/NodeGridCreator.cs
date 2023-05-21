@@ -1,11 +1,5 @@
-using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.PathFinding;
-using Assets.SRC.ProceduralMapGeneration.Assets.SRC.Shared.Assets.SRC.Shared.Utilities;
-using Codice.Client.Common.TreeGrouper;
-using System;
 using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
-using UnityEngine.Analytics;
 
 namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.PathFinding
 {
@@ -19,8 +13,8 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.
     ///  end-start node chooser -
     ///  Itterate through Neighbors to get to end node -
     ///  Return Array of positions to use -
-    ///  
-    /// 
+    ///
+    ///
     /// Issue : getting Null Ref in   GetNextNode @   node.Neighbors.Count;
     /// </summary>
     internal partial class NewPathFinding
@@ -53,6 +47,7 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.
 
             return path.ToArray();
         }
+
         /// <summary>
         /// This method creates a grid of nodes and finds the shortest path between two points in the grid.
         /// </summary>

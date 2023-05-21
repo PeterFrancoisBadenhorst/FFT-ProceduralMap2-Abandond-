@@ -2,18 +2,18 @@
 using System.Linq;
 using System.Text;
 
-namespace FluentAssertions.CallerIdentification {
-
-internal class CallerStatementBuilder
+namespace FluentAssertions.CallerIdentification
 {
-    private readonly StringBuilder statement;
-    private readonly List<IParsingStrategy> priorityOrderedParsingStrategies;
-    private ParsingState parsingState = ParsingState.InProgress;
-
-    internal CallerStatementBuilder()
+    internal class CallerStatementBuilder
     {
-        statement = new StringBuilder();
-        priorityOrderedParsingStrategies = new List<IParsingStrategy>
+        private readonly StringBuilder statement;
+        private readonly List<IParsingStrategy> priorityOrderedParsingStrategies;
+        private ParsingState parsingState = ParsingState.InProgress;
+
+        internal CallerStatementBuilder()
+        {
+            statement = new StringBuilder();
+            priorityOrderedParsingStrategies = new List<IParsingStrategy>
         {
             new QuotesParsingStrategy(),
             new MultiLineCommentParsingStrategy(),
@@ -23,42 +23,42 @@ internal class CallerStatementBuilder
             new AwaitParsingStrategy(),
             new AddNonEmptySymbolParsingStrategy()
         };
-    }
+        }
 
-    internal void Append(string symbols)
-    {
-        using var symbolEnumerator = symbols.GetEnumerator();
-        while (symbolEnumerator.MoveNext() && parsingState != ParsingState.Done)
+        internal void Append(string symbols)
         {
-            var hasParsingStrategyWaitingForEndContext = priorityOrderedParsingStrategies
-                .Any(s => s.IsWaitingForContextEnd());
-
-            parsingState = ParsingState.InProgress;
-            foreach (var parsingStrategy in
-                priorityOrderedParsingStrategies
-                    .SkipWhile(parsingStrategy =>
-                        hasParsingStrategyWaitingForEndContext
-                        && !parsingStrategy.IsWaitingForContextEnd()))
+            using var symbolEnumerator = symbols.GetEnumerator();
+            while (symbolEnumerator.MoveNext() && parsingState != ParsingState.Done)
             {
-                parsingState = parsingStrategy.Parse(symbolEnumerator.Current, statement);
-                if (parsingState != ParsingState.InProgress)
+                var hasParsingStrategyWaitingForEndContext = priorityOrderedParsingStrategies
+                    .Any(s => s.IsWaitingForContextEnd());
+
+                parsingState = ParsingState.InProgress;
+                foreach (var parsingStrategy in
+                    priorityOrderedParsingStrategies
+                        .SkipWhile(parsingStrategy =>
+                            hasParsingStrategyWaitingForEndContext
+                            && !parsingStrategy.IsWaitingForContextEnd()))
                 {
-                    break;
+                    parsingState = parsingStrategy.Parse(symbolEnumerator.Current, statement);
+                    if (parsingState != ParsingState.InProgress)
+                    {
+                        break;
+                    }
                 }
             }
+
+            if (IsDone())
+            {
+                return;
+            }
+
+            priorityOrderedParsingStrategies
+                .ForEach(strategy => strategy.NotifyEndOfLineReached());
         }
 
-        if (IsDone())
-        {
-            return;
-        }
+        internal bool IsDone() => parsingState == ParsingState.Done;
 
-        priorityOrderedParsingStrategies
-            .ForEach(strategy => strategy.NotifyEndOfLineReached());
+        public override string ToString() => statement.ToString();
     }
-
-    internal bool IsDone() => parsingState == ParsingState.Done;
-
-    public override string ToString() => statement.ToString();
-}
 }

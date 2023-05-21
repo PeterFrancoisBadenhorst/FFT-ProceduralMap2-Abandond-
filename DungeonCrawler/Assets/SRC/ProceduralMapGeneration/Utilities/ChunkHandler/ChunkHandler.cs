@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Enums;
+﻿using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Enums;
 using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Mono.Behaviors;
 using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Structs;
-using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Utilities;
+using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Utilities
@@ -71,6 +67,7 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.
             }
             return grid;
         }
+
         /// <summary>
         /// This method assigns chunk types to the chunks in the grid.
         /// </summary>
@@ -84,6 +81,7 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.
             }
             return grid;
         }
+
         /// <summary>
         /// This method finds the neighbors of the chunks in the grid.
         /// </summary>
@@ -118,7 +116,6 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.
                     result += "B";
 
                 return (DirectionTypeEnum)Enum.Parse(typeof(DirectionTypeEnum), result);
-
             }
             else if (chunk.Direction == DirectionTypeEnum.Error)
             {

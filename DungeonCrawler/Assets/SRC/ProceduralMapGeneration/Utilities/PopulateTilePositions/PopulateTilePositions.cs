@@ -1,16 +1,11 @@
-﻿using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Utilities;
-using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Structs;
+﻿using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Mono.Behaviors;
 using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.ScriptableObjects;
-using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Noise;
-using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Mono.Managers;
-using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Mono.Behaviors;
-using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Enums;
 using System.Collections.Generic;
 using UnityEngine;
 
 namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Utilities
 {
-    public class PopulateTilePositions 
+    public class PopulateTilePositions
     {
         /// <summary>
         /// Sets the child tile for each parent object in the specified list.
@@ -32,7 +27,7 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.
 
                 t.transform.SetParent(parentObjects[i].transform, false);
                 parentObjects[i].isStatic = true;
-                parentObjects[i].name =  i + "   " + parentObjects[i].transform.position.ToString() ;
+                parentObjects[i].name = i + "   " + parentObjects[i].transform.position.ToString();
             }
             return parentObjects;
         }

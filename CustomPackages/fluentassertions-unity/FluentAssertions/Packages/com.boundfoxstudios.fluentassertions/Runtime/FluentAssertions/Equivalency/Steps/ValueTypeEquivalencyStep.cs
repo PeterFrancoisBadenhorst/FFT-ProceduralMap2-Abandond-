@@ -1,36 +1,36 @@
 using System;
 
-namespace FluentAssertions.Equivalency.Steps {
-
-/// <summary>
-/// Ensures that types that are marked as value types are treated as such.
-/// </summary>
-public class ValueTypeEquivalencyStep : IEquivalencyStep
+namespace FluentAssertions.Equivalency.Steps
 {
-    public EquivalencyResult Handle(Comparands comparands, IEquivalencyValidationContext context, IEquivalencyValidator nestedValidator)
+    /// <summary>
+    /// Ensures that types that are marked as value types are treated as such.
+    /// </summary>
+    public class ValueTypeEquivalencyStep : IEquivalencyStep
     {
-        Type expectationType = comparands.GetExpectedType(context.Options);
-        EqualityStrategy strategy = context.Options.GetEqualityStrategy(expectationType);
-
-        bool canHandle = (strategy == EqualityStrategy.Equals) || (strategy == EqualityStrategy.ForceEquals);
-        if (canHandle)
+        public EquivalencyResult Handle(Comparands comparands, IEquivalencyValidationContext context, IEquivalencyValidator nestedValidator)
         {
-            context.Tracer.WriteLine(member =>
+            Type expectationType = comparands.GetExpectedType(context.Options);
+            EqualityStrategy strategy = context.Options.GetEqualityStrategy(expectationType);
+
+            bool canHandle = (strategy == EqualityStrategy.Equals) || (strategy == EqualityStrategy.ForceEquals);
+            if (canHandle)
             {
-                string strategyName = (strategy == EqualityStrategy.Equals)
-                    ? $"{expectationType} overrides Equals" : "we are forced to use Equals";
+                context.Tracer.WriteLine(member =>
+                {
+                    string strategyName = (strategy == EqualityStrategy.Equals)
+                        ? $"{expectationType} overrides Equals" : "we are forced to use Equals";
 
-                return $"Treating {member.Description} as a value type because {strategyName}.";
-            });
+                    return $"Treating {member.Description} as a value type because {strategyName}.";
+                });
 
-            comparands.Subject.Should().Be(comparands.Expectation, context.Reason.FormattedMessage, context.Reason.Arguments);
+                comparands.Subject.Should().Be(comparands.Expectation, context.Reason.FormattedMessage, context.Reason.Arguments);
 
-            return EquivalencyResult.AssertionCompleted;
-        }
-        else
-        {
-            return EquivalencyResult.ContinueWithNext;
+                return EquivalencyResult.AssertionCompleted;
+            }
+            else
+            {
+                return EquivalencyResult.ContinueWithNext;
+            }
         }
     }
-}
 }

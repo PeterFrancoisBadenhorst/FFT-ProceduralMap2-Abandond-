@@ -1,42 +1,42 @@
 using System;
 using System.Text;
 
-namespace FluentAssertions.Equivalency.Tracing {
-
-public class StringBuilderTraceWriter : ITraceWriter
+namespace FluentAssertions.Equivalency.Tracing
 {
-    private readonly StringBuilder builder = new();
-    private int depth = 1;
-
-    public void AddSingle(string trace)
+    public class StringBuilderTraceWriter : ITraceWriter
     {
-        WriteLine(trace);
-    }
+        private readonly StringBuilder builder = new();
+        private int depth = 1;
 
-    public IDisposable AddBlock(string trace)
-    {
-        WriteLine(trace);
-        WriteLine("{");
-        depth++;
-
-        return new Disposable(() =>
+        public void AddSingle(string trace)
         {
-            depth--;
-            WriteLine("}");
-        });
-    }
+            WriteLine(trace);
+        }
 
-    private void WriteLine(string trace)
-    {
-        foreach (string traceLine in trace.Split(new[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries))
+        public IDisposable AddBlock(string trace)
         {
-            builder.Append(new string(' ', depth * 2)).AppendLine(traceLine);
+            WriteLine(trace);
+            WriteLine("{");
+            depth++;
+
+            return new Disposable(() =>
+            {
+                depth--;
+                WriteLine("}");
+            });
+        }
+
+        private void WriteLine(string trace)
+        {
+            foreach (string traceLine in trace.Split(new[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries))
+            {
+                builder.Append(new string(' ', depth * 2)).AppendLine(traceLine);
+            }
+        }
+
+        public override string ToString()
+        {
+            return builder.ToString();
         }
     }
-
-    public override string ToString()
-    {
-        return builder.ToString();
-    }
-}
 }

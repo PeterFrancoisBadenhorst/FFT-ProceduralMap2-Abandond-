@@ -1,117 +1,117 @@
 ﻿#region
 
+using FluentAssertions.Equivalency;
+using FluentAssertions.Equivalency.Steps;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using FluentAssertions.Equivalency;
-using FluentAssertions.Equivalency.Steps;
 
 #endregion
 
-namespace FluentAssertions {
-
-/// <summary>
-/// Represents a mutable collection of equivalency steps that can be reordered and/or amended with additional
-/// custom equivalency steps.
-/// </summary>
-public class EquivalencyPlan : IEnumerable<IEquivalencyStep>
+namespace FluentAssertions
 {
-    private List<IEquivalencyStep> steps;
-
-    public EquivalencyPlan()
-    {
-        steps = GetDefaultSteps();
-    }
-
-    public IEnumerator<IEquivalencyStep> GetEnumerator()
-    {
-        return steps.GetEnumerator();
-    }
-
-    IEnumerator IEnumerable.GetEnumerator()
-    {
-        return GetEnumerator();
-    }
-
     /// <summary>
-    /// Adds a new <see cref="IEquivalencyStep"/> after any of the built-in steps, with the exception of the final
-    /// <see cref="SimpleEqualityEquivalencyStep"/>.
+    /// Represents a mutable collection of equivalency steps that can be reordered and/or amended with additional
+    /// custom equivalency steps.
     /// </summary>
-    public void Add<TStep>()
-        where TStep : IEquivalencyStep, new()
+    public class EquivalencyPlan : IEnumerable<IEquivalencyStep>
     {
-        InsertBefore<SimpleEqualityEquivalencyStep, TStep>();
-    }
+        private List<IEquivalencyStep> steps;
 
-    /// <summary>
-    /// Adds a new <see cref="IEquivalencyStep"/> right after the specified <typeparamref name="TPredecessor"/>.
-    /// </summary>
-    public void AddAfter<TPredecessor, TStep>()
-        where TStep : IEquivalencyStep, new()
-    {
-        int insertIndex = Math.Max(steps.Count - 1, 0);
-
-        IEquivalencyStep predecessor = steps.LastOrDefault(s => s is TPredecessor);
-        if (predecessor is not null)
+        public EquivalencyPlan()
         {
-            insertIndex = Math.Min(insertIndex, steps.LastIndexOf(predecessor) + 1);
+            steps = GetDefaultSteps();
         }
 
-        steps.Insert(insertIndex, new TStep());
-    }
-
-    /// <summary>
-    /// Inserts a new <see cref="IEquivalencyStep"/> before any of the built-in steps.
-    /// </summary>
-    public void Insert<TStep>()
-        where TStep : IEquivalencyStep, new()
-    {
-        steps.Insert(0, new TStep());
-    }
-
-    /// <summary>
-    /// Inserts a new <see cref="IEquivalencyStep"/> just before the <typeparamref name="TSuccessor"/>.
-    /// </summary>
-    public void InsertBefore<TSuccessor, TStep>()
-        where TStep : IEquivalencyStep, new()
-    {
-        int insertIndex = Math.Max(steps.Count - 1, 0);
-
-        IEquivalencyStep equalityStep = steps.LastOrDefault(s => s is TSuccessor);
-        if (equalityStep is not null)
+        public IEnumerator<IEquivalencyStep> GetEnumerator()
         {
-            insertIndex = steps.LastIndexOf(equalityStep);
+            return steps.GetEnumerator();
         }
 
-        steps.Insert(insertIndex, new TStep());
-    }
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
+        }
 
-    /// <summary>
-    /// Removes all instances of the specified <typeparamref name="TStep"/> from the current step.
-    /// </summary>
-    public void Remove<TStep>()
-        where TStep : IEquivalencyStep
-    {
-        steps.RemoveAll(s => s is TStep);
-    }
+        /// <summary>
+        /// Adds a new <see cref="IEquivalencyStep"/> after any of the built-in steps, with the exception of the final
+        /// <see cref="SimpleEqualityEquivalencyStep"/>.
+        /// </summary>
+        public void Add<TStep>()
+            where TStep : IEquivalencyStep, new()
+        {
+            InsertBefore<SimpleEqualityEquivalencyStep, TStep>();
+        }
 
-    /// <summary>
-    /// Removes each and every built-in <see cref="IEquivalencyStep"/>.
-    /// </summary>
-    public void Clear()
-    {
-        steps.Clear();
-    }
+        /// <summary>
+        /// Adds a new <see cref="IEquivalencyStep"/> right after the specified <typeparamref name="TPredecessor"/>.
+        /// </summary>
+        public void AddAfter<TPredecessor, TStep>()
+            where TStep : IEquivalencyStep, new()
+        {
+            int insertIndex = Math.Max(steps.Count - 1, 0);
 
-    public void Reset()
-    {
-        steps = GetDefaultSteps();
-    }
+            IEquivalencyStep predecessor = steps.LastOrDefault(s => s is TPredecessor);
+            if (predecessor is not null)
+            {
+                insertIndex = Math.Min(insertIndex, steps.LastIndexOf(predecessor) + 1);
+            }
 
-    private static List<IEquivalencyStep> GetDefaultSteps()
-    {
-        return new(18)
+            steps.Insert(insertIndex, new TStep());
+        }
+
+        /// <summary>
+        /// Inserts a new <see cref="IEquivalencyStep"/> before any of the built-in steps.
+        /// </summary>
+        public void Insert<TStep>()
+            where TStep : IEquivalencyStep, new()
+        {
+            steps.Insert(0, new TStep());
+        }
+
+        /// <summary>
+        /// Inserts a new <see cref="IEquivalencyStep"/> just before the <typeparamref name="TSuccessor"/>.
+        /// </summary>
+        public void InsertBefore<TSuccessor, TStep>()
+            where TStep : IEquivalencyStep, new()
+        {
+            int insertIndex = Math.Max(steps.Count - 1, 0);
+
+            IEquivalencyStep equalityStep = steps.LastOrDefault(s => s is TSuccessor);
+            if (equalityStep is not null)
+            {
+                insertIndex = steps.LastIndexOf(equalityStep);
+            }
+
+            steps.Insert(insertIndex, new TStep());
+        }
+
+        /// <summary>
+        /// Removes all instances of the specified <typeparamref name="TStep"/> from the current step.
+        /// </summary>
+        public void Remove<TStep>()
+            where TStep : IEquivalencyStep
+        {
+            steps.RemoveAll(s => s is TStep);
+        }
+
+        /// <summary>
+        /// Removes each and every built-in <see cref="IEquivalencyStep"/>.
+        /// </summary>
+        public void Clear()
+        {
+            steps.Clear();
+        }
+
+        public void Reset()
+        {
+            steps = GetDefaultSteps();
+        }
+
+        private static List<IEquivalencyStep> GetDefaultSteps()
+        {
+            return new(18)
         {
             new RunAllUserStepsEquivalencyStep(),
             new AutoConversionStep(),
@@ -138,6 +138,6 @@ public class EquivalencyPlan : IEnumerable<IEquivalencyStep>
             new StructuralEqualityEquivalencyStep(),
             new SimpleEqualityEquivalencyStep(),
         };
+        }
     }
-}
 }

@@ -1,9 +1,9 @@
-﻿namespace FluentAssertions.CallerIdentification {
-
-internal enum ParsingState
+﻿namespace FluentAssertions.CallerIdentification
 {
-    InProgress,
-    GoToNextSymbol,
-    Done
-}
+    internal enum ParsingState
+    {
+        InProgress,
+        GoToNextSymbol,
+        Done
+    }
 }

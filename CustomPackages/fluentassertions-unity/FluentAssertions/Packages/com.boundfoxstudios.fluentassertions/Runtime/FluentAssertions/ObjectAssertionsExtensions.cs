@@ -1,233 +1,233 @@
-﻿using System;
+﻿using FluentAssertions.Common;
+using FluentAssertions.Equivalency;
+using FluentAssertions.Execution;
+using FluentAssertions.Primitives;
+using System;
 using System.IO;
 using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Xml.Serialization;
-using FluentAssertions.Common;
-using FluentAssertions.Equivalency;
-using FluentAssertions.Execution;
-using FluentAssertions.Primitives;
 
-namespace FluentAssertions {
-
-public static class ObjectAssertionsExtensions
+namespace FluentAssertions
 {
-    /// <summary>
-    /// Asserts that an object can be serialized and deserialized using the binary serializer and that it stills retains
-    /// the values of all members.
-    /// </summary>
-    /// <param name="assertions"></param>
-    /// <param name="because">
-    /// A formatted phrase as is supported by <see cref="string.Format(string,object[])" /> explaining why the assertion
-    /// is needed. If the phrase does not start with the word <i>because</i>, it is prepended automatically.
-    /// </param>
-    /// <param name="becauseArgs">
-    /// Zero or more objects to format using the placeholders in <paramref name="because" />.
-    /// </param>
-    public static AndConstraint<ObjectAssertions> BeBinarySerializable(this ObjectAssertions assertions, string because = "",
-        params object[] becauseArgs)
+    public static class ObjectAssertionsExtensions
     {
-        return BeBinarySerializable<object>(assertions, options => options, because, becauseArgs);
-    }
-
-    /// <summary>
-    /// Asserts that an object can be serialized and deserialized using the binary serializer and that it stills retains
-    /// the values of all members.
-    /// </summary>
-    /// <param name="assertions"></param>
-    /// <param name="options">
-    /// A reference to the <see cref="EquivalencyAssertionOptions{TExpectation}"/> configuration object that can be used
-    /// to influence the way the object graphs are compared. You can also provide an alternative instance of the
-    /// <see cref="EquivalencyAssertionOptions{TExpectation}"/> class. The global defaults are determined by the
-    /// <see cref="AssertionOptions"/> class.
-    /// </param>
-    /// <param name="because">
-    /// A formatted phrase as is supported by <see cref="string.Format(string,object[])" /> explaining why the assertion
-    /// is needed. If the phrase does not start with the word <i>because</i>, it is prepended automatically.
-    /// </param>
-    /// <param name="becauseArgs">
-    /// Zero or more objects to format using the placeholders in <paramref name="because" />.
-    /// </param>
-    public static AndConstraint<ObjectAssertions> BeBinarySerializable<T>(this ObjectAssertions assertions,
-        Func<EquivalencyAssertionOptions<T>, EquivalencyAssertionOptions<T>> options, string because = "",
-        params object[] becauseArgs)
-    {
-        Guard.ThrowIfArgumentIsNull(options, nameof(options));
-
-        try
+        /// <summary>
+        /// Asserts that an object can be serialized and deserialized using the binary serializer and that it stills retains
+        /// the values of all members.
+        /// </summary>
+        /// <param name="assertions"></param>
+        /// <param name="because">
+        /// A formatted phrase as is supported by <see cref="string.Format(string,object[])" /> explaining why the assertion
+        /// is needed. If the phrase does not start with the word <i>because</i>, it is prepended automatically.
+        /// </param>
+        /// <param name="becauseArgs">
+        /// Zero or more objects to format using the placeholders in <paramref name="because" />.
+        /// </param>
+        public static AndConstraint<ObjectAssertions> BeBinarySerializable(this ObjectAssertions assertions, string because = "",
+            params object[] becauseArgs)
         {
-            object deserializedObject = CreateCloneUsingBinarySerializer(assertions.Subject);
-
-            EquivalencyAssertionOptions<T> defaultOptions = AssertionOptions.CloneDefaults<T>()
-                .RespectingRuntimeTypes().IncludingFields().IncludingProperties();
-
-            ((T)deserializedObject).Should().BeEquivalentTo((T)assertions.Subject, _ => options(defaultOptions));
-        }
-        catch (Exception exc)
-        {
-            Execute.Assertion
-                .BecauseOf(because, becauseArgs)
-                .FailWith("Expected {0} to be serializable{reason}, but serialization failed with:{1}{1}{2}.",
-                    assertions.Subject,
-                    Environment.NewLine,
-                    exc.Message);
+            return BeBinarySerializable<object>(assertions, options => options, because, becauseArgs);
         }
 
-        return new AndConstraint<ObjectAssertions>(assertions);
-    }
-
-    /// <summary>
-    /// Asserts that an object can be serialized and deserialized using the data contract serializer and that it stills retains
-    /// the values of all members.
-    /// </summary>
-    /// <param name="assertions"></param>
-    /// <param name="because">
-    /// A formatted phrase as is supported by <see cref="string.Format(string,object[])" /> explaining why the assertion
-    /// is needed. If the phrase does not start with the word <i>because</i>, it is prepended automatically.
-    /// </param>
-    /// <param name="becauseArgs">
-    /// Zero or more objects to format using the placeholders in <paramref name="because" />.
-    /// </param>
-    public static AndConstraint<ObjectAssertions> BeDataContractSerializable(this ObjectAssertions assertions,
-        string because = "", params object[] becauseArgs)
-    {
-        return BeDataContractSerializable<object>(assertions, options => options, because, becauseArgs);
-    }
-
-    /// <summary>
-    /// Asserts that an object can be serialized and deserialized using the data contract serializer and that it stills retains
-    /// the values of all members.
-    /// </summary>
-    /// <param name="assertions"></param>
-    /// <param name="options">
-    /// A reference to the <see cref="EquivalencyAssertionOptions{TExpectation}"/> configuration object that can be used
-    /// to influence the way the object graphs are compared. You can also provide an alternative instance of the
-    /// <see cref="EquivalencyAssertionOptions{TExpectation}"/> class. The global defaults are determined by the
-    /// <see cref="AssertionOptions"/> class.
-    /// </param>
-    /// <param name="because">
-    /// A formatted phrase as is supported by <see cref="string.Format(string,object[])" /> explaining why the assertion
-    /// is needed. If the phrase does not start with the word <i>because</i>, it is prepended automatically.
-    /// </param>
-    /// <param name="becauseArgs">
-    /// Zero or more objects to format using the placeholders in <paramref name="because" />.
-    /// </param>
-    public static AndConstraint<ObjectAssertions> BeDataContractSerializable<T>(this ObjectAssertions assertions,
-        Func<EquivalencyAssertionOptions<T>, EquivalencyAssertionOptions<T>> options, string because = "", params object[] becauseArgs)
-    {
-        Guard.ThrowIfArgumentIsNull(options, nameof(options));
-
-        try
+        /// <summary>
+        /// Asserts that an object can be serialized and deserialized using the binary serializer and that it stills retains
+        /// the values of all members.
+        /// </summary>
+        /// <param name="assertions"></param>
+        /// <param name="options">
+        /// A reference to the <see cref="EquivalencyAssertionOptions{TExpectation}"/> configuration object that can be used
+        /// to influence the way the object graphs are compared. You can also provide an alternative instance of the
+        /// <see cref="EquivalencyAssertionOptions{TExpectation}"/> class. The global defaults are determined by the
+        /// <see cref="AssertionOptions"/> class.
+        /// </param>
+        /// <param name="because">
+        /// A formatted phrase as is supported by <see cref="string.Format(string,object[])" /> explaining why the assertion
+        /// is needed. If the phrase does not start with the word <i>because</i>, it is prepended automatically.
+        /// </param>
+        /// <param name="becauseArgs">
+        /// Zero or more objects to format using the placeholders in <paramref name="because" />.
+        /// </param>
+        public static AndConstraint<ObjectAssertions> BeBinarySerializable<T>(this ObjectAssertions assertions,
+            Func<EquivalencyAssertionOptions<T>, EquivalencyAssertionOptions<T>> options, string because = "",
+            params object[] becauseArgs)
         {
-            var deserializedObject = CreateCloneUsingDataContractSerializer(assertions.Subject);
+            Guard.ThrowIfArgumentIsNull(options, nameof(options));
 
-            EquivalencyAssertionOptions<T> defaultOptions = AssertionOptions.CloneDefaults<T>()
-                .RespectingRuntimeTypes().IncludingFields().IncludingProperties();
+            try
+            {
+                object deserializedObject = CreateCloneUsingBinarySerializer(assertions.Subject);
 
-            ((T)deserializedObject).Should().BeEquivalentTo((T)assertions.Subject, _ => options(defaultOptions));
-        }
-        catch (Exception exc)
-        {
-            Execute.Assertion
-                .BecauseOf(because, becauseArgs)
-                .FailWith("Expected {0} to be serializable{reason}, but serialization failed with:{1}{1}{2}.",
-                    assertions.Subject,
-                    Environment.NewLine,
-                    exc.Message);
+                EquivalencyAssertionOptions<T> defaultOptions = AssertionOptions.CloneDefaults<T>()
+                    .RespectingRuntimeTypes().IncludingFields().IncludingProperties();
+
+                ((T)deserializedObject).Should().BeEquivalentTo((T)assertions.Subject, _ => options(defaultOptions));
+            }
+            catch (Exception exc)
+            {
+                Execute.Assertion
+                    .BecauseOf(because, becauseArgs)
+                    .FailWith("Expected {0} to be serializable{reason}, but serialization failed with:{1}{1}{2}.",
+                        assertions.Subject,
+                        Environment.NewLine,
+                        exc.Message);
+            }
+
+            return new AndConstraint<ObjectAssertions>(assertions);
         }
 
-        return new AndConstraint<ObjectAssertions>(assertions);
-    }
-
-    private static object CreateCloneUsingBinarySerializer(object subject)
-    {
-        using var stream = new MemoryStream();
-        var binaryFormatter = new BinaryFormatter
+        /// <summary>
+        /// Asserts that an object can be serialized and deserialized using the data contract serializer and that it stills retains
+        /// the values of all members.
+        /// </summary>
+        /// <param name="assertions"></param>
+        /// <param name="because">
+        /// A formatted phrase as is supported by <see cref="string.Format(string,object[])" /> explaining why the assertion
+        /// is needed. If the phrase does not start with the word <i>because</i>, it is prepended automatically.
+        /// </param>
+        /// <param name="becauseArgs">
+        /// Zero or more objects to format using the placeholders in <paramref name="because" />.
+        /// </param>
+        public static AndConstraint<ObjectAssertions> BeDataContractSerializable(this ObjectAssertions assertions,
+            string because = "", params object[] becauseArgs)
         {
-            Binder = new SimpleBinder(subject.GetType())
-        };
+            return BeDataContractSerializable<object>(assertions, options => options, because, becauseArgs);
+        }
+
+        /// <summary>
+        /// Asserts that an object can be serialized and deserialized using the data contract serializer and that it stills retains
+        /// the values of all members.
+        /// </summary>
+        /// <param name="assertions"></param>
+        /// <param name="options">
+        /// A reference to the <see cref="EquivalencyAssertionOptions{TExpectation}"/> configuration object that can be used
+        /// to influence the way the object graphs are compared. You can also provide an alternative instance of the
+        /// <see cref="EquivalencyAssertionOptions{TExpectation}"/> class. The global defaults are determined by the
+        /// <see cref="AssertionOptions"/> class.
+        /// </param>
+        /// <param name="because">
+        /// A formatted phrase as is supported by <see cref="string.Format(string,object[])" /> explaining why the assertion
+        /// is needed. If the phrase does not start with the word <i>because</i>, it is prepended automatically.
+        /// </param>
+        /// <param name="becauseArgs">
+        /// Zero or more objects to format using the placeholders in <paramref name="because" />.
+        /// </param>
+        public static AndConstraint<ObjectAssertions> BeDataContractSerializable<T>(this ObjectAssertions assertions,
+            Func<EquivalencyAssertionOptions<T>, EquivalencyAssertionOptions<T>> options, string because = "", params object[] becauseArgs)
+        {
+            Guard.ThrowIfArgumentIsNull(options, nameof(options));
+
+            try
+            {
+                var deserializedObject = CreateCloneUsingDataContractSerializer(assertions.Subject);
+
+                EquivalencyAssertionOptions<T> defaultOptions = AssertionOptions.CloneDefaults<T>()
+                    .RespectingRuntimeTypes().IncludingFields().IncludingProperties();
+
+                ((T)deserializedObject).Should().BeEquivalentTo((T)assertions.Subject, _ => options(defaultOptions));
+            }
+            catch (Exception exc)
+            {
+                Execute.Assertion
+                    .BecauseOf(because, becauseArgs)
+                    .FailWith("Expected {0} to be serializable{reason}, but serialization failed with:{1}{1}{2}.",
+                        assertions.Subject,
+                        Environment.NewLine,
+                        exc.Message);
+            }
+
+            return new AndConstraint<ObjectAssertions>(assertions);
+        }
+
+        private static object CreateCloneUsingBinarySerializer(object subject)
+        {
+            using var stream = new MemoryStream();
+            var binaryFormatter = new BinaryFormatter
+            {
+                Binder = new SimpleBinder(subject.GetType())
+            };
 
 #pragma warning disable SYSLIB0011 // BinaryFormatter is obsoleted, GH-issue 1779 tracks the upcoming removal in .NET 8.0
-        binaryFormatter.Serialize(stream, subject);
-        stream.Position = 0;
-        return binaryFormatter.Deserialize(stream);
+            binaryFormatter.Serialize(stream, subject);
+            stream.Position = 0;
+            return binaryFormatter.Deserialize(stream);
 #pragma warning restore SYSLIB0011
-    }
-
-    private class SimpleBinder : SerializationBinder
-    {
-        private readonly Type type;
-
-        public SimpleBinder(Type type)
-        {
-            this.type = type;
         }
 
-        public override Type BindToType(string assemblyName, string typeName)
+        private class SimpleBinder : SerializationBinder
         {
-            if ((type.FullName == typeName) && (type.Assembly.FullName == assemblyName))
+            private readonly Type type;
+
+            public SimpleBinder(Type type)
             {
-                return type;
+                this.type = type;
             }
-            else
+
+            public override Type BindToType(string assemblyName, string typeName)
             {
-                return null;
+                if ((type.FullName == typeName) && (type.Assembly.FullName == assemblyName))
+                {
+                    return type;
+                }
+                else
+                {
+                    return null;
+                }
             }
         }
-    }
 
-    private static object CreateCloneUsingDataContractSerializer(object subject)
-    {
-        using var stream = new MemoryStream();
-        var serializer = new DataContractSerializer(subject.GetType());
-        serializer.WriteObject(stream, subject);
-        stream.Position = 0;
-        return serializer.ReadObject(stream);
-    }
-
-    /// <summary>
-    /// Asserts that an object can be serialized and deserialized using the XML serializer and that it stills retains
-    /// the values of all members.
-    /// </summary>
-    /// <param name="assertions"></param>
-    /// <param name="because">
-    /// A formatted phrase as is supported by <see cref="string.Format(string,object[])" /> explaining why the assertion
-    /// is needed. If the phrase does not start with the word <i>because</i>, it is prepended automatically.
-    /// </param>
-    /// <param name="becauseArgs">
-    /// Zero or more objects to format using the placeholders in <paramref name="because" />.
-    /// </param>
-    public static AndConstraint<ObjectAssertions> BeXmlSerializable(this ObjectAssertions assertions, string because = "",
-        params object[] becauseArgs)
-    {
-        try
+        private static object CreateCloneUsingDataContractSerializer(object subject)
         {
-            object deserializedObject = CreateCloneUsingXmlSerializer(assertions.Subject);
-
-            deserializedObject.Should().BeEquivalentTo(assertions.Subject,
-                options => options.RespectingRuntimeTypes().IncludingFields().IncludingProperties());
-        }
-        catch (Exception exc)
-        {
-            Execute.Assertion
-                .BecauseOf(because, becauseArgs)
-                .FailWith("Expected {0} to be serializable{reason}, but serialization failed with:{1}{1}{2}.",
-                    assertions.Subject,
-                    Environment.NewLine,
-                    exc.Message);
+            using var stream = new MemoryStream();
+            var serializer = new DataContractSerializer(subject.GetType());
+            serializer.WriteObject(stream, subject);
+            stream.Position = 0;
+            return serializer.ReadObject(stream);
         }
 
-        return new AndConstraint<ObjectAssertions>(assertions);
-    }
+        /// <summary>
+        /// Asserts that an object can be serialized and deserialized using the XML serializer and that it stills retains
+        /// the values of all members.
+        /// </summary>
+        /// <param name="assertions"></param>
+        /// <param name="because">
+        /// A formatted phrase as is supported by <see cref="string.Format(string,object[])" /> explaining why the assertion
+        /// is needed. If the phrase does not start with the word <i>because</i>, it is prepended automatically.
+        /// </param>
+        /// <param name="becauseArgs">
+        /// Zero or more objects to format using the placeholders in <paramref name="because" />.
+        /// </param>
+        public static AndConstraint<ObjectAssertions> BeXmlSerializable(this ObjectAssertions assertions, string because = "",
+            params object[] becauseArgs)
+        {
+            try
+            {
+                object deserializedObject = CreateCloneUsingXmlSerializer(assertions.Subject);
 
-    private static object CreateCloneUsingXmlSerializer(object subject)
-    {
-        using var stream = new MemoryStream();
-        var binaryFormatter = new XmlSerializer(subject.GetType());
-        binaryFormatter.Serialize(stream, subject);
+                deserializedObject.Should().BeEquivalentTo(assertions.Subject,
+                    options => options.RespectingRuntimeTypes().IncludingFields().IncludingProperties());
+            }
+            catch (Exception exc)
+            {
+                Execute.Assertion
+                    .BecauseOf(because, becauseArgs)
+                    .FailWith("Expected {0} to be serializable{reason}, but serialization failed with:{1}{1}{2}.",
+                        assertions.Subject,
+                        Environment.NewLine,
+                        exc.Message);
+            }
 
-        stream.Position = 0;
-        return binaryFormatter.Deserialize(stream);
+            return new AndConstraint<ObjectAssertions>(assertions);
+        }
+
+        private static object CreateCloneUsingXmlSerializer(object subject)
+        {
+            using var stream = new MemoryStream();
+            var binaryFormatter = new XmlSerializer(subject.GetType());
+            binaryFormatter.Serialize(stream, subject);
+
+            stream.Position = 0;
+            return binaryFormatter.Deserialize(stream);
+        }
     }
-}
 }

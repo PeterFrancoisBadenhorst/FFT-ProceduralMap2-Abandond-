@@ -1,10 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PrefabSideControl : MonoBehaviour
 {
-
     public GameObject n_object;
     public GameObject e_object;
     public GameObject s_object;
@@ -18,8 +15,9 @@ public class PrefabSideControl : MonoBehaviour
     public GameObject w_side;
     public GameObject t_side;
     public GameObject b_side;
+
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         n_side.SetActive(!n_object.activeSelf);
         e_side.SetActive(!e_object.activeSelf);
@@ -30,8 +28,7 @@ public class PrefabSideControl : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
-
     }
 }

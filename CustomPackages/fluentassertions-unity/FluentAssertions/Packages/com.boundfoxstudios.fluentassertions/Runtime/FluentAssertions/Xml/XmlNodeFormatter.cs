@@ -1,28 +1,28 @@
-﻿using System.Xml;
-using FluentAssertions.Common;
+﻿using FluentAssertions.Common;
 using FluentAssertions.Formatting;
+using System.Xml;
 
-namespace FluentAssertions.Xml {
-
-public class XmlNodeFormatter : IValueFormatter
+namespace FluentAssertions.Xml
 {
-    public bool CanHandle(object value)
+    public class XmlNodeFormatter : IValueFormatter
     {
-        return value is XmlNode;
-    }
-
-    public void Format(object value, FormattedObjectGraph formattedGraph, FormattingContext context, FormatChild formatChild)
-    {
-        string outerXml = ((XmlNode)value).OuterXml;
-
-        const int maxLength = 20;
-
-        if (outerXml.Length > maxLength)
+        public bool CanHandle(object value)
         {
-            outerXml = outerXml.Substring(0, maxLength).TrimEnd() + "…";
+            return value is XmlNode;
         }
 
-        formattedGraph.AddLine(outerXml.EscapePlaceholders());
+        public void Format(object value, FormattedObjectGraph formattedGraph, FormattingContext context, FormatChild formatChild)
+        {
+            string outerXml = ((XmlNode)value).OuterXml;
+
+            const int maxLength = 20;
+
+            if (outerXml.Length > maxLength)
+            {
+                outerXml = outerXml.Substring(0, maxLength).TrimEnd() + "…";
+            }
+
+            formattedGraph.AddLine(outerXml.EscapePlaceholders());
+        }
     }
-}
 }

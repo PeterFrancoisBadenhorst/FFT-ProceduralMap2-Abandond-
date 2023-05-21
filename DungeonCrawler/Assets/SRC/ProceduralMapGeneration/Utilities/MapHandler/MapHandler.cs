@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Mono.Behaviors;
+﻿using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Mono.Behaviors;
 using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Noise;
 using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Structs;
-using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Utilities;
+using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Utilities
@@ -64,6 +60,7 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.
             }
             return map;
         }
+
         /// <summary>
         /// Creates a path from the specified grid.
         /// </summary>
@@ -97,9 +94,9 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.
                 }
             }
 
-
             return path.ToArray();
         }
+
         /// <summary>
         /// Cleans a map.
         /// </summary>
@@ -118,7 +115,7 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.
                     grid[i].SetActive(false);
                 }
             }
-            ChunkHandler ch=new ChunkHandler();
+            ChunkHandler ch = new ChunkHandler();
             return ch.FindChunkNeigbors(scale, grid);
         }
     }

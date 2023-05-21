@@ -1,15 +1,6 @@
-﻿
-using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Utilities;
-using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Structs;
+﻿using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.PathFinding;
 using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.ScriptableObjects;
-using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Noise;
-using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Mono.Managers;
-using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Mono.Behaviors;
-using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Enums;
-using System.Collections.Generic;
 using UnityEngine;
-using System.Linq;
-using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.PathFinding;
 
 namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Mono.Managers
 {
@@ -19,17 +10,17 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.
         public Transform GridParent;
         public int GridSize;
         public float GridScale;
-        [Range(10,75)]
+
+        [Range(10, 75)]
         public int MapTotalFillPercentage;
 
         public DirectionalTilesScriptableObject scriptRef;
 
         private readonly PathMapBuilder _pathMapBuilder = new();
+
         private void Start()
         {
-            _pathMapBuilder.CreateMap(GridSize, GridScale, this.transform, scriptRef,MapTotalFillPercentage);
+            _pathMapBuilder.CreateMap(GridSize, GridScale, this.transform, scriptRef, MapTotalFillPercentage);
         }
-
-
     }
 }

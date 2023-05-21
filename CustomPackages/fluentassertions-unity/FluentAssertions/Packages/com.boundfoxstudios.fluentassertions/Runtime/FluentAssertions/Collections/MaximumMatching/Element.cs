@@ -1,25 +1,25 @@
-﻿namespace FluentAssertions.Collections.MaximumMatching {
-
-/// <summary>
-/// Stores an element's value and index in the maximum matching problem.
-/// </summary>
-/// <typeparam name="TValue">The type of the element value.</typeparam>
-internal class Element<TValue>
+﻿namespace FluentAssertions.Collections.MaximumMatching
 {
-    public Element(TValue value, int index)
+    /// <summary>
+    /// Stores an element's value and index in the maximum matching problem.
+    /// </summary>
+    /// <typeparam name="TValue">The type of the element value.</typeparam>
+    internal class Element<TValue>
     {
-        Index = index;
-        Value = value;
+        public Element(TValue value, int index)
+        {
+            Index = index;
+            Value = value;
+        }
+
+        /// <summary>
+        /// The index of the element in the maximum matching problem.
+        /// </summary>
+        public int Index { get; }
+
+        /// <summary>
+        /// The value of the element in the maximum matching problem.
+        /// </summary>
+        public TValue Value { get; }
     }
-
-    /// <summary>
-    /// The index of the element in the maximum matching problem.
-    /// </summary>
-    public int Index { get; }
-
-    /// <summary>
-    /// The value of the element in the maximum matching problem.
-    /// </summary>
-    public TValue Value { get; }
-}
 }

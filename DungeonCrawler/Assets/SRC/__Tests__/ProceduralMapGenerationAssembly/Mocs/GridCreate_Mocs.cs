@@ -1,11 +1,5 @@
-﻿using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Utilities;
+﻿using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Enums;
 using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Structs;
-using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.ScriptableObjects;
-using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Noise;
-using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Mono.Managers;
-using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Mono.Behaviors;
-using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Enums;
-using NUnit.Framework;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -15,6 +9,7 @@ namespace Assets.SRC.ProceduralMapGeneration.Utilities.Tests
     {
         public UnityEngine.Vector3[] GridPositions;
         public List<GameObject> TestGrid;
+
         public NeighborStruct SetUpNeighborStruct(bool north, bool east, bool south, bool west, bool top, bool bottom)
         {
             NeighborStruct returned = new NeighborStruct();
@@ -27,6 +22,7 @@ namespace Assets.SRC.ProceduralMapGeneration.Utilities.Tests
             returned.Direction = DirectionTypeEnum.Blank;
             return returned;
         }
+
         public List<NeighborStruct> CreatGameObjectList(float scale, int size)
         {
             List<NeighborStruct> list = new List<NeighborStruct>();
@@ -34,8 +30,6 @@ namespace Assets.SRC.ProceduralMapGeneration.Utilities.Tests
             //GridCreate gridCreate = new GridCreate();
             //GameObject parent = new GameObject();
             //return gridCreate.FindChunkNeigbors(scale, gridCreate.PlaceGameObjectsAtGridPositions(gridCreate.SquareGrid2DHorizontal(size, scale), parent.transform));
-           
         }
-
     }
 }

@@ -1,12 +1,8 @@
 ﻿using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.ScriptableObjects;
 using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Utilities;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using UnityEngine;
-using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.PathFinding;
 
 namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.PathFinding
 {
@@ -18,6 +14,7 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.
         private readonly GridCreate _gridCreate = new();
         private readonly ChunkHandler _chunkHandler = new();
         private readonly NewPathFinding _newPathFinding = new();
+
         /// <summary>
         /// This method creates a map.
         /// </summary>
@@ -63,7 +60,5 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.
             gridRelations = _chunkHandler.AssignChunkTypes(gridRelations);
             _populateTilePositionsBehavior.SetChildTile(scriptRef, gridRelations);
         }
-
-
     }
 }

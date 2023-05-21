@@ -1,11 +1,4 @@
-﻿using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Utilities;
-using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Structs;
-using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.ScriptableObjects;
-using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Noise;
-using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Mono.Managers;
-using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Mono.Behaviors;
-using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Enums;
-using Assets.SRC.ProceduralMapGeneration.Assets.SRC.Shared.Exceptions;
+﻿using Assets.SRC.ProceduralMapGeneration.Assets.SRC.Shared.Exceptions;
 using UnityEngine;
 
 namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Utilities
@@ -13,6 +6,7 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.
     internal class GameObjectCreation
     {
         private CustomExceptions exp = new CustomExceptions();
+
         /// <summary>
         /// This method creates a game object tile.
         /// </summary>
@@ -46,6 +40,7 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.
 
             return baseObject;
         }
+
         /// <summary>
         /// This method returns a mesh that can be used to render a game object tile.
         /// </summary>
@@ -57,7 +52,5 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.
         {
             return exp.NotImplementedException();
         }
-
-
     }
 }

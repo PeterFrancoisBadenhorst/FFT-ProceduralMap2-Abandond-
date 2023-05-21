@@ -1,27 +1,27 @@
 using System.Collections.Generic;
 
-namespace FluentAssertions.Equivalency.Selection {
-
-internal class CollectionMemberSelectionRuleDecorator : IMemberSelectionRule
+namespace FluentAssertions.Equivalency.Selection
 {
-    private readonly IMemberSelectionRule selectionRule;
-
-    public CollectionMemberSelectionRuleDecorator(IMemberSelectionRule selectionRule)
+    internal class CollectionMemberSelectionRuleDecorator : IMemberSelectionRule
     {
-        this.selectionRule = selectionRule;
-    }
+        private readonly IMemberSelectionRule selectionRule;
 
-    public bool IncludesMembers => selectionRule.IncludesMembers;
+        public CollectionMemberSelectionRuleDecorator(IMemberSelectionRule selectionRule)
+        {
+            this.selectionRule = selectionRule;
+        }
 
-    public IEnumerable<IMember> SelectMembers(INode currentNode, IEnumerable<IMember> selectedMembers,
-        MemberSelectionContext context)
-    {
-        return selectionRule.SelectMembers(currentNode, selectedMembers, context);
-    }
+        public bool IncludesMembers => selectionRule.IncludesMembers;
 
-    public override string ToString()
-    {
-        return selectionRule.ToString();
+        public IEnumerable<IMember> SelectMembers(INode currentNode, IEnumerable<IMember> selectedMembers,
+            MemberSelectionContext context)
+        {
+            return selectionRule.SelectMembers(currentNode, selectedMembers, context);
+        }
+
+        public override string ToString()
+        {
+            return selectionRule.ToString();
+        }
     }
-}
 }

@@ -1,15 +1,5 @@
-﻿using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Utilities;
-using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Structs;
-using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.ScriptableObjects;
-using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Noise;
-using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Mono.Managers;
-using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Mono.Behaviors;
-using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Enums;
-using System;
-using System.Collections.Generic;
-using System.Runtime.InteropServices.WindowsRuntime;
+﻿using System.Collections.Generic;
 using UnityEngine;
-using System.Linq;
 
 namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Utilities
 {
@@ -40,6 +30,7 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.
             }
             return createdTransforms.ToArray();
         }
+
         /// <summary>
         /// This method returns a list of Vector3 objects that represent the positions of a 2D square grid.
         /// </summary>
@@ -67,6 +58,7 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.
             }
             return createdTransforms.ToArray();
         }
+
         /// <summary>
         /// This method returns a list of Vector3 objects that represent the positions of a 3D square grid.
         /// </summary>
@@ -95,6 +87,7 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.
             }
             return createdTransforms.ToArray();
         }
+
         /// <summary>
         /// This method places a list of game objects at the specified grid positions.
         /// </summary>
@@ -117,5 +110,4 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.
             return gameObjects;
         }
     }
-
 }
