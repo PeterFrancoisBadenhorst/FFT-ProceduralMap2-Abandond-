@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
-<coverage line-rate="0.250585480093677" branch-rate="1" lines-covered="107" lines-valid="427" branches-covered="0" branches-valid="0" complexity="119" version="0" timestamp="1684696570">
+<coverage line-rate="0.26463700234192" branch-rate="1" lines-covered="113" lines-valid="427" branches-covered="0" branches-valid="0" complexity="119" version="0" timestamp="1684698161">
   <sources />
   <packages>
-    <package name="ProceduralMapGenerationAssembly" line-rate="0.252358490566038" branch-rate="1" complexity="117">
+    <package name="ProceduralMapGenerationAssembly" line-rate="0.266509433962264" branch-rate="1" complexity="117">
       <classes>
         <class name="Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.PathFinding.NewPathFinding" filename="C:/git/Unity.DungeonCrawler/DungeonCrawler/Assets/SRC/ProceduralMapGeneration/PathFinding/NewPathFinding/FindEnds.cs" line-rate="1" branch-rate="1" complexity="NaN">
           <methods>
@@ -569,10 +569,10 @@
             <method name="AssignChunkTypes" signature="(System.Collections.Generic.List[GameObject])" line-rate="1" branch-rate="1" complexity="NaN">
               <lines>
                 <line number="15" hits="2" branch="false" />
-                <line number="16" hits="16" branch="false" />
-                <line number="17" hits="6" branch="false" />
-                <line number="18" hits="6" branch="false" />
-                <line number="19" hits="6" branch="false" />
+                <line number="16" hits="20" branch="false" />
+                <line number="17" hits="8" branch="false" />
+                <line number="18" hits="8" branch="false" />
+                <line number="19" hits="8" branch="false" />
                 <line number="20" hits="2" branch="false" />
                 <line number="21" hits="2" branch="false" />
               </lines>
@@ -580,10 +580,10 @@
           </methods>
           <lines>
             <line number="15" hits="2" branch="false" />
-            <line number="16" hits="16" branch="false" />
-            <line number="17" hits="6" branch="false" />
-            <line number="18" hits="6" branch="false" />
-            <line number="19" hits="6" branch="false" />
+            <line number="16" hits="20" branch="false" />
+            <line number="17" hits="8" branch="false" />
+            <line number="18" hits="8" branch="false" />
+            <line number="19" hits="8" branch="false" />
             <line number="20" hits="2" branch="false" />
             <line number="21" hits="2" branch="false" />
           </lines>
@@ -595,44 +595,44 @@
                 <line number="16" hits="3" branch="false" />
                 <line number="17" hits="3" branch="false" />
                 <line number="18" hits="3" branch="false" />
-                <line number="20" hits="32" branch="false" />
-                <line number="21" hits="13" branch="false" />
-                <line number="22" hits="13" branch="false" />
-                <line number="23" hits="13" branch="false" />
-                <line number="25" hits="32" branch="false" />
-                <line number="26" hits="13" branch="false" />
-                <line number="27" hits="13" branch="false" />
-                <line number="28" hits="13" branch="false" />
-                <line number="29" hits="13" branch="false" />
-                <line number="31" hits="13" branch="false" />
-                <line number="33" hits="13" branch="false" />
-                <line number="35" hits="13" branch="false" />
-                <line number="36" hits="3" branch="false" />
-                <line number="37" hits="3" branch="false" />
-                <line number="38" hits="3" branch="false" />
-                <line number="39" hits="13" branch="false" />
-                <line number="40" hits="7" branch="false" />
-                <line number="41" hits="7" branch="false" />
-                <line number="42" hits="7" branch="false" />
-                <line number="43" hits="13" branch="false" />
-                <line number="44" hits="3" branch="false" />
-                <line number="45" hits="3" branch="false" />
-                <line number="46" hits="3" branch="false" />
-                <line number="47" hits="13" branch="false" />
-                <line number="48" hits="7" branch="false" />
-                <line number="49" hits="7" branch="false" />
-                <line number="50" hits="7" branch="false" />
-                <line number="51" hits="13" branch="false" />
-                <line number="52" hits="6" branch="false" />
-                <line number="53" hits="6" branch="false" />
-                <line number="54" hits="6" branch="false" />
-                <line number="55" hits="13" branch="false" />
-                <line number="56" hits="6" branch="false" />
-                <line number="57" hits="6" branch="false" />
-                <line number="58" hits="6" branch="false" />
-                <line number="60" hits="13" branch="false" />
-                <line number="61" hits="13" branch="false" />
-                <line number="62" hits="13" branch="false" />
+                <line number="20" hits="38" branch="false" />
+                <line number="21" hits="16" branch="false" />
+                <line number="22" hits="16" branch="false" />
+                <line number="23" hits="16" branch="false" />
+                <line number="25" hits="38" branch="false" />
+                <line number="26" hits="16" branch="false" />
+                <line number="27" hits="16" branch="false" />
+                <line number="28" hits="16" branch="false" />
+                <line number="29" hits="16" branch="false" />
+                <line number="31" hits="16" branch="false" />
+                <line number="33" hits="16" branch="false" />
+                <line number="35" hits="16" branch="false" />
+                <line number="36" hits="8" branch="false" />
+                <line number="37" hits="8" branch="false" />
+                <line number="38" hits="8" branch="false" />
+                <line number="39" hits="16" branch="false" />
+                <line number="40" hits="8" branch="false" />
+                <line number="41" hits="8" branch="false" />
+                <line number="42" hits="8" branch="false" />
+                <line number="43" hits="16" branch="false" />
+                <line number="44" hits="8" branch="false" />
+                <line number="45" hits="8" branch="false" />
+                <line number="46" hits="8" branch="false" />
+                <line number="47" hits="16" branch="false" />
+                <line number="48" hits="8" branch="false" />
+                <line number="49" hits="8" branch="false" />
+                <line number="50" hits="8" branch="false" />
+                <line number="51" hits="16" branch="false" />
+                <line number="52" hits="8" branch="false" />
+                <line number="53" hits="8" branch="false" />
+                <line number="54" hits="8" branch="false" />
+                <line number="55" hits="16" branch="false" />
+                <line number="56" hits="8" branch="false" />
+                <line number="57" hits="8" branch="false" />
+                <line number="58" hits="8" branch="false" />
+                <line number="60" hits="16" branch="false" />
+                <line number="61" hits="16" branch="false" />
+                <line number="62" hits="16" branch="false" />
                 <line number="63" hits="3" branch="false" />
                 <line number="64" hits="3" branch="false" />
               </lines>
@@ -642,100 +642,100 @@
             <line number="16" hits="3" branch="false" />
             <line number="17" hits="3" branch="false" />
             <line number="18" hits="3" branch="false" />
-            <line number="20" hits="32" branch="false" />
-            <line number="21" hits="13" branch="false" />
-            <line number="22" hits="13" branch="false" />
-            <line number="23" hits="13" branch="false" />
-            <line number="25" hits="32" branch="false" />
-            <line number="26" hits="13" branch="false" />
-            <line number="27" hits="13" branch="false" />
-            <line number="28" hits="13" branch="false" />
-            <line number="29" hits="13" branch="false" />
-            <line number="31" hits="13" branch="false" />
-            <line number="33" hits="13" branch="false" />
-            <line number="35" hits="13" branch="false" />
-            <line number="36" hits="3" branch="false" />
-            <line number="37" hits="3" branch="false" />
-            <line number="38" hits="3" branch="false" />
-            <line number="39" hits="13" branch="false" />
-            <line number="40" hits="7" branch="false" />
-            <line number="41" hits="7" branch="false" />
-            <line number="42" hits="7" branch="false" />
-            <line number="43" hits="13" branch="false" />
-            <line number="44" hits="3" branch="false" />
-            <line number="45" hits="3" branch="false" />
-            <line number="46" hits="3" branch="false" />
-            <line number="47" hits="13" branch="false" />
-            <line number="48" hits="7" branch="false" />
-            <line number="49" hits="7" branch="false" />
-            <line number="50" hits="7" branch="false" />
-            <line number="51" hits="13" branch="false" />
-            <line number="52" hits="6" branch="false" />
-            <line number="53" hits="6" branch="false" />
-            <line number="54" hits="6" branch="false" />
-            <line number="55" hits="13" branch="false" />
-            <line number="56" hits="6" branch="false" />
-            <line number="57" hits="6" branch="false" />
-            <line number="58" hits="6" branch="false" />
-            <line number="60" hits="13" branch="false" />
-            <line number="61" hits="13" branch="false" />
-            <line number="62" hits="13" branch="false" />
+            <line number="20" hits="38" branch="false" />
+            <line number="21" hits="16" branch="false" />
+            <line number="22" hits="16" branch="false" />
+            <line number="23" hits="16" branch="false" />
+            <line number="25" hits="38" branch="false" />
+            <line number="26" hits="16" branch="false" />
+            <line number="27" hits="16" branch="false" />
+            <line number="28" hits="16" branch="false" />
+            <line number="29" hits="16" branch="false" />
+            <line number="31" hits="16" branch="false" />
+            <line number="33" hits="16" branch="false" />
+            <line number="35" hits="16" branch="false" />
+            <line number="36" hits="8" branch="false" />
+            <line number="37" hits="8" branch="false" />
+            <line number="38" hits="8" branch="false" />
+            <line number="39" hits="16" branch="false" />
+            <line number="40" hits="8" branch="false" />
+            <line number="41" hits="8" branch="false" />
+            <line number="42" hits="8" branch="false" />
+            <line number="43" hits="16" branch="false" />
+            <line number="44" hits="8" branch="false" />
+            <line number="45" hits="8" branch="false" />
+            <line number="46" hits="8" branch="false" />
+            <line number="47" hits="16" branch="false" />
+            <line number="48" hits="8" branch="false" />
+            <line number="49" hits="8" branch="false" />
+            <line number="50" hits="8" branch="false" />
+            <line number="51" hits="16" branch="false" />
+            <line number="52" hits="8" branch="false" />
+            <line number="53" hits="8" branch="false" />
+            <line number="54" hits="8" branch="false" />
+            <line number="55" hits="16" branch="false" />
+            <line number="56" hits="8" branch="false" />
+            <line number="57" hits="8" branch="false" />
+            <line number="58" hits="8" branch="false" />
+            <line number="60" hits="16" branch="false" />
+            <line number="61" hits="16" branch="false" />
+            <line number="62" hits="16" branch="false" />
             <line number="63" hits="3" branch="false" />
             <line number="64" hits="3" branch="false" />
           </lines>
         </class>
-        <class name="Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Utilities.ChunkHandler" filename="C:/git/Unity.DungeonCrawler/DungeonCrawler/Assets/SRC/ProceduralMapGeneration/Utilities/ChunkHandler/FindChunkType.cs" line-rate="0.727272727272727" branch-rate="1" complexity="NaN">
+        <class name="Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Utilities.ChunkHandler" filename="C:/git/Unity.DungeonCrawler/DungeonCrawler/Assets/SRC/ProceduralMapGeneration/Utilities/ChunkHandler/FindChunkType.cs" line-rate="1" branch-rate="1" complexity="NaN">
           <methods>
-            <method name="FindChunkType" signature="(Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Structs.NeighborStruct)" line-rate="0.727272727272727" branch-rate="1" complexity="NaN">
+            <method name="FindChunkType" signature="(Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Structs.NeighborStruct)" line-rate="1" branch-rate="1" complexity="NaN">
               <lines>
-                <line number="19" hits="6" branch="false" />
-                <line number="20" hits="6" branch="false" />
-                <line number="21" hits="6" branch="false" />
-                <line number="22" hits="6" branch="false" />
-                <line number="24" hits="6" branch="false" />
-                <line number="25" hits="0" branch="false" />
-                <line number="27" hits="6" branch="false" />
-                <line number="28" hits="4" branch="false" />
-                <line number="30" hits="6" branch="false" />
-                <line number="31" hits="0" branch="false" />
-                <line number="33" hits="6" branch="false" />
-                <line number="34" hits="4" branch="false" />
-                <line number="36" hits="6" branch="false" />
-                <line number="37" hits="3" branch="false" />
-                <line number="39" hits="6" branch="false" />
-                <line number="40" hits="3" branch="false" />
-                <line number="42" hits="6" branch="false" />
-                <line number="44" hits="0" branch="false" />
-                <line number="45" hits="0" branch="false" />
-                <line number="52" hits="0" branch="false" />
-                <line number="55" hits="0" branch="false" />
-                <line number="56" hits="6" branch="false" />
+                <line number="19" hits="10" branch="false" />
+                <line number="20" hits="10" branch="false" />
+                <line number="21" hits="1" branch="false" />
+                <line number="28" hits="1" branch="false" />
+                <line number="30" hits="9" branch="false" />
+                <line number="31" hits="8" branch="false" />
+                <line number="32" hits="8" branch="false" />
+                <line number="34" hits="8" branch="false" />
+                <line number="35" hits="4" branch="false" />
+                <line number="37" hits="8" branch="false" />
+                <line number="38" hits="4" branch="false" />
+                <line number="40" hits="8" branch="false" />
+                <line number="41" hits="4" branch="false" />
+                <line number="43" hits="8" branch="false" />
+                <line number="44" hits="4" branch="false" />
+                <line number="46" hits="8" branch="false" />
+                <line number="47" hits="4" branch="false" />
+                <line number="49" hits="8" branch="false" />
+                <line number="50" hits="4" branch="false" />
+                <line number="52" hits="8" branch="false" />
+                <line number="55" hits="1" branch="false" />
+                <line number="56" hits="9" branch="false" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="19" hits="6" branch="false" />
-            <line number="20" hits="6" branch="false" />
-            <line number="21" hits="6" branch="false" />
-            <line number="22" hits="6" branch="false" />
-            <line number="24" hits="6" branch="false" />
-            <line number="25" hits="0" branch="false" />
-            <line number="27" hits="6" branch="false" />
-            <line number="28" hits="4" branch="false" />
-            <line number="30" hits="6" branch="false" />
-            <line number="31" hits="0" branch="false" />
-            <line number="33" hits="6" branch="false" />
-            <line number="34" hits="4" branch="false" />
-            <line number="36" hits="6" branch="false" />
-            <line number="37" hits="3" branch="false" />
-            <line number="39" hits="6" branch="false" />
-            <line number="40" hits="3" branch="false" />
-            <line number="42" hits="6" branch="false" />
-            <line number="44" hits="0" branch="false" />
-            <line number="45" hits="0" branch="false" />
-            <line number="52" hits="0" branch="false" />
-            <line number="55" hits="0" branch="false" />
-            <line number="56" hits="6" branch="false" />
+            <line number="19" hits="10" branch="false" />
+            <line number="20" hits="10" branch="false" />
+            <line number="21" hits="1" branch="false" />
+            <line number="28" hits="1" branch="false" />
+            <line number="30" hits="9" branch="false" />
+            <line number="31" hits="8" branch="false" />
+            <line number="32" hits="8" branch="false" />
+            <line number="34" hits="8" branch="false" />
+            <line number="35" hits="4" branch="false" />
+            <line number="37" hits="8" branch="false" />
+            <line number="38" hits="4" branch="false" />
+            <line number="40" hits="8" branch="false" />
+            <line number="41" hits="4" branch="false" />
+            <line number="43" hits="8" branch="false" />
+            <line number="44" hits="4" branch="false" />
+            <line number="46" hits="8" branch="false" />
+            <line number="47" hits="4" branch="false" />
+            <line number="49" hits="8" branch="false" />
+            <line number="50" hits="4" branch="false" />
+            <line number="52" hits="8" branch="false" />
+            <line number="55" hits="1" branch="false" />
+            <line number="56" hits="9" branch="false" />
           </lines>
         </class>
         <class name="Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Utilities.GameObjectCreation" filename="C:/git/Unity.DungeonCrawler/DungeonCrawler/Assets/SRC/ProceduralMapGeneration/Utilities/GameObjectCreation/GameObjectCreation.cs" line-rate="0" branch-rate="1" complexity="2">
@@ -796,28 +796,28 @@
           <methods>
             <method name="NeighborsPosition" signature="(System.Single, UnityEngine.Vector3)" line-rate="1" branch-rate="1" complexity="NaN">
               <lines>
-                <line number="17" hits="13" branch="false" />
-                <line number="26" hits="13" branch="false" />
-                <line number="27" hits="13" branch="false" />
-                <line number="28" hits="13" branch="false" />
-                <line number="29" hits="13" branch="false" />
-                <line number="30" hits="13" branch="false" />
-                <line number="31" hits="13" branch="false" />
-                <line number="33" hits="13" branch="false" />
-                <line number="34" hits="13" branch="false" />
+                <line number="17" hits="16" branch="false" />
+                <line number="26" hits="16" branch="false" />
+                <line number="27" hits="16" branch="false" />
+                <line number="28" hits="16" branch="false" />
+                <line number="29" hits="16" branch="false" />
+                <line number="30" hits="16" branch="false" />
+                <line number="31" hits="16" branch="false" />
+                <line number="33" hits="16" branch="false" />
+                <line number="34" hits="16" branch="false" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="17" hits="13" branch="false" />
-            <line number="26" hits="13" branch="false" />
-            <line number="27" hits="13" branch="false" />
-            <line number="28" hits="13" branch="false" />
-            <line number="29" hits="13" branch="false" />
-            <line number="30" hits="13" branch="false" />
-            <line number="31" hits="13" branch="false" />
-            <line number="33" hits="13" branch="false" />
-            <line number="34" hits="13" branch="false" />
+            <line number="17" hits="16" branch="false" />
+            <line number="26" hits="16" branch="false" />
+            <line number="27" hits="16" branch="false" />
+            <line number="28" hits="16" branch="false" />
+            <line number="29" hits="16" branch="false" />
+            <line number="30" hits="16" branch="false" />
+            <line number="31" hits="16" branch="false" />
+            <line number="33" hits="16" branch="false" />
+            <line number="34" hits="16" branch="false" />
           </lines>
         </class>
         <class name="Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Utilities.GridCreate" filename="C:/git/Unity.DungeonCrawler/DungeonCrawler/Assets/SRC/ProceduralMapGeneration/Utilities/GridCreate/GridCreate.cs" line-rate="0" branch-rate="1" complexity="NaN">

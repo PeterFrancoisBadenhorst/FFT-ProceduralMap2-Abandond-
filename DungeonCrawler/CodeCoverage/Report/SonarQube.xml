@@ -264,24 +264,24 @@
     <lineToCover lineNumber="19" covered="true" />
     <lineToCover lineNumber="20" covered="true" />
     <lineToCover lineNumber="21" covered="true" />
-    <lineToCover lineNumber="22" covered="true" />
-    <lineToCover lineNumber="24" covered="true" />
-    <lineToCover lineNumber="25" covered="false" />
-    <lineToCover lineNumber="27" covered="true" />
     <lineToCover lineNumber="28" covered="true" />
     <lineToCover lineNumber="30" covered="true" />
-    <lineToCover lineNumber="31" covered="false" />
-    <lineToCover lineNumber="33" covered="true" />
+    <lineToCover lineNumber="31" covered="true" />
+    <lineToCover lineNumber="32" covered="true" />
     <lineToCover lineNumber="34" covered="true" />
-    <lineToCover lineNumber="36" covered="true" />
+    <lineToCover lineNumber="35" covered="true" />
     <lineToCover lineNumber="37" covered="true" />
-    <lineToCover lineNumber="39" covered="true" />
+    <lineToCover lineNumber="38" covered="true" />
     <lineToCover lineNumber="40" covered="true" />
-    <lineToCover lineNumber="42" covered="true" />
-    <lineToCover lineNumber="44" covered="false" />
-    <lineToCover lineNumber="45" covered="false" />
-    <lineToCover lineNumber="52" covered="false" />
-    <lineToCover lineNumber="55" covered="false" />
+    <lineToCover lineNumber="41" covered="true" />
+    <lineToCover lineNumber="43" covered="true" />
+    <lineToCover lineNumber="44" covered="true" />
+    <lineToCover lineNumber="46" covered="true" />
+    <lineToCover lineNumber="47" covered="true" />
+    <lineToCover lineNumber="49" covered="true" />
+    <lineToCover lineNumber="50" covered="true" />
+    <lineToCover lineNumber="52" covered="true" />
+    <lineToCover lineNumber="55" covered="true" />
     <lineToCover lineNumber="56" covered="true" />
   </file>
   <file path="C:/git/Unity.DungeonCrawler/DungeonCrawler/Assets/SRC/ProceduralMapGeneration/Utilities/GameObjectCreation/GameObjectCreation.cs">

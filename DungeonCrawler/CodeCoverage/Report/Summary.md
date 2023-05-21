@@ -1,16 +1,16 @@
 ﻿# Summary
 |||
 |:---|:---|
-| Generated on: | 2023/05/21 - 7:16:10 PM |
-| Parser: | MultiReportParser (17x OpenCoverParser) |
+| Generated on: | 2023/05/21 - 7:42:41 PM |
+| Parser: | MultiReportParser (19x OpenCoverParser) |
 | Assemblies: | 2 |
 | Classes: | 15 |
 | Files: | 22 |
-| Covered lines: | 107 |
-| Uncovered lines: | 320 |
+| Covered lines: | 113 |
+| Uncovered lines: | 314 |
 | Coverable lines: | 427 |
 | Total lines: | 1197 |
-| Line coverage: | 25% (107 of 427) |
+| Line coverage: | 26.4% (113 of 427) |
 | Covered branches: | 0 |
 | Total branches: | 0 |
 | Covered methods: | 26 |
@@ -19,14 +19,14 @@
 
 |**Name**|**Covered**|**Uncovered**|**Coverable**|**Total**|**Line coverage**|**Covered**|**Total**|**Branch coverage**|**Covered**|**Total**|**Method coverage**|
 |:---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-|**ProceduralMapGenerationAssembly**|**107**|**317**|**424**|**1175**|**25.2%**|**0**|**0**|****|**26**|**47**|**55.3%**|
+|**ProceduralMapGenerationAssembly**|**113**|**311**|**424**|**1175**|**26.6%**|**0**|**0**|****|**26**|**47**|**55.3%**|
 |Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.PathFinding.NewPathFinding|7|114|121|358|5.7%|0|0||2|7|28.5%|
 |Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.PathFinding.PathMapBuilder|0|38|38|64|0%|0|0||0|2|0%|
 |Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Noise.PerlinNoiseGenerator|13|0|13|29|100%|0|0||1|1|100%|
 |Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.ScriptableObjects.DirectionalTilesScriptableObject|3|0|3|146|100%|0|0||1|1|100%|
 |Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Structs.DirectionIDStruct|6|0|6|12|100%|0|0||12|12|100%|
 |Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Structs.MapBuilderStruct|3|0|3|12|100%|0|0||6|6|100%|
-|Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Utilities.ChunkHandler|66|6|72|149|91.6%|0|0||3|3|100%|
+|Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Utilities.ChunkHandler|72|0|72|149|100%|0|0||3|3|100%|
 |Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Utilities.GameObjectCreation|0|18|18|56|0%|0|0||0|3|0%|
 |Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Utilities.GenericUtilities|9|0|9|36|100%|0|0||1|1|100%|
 |Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Utilities.GridCreate|0|51|51|113|0%|0|0||0|4|0%|

@@ -205,7 +205,7 @@
         </Class>
       </Classes>
       <TrackedMethods>
-        <TrackedMethod uid="0" token="100663328" name="System.Void Assets.SRC.ProceduralMapGeneration.Generic.Tests.Test_Structs/DirectionIDStructTests::Should_Be_Able_To_Set_And_Get_Values()" strategy="Test" />
+        <TrackedMethod uid="0" token="100663332" name="System.Void Assets.SRC.ProceduralMapGeneration.Generic.Tests.Test_Structs/DirectionIDStructTests::Should_Be_Able_To_Set_And_Get_Values()" strategy="Test" />
       </TrackedMethods>
     </Module>
   </Modules>

@@ -131,7 +131,7 @@
         </Class>
       </Classes>
       <TrackedMethods>
-        <TrackedMethod uid="0" token="100663305" name="System.Void Assets.SRC.ProceduralMapGeneration.Noise.Tests.Test_PerlinNoiseGenerator::GeneratePerlinNoise2DTexture_Test()" strategy="Test" />
+        <TrackedMethod uid="0" token="100663306" name="System.Void Assets.SRC.ProceduralMapGeneration.Noise.Tests.Test_PerlinNoiseGenerator::GeneratePerlinNoise2DTexture_Test()" strategy="Test" />
       </TrackedMethods>
     </Module>
   </Modules>

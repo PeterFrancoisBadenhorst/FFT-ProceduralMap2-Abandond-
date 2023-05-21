@@ -61,7 +61,7 @@
         </Class>
       </Classes>
       <TrackedMethods>
-        <TrackedMethod uid="0" token="100663307" name="System.Void Assets.SRC.ProceduralMapGeneration.Generic.Tests.Test_ScriptableObjects::Should_Return_A_List_Of_GameObjects()" strategy="Test" />
+        <TrackedMethod uid="0" token="100663308" name="System.Void Assets.SRC.ProceduralMapGeneration.Generic.Tests.Test_ScriptableObjects::Should_Return_A_List_Of_GameObjects()" strategy="Test" />
       </TrackedMethods>
     </Module>
   </Modules>

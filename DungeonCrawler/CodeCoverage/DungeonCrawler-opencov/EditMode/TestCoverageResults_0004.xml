@@ -121,7 +121,7 @@
         </Class>
       </Classes>
       <TrackedMethods>
-        <TrackedMethod uid="0" token="100663331" name="System.Void Assets.SRC.ProceduralMapGeneration.Generic.Tests.Test_Structs/MapBuilderStructTests::Should_Be_Able_To_Set_And_Get_Values()" strategy="Test" />
+        <TrackedMethod uid="0" token="100663335" name="System.Void Assets.SRC.ProceduralMapGeneration.Generic.Tests.Test_Structs/MapBuilderStructTests::Should_Be_Able_To_Set_And_Get_Values()" strategy="Test" />
       </TrackedMethods>
     </Module>
   </Modules>

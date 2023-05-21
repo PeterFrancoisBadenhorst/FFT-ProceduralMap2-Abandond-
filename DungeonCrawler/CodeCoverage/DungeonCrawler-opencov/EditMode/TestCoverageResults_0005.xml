@@ -79,7 +79,7 @@
         </Class>
       </Classes>
       <TrackedMethods>
-        <TrackedMethod uid="0" token="100663330" name="System.Void Assets.SRC.ProceduralMapGeneration.Generic.Tests.Test_Structs/MapBuilderStructTests::Should_Have_Correct_Default_Values()" strategy="Test" />
+        <TrackedMethod uid="0" token="100663334" name="System.Void Assets.SRC.ProceduralMapGeneration.Generic.Tests.Test_Structs/MapBuilderStructTests::Should_Have_Correct_Default_Values()" strategy="Test" />
       </TrackedMethods>
     </Module>
   </Modules>

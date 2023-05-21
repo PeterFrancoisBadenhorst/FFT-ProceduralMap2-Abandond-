@@ -221,7 +221,7 @@
         </Class>
       </Classes>
       <TrackedMethods>
-        <TrackedMethod uid="0" token="100663316" name="System.Void Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding/Findpath::NullGrid()" strategy="Test" />
+        <TrackedMethod uid="0" token="100663318" name="System.Void Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding/Findpath::EmptyGrid()" strategy="Test" />
       </TrackedMethods>
     </Module>
   </Modules>

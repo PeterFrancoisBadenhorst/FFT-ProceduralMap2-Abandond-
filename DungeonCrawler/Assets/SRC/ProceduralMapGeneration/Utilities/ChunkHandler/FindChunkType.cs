@@ -17,7 +17,17 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.
         /// </remarks>
         public DirectionTypeEnum FindChunkType(NeighborStruct chunk)
         {
-            if (chunk.Direction != DirectionTypeEnum.Collapsed || chunk.Direction == DirectionTypeEnum.Blank)
+            if (chunk.Direction == DirectionTypeEnum.Error)
+            {
+                // Well, something really fucked out,
+                // Somewhere. . .
+                // (((φ(◎ロ◎;)φ)))
+                // I Should probably put some kind of exception here.
+                // But then it would make this exceptional.
+                // o(〒﹏〒)o
+                throw new ArgumentException("System Erroed out : Chunk Handler > Find Chunk Type");
+            }
+            else if (chunk.Direction != DirectionTypeEnum.Collapsed || chunk.Direction == DirectionTypeEnum.Blank)
             {
                 string result = "";
 
@@ -40,16 +50,6 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.
                     result += "B";
 
                 return (DirectionTypeEnum)Enum.Parse(typeof(DirectionTypeEnum), result);
-            }
-            else if (chunk.Direction == DirectionTypeEnum.Error)
-            {
-                // Well, something really fucked out,
-                // Somewhere. . .
-                // (((φ(◎ロ◎;)φ)))
-                // I Should probably put some kind of exception here.
-                // But then it would make this exceptional.
-                // o(〒﹏〒)o
-                return DirectionTypeEnum.Error;
             }
             else
                 return chunk.Direction;
