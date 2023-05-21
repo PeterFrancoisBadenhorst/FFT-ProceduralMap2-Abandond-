@@ -14,7 +14,7 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.
     ///
     /// Issue : getting Null Ref in   GetNextNode @   node.Neighbors.Count;
     /// </summary>
-    internal partial class NewPathFinding
+    public partial class NewPathFinding
     {
         /// <summary>
         /// This method gets the next node in the path from the given node.

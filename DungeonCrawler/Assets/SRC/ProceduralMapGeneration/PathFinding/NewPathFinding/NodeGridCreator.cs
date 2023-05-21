@@ -17,7 +17,7 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.
     ///
     /// Issue : getting Null Ref in   GetNextNode @   node.Neighbors.Count;
     /// </summary>
-    internal partial class NewPathFinding
+    public partial class NewPathFinding
     {
         /// <summary>
         /// This method creates a grid of nodes and finds the shortest path between two points in the grid.

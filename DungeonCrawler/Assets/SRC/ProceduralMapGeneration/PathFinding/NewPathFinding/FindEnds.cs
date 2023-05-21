@@ -16,14 +16,14 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.
     ///
     /// Issue : getting Null Ref in   GetNextNode @   node.Neighbors.Count;
     /// </summary>
-    internal partial class NewPathFinding
+    public partial class NewPathFinding
     {
         /// <summary>
         /// This method finds the start and end points of the path.
         /// </summary>
         /// <param name="grid">The grid of points.</param>
         /// <returns>An array of Vector3 objects representing the start and end points.</returns>
-        private Vector3[] FindEnds(Vector3[] grid)
+        public Vector3[] FindEnds(Vector3[] grid)
         {
             Vector3[] pos =
             {
