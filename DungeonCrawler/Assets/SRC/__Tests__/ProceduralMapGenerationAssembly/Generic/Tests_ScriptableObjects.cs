@@ -4,7 +4,7 @@ using FluentAssertions;
 using NUnit.Framework;
 using System;
 
-namespace Assets.SRC.ProceduralMapGeneration.Noise.Tests
+namespace Assets.SRC.ProceduralMapGeneration.Generic.Tests
 {
 	public class Test_ScriptableObjects
 	{

@@ -3,10 +3,10 @@ using UnityEngine;
 
 namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Structs
 {
-    internal class MapBuilderStruct
+    public class MapBuilderStruct
     {
-        public List<GameObject> grid;
-        public GameObject startObject;
-        public GameObject previousTilePos;
+        public List<GameObject> grid { get; set; }
+        public GameObject startObject { get; set; }
+        public GameObject previousTilePos { get; set; }
     }
 }
