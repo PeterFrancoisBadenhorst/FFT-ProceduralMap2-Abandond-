@@ -1,4 +1,5 @@
 [Home](../../README.md)/[Asset Creation Workflow](./AssetCreationWorkflow.md)
+
 # Project Pages
 - [Home](../../README.md)
 - [Asset Creation Workflow](./AssetCreationWorkflow.md)
@@ -7,7 +8,14 @@
 - [Mechanic Creation](./MechanicCreation.md)
 - [Project Layout](./ProjectLayout.MD)
 - [Tools Instalation And Requirements](./ToolsInstalationAndRequirements.md)
-
+- [Game Design Document](../GDD/GameDesignDocument.MD)
+    - [Art Style](../GDD/ArtStyle.MD)
+    - [Bonus Cards](../GDD/BonusCards.MD)
+    - [Endless Mode](../GDD/EndlessMode.md)
+    - [Gameplay](../GDD/Gameplay.MD)
+    - [Sound Design](../GDD/SoundDesign.MD)
+    - [Story](../GDD/Story.MD)
+    - [Weapons And Armor](../GDD/WeaponsAndArmor.MD)
 
 <span style="color:red">** To Do **</span>
 ## Texturing

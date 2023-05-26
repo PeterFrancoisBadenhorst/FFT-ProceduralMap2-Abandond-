@@ -1,3 +1,5 @@
+[Home](../../README.md)/[Project Layout](./ProjectLayout.MD)
+
 # Project Pages
 - [Home](../../README.md)
 - [Asset Creation Workflow](./AssetCreationWorkflow.md)
@@ -6,6 +8,7 @@
 - [Mechanic Creation](./MechanicCreation.md)
 - [Project Layout](./ProjectLayout.MD)
 - [Tools Instalation And Requirements](./ToolsInstalationAndRequirements.md)
+- [Game Design Document](../GDD/GameDesignDocument.MD)
 
 
 <span style="color:red">** To Do **</span>
