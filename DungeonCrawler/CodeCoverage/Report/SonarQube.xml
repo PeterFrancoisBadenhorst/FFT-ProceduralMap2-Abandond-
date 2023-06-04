@@ -272,26 +272,6 @@
     <lineToCover lineNumber="55" covered="true" />
     <lineToCover lineNumber="56" covered="true" />
   </file>
-  <file path="C:/git/Unity.DungeonCrawler/DungeonCrawler/Assets/SRC/ProceduralMapGeneration/Utilities/GameObjectCreation/GameObjectCreation.cs">
-    <lineToCover lineNumber="8" covered="false" />
-    <lineToCover lineNumber="28" covered="false" />
-    <lineToCover lineNumber="29" covered="false" />
-    <lineToCover lineNumber="30" covered="false" />
-    <lineToCover lineNumber="31" covered="false" />
-    <lineToCover lineNumber="32" covered="false" />
-    <lineToCover lineNumber="33" covered="false" />
-    <lineToCover lineNumber="34" covered="false" />
-    <lineToCover lineNumber="35" covered="false" />
-    <lineToCover lineNumber="36" covered="false" />
-    <lineToCover lineNumber="37" covered="false" />
-    <lineToCover lineNumber="38" covered="false" />
-    <lineToCover lineNumber="39" covered="false" />
-    <lineToCover lineNumber="41" covered="false" />
-    <lineToCover lineNumber="42" covered="false" />
-    <lineToCover lineNumber="52" covered="false" />
-    <lineToCover lineNumber="53" covered="false" />
-    <lineToCover lineNumber="54" covered="false" />
-  </file>
   <file path="C:/git/Unity.DungeonCrawler/DungeonCrawler/Assets/SRC/ProceduralMapGeneration/Utilities/GenericUtilities/GenericUtilities.cs">
     <lineToCover lineNumber="17" covered="true" />
     <lineToCover lineNumber="26" covered="true" />
@@ -355,19 +335,6 @@
     <lineToCover lineNumber="109" covered="false" />
     <lineToCover lineNumber="110" covered="false" />
     <lineToCover lineNumber="111" covered="false" />
-  </file>
-  <file path="C:/git/Unity.DungeonCrawler/DungeonCrawler/Assets/SRC/ProceduralMapGeneration/Utilities/MapBuilder/MapBuilder.cs">
-    <lineToCover lineNumber="10" covered="false" />
-    <lineToCover lineNumber="21" covered="false" />
-    <lineToCover lineNumber="22" covered="false" />
-    <lineToCover lineNumber="23" covered="false" />
-    <lineToCover lineNumber="24" covered="false" />
-    <lineToCover lineNumber="25" covered="false" />
-    <lineToCover lineNumber="26" covered="false" />
-    <lineToCover lineNumber="38" covered="false" />
-    <lineToCover lineNumber="39" covered="false" />
-    <lineToCover lineNumber="40" covered="false" />
-    <lineToCover lineNumber="41" covered="false" />
   </file>
   <file path="C:/git/Unity.DungeonCrawler/DungeonCrawler/Assets/SRC/ProceduralMapGeneration/Utilities/PopulateTilePositions/PopulateTilePositions.cs">
     <lineToCover lineNumber="20" covered="false" />

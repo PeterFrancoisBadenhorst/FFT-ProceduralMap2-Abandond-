@@ -1,20 +1,20 @@
 ﻿TN:
 SF:C:/git/Unity.DungeonCrawler/DungeonCrawler/Assets/SRC/ProceduralMapGeneration/PathFinding/NewPathFinding/FindEnds.cs
 FN:27,FindEnds(UnityEngine.Vector3[])
-FNDA:8,FindEnds(UnityEngine.Vector3[])
+FNDA:3,FindEnds(UnityEngine.Vector3[])
 FNF:1
 FNH:1
 BRF:0
 BRH:0
-DA:27,8
-DA:30,12
-DA:31,12
-DA:36,24
-DA:37,8
-DA:38,8
-DA:43,8
-DA:44,8
-DA:45,8
+DA:27,3
+DA:30,9
+DA:31,9
+DA:36,18
+DA:37,3
+DA:38,3
+DA:43,3
+DA:44,3
+DA:45,3
 LH:9
 LF:9
 end_of_record
@@ -423,38 +423,6 @@ DA:56,9
 LH:22
 LF:22
 end_of_record
-SF:C:/git/Unity.DungeonCrawler/DungeonCrawler/Assets/SRC/ProceduralMapGeneration/Utilities/GameObjectCreation/GameObjectCreation.cs
-FN:28,CreateGameObjectTile(UnityEngine.GameObject, UnityEngine.Material)
-FN:52,GetMesh()
-FN:8,GameObjectCreation()
-FNDA:0,CreateGameObjectTile(UnityEngine.GameObject, UnityEngine.Material)
-FNDA:0,GetMesh()
-FNDA:0,GameObjectCreation()
-FNF:3
-FNH:0
-BRF:0
-BRH:0
-DA:8,0
-DA:28,0
-DA:29,0
-DA:30,0
-DA:31,0
-DA:32,0
-DA:33,0
-DA:34,0
-DA:35,0
-DA:36,0
-DA:37,0
-DA:38,0
-DA:39,0
-DA:41,0
-DA:42,0
-DA:52,0
-DA:53,0
-DA:54,0
-LH:0
-LF:18
-end_of_record
 SF:C:/git/Unity.DungeonCrawler/DungeonCrawler/Assets/SRC/ProceduralMapGeneration/Utilities/GenericUtilities/GenericUtilities.cs
 FN:17,NeighborsPosition(System.Single, UnityEngine.Vector3)
 FNDA:16,NeighborsPosition(System.Single, UnityEngine.Vector3)
@@ -540,31 +508,6 @@ DA:110,0
 DA:111,0
 LH:0
 LF:51
-end_of_record
-SF:C:/git/Unity.DungeonCrawler/DungeonCrawler/Assets/SRC/ProceduralMapGeneration/Utilities/MapBuilder/MapBuilder.cs
-FN:21,ChooseStartTile(System.Collections.Generic.List[GameObject])
-FN:38,CollapseTile(System.Collections.Generic.List[GameObject], UnityEngine.GameObject)
-FN:10,MapBuilder()
-FNDA:0,ChooseStartTile(System.Collections.Generic.List[GameObject])
-FNDA:0,CollapseTile(System.Collections.Generic.List[GameObject], UnityEngine.GameObject)
-FNDA:0,MapBuilder()
-FNF:3
-FNH:0
-BRF:0
-BRH:0
-DA:10,0
-DA:21,0
-DA:22,0
-DA:23,0
-DA:24,0
-DA:25,0
-DA:26,0
-DA:38,0
-DA:39,0
-DA:40,0
-DA:41,0
-LH:0
-LF:11
 end_of_record
 SF:C:/git/Unity.DungeonCrawler/DungeonCrawler/Assets/SRC/ProceduralMapGeneration/Utilities/PopulateTilePositions/PopulateTilePositions.cs
 FN:20,SetChildTile(Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.ScriptableObjects.DirectionalTilesScriptableObject, System.Collections.Generic.List[GameObject])
