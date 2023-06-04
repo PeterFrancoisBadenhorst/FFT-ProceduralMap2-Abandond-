@@ -30,29 +30,20 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.
             Vector3[] mapGrid = _newPathFinding.NodeGridCreator(grid, GridScale);
             List<object> objects = new();
             List<Vector3> MapTotal = new List<Vector3>();
+
+            MapTotalFillPercentage = grid.Length / MapTotalFillPercentage;
+
             for (int i = 0; i < mapGrid.Length; i++)
             {
                 MapTotal.Add(mapGrid[i]);
             }
-            Debug.Log($"Starting loop.");
-            MapTotalFillPercentage = grid.Length / MapTotalFillPercentage;
-            int loopCount = 0;
+
             while (MapTotal.Count < MapTotalFillPercentage)
             {
-                loopCount++;
-                Debug.Log($"Iteration {loopCount} as {MapTotal.Count} is less than {MapTotalFillPercentage}");
-                var tempGrid = (MapTotal.Count == 0) ? mapGrid : MapTotal.ToArray();
+                var tempGrid = MapTotal.Count == 0 ? mapGrid : MapTotal.ToArray();
                 var temp = _newPathFinding.NodeGridCreator(grid, tempGrid, GridScale);
-                for (int g = 0; g < temp.Length; g++)
-                {
-                    if (!MapTotal.Any(p => p.x == temp[g].x &&
-                                        p.y == temp[g].y &&
-                                        p.z == temp[g].z))
-                    {
-                        MapTotal.Add(temp[g]);
-                    }
-                }
-            }
+                MapTotal.AddRange(temp.Where(p => !MapTotal.Any(q => p.x == q.x && p.y == q.y && p.z == q.z)));
+            }          
 
             gridRelations = _gridCreate.PlaceGameObjectsAtGridPositions(mapGrid, GridParent);
             gridRelations = _chunkHandler.FindChunkNeigbors(GridScale, gridRelations);

@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <CoverageReport scope="Summary">
   <Summary>
-    <Generatedon>2023/06/04 - 9:08:17 PM</Generatedon>
+    <Generatedon>2023/06/04 - 9:21:26 PM</Generatedon>
     <Parser>MultiReportParser (21x OpenCoverParser)</Parser>
     <Assemblies>2</Assemblies>
     <Classes>15</Classes>
     <Files>22</Files>
     <Coveredlines>121</Coveredlines>
-    <Uncoveredlines>329</Uncoveredlines>
-    <Coverablelines>450</Coverablelines>
-    <Totallines>1255</Totallines>
-    <Linecoverage>26.8</Linecoverage>
+    <Uncoveredlines>317</Uncoveredlines>
+    <Coverablelines>438</Coverablelines>
+    <Totallines>1231</Totallines>
+    <Linecoverage>27.6</Linecoverage>
     <Coveredbranches>0</Coveredbranches>
     <Totalbranches>0</Totalbranches>
     <Coveredmethods>28</Coveredmethods>
-    <Totalmethods>55</Totalmethods>
-    <Methodcoverage>50.9</Methodcoverage>
+    <Totalmethods>56</Totalmethods>
+    <Methodcoverage>50</Methodcoverage>
   </Summary>
   <Coverage>
-    <Assembly name="ProceduralMapGenerationAssembly" classes="13" coverage="26.3" coveredlines="118" coverablelines="447" totallines="1233" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="26" totalmethods="53" methodcoverage="49">
-      <Class name="Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.PathFinding.NewPathFinding" coverage="8.3" coveredlines="12" coverablelines="144" totallines="416" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="2" totalmethods="13" methodcoverage="15.3" />
-      <Class name="Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.PathFinding.PathMapBuilder" coverage="0" coveredlines="0" coverablelines="38" totallines="64" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="2" methodcoverage="0" />
+    <Assembly name="ProceduralMapGenerationAssembly" classes="13" coverage="27.1" coveredlines="118" coverablelines="435" totallines="1209" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="26" totalmethods="54" methodcoverage="48.1">
+      <Class name="Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.PathFinding.NewPathFinding" coverage="8.4" coveredlines="12" coverablelines="142" totallines="401" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="2" totalmethods="14" methodcoverage="14.2" />
+      <Class name="Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.PathFinding.PathMapBuilder" coverage="0" coveredlines="0" coverablelines="28" totallines="55" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="2" methodcoverage="0" />
       <Class name="Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Noise.PerlinNoiseGenerator" coverage="100" coveredlines="13" coverablelines="13" totallines="29" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="1" totalmethods="1" methodcoverage="100" />
       <Class name="Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.ScriptableObjects.DirectionalTilesScriptableObject" coverage="100" coveredlines="3" coverablelines="3" totallines="146" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="1" totalmethods="1" methodcoverage="100" />
       <Class name="Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Structs.DirectionIDStruct" coverage="100" coveredlines="6" coverablelines="6" totallines="12" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="12" totalmethods="12" methodcoverage="100" />

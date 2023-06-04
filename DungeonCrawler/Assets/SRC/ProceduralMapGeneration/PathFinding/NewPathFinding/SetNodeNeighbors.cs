@@ -44,64 +44,7 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.
             {
                 var currentNode = nodes[i];
                 List<NewNodeModel> neighbornodes = new();
-                for (int g = 0; g < nodes.Count; g++)
-                {
-                    /// North
-                    if (currentNode.Position.x == nodes[g].Position.x + scale &&
-                        currentNode.Position.y == nodes[g].Position.y &&
-                        currentNode.Position.z == nodes[g].Position.z
-                        )
-                    {
-                        nodes[g].hCost = currentNode.fCost - nodes[g].fCost;
-                        neighbornodes.Add(nodes[g]);
-                    }
-                    /// East
-                    if (currentNode.Position.x == nodes[g].Position.x &&
-                        currentNode.Position.y == nodes[g].Position.y &&
-                        currentNode.Position.z == nodes[g].Position.z + scale
-                       )
-                    {
-                        nodes[g].hCost = currentNode.fCost - nodes[g].fCost;
-                        neighbornodes.Add(nodes[g]);
-                    }
-                    /// South
-                    if (currentNode.Position.x == nodes[g].Position.x - scale &&
-                        currentNode.Position.y == nodes[g].Position.y &&
-                        currentNode.Position.z == nodes[g].Position.z
-                        )
-                    {
-                        nodes[g].hCost = currentNode.fCost - nodes[g].fCost;
-                        neighbornodes.Add(nodes[g]);
-                    }
-                    /// West
-                    if (currentNode.Position.x == nodes[g].Position.x &&
-                        currentNode.Position.y == nodes[g].Position.y &&
-                        currentNode.Position.z == nodes[g].Position.z - scale
-                       )
-                    {
-                        nodes[g].hCost = currentNode.fCost - nodes[g].fCost;
-                        neighbornodes.Add(nodes[g]);
-                    }
-                    /// Top
-                    if (currentNode.Position.x == nodes[g].Position.x &&
-                        currentNode.Position.y == nodes[g].Position.y + scale &&
-                        currentNode.Position.z == nodes[g].Position.z
-                                   )
-                    {
-                        nodes[g].hCost = currentNode.fCost - nodes[g].fCost;
-                        neighbornodes.Add(nodes[g]);
-                    }
-                    /// Bottom
-                    if (currentNode.Position.x == nodes[g].Position.x &&
-                        currentNode.Position.y == nodes[g].Position.y - scale &&
-                        currentNode.Position.z == nodes[g].Position.z
-                                   )
-                    {
-                        nodes[g].hCost = currentNode.fCost - nodes[g].fCost;
-                        neighbornodes.Add(nodes[g]);
-                    }
-                }
-                currentNode.Neighbors = neighbornodes;
+                currentNode.Neighbors = FindNeighbors(currentNode,nodes,scale);
                 setNodes.Add(currentNode);
             }
             return setNodes.Distinct().ToList();
