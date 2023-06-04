@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Utilities
+namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.Shared.Assets.SRC.Shared.Utilities
 {
     public class GenericUtilities
     {
