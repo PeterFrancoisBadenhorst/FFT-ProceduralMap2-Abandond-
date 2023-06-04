@@ -23,44 +23,64 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.
             List<GameObject> map = new List<GameObject>();
             MapBuilderStruct dataKeeper = new MapBuilderStruct();
             dataKeeper.startObject = grid[random.Next(grid.Count)];
-            if (!dataKeeper.previousTilePos)
-                dataKeeper.previousTilePos = dataKeeper.startObject;
-            for (int i = 0; i < (int)(grid.Count * 0.3f); i++)
-            {
-                if (!map.Contains(grid[i]))
-                {
-                    var t = dataKeeper.previousTilePos.GetComponent<ChunkBehavior>();
-                    List<GameObject> list = new List<GameObject>();
-
-                    map.Add(dataKeeper.previousTilePos);
-                    if (t.neighborStruct.NorthNeighbor && !map.Contains(t.neighborStruct.NorthNeighbor))
-                        list.Add(t.neighborStruct.NorthNeighbor);
-                    if (t.neighborStruct.EastNeighbor && !map.Contains(t.neighborStruct.EastNeighbor))
-                        list.Add(t.neighborStruct.EastNeighbor);
-                    if (t.neighborStruct.SouthNeighbor && !map.Contains(t.neighborStruct.SouthNeighbor))
-                        list.Add(t.neighborStruct.SouthNeighbor);
-                    if (t.neighborStruct.WestNeighbor && !map.Contains(t.neighborStruct.WestNeighbor))
-                        list.Add(t.neighborStruct.WestNeighbor);
-                    if (t.neighborStruct.TopNeighbor && !map.Contains(t.neighborStruct.TopNeighbor))
-                        list.Add(t.neighborStruct.TopNeighbor);
-                    if (t.neighborStruct.BottomNeighbor && !map.Contains(t.neighborStruct.BottomNeighbor))
-                        list.Add(t.neighborStruct.BottomNeighbor);
-                    var f = random.Next(list.Count);
-                    dataKeeper.previousTilePos = list[f];
-                    list.RemoveAt(f);
-                    for (int r = 0; r < list.Count; r++)
-                    {
-                        list[r].SetActive(false);
-                    }
-                }
-            }
+            GenerateRandomPath(map, dataKeeper);
+            
             for (int i = 0; i < map.Count; i++)
             {
                 map[i].name = "set tile";
             }
             return map;
         }
+        public static void GenerateRandomPath(List<GameObject> map, MapBuilderStruct dataKeeper)
+        {
+            var random = new System.Random();
+            if (!dataKeeper.previousTilePos)
+                dataKeeper.previousTilePos = dataKeeper.startObject;
 
+            var chunk = dataKeeper.previousTilePos.GetComponent<ChunkBehavior>();
+            var list = new List<GameObject>();
+            for (int i = 0; i < (int)(map.Count * 0.3f); i++)
+            {
+                if (!map.Contains(dataKeeper.previousTilePos))
+                { 
+                    map.Add(dataKeeper.previousTilePos);
+
+                    if (chunk.neighborStruct.NorthNeighbor && !map.Contains(chunk.neighborStruct.NorthNeighbor))
+                    {
+                        list.Add(chunk.neighborStruct.NorthNeighbor);
+                    }
+                    if (chunk.neighborStruct.EastNeighbor && !map.Contains(chunk.neighborStruct.EastNeighbor))
+                    {
+                        list.Add(chunk.neighborStruct.EastNeighbor);
+                    }
+                    if (chunk.neighborStruct.SouthNeighbor && !map.Contains(chunk.neighborStruct.SouthNeighbor))
+                    {
+                        list.Add(chunk.neighborStruct.SouthNeighbor);
+                    }
+                    if (chunk.neighborStruct.WestNeighbor && !map.Contains(chunk.neighborStruct.WestNeighbor))
+                    {
+                        list.Add(chunk.neighborStruct.WestNeighbor);
+                    }
+                    if (chunk.neighborStruct.TopNeighbor && !map.Contains(chunk.neighborStruct.TopNeighbor))
+                    {
+                        list.Add(chunk.neighborStruct.TopNeighbor);
+                    }
+                    if (chunk.neighborStruct.BottomNeighbor && !map.Contains(chunk.neighborStruct.BottomNeighbor))
+                    {
+                        list.Add(chunk.neighborStruct.BottomNeighbor);
+                    }
+
+                    var index = random.Next(list.Count);
+                    dataKeeper.previousTilePos = list[index];
+                    list.RemoveAt(index);
+
+                    foreach (var go in list)
+                    {
+                        go.SetActive(false);
+                    }
+                }
+            }
+        }
         /// <summary>
         /// Creates a path from the specified grid.
         /// </summary>

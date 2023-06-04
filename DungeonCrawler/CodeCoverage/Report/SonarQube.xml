@@ -399,7 +399,6 @@
     <lineToCover lineNumber="24" covered="false" />
     <lineToCover lineNumber="25" covered="false" />
     <lineToCover lineNumber="26" covered="false" />
-    <lineToCover lineNumber="27" covered="false" />
     <lineToCover lineNumber="28" covered="false" />
     <lineToCover lineNumber="29" covered="false" />
     <lineToCover lineNumber="30" covered="false" />
@@ -410,7 +409,6 @@
     <lineToCover lineNumber="36" covered="false" />
     <lineToCover lineNumber="37" covered="false" />
     <lineToCover lineNumber="38" covered="false" />
-    <lineToCover lineNumber="39" covered="false" />
     <lineToCover lineNumber="40" covered="false" />
     <lineToCover lineNumber="41" covered="false" />
     <lineToCover lineNumber="42" covered="false" />
@@ -418,7 +416,6 @@
     <lineToCover lineNumber="44" covered="false" />
     <lineToCover lineNumber="45" covered="false" />
     <lineToCover lineNumber="46" covered="false" />
-    <lineToCover lineNumber="47" covered="false" />
     <lineToCover lineNumber="48" covered="false" />
     <lineToCover lineNumber="49" covered="false" />
     <lineToCover lineNumber="50" covered="false" />
@@ -434,32 +431,51 @@
     <lineToCover lineNumber="60" covered="false" />
     <lineToCover lineNumber="61" covered="false" />
     <lineToCover lineNumber="62" covered="false" />
-    <lineToCover lineNumber="76" covered="false" />
-    <lineToCover lineNumber="84" covered="false" />
-    <lineToCover lineNumber="85" covered="false" />
-    <lineToCover lineNumber="86" covered="false" />
-    <lineToCover lineNumber="87" covered="false" />
-    <lineToCover lineNumber="88" covered="false" />
-    <lineToCover lineNumber="89" covered="false" />
-    <lineToCover lineNumber="90" covered="false" />
-    <lineToCover lineNumber="91" covered="false" />
-    <lineToCover lineNumber="92" covered="false" />
-    <lineToCover lineNumber="93" covered="false" />
-    <lineToCover lineNumber="94" covered="false" />
-    <lineToCover lineNumber="95" covered="false" />
-    <lineToCover lineNumber="97" covered="false" />
-    <lineToCover lineNumber="98" covered="false" />
+    <lineToCover lineNumber="63" covered="false" />
+    <lineToCover lineNumber="64" covered="false" />
+    <lineToCover lineNumber="65" covered="false" />
+    <lineToCover lineNumber="66" covered="false" />
+    <lineToCover lineNumber="67" covered="false" />
+    <lineToCover lineNumber="68" covered="false" />
+    <lineToCover lineNumber="69" covered="false" />
+    <lineToCover lineNumber="70" covered="false" />
+    <lineToCover lineNumber="71" covered="false" />
+    <lineToCover lineNumber="73" covered="false" />
+    <lineToCover lineNumber="74" covered="false" />
+    <lineToCover lineNumber="75" covered="false" />
+    <lineToCover lineNumber="77" covered="false" />
+    <lineToCover lineNumber="78" covered="false" />
+    <lineToCover lineNumber="79" covered="false" />
+    <lineToCover lineNumber="80" covered="false" />
+    <lineToCover lineNumber="81" covered="false" />
+    <lineToCover lineNumber="82" covered="false" />
+    <lineToCover lineNumber="83" covered="false" />
+    <lineToCover lineNumber="96" covered="false" />
+    <lineToCover lineNumber="104" covered="false" />
+    <lineToCover lineNumber="105" covered="false" />
+    <lineToCover lineNumber="106" covered="false" />
+    <lineToCover lineNumber="107" covered="false" />
+    <lineToCover lineNumber="108" covered="false" />
+    <lineToCover lineNumber="109" covered="false" />
     <lineToCover lineNumber="110" covered="false" />
     <lineToCover lineNumber="111" covered="false" />
     <lineToCover lineNumber="112" covered="false" />
     <lineToCover lineNumber="113" covered="false" />
     <lineToCover lineNumber="114" covered="false" />
     <lineToCover lineNumber="115" covered="false" />
-    <lineToCover lineNumber="116" covered="false" />
     <lineToCover lineNumber="117" covered="false" />
     <lineToCover lineNumber="118" covered="false" />
-    <lineToCover lineNumber="119" covered="false" />
-    <lineToCover lineNumber="120" covered="false" />
+    <lineToCover lineNumber="130" covered="false" />
+    <lineToCover lineNumber="131" covered="false" />
+    <lineToCover lineNumber="132" covered="false" />
+    <lineToCover lineNumber="133" covered="false" />
+    <lineToCover lineNumber="134" covered="false" />
+    <lineToCover lineNumber="135" covered="false" />
+    <lineToCover lineNumber="136" covered="false" />
+    <lineToCover lineNumber="137" covered="false" />
+    <lineToCover lineNumber="138" covered="false" />
+    <lineToCover lineNumber="139" covered="false" />
+    <lineToCover lineNumber="140" covered="false" />
   </file>
   <file path="C:/git/Unity.DungeonCrawler/DungeonCrawler/Assets/SRC/ProceduralMapGeneration/Utilities/PopulateTilePositions/PopulateTilePositions.cs">
     <lineToCover lineNumber="20" covered="false" />
