@@ -21,11 +21,21 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.
         /// </summary>
         /// <param name="node">The current node.</param>
         /// <returns>The next node in the path.</returns>
-        private NewNode GetNextNode(NewNode node)
+        private NewNodeModel GetNextNode(NewNodeModel node)
         {
             float dis = float.MaxValue;
-            NewNode returnedNode = null;
+            NewNodeModel returnedNode = null;
             var t = node.Neighbors.Count;
+
+            returnedNode = FindNodeWithLowestCost(node, t);
+
+            returnedNode.LastNode = node;
+            return returnedNode;
+        }
+        public static NewNodeModel FindNodeWithLowestCost(NewNodeModel node, int t)
+        {
+            NewNodeModel returnedNode = null;
+            float dis = float.MaxValue;
 
             for (int i = 0; i < t; i++)
             {
@@ -36,7 +46,6 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.
                 }
             }
 
-            returnedNode.LastNode = node;
             return returnedNode;
         }
     }

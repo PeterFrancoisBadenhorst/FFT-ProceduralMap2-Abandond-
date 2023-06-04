@@ -25,11 +25,22 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.
         /// <returns>An array of Vector3 objects representing the start and end points.</returns>
         public Vector3[] FindEnds(Vector3[] grid)
         {
-            Vector3[] pos =
+            Vector3[] pos;
+            do
             {
-            (grid[random.Next(0, grid.Length)]),
-            (grid[random.Next(0, grid.Length)])
-            };
+                pos = new Vector3[]
+                {
+                    (grid[random.Next(0, grid.Length)]),
+                    (grid[random.Next(0, grid.Length)])
+                };
+            } while (pos[0] == pos[1]);
+            {
+                pos = new Vector3[]
+               {
+                    (grid[random.Next(0, grid.Length)]),
+                    (grid[random.Next(0, grid.Length)])
+               };
+            }
             return pos;
         }
     }

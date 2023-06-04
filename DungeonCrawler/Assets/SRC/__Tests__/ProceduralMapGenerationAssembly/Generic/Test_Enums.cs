@@ -7,28 +7,69 @@ namespace Assets.SRC.ProceduralMapGeneration.Generic.Tests
 {
     public class Test_Enums
     {
-        [Test]
-        public void Should_Have_28_Values()
+        [TestFixture]
+        public class GridTypeEnum_Tests
         {
-            // Arrange
-            DirectionTypeEnum[] directionTypeEnum = (DirectionTypeEnum[])Enum.GetValues(typeof(DirectionTypeEnum));
+            [Test]
+            public void Should_Have_3_Values()
+            {
+                // Arrange
+                GridTypeEnum[] enumValues = (GridTypeEnum[])Enum.GetValues(typeof(GridTypeEnum));
 
-            // Act
-            var count = directionTypeEnum.Length;
+                // Act
+                var count = enumValues.Length;
 
-            // Assert
-            count.Should().Be(67);
+                // Assert
+                count.Should().Be(3);
+            }
+            [Test]
+            public void Should_Have_The_Expected_Values()
+            {
+                // Arrange
+                GridTypeEnum[] enumValues = (GridTypeEnum[])Enum.GetValues(typeof(GridTypeEnum));
+
+                // Act
+                var expectedValues = new[]
+                {
+                    GridTypeEnum.TwoDimentionVertical,
+                    GridTypeEnum.TwoDimentionHorizontal,
+                    GridTypeEnum.TwoDimentionVertical
+                };
+                // Assert
+                foreach (var expectedValue in expectedValues)
+                {
+                    enumValues.Should().Contain(expectedValue);
+                }
+            }
+
         }
 
-        [Test]
-        public void Should_Have_The_Expected_Values()
+        [TestFixture]
+        public class DirectionTypeEnum_Tests
         {
-            // Arrange
-            DirectionTypeEnum[] directionTypeEnum = (DirectionTypeEnum[])Enum.GetValues(typeof(DirectionTypeEnum));
 
-            // Act
-            var expectedValues = new[]
+            [Test]
+            public void Should_Have_28_Values()
             {
+                // Arrange
+                DirectionTypeEnum[] enumValues = (DirectionTypeEnum[])Enum.GetValues(typeof(DirectionTypeEnum));
+
+                // Act
+                var count = enumValues.Length;
+
+                // Assert
+                count.Should().Be(67);
+            }
+
+            [Test]
+            public void Should_Have_The_Expected_Values()
+            {
+                // Arrange
+                DirectionTypeEnum[] directionTypeEnum = (DirectionTypeEnum[])Enum.GetValues(typeof(DirectionTypeEnum));
+
+                // Act
+                var expectedValues = new[]
+                {
                 DirectionTypeEnum.N,
                 DirectionTypeEnum.NE,
                 DirectionTypeEnum.NS,
@@ -98,10 +139,11 @@ namespace Assets.SRC.ProceduralMapGeneration.Generic.Tests
                 DirectionTypeEnum.Start
             };
 
-            // Assert
-            foreach (var expectedValue in expectedValues)
-            {
-                directionTypeEnum.Should().Contain(expectedValue);
+                // Assert
+                foreach (var expectedValue in expectedValues)
+                {
+                    directionTypeEnum.Should().Contain(expectedValue);
+                }
             }
         }
     }

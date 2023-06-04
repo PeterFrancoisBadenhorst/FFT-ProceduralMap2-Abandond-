@@ -15,7 +15,7 @@ namespace Assets.SRC.ProceduralMapGeneration.PathFinding.Tests
             Vector3 position = new Vector3(1, 2, 3);
 
             // Act
-            NewNode node = new NewNode() { Position = position };
+            NewNodeModel node = new NewNodeModel() { Position = position };
 
             // Assert
             node.Position.Should().Be(position);
@@ -25,10 +25,10 @@ namespace Assets.SRC.ProceduralMapGeneration.PathFinding.Tests
         public void Should_Not_Have_An_Empty_List_Of_Neighbors_ByDefault()
         {
             // Arrange
-            NewNode node = new NewNode();
+            NewNodeModel node = new NewNodeModel();
 
             // Act
-            List<NewNode> neighbors = node.Neighbors;
+            List<NewNodeModel> neighbors = node.Neighbors;
 
             // Assert
             neighbors.Should().BeNullOrEmpty();
@@ -38,7 +38,7 @@ namespace Assets.SRC.ProceduralMapGeneration.PathFinding.Tests
         public void Should_Not_Be_Closed_ByDefault()
         {
             // Arrange
-            NewNode node = new NewNode();
+            NewNodeModel node = new NewNodeModel();
 
             // Act
             bool closed = node.Closed;
@@ -51,7 +51,7 @@ namespace Assets.SRC.ProceduralMapGeneration.PathFinding.Tests
         public void Should_Have_A_Default_Cost_Of_Zero()
         {
             // Arrange
-            NewNode node = new NewNode();
+            NewNodeModel node = new NewNodeModel();
 
             // Act
             float cost = node.fCost;
@@ -64,7 +64,7 @@ namespace Assets.SRC.ProceduralMapGeneration.PathFinding.Tests
         public void Should_Have_A_Default_Heuristic_Cost_Of_Zero()
         {
             // Arrange
-            NewNode node = new NewNode();
+            NewNodeModel node = new NewNodeModel();
 
             // Act
             float hCost = node.hCost;
@@ -77,10 +77,10 @@ namespace Assets.SRC.ProceduralMapGeneration.PathFinding.Tests
         public void Should_Not_Have_A_LastNode_ByDefault()
         {
             // Arrange
-            NewNode node = new NewNode();
+            NewNodeModel node = new NewNodeModel();
 
             // Act
-            NewNode lastNode = node.LastNode;
+            NewNodeModel lastNode = node.LastNode;
 
             // Assert
             lastNode.Should().BeNull();

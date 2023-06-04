@@ -25,7 +25,7 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.
         /// <param name="nodes">The list of nodes.</param>
         /// <param name="scale">The scale of the nodes.</param>
         /// <returns>A list of nodes with their neighbors set.</returns>
-        private List<NewNode> SetNodeNeighbors(List<NewNode> nodes, float scale)
+        private List<NewNodeModel> SetNodeNeighbors(List<NewNodeModel> nodes, float scale)
         {
             /// <summary>
             /// This comment block defines the directions of the neighbors.
@@ -39,11 +39,11 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.
             /// B = Bottom
             /// </remarks>
 
-            List<NewNode> setNodes = new();
+            List<NewNodeModel> setNodes = new();
             for (int i = 0; i < nodes.Count; i++)
             {
                 var currentNode = nodes[i];
-                List<NewNode> neighbornodes = new();
+                List<NewNodeModel> neighbornodes = new();
                 for (int g = 0; g < nodes.Count; g++)
                 {
                     /// North
@@ -105,6 +105,69 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.
                 setNodes.Add(currentNode);
             }
             return setNodes.Distinct().ToList();
+        }
+        public static List<NewNodeModel> FindNeighbors(NewNodeModel node, List<NewNodeModel> nodes, float scale)
+        {
+            List<NewNodeModel> neighbors = new List<NewNodeModel>();
+
+            for (int i = 0; i < nodes.Count; i++)
+            {
+                /// North
+                if (node.Position.x == nodes[i].Position.x + scale &&
+                    node.Position.y == nodes[i].Position.y &&
+                    node.Position.z == nodes[i].Position.z
+                    )
+                {
+                    neighbors.Add(nodes[i]);
+                }
+
+                /// East
+                if (node.Position.x == nodes[i].Position.x &&
+                    node.Position.y == nodes[i].Position.y &&
+                    node.Position.z == nodes[i].Position.z + scale
+                    )
+                {
+                    neighbors.Add(nodes[i]);
+                }
+
+                /// South
+                if (node.Position.x == nodes[i].Position.x - scale &&
+                    node.Position.y == nodes[i].Position.y &&
+                    node.Position.z == nodes[i].Position.z
+                    )
+                {
+                    neighbors.Add(nodes[i]);
+                }
+
+                /// West
+                if (node.Position.x == nodes[i].Position.x &&
+                    node.Position.y == nodes[i].Position.y &&
+                    node.Position.z == nodes[i].Position.z - scale
+                    )
+                {
+                    neighbors.Add(nodes[i]);
+                }
+
+                /// Top
+                if (node.Position.x == nodes[i].Position.x &&
+                    node.Position.y == nodes[i].Position.y + scale &&
+                    node.Position.z == nodes[i].Position.z
+                            )
+                {
+                    neighbors.Add(nodes[i]);
+                }
+
+                /// Bottom
+                if (node.Position.x == nodes[i].Position.x &&
+                    node.Position.y == nodes[i].Position.y - scale &&
+                    node.Position.z == nodes[i].Position.z
+                            )
+                {
+                    neighbors.Add(nodes[i]);
+                }
+            }
+
+            return neighbors;
         }
     }
 }

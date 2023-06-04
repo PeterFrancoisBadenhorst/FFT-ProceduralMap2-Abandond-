@@ -1,6 +1,7 @@
 [Home](../../README.md)/[Coding And Asset Standards](./CodingAndAssetStandards.md)
 
 # Project Pages
+
 - [Home](../../README.md)
 - [Asset Creation Workflow](./AssetCreationWorkflow.md)
 - [Coding And Asset Standards](./CodingAndAssetStandards.md)
@@ -10,33 +11,60 @@
 - [Tools Instalation And Requirements](./ToolsInstalationAndRequirements.md)
 - [Game Design Document](../GDD/GameDesignDocument.MD)
 
-
 <span style="color:red">** To Do **</span>
-
 
 # Coding And Asset Standards
+
 ## Asset Prefix Definitions
-|Prefix|Type|
-|---|---|
-|SC_ |Scene|
-|ESC_ |Example Scene|
-|GSC_ |Game Scene|
-|Pre_ |Prefix|
-|Tex_ |Texture|
-|RTex_| Render Texture|
-|Mat_ |Material|
-|SO_ |ScriptableObject|
-|UI_ |UI Sprite|
-|SP_ |Sprite|
-|Mesh_ |Mesh|
-|CMesh_| Collider Mesh|
-|Anim_ |Animation|
-|ACon_ |Animation Controller|
-|CharM_| Charactor Modle|
-|CharT_| Charactor Texture|
-|CharA_| Charactor Material|
-|CharC_| Charactor Collider|
-|PMat_| Physics Material|
+
+| Prefix  | Type                 |
+| ------- | -------------------- |
+| SC\_    | Scene                |
+| ESC\_   | Example Scene        |
+| GSC\_   | Game Scene           |
+| Pre\_   | Prefix               |
+| Tex\_   | Texture              |
+| RTex\_  | Render Texture       |
+| Mat\_   | Material             |
+| SO\_    | ScriptableObject     |
+| UI\_    | UI Sprite            |
+| SP\_    | Sprite               |
+| Mesh\_  | Mesh                 |
+| CMesh\_ | Collider Mesh        |
+| Anim\_  | Animation            |
+| ACon\_  | Animation Controller |
+| CharM\_ | Charactor Modle      |
+| CharT\_ | Charactor Texture    |
+| CharA\_ | Charactor Material   |
+| CharC\_ | Charactor Collider   |
+| PMat\_  | Physics Material     |
 
 ## Coding Definitions
+
 <span style="color:red">** To Do **</span>
+
+## Method Structure
+
+```c#
+/// <summary>
+/// What this class is intended for.
+/// </summary>
+public class className
+{
+    /// <summary>
+    /// what this method does and is used for
+    /// </summary>
+    /// <param name="variableName">Where this variable comes from and what its used for.</param>
+    /// <returns>What this method returns, and what it will be used for</returns>
+    public DataType MethodName(DataType variableName)
+    {
+        // Exceptions
+
+        // Variables
+
+        // calculations
+
+        // returns
+    }
+}
+```

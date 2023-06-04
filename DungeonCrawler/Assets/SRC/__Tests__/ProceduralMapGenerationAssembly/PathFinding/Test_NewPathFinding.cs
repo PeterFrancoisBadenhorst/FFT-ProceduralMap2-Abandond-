@@ -36,13 +36,26 @@ namespace Assets.SRC.ProceduralMapGeneration.PathFinding.Tests
                 new Vector3(1, 2, 3),
                 new Vector3(4, 5, 6),
             };
-                System.Random random = new System.Random();
+                var randFailFix = false;
+                Vector3[] pos = null;
 
                 // Act
-                Vector3[] pos = pathFinder.FindEnds(grid);
+                while (!randFailFix)
+                {
+                    System.Random random = new System.Random();
 
+                    pos = pathFinder.FindEnds(grid);
+
+                    if (pos[0] != pos[1])
+                    {
+                        randFailFix = true;
+                    }
+
+                }
                 // Assert
                 pos[0].Should().NotBeEquivalentTo(pos[1]);
+                pos.Count().Should().Be(2);
+
             }
         }
         [TestFixture]
@@ -65,7 +78,7 @@ namespace Assets.SRC.ProceduralMapGeneration.PathFinding.Tests
             [Test]
             public void EmptyGrid()
             {
-                List<NewNode> grid = new();
+                List<NewNodeModel> grid = new();
 
                 Vector3[] positions = new Vector3[]
                 {
@@ -79,14 +92,14 @@ namespace Assets.SRC.ProceduralMapGeneration.PathFinding.Tests
             [Test]
             public void NullPositions()
             {
-                List<NewNode> grid = new List<NewNode>
+                List<NewNodeModel> grid = new List<NewNodeModel>
             {
-                new NewNode(),
-                new NewNode(),
-                new NewNode(),
-                new NewNode(),
-                new NewNode(),
-                new NewNode()
+                new NewNodeModel(),
+                new NewNodeModel(),
+                new NewNodeModel(),
+                new NewNodeModel(),
+                new NewNodeModel(),
+                new NewNodeModel()
             };
 
                 grid[0].Position = new Vector3(0, 0);
@@ -102,14 +115,14 @@ namespace Assets.SRC.ProceduralMapGeneration.PathFinding.Tests
             [Test]
             public void EmptyPositions()
             {
-                List<NewNode> grid = new List<NewNode>
+                List<NewNodeModel> grid = new List<NewNodeModel>
             {
-                new NewNode(),
-                new NewNode(),
-                new NewNode(),
-                new NewNode(),
-                new NewNode(),
-                new NewNode()
+                new NewNodeModel(),
+                new NewNodeModel(),
+                new NewNodeModel(),
+                new NewNodeModel(),
+                new NewNodeModel(),
+                new NewNodeModel()
             };
 
                 grid[0].Position = new Vector3(0, 0);

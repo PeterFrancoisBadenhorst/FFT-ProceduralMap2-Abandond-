@@ -41,10 +41,10 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 821
-    height: 839
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
+    width: 703
+    height: 454
+  m_MinSize: {x: 102, y: 121}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 18}
   m_Panes:
   - {fileID: 18}
@@ -68,13 +68,13 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 100
-    width: 1604
-    height: 839
+    y: 485
+    width: 1378
+    height: 454
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 3037
+  controlID: 155
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -94,8 +94,8 @@ MonoBehaviour:
     y: 626
     width: 100
     height: 313
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 201, y: 221}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 23}
   m_Panes:
   - {fileID: 23}
@@ -125,7 +125,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 200}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 60
+  controlID: 204
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -141,10 +141,10 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 821
+    x: 703
     y: 0
-    width: 783
-    height: 839
+    width: 675
+    height: 454
   m_MinSize: {x: 447, y: 86}
   m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 17}
@@ -152,7 +152,7 @@ MonoBehaviour:
   - {fileID: 24}
   - {fileID: 17}
   m_Selected: 1
-  m_LastSelected: 1
+  m_LastSelected: 0
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -170,14 +170,14 @@ MonoBehaviour:
   - {fileID: 3}
   m_Position:
     serializedVersion: 2
-    x: 116
+    x: 221
     y: 0
-    width: 1604
+    width: 1378
     height: 939
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 52
+  controlID: 20
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -195,7 +195,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 100
+    width: 221
     height: 939
   m_MinSize: {x: 231, y: 271}
   m_MaxSize: {x: 10001, y: 10021}
@@ -229,7 +229,7 @@ MonoBehaviour:
   m_MinSize: {x: 500, y: 200}
   m_MaxSize: {x: 40480, y: 16192}
   vertical: 0
-  controlID: 50
+  controlID: 18
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -249,8 +249,8 @@ MonoBehaviour:
     y: 0
     width: 100
     height: 626
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 20}
   m_Panes:
   - {fileID: 20}
@@ -273,10 +273,10 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 116
+    width: 221
     height: 939
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 21}
   m_Panes:
   - {fileID: 21}
@@ -370,14 +370,14 @@ MonoBehaviour:
   - {fileID: 7}
   m_Position:
     serializedVersion: 2
-    x: 100
+    x: 221
     y: 0
-    width: 1720
+    width: 1599
     height: 939
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 51
+  controlID: 19
 --- !u!114 &16
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -395,8 +395,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1604
-    height: 100
+    width: 1378
+    height: 485
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 22}
@@ -424,10 +424,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1037
-    y: 173
-    width: 781
-    height: 818
+    x: 1145
+    y: 558
+    width: 673
+    height: 433
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -453,22 +453,22 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 216
-    y: 173
-    width: 819
-    height: 818
+    x: 442
+    y: 558
+    width: 701
+    height: 433
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
     m_SaveData: []
     m_OverlaysVisible: 1
   m_Spl:
-    ID: 3099
+    ID: 213
     splitterInitialOffset: 343
     currentActiveSplitter: -1
     realSizes:
-    - 507
-    - 241
+    - 246
+    - 117
     relativeSizes:
     - 0.67830426
     - 0.32169574
@@ -478,7 +478,7 @@ MonoBehaviour:
     maxSizes:
     - 0
     - 0
-    lastTotalSize: 748
+    lastTotalSize: 363
     splitSize: 6
     xOffset: 0
     m_Version: 1
@@ -529,9 +529,9 @@ MonoBehaviour:
       uniqueId: '[DungeonCrawler][suite]'
       name: DungeonCrawler
       fullName: DungeonCrawler
-      resultStatus: 2
-      duration: 1.2667373
-      messages: One or more child tests had errors
+      resultStatus: 1
+      duration: 1.2807068
+      messages: 
       output: 
       stacktrace: 
       notRunnable: 0
@@ -545,9 +545,9 @@ MonoBehaviour:
       uniqueId: '[__Tests__.dll][suite]'
       name: __Tests__.dll
       fullName: C:/git/Unity.DungeonCrawler/DungeonCrawler/Library/ScriptAssemblies/__Tests__.dll
-      resultStatus: 2
-      duration: 1.2373548
-      messages: One or more child tests had errors
+      resultStatus: 1
+      duration: 1.2378348
+      messages: 
       output: 
       stacktrace: 
       notRunnable: 0
@@ -561,9 +561,9 @@ MonoBehaviour:
       uniqueId: __Tests__.dll/[Assets][suite]
       name: Assets
       fullName: Assets
-      resultStatus: 2
-      duration: 1.2341455
-      messages: One or more child tests had errors
+      resultStatus: 1
+      duration: 1.2369766
+      messages: 
       output: 
       stacktrace: 
       notRunnable: 0
@@ -577,9 +577,9 @@ MonoBehaviour:
       uniqueId: __Tests__.dll/Assets/[SRC][suite]
       name: SRC
       fullName: Assets.SRC
-      resultStatus: 2
-      duration: 1.2330884
-      messages: One or more child tests had errors
+      resultStatus: 1
+      duration: 1.236379
+      messages: 
       output: 
       stacktrace: 
       notRunnable: 0
@@ -593,9 +593,9 @@ MonoBehaviour:
       uniqueId: __Tests__.dll/Assets/SRC/[ProceduralMapGeneration][suite]
       name: ProceduralMapGeneration
       fullName: Assets.SRC.ProceduralMapGeneration
-      resultStatus: 2
-      duration: 1.2289809
-      messages: One or more child tests had errors
+      resultStatus: 1
+      duration: 1.2321889
+      messages: 
       output: 
       stacktrace: 
       notRunnable: 0
@@ -610,7 +610,7 @@ MonoBehaviour:
       name: Generic
       fullName: Assets.SRC.ProceduralMapGeneration.Generic
       resultStatus: 1
-      duration: 0.4120967
+      duration: 0.322243
       messages: 
       output: 
       stacktrace: 
@@ -626,7 +626,7 @@ MonoBehaviour:
       name: Tests
       fullName: Assets.SRC.ProceduralMapGeneration.Generic.Tests
       resultStatus: 1
-      duration: 0.4083134
+      duration: 0.318455
       messages: 
       output: 
       stacktrace: 
@@ -642,7 +642,7 @@ MonoBehaviour:
       name: Test_Enums
       fullName: Assets.SRC.ProceduralMapGeneration.Generic.Tests.Test_Enums
       resultStatus: 1
-      duration: 0.0581824
+      duration: 0.0457251
       messages: 
       output: 
       stacktrace: 
@@ -658,7 +658,7 @@ MonoBehaviour:
       name: Should_Have_28_Values
       fullName: Assets.SRC.ProceduralMapGeneration.Generic.Tests.Test_Enums.Should_Have_28_Values
       resultStatus: 1
-      duration: 0.0040108
+      duration: 0.0001356
       messages: 
       output: 
       stacktrace: 
@@ -675,7 +675,7 @@ MonoBehaviour:
       name: Should_Have_The_Expected_Values
       fullName: Assets.SRC.ProceduralMapGeneration.Generic.Tests.Test_Enums.Should_Have_The_Expected_Values
       resultStatus: 1
-      duration: 0.0045554
+      duration: 0.0005342
       messages: 
       output: 
       stacktrace: 
@@ -692,7 +692,7 @@ MonoBehaviour:
       name: Test_ScriptableObjects
       fullName: Assets.SRC.ProceduralMapGeneration.Generic.Tests.Test_ScriptableObjects
       resultStatus: 1
-      duration: 0.0506395
+      duration: 0.0458664
       messages: 
       output: 
       stacktrace: 
@@ -708,7 +708,7 @@ MonoBehaviour:
       name: Should_Return_A_List_Of_GameObjects
       fullName: Assets.SRC.ProceduralMapGeneration.Generic.Tests.Test_ScriptableObjects.Should_Return_A_List_Of_GameObjects
       resultStatus: 1
-      duration: 0.0077952
+      duration: 0.001187
       messages: 
       output: 'Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.ScriptableObjects.DirectionalTilesScriptableObject
         must be instantiated using the ScriptableObject.CreateInstance method instead
@@ -729,7 +729,7 @@ MonoBehaviour:
       name: Test_Structs+DirectionIDStructTests
       fullName: Assets.SRC.ProceduralMapGeneration.Generic.Tests.Test_Structs+DirectionIDStructTests
       resultStatus: 1
-      duration: 0.0778882
+      duration: 0.082092
       messages: 
       output: 
       stacktrace: 
@@ -745,7 +745,7 @@ MonoBehaviour:
       name: Should_Be_Able_To_Set_And_Get_Values
       fullName: Assets.SRC.ProceduralMapGeneration.Generic.Tests.Test_Structs+DirectionIDStructTests.Should_Be_Able_To_Set_And_Get_Values
       resultStatus: 1
-      duration: 0.0050947
+      duration: 0.0001125
       messages: 
       output: 
       stacktrace: 
@@ -762,7 +762,7 @@ MonoBehaviour:
       name: Should_Have_Correct_Default_Values
       fullName: Assets.SRC.ProceduralMapGeneration.Generic.Tests.Test_Structs+DirectionIDStructTests.Should_Have_Correct_Default_Values
       resultStatus: 1
-      duration: 0.0008188
+      duration: 0.0001373
       messages: 
       output: 
       stacktrace: 
@@ -779,7 +779,7 @@ MonoBehaviour:
       name: Test_Structs+MapBuilderStructTests
       fullName: Assets.SRC.ProceduralMapGeneration.Generic.Tests.Test_Structs+MapBuilderStructTests
       resultStatus: 1
-      duration: 0.1605587
+      duration: 0.0869405
       messages: 
       output: 
       stacktrace: 
@@ -795,7 +795,7 @@ MonoBehaviour:
       name: Should_Be_Able_To_Set_And_Get_Values
       fullName: Assets.SRC.ProceduralMapGeneration.Generic.Tests.Test_Structs+MapBuilderStructTests.Should_Be_Able_To_Set_And_Get_Values
       resultStatus: 1
-      duration: 0.0815683
+      duration: 0.000309
       messages: 
       output: 
       stacktrace: 
@@ -812,7 +812,7 @@ MonoBehaviour:
       name: Should_Have_Correct_Default_Values
       fullName: Assets.SRC.ProceduralMapGeneration.Generic.Tests.Test_Structs+MapBuilderStructTests.Should_Have_Correct_Default_Values
       resultStatus: 1
-      duration: 0.0019426
+      duration: 0.000122
       messages: 
       output: 
       stacktrace: 
@@ -829,7 +829,7 @@ MonoBehaviour:
       name: Test_Structs+NeighborStructTests
       fullName: Assets.SRC.ProceduralMapGeneration.Generic.Tests.Test_Structs+NeighborStructTests
       resultStatus: 1
-      duration: 0.0561438
+      duration: 0.0535805
       messages: 
       output: 
       stacktrace: 
@@ -845,7 +845,7 @@ MonoBehaviour:
       name: Should_Be_Able_To_Set_And_Get_Values
       fullName: Assets.SRC.ProceduralMapGeneration.Generic.Tests.Test_Structs+NeighborStructTests.Should_Be_Able_To_Set_And_Get_Values
       resultStatus: 1
-      duration: 0.0006478
+      duration: 0.0003036
       messages: 
       output: 
       stacktrace: 
@@ -862,7 +862,7 @@ MonoBehaviour:
       name: Should_Have_Correct_Default_Values
       fullName: Assets.SRC.ProceduralMapGeneration.Generic.Tests.Test_Structs+NeighborStructTests.Should_Have_Correct_Default_Values
       resultStatus: 1
-      duration: 0.0003615
+      duration: 0.0001238
       messages: 
       output: 
       stacktrace: 
@@ -879,7 +879,7 @@ MonoBehaviour:
       name: Noise
       fullName: Assets.SRC.ProceduralMapGeneration.Noise
       resultStatus: 1
-      duration: 0.0538714
+      duration: 0.2653063
       messages: 
       output: 
       stacktrace: 
@@ -895,7 +895,7 @@ MonoBehaviour:
       name: Tests
       fullName: Assets.SRC.ProceduralMapGeneration.Noise.Tests
       resultStatus: 1
-      duration: 0.0441623
+      duration: 0.2567841
       messages: 
       output: 
       stacktrace: 
@@ -911,7 +911,7 @@ MonoBehaviour:
       name: Test_PerlinNoiseGenerator
       fullName: Assets.SRC.ProceduralMapGeneration.Noise.Tests.Test_PerlinNoiseGenerator
       resultStatus: 1
-      duration: 0.043692
+      duration: 0.2562903
       messages: 
       output: 
       stacktrace: 
@@ -927,7 +927,7 @@ MonoBehaviour:
       name: GeneratePerlinNoise2DTexture_Test
       fullName: Assets.SRC.ProceduralMapGeneration.Noise.Tests.Test_PerlinNoiseGenerator.GeneratePerlinNoise2DTexture_Test
       resultStatus: 1
-      duration: 0.00269
+      duration: 0.0022495
       messages: 
       output: 
       stacktrace: 
@@ -943,9 +943,9 @@ MonoBehaviour:
       uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/[PathFinding][suite]
       name: PathFinding
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding
-      resultStatus: 2
-      duration: 0.7593079
-      messages: One or more child tests had errors
+      resultStatus: 1
+      duration: 0.6404832
+      messages: 
       output: 
       stacktrace: 
       notRunnable: 0
@@ -959,9 +959,9 @@ MonoBehaviour:
       uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/PathFinding/[__Tests__][Assets.SRC.ProceduralMapGeneration.PathFinding.Tests][suite]
       name: Tests
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests
-      resultStatus: 2
-      duration: 0.7503214
-      messages: One or more child tests had errors
+      resultStatus: 1
+      duration: 0.6284382
+      messages: 
       output: 
       stacktrace: 
       notRunnable: 0
@@ -976,7 +976,7 @@ MonoBehaviour:
       name: Test_ChunkHandler+AssignChunkTypesTests
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_ChunkHandler+AssignChunkTypesTests
       resultStatus: 1
-      duration: 0.0914141
+      duration: 0.0742047
       messages: 
       output: 
       stacktrace: 
@@ -992,7 +992,7 @@ MonoBehaviour:
       name: TestAssignChunkTypes_WithInvalidInput_ReturnsEmptyList
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_ChunkHandler+AssignChunkTypesTests.TestAssignChunkTypes_WithInvalidInput_ReturnsEmptyList
       resultStatus: 1
-      duration: 0.0039349
+      duration: 0.0001148
       messages: 
       output: 
       stacktrace: 
@@ -1009,7 +1009,7 @@ MonoBehaviour:
       name: TestAssignChunkTypes_WithValidInput_AssignsCorrectTypes
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_ChunkHandler+AssignChunkTypesTests.TestAssignChunkTypes_WithValidInput_AssignsCorrectTypes
       resultStatus: 1
-      duration: 0.0112944
+      duration: 0.0004695
       messages: 
       output: 
       stacktrace: 
@@ -1026,7 +1026,7 @@ MonoBehaviour:
       name: Test_ChunkHandler+FindChunkNeigborsTests
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_ChunkHandler+FindChunkNeigborsTests
       resultStatus: 1
-      duration: 0.0953579
+      duration: 0.0813724
       messages: 
       output: 
       stacktrace: 
@@ -1042,7 +1042,7 @@ MonoBehaviour:
       name: TestFindChunkNeigbors_WithInvalidInput_ReturnsEmptyList
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_ChunkHandler+FindChunkNeigborsTests.TestFindChunkNeigbors_WithInvalidInput_ReturnsEmptyList
       resultStatus: 1
-      duration: 0.0003068
+      duration: 0.0001226
       messages: 
       output: 
       stacktrace: 
@@ -1059,7 +1059,7 @@ MonoBehaviour:
       name: TestFindChunkNeigbors_WithValidInput_ReturnsCorrectNeighbors
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_ChunkHandler+FindChunkNeigborsTests.TestFindChunkNeigbors_WithValidInput_ReturnsCorrectNeighbors
       resultStatus: 1
-      duration: 0.0151962
+      duration: 0.0004851
       messages: 
       output: 
       stacktrace: 
@@ -1076,7 +1076,7 @@ MonoBehaviour:
       name: Test_ChunkHandler+GenericTestsForChunkHandle
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_ChunkHandler+GenericTestsForChunkHandle
       resultStatus: 1
-      duration: 0.0864843
+      duration: 0.082123
       messages: 
       output: 
       stacktrace: 
@@ -1092,7 +1092,7 @@ MonoBehaviour:
       name: Error_Error
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_ChunkHandler+GenericTestsForChunkHandle.Error_Error
       resultStatus: 1
-      duration: 0.0011697
+      duration: 0.0011605
       messages: 
       output: 
       stacktrace: 
@@ -1109,7 +1109,7 @@ MonoBehaviour:
       name: Return_Collapsed
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_ChunkHandler+GenericTestsForChunkHandle.Return_Collapsed
       resultStatus: 1
-      duration: 0.0026076
+      duration: 0.0001207
       messages: 
       output: 
       stacktrace: 
@@ -1126,7 +1126,7 @@ MonoBehaviour:
       name: Test_NewNode
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewNode
       resultStatus: 1
-      duration: 0.1479649
+      duration: 0.1394972
       messages: 
       output: 
       stacktrace: 
@@ -1142,7 +1142,7 @@ MonoBehaviour:
       name: Should_Create_A_New_Node_With_A_Position
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewNode.Should_Create_A_New_Node_With_A_Position
       resultStatus: 1
-      duration: 0.0069084
+      duration: 0.0001133
       messages: 
       output: 
       stacktrace: 
@@ -1159,7 +1159,7 @@ MonoBehaviour:
       name: Should_Have_A_Default_Cost_Of_Zero
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewNode.Should_Have_A_Default_Cost_Of_Zero
       resultStatus: 1
-      duration: 0.0045096
+      duration: 0.0001257
       messages: 
       output: 
       stacktrace: 
@@ -1176,7 +1176,7 @@ MonoBehaviour:
       name: Should_Have_A_Default_Heuristic_Cost_Of_Zero
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewNode.Should_Have_A_Default_Heuristic_Cost_Of_Zero
       resultStatus: 1
-      duration: 0.0002643
+      duration: 0.0001156
       messages: 
       output: 
       stacktrace: 
@@ -1193,7 +1193,7 @@ MonoBehaviour:
       name: Should_Not_Be_Closed_ByDefault
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewNode.Should_Not_Be_Closed_ByDefault
       resultStatus: 1
-      duration: 0.0003033
+      duration: 0.0001062
       messages: 
       output: 
       stacktrace: 
@@ -1210,7 +1210,7 @@ MonoBehaviour:
       name: Should_Not_Have_A_LastNode_ByDefault
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewNode.Should_Not_Have_A_LastNode_ByDefault
       resultStatus: 1
-      duration: 0.0002295
+      duration: 0.0001143
       messages: 
       output: 
       stacktrace: 
@@ -1227,7 +1227,7 @@ MonoBehaviour:
       name: Should_Not_Have_An_Empty_List_Of_Neighbors_ByDefault
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewNode.Should_Not_Have_An_Empty_List_Of_Neighbors_ByDefault
       resultStatus: 1
-      duration: 0.0004434
+      duration: 0.0001097
       messages: 
       output: 
       stacktrace: 
@@ -1243,9 +1243,9 @@ MonoBehaviour:
       uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/PathFinding/Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+FindEnds][suite]
       name: Test_NewPathFinding+FindEnds
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+FindEnds
-      resultStatus: 2
-      duration: 0.1666275
-      messages: One or more child tests had errors
+      resultStatus: 1
+      duration: 0.0903183
+      messages: 
       output: 
       stacktrace: 
       notRunnable: 0
@@ -1259,49 +1259,11 @@ MonoBehaviour:
       uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/PathFinding/Tests/Test_NewPathFinding+FindEnds/[__Tests__][Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+FindEnds.Should_Return_A_List_Of_Two_Different_Vector3s_When_Given_A_List_Of_Vector3s]
       name: Should_Return_A_List_Of_Two_Different_Vector3s_When_Given_A_List_Of_Vector3s
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+FindEnds.Should_Return_A_List_Of_Two_Different_Vector3s_When_Given_A_List_Of_Vector3s
-      resultStatus: 2
-      duration: 0.0801299
-      messages: Expected pos[0] not to be equivalent to (1.00, 2.00, 3.00), but they
-        are.
+      resultStatus: 1
+      duration: 0.0052094
+      messages: 
       output: 
-      stacktrace: 'at FluentAssertions.Execution.LateBoundTestFramework.Throw (System.String
-        message) [0x0005c] in C:\git\Unity.DungeonCrawler\CustomPackages\fluentassertions-unity\FluentAssertions\Packages\com.boundfoxstudios.fluentassertions\Runtime\FluentAssertions\Execution\LateBoundTestFramework.cs:22
-
-        at
-        FluentAssertions.Execution.TestFrameworkProvider.Throw (System.String message)
-        [0x00019] in C:\git\Unity.DungeonCrawler\CustomPackages\fluentassertions-unity\FluentAssertions\Packages\com.boundfoxstudios.fluentassertions\Runtime\FluentAssertions\Execution\TestFrameworkProvider.cs:34
-
-        at
-        FluentAssertions.Execution.DefaultAssertionStrategy.HandleFailure (System.String
-        message) [0x00001] in C:\git\Unity.DungeonCrawler\CustomPackages\fluentassertions-unity\FluentAssertions\Packages\com.boundfoxstudios.fluentassertions\Runtime\FluentAssertions\Execution\DefaultAssertionStrategy.cs:24
-
-        at
-        FluentAssertions.Execution.AssertionScope.FailWith (System.Func`1[TResult]
-        failReasonFunc) [0x00057] in C:\git\Unity.DungeonCrawler\CustomPackages\fluentassertions-unity\FluentAssertions\Packages\com.boundfoxstudios.fluentassertions\Runtime\FluentAssertions\Execution\AssertionScope.cs:274
-
-        at
-        FluentAssertions.Execution.AssertionScope.FailWith (System.Func`1[TResult]
-        failReasonFunc) [0x00015] in C:\git\Unity.DungeonCrawler\CustomPackages\fluentassertions-unity\FluentAssertions\Packages\com.boundfoxstudios.fluentassertions\Runtime\FluentAssertions\Execution\AssertionScope.cs:246
-
-        at
-        FluentAssertions.Execution.AssertionScope.FailWith (System.String message,
-        System.Object[] args) [0x00015] in C:\git\Unity.DungeonCrawler\CustomPackages\fluentassertions-unity\FluentAssertions\Packages\com.boundfoxstudios.fluentassertions\Runtime\FluentAssertions\Execution\AssertionScope.cs:296
-
-        at
-        FluentAssertions.Primitives.ObjectAssertions`2[TSubject,TAssertions].NotBeEquivalentTo[TExpectation]
-        (TExpectation unexpected, System.Func`2[T,TResult] config, System.String
-        because, System.Object[] becauseArgs) [0x0004f] in C:\git\Unity.DungeonCrawler\CustomPackages\fluentassertions-unity\FluentAssertions\Packages\com.boundfoxstudios.fluentassertions\Runtime\FluentAssertions\Primitives\ObjectAssertions.cs:217
-
-        at
-        FluentAssertions.Primitives.ObjectAssertions`2[TSubject,TAssertions].NotBeEquivalentTo[TExpectation]
-        (TExpectation unexpected, System.String because, System.Object[] becauseArgs)
-        [0x00001] in C:\git\Unity.DungeonCrawler\CustomPackages\fluentassertions-unity\FluentAssertions\Packages\com.boundfoxstudios.fluentassertions\Runtime\FluentAssertions\Primitives\ObjectAssertions.cs:176
-
-        at
-        Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+FindEnds.Should_Return_A_List_Of_Two_Different_Vector3s_When_Given_A_List_Of_Vector3s
-        () [0x00051] in C:\git\Unity.DungeonCrawler\DungeonCrawler\Assets\SRC\__Tests__\ProceduralMapGenerationAssembly\PathFinding\Test_NewPathFinding.cs:45
-
-'
+      stacktrace: 
       notRunnable: 0
       ignoredOrSkipped: 0
       description: 
@@ -1315,7 +1277,7 @@ MonoBehaviour:
       name: Should_Return_A_List_Of_Two_Vector3s_When_Given_A_List_Of_Vector3s
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+FindEnds.Should_Return_A_List_Of_Two_Vector3s_When_Given_A_List_Of_Vector3s
       resultStatus: 1
-      duration: 0.0009539
+      duration: 0.0001288
       messages: 
       output: 
       stacktrace: 
@@ -1332,7 +1294,7 @@ MonoBehaviour:
       name: Test_NewPathFinding+Findpath
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+Findpath
       resultStatus: 1
-      duration: 0.1601583
+      duration: 0.1552039
       messages: 
       output: 
       stacktrace: 
@@ -1348,7 +1310,7 @@ MonoBehaviour:
       name: EmptyGrid
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+Findpath.EmptyGrid
       resultStatus: 1
-      duration: 0.0027455
+      duration: 0.001289
       messages: 
       output: 
       stacktrace: 
@@ -1365,7 +1327,7 @@ MonoBehaviour:
       name: EmptyPositions
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+Findpath.EmptyPositions
       resultStatus: 1
-      duration: 0.0015954
+      duration: 0.0011646
       messages: 
       output: 
       stacktrace: 
@@ -1382,7 +1344,7 @@ MonoBehaviour:
       name: NullGrid
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+Findpath.NullGrid
       resultStatus: 1
-      duration: 0.0014244
+      duration: 0.001318
       messages: 
       output: 
       stacktrace: 
@@ -1399,7 +1361,7 @@ MonoBehaviour:
       name: NullPositions
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+Findpath.NullPositions
       resultStatus: 1
-      duration: 0.0021692
+      duration: 0.0011342
       messages: 
       output: 
       stacktrace: 
@@ -1414,7 +1376,7 @@ MonoBehaviour:
     m_ResultText: Error_Error (0,001s)
     m_ResultStacktrace: 
     m_TestListState:
-      scrollPos: {x: 0, y: 0}
+      scrollPos: {x: 0, y: 158}
       m_SelectedIDs: b86710d0
       m_LastClickedID: -804231240
       m_ExpandedIDs: 15285091d1848d9ddf1dbaae845235b5398827b85576f9e5ce2134fbbaf95efe5687b8fe09d63b0bdfb8b40f96ac25134e5ea5155a94ed15a59567220ae4192976c50433ba5e4c3f1123fa4d2bfeee4fffffff7f
@@ -1466,7 +1428,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 73
-    width: 99
+    width: 220
     height: 918
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -1500,7 +1462,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 526c0000
     m_LastClickedID: 27730
-    m_ExpandedIDs: 00000000e0880000e2880000e4880000e6880000e8880000ea880000ec880000ee880000
+    m_ExpandedIDs: 00000000f0880000f2880000f4880000f6880000f8880000fa880000fc880000fe880000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1528,21 +1490,21 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: ffffffff00000000e0880000e2880000e4880000e68800008e8a0000628b0000648b0000068e0000
+    m_ExpandedIDs: ffffffff00000000f0880000f2880000f4880000f6880000f8880000fa880000fc880000fe880000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: UtilitiesBehaviour
-      m_OriginalName: UtilitiesBehaviour
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 10468
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 8}
     m_SearchString: 
@@ -1648,9 +1610,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 100
+    x: 221
     y: 73
-    width: 114
+    width: 219
     height: 918
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -1662,7 +1624,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 2afffeff9c00ffffbc03ffff8406fffffc09ffff740dffffc210ffff0e13ffff9c1bffffc21fffff2a2bffff7e30fffffa31ffff4035ffff3039ffffe63cffff3c44fffff245ffff4049ffff6e4dffff4e51ffff9654ffffcc57ffff7a63ffffd466ffffea6affff7e6ffffff870ffff0c75ffffc27fffffba85ffffdebeffff60c0ffff6ac3ffffd2c4ffffc6c8ffff44ceffffa2d1ffff70d3ffffc4d4ffffa4d7ffffdcdaffffbce1ffffe4e7ffff20fbffff
+      m_ExpandedIDs: aaecfffff4eeffff4cf1ffff1afbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1707,10 +1669,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 216
+    x: 442
     y: 73
-    width: 1602
-    height: 79
+    width: 1376
+    height: 464
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -1732,7 +1694,7 @@ MonoBehaviour:
       collapsed: 0
       displayed: 1
       snapOffset: {x: -141, y: 149}
-      snapOffsetDelta: {x: 0, y: -96}
+      snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 1
       id: unity-grid-and-snap-toolbar
       index: 1
@@ -1786,9 +1748,9 @@ MonoBehaviour:
       floating: 0
       collapsed: 0
       displayed: 1
-      snapOffset: {x: 67.5, y: 86}
-      snapOffsetDelta: {x: 0, y: -60}
-      snapCorner: 0
+      snapOffset: {x: 67.5, y: -54}
+      snapOffsetDelta: {x: 0, y: -69}
+      snapCorner: 2
       id: Orientation
       index: 0
       layout: 4
@@ -1997,7 +1959,7 @@ MonoBehaviour:
   m_Rotation:
     m_Target: {x: 0.05902593, y: -0.8566113, z: 0.100719064, w: 0.5027397}
     speed: 2
-    m_Value: {x: 0.05902125, y: -0.8565434, z: 0.10071108, w: 0.50269985}
+    m_Value: {x: -0.05902125, y: 0.8565434, z: -0.10071108, w: -0.50269985}
   m_Size:
     m_Target: 2.4300575
     speed: 2
@@ -2141,10 +2103,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 675
-    y: 520
-    width: 907
-    height: 471
+    x: 1145
+    y: 558
+    width: 673
+    height: 433
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default

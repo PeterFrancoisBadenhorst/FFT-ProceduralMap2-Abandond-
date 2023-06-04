@@ -1,26 +1,26 @@
 ﻿# Summary
 |||
 |:---|:---|
-| Generated on: | 2023/05/21 - 7:42:41 PM |
-| Parser: | MultiReportParser (19x OpenCoverParser) |
+| Generated on: | 2023/06/04 - 9:08:17 PM |
+| Parser: | MultiReportParser (21x OpenCoverParser) |
 | Assemblies: | 2 |
 | Classes: | 15 |
 | Files: | 22 |
-| Covered lines: | 113 |
-| Uncovered lines: | 314 |
-| Coverable lines: | 427 |
-| Total lines: | 1197 |
-| Line coverage: | 26.4% (113 of 427) |
+| Covered lines: | 121 |
+| Uncovered lines: | 329 |
+| Coverable lines: | 450 |
+| Total lines: | 1255 |
+| Line coverage: | 26.8% (121 of 450) |
 | Covered branches: | 0 |
 | Total branches: | 0 |
-| Covered methods: | 26 |
-| Total methods: | 49 |
-| Method coverage: | 53% (26 of 49) |
+| Covered methods: | 28 |
+| Total methods: | 55 |
+| Method coverage: | 50.9% (28 of 55) |
 
 |**Name**|**Covered**|**Uncovered**|**Coverable**|**Total**|**Line coverage**|**Covered**|**Total**|**Branch coverage**|**Covered**|**Total**|**Method coverage**|
 |:---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-|**ProceduralMapGenerationAssembly**|**113**|**311**|**424**|**1175**|**26.6%**|**0**|**0**|****|**26**|**47**|**55.3%**|
-|Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.PathFinding.NewPathFinding|7|114|121|358|5.7%|0|0||2|7|28.5%|
+|**ProceduralMapGenerationAssembly**|**118**|**329**|**447**|**1233**|**26.3%**|**0**|**0**|****|**26**|**53**|**49%**|
+|Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.PathFinding.NewPathFinding|12|132|144|416|8.3%|0|0||2|13|15.3%|
 |Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.PathFinding.PathMapBuilder|0|38|38|64|0%|0|0||0|2|0%|
 |Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Noise.PerlinNoiseGenerator|13|0|13|29|100%|0|0||1|1|100%|
 |Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.ScriptableObjects.DirectionalTilesScriptableObject|3|0|3|146|100%|0|0||1|1|100%|
@@ -33,6 +33,6 @@
 |Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Utilities.MapBuilder|0|11|11|43|0%|0|0||0|3|0%|
 |Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Utilities.MapHandler|0|67|67|122|0%|0|0||0|3|0%|
 |Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Utilities.PopulateTilePositions|0|12|12|35|0%|0|0||0|1|0%|
-|**SharedAssembly**|**0**|**3**|**3**|**22**|**0%**|**0**|**0**|****|**0**|**2**|**0%**|
-|Assets.SRC.ProceduralMapGeneration.Assets.SRC.Shared.Assets.SRC.Shared.Utilities.VectorMath|0|1|1|9|0%|0|0||0|1|0%|
-|Assets.SRC.ProceduralMapGeneration.Assets.SRC.Shared.Exceptions.CustomExceptions|0|2|2|13|0%|0|0||0|1|0%|
+|**SharedAssembly**|**3**|**0**|**3**|**22**|**100%**|**0**|**0**|****|**2**|**2**|**100%**|
+|Assets.SRC.ProceduralMapGeneration.Assets.SRC.Shared.Assets.SRC.Shared.Utilities.VectorMath|1|0|1|9|100%|0|0||1|1|100%|
+|Assets.SRC.ProceduralMapGeneration.Assets.SRC.Shared.Exceptions.CustomExceptions|2|0|2|13|100%|0|0||1|1|100%|

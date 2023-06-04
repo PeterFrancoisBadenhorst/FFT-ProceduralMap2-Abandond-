@@ -18,7 +18,6 @@
 
         // Boiler plate values
         Blank,
-
         Collapsed,
         Error,
         Start,

@@ -27,37 +27,53 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.
         /// <param name="grid">The grid of points.</param>
         /// <param name="positions">The start and end positions.</param>
         /// <returns>A list of Vector3 objects representing the shortest path between the start and end points.</returns>
-        public List<Vector3> Findpath(List<NewNode> grid, Vector3[] positions)
+        public List<Vector3> Findpath(List<NewNodeModel> grid, Vector3[] positions)
         {
             if (grid == null || grid.Count == 0) { throw new ArgumentNullException("grid"); }
             if (positions == null || positions.Length == 0) { throw new ArgumentNullException("grid"); }
 
-            List<NewNode> sortedListByPosition = new List<NewNode>(grid);
+            List<NewNodeModel> sortedListByPosition = new List<NewNodeModel>(grid);
             sortedListByPosition.Reverse();
-
-            NewNode startPos = sortedListByPosition.Find(node => node.Position == positions[0]);
-            NewNode endPos = sortedListByPosition.Find(node => node.Position == positions[1]);
-            NewNode activeNode = startPos;
-
-            List<NewNode> generatedList = new List<NewNode>();
+            NewNodeModel startPos = sortedListByPosition.Find(node => node.Position == positions[0]);
+            NewNodeModel endPos = sortedListByPosition.Find(node => node.Position == positions[1]);
+            NewNodeModel activeNode = startPos;
+            List<NewNodeModel> generatedList = new List<NewNodeModel>();
             List<Vector3> convertedGeneratedList = new List<Vector3>();
 
+            activeNode = FindActiveNode(activeNode, endPos);
+            generatedList = GeneratePath(activeNode, startPos);
+            convertedGeneratedList = ConvertPathToPositions(generatedList);
+
+            return convertedGeneratedList;
+        }
+        public static NewNodeModel FindActiveNode(NewNodeModel activeNode, NewNodeModel endPos)
+        {
             while (activeNode.Position != endPos.Position)
             {
-                NewNode tempNode = activeNode.Neighbors.OrderBy(node => node.fCost).First();
+                NewNodeModel tempNode = activeNode.Neighbors.OrderBy(node => node.fCost).First();
                 tempNode.LastNode = activeNode;
                 activeNode = tempNode;
             }
+
+            return activeNode;
+        }
+        public static List<NewNodeModel> GeneratePath(NewNodeModel activeNode, NewNodeModel startPos)
+        {
+            List<NewNodeModel> generatedList = new List<NewNodeModel>();
 
             while (activeNode.Position != startPos.Position)
             {
                 generatedList.Add(activeNode);
                 activeNode = activeNode.LastNode;
             }
-
             generatedList.Reverse();
+            return generatedList;
+        }
+        public static List<Vector3> ConvertPathToPositions(List<NewNodeModel> generatedList)
+        {
+            List<Vector3> convertedGeneratedList = new List<Vector3>();
 
-            foreach (NewNode node in generatedList)
+            foreach (NewNodeModel node in generatedList)
             {
                 convertedGeneratedList.Add(node.Position);
             }
