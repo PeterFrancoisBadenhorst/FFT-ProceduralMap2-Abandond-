@@ -1,28 +1,28 @@
 ﻿using System.Diagnostics;
 using System.Globalization;
 
-namespace FluentAssertions.Numeric {
-
-/// <summary>
-/// Contains a number of methods to assert that a nullable <see cref="int"/> is in the expected state.
-/// </summary>
-[DebuggerNonUserCode]
-internal class NullableInt32Assertions : NullableNumericAssertions<int>
+namespace FluentAssertions.Numeric
 {
-    internal NullableInt32Assertions(int? value)
-        : base(value)
+    /// <summary>
+    /// Contains a number of methods to assert that a nullable <see cref="int"/> is in the expected state.
+    /// </summary>
+    [DebuggerNonUserCode]
+    internal class NullableInt32Assertions : NullableNumericAssertions<int>
     {
-    }
-
-    private protected override string CalculateDifferenceForFailureMessage(int subject, int expected)
-    {
-        if (subject is > 0 and < 10 && expected is > 0 and < 10)
+        internal NullableInt32Assertions(int? value)
+            : base(value)
         {
-            return null;
         }
 
-        long difference = (long)subject - expected;
-        return difference != 0 ? difference.ToString(CultureInfo.InvariantCulture) : null;
+        protected override string CalculateDifferenceForFailureMessage(int subject, int expected)
+        {
+            if (subject is > 0 and < 10 && expected is > 0 and < 10)
+            {
+                return null;
+            }
+
+            long difference = (long)subject - expected;
+            return difference != 0 ? difference.ToString(CultureInfo.InvariantCulture) : null;
+        }
     }
-}
 }

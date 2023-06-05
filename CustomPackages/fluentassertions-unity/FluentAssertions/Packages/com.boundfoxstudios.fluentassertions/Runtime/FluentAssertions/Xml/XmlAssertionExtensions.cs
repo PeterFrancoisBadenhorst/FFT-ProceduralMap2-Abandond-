@@ -1,20 +1,20 @@
-﻿using System.Diagnostics;
+﻿using FluentAssertions.Xml;
+using System.Diagnostics;
 using System.Xml;
-using FluentAssertions.Xml;
 
-namespace FluentAssertions {
-
-[DebuggerNonUserCode]
-public static class XmlAssertionExtensions
+namespace FluentAssertions
 {
-    public static XmlNodeAssertions Should(this XmlNode actualValue)
+    [DebuggerNonUserCode]
+    public static class XmlAssertionExtensions
     {
-        return new XmlNodeAssertions(actualValue);
-    }
+        public static XmlNodeAssertions Should(this XmlNode actualValue)
+        {
+            return new XmlNodeAssertions(actualValue);
+        }
 
-    public static XmlElementAssertions Should(this XmlElement actualValue)
-    {
-        return new XmlElementAssertions(actualValue);
+        public static XmlElementAssertions Should(this XmlElement actualValue)
+        {
+            return new XmlElementAssertions(actualValue);
+        }
     }
-}
 }

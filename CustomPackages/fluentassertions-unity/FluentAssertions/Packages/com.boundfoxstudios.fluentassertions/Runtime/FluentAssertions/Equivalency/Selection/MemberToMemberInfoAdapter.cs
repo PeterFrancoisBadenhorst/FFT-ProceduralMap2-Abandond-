@@ -1,34 +1,34 @@
-using System;
 using FluentAssertions.Common;
+using System;
 
-namespace FluentAssertions.Equivalency.Selection {
-
-/// <summary>
-/// Represents a selection context of a nested property
-/// </summary>
-internal class MemberToMemberInfoAdapter : IMemberInfo
+namespace FluentAssertions.Equivalency.Selection
 {
-    private readonly IMember member;
-
-    public MemberToMemberInfoAdapter(IMember member)
+    /// <summary>
+    /// Represents a selection context of a nested property
+    /// </summary>
+    internal class MemberToMemberInfoAdapter : IMemberInfo
     {
-        this.member = member;
-        DeclaringType = member.DeclaringType;
-        Name = member.Name;
-        Type = member.Type;
-        Path = member.PathAndName;
+        private readonly IMember member;
+
+        public MemberToMemberInfoAdapter(IMember member)
+        {
+            this.member = member;
+            DeclaringType = member.DeclaringType;
+            Name = member.Name;
+            Type = member.Type;
+            Path = member.PathAndName;
+        }
+
+        public string Name { get; }
+
+        public Type Type { get; }
+
+        public Type DeclaringType { get; }
+
+        public string Path { get; set; }
+
+        public CSharpAccessModifier GetterAccessibility => member.GetterAccessibility;
+
+        public CSharpAccessModifier SetterAccessibility => member.SetterAccessibility;
     }
-
-    public string Name { get; }
-
-    public Type Type { get; }
-
-    public Type DeclaringType { get; }
-
-    public string Path { get; set; }
-
-    public CSharpAccessModifier GetterAccessibility => member.GetterAccessibility;
-
-    public CSharpAccessModifier SetterAccessibility => member.SetterAccessibility;
-}
 }

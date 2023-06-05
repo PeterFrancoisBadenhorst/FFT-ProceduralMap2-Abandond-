@@ -1,27 +1,27 @@
 ﻿using System.Text;
 
-namespace FluentAssertions.CallerIdentification {
-
-internal class SemicolonParsingStrategy : IParsingStrategy
+namespace FluentAssertions.CallerIdentification
 {
-    public ParsingState Parse(char symbol, StringBuilder statement)
+    internal class SemicolonParsingStrategy : IParsingStrategy
     {
-        if (symbol == ';')
+        public ParsingState Parse(char symbol, StringBuilder statement)
         {
-            statement.Clear();
-            return ParsingState.Done;
+            if (symbol == ';')
+            {
+                statement.Clear();
+                return ParsingState.Done;
+            }
+
+            return ParsingState.InProgress;
         }
 
-        return ParsingState.InProgress;
-    }
+        public bool IsWaitingForContextEnd()
+        {
+            return false;
+        }
 
-    public bool IsWaitingForContextEnd()
-    {
-        return false;
+        public void NotifyEndOfLineReached()
+        {
+        }
     }
-
-    public void NotifyEndOfLineReached()
-    {
-    }
-}
 }

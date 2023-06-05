@@ -1,10 +1,10 @@
-namespace FluentAssertions.Equivalency {
-
-public interface IEquivalencyValidator
+namespace FluentAssertions.Equivalency
 {
-    /// <summary>
-    /// Runs a deep recursive equivalency assertion on the provided <paramref name="comparands"/>.
-    /// </summary>
-    void RecursivelyAssertEquality(Comparands comparands, IEquivalencyValidationContext context);
-}
+    public interface IEquivalencyValidator
+    {
+        /// <summary>
+        /// Runs a deep recursive equivalency assertion on the provided <paramref name="comparands"/>.
+        /// </summary>
+        void RecursivelyAssertEquality(Comparands comparands, IEquivalencyValidationContext context);
+    }
 }

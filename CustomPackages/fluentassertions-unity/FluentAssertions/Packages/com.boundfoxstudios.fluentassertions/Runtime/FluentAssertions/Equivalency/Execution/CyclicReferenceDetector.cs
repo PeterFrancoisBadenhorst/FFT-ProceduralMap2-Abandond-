@@ -1,59 +1,59 @@
-using System.Collections.Generic;
 using FluentAssertions.Execution;
+using System.Collections.Generic;
 
-namespace FluentAssertions.Equivalency.Execution {
-
-/// <summary>
-/// Keeps track of objects and their location within an object graph so that cyclic references can be detected
-/// and handled upon.
-/// </summary>
-internal class CyclicReferenceDetector : ICloneable2
+namespace FluentAssertions.Equivalency.Execution
 {
-    #region Private Definitions
-
-    private HashSet<ObjectReference> observedReferences = new();
-
-    #endregion
-
     /// <summary>
-    /// Determines whether the specified object reference is a cyclic reference to the same object earlier in the
-    /// equivalency validation.
+    /// Keeps track of objects and their location within an object graph so that cyclic references can be detected
+    /// and handled upon.
     /// </summary>
-    /// <remarks>
-    /// The behavior of a cyclic reference is determined by the <paramref name="handling"/> parameter.
-    /// </remarks>
-    public bool IsCyclicReference(ObjectReference reference, CyclicReferenceHandling handling, Reason reason = null)
+    internal class CyclicReferenceDetector : ICloneable2
     {
-        bool isCyclic = false;
+        #region Private Definitions
 
-        if (reference.IsComplexType)
+        private HashSet<ObjectReference> observedReferences = new();
+
+        #endregion Private Definitions
+
+        /// <summary>
+        /// Determines whether the specified object reference is a cyclic reference to the same object earlier in the
+        /// equivalency validation.
+        /// </summary>
+        /// <remarks>
+        /// The behavior of a cyclic reference is determined by the <paramref name="handling"/> parameter.
+        /// </remarks>
+        public bool IsCyclicReference(ObjectReference reference, CyclicReferenceHandling handling, Reason reason = null)
         {
-            isCyclic = !observedReferences.Add(reference);
+            bool isCyclic = false;
 
-            if (isCyclic && (handling == CyclicReferenceHandling.ThrowException))
+            if (reference.IsComplexType)
             {
-                AssertionScope.Current
-                    .BecauseOf(reason)
-                    .FailWith(
-                        "Expected {context:subject} to be {expectation}{reason}, but it contains a cyclic reference.");
+                isCyclic = !observedReferences.Add(reference);
+
+                if (isCyclic && (handling == CyclicReferenceHandling.ThrowException))
+                {
+                    AssertionScope.Current
+                        .BecauseOf(reason)
+                        .FailWith(
+                            "Expected {context:subject} to be {expectation}{reason}, but it contains a cyclic reference.");
+                }
             }
+
+            return isCyclic;
         }
 
-        return isCyclic;
-    }
-
-    /// <summary>
-    /// Creates a new object that is a copy of the current instance.
-    /// </summary>
-    /// <returns>
-    /// A new object that is a copy of this instance.
-    /// </returns>
-    public object Clone()
-    {
-        return new CyclicReferenceDetector
+        /// <summary>
+        /// Creates a new object that is a copy of the current instance.
+        /// </summary>
+        /// <returns>
+        /// A new object that is a copy of this instance.
+        /// </returns>
+        public object Clone()
         {
-            observedReferences = new HashSet<ObjectReference>(observedReferences)
-        };
+            return new CyclicReferenceDetector
+            {
+                observedReferences = new HashSet<ObjectReference>(observedReferences)
+            };
+        }
     }
-}
 }

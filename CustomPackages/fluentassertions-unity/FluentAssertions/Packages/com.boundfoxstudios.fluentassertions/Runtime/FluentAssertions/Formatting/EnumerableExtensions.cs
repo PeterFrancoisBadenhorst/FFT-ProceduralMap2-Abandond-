@@ -1,44 +1,44 @@
 ﻿using System.Collections.Generic;
 using System.Text;
 
-namespace FluentAssertions.Formatting {
-
-internal static class EnumerableExtensions
+namespace FluentAssertions.Formatting
 {
-    internal static string JoinUsingWritingStyle<T>(this IEnumerable<T> items)
+    internal static class EnumerableExtensions
     {
-        var buffer = new StringBuilder();
-
-        T lastItem = default(T);
-        bool first = true;
-
-        foreach (var item in items)
+        internal static string JoinUsingWritingStyle<T>(this IEnumerable<T> items)
         {
-            if (first)
+            var buffer = new StringBuilder();
+
+            T lastItem = default(T);
+            bool first = true;
+
+            foreach (var item in items)
             {
-                first = false;
-            }
-            else
-            {
-                if (buffer.Length > 0)
+                if (first)
                 {
-                    buffer.Append(", ");
+                    first = false;
+                }
+                else
+                {
+                    if (buffer.Length > 0)
+                    {
+                        buffer.Append(", ");
+                    }
+
+                    buffer.Append(lastItem);
                 }
 
-                buffer.Append(lastItem);
+                lastItem = item;
             }
 
-            lastItem = item;
+            if (buffer.Length > 0)
+            {
+                buffer.Append(" and ");
+            }
+
+            buffer.Append(lastItem);
+
+            return buffer.ToString();
         }
-
-        if (buffer.Length > 0)
-        {
-            buffer.Append(" and ");
-        }
-
-        buffer.Append(lastItem);
-
-        return buffer.ToString();
     }
-}
 }

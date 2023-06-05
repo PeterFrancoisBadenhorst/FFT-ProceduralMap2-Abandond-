@@ -1,22 +1,22 @@
-namespace FluentAssertions.Equivalency.Ordering {
-
-internal class CollectionMemberOrderingRuleDecorator : IOrderingRule
+namespace FluentAssertions.Equivalency.Ordering
 {
-    private readonly IOrderingRule orderingRule;
-
-    public CollectionMemberOrderingRuleDecorator(IOrderingRule orderingRule)
+    internal class CollectionMemberOrderingRuleDecorator : IOrderingRule
     {
-        this.orderingRule = orderingRule;
-    }
+        private readonly IOrderingRule orderingRule;
 
-    public OrderStrictness Evaluate(IObjectInfo objectInfo)
-    {
-        return orderingRule.Evaluate(new CollectionMemberObjectInfo(objectInfo));
-    }
+        public CollectionMemberOrderingRuleDecorator(IOrderingRule orderingRule)
+        {
+            this.orderingRule = orderingRule;
+        }
 
-    public override string ToString()
-    {
-        return orderingRule.ToString();
+        public OrderStrictness Evaluate(IObjectInfo objectInfo)
+        {
+            return orderingRule.Evaluate(new CollectionMemberObjectInfo(objectInfo));
+        }
+
+        public override string ToString()
+        {
+            return orderingRule.ToString();
+        }
     }
-}
 }

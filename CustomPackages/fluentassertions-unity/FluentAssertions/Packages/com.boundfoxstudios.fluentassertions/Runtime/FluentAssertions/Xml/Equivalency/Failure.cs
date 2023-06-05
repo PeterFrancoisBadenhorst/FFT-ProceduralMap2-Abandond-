@@ -1,15 +1,15 @@
-namespace FluentAssertions.Xml.Equivalency {
-
-internal class Failure
+namespace FluentAssertions.Xml.Equivalency
 {
-    public Failure(string formatString, params object[] formatParams)
+    internal class Failure
     {
-        FormatString = formatString;
-        FormatParams = formatParams;
+        public Failure(string formatString, params object[] formatParams)
+        {
+            FormatString = formatString;
+            FormatParams = formatParams;
+        }
+
+        public string FormatString { get; }
+
+        public object[] FormatParams { get; }
     }
-
-    public string FormatString { get; }
-
-    public object[] FormatParams { get; }
-}
 }

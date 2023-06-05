@@ -1,31 +1,31 @@
-﻿namespace FluentAssertions.Formatting {
-
-public class StringValueFormatter : IValueFormatter
+﻿namespace FluentAssertions.Formatting
 {
-    /// <summary>
-    /// Indicates whether the current <see cref="IValueFormatter"/> can handle the specified <paramref name="value"/>.
-    /// </summary>
-    /// <param name="value">The value for which to create a <see cref="string"/>.</param>
-    /// <returns>
-    /// <c>true</c> if the current <see cref="IValueFormatter"/> can handle the specified value; otherwise, <c>false</c>.
-    /// </returns>
-    public bool CanHandle(object value)
+    public class StringValueFormatter : IValueFormatter
     {
-        return value is string;
-    }
-
-    public void Format(object value, FormattedObjectGraph formattedGraph, FormattingContext context, FormatChild formatChild)
-    {
-        string result = "\"" + value + "\"";
-
-        if (context.UseLineBreaks)
+        /// <summary>
+        /// Indicates whether the current <see cref="IValueFormatter"/> can handle the specified <paramref name="value"/>.
+        /// </summary>
+        /// <param name="value">The value for which to create a <see cref="string"/>.</param>
+        /// <returns>
+        /// <c>true</c> if the current <see cref="IValueFormatter"/> can handle the specified value; otherwise, <c>false</c>.
+        /// </returns>
+        public bool CanHandle(object value)
         {
-            formattedGraph.AddFragmentOnNewLine(result);
+            return value is string;
         }
-        else
+
+        public void Format(object value, FormattedObjectGraph formattedGraph, FormattingContext context, FormatChild formatChild)
         {
-            formattedGraph.AddFragment(result);
+            string result = "\"" + value + "\"";
+
+            if (context.UseLineBreaks)
+            {
+                formattedGraph.AddFragmentOnNewLine(result);
+            }
+            else
+            {
+                formattedGraph.AddFragment(result);
+            }
         }
     }
-}
 }

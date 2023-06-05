@@ -1,59 +1,59 @@
-﻿using System;
-using FluentAssertions.Common;
+﻿using FluentAssertions.Common;
+using System;
 
-namespace FluentAssertions.Equivalency.Matching {
-
-/// <summary>
-/// Allows mapping a member (property or field) of the expectation to a differently named member
-/// of the subject-under-test using a nested member path in the form of "Parent.NestedCollection[].Member"
-/// </summary>
-internal class MappedPathMatchingRule : IMemberMatchingRule
+namespace FluentAssertions.Equivalency.Matching
 {
-    private readonly MemberPath expectationPath;
-    private readonly MemberPath subjectPath;
-
-    public MappedPathMatchingRule(string expectationMemberPath, string subjectMemberPath)
+    /// <summary>
+    /// Allows mapping a member (property or field) of the expectation to a differently named member
+    /// of the subject-under-test using a nested member path in the form of "Parent.NestedCollection[].Member"
+    /// </summary>
+    internal class MappedPathMatchingRule : IMemberMatchingRule
     {
-        Guard.ThrowIfArgumentIsNullOrEmpty(expectationMemberPath,
-            nameof(expectationMemberPath), "A member path cannot be null");
-        Guard.ThrowIfArgumentIsNullOrEmpty(subjectMemberPath,
-            nameof(subjectMemberPath), "A member path cannot be null");
+        private readonly MemberPath expectationPath;
+        private readonly MemberPath subjectPath;
 
-        expectationPath = new MemberPath(expectationMemberPath);
-        subjectPath = new MemberPath(subjectMemberPath);
-
-        if (expectationPath.GetContainsSpecificCollectionIndex() || subjectPath.GetContainsSpecificCollectionIndex())
+        public MappedPathMatchingRule(string expectationMemberPath, string subjectMemberPath)
         {
-            throw new ArgumentException("Mapping properties containing a collection index must use the [] format without specific index.");
-        }
+            Guard.ThrowIfArgumentIsNullOrEmpty(expectationMemberPath,
+                nameof(expectationMemberPath), "A member path cannot be null");
+            Guard.ThrowIfArgumentIsNullOrEmpty(subjectMemberPath,
+                nameof(subjectMemberPath), "A member path cannot be null");
 
-        if (!expectationPath.HasSameParentAs(subjectPath))
-        {
-            throw new ArgumentException("The member paths must have the same parent.");
-        }
-    }
+            expectationPath = new MemberPath(expectationMemberPath);
+            subjectPath = new MemberPath(subjectMemberPath);
 
-    public IMember Match(IMember expectedMember, object subject, INode parent, IEquivalencyAssertionOptions options)
-    {
-        MemberPath path = expectationPath;
-        if (expectedMember.RootIsCollection)
-        {
-            path = path.WithCollectionAsRoot();
-        }
-
-        if (path.IsEquivalentTo(expectedMember.PathAndName))
-        {
-            var member = MemberFactory.Find(subject, subjectPath.MemberName, expectedMember.Type, parent);
-            if (member is null)
+            if (expectationPath.GetContainsSpecificCollectionIndex() || subjectPath.GetContainsSpecificCollectionIndex())
             {
-                throw new ArgumentException(
-                    $"Subject of type {subject?.GetType().Name} does not have member {subjectPath.MemberName}");
+                throw new ArgumentException("Mapping properties containing a collection index must use the [] format without specific index.");
             }
 
-            return member;
+            if (!expectationPath.HasSameParentAs(subjectPath))
+            {
+                throw new ArgumentException("The member paths must have the same parent.");
+            }
         }
 
-        return null;
+        public IMember Match(IMember expectedMember, object subject, INode parent, IEquivalencyAssertionOptions options)
+        {
+            MemberPath path = expectationPath;
+            if (expectedMember.RootIsCollection)
+            {
+                path = path.WithCollectionAsRoot();
+            }
+
+            if (path.IsEquivalentTo(expectedMember.PathAndName))
+            {
+                var member = MemberFactory.Find(subject, subjectPath.MemberName, expectedMember.Type, parent);
+                if (member is null)
+                {
+                    throw new ArgumentException(
+                        $"Subject of type {subject?.GetType().Name} does not have member {subjectPath.MemberName}");
+                }
+
+                return member;
+            }
+
+            return null;
+        }
     }
-}
 }

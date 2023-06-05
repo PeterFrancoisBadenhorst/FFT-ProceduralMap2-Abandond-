@@ -1,17 +1,17 @@
 ﻿using System.Xml.Linq;
 
-namespace FluentAssertions.Equivalency.Steps {
-
-public class XElementEquivalencyStep : EquivalencyStep<XElement>
+namespace FluentAssertions.Equivalency.Steps
 {
-    protected override EquivalencyResult OnHandle(Comparands comparands, IEquivalencyValidationContext context, IEquivalencyValidator nestedValidator)
+    public class XElementEquivalencyStep : EquivalencyStep<XElement>
     {
-        var subject = (XElement)comparands.Subject;
-        var expectation = (XElement)comparands.Expectation;
+        protected override EquivalencyResult OnHandle(Comparands comparands, IEquivalencyValidationContext context, IEquivalencyValidator nestedValidator)
+        {
+            var subject = (XElement)comparands.Subject;
+            var expectation = (XElement)comparands.Expectation;
 
-        subject.Should().BeEquivalentTo(expectation, context.Reason.FormattedMessage, context.Reason.Arguments);
+            subject.Should().BeEquivalentTo(expectation, context.Reason.FormattedMessage, context.Reason.Arguments);
 
-        return EquivalencyResult.AssertionCompleted;
+            return EquivalencyResult.AssertionCompleted;
+        }
     }
-}
 }

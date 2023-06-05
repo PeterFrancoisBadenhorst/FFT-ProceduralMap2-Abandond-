@@ -1,51 +1,51 @@
 ﻿using System;
 using System.Globalization;
 
-namespace FluentAssertions.Formatting {
-
-public class DoubleValueFormatter : IValueFormatter
+namespace FluentAssertions.Formatting
 {
-    /// <summary>
-    /// Indicates whether the current <see cref="IValueFormatter"/> can handle the specified <paramref name="value"/>.
-    /// </summary>
-    /// <param name="value">The value for which to create a <see cref="string"/>.</param>
-    /// <returns>
-    /// <c>true</c> if the current <see cref="IValueFormatter"/> can handle the specified value; otherwise, <c>false</c>.
-    /// </returns>
-    public bool CanHandle(object value)
+    public class DoubleValueFormatter : IValueFormatter
     {
-        return value is double;
-    }
-
-    public void Format(object value, FormattedObjectGraph formattedGraph, FormattingContext context, FormatChild formatChild)
-    {
-        formattedGraph.AddFragment(Format(value));
-    }
-
-    private static string Format(object value)
-    {
-        double doubleValue = (double)value;
-
-        if (double.IsPositiveInfinity(doubleValue))
+        /// <summary>
+        /// Indicates whether the current <see cref="IValueFormatter"/> can handle the specified <paramref name="value"/>.
+        /// </summary>
+        /// <param name="value">The value for which to create a <see cref="string"/>.</param>
+        /// <returns>
+        /// <c>true</c> if the current <see cref="IValueFormatter"/> can handle the specified value; otherwise, <c>false</c>.
+        /// </returns>
+        public bool CanHandle(object value)
         {
-            return nameof(Double) + "." + nameof(double.PositiveInfinity);
+            return value is double;
         }
 
-        if (double.IsNegativeInfinity(doubleValue))
+        public void Format(object value, FormattedObjectGraph formattedGraph, FormattingContext context, FormatChild formatChild)
         {
-            return nameof(Double) + "." + nameof(double.NegativeInfinity);
+            formattedGraph.AddFragment(Format(value));
         }
 
-        if (double.IsNaN(doubleValue))
+        private static string Format(object value)
         {
-            return doubleValue.ToString(CultureInfo.InvariantCulture);
+            double doubleValue = (double)value;
+
+            if (double.IsPositiveInfinity(doubleValue))
+            {
+                return nameof(Double) + "." + nameof(double.PositiveInfinity);
+            }
+
+            if (double.IsNegativeInfinity(doubleValue))
+            {
+                return nameof(Double) + "." + nameof(double.NegativeInfinity);
+            }
+
+            if (double.IsNaN(doubleValue))
+            {
+                return doubleValue.ToString(CultureInfo.InvariantCulture);
+            }
+
+            string formattedValue = doubleValue.ToString("R", CultureInfo.InvariantCulture);
+
+            return !formattedValue.Contains('.', StringComparison.Ordinal) && !formattedValue.Contains('E', StringComparison.Ordinal)
+                ? formattedValue + ".0"
+                : formattedValue;
         }
-
-        string formattedValue = doubleValue.ToString("R", CultureInfo.InvariantCulture);
-
-        return !formattedValue.Contains('.', StringComparison.Ordinal) && !formattedValue.Contains('E', StringComparison.Ordinal)
-            ? formattedValue + ".0"
-            : formattedValue;
     }
-}
 }

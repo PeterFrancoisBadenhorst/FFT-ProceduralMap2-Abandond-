@@ -1,9 +1,9 @@
-namespace FluentAssertions.Equivalency {
-
-public enum OrderStrictness
+namespace FluentAssertions.Equivalency
 {
-    Strict,
-    NotStrict,
-    Irrelevant
-}
+    public enum OrderStrictness
+    {
+        Strict,
+        NotStrict,
+        Irrelevant
+    }
 }

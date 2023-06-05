@@ -1,30 +1,30 @@
-﻿using System;
-using FluentAssertions.Common;
+﻿using FluentAssertions.Common;
 using FluentAssertions.Execution;
+using System;
 
-namespace FluentAssertions {
-
-public abstract class OccurrenceConstraint
+namespace FluentAssertions
 {
-    protected OccurrenceConstraint(int expectedCount)
+    public abstract class OccurrenceConstraint
     {
-        if (expectedCount < 0)
+        protected OccurrenceConstraint(int expectedCount)
         {
-            throw new ArgumentOutOfRangeException(nameof(expectedCount), "Expected count cannot be negative.");
+            if (expectedCount < 0)
+            {
+                throw new ArgumentOutOfRangeException(nameof(expectedCount), "Expected count cannot be negative.");
+            }
+
+            ExpectedCount = expectedCount;
         }
 
-        ExpectedCount = expectedCount;
+        internal int ExpectedCount { get; }
+
+        internal abstract string Mode { get; }
+
+        internal abstract bool Assert(int actual);
+
+        internal void RegisterReportables(AssertionScope scope)
+        {
+            scope.AddReportable("expectedOccurrence", $"{Mode} {ExpectedCount.Times()}");
+        }
     }
-
-    internal int ExpectedCount { get; }
-
-    internal abstract string Mode { get; }
-
-    internal abstract bool Assert(int actual);
-
-    internal void RegisterReportables(AssertionScope scope)
-    {
-        scope.AddReportable("expectedOccurrence", $"{Mode} {ExpectedCount.Times()}");
-    }
-}
 }

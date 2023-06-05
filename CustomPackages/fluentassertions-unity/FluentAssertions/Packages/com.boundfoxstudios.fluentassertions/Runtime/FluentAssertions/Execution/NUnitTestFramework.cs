@@ -1,9 +1,9 @@
-﻿namespace FluentAssertions.Execution {
-
-internal class NUnitTestFramework : LateBoundTestFramework
+﻿namespace FluentAssertions.Execution
 {
-    protected internal override string AssemblyName => "nunit.framework";
+    internal class NUnitTestFramework : LateBoundTestFramework
+    {
+        protected internal override string AssemblyName => "nunit.framework";
 
-    protected override string ExceptionFullName => "NUnit.Framework.AssertionException";
-}
+        protected override string ExceptionFullName => "NUnit.Framework.AssertionException";
+    }
 }

@@ -1,17 +1,17 @@
-namespace FluentAssertions.Equivalency.Steps {
-
-public class SimpleEqualityEquivalencyStep : IEquivalencyStep
+namespace FluentAssertions.Equivalency.Steps
 {
-    public EquivalencyResult Handle(Comparands comparands, IEquivalencyValidationContext context, IEquivalencyValidator nestedValidator)
+    public class SimpleEqualityEquivalencyStep : IEquivalencyStep
     {
-        if (!context.Options.IsRecursive && !context.CurrentNode.IsRoot)
+        public EquivalencyResult Handle(Comparands comparands, IEquivalencyValidationContext context, IEquivalencyValidator nestedValidator)
         {
-            comparands.Subject.Should().Be(comparands.Expectation, context.Reason.FormattedMessage, context.Reason.Arguments);
+            if (!context.Options.IsRecursive && !context.CurrentNode.IsRoot)
+            {
+                comparands.Subject.Should().Be(comparands.Expectation, context.Reason.FormattedMessage, context.Reason.Arguments);
 
-            return EquivalencyResult.AssertionCompleted;
+                return EquivalencyResult.AssertionCompleted;
+            }
+
+            return EquivalencyResult.ContinueWithNext;
         }
-
-        return EquivalencyResult.ContinueWithNext;
     }
-}
 }

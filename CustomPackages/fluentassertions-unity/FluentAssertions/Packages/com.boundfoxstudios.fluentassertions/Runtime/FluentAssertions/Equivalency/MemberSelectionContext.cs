@@ -1,45 +1,45 @@
-using System;
 using FluentAssertions.Common;
+using System;
 
-namespace FluentAssertions.Equivalency {
-
-/// <summary>
-/// Provides contextual information to an <see cref="IMemberSelectionRule"/>.
-/// </summary>
-public class MemberSelectionContext
+namespace FluentAssertions.Equivalency
 {
-    private readonly Type compileTimeType;
-    private readonly Type runtimeType;
-    private readonly IEquivalencyAssertionOptions options;
-
-    public MemberSelectionContext(Type compileTimeType, Type runtimeType, IEquivalencyAssertionOptions options)
+    /// <summary>
+    /// Provides contextual information to an <see cref="IMemberSelectionRule"/>.
+    /// </summary>
+    public class MemberSelectionContext
     {
-        this.runtimeType = runtimeType;
-        this.compileTimeType = compileTimeType;
-        this.options = options;
-    }
+        private readonly Type compileTimeType;
+        private readonly Type runtimeType;
+        private readonly IEquivalencyAssertionOptions options;
 
-    /// <summary>
-    /// Gets a value indicating whether and which properties should be considered.
-    /// </summary>
-    public MemberVisibility IncludedProperties => options.IncludedProperties;
-
-    /// <summary>
-    /// Gets a value indicating whether and which fields should be considered.
-    /// </summary>
-    public MemberVisibility IncludedFields => options.IncludedFields;
-
-    /// <summary>
-    /// Gets either the compile-time or run-time type depending on the options provided by the caller.
-    /// </summary>
-    public Type Type
-    {
-        get
+        public MemberSelectionContext(Type compileTimeType, Type runtimeType, IEquivalencyAssertionOptions options)
         {
-            Type type = options.UseRuntimeTyping ? runtimeType : compileTimeType;
+            this.runtimeType = runtimeType;
+            this.compileTimeType = compileTimeType;
+            this.options = options;
+        }
 
-            return type.NullableOrActualType();
+        /// <summary>
+        /// Gets a value indicating whether and which properties should be considered.
+        /// </summary>
+        public MemberVisibility IncludedProperties => options.IncludedProperties;
+
+        /// <summary>
+        /// Gets a value indicating whether and which fields should be considered.
+        /// </summary>
+        public MemberVisibility IncludedFields => options.IncludedFields;
+
+        /// <summary>
+        /// Gets either the compile-time or run-time type depending on the options provided by the caller.
+        /// </summary>
+        public Type Type
+        {
+            get
+            {
+                Type type = options.UseRuntimeTyping ? runtimeType : compileTimeType;
+
+                return type.NullableOrActualType();
+            }
         }
     }
-}
 }

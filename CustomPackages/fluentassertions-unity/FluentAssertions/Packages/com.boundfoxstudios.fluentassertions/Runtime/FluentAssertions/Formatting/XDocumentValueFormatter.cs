@@ -1,26 +1,26 @@
 ﻿using System.Xml.Linq;
 
-namespace FluentAssertions.Formatting {
-
-public class XDocumentValueFormatter : IValueFormatter
+namespace FluentAssertions.Formatting
 {
-    public bool CanHandle(object value)
+    public class XDocumentValueFormatter : IValueFormatter
     {
-        return value is XDocument;
-    }
-
-    public void Format(object value, FormattedObjectGraph formattedGraph, FormattingContext context, FormatChild formatChild)
-    {
-        var document = (XDocument)value;
-
-        if (document.Root is not null)
+        public bool CanHandle(object value)
         {
-            formatChild("root", document.Root, formattedGraph);
+            return value is XDocument;
         }
-        else
+
+        public void Format(object value, FormattedObjectGraph formattedGraph, FormattingContext context, FormatChild formatChild)
         {
-            formattedGraph.AddFragment("[XML document without root element]");
+            var document = (XDocument)value;
+
+            if (document.Root is not null)
+            {
+                formatChild("root", document.Root, formattedGraph);
+            }
+            else
+            {
+                formattedGraph.AddFragment("[XML document without root element]");
+            }
         }
     }
-}
 }

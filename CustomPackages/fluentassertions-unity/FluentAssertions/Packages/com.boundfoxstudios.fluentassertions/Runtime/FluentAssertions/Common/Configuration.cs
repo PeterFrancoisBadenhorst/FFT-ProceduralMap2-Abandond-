@@ -1,129 +1,129 @@
-﻿using System;
-using FluentAssertions.Formatting;
+﻿using FluentAssertions.Formatting;
+using System;
 
-namespace FluentAssertions.Common {
-
-public class Configuration
+namespace FluentAssertions.Common
 {
-    #region Private Definitions
-
-    private readonly object propertiesAccessLock = new();
-    private readonly IConfigurationStore store;
-    private string valueFormatterAssembly;
-    private ValueFormatterDetectionMode? valueFormatterDetectionMode;
-    private string testFrameworkName;
-
-    #endregion
-
-    /// <summary>
-    /// Gets the active configuration,
-    /// </summary>
-    public static Configuration Current => Services.Configuration;
-
-    public Configuration(IConfigurationStore store)
+    public class Configuration
     {
-        this.store = store;
-    }
+        #region Private Definitions
 
-    /// <summary>
-    /// Gets or sets the mode on how Fluent Assertions will find custom implementations of
-    /// <see cref="IValueFormatter"/>.
-    /// </summary>
-    public ValueFormatterDetectionMode ValueFormatterDetectionMode
-    {
-        get
+        private readonly object propertiesAccessLock = new();
+        private readonly IConfigurationStore store;
+        private string valueFormatterAssembly;
+        private ValueFormatterDetectionMode? valueFormatterDetectionMode;
+        private string testFrameworkName;
+
+        #endregion Private Definitions
+
+        /// <summary>
+        /// Gets the active configuration,
+        /// </summary>
+        public static Configuration Current => Services.Configuration;
+
+        public Configuration(IConfigurationStore store)
         {
-            lock (propertiesAccessLock)
+            this.store = store;
+        }
+
+        /// <summary>
+        /// Gets or sets the mode on how Fluent Assertions will find custom implementations of
+        /// <see cref="IValueFormatter"/>.
+        /// </summary>
+        public ValueFormatterDetectionMode ValueFormatterDetectionMode
+        {
+            get
             {
-                if (!valueFormatterDetectionMode.HasValue)
+                lock (propertiesAccessLock)
                 {
-                    valueFormatterDetectionMode = DetermineFormatterDetectionMode();
-                }
+                    if (!valueFormatterDetectionMode.HasValue)
+                    {
+                        valueFormatterDetectionMode = DetermineFormatterDetectionMode();
+                    }
 
-                return valueFormatterDetectionMode.Value;
-            }
-        }
-
-        set
-        {
-            valueFormatterDetectionMode = value;
-        }
-    }
-
-    private ValueFormatterDetectionMode DetermineFormatterDetectionMode()
-    {
-        if (ValueFormatterAssembly is not null)
-        {
-            return ValueFormatterDetectionMode.Specific;
-        }
-
-        string setting = store.GetSetting("valueFormatters");
-        if (!string.IsNullOrEmpty(setting))
-        {
-            try
-            {
-                return (ValueFormatterDetectionMode)Enum.Parse(typeof(ValueFormatterDetectionMode), setting, ignoreCase: true);
-            }
-            catch (ArgumentException)
-            {
-                throw new InvalidOperationException(
-                    $"'{setting}' is not a valid option for detecting value formatters. Valid options include Disabled, Specific and Scan.");
-            }
-        }
-
-        return ValueFormatterDetectionMode.Disabled;
-    }
-
-    /// <summary>
-    /// Gets or sets the assembly name to scan for custom value formatters in case <see cref="ValueFormatterDetectionMode"/>
-    /// is set to <see cref="Common.ValueFormatterDetectionMode.Specific"/>.
-    /// </summary>
-    public string ValueFormatterAssembly
-    {
-        get
-        {
-            if (valueFormatterAssembly is null)
-            {
-                string assemblyName = store.GetSetting("valueFormattersAssembly");
-                if (!string.IsNullOrEmpty(assemblyName))
-                {
-                    valueFormatterAssembly = assemblyName;
+                    return valueFormatterDetectionMode.Value;
                 }
             }
 
-            return valueFormatterAssembly;
-        }
-
-        set
-        {
-            lock (propertiesAccessLock)
+            set
             {
-                valueFormatterAssembly = value;
-                valueFormatterDetectionMode = null;
+                valueFormatterDetectionMode = value;
             }
         }
-    }
 
-    /// <summary>
-    /// Gets or sets the name of the test framework to use.
-    /// </summary>
-    /// <remarks>
-    /// If no name is provided, Fluent Assertions
-    /// will try to detect it by scanning the currently loaded assemblies. If it can't find a suitable provider,
-    /// and the run-time platform supports it, it'll try to get it from the <see cref="IConfigurationStore"/>.
-    /// </remarks>
-    public string TestFrameworkName
-    {
-        get
+        private ValueFormatterDetectionMode DetermineFormatterDetectionMode()
         {
-            if (string.IsNullOrEmpty(testFrameworkName))
+            if (ValueFormatterAssembly is not null)
             {
-                testFrameworkName = store.GetSetting("FluentAssertions.TestFramework");
+                return ValueFormatterDetectionMode.Specific;
             }
 
-            return testFrameworkName;
+            string setting = store.GetSetting("valueFormatters");
+            if (!string.IsNullOrEmpty(setting))
+            {
+                try
+                {
+                    return (ValueFormatterDetectionMode)Enum.Parse(typeof(ValueFormatterDetectionMode), setting, ignoreCase: true);
+                }
+                catch (ArgumentException)
+                {
+                    throw new InvalidOperationException(
+                        $"'{setting}' is not a valid option for detecting value formatters. Valid options include Disabled, Specific and Scan.");
+                }
+            }
+
+            return ValueFormatterDetectionMode.Disabled;
         }
-        set => testFrameworkName = value;
+
+        /// <summary>
+        /// Gets or sets the assembly name to scan for custom value formatters in case <see cref="ValueFormatterDetectionMode"/>
+        /// is set to <see cref="Common.ValueFormatterDetectionMode.Specific"/>.
+        /// </summary>
+        public string ValueFormatterAssembly
+        {
+            get
+            {
+                if (valueFormatterAssembly is null)
+                {
+                    string assemblyName = store.GetSetting("valueFormattersAssembly");
+                    if (!string.IsNullOrEmpty(assemblyName))
+                    {
+                        valueFormatterAssembly = assemblyName;
+                    }
+                }
+
+                return valueFormatterAssembly;
+            }
+
+            set
+            {
+                lock (propertiesAccessLock)
+                {
+                    valueFormatterAssembly = value;
+                    valueFormatterDetectionMode = null;
+                }
+            }
+        }
+
+        /// <summary>
+        /// Gets or sets the name of the test framework to use.
+        /// </summary>
+        /// <remarks>
+        /// If no name is provided, Fluent Assertions
+        /// will try to detect it by scanning the currently loaded assemblies. If it can't find a suitable provider,
+        /// and the run-time platform supports it, it'll try to get it from the <see cref="IConfigurationStore"/>.
+        /// </remarks>
+        public string TestFrameworkName
+        {
+            get
+            {
+                if (string.IsNullOrEmpty(testFrameworkName))
+                {
+                    testFrameworkName = store.GetSetting("FluentAssertions.TestFramework");
+                }
+
+                return testFrameworkName;
+            }
+            set => testFrameworkName = value;
+        }
     }
-}
 }

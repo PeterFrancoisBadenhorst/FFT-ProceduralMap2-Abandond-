@@ -1,20 +1,20 @@
 using System.Threading;
 
-namespace FluentAssertions.Events {
-
-/// <summary>
-/// Generates a sequence in a thread-safe manner.
-/// </summary>
-internal sealed class ThreadSafeSequenceGenerator
+namespace FluentAssertions.Events
 {
-    private int sequence = -1;
-
     /// <summary>
-    /// Increments the current sequence.
+    /// Generates a sequence in a thread-safe manner.
     /// </summary>
-    public int Increment()
+    internal sealed class ThreadSafeSequenceGenerator
     {
-        return Interlocked.Increment(ref sequence);
+        private int sequence = -1;
+
+        /// <summary>
+        /// Increments the current sequence.
+        /// </summary>
+        public int Increment()
+        {
+            return Interlocked.Increment(ref sequence);
+        }
     }
-}
 }

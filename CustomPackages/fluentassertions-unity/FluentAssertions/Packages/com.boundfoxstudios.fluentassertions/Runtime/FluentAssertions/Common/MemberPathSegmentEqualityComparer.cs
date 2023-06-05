@@ -1,49 +1,49 @@
 ﻿using System.Collections.Generic;
 using System.Text.RegularExpressions;
 
-namespace FluentAssertions.Common {
-
-/// <summary>
-/// Compares two segments of a <see cref="MemberPath"/>.
-/// Sets the <see cref="AnyIndexQualifier"/> equal with any numeric index qualifier.
-/// All other comparisons are default string equality.
-/// </summary>
-internal class MemberPathSegmentEqualityComparer : IEqualityComparer<string>
+namespace FluentAssertions.Common
 {
-    private const string AnyIndexQualifier = "*";
-    private static readonly Regex IndexQualifierRegex = new(@"^\d+$");
-
     /// <summary>
     /// Compares two segments of a <see cref="MemberPath"/>.
+    /// Sets the <see cref="AnyIndexQualifier"/> equal with any numeric index qualifier.
+    /// All other comparisons are default string equality.
     /// </summary>
-    /// <param name="x">Left part of the comparison.</param>
-    /// <param name="y">Right part of the comparison.</param>
-    /// <returns>True if segments are equal, false if not.</returns>
-    public bool Equals(string x, string y)
+    internal class MemberPathSegmentEqualityComparer : IEqualityComparer<string>
     {
-        if (x == AnyIndexQualifier)
+        private const string AnyIndexQualifier = "*";
+        private static readonly Regex IndexQualifierRegex = new(@"^\d+$");
+
+        /// <summary>
+        /// Compares two segments of a <see cref="MemberPath"/>.
+        /// </summary>
+        /// <param name="x">Left part of the comparison.</param>
+        /// <param name="y">Right part of the comparison.</param>
+        /// <returns>True if segments are equal, false if not.</returns>
+        public bool Equals(string x, string y)
         {
-            return IsIndexQualifier(y);
+            if (x == AnyIndexQualifier)
+            {
+                return IsIndexQualifier(y);
+            }
+
+            if (y == AnyIndexQualifier)
+            {
+                return IsIndexQualifier(x);
+            }
+
+            return x == y;
         }
 
-        if (y == AnyIndexQualifier)
+        private static bool IsIndexQualifier(string segment)
+            => segment == AnyIndexQualifier || IndexQualifierRegex.IsMatch(segment);
+
+        public int GetHashCode(string obj)
         {
-            return IsIndexQualifier(x);
-        }
-
-        return x == y;
-    }
-
-    private static bool IsIndexQualifier(string segment)
-        => segment == AnyIndexQualifier || IndexQualifierRegex.IsMatch(segment);
-
-    public int GetHashCode(string obj)
-    {
 #if NETCOREAPP2_1_OR_GREATER
         return obj.GetHashCode(System.StringComparison.Ordinal);
 #else
-        return obj.GetHashCode();
+            return obj.GetHashCode();
 #endif
+        }
     }
-}
 }

@@ -1,16 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 
-namespace FluentAssertions.Equivalency.Selection {
-
-internal class ExcludeNonBrowsableMembersRule : IMemberSelectionRule
+namespace FluentAssertions.Equivalency.Selection
 {
-    public bool IncludesMembers => false;
-
-    public IEnumerable<IMember> SelectMembers(INode currentNode, IEnumerable<IMember> selectedMembers, MemberSelectionContext context)
+    internal class ExcludeNonBrowsableMembersRule : IMemberSelectionRule
     {
-        return selectedMembers.Where(member => member.IsBrowsable).ToList();
+        public bool IncludesMembers => false;
+
+        public IEnumerable<IMember> SelectMembers(INode currentNode, IEnumerable<IMember> selectedMembers, MemberSelectionContext context)
+        {
+            return selectedMembers.Where(member => member.IsBrowsable).ToList();
+        }
     }
-}
 }

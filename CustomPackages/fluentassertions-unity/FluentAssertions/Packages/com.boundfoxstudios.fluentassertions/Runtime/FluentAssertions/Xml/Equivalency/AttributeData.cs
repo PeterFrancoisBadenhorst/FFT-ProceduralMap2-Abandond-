@@ -1,34 +1,34 @@
-namespace FluentAssertions.Xml.Equivalency {
-
-internal class AttributeData
+namespace FluentAssertions.Xml.Equivalency
 {
-    public AttributeData(string namespaceUri, string localName, string value, string prefix)
+    internal class AttributeData
     {
-        NamespaceUri = namespaceUri;
-        LocalName = localName;
-        Value = value;
-        Prefix = prefix;
-    }
-
-    public string NamespaceUri { get; }
-
-    public string LocalName { get; }
-
-    public string Value { get; }
-
-    private string Prefix { get; }
-
-    public string QualifiedName
-    {
-        get
+        public AttributeData(string namespaceUri, string localName, string value, string prefix)
         {
-            if (string.IsNullOrEmpty(Prefix))
-            {
-                return LocalName;
-            }
+            NamespaceUri = namespaceUri;
+            LocalName = localName;
+            Value = value;
+            Prefix = prefix;
+        }
 
-            return Prefix + ":" + LocalName;
+        public string NamespaceUri { get; }
+
+        public string LocalName { get; }
+
+        public string Value { get; }
+
+        private string Prefix { get; }
+
+        public string QualifiedName
+        {
+            get
+            {
+                if (string.IsNullOrEmpty(Prefix))
+                {
+                    return LocalName;
+                }
+
+                return Prefix + ":" + LocalName;
+            }
         }
     }
-}
 }

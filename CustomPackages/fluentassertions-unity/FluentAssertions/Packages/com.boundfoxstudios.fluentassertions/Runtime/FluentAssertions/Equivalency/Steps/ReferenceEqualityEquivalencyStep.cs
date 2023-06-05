@@ -1,10 +1,10 @@
-﻿namespace FluentAssertions.Equivalency.Steps {
-
-public class ReferenceEqualityEquivalencyStep : IEquivalencyStep
+﻿namespace FluentAssertions.Equivalency.Steps
 {
-    public EquivalencyResult Handle(Comparands comparands, IEquivalencyValidationContext context, IEquivalencyValidator nestedValidator)
+    public class ReferenceEqualityEquivalencyStep : IEquivalencyStep
     {
-        return ReferenceEquals(comparands.Subject, comparands.Expectation) ? EquivalencyResult.AssertionCompleted : EquivalencyResult.ContinueWithNext;
+        public EquivalencyResult Handle(Comparands comparands, IEquivalencyValidationContext context, IEquivalencyValidator nestedValidator)
+        {
+            return ReferenceEquals(comparands.Subject, comparands.Expectation) ? EquivalencyResult.AssertionCompleted : EquivalencyResult.ContinueWithNext;
+        }
     }
-}
 }

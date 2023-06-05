@@ -1,33 +1,16 @@
-using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Utilities;
-using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Structs;
-using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.ScriptableObjects;
-using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Noise;
-using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Mono.Managers;
-using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Mono.Behaviors;
-using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Enums;
-using FluentAssertions;
-using NUnit.Framework;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using UnityEngine;
-using UnityEngine.UIElements;
-
 namespace Assets.SRC.ProceduralMapGeneration.Utilities.Tests
 {
     /*
     [TestFixture]
     public class GridCreate_Tests
     {
-       
         private GridCreate _gridCreate;
         private GridCreate_Mocs _gridCreate_Mocs;
 
-
         public Transform GridParent { get; private set; }
 
-
         #region [SetUp]&&[TearDown]
+
         [SetUp]
         public void SetUp()
         {
@@ -45,16 +28,20 @@ namespace Assets.SRC.ProceduralMapGeneration.Utilities.Tests
             //_gridCreate_Mocs.TestGrid.Clear();
             //_gridCreate_Mocs.GridPositions = null;
         }
-        #endregion
+
+        #endregion [SetUp]&&[TearDown]
 
         #region Validate_SquareGrid2DVertical Test Cases
+
         [Test, Order(1)]
         [TestCase(1, 1)]
         [TestCase(2, 5)]
         [TestCase(2, 15)]
         [TestCase(14, 0.5f)]
         [TestCase(16, 22.34f)]
-        #endregion
+
+        #endregion Validate_SquareGrid2DVertical Test Cases
+
         public void Validate_SquareGrid2DVertical(int gridSize, float scale)
         {
             _gridCreate_Mocs.GridPositions = _gridCreate.SquareGrid2DVertical(gridSize, scale);
@@ -62,41 +49,50 @@ namespace Assets.SRC.ProceduralMapGeneration.Utilities.Tests
         }
 
         #region Validate_SquareGrid2DHorizontal Test Cases
+
         [Test, Order(1)]
         [TestCase(1, 1)]
         [TestCase(2, 5)]
         [TestCase(2, 15)]
         [TestCase(14, 0.5f)]
         [TestCase(16, 22.34f)]
-        #endregion
+
+        #endregion Validate_SquareGrid2DHorizontal Test Cases
+
         public void Validate_SquareGrid2DHorizontal(int gridSize, float scale)
         {
             _gridCreate_Mocs.GridPositions = _gridCreate.SquareGrid2DHorizontal(gridSize, scale);
             _gridCreate_Mocs.GridPositions.Count<Vector3>().Should().Be((gridSize * gridSize));
         }
 
-
         #region Validate_SquareGrid3D Test Cases
+
         [Test, Order(1)]
         [TestCase(1, 1)]
         [TestCase(2, 5)]
         [TestCase(2, 15)]
         [TestCase(14, 0.5f)]
         [TestCase(16, 22.34f)]
-        #endregion
+
+        #endregion Validate_SquareGrid3D Test Cases
+
         public void Validate_SquareGrid3D(int gridSize, float scale)
         {
             _gridCreate_Mocs.GridPositions = _gridCreate.SquareGrid3D(gridSize, scale);
             _gridCreate_Mocs.GridPositions.Count<Vector3>().Should().Be((gridSize * gridSize * gridSize));
         }
+
         #region Validate_PlaceGameObjectsAtGridPositions Test Cases
+
         [Test, Order(2)]
         [TestCase(1, 1)]
         [TestCase(2, 5)]
         [TestCase(2, 15)]
         [TestCase(14, 0.5f)]
         [TestCase(16, 22.34f)]
-        #endregion
+
+        #endregion Validate_PlaceGameObjectsAtGridPositions Test Cases
+
         public void Validate_PlaceGameObjectsAtGridPositions(int gridSize, float scale)
         {
             // 3D Grid
@@ -125,16 +121,19 @@ namespace Assets.SRC.ProceduralMapGeneration.Utilities.Tests
             // Position allocation check
             for (int i = 0; i < grid2DV.Count; i++)
                 grid2DV[i].transform.position.Should().Be(positions2DV[i]);
-
         }
+
         #region Validate_FindChunkNeigbors Test Cases
+
         [Test, Order(2)]
         [TestCase(1, 1)]
         [TestCase(2, 5)]
         [TestCase(2, 15)]
         [TestCase(6, 0.5f)]
         [TestCase(10, 22.34f)]
-        #endregion
+
+        #endregion Validate_FindChunkNeigbors Test Cases
+
         public void Validate_FindChunkNeigbors(int gridSize, float scale)
         {
             var positions3D = _gridCreate.SquareGrid3D(gridSize, scale);
@@ -171,6 +170,7 @@ namespace Assets.SRC.ProceduralMapGeneration.Utilities.Tests
         }
 
         #region Validate_FindChunkType Test Cases
+
         //                              north, east, south, west, top, bottom
         [TestCase(DirectionTypeEnum.N, true, false, false, false, false, false)]
         //                              north, east, south, west, top, bottom
@@ -277,7 +277,9 @@ namespace Assets.SRC.ProceduralMapGeneration.Utilities.Tests
         [TestCase(DirectionTypeEnum.TB, false, false, false, false, true, true)]
         //                              north, east, south, west, top, bottom
         [TestCase(DirectionTypeEnum.B, false, false, false, false, false, true)]
-        #endregion
+
+        #endregion Validate_FindChunkType Test Cases
+
         public void Validate_FindChunkType(DirectionTypeEnum proved, bool north, bool east, bool south, bool west, bool top, bool bottom)
         {
             /// Given

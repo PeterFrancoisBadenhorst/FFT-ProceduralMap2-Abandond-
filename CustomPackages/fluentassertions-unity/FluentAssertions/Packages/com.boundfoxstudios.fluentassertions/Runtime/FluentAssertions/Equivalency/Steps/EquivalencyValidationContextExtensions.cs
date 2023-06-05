@@ -1,11 +1,11 @@
 ﻿using System.Globalization;
 
-namespace FluentAssertions.Equivalency.Steps {
-
-internal static class EquivalencyValidationContextExtensions
+namespace FluentAssertions.Equivalency.Steps
 {
-    public static IEquivalencyValidationContext AsCollectionItem<TItem>(this IEquivalencyValidationContext context,
-        int index) =>
-        context.AsCollectionItem<TItem>(index.ToString(CultureInfo.InvariantCulture));
-}
+    internal static class EquivalencyValidationContextExtensions
+    {
+        public static IEquivalencyValidationContext AsCollectionItem<TItem>(this IEquivalencyValidationContext context,
+            int index) =>
+            context.AsCollectionItem<TItem>(index.ToString(CultureInfo.InvariantCulture));
+    }
 }

@@ -1,13 +1,13 @@
-﻿namespace FluentAssertions.Formatting {
-
-/// <summary>
-/// Provides information about the current formatting action.
-/// </summary>
-public class FormattingContext
+﻿namespace FluentAssertions.Formatting
 {
     /// <summary>
-    /// Indicates whether the formatter should use line breaks when the <see cref="IValueFormatter"/> supports it.
+    /// Provides information about the current formatting action.
     /// </summary>
-    public bool UseLineBreaks { get; set; }
-}
+    public class FormattingContext
+    {
+        /// <summary>
+        /// Indicates whether the formatter should use line breaks when the <see cref="IValueFormatter"/> supports it.
+        /// </summary>
+        public bool UseLineBreaks { get; set; }
+    }
 }
