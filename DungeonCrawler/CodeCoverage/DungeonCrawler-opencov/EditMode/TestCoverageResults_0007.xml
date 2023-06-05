@@ -22,12 +22,12 @@
               <Name>UnityEngine.Mesh Assets.SRC.ProceduralMapGeneration.Assets.SRC.Shared.Exceptions.CustomExceptions::NotImplementedException()</Name>
               <FileRef uid="18" />
               <SequencePoints>
-                <SequencePoint vc="1" uspid="5305" ordinal="0" offset="0" sl="9" sc="9" el="9" ec="9" bec="0" bev="0" fileid="18">
+                <SequencePoint vc="1" uspid="43584" ordinal="0" offset="0" sl="9" sc="9" el="9" ec="9" bec="0" bev="0" fileid="18">
                   <TrackedMethodRefs>
                     <TrackedMethodRef uid="0" vc="1" />
                   </TrackedMethodRefs>
                 </SequencePoint>
-                <SequencePoint vc="1" uspid="5306" ordinal="0" offset="1" sl="10" sc="13" el="10" ec="13" bec="0" bev="0" fileid="18">
+                <SequencePoint vc="1" uspid="43585" ordinal="0" offset="1" sl="10" sc="13" el="10" ec="13" bec="0" bev="0" fileid="18">
                   <TrackedMethodRefs>
                     <TrackedMethodRef uid="0" vc="1" />
                   </TrackedMethodRefs>
