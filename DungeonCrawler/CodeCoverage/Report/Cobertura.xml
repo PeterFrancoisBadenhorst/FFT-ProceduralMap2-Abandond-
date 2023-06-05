@@ -1,36 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
-<coverage line-rate="0.345714285714286" branch-rate="1" lines-covered="121" lines-valid="350" branches-covered="0" branches-valid="0" complexity="97" version="0" timestamp="1685914798">
+<coverage line-rate="0.376947040498442" branch-rate="1" lines-covered="121" lines-valid="321" branches-covered="0" branches-valid="0" complexity="91" version="0" timestamp="1685987308">
   <sources />
   <packages>
-    <package name="ProceduralMapGenerationAssembly" line-rate="0.340057636887608" branch-rate="1" complexity="95">
+    <package name="ProceduralMapGenerationAssembly" line-rate="0.352750809061489" branch-rate="1" complexity="88">
       <classes>
         <class name="Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.PathFinding.NewPathFinding" filename="C:/git/Unity.DungeonCrawler/DungeonCrawler/Assets/SRC/ProceduralMapGeneration/PathFinding/NewPathFinding/FindEnds.cs" line-rate="1" branch-rate="1" complexity="NaN">
           <methods>
             <method name="FindEnds" signature="(UnityEngine.Vector3[])" line-rate="1" branch-rate="1" complexity="NaN">
               <lines>
-                <line number="27" hits="8" branch="false" />
-                <line number="30" hits="12" branch="false" />
-                <line number="31" hits="12" branch="false" />
-                <line number="36" hits="24" branch="false" />
-                <line number="37" hits="8" branch="false" />
-                <line number="38" hits="8" branch="false" />
-                <line number="43" hits="8" branch="false" />
-                <line number="44" hits="8" branch="false" />
-                <line number="45" hits="8" branch="false" />
+                <line number="27" hits="3" branch="false" />
+                <line number="30" hits="10" branch="false" />
+                <line number="31" hits="10" branch="false" />
+                <line number="36" hits="20" branch="false" />
+                <line number="37" hits="3" branch="false" />
+                <line number="38" hits="3" branch="false" />
+                <line number="43" hits="3" branch="false" />
+                <line number="44" hits="3" branch="false" />
+                <line number="45" hits="3" branch="false" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="27" hits="8" branch="false" />
-            <line number="30" hits="12" branch="false" />
-            <line number="31" hits="12" branch="false" />
-            <line number="36" hits="24" branch="false" />
-            <line number="37" hits="8" branch="false" />
-            <line number="38" hits="8" branch="false" />
-            <line number="43" hits="8" branch="false" />
-            <line number="44" hits="8" branch="false" />
-            <line number="45" hits="8" branch="false" />
+            <line number="27" hits="3" branch="false" />
+            <line number="30" hits="10" branch="false" />
+            <line number="31" hits="10" branch="false" />
+            <line number="36" hits="20" branch="false" />
+            <line number="37" hits="3" branch="false" />
+            <line number="38" hits="3" branch="false" />
+            <line number="43" hits="3" branch="false" />
+            <line number="44" hits="3" branch="false" />
+            <line number="45" hits="3" branch="false" />
           </lines>
         </class>
         <class name="Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.PathFinding.NewPathFinding" filename="C:/git/Unity.DungeonCrawler/DungeonCrawler/Assets/SRC/ProceduralMapGeneration/PathFinding/NewPathFinding/Findpath.cs" line-rate="0.0714285714285714" branch-rate="1" complexity="NaN">
@@ -586,96 +586,96 @@
           <methods>
             <method name="FindChunkNeigbors" signature="(System.Single, System.Collections.Generic.List[GameObject])" line-rate="1" branch-rate="1" complexity="NaN">
               <lines>
-                <line number="16" hits="3" branch="false" />
                 <line number="17" hits="3" branch="false" />
                 <line number="18" hits="3" branch="false" />
-                <line number="20" hits="38" branch="false" />
-                <line number="21" hits="16" branch="false" />
+                <line number="19" hits="3" branch="false" />
+                <line number="21" hits="38" branch="false" />
                 <line number="22" hits="16" branch="false" />
                 <line number="23" hits="16" branch="false" />
-                <line number="25" hits="38" branch="false" />
-                <line number="26" hits="16" branch="false" />
+                <line number="24" hits="16" branch="false" />
+                <line number="26" hits="38" branch="false" />
                 <line number="27" hits="16" branch="false" />
                 <line number="28" hits="16" branch="false" />
                 <line number="29" hits="16" branch="false" />
-                <line number="31" hits="16" branch="false" />
-                <line number="33" hits="16" branch="false" />
-                <line number="35" hits="16" branch="false" />
-                <line number="36" hits="8" branch="false" />
+                <line number="30" hits="16" branch="false" />
+                <line number="32" hits="16" branch="false" />
+                <line number="34" hits="16" branch="false" />
+                <line number="36" hits="16" branch="false" />
                 <line number="37" hits="8" branch="false" />
                 <line number="38" hits="8" branch="false" />
-                <line number="39" hits="16" branch="false" />
-                <line number="40" hits="8" branch="false" />
+                <line number="39" hits="8" branch="false" />
+                <line number="40" hits="16" branch="false" />
                 <line number="41" hits="8" branch="false" />
                 <line number="42" hits="8" branch="false" />
-                <line number="43" hits="16" branch="false" />
-                <line number="44" hits="8" branch="false" />
+                <line number="43" hits="8" branch="false" />
+                <line number="44" hits="16" branch="false" />
                 <line number="45" hits="8" branch="false" />
                 <line number="46" hits="8" branch="false" />
-                <line number="47" hits="16" branch="false" />
-                <line number="48" hits="8" branch="false" />
+                <line number="47" hits="8" branch="false" />
+                <line number="48" hits="16" branch="false" />
                 <line number="49" hits="8" branch="false" />
                 <line number="50" hits="8" branch="false" />
-                <line number="51" hits="16" branch="false" />
-                <line number="52" hits="8" branch="false" />
+                <line number="51" hits="8" branch="false" />
+                <line number="52" hits="16" branch="false" />
                 <line number="53" hits="8" branch="false" />
                 <line number="54" hits="8" branch="false" />
-                <line number="55" hits="16" branch="false" />
-                <line number="56" hits="8" branch="false" />
+                <line number="55" hits="8" branch="false" />
+                <line number="56" hits="16" branch="false" />
                 <line number="57" hits="8" branch="false" />
                 <line number="58" hits="8" branch="false" />
-                <line number="60" hits="16" branch="false" />
+                <line number="59" hits="8" branch="false" />
                 <line number="61" hits="16" branch="false" />
                 <line number="62" hits="16" branch="false" />
-                <line number="63" hits="3" branch="false" />
+                <line number="63" hits="16" branch="false" />
                 <line number="64" hits="3" branch="false" />
+                <line number="65" hits="3" branch="false" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="16" hits="3" branch="false" />
             <line number="17" hits="3" branch="false" />
             <line number="18" hits="3" branch="false" />
-            <line number="20" hits="38" branch="false" />
-            <line number="21" hits="16" branch="false" />
+            <line number="19" hits="3" branch="false" />
+            <line number="21" hits="38" branch="false" />
             <line number="22" hits="16" branch="false" />
             <line number="23" hits="16" branch="false" />
-            <line number="25" hits="38" branch="false" />
-            <line number="26" hits="16" branch="false" />
+            <line number="24" hits="16" branch="false" />
+            <line number="26" hits="38" branch="false" />
             <line number="27" hits="16" branch="false" />
             <line number="28" hits="16" branch="false" />
             <line number="29" hits="16" branch="false" />
-            <line number="31" hits="16" branch="false" />
-            <line number="33" hits="16" branch="false" />
-            <line number="35" hits="16" branch="false" />
-            <line number="36" hits="8" branch="false" />
+            <line number="30" hits="16" branch="false" />
+            <line number="32" hits="16" branch="false" />
+            <line number="34" hits="16" branch="false" />
+            <line number="36" hits="16" branch="false" />
             <line number="37" hits="8" branch="false" />
             <line number="38" hits="8" branch="false" />
-            <line number="39" hits="16" branch="false" />
-            <line number="40" hits="8" branch="false" />
+            <line number="39" hits="8" branch="false" />
+            <line number="40" hits="16" branch="false" />
             <line number="41" hits="8" branch="false" />
             <line number="42" hits="8" branch="false" />
-            <line number="43" hits="16" branch="false" />
-            <line number="44" hits="8" branch="false" />
+            <line number="43" hits="8" branch="false" />
+            <line number="44" hits="16" branch="false" />
             <line number="45" hits="8" branch="false" />
             <line number="46" hits="8" branch="false" />
-            <line number="47" hits="16" branch="false" />
-            <line number="48" hits="8" branch="false" />
+            <line number="47" hits="8" branch="false" />
+            <line number="48" hits="16" branch="false" />
             <line number="49" hits="8" branch="false" />
             <line number="50" hits="8" branch="false" />
-            <line number="51" hits="16" branch="false" />
-            <line number="52" hits="8" branch="false" />
+            <line number="51" hits="8" branch="false" />
+            <line number="52" hits="16" branch="false" />
             <line number="53" hits="8" branch="false" />
             <line number="54" hits="8" branch="false" />
-            <line number="55" hits="16" branch="false" />
-            <line number="56" hits="8" branch="false" />
+            <line number="55" hits="8" branch="false" />
+            <line number="56" hits="16" branch="false" />
             <line number="57" hits="8" branch="false" />
             <line number="58" hits="8" branch="false" />
-            <line number="60" hits="16" branch="false" />
+            <line number="59" hits="8" branch="false" />
             <line number="61" hits="16" branch="false" />
             <line number="62" hits="16" branch="false" />
-            <line number="63" hits="3" branch="false" />
+            <line number="63" hits="16" branch="false" />
             <line number="64" hits="3" branch="false" />
+            <line number="65" hits="3" branch="false" />
           </lines>
         </class>
         <class name="Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Utilities.ChunkHandler" filename="C:/git/Unity.DungeonCrawler/DungeonCrawler/Assets/SRC/ProceduralMapGeneration/Utilities/ChunkHandler/FindChunkType.cs" line-rate="1" branch-rate="1" complexity="NaN">
@@ -730,88 +730,6 @@
             <line number="52" hits="8" branch="false" />
             <line number="55" hits="1" branch="false" />
             <line number="56" hits="9" branch="false" />
-          </lines>
-        </class>
-        <class name="Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Utilities.GameObjectCreation" filename="C:/git/Unity.DungeonCrawler/DungeonCrawler/Assets/SRC/ProceduralMapGeneration/Utilities/GameObjectCreation/GameObjectCreation.cs" line-rate="0" branch-rate="1" complexity="2">
-          <methods>
-            <method name="CreateGameObjectTile" signature="(UnityEngine.GameObject, UnityEngine.Material)" line-rate="0" branch-rate="1" complexity="NaN">
-              <lines>
-                <line number="28" hits="0" branch="false" />
-                <line number="29" hits="0" branch="false" />
-                <line number="30" hits="0" branch="false" />
-                <line number="31" hits="0" branch="false" />
-                <line number="32" hits="0" branch="false" />
-                <line number="33" hits="0" branch="false" />
-                <line number="34" hits="0" branch="false" />
-                <line number="35" hits="0" branch="false" />
-                <line number="36" hits="0" branch="false" />
-                <line number="37" hits="0" branch="false" />
-                <line number="38" hits="0" branch="false" />
-                <line number="39" hits="0" branch="false" />
-                <line number="41" hits="0" branch="false" />
-                <line number="42" hits="0" branch="false" />
-              </lines>
-            </method>
-            <method name="GetMesh" signature="()" line-rate="0" branch-rate="1" complexity="1">
-              <lines>
-                <line number="52" hits="0" branch="false" />
-                <line number="53" hits="0" branch="false" />
-                <line number="54" hits="0" branch="false" />
-              </lines>
-            </method>
-            <method name="GameObjectCreation" signature="()" line-rate="0" branch-rate="1" complexity="1">
-              <lines>
-                <line number="8" hits="0" branch="false" />
-              </lines>
-            </method>
-          </methods>
-          <lines>
-            <line number="8" hits="0" branch="false" />
-            <line number="28" hits="0" branch="false" />
-            <line number="29" hits="0" branch="false" />
-            <line number="30" hits="0" branch="false" />
-            <line number="31" hits="0" branch="false" />
-            <line number="32" hits="0" branch="false" />
-            <line number="33" hits="0" branch="false" />
-            <line number="34" hits="0" branch="false" />
-            <line number="35" hits="0" branch="false" />
-            <line number="36" hits="0" branch="false" />
-            <line number="37" hits="0" branch="false" />
-            <line number="38" hits="0" branch="false" />
-            <line number="39" hits="0" branch="false" />
-            <line number="41" hits="0" branch="false" />
-            <line number="42" hits="0" branch="false" />
-            <line number="52" hits="0" branch="false" />
-            <line number="53" hits="0" branch="false" />
-            <line number="54" hits="0" branch="false" />
-          </lines>
-        </class>
-        <class name="Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Utilities.GenericUtilities" filename="C:/git/Unity.DungeonCrawler/DungeonCrawler/Assets/SRC/ProceduralMapGeneration/Utilities/GenericUtilities/GenericUtilities.cs" line-rate="1" branch-rate="1" complexity="NaN">
-          <methods>
-            <method name="NeighborsPosition" signature="(System.Single, UnityEngine.Vector3)" line-rate="1" branch-rate="1" complexity="NaN">
-              <lines>
-                <line number="17" hits="16" branch="false" />
-                <line number="26" hits="16" branch="false" />
-                <line number="27" hits="16" branch="false" />
-                <line number="28" hits="16" branch="false" />
-                <line number="29" hits="16" branch="false" />
-                <line number="30" hits="16" branch="false" />
-                <line number="31" hits="16" branch="false" />
-                <line number="33" hits="16" branch="false" />
-                <line number="34" hits="16" branch="false" />
-              </lines>
-            </method>
-          </methods>
-          <lines>
-            <line number="17" hits="16" branch="false" />
-            <line number="26" hits="16" branch="false" />
-            <line number="27" hits="16" branch="false" />
-            <line number="28" hits="16" branch="false" />
-            <line number="29" hits="16" branch="false" />
-            <line number="30" hits="16" branch="false" />
-            <line number="31" hits="16" branch="false" />
-            <line number="33" hits="16" branch="false" />
-            <line number="34" hits="16" branch="false" />
           </lines>
         </class>
         <class name="Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Utilities.GridCreate" filename="C:/git/Unity.DungeonCrawler/DungeonCrawler/Assets/SRC/ProceduralMapGeneration/Utilities/GridCreate/GridCreate.cs" line-rate="0" branch-rate="1" complexity="NaN">
@@ -938,46 +856,6 @@
             <line number="111" hits="0" branch="false" />
           </lines>
         </class>
-        <class name="Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Utilities.MapBuilder" filename="C:/git/Unity.DungeonCrawler/DungeonCrawler/Assets/SRC/ProceduralMapGeneration/Utilities/MapBuilder/MapBuilder.cs" line-rate="0" branch-rate="1" complexity="1">
-          <methods>
-            <method name="ChooseStartTile" signature="(System.Collections.Generic.List[GameObject])" line-rate="0" branch-rate="1" complexity="NaN">
-              <lines>
-                <line number="21" hits="0" branch="false" />
-                <line number="22" hits="0" branch="false" />
-                <line number="23" hits="0" branch="false" />
-                <line number="24" hits="0" branch="false" />
-                <line number="25" hits="0" branch="false" />
-                <line number="26" hits="0" branch="false" />
-              </lines>
-            </method>
-            <method name="CollapseTile" signature="(System.Collections.Generic.List[GameObject], UnityEngine.GameObject)" line-rate="0" branch-rate="1" complexity="NaN">
-              <lines>
-                <line number="38" hits="0" branch="false" />
-                <line number="39" hits="0" branch="false" />
-                <line number="40" hits="0" branch="false" />
-                <line number="41" hits="0" branch="false" />
-              </lines>
-            </method>
-            <method name="MapBuilder" signature="()" line-rate="0" branch-rate="1" complexity="1">
-              <lines>
-                <line number="10" hits="0" branch="false" />
-              </lines>
-            </method>
-          </methods>
-          <lines>
-            <line number="10" hits="0" branch="false" />
-            <line number="21" hits="0" branch="false" />
-            <line number="22" hits="0" branch="false" />
-            <line number="23" hits="0" branch="false" />
-            <line number="24" hits="0" branch="false" />
-            <line number="25" hits="0" branch="false" />
-            <line number="26" hits="0" branch="false" />
-            <line number="38" hits="0" branch="false" />
-            <line number="39" hits="0" branch="false" />
-            <line number="40" hits="0" branch="false" />
-            <line number="41" hits="0" branch="false" />
-          </lines>
-        </class>
         <class name="Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Utilities.PopulateTilePositions" filename="C:/git/Unity.DungeonCrawler/DungeonCrawler/Assets/SRC/ProceduralMapGeneration/Utilities/PopulateTilePositions/PopulateTilePositions.cs" line-rate="0" branch-rate="1" complexity="NaN">
           <methods>
             <method name="SetChildTile" signature="(Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.ScriptableObjects.DirectionalTilesScriptableObject, System.Collections.Generic.List[GameObject])" line-rate="0" branch-rate="1" complexity="NaN">
@@ -1014,8 +892,36 @@
         </class>
       </classes>
     </package>
-    <package name="SharedAssembly" line-rate="1" branch-rate="1" complexity="2">
+    <package name="SharedAssembly" line-rate="1" branch-rate="1" complexity="3">
       <classes>
+        <class name="Assets.SRC.ProceduralMapGeneration.Assets.SRC.Shared.Assets.SRC.Shared.Utilities.GenericUtilities" filename="C:/git/Unity.DungeonCrawler/DungeonCrawler/Assets/SRC/Shared/Utilities/GenericUtilities.cs" line-rate="1" branch-rate="1" complexity="NaN">
+          <methods>
+            <method name="NeighborsPosition" signature="(System.Single, UnityEngine.Vector3)" line-rate="1" branch-rate="1" complexity="NaN">
+              <lines>
+                <line number="17" hits="16" branch="false" />
+                <line number="26" hits="16" branch="false" />
+                <line number="27" hits="16" branch="false" />
+                <line number="28" hits="16" branch="false" />
+                <line number="29" hits="16" branch="false" />
+                <line number="30" hits="16" branch="false" />
+                <line number="31" hits="16" branch="false" />
+                <line number="33" hits="16" branch="false" />
+                <line number="34" hits="16" branch="false" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="17" hits="16" branch="false" />
+            <line number="26" hits="16" branch="false" />
+            <line number="27" hits="16" branch="false" />
+            <line number="28" hits="16" branch="false" />
+            <line number="29" hits="16" branch="false" />
+            <line number="30" hits="16" branch="false" />
+            <line number="31" hits="16" branch="false" />
+            <line number="33" hits="16" branch="false" />
+            <line number="34" hits="16" branch="false" />
+          </lines>
+        </class>
         <class name="Assets.SRC.ProceduralMapGeneration.Assets.SRC.Shared.Assets.SRC.Shared.Utilities.VectorMath" filename="C:/git/Unity.DungeonCrawler/DungeonCrawler/Assets/SRC/Shared/Utilities/VectorMath.cs" line-rate="1" branch-rate="1" complexity="NaN">
           <methods>
             <method name="CalculateDistanceBetweenTwoVectors" signature="(UnityEngine.Vector3, UnityEngine.Vector3)" line-rate="1" branch-rate="1" complexity="NaN">
