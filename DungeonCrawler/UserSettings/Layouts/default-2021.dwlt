@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 989
   m_ShowMode: 4
-  m_Title: Test Runner
+  m_Title: Project
   m_RootView: {fileID: 12}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -41,7 +41,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 703
+    width: 668
     height: 454
   m_MinSize: {x: 102, y: 121}
   m_MaxSize: {x: 4002, y: 4021}
@@ -69,12 +69,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 485
-    width: 1378
+    width: 1309
     height: 454
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 83
+  controlID: 166
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -92,7 +92,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 626
-    width: 100
+    width: 201
     height: 313
   m_MinSize: {x: 201, y: 221}
   m_MaxSize: {x: 4001, y: 4021}
@@ -118,14 +118,14 @@ MonoBehaviour:
   - {fileID: 4}
   m_Position:
     serializedVersion: 2
-    x: 1820
+    x: 1719
     y: 0
-    width: 100
+    width: 201
     height: 939
   m_MinSize: {x: 100, y: 200}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 76
+  controlID: 104
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -141,9 +141,9 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 703
+    x: 668
     y: 0
-    width: 675
+    width: 641
     height: 454
   m_MinSize: {x: 102, y: 121}
   m_MaxSize: {x: 4002, y: 4021}
@@ -170,14 +170,14 @@ MonoBehaviour:
   - {fileID: 3}
   m_Position:
     serializedVersion: 2
-    x: 221
+    x: 210
     y: 0
-    width: 1378
+    width: 1309
     height: 939
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 129
+  controlID: 165
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -195,7 +195,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 221
+    width: 200
     height: 939
   m_MinSize: {x: 231, y: 271}
   m_MaxSize: {x: 10001, y: 10021}
@@ -229,7 +229,7 @@ MonoBehaviour:
   m_MinSize: {x: 500, y: 200}
   m_MaxSize: {x: 40480, y: 16192}
   vertical: 0
-  controlID: 75
+  controlID: 163
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -247,7 +247,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 100
+    width: 201
     height: 626
   m_MinSize: {x: 275, y: 50}
   m_MaxSize: {x: 4000, y: 4000}
@@ -273,7 +273,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 221
+    width: 210
     height: 939
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
@@ -370,14 +370,14 @@ MonoBehaviour:
   - {fileID: 7}
   m_Position:
     serializedVersion: 2
-    x: 221
+    x: 200
     y: 0
-    width: 1599
+    width: 1519
     height: 939
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 128
+  controlID: 164
 --- !u!114 &16
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -395,7 +395,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1378
+    width: 1309
     height: 485
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
@@ -424,7 +424,7 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1145
+    x: -775
     y: 558
     width: 673
     height: 433
@@ -453,9 +453,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: -1478
-    y: 558
-    width: 701
+    x: -31590
+    y: -31485
+    width: 666
     height: 433
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -463,15 +463,15 @@ MonoBehaviour:
     m_SaveData: []
     m_OverlaysVisible: 1
   m_Spl:
-    ID: 211
-    splitterInitialOffset: 343
+    ID: 210
+    splitterInitialOffset: 315
     currentActiveSplitter: -1
     realSizes:
     - 246
     - 117
     relativeSizes:
-    - 0.67830426
-    - 0.32169574
+    - 0.677686
+    - 0.32231402
     minSizes:
     - 32
     - 32
@@ -488,15 +488,31 @@ MonoBehaviour:
     oldSplitSize: 0
   m_TestTypeToolbarIndex: 1
   m_PlayModeTestListGUI:
-    m_Window: {fileID: 0}
-    m_NewResultList: []
+    m_Window: {fileID: 18}
+    m_NewResultList:
+    - id: 1427
+      uniqueId: '[DungeonCrawler][suite]'
+      name: DungeonCrawler
+      fullName: DungeonCrawler
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 
+      parentUniqueId: 
     m_ResultText: 
     m_ResultStacktrace: 
     m_TestListState:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 
+      m_ExpandedIDs: 5687b8feffffff7f
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -520,7 +536,8 @@ MonoBehaviour:
       NotRunHidden: 0
       m_SearchString: 
       selectedCategoryMask: 0
-      availableCategories: []
+      availableCategories:
+      - Uncategorized
     m_SelectedOption: 0
   m_EditModeTestListGUI:
     m_Window: {fileID: 18}
@@ -529,9 +546,9 @@ MonoBehaviour:
       uniqueId: '[DungeonCrawler][suite]'
       name: DungeonCrawler
       fullName: DungeonCrawler
-      resultStatus: 1
-      duration: 1.4618418
-      messages: 
+      resultStatus: 4
+      duration: 1.5809343
+      messages: One or more child tests were ignored
       output: 
       stacktrace: 
       notRunnable: 0
@@ -545,9 +562,9 @@ MonoBehaviour:
       uniqueId: '[__Tests__.dll][suite]'
       name: __Tests__.dll
       fullName: C:/git/Unity.DungeonCrawler/DungeonCrawler/Library/ScriptAssemblies/__Tests__.dll
-      resultStatus: 1
-      duration: 1.407176
-      messages: 
+      resultStatus: 4
+      duration: 1.5373421
+      messages: One or more child tests were ignored
       output: 
       stacktrace: 
       notRunnable: 0
@@ -561,9 +578,9 @@ MonoBehaviour:
       uniqueId: __Tests__.dll/[Assets][suite]
       name: Assets
       fullName: Assets
-      resultStatus: 1
-      duration: 1.3905109
-      messages: 
+      resultStatus: 4
+      duration: 1.5358527
+      messages: One or more child tests were ignored
       output: 
       stacktrace: 
       notRunnable: 0
@@ -577,9 +594,9 @@ MonoBehaviour:
       uniqueId: __Tests__.dll/Assets/[SRC][suite]
       name: SRC
       fullName: Assets.SRC
-      resultStatus: 1
-      duration: 1.3891305
-      messages: 
+      resultStatus: 4
+      duration: 1.5318778
+      messages: One or more child tests were ignored
       output: 
       stacktrace: 
       notRunnable: 0
@@ -593,9 +610,9 @@ MonoBehaviour:
       uniqueId: __Tests__.dll/Assets/SRC/[ProceduralMapGeneration][suite]
       name: ProceduralMapGeneration
       fullName: Assets.SRC.ProceduralMapGeneration
-      resultStatus: 1
-      duration: 1.3847518
-      messages: 
+      resultStatus: 4
+      duration: 1.5273441
+      messages: One or more child tests were ignored
       output: 
       stacktrace: 
       notRunnable: 0
@@ -610,7 +627,7 @@ MonoBehaviour:
       name: Generic
       fullName: Assets.SRC.ProceduralMapGeneration.Generic
       resultStatus: 1
-      duration: 0.5787734
+      duration: 0.5399853
       messages: 
       output: 
       stacktrace: 
@@ -626,7 +643,7 @@ MonoBehaviour:
       name: Tests
       fullName: Assets.SRC.ProceduralMapGeneration.Generic.Tests
       resultStatus: 1
-      duration: 0.5748667
+      duration: 0.5364888
       messages: 
       output: 
       stacktrace: 
@@ -642,7 +659,7 @@ MonoBehaviour:
       name: Test_Enums+DirectionTypeEnum_Tests
       fullName: Assets.SRC.ProceduralMapGeneration.Generic.Tests.Test_Enums+DirectionTypeEnum_Tests
       resultStatus: 1
-      duration: 0.0840939
+      duration: 0.0652964
       messages: 
       output: 
       stacktrace: 
@@ -658,7 +675,7 @@ MonoBehaviour:
       name: Should_Have_28_Values
       fullName: Assets.SRC.ProceduralMapGeneration.Generic.Tests.Test_Enums+DirectionTypeEnum_Tests.Should_Have_28_Values
       resultStatus: 1
-      duration: 0.0271287
+      duration: 0.0249737
       messages: 
       output: 
       stacktrace: 
@@ -675,7 +692,7 @@ MonoBehaviour:
       name: Should_Have_The_Expected_Values
       fullName: Assets.SRC.ProceduralMapGeneration.Generic.Tests.Test_Enums+DirectionTypeEnum_Tests.Should_Have_The_Expected_Values
       resultStatus: 1
-      duration: 0.0047887
+      duration: 0.0056581
       messages: 
       output: 
       stacktrace: 
@@ -692,7 +709,7 @@ MonoBehaviour:
       name: Test_Enums+GridTypeEnum_Tests
       fullName: Assets.SRC.ProceduralMapGeneration.Generic.Tests.Test_Enums+GridTypeEnum_Tests
       resultStatus: 1
-      duration: 0.0561366
+      duration: 0.0497662
       messages: 
       output: 
       stacktrace: 
@@ -708,7 +725,7 @@ MonoBehaviour:
       name: Should_Have_3_Values
       fullName: Assets.SRC.ProceduralMapGeneration.Generic.Tests.Test_Enums+GridTypeEnum_Tests.Should_Have_3_Values
       resultStatus: 1
-      duration: 0.0002858
+      duration: 0.0005704
       messages: 
       output: 
       stacktrace: 
@@ -725,7 +742,7 @@ MonoBehaviour:
       name: Should_Have_The_Expected_Values
       fullName: Assets.SRC.ProceduralMapGeneration.Generic.Tests.Test_Enums+GridTypeEnum_Tests.Should_Have_The_Expected_Values
       resultStatus: 1
-      duration: 0.0035754
+      duration: 0.0039853
       messages: 
       output: 
       stacktrace: 
@@ -742,7 +759,7 @@ MonoBehaviour:
       name: Test_ScriptableObjects
       fullName: Assets.SRC.ProceduralMapGeneration.Generic.Tests.Test_ScriptableObjects
       resultStatus: 1
-      duration: 0.0486427
+      duration: 0.0453308
       messages: 
       output: 
       stacktrace: 
@@ -758,7 +775,7 @@ MonoBehaviour:
       name: Should_Return_A_List_Of_GameObjects
       fullName: Assets.SRC.ProceduralMapGeneration.Generic.Tests.Test_ScriptableObjects.Should_Return_A_List_Of_GameObjects
       resultStatus: 1
-      duration: 0.0043135
+      duration: 0.007731
       messages: 
       output: 'Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.ScriptableObjects.DirectionalTilesScriptableObject
         must be instantiated using the ScriptableObject.CreateInstance method instead
@@ -779,7 +796,7 @@ MonoBehaviour:
       name: Test_Structs+DirectionIDStructTests
       fullName: Assets.SRC.ProceduralMapGeneration.Generic.Tests.Test_Structs+DirectionIDStructTests
       resultStatus: 1
-      duration: 0.0780135
+      duration: 0.0721074
       messages: 
       output: 
       stacktrace: 
@@ -795,7 +812,7 @@ MonoBehaviour:
       name: Should_Be_Able_To_Set_And_Get_Values
       fullName: Assets.SRC.ProceduralMapGeneration.Generic.Tests.Test_Structs+DirectionIDStructTests.Should_Be_Able_To_Set_And_Get_Values
       resultStatus: 1
-      duration: 0.002536
+      duration: 0.0044284
       messages: 
       output: 
       stacktrace: 
@@ -812,7 +829,7 @@ MonoBehaviour:
       name: Should_Have_Correct_Default_Values
       fullName: Assets.SRC.ProceduralMapGeneration.Generic.Tests.Test_Structs+DirectionIDStructTests.Should_Have_Correct_Default_Values
       resultStatus: 1
-      duration: 0.000816
+      duration: 0.0009456
       messages: 
       output: 
       stacktrace: 
@@ -829,7 +846,7 @@ MonoBehaviour:
       name: Test_Structs+MapBuilderStructTests
       fullName: Assets.SRC.ProceduralMapGeneration.Generic.Tests.Test_Structs+MapBuilderStructTests
       resultStatus: 1
-      duration: 0.138039
+      duration: 0.1519922
       messages: 
       output: 
       stacktrace: 
@@ -845,7 +862,7 @@ MonoBehaviour:
       name: Should_Be_Able_To_Set_And_Get_Values
       fullName: Assets.SRC.ProceduralMapGeneration.Generic.Tests.Test_Structs+MapBuilderStructTests.Should_Be_Able_To_Set_And_Get_Values
       resultStatus: 1
-      duration: 0.0612998
+      duration: 0.0754835
       messages: 
       output: 
       stacktrace: 
@@ -862,7 +879,7 @@ MonoBehaviour:
       name: Should_Have_Correct_Default_Values
       fullName: Assets.SRC.ProceduralMapGeneration.Generic.Tests.Test_Structs+MapBuilderStructTests.Should_Have_Correct_Default_Values
       resultStatus: 1
-      duration: 0.0018743
+      duration: 0.0029824
       messages: 
       output: 
       stacktrace: 
@@ -879,7 +896,7 @@ MonoBehaviour:
       name: Test_Structs+NeighborStructTests
       fullName: Assets.SRC.ProceduralMapGeneration.Generic.Tests.Test_Structs+NeighborStructTests
       resultStatus: 1
-      duration: 0.0646193
+      duration: 0.0554724
       messages: 
       output: 
       stacktrace: 
@@ -895,7 +912,7 @@ MonoBehaviour:
       name: Should_Be_Able_To_Set_And_Get_Values
       fullName: Assets.SRC.ProceduralMapGeneration.Generic.Tests.Test_Structs+NeighborStructTests.Should_Be_Able_To_Set_And_Get_Values
       resultStatus: 1
-      duration: 0.0006582
+      duration: 0.0007449
       messages: 
       output: 
       stacktrace: 
@@ -912,7 +929,7 @@ MonoBehaviour:
       name: Should_Have_Correct_Default_Values
       fullName: Assets.SRC.ProceduralMapGeneration.Generic.Tests.Test_Structs+NeighborStructTests.Should_Have_Correct_Default_Values
       resultStatus: 1
-      duration: 0.0003195
+      duration: 0.0003685
       messages: 
       output: 
       stacktrace: 
@@ -929,7 +946,7 @@ MonoBehaviour:
       name: Test_VectorMath
       fullName: Assets.SRC.ProceduralMapGeneration.Generic.Tests.Test_VectorMath
       resultStatus: 1
-      duration: 0.0511299
+      duration: 0.0480887
       messages: 
       output: 
       stacktrace: 
@@ -945,7 +962,7 @@ MonoBehaviour:
       name: CalculateDistanceBetweenTwoVectors_ShouldReturnTheCorrectDistance
       fullName: Assets.SRC.ProceduralMapGeneration.Generic.Tests.Test_VectorMath.CalculateDistanceBetweenTwoVectors_ShouldReturnTheCorrectDistance
       resultStatus: 1
-      duration: 0.0036817
+      duration: 0.0040199
       messages: 
       output: 
       stacktrace: 
@@ -962,7 +979,7 @@ MonoBehaviour:
       name: Tests_Exceptions
       fullName: Assets.SRC.ProceduralMapGeneration.Generic.Tests.Tests_Exceptions
       resultStatus: 1
-      duration: 0.0475123
+      duration: 0.0427338
       messages: 
       output: 
       stacktrace: 
@@ -978,7 +995,7 @@ MonoBehaviour:
       name: NotImplementedException_ShouldThrowNotImplementedException
       fullName: Assets.SRC.ProceduralMapGeneration.Generic.Tests.Tests_Exceptions.NotImplementedException_ShouldThrowNotImplementedException
       resultStatus: 1
-      duration: 0.003108
+      duration: 0.0006226
       messages: 
       output: 
       stacktrace: 
@@ -995,7 +1012,7 @@ MonoBehaviour:
       name: Noise
       fullName: Assets.SRC.ProceduralMapGeneration.Noise
       resultStatus: 1
-      duration: 0.0521573
+      duration: 0.0486559
       messages: 
       output: 
       stacktrace: 
@@ -1011,7 +1028,7 @@ MonoBehaviour:
       name: Tests
       fullName: Assets.SRC.ProceduralMapGeneration.Noise.Tests
       resultStatus: 1
-      duration: 0.0429556
+      duration: 0.0400236
       messages: 
       output: 
       stacktrace: 
@@ -1027,7 +1044,7 @@ MonoBehaviour:
       name: Test_PerlinNoiseGenerator
       fullName: Assets.SRC.ProceduralMapGeneration.Noise.Tests.Test_PerlinNoiseGenerator
       resultStatus: 1
-      duration: 0.0392037
+      duration: 0.0369417
       messages: 
       output: 
       stacktrace: 
@@ -1043,7 +1060,7 @@ MonoBehaviour:
       name: GeneratePerlinNoise2DTexture_Test
       fullName: Assets.SRC.ProceduralMapGeneration.Noise.Tests.Test_PerlinNoiseGenerator.GeneratePerlinNoise2DTexture_Test
       resultStatus: 1
-      duration: 0.0028369
+      duration: 0.0032781
       messages: 
       output: 
       stacktrace: 
@@ -1059,9 +1076,9 @@ MonoBehaviour:
       uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/[PathFinding][suite]
       name: PathFinding
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding
-      resultStatus: 1
-      duration: 0.7499199
-      messages: 
+      resultStatus: 4
+      duration: 0.9338563
+      messages: One or more child tests were ignored
       output: 
       stacktrace: 
       notRunnable: 0
@@ -1075,9 +1092,9 @@ MonoBehaviour:
       uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/PathFinding/[__Tests__][Assets.SRC.ProceduralMapGeneration.PathFinding.Tests][suite]
       name: Tests
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests
-      resultStatus: 1
-      duration: 0.7353448
-      messages: 
+      resultStatus: 4
+      duration: 0.9223477
+      messages: One or more child tests were ignored
       output: 
       stacktrace: 
       notRunnable: 0
@@ -1092,7 +1109,7 @@ MonoBehaviour:
       name: Test_ChunkHandler+AssignChunkTypesTests
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_ChunkHandler+AssignChunkTypesTests
       resultStatus: 1
-      duration: 0.0881116
+      duration: 0.0729757
       messages: 
       output: 
       stacktrace: 
@@ -1108,7 +1125,7 @@ MonoBehaviour:
       name: TestAssignChunkTypes_WithInvalidInput_ReturnsEmptyList
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_ChunkHandler+AssignChunkTypesTests.TestAssignChunkTypes_WithInvalidInput_ReturnsEmptyList
       resultStatus: 1
-      duration: 0.0025013
+      duration: 0.0033337
       messages: 
       output: 
       stacktrace: 
@@ -1125,7 +1142,7 @@ MonoBehaviour:
       name: TestAssignChunkTypes_WithValidInput_AssignsCorrectTypes
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_ChunkHandler+AssignChunkTypesTests.TestAssignChunkTypes_WithValidInput_AssignsCorrectTypes
       resultStatus: 1
-      duration: 0.0049279
+      duration: 0.0089589
       messages: 
       output: 
       stacktrace: 
@@ -1142,7 +1159,7 @@ MonoBehaviour:
       name: Test_ChunkHandler+FindChunkNeigborsTests
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_ChunkHandler+FindChunkNeigborsTests
       resultStatus: 1
-      duration: 0.0875349
+      duration: 0.0876801
       messages: 
       output: 
       stacktrace: 
@@ -1158,7 +1175,7 @@ MonoBehaviour:
       name: TestFindChunkNeigbors_WithInvalidInput_ReturnsEmptyList
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_ChunkHandler+FindChunkNeigborsTests.TestFindChunkNeigbors_WithInvalidInput_ReturnsEmptyList
       resultStatus: 1
-      duration: 0.0002424
+      duration: 0.0002995
       messages: 
       output: 
       stacktrace: 
@@ -1175,7 +1192,7 @@ MonoBehaviour:
       name: TestFindChunkNeigbors_WithValidInput_ReturnsCorrectNeighbors
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_ChunkHandler+FindChunkNeigborsTests.TestFindChunkNeigbors_WithValidInput_ReturnsCorrectNeighbors
       resultStatus: 1
-      duration: 0.0092915
+      duration: 0.0142019
       messages: 
       output: 
       stacktrace: 
@@ -1192,7 +1209,7 @@ MonoBehaviour:
       name: Test_ChunkHandler+GenericTestsForChunkHandle
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_ChunkHandler+GenericTestsForChunkHandle
       resultStatus: 1
-      duration: 0.1039937
+      duration: 0.0913269
       messages: 
       output: 
       stacktrace: 
@@ -1208,7 +1225,7 @@ MonoBehaviour:
       name: Error_Error
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_ChunkHandler+GenericTestsForChunkHandle.Error_Error
       resultStatus: 1
-      duration: 0.0144683
+      duration: 0.0178909
       messages: 
       output: 
       stacktrace: 
@@ -1225,7 +1242,7 @@ MonoBehaviour:
       name: Return_Collapsed
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_ChunkHandler+GenericTestsForChunkHandle.Return_Collapsed
       resultStatus: 1
-      duration: 0.0039666
+      duration: 0.0032102
       messages: 
       output: 
       stacktrace: 
@@ -1242,7 +1259,7 @@ MonoBehaviour:
       name: Test_NewNode
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewNode
       resultStatus: 1
-      duration: 0.1317708
+      duration: 0.1167107
       messages: 
       output: 
       stacktrace: 
@@ -1258,7 +1275,7 @@ MonoBehaviour:
       name: Should_Create_A_New_Node_With_A_Position
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewNode.Should_Create_A_New_Node_With_A_Position
       resultStatus: 1
-      duration: 0.0020498
+      duration: 0.0051166
       messages: 
       output: 
       stacktrace: 
@@ -1275,7 +1292,7 @@ MonoBehaviour:
       name: Should_Have_A_Default_Cost_Of_Zero
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewNode.Should_Have_A_Default_Cost_Of_Zero
       resultStatus: 1
-      duration: 0.0002865
+      duration: 0.0003538
       messages: 
       output: 
       stacktrace: 
@@ -1292,7 +1309,7 @@ MonoBehaviour:
       name: Should_Have_A_Default_Heuristic_Cost_Of_Zero
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewNode.Should_Have_A_Default_Heuristic_Cost_Of_Zero
       resultStatus: 1
-      duration: 0.0002273
+      duration: 0.000289
       messages: 
       output: 
       stacktrace: 
@@ -1309,7 +1326,7 @@ MonoBehaviour:
       name: Should_Not_Be_Closed_ByDefault
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewNode.Should_Not_Be_Closed_ByDefault
       resultStatus: 1
-      duration: 0.0002404
+      duration: 0.0002807
       messages: 
       output: 
       stacktrace: 
@@ -1326,7 +1343,7 @@ MonoBehaviour:
       name: Should_Not_Have_A_LastNode_ByDefault
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewNode.Should_Not_Have_A_LastNode_ByDefault
       resultStatus: 1
-      duration: 0.0002709
+      duration: 0.000291
       messages: 
       output: 
       stacktrace: 
@@ -1343,7 +1360,7 @@ MonoBehaviour:
       name: Should_Not_Have_An_Empty_List_Of_Neighbors_ByDefault
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewNode.Should_Not_Have_An_Empty_List_Of_Neighbors_ByDefault
       resultStatus: 1
-      duration: 0.0002742
+      duration: 0.0003844
       messages: 
       output: 
       stacktrace: 
@@ -1355,12 +1372,146 @@ MonoBehaviour:
       - Uncategorized
       parentId: 1001
       parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/PathFinding/Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewNode][suite]
+    - id: 1038
+      uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/PathFinding/Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+ConvertPathToPositionsTests][suite]
+      name: Test_NewPathFinding+ConvertPathToPositionsTests
+      fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+ConvertPathToPositionsTests
+      resultStatus: 1
+      duration: 0.1028572
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1071
+      parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/PathFinding/[__Tests__][Assets.SRC.ProceduralMapGeneration.PathFinding.Tests][suite]
+    - id: 1040
+      uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/PathFinding/Tests/Test_NewPathFinding+ConvertPathToPositionsTests/[__Tests__][Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+ConvertPathToPositionsTests.TestConvertPathToPositions_WithEmptyGeneratedList_ReturnsEmptyList]
+      name: TestConvertPathToPositions_WithEmptyGeneratedList_ReturnsEmptyList
+      fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+ConvertPathToPositionsTests.TestConvertPathToPositions_WithEmptyGeneratedList_ReturnsEmptyList
+      resultStatus: 1
+      duration: 0.0006452
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1038
+      parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/PathFinding/Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+ConvertPathToPositionsTests][suite]
+    - id: 1041
+      uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/PathFinding/Tests/Test_NewPathFinding+ConvertPathToPositionsTests/[__Tests__][Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+ConvertPathToPositionsTests.TestConvertPathToPositions_WithGeneratedListWithNoPositions_ReturnsEmptyList]
+      name: TestConvertPathToPositions_WithGeneratedListWithNoPositions_ReturnsEmptyList
+      fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+ConvertPathToPositionsTests.TestConvertPathToPositions_WithGeneratedListWithNoPositions_ReturnsEmptyList
+      resultStatus: 1
+      duration: 0.0003914
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1038
+      parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/PathFinding/Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+ConvertPathToPositionsTests][suite]
+    - id: 1039
+      uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/PathFinding/Tests/Test_NewPathFinding+ConvertPathToPositionsTests/[__Tests__][Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+ConvertPathToPositionsTests.TestConvertPathToPositions_WithValidGeneratedList_ReturnsPositions]
+      name: TestConvertPathToPositions_WithValidGeneratedList_ReturnsPositions
+      fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+ConvertPathToPositionsTests.TestConvertPathToPositions_WithValidGeneratedList_ReturnsPositions
+      resultStatus: 1
+      duration: 0.0021982
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1038
+      parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/PathFinding/Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+ConvertPathToPositionsTests][suite]
+    - id: 1030
+      uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/PathFinding/Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+FindActiveNodeTests][suite]
+      name: Test_NewPathFinding+FindActiveNodeTests
+      fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+FindActiveNodeTests
+      resultStatus: 4
+      duration: 0.0154226
+      messages: One or more child tests were ignored
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1071
+      parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/PathFinding/[__Tests__][Assets.SRC.ProceduralMapGeneration.PathFinding.Tests][suite]
+    - id: 1033
+      uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/PathFinding/Tests/Test_NewPathFinding+FindActiveNodeTests/[__Tests__][Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+FindActiveNodeTests.TestFindActiveNode_WithActiveNodeWithNeighborsButNoValidEndPos_ReturnsNull]
+      name: TestFindActiveNode_WithActiveNodeWithNeighborsButNoValidEndPos_ReturnsNull
+      fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+FindActiveNodeTests.TestFindActiveNode_WithActiveNodeWithNeighborsButNoValidEndPos_ReturnsNull
+      resultStatus: 0
+      duration: 0
+      messages: Linq Error resulting in a null ref
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 1
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1030
+      parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/PathFinding/Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+FindActiveNodeTests][suite]
+    - id: 1032
+      uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/PathFinding/Tests/Test_NewPathFinding+FindActiveNodeTests/[__Tests__][Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+FindActiveNodeTests.TestFindActiveNode_WithActiveNodeWithNoNeighbors_ReturnsNull]
+      name: TestFindActiveNode_WithActiveNodeWithNoNeighbors_ReturnsNull
+      fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+FindActiveNodeTests.TestFindActiveNode_WithActiveNodeWithNoNeighbors_ReturnsNull
+      resultStatus: 0
+      duration: 0
+      messages: Linq Error resulting in a null ref
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 1
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1030
+      parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/PathFinding/Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+FindActiveNodeTests][suite]
+    - id: 1031
+      uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/PathFinding/Tests/Test_NewPathFinding+FindActiveNodeTests/[__Tests__][Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+FindActiveNodeTests.TestFindActiveNode_WithValidActiveNodeAndEndPos_ReturnsActiveNode]
+      name: TestFindActiveNode_WithValidActiveNodeAndEndPos_ReturnsActiveNode
+      fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+FindActiveNodeTests.TestFindActiveNode_WithValidActiveNodeAndEndPos_ReturnsActiveNode
+      resultStatus: 0
+      duration: 0
+      messages: Linq Error resulting in a null ref
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 1
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1030
+      parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/PathFinding/Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+FindActiveNodeTests][suite]
     - id: 1015
       uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/PathFinding/Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+FindEnds][suite]
       name: Test_NewPathFinding+FindEnds
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+FindEnds
       resultStatus: 1
-      duration: 0.1479403
+      duration: 0.1385137
       messages: 
       output: 
       stacktrace: 
@@ -1376,7 +1527,7 @@ MonoBehaviour:
       name: Should_Return_A_List_Of_Two_Different_Vector3s_When_Given_A_List_Of_Vector3s
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+FindEnds.Should_Return_A_List_Of_Two_Different_Vector3s_When_Given_A_List_Of_Vector3s
       resultStatus: 1
-      duration: 0.0670911
+      duration: 0.0700571
       messages: 
       output: 
       stacktrace: 
@@ -1393,7 +1544,7 @@ MonoBehaviour:
       name: Should_Return_A_List_Of_Two_Vector3s_When_Given_A_List_Of_Vector3s
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+FindEnds.Should_Return_A_List_Of_Two_Vector3s_When_Given_A_List_Of_Vector3s
       resultStatus: 1
-      duration: 0.0003425
+      duration: 0.0005303
       messages: 
       output: 
       stacktrace: 
@@ -1410,7 +1561,7 @@ MonoBehaviour:
       name: Test_NewPathFinding+Findpath
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+Findpath
       resultStatus: 1
-      duration: 0.1614667
+      duration: 0.1397645
       messages: 
       output: 
       stacktrace: 
@@ -1426,7 +1577,7 @@ MonoBehaviour:
       name: EmptyGrid
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+Findpath.EmptyGrid
       resultStatus: 1
-      duration: 0.0016979
+      duration: 0.0019737
       messages: 
       output: 
       stacktrace: 
@@ -1443,7 +1594,7 @@ MonoBehaviour:
       name: EmptyPositions
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+Findpath.EmptyPositions
       resultStatus: 1
-      duration: 0.0016455
+      duration: 0.0016671
       messages: 
       output: 
       stacktrace: 
@@ -1460,7 +1611,7 @@ MonoBehaviour:
       name: NullGrid
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+Findpath.NullGrid
       resultStatus: 1
-      duration: 0.0014979
+      duration: 0.0014985
       messages: 
       output: 
       stacktrace: 
@@ -1477,7 +1628,7 @@ MonoBehaviour:
       name: NullPositions
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+Findpath.NullPositions
       resultStatus: 1
-      duration: 0.0019269
+      duration: 0.0016739
       messages: 
       output: 
       stacktrace: 
@@ -1489,13 +1640,181 @@ MonoBehaviour:
       - Uncategorized
       parentId: 1018
       parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/PathFinding/Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+Findpath][suite]
-    m_ResultText: Error_Error (0,014s)
+    - id: 1024
+      uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/PathFinding/Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+FindpathTests][suite]
+      name: Test_NewPathFinding+FindpathTests
+      fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+FindpathTests
+      resultStatus: 4
+      duration: 0.137869
+      messages: One or more child tests were ignored
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1059
+      parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/PathFinding/[__Tests__][Assets.SRC.ProceduralMapGeneration.PathFinding.Tests][suite]
+    - id: 1027
+      uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/PathFinding/Tests/Test_NewPathFinding+FindpathTests/[__Tests__][Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+FindpathTests.TestFindpath_WithEmptyGrid_ThrowsArgumentNullException]
+      name: TestFindpath_WithEmptyGrid_ThrowsArgumentNullException
+      fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+FindpathTests.TestFindpath_WithEmptyGrid_ThrowsArgumentNullException
+      resultStatus: 1
+      duration: 0.0005096
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1024
+      parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/PathFinding/Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+FindpathTests][suite]
+    - id: 1029
+      uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/PathFinding/Tests/Test_NewPathFinding+FindpathTests/[__Tests__][Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+FindpathTests.TestFindpath_WithEmptyPositions_ThrowsArgumentNullException]
+      name: TestFindpath_WithEmptyPositions_ThrowsArgumentNullException
+      fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+FindpathTests.TestFindpath_WithEmptyPositions_ThrowsArgumentNullException
+      resultStatus: 1
+      duration: 0.0005073
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1024
+      parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/PathFinding/Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+FindpathTests][suite]
+    - id: 1026
+      uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/PathFinding/Tests/Test_NewPathFinding+FindpathTests/[__Tests__][Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+FindpathTests.TestFindpath_WithNullGrid_ThrowsArgumentNullException]
+      name: TestFindpath_WithNullGrid_ThrowsArgumentNullException
+      fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+FindpathTests.TestFindpath_WithNullGrid_ThrowsArgumentNullException
+      resultStatus: 1
+      duration: 0.0001592
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1024
+      parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/PathFinding/Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+FindpathTests][suite]
+    - id: 1028
+      uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/PathFinding/Tests/Test_NewPathFinding+FindpathTests/[__Tests__][Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+FindpathTests.TestFindpath_WithNullPositions_ThrowsArgumentNullException]
+      name: TestFindpath_WithNullPositions_ThrowsArgumentNullException
+      fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+FindpathTests.TestFindpath_WithNullPositions_ThrowsArgumentNullException
+      resultStatus: 1
+      duration: 0.0006656
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1024
+      parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/PathFinding/Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+FindpathTests][suite]
+    - id: 1025
+      uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/PathFinding/Tests/Test_NewPathFinding+FindpathTests/[__Tests__][Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+FindpathTests.TestFindpath_WithValidGridAndPositions_ReturnsPath]
+      name: TestFindpath_WithValidGridAndPositions_ReturnsPath
+      fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+FindpathTests.TestFindpath_WithValidGridAndPositions_ReturnsPath
+      resultStatus: 0
+      duration: 0
+      messages: Linq Error resulting in a null ref
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 1
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1024
+      parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/PathFinding/Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+FindpathTests][suite]
+    - id: 1034
+      uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/PathFinding/Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+GeneratePathTests][suite]
+      name: Test_NewPathFinding+GeneratePathTests
+      fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+GeneratePathTests
+      resultStatus: 4
+      duration: 0.0100082
+      messages: One or more child tests were ignored
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1071
+      parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/PathFinding/[__Tests__][Assets.SRC.ProceduralMapGeneration.PathFinding.Tests][suite]
+    - id: 1036
+      uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/PathFinding/Tests/Test_NewPathFinding+GeneratePathTests/[__Tests__][Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+GeneratePathTests.TestGeneratePath_WithActiveNodeWithNoLastNode_ReturnsEmptyList]
+      name: TestGeneratePath_WithActiveNodeWithNoLastNode_ReturnsEmptyList
+      fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+GeneratePathTests.TestGeneratePath_WithActiveNodeWithNoLastNode_ReturnsEmptyList
+      resultStatus: 0
+      duration: 0
+      messages: Linq Error resulting in a null ref
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 1
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1034
+      parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/PathFinding/Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+GeneratePathTests][suite]
+    - id: 1037
+      uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/PathFinding/Tests/Test_NewPathFinding+GeneratePathTests/[__Tests__][Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+GeneratePathTests.TestGeneratePath_WithActiveNodeWithNoValidStartPos_ReturnsEmptyList]
+      name: TestGeneratePath_WithActiveNodeWithNoValidStartPos_ReturnsEmptyList
+      fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+GeneratePathTests.TestGeneratePath_WithActiveNodeWithNoValidStartPos_ReturnsEmptyList
+      resultStatus: 0
+      duration: 0
+      messages: Linq Error resulting in a null ref
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 1
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1034
+      parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/PathFinding/Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+GeneratePathTests][suite]
+    - id: 1035
+      uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/PathFinding/Tests/Test_NewPathFinding+GeneratePathTests/[__Tests__][Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+GeneratePathTests.TestGeneratePath_WithValidActiveNodeAndStartPos_ReturnsPath]
+      name: TestGeneratePath_WithValidActiveNodeAndStartPos_ReturnsPath
+      fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+GeneratePathTests.TestGeneratePath_WithValidActiveNodeAndStartPos_ReturnsPath
+      resultStatus: 0
+      duration: 0
+      messages: Linq Error resulting in a null ref
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 1
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1034
+      parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/PathFinding/Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+GeneratePathTests][suite]
+    m_ResultText: TestFindpath_WithNullGrid_ThrowsArgumentNullException (0,000s)
     m_ResultStacktrace: 
     m_TestListState:
-      scrollPos: {x: 0, y: 158}
-      m_SelectedIDs: b86710d0
-      m_LastClickedID: -804231240
-      m_ExpandedIDs: 15285091d1848d9ddf1dbaae845235b5398827b85576f9e5ce2134fbbaf95efe5687b8fe09d63b0bdfb8b40f96ac25134e5ea5155a94ed15a59567220ae4192976c50433ba5e4c3f1123fa4d2bfeee4fffffff7f
+      scrollPos: {x: 0, y: 398}
+      m_SelectedIDs: 123ac07b
+      m_LastClickedID: 2076195346
+      m_ExpandedIDs: 15285091d1848d9ddf1dbaae845235b5398827b85576f9e5ce2134fbbaf95efe5687b8fe09d63b0b0b64950cdfb8b40f96ac25134e5ea5155a94ed15a59567220ae4192976c50433ba5e4c3f1123fa4d4c02844f2bfeee4f41651f50ffffff7f
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1542,9 +1861,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: -1920
-    y: 73
-    width: 220
+    x: -32000
+    y: -31970
+    width: 199
     height: 918
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -1683,9 +2002,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: -100
-    y: 73
-    width: 99
+    x: -30281
+    y: -31970
+    width: 200
     height: 605
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -1726,9 +2045,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: -1699
-    y: 73
-    width: 219
+    x: -31800
+    y: -31970
+    width: 208
     height: 918
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -1740,7 +2059,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 60e5ffffacf4ffff20fbffff
+      m_ExpandedIDs: 0e23fffff024ffff7a2dffff1032ffff5442ffffb843ffffb246ffff5e4cffff9052ffff6e57fffffe5bffff3c60ffffe264ffff9c67ffff3c73ffff2077ffff767bffffdc80ffff0e84ffff2089ffff908cffff0690ffff3893ffff5e95ffff6099ffff0a9dffff6e9effff829fffff86a3ffff06a9fffff0adfffff4bcffffdabfffffc8c3ffff6ec5fffff4ebffff9eeeffff08f0ffff4ef3ffff1af6ffff20fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1785,9 +2104,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: -1478
-    y: 73
-    width: 1376
+    x: -31590
+    y: -31970
+    width: 1307
     height: 464
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -1864,8 +2183,8 @@ MonoBehaviour:
       floating: 0
       collapsed: 0
       displayed: 1
-      snapOffset: {x: 67.5, y: -54}
-      snapOffsetDelta: {x: 0, y: -69}
+      snapOffset: {x: 67.5, y: -123}
+      snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 2
       id: Orientation
       index: 0
@@ -2024,9 +2343,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -13.979244, y: -4.739873, z: -25.050674}
+    m_Target: {x: -40.476482, y: -15.77635, z: 2.5281134}
     speed: 2
-    m_Value: {x: -13.979244, y: -4.739873, z: -25.050674}
+    m_Value: {x: -40.476482, y: -15.77635, z: 2.5281134}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -2073,13 +2392,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.10142642, y: -0.85793465, z: 0.18548878, w: -0.46841788}
+    m_Target: {x: 0.13911897, y: -0.8069476, z: 0.21043524, w: 0.5341901}
     speed: 2
-    m_Value: {x: -0.10141829, y: -0.8578658, z: 0.18547389, w: -0.4683803}
+    m_Value: {x: 0.13910781, y: -0.80688286, z: 0.21041836, w: 0.53414726}
   m_Size:
-    m_Target: 49.5917
+    m_Target: 25.198278
     speed: 2
-    m_Value: 49.5917
+    m_Value: 25.198278
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -2125,9 +2444,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: -100
-    y: 699
-    width: 99
+    x: -30281
+    y: -31344
+    width: 200
     height: 292
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -2140,7 +2459,7 @@ MonoBehaviour:
   m_ShowGizmos: 0
   m_TargetDisplay: 0
   m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
-  m_TargetSize: {x: 99, y: 271}
+  m_TargetSize: {x: 200, y: 271}
   m_TextureFilterMode: 0
   m_TextureHideFlags: 61
   m_RenderIMGUI: 1
@@ -2155,8 +2474,8 @@ MonoBehaviour:
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
-    m_HBaseRangeMin: -49.5
-    m_HBaseRangeMax: 49.5
+    m_HBaseRangeMin: -100
+    m_HBaseRangeMax: 100
     m_VBaseRangeMin: -135.5
     m_VBaseRangeMax: 135.5
     m_HAllowExceedBaseRangeMin: 1
@@ -2176,23 +2495,23 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 21
-      width: 99
+      width: 200
       height: 271
     m_Scale: {x: 1, y: 1}
-    m_Translation: {x: 49.5, y: 135.5}
+    m_Translation: {x: 100, y: 135.5}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -49.5
+      x: -100
       y: -135.5
-      width: 99
+      width: 200
       height: 271
     m_MinimalGUI: 1
   m_defaultScale: 1
-  m_LastWindowPixelSize: {x: 99, y: 292}
+  m_LastWindowPixelSize: {x: 200, y: 292}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000000
@@ -2219,9 +2538,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: -775
-    y: 558
-    width: 673
+    x: -30922
+    y: -31485
+    width: 639
     height: 433
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:

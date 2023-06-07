@@ -1,20 +1,20 @@
 ﻿TN:
 SF:C:/git/Unity.DungeonCrawler/DungeonCrawler/Assets/SRC/ProceduralMapGeneration/PathFinding/NewPathFinding/FindEnds.cs
 FN:27,FindEnds(UnityEngine.Vector3[])
-FNDA:3,FindEnds(UnityEngine.Vector3[])
+FNDA:4,FindEnds(UnityEngine.Vector3[])
 FNF:1
 FNH:1
 BRF:0
 BRH:0
-DA:27,3
-DA:30,10
-DA:31,10
-DA:36,20
-DA:37,3
-DA:38,3
-DA:43,3
-DA:44,3
-DA:45,3
+DA:27,4
+DA:30,11
+DA:31,11
+DA:36,22
+DA:37,4
+DA:38,4
+DA:43,4
+DA:44,4
+DA:45,4
 LH:9
 LF:9
 end_of_record
@@ -23,17 +23,17 @@ FN:31,Findpath(System.Collections.Generic.List[NewNodeModel], UnityEngine.Vector
 FN:50,FindActiveNode(Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.PathFinding.NewNodeModel, Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.PathFinding.NewNodeModel)
 FN:61,GeneratePath(Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.PathFinding.NewNodeModel, Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.PathFinding.NewNodeModel)
 FN:73,ConvertPathToPositions(System.Collections.Generic.List[NewNodeModel])
-FNDA:4,Findpath(System.Collections.Generic.List[NewNodeModel], UnityEngine.Vector3[])
+FNDA:8,Findpath(System.Collections.Generic.List[NewNodeModel], UnityEngine.Vector3[])
 FNDA:0,FindActiveNode(Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.PathFinding.NewNodeModel, Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.PathFinding.NewNodeModel)
 FNDA:0,GeneratePath(Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.PathFinding.NewNodeModel, Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.PathFinding.NewNodeModel)
-FNDA:0,ConvertPathToPositions(System.Collections.Generic.List[NewNodeModel])
+FNDA:3,ConvertPathToPositions(System.Collections.Generic.List[NewNodeModel])
 FNF:4
-FNH:1
+FNH:2
 BRF:0
 BRH:0
-DA:31,4
-DA:32,8
-DA:33,6
+DA:31,8
+DA:32,16
+DA:33,12
 DA:35,0
 DA:36,0
 DA:37,0
@@ -53,6 +53,7 @@ DA:53,0
 DA:54,0
 DA:55,0
 DA:56,0
+DA:57,0
 DA:58,0
 DA:59,0
 DA:61,0
@@ -65,16 +66,16 @@ DA:68,0
 DA:69,0
 DA:70,0
 DA:71,0
-DA:73,0
-DA:74,0
-DA:76,0
-DA:77,0
-DA:78,0
-DA:79,0
-DA:81,0
-DA:82,0
-LH:3
-LF:42
+DA:73,3
+DA:74,3
+DA:76,19
+DA:77,5
+DA:78,5
+DA:79,5
+DA:81,3
+DA:82,3
+LH:11
+LF:43
 end_of_record
 SF:C:/git/Unity.DungeonCrawler/DungeonCrawler/Assets/SRC/ProceduralMapGeneration/PathFinding/NewPathFinding/NodeGridCreator.cs
 FN:31,NodeGridCreator(UnityEngine.Vector3[], UnityEngine.Vector3[], System.Single)

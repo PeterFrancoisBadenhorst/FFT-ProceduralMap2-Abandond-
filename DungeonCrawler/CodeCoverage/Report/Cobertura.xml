@@ -1,45 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
-<coverage line-rate="0.376947040498442" branch-rate="1" lines-covered="121" lines-valid="321" branches-covered="0" branches-valid="0" complexity="91" version="0" timestamp="1685987308">
+<coverage line-rate="0.400621118012422" branch-rate="1" lines-covered="129" lines-valid="322" branches-covered="0" branches-valid="0" complexity="92" version="0" timestamp="1685994338">
   <sources />
   <packages>
-    <package name="ProceduralMapGenerationAssembly" line-rate="0.352750809061489" branch-rate="1" complexity="88">
+    <package name="ProceduralMapGenerationAssembly" line-rate="0.37741935483871" branch-rate="1" complexity="89">
       <classes>
         <class name="Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.PathFinding.NewPathFinding" filename="C:/git/Unity.DungeonCrawler/DungeonCrawler/Assets/SRC/ProceduralMapGeneration/PathFinding/NewPathFinding/FindEnds.cs" line-rate="1" branch-rate="1" complexity="NaN">
           <methods>
             <method name="FindEnds" signature="(UnityEngine.Vector3[])" line-rate="1" branch-rate="1" complexity="NaN">
               <lines>
-                <line number="27" hits="3" branch="false" />
-                <line number="30" hits="10" branch="false" />
-                <line number="31" hits="10" branch="false" />
-                <line number="36" hits="20" branch="false" />
-                <line number="37" hits="3" branch="false" />
-                <line number="38" hits="3" branch="false" />
-                <line number="43" hits="3" branch="false" />
-                <line number="44" hits="3" branch="false" />
-                <line number="45" hits="3" branch="false" />
+                <line number="27" hits="4" branch="false" />
+                <line number="30" hits="11" branch="false" />
+                <line number="31" hits="11" branch="false" />
+                <line number="36" hits="22" branch="false" />
+                <line number="37" hits="4" branch="false" />
+                <line number="38" hits="4" branch="false" />
+                <line number="43" hits="4" branch="false" />
+                <line number="44" hits="4" branch="false" />
+                <line number="45" hits="4" branch="false" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="27" hits="3" branch="false" />
-            <line number="30" hits="10" branch="false" />
-            <line number="31" hits="10" branch="false" />
-            <line number="36" hits="20" branch="false" />
-            <line number="37" hits="3" branch="false" />
-            <line number="38" hits="3" branch="false" />
-            <line number="43" hits="3" branch="false" />
-            <line number="44" hits="3" branch="false" />
-            <line number="45" hits="3" branch="false" />
+            <line number="27" hits="4" branch="false" />
+            <line number="30" hits="11" branch="false" />
+            <line number="31" hits="11" branch="false" />
+            <line number="36" hits="22" branch="false" />
+            <line number="37" hits="4" branch="false" />
+            <line number="38" hits="4" branch="false" />
+            <line number="43" hits="4" branch="false" />
+            <line number="44" hits="4" branch="false" />
+            <line number="45" hits="4" branch="false" />
           </lines>
         </class>
-        <class name="Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.PathFinding.NewPathFinding" filename="C:/git/Unity.DungeonCrawler/DungeonCrawler/Assets/SRC/ProceduralMapGeneration/PathFinding/NewPathFinding/Findpath.cs" line-rate="0.0714285714285714" branch-rate="1" complexity="NaN">
+        <class name="Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.PathFinding.NewPathFinding" filename="C:/git/Unity.DungeonCrawler/DungeonCrawler/Assets/SRC/ProceduralMapGeneration/PathFinding/NewPathFinding/Findpath.cs" line-rate="0.255813953488372" branch-rate="1" complexity="NaN">
           <methods>
             <method name="Findpath" signature="(System.Collections.Generic.List[NewNodeModel], UnityEngine.Vector3[])" line-rate="0.2" branch-rate="1" complexity="NaN">
               <lines>
-                <line number="31" hits="4" branch="false" />
-                <line number="32" hits="8" branch="false" />
-                <line number="33" hits="6" branch="false" />
+                <line number="31" hits="8" branch="false" />
+                <line number="32" hits="16" branch="false" />
+                <line number="33" hits="12" branch="false" />
                 <line number="35" hits="0" branch="false" />
                 <line number="36" hits="0" branch="false" />
                 <line number="37" hits="0" branch="false" />
@@ -63,6 +63,7 @@
                 <line number="54" hits="0" branch="false" />
                 <line number="55" hits="0" branch="false" />
                 <line number="56" hits="0" branch="false" />
+                <line number="57" hits="0" branch="false" />
                 <line number="58" hits="0" branch="false" />
                 <line number="59" hits="0" branch="false" />
               </lines>
@@ -81,23 +82,23 @@
                 <line number="71" hits="0" branch="false" />
               </lines>
             </method>
-            <method name="ConvertPathToPositions" signature="(System.Collections.Generic.List[NewNodeModel])" line-rate="0" branch-rate="1" complexity="NaN">
+            <method name="ConvertPathToPositions" signature="(System.Collections.Generic.List[NewNodeModel])" line-rate="1" branch-rate="1" complexity="NaN">
               <lines>
-                <line number="73" hits="0" branch="false" />
-                <line number="74" hits="0" branch="false" />
-                <line number="76" hits="0" branch="false" />
-                <line number="77" hits="0" branch="false" />
-                <line number="78" hits="0" branch="false" />
-                <line number="79" hits="0" branch="false" />
-                <line number="81" hits="0" branch="false" />
-                <line number="82" hits="0" branch="false" />
+                <line number="73" hits="3" branch="false" />
+                <line number="74" hits="3" branch="false" />
+                <line number="76" hits="19" branch="false" />
+                <line number="77" hits="5" branch="false" />
+                <line number="78" hits="5" branch="false" />
+                <line number="79" hits="5" branch="false" />
+                <line number="81" hits="3" branch="false" />
+                <line number="82" hits="3" branch="false" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="31" hits="4" branch="false" />
-            <line number="32" hits="8" branch="false" />
-            <line number="33" hits="6" branch="false" />
+            <line number="31" hits="8" branch="false" />
+            <line number="32" hits="16" branch="false" />
+            <line number="33" hits="12" branch="false" />
             <line number="35" hits="0" branch="false" />
             <line number="36" hits="0" branch="false" />
             <line number="37" hits="0" branch="false" />
@@ -117,6 +118,7 @@
             <line number="54" hits="0" branch="false" />
             <line number="55" hits="0" branch="false" />
             <line number="56" hits="0" branch="false" />
+            <line number="57" hits="0" branch="false" />
             <line number="58" hits="0" branch="false" />
             <line number="59" hits="0" branch="false" />
             <line number="61" hits="0" branch="false" />
@@ -129,14 +131,14 @@
             <line number="69" hits="0" branch="false" />
             <line number="70" hits="0" branch="false" />
             <line number="71" hits="0" branch="false" />
-            <line number="73" hits="0" branch="false" />
-            <line number="74" hits="0" branch="false" />
-            <line number="76" hits="0" branch="false" />
-            <line number="77" hits="0" branch="false" />
-            <line number="78" hits="0" branch="false" />
-            <line number="79" hits="0" branch="false" />
-            <line number="81" hits="0" branch="false" />
-            <line number="82" hits="0" branch="false" />
+            <line number="73" hits="3" branch="false" />
+            <line number="74" hits="3" branch="false" />
+            <line number="76" hits="19" branch="false" />
+            <line number="77" hits="5" branch="false" />
+            <line number="78" hits="5" branch="false" />
+            <line number="79" hits="5" branch="false" />
+            <line number="81" hits="3" branch="false" />
+            <line number="82" hits="3" branch="false" />
           </lines>
         </class>
         <class name="Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.PathFinding.NewPathFinding" filename="C:/git/Unity.DungeonCrawler/DungeonCrawler/Assets/SRC/ProceduralMapGeneration/PathFinding/NewPathFinding/NodeGridCreator.cs" line-rate="0" branch-rate="1" complexity="NaN">

@@ -1,26 +1,26 @@
 ﻿# Summary
 |||
 |:---|:---|
-| Generated on: | 2023/06/05 - 5:48:28 PM |
-| Parser: | MultiReportParser (21x OpenCoverParser) |
+| Generated on: | 2023/06/05 - 7:45:38 PM |
+| Parser: | MultiReportParser (28x OpenCoverParser) |
 | Assemblies: | 2 |
 | Classes: | 12 |
 | Files: | 18 |
-| Covered lines: | 121 |
-| Uncovered lines: | 200 |
-| Coverable lines: | 321 |
+| Covered lines: | 129 |
+| Uncovered lines: | 193 |
+| Coverable lines: | 322 |
 | Total lines: | 959 |
-| Line coverage: | 37.6% (121 of 321) |
+| Line coverage: | 40% (129 of 322) |
 | Covered branches: | 0 |
 | Total branches: | 0 |
-| Covered methods: | 28 |
+| Covered methods: | 29 |
 | Total methods: | 45 |
-| Method coverage: | 62.2% (28 of 45) |
+| Method coverage: | 64.4% (29 of 45) |
 
 |**Name**|**Covered**|**Uncovered**|**Coverable**|**Total**|**Line coverage**|**Covered**|**Total**|**Branch coverage**|**Covered**|**Total**|**Method coverage**|
 |:---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-|**ProceduralMapGenerationAssembly**|**109**|**200**|**309**|**901**|**35.2%**|**0**|**0**|****|**25**|**42**|**59.5%**|
-|Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.PathFinding.NewPathFinding|12|109|121|349|9.9%|0|0||2|12|16.6%|
+|**ProceduralMapGenerationAssembly**|**117**|**193**|**310**|**901**|**37.7%**|**0**|**0**|****|**26**|**42**|**61.9%**|
+|Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.PathFinding.NewPathFinding|20|102|122|349|16.3%|0|0||3|12|25%|
 |Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.PathFinding.PathMapBuilder|0|28|28|55|0%|0|0||0|2|0%|
 |Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Noise.PerlinNoiseGenerator|13|0|13|29|100%|0|0||1|1|100%|
 |Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.ScriptableObjects.DirectionalTilesScriptableObject|3|0|3|146|100%|0|0||1|1|100%|

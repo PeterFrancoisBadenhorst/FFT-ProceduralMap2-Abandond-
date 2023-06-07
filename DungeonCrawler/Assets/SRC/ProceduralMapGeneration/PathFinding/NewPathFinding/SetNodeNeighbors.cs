@@ -1,5 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
+using System.Numerics;
+using UnityEngine.UIElements;
 
 namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.PathFinding
 {
@@ -44,7 +46,7 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.
             {
                 var currentNode = nodes[i];
                 List<NewNodeModel> neighbornodes = new();
-                currentNode.Neighbors = FindNeighbors(currentNode,nodes,scale);
+                currentNode.Neighbors = FindNeighbors(currentNode, nodes, scale);
                 setNodes.Add(currentNode);
             }
             return setNodes.Distinct().ToList();
@@ -55,6 +57,10 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.
 
             for (int i = 0; i < nodes.Count; i++)
             {
+                IsNeighbor(node,)
+
+
+
                 /// North
                 if (node.Position.x == nodes[i].Position.x + scale &&
                     node.Position.y == nodes[i].Position.y &&
@@ -112,5 +118,20 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.
 
             return neighbors;
         }
+        public bool IsNeighbor(NewNodeModel node, Vector3 multiplier, NewNodeModel nodeCompared)
+        {
+            Vector3 north = new Vector3(0, 1, 0);
+            Vector3 east = new Vector3(0, 0, 1);
+            Vector3 west = new Vector3(0, 0, -1);
+            Vector3 south = new Vector3(0, -1, 0);
+            Vector3 top = new Vector3(1, 0, 0);
+            Vector3 bottom = new Vector3(-1, 0, 0);
+            int count;
+                node.Position.x == nodeCompared.Position.x + multiplier.X &&
+                node.Position.y == nodeCompared.Position.y + multiplier.Y &&
+                node.Position.z == nodeCompared.Position.z + multiplier.Z
+
+        }
+
     }
 }

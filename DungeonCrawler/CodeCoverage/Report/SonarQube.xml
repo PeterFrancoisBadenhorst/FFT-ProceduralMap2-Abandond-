@@ -34,6 +34,7 @@
     <lineToCover lineNumber="54" covered="false" />
     <lineToCover lineNumber="55" covered="false" />
     <lineToCover lineNumber="56" covered="false" />
+    <lineToCover lineNumber="57" covered="false" />
     <lineToCover lineNumber="58" covered="false" />
     <lineToCover lineNumber="59" covered="false" />
     <lineToCover lineNumber="61" covered="false" />
@@ -46,14 +47,14 @@
     <lineToCover lineNumber="69" covered="false" />
     <lineToCover lineNumber="70" covered="false" />
     <lineToCover lineNumber="71" covered="false" />
-    <lineToCover lineNumber="73" covered="false" />
-    <lineToCover lineNumber="74" covered="false" />
-    <lineToCover lineNumber="76" covered="false" />
-    <lineToCover lineNumber="77" covered="false" />
-    <lineToCover lineNumber="78" covered="false" />
-    <lineToCover lineNumber="79" covered="false" />
-    <lineToCover lineNumber="81" covered="false" />
-    <lineToCover lineNumber="82" covered="false" />
+    <lineToCover lineNumber="73" covered="true" />
+    <lineToCover lineNumber="74" covered="true" />
+    <lineToCover lineNumber="76" covered="true" />
+    <lineToCover lineNumber="77" covered="true" />
+    <lineToCover lineNumber="78" covered="true" />
+    <lineToCover lineNumber="79" covered="true" />
+    <lineToCover lineNumber="81" covered="true" />
+    <lineToCover lineNumber="82" covered="true" />
   </file>
   <file path="C:/git/Unity.DungeonCrawler/DungeonCrawler/Assets/SRC/ProceduralMapGeneration/PathFinding/NewPathFinding/NodeGridCreator.cs">
     <lineToCover lineNumber="31" covered="false" />
