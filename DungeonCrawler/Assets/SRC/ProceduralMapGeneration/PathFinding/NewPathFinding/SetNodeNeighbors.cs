@@ -57,7 +57,7 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.
 
             for (int i = 0; i < nodes.Count; i++)
             {
-                IsNeighbor(node,)
+                //IsNeighbor(node,)
 
 
 
@@ -118,20 +118,20 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.
 
             return neighbors;
         }
-        public bool IsNeighbor(NewNodeModel node, Vector3 multiplier, NewNodeModel nodeCompared)
-        {
-            Vector3 north = new Vector3(0, 1, 0);
-            Vector3 east = new Vector3(0, 0, 1);
-            Vector3 west = new Vector3(0, 0, -1);
-            Vector3 south = new Vector3(0, -1, 0);
-            Vector3 top = new Vector3(1, 0, 0);
-            Vector3 bottom = new Vector3(-1, 0, 0);
-            int count;
-                node.Position.x == nodeCompared.Position.x + multiplier.X &&
-                node.Position.y == nodeCompared.Position.y + multiplier.Y &&
-                node.Position.z == nodeCompared.Position.z + multiplier.Z
+        //public bool IsNeighbor(NewNodeModel node, Vector3 multiplier, NewNodeModel nodeCompared)
+        //{
+        //    Vector3 north = new Vector3(0, 1, 0);
+        //    Vector3 east = new Vector3(0, 0, 1);
+        //    Vector3 west = new Vector3(0, 0, -1);
+        //    Vector3 south = new Vector3(0, -1, 0);
+        //    Vector3 top = new Vector3(1, 0, 0);
+        //    Vector3 bottom = new Vector3(-1, 0, 0);
+        //    int count;
+        //        node.Position.x == nodeCompared.Position.x + multiplier.X &&
+        //        node.Position.y == nodeCompared.Position.y + multiplier.Y &&
+        //        node.Position.z == nodeCompared.Position.z + multiplier.Z
 
-        }
+        //}
 
     }
 }

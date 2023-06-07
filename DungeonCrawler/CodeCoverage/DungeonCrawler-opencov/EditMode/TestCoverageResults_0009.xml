@@ -34,47 +34,47 @@
               <Name>System.Collections.Generic.List[GameObject] Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Utilities.ChunkHandler::AssignChunkTypes(System.Collections.Generic.List[GameObject])</Name>
               <FileRef uid="1" />
               <SequencePoints>
-                <SequencePoint vc="1" uspid="6495" ordinal="0" offset="0" sl="15" sc="9" el="15" ec="9" bec="0" bev="0" fileid="1">
+                <SequencePoint vc="1" uspid="5731" ordinal="0" offset="0" sl="15" sc="9" el="15" ec="9" bec="0" bev="0" fileid="1">
                   <TrackedMethodRefs>
                     <TrackedMethodRef uid="0" vc="1" />
                   </TrackedMethodRefs>
                 </SequencePoint>
-                <SequencePoint vc="1" uspid="6496" ordinal="0" offset="1" sl="16" sc="18" el="16" ec="18" bec="0" bev="0" fileid="1">
+                <SequencePoint vc="1" uspid="5732" ordinal="0" offset="1" sl="16" sc="18" el="16" ec="18" bec="0" bev="0" fileid="1">
                   <TrackedMethodRefs>
                     <TrackedMethodRef uid="0" vc="1" />
                   </TrackedMethodRefs>
                 </SequencePoint>
-                <SequencePoint vc="0" uspid="6497" ordinal="0" offset="5" sl="17" sc="13" el="17" ec="13" bec="0" bev="0" fileid="1">
+                <SequencePoint vc="0" uspid="5733" ordinal="0" offset="5" sl="17" sc="13" el="17" ec="13" bec="0" bev="0" fileid="1">
                   <TrackedMethodRefs>
                     <TrackedMethodRef uid="0" vc="0" />
                   </TrackedMethodRefs>
                 </SequencePoint>
-                <SequencePoint vc="0" uspid="6498" ordinal="0" offset="6" sl="18" sc="17" el="18" ec="17" bec="0" bev="0" fileid="1">
+                <SequencePoint vc="0" uspid="5734" ordinal="0" offset="6" sl="18" sc="17" el="18" ec="17" bec="0" bev="0" fileid="1">
                   <TrackedMethodRefs>
                     <TrackedMethodRef uid="0" vc="0" />
                   </TrackedMethodRefs>
                 </SequencePoint>
-                <SequencePoint vc="0" uspid="6499" ordinal="0" offset="51" sl="19" sc="13" el="19" ec="13" bec="0" bev="0" fileid="1">
+                <SequencePoint vc="0" uspid="5735" ordinal="0" offset="51" sl="19" sc="13" el="19" ec="13" bec="0" bev="0" fileid="1">
                   <TrackedMethodRefs>
                     <TrackedMethodRef uid="0" vc="0" />
                   </TrackedMethodRefs>
                 </SequencePoint>
-                <SequencePoint vc="0" uspid="6500" ordinal="0" offset="52" sl="16" sc="45" el="16" ec="45" bec="0" bev="0" fileid="1">
+                <SequencePoint vc="0" uspid="5736" ordinal="0" offset="52" sl="16" sc="45" el="16" ec="45" bec="0" bev="0" fileid="1">
                   <TrackedMethodRefs>
                     <TrackedMethodRef uid="0" vc="0" />
                   </TrackedMethodRefs>
                 </SequencePoint>
-                <SequencePoint vc="1" uspid="6501" ordinal="0" offset="56" sl="16" sc="29" el="16" ec="29" bec="0" bev="0" fileid="1">
+                <SequencePoint vc="1" uspid="5737" ordinal="0" offset="56" sl="16" sc="29" el="16" ec="29" bec="0" bev="0" fileid="1">
                   <TrackedMethodRefs>
                     <TrackedMethodRef uid="0" vc="1" />
                   </TrackedMethodRefs>
                 </SequencePoint>
-                <SequencePoint vc="1" uspid="6502" ordinal="0" offset="69" sl="20" sc="13" el="20" ec="13" bec="0" bev="0" fileid="1">
+                <SequencePoint vc="1" uspid="5738" ordinal="0" offset="69" sl="20" sc="13" el="20" ec="13" bec="0" bev="0" fileid="1">
                   <TrackedMethodRefs>
                     <TrackedMethodRef uid="0" vc="1" />
                   </TrackedMethodRefs>
                 </SequencePoint>
-                <SequencePoint vc="1" uspid="6503" ordinal="0" offset="73" sl="21" sc="9" el="21" ec="9" bec="0" bev="0" fileid="1">
+                <SequencePoint vc="1" uspid="5739" ordinal="0" offset="73" sl="21" sc="9" el="21" ec="9" bec="0" bev="0" fileid="1">
                   <TrackedMethodRefs>
                     <TrackedMethodRef uid="0" vc="1" />
                   </TrackedMethodRefs>
