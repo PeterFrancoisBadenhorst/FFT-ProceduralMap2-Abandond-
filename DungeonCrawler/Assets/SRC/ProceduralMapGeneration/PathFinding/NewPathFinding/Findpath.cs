@@ -46,7 +46,7 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.
 
             return convertedGeneratedList;
         }
-        public static NewNodeModel FindActiveNode(NewNodeModel activeNode, NewNodeModel endPos)
+        public NewNodeModel FindActiveNode(NewNodeModel activeNode, NewNodeModel endPos)
         {
             while (activeNode.Position != endPos.Position)
             {
@@ -54,10 +54,10 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.
                 tempNode.LastNode = activeNode;
                 activeNode = tempNode;
             }
-
+            if (activeNode == null) { throw new NullReferenceException(); }
             return activeNode;
         }
-        public static List<NewNodeModel> GeneratePath(NewNodeModel activeNode, NewNodeModel startPos)
+        public List<NewNodeModel> GeneratePath(NewNodeModel activeNode, NewNodeModel startPos)
         {
             List<NewNodeModel> generatedList = new List<NewNodeModel>();
 
@@ -69,7 +69,7 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.
             generatedList.Reverse();
             return generatedList;
         }
-        public static List<Vector3> ConvertPathToPositions(List<NewNodeModel> generatedList)
+        public List<Vector3> ConvertPathToPositions(List<NewNodeModel> generatedList)
         {
             List<Vector3> convertedGeneratedList = new List<Vector3>();
 
