@@ -144,7 +144,6 @@ namespace Assets.SRC.ProceduralMapGeneration.PathFinding.Tests
         {
             NewPathFinding pathFinder = new NewPathFinding();
             [Test]
-            [Ignore("Linq Error resulting in a null ref")]
             public void TestFindpath_WithValidGridAndPositions_ReturnsPath()
             {
                 // Arrange
@@ -239,7 +238,6 @@ namespace Assets.SRC.ProceduralMapGeneration.PathFinding.Tests
         {
             NewPathFinding pathFinder = new NewPathFinding();
             [Test]
-            [Ignore("Linq Error resulting in a null ref")]
             public void TestFindActiveNode_WithValidActiveNodeAndEndPos_ReturnsActiveNode()
             {
                 // Arrange
@@ -280,7 +278,6 @@ namespace Assets.SRC.ProceduralMapGeneration.PathFinding.Tests
             //    public NewNodeModel LastNode;                // The last node visited in the path
             //}
             [Test]
-            [Ignore("Linq Error resulting in a null ref")]
             public void TestFindActiveNode_WithActiveNodeWithNoNeighbors_ReturnsNull()
             {
                 // Arrange
@@ -296,7 +293,6 @@ namespace Assets.SRC.ProceduralMapGeneration.PathFinding.Tests
             }
 
             [Test]
-            [Ignore("Linq Error resulting in a null ref")]
             public void TestFindActiveNode_WithActiveNodeWithNeighborsButNoValidEndPos_ReturnsNull()
             {
                 // Arrange
@@ -320,7 +316,6 @@ namespace Assets.SRC.ProceduralMapGeneration.PathFinding.Tests
         {
             NewPathFinding pathFinder = new NewPathFinding();
             [Test]
-            [Ignore("Linq Error resulting in a null ref")]
             public void TestGeneratePath_WithValidActiveNodeAndStartPos_ReturnsPath()
             {
                 // Arrange
@@ -338,7 +333,6 @@ namespace Assets.SRC.ProceduralMapGeneration.PathFinding.Tests
             }
 
             [Test]
-            [Ignore("Linq Error resulting in a null ref")]
             public void TestGeneratePath_WithActiveNodeWithNoLastNode_ReturnsEmptyList()
             {
                 // Arrange
@@ -355,7 +349,6 @@ namespace Assets.SRC.ProceduralMapGeneration.PathFinding.Tests
             }
 
             [Test]
-            [Ignore("Linq Error resulting in a null ref")]
             public void TestGeneratePath_WithActiveNodeWithNoValidStartPos_ReturnsEmptyList()
             {
                 // Arrange
@@ -424,6 +417,119 @@ namespace Assets.SRC.ProceduralMapGeneration.PathFinding.Tests
                 Assert.IsNotNull(convertedPositions);
             }
         }
+        [TestFixture]
+        public class NodeGridCreatorTests
+        {
+            NewPathFinding pathFinder = new NewPathFinding();
+            [Test]
+            public void TestNodeGridCreatorA()
+            {
+                // Arrange
+                Vector3[] grid = new Vector3[]
+                {
+                new Vector3(0, 0, 0),
+                new Vector3(1, 0, 0),
+                new Vector3(0, 1, 0),
+                new Vector3(1, 1, 0)
+                };
+                Vector3[] baseMap = new Vector3[]
+                {
+                new Vector3(2, 2, 0),
+                new Vector3(3, 2, 0),
+                new Vector3(2, 3, 0),
+                new Vector3(3, 3, 0)
+                };
+                float scale = 1.0f;
 
+                // Act
+                Vector3[] results = pathFinder.NodeGridCreator(grid, baseMap, scale);
+
+                // Assert
+                Assert.AreEqual(2, results.Length);
+            }
+            [Test]
+            public void TestNodeGridCreatoB()
+            {
+                // Arrange
+                Vector3[] grid = new Vector3[]
+                {
+                new Vector3(0, 0, 0),
+                new Vector3(1, 0, 0),
+                new Vector3(0, 1, 0),
+                new Vector3(1, 1, 0)
+                };
+                float scale = 1.0f;
+
+                // Act
+                Vector3[] results = pathFinder.NodeGridCreator(grid, scale);
+
+                // Assert
+                Assert.AreEqual(2, results.Length);
+            }
+            [Test]
+            public void TestReturnPath()
+            {
+                // Arrange
+                Vector3[] grid = new Vector3[]
+                {
+                new Vector3(0, 0, 0),
+                new Vector3(1, 0, 0),
+                new Vector3(0, 1, 0),
+                new Vector3(1, 1, 0)
+                };
+                float scale = 1.0f;
+                Vector3[] ends = new Vector3[]
+                {
+                new Vector3(2, 2, 0),
+                new Vector3(3, 3, 0)
+                };
+
+                // Act
+                Vector3[] results = pathFinder.ReturnPath(grid, scale, ends);
+
+                // Assert
+                Assert.AreEqual(2, results.Length);
+            }
+        }
+        [TestFixture]
+        public class SetNodeNeighborsTest
+        {
+            NewPathFinding pathFinder = new NewPathFinding();
+            [Test]
+            public void TestSetNodeNeighbors()
+            {
+                // Arrange
+                List<NewNodeModel> nodes = new List<NewNodeModel>
+            {
+                new(),
+                new(),
+                new(),
+                new()
+            };
+                float scale = 1.0f;
+
+                // Act
+                List<NewNodeModel> results = pathFinder.SetNodeNeighbors(nodes, scale);
+
+                // Assert
+                Assert.AreEqual(4, results.Count);
+            }
+            [Test]
+            public void ComparePositionsTest()
+            {
+
+                // Arrange
+                Vector3 poasA = new Vector3(1, 2, 3);
+                Vector3 posB = new Vector3(0, 0, 0);
+                float multiplier = 1.0f;
+
+                // Act
+                bool result = NewPathFinding.ComparePositions(poasA, posB, multiplier);
+
+                // Assert
+                result.Should().BeFalse();   
+
+            }
+        }
     }
 }
