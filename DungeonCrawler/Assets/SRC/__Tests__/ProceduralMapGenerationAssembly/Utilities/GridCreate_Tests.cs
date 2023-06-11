@@ -1,11 +1,19 @@
+using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Enums;
+using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Mono.Behaviors;
+using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Structs;
+using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Utilities;
+using FluentAssertions;
+using NUnit.Framework;
+using System.Collections.Generic;
+using UnityEngine;
+
 namespace Assets.SRC.ProceduralMapGeneration.Utilities.Tests
 {
-    /*
+    
     [TestFixture]
     public class GridCreate_Tests
     {
         private GridCreate _gridCreate;
-        private GridCreate_Mocs _gridCreate_Mocs;
 
         public Transform GridParent { get; private set; }
 
@@ -15,18 +23,12 @@ namespace Assets.SRC.ProceduralMapGeneration.Utilities.Tests
         public void SetUp()
         {
             _gridCreate = new GridCreate();
-            _gridCreate_Mocs = new GridCreate_Mocs();
-            //_gridCreate_Mocs.TestGrid.Clear();
-            // _gridCreate_Mocs.GridPositions = null;
         }
 
         [TearDown]
         public void TearDown()
         {
             _gridCreate = null;
-            _gridCreate_Mocs = null;
-            //_gridCreate_Mocs.TestGrid.Clear();
-            //_gridCreate_Mocs.GridPositions = null;
         }
 
         #endregion [SetUp]&&[TearDown]
@@ -44,8 +46,10 @@ namespace Assets.SRC.ProceduralMapGeneration.Utilities.Tests
 
         public void Validate_SquareGrid2DVertical(int gridSize, float scale)
         {
-            _gridCreate_Mocs.GridPositions = _gridCreate.SquareGrid2DVertical(gridSize, scale);
-            _gridCreate_Mocs.GridPositions.Count<Vector3>().Should().Be((gridSize * gridSize));
+           var t = _gridCreate.SquareGrid2DVertical(gridSize, scale);
+            t.Should().NotBeNull();
+            t.Should().NotBeEmpty();
+            t.Length.Should().Be(gridSize*gridSize);
         }
 
         #region Validate_SquareGrid2DHorizontal Test Cases
@@ -61,8 +65,10 @@ namespace Assets.SRC.ProceduralMapGeneration.Utilities.Tests
 
         public void Validate_SquareGrid2DHorizontal(int gridSize, float scale)
         {
-            _gridCreate_Mocs.GridPositions = _gridCreate.SquareGrid2DHorizontal(gridSize, scale);
-            _gridCreate_Mocs.GridPositions.Count<Vector3>().Should().Be((gridSize * gridSize));
+            var t = _gridCreate.SquareGrid2DHorizontal(gridSize, scale);
+            t.Should().NotBeNull();
+            t.Should().NotBeEmpty();
+            t.Length.Should().Be(gridSize * gridSize);
         }
 
         #region Validate_SquareGrid3D Test Cases
@@ -78,8 +84,10 @@ namespace Assets.SRC.ProceduralMapGeneration.Utilities.Tests
 
         public void Validate_SquareGrid3D(int gridSize, float scale)
         {
-            _gridCreate_Mocs.GridPositions = _gridCreate.SquareGrid3D(gridSize, scale);
-            _gridCreate_Mocs.GridPositions.Count<Vector3>().Should().Be((gridSize * gridSize * gridSize));
+            var t = _gridCreate.SquareGrid3D(gridSize, scale);
+            t.Should().NotBeNull();
+            t.Should().NotBeEmpty();
+            t.Length.Should().Be(gridSize * gridSize*gridSize);
         }
 
         #region Validate_PlaceGameObjectsAtGridPositions Test Cases
@@ -136,6 +144,7 @@ namespace Assets.SRC.ProceduralMapGeneration.Utilities.Tests
 
         public void Validate_FindChunkNeigbors(int gridSize, float scale)
         {
+            ChunkHandler chunkHandler = new ChunkHandler();
             var positions3D = _gridCreate.SquareGrid3D(gridSize, scale);
             var grid3D = _gridCreate.PlaceGameObjectsAtGridPositions(positions3D, GridParent);
             var positions2DH = _gridCreate.SquareGrid3D(gridSize, scale);
@@ -143,9 +152,9 @@ namespace Assets.SRC.ProceduralMapGeneration.Utilities.Tests
             var positions2DV = _gridCreate.SquareGrid3D(gridSize, scale);
             var grid2DV = _gridCreate.PlaceGameObjectsAtGridPositions(positions2DV, GridParent);
 
-            List<GameObject> test3D = _gridCreate.FindChunkNeigbors(scale, grid3D);
-            List<GameObject> test2DH = _gridCreate.FindChunkNeigbors(scale, grid2DH);
-            List<GameObject> test2DV = _gridCreate.FindChunkNeigbors(scale, grid2DV);
+            List<GameObject> test3D = chunkHandler.FindChunkNeigbors(scale, grid3D);
+            List<GameObject> test2DH = chunkHandler.FindChunkNeigbors(scale, grid2DH);
+            List<GameObject> test2DV = chunkHandler.FindChunkNeigbors(scale, grid2DV);
 
             var testList = new List<List<GameObject>> { test3D, test2DH, test2DV };
 
@@ -280,15 +289,24 @@ namespace Assets.SRC.ProceduralMapGeneration.Utilities.Tests
 
         #endregion Validate_FindChunkType Test Cases
 
-        public void Validate_FindChunkType(DirectionTypeEnum proved, bool north, bool east, bool south, bool west, bool top, bool bottom)
+        public void FindChunkType_ShouldReturnTheCorrectChunkType(DirectionTypeEnum expectedChunkType, bool northNeighbor, bool eastNeighbor, bool southNeighbor, bool westNeighbor, bool topNeighbor, bool bottomNeighbor)
         {
-            /// Given
-            var result = _gridCreate_Mocs.SetUpNeighborStruct(north, east, south, west, top, bottom);
-            /// When
-            result.Direction.Should().Be(Enums.DirectionTypeEnum.Blank);
-            /// Then
-            _gridCreate.FindChunkType(result).Should().Be(proved);
+            ChunkHandler chunkHandler = new ChunkHandler();
+            // Arrange
+            NeighborStruct chunk = new NeighborStruct();
+            if (northNeighbor) chunk.NorthNeighbor = new GameObject();
+            if (eastNeighbor) chunk.EastNeighbor = new GameObject();
+            if (southNeighbor) chunk.SouthNeighbor = new GameObject();
+            if (westNeighbor) chunk.WestNeighbor = new GameObject();
+            if (topNeighbor) chunk.TopNeighbor = new GameObject();
+            if (bottomNeighbor) chunk.BottomNeighbor = new GameObject();
+
+            // Act
+            DirectionTypeEnum chunkType = chunkHandler.FindChunkType(chunk);
+
+            // Assert
+            Assert.That(chunkType, Is.EqualTo(expectedChunkType));
         }
     }
-    */
+    
 }

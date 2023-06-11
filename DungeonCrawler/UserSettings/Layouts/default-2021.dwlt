@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 989
   m_ShowMode: 4
-  m_Title: Project
+  m_Title: Test Runner
   m_RootView: {fileID: 12}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -43,8 +43,8 @@ MonoBehaviour:
     y: 0
     width: 668
     height: 454
-  m_MinSize: {x: 102, y: 121}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 18}
   m_Panes:
   - {fileID: 18}
@@ -74,7 +74,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 166
+  controlID: 70
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -125,7 +125,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 200}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 104
+  controlID: 96
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -145,8 +145,8 @@ MonoBehaviour:
     y: 0
     width: 641
     height: 454
-  m_MinSize: {x: 102, y: 121}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 24}
   m_Panes:
   - {fileID: 24}
@@ -177,7 +177,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 165
+  controlID: 69
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -229,7 +229,7 @@ MonoBehaviour:
   m_MinSize: {x: 500, y: 200}
   m_MaxSize: {x: 40480, y: 16192}
   vertical: 0
-  controlID: 163
+  controlID: 67
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -377,7 +377,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 164
+  controlID: 68
 --- !u!114 &16
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -424,9 +424,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: -775
+    x: -842
     y: 558
-    width: 673
+    width: 639
     height: 433
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -453,8 +453,8 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: -31590
-    y: -31485
+    x: -1510
+    y: 558
     width: 666
     height: 433
   m_ViewDataDictionary: {fileID: 0}
@@ -463,7 +463,7 @@ MonoBehaviour:
     m_SaveData: []
     m_OverlaysVisible: 1
   m_Spl:
-    ID: 210
+    ID: 209
     splitterInitialOffset: 315
     currentActiveSplitter: -1
     realSizes:
@@ -547,7 +547,7 @@ MonoBehaviour:
       name: DungeonCrawler
       fullName: DungeonCrawler
       resultStatus: 4
-      duration: 1.5809343
+      duration: 2.081346
       messages: One or more child tests were ignored
       output: 
       stacktrace: 
@@ -558,12 +558,12 @@ MonoBehaviour:
       categories: []
       parentId: 
       parentUniqueId: 
-    - id: 1013
+    - id: 1066
       uniqueId: '[__Tests__.dll][suite]'
       name: __Tests__.dll
       fullName: C:/git/Unity.DungeonCrawler/DungeonCrawler/Library/ScriptAssemblies/__Tests__.dll
       resultStatus: 4
-      duration: 1.5373421
+      duration: 2.027255
       messages: One or more child tests were ignored
       output: 
       stacktrace: 
@@ -574,12 +574,12 @@ MonoBehaviour:
       categories: []
       parentId: 1000
       parentUniqueId: '[DungeonCrawler][suite]'
-    - id: 1014
+    - id: 1067
       uniqueId: __Tests__.dll/[Assets][suite]
       name: Assets
       fullName: Assets
       resultStatus: 4
-      duration: 1.5358527
+      duration: 2.025702
       messages: One or more child tests were ignored
       output: 
       stacktrace: 
@@ -588,14 +588,14 @@ MonoBehaviour:
       description: 
       isSuite: 1
       categories: []
-      parentId: 1013
+      parentId: 1066
       parentUniqueId: '[__Tests__.dll][suite]'
-    - id: 1015
+    - id: 1068
       uniqueId: __Tests__.dll/Assets/[SRC][suite]
       name: SRC
       fullName: Assets.SRC
       resultStatus: 4
-      duration: 1.5318778
+      duration: 2.0243564
       messages: One or more child tests were ignored
       output: 
       stacktrace: 
@@ -604,14 +604,14 @@ MonoBehaviour:
       description: 
       isSuite: 1
       categories: []
-      parentId: 1014
+      parentId: 1067
       parentUniqueId: __Tests__.dll/[Assets][suite]
-    - id: 1016
+    - id: 1069
       uniqueId: __Tests__.dll/Assets/SRC/[ProceduralMapGeneration][suite]
       name: ProceduralMapGeneration
       fullName: Assets.SRC.ProceduralMapGeneration
       resultStatus: 4
-      duration: 1.5273441
+      duration: 2.022727
       messages: One or more child tests were ignored
       output: 
       stacktrace: 
@@ -620,14 +620,14 @@ MonoBehaviour:
       description: 
       isSuite: 1
       categories: []
-      parentId: 1015
+      parentId: 1068
       parentUniqueId: __Tests__.dll/Assets/[SRC][suite]
-    - id: 1029
+    - id: 1074
       uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/[Generic][suite]
       name: Generic
       fullName: Assets.SRC.ProceduralMapGeneration.Generic
       resultStatus: 1
-      duration: 0.5399853
+      duration: 1.0471848
       messages: 
       output: 
       stacktrace: 
@@ -636,14 +636,14 @@ MonoBehaviour:
       description: 
       isSuite: 1
       categories: []
-      parentId: 1024
+      parentId: 1069
       parentUniqueId: __Tests__.dll/Assets/SRC/[ProceduralMapGeneration][suite]
-    - id: 1030
+    - id: 1075
       uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Generic/[__Tests__][Assets.SRC.ProceduralMapGeneration.Generic.Tests][suite]
       name: Tests
       fullName: Assets.SRC.ProceduralMapGeneration.Generic.Tests
       resultStatus: 1
-      duration: 0.5364888
+      duration: 1.0427722
       messages: 
       output: 
       stacktrace: 
@@ -652,14 +652,14 @@ MonoBehaviour:
       description: 
       isSuite: 1
       categories: []
-      parentId: 1029
+      parentId: 1074
       parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/[Generic][suite]
-    - id: 1036
+    - id: 1054
       uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Generic/Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.Generic.Tests.Test_Enums+DirectionTypeEnum_Tests][suite]
       name: Test_Enums+DirectionTypeEnum_Tests
       fullName: Assets.SRC.ProceduralMapGeneration.Generic.Tests.Test_Enums+DirectionTypeEnum_Tests
       resultStatus: 1
-      duration: 0.0652964
+      duration: 0.6001205
       messages: 
       output: 
       stacktrace: 
@@ -668,14 +668,14 @@ MonoBehaviour:
       description: 
       isSuite: 1
       categories: []
-      parentId: 1057
+      parentId: 1075
       parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Generic/[__Tests__][Assets.SRC.ProceduralMapGeneration.Generic.Tests][suite]
-    - id: 1037
+    - id: 1055
       uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Generic/Tests/Test_Enums+DirectionTypeEnum_Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.Generic.Tests.Test_Enums+DirectionTypeEnum_Tests.Should_Have_28_Values]
       name: Should_Have_28_Values
       fullName: Assets.SRC.ProceduralMapGeneration.Generic.Tests.Test_Enums+DirectionTypeEnum_Tests.Should_Have_28_Values
       resultStatus: 1
-      duration: 0.0249737
+      duration: 0.0296336
       messages: 
       output: 
       stacktrace: 
@@ -685,14 +685,14 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1036
+      parentId: 1054
       parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Generic/Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.Generic.Tests.Test_Enums+DirectionTypeEnum_Tests][suite]
-    - id: 1038
+    - id: 1056
       uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Generic/Tests/Test_Enums+DirectionTypeEnum_Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.Generic.Tests.Test_Enums+DirectionTypeEnum_Tests.Should_Have_The_Expected_Values]
       name: Should_Have_The_Expected_Values
       fullName: Assets.SRC.ProceduralMapGeneration.Generic.Tests.Test_Enums+DirectionTypeEnum_Tests.Should_Have_The_Expected_Values
       resultStatus: 1
-      duration: 0.0056581
+      duration: 0.0050777
       messages: 
       output: 
       stacktrace: 
@@ -702,14 +702,14 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1036
+      parentId: 1054
       parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Generic/Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.Generic.Tests.Test_Enums+DirectionTypeEnum_Tests][suite]
-    - id: 1033
+    - id: 1051
       uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Generic/Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.Generic.Tests.Test_Enums+GridTypeEnum_Tests][suite]
       name: Test_Enums+GridTypeEnum_Tests
       fullName: Assets.SRC.ProceduralMapGeneration.Generic.Tests.Test_Enums+GridTypeEnum_Tests
       resultStatus: 1
-      duration: 0.0497662
+      duration: 0.0483218
       messages: 
       output: 
       stacktrace: 
@@ -718,14 +718,14 @@ MonoBehaviour:
       description: 
       isSuite: 1
       categories: []
-      parentId: 1057
+      parentId: 1075
       parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Generic/[__Tests__][Assets.SRC.ProceduralMapGeneration.Generic.Tests][suite]
-    - id: 1034
+    - id: 1052
       uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Generic/Tests/Test_Enums+GridTypeEnum_Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.Generic.Tests.Test_Enums+GridTypeEnum_Tests.Should_Have_3_Values]
       name: Should_Have_3_Values
       fullName: Assets.SRC.ProceduralMapGeneration.Generic.Tests.Test_Enums+GridTypeEnum_Tests.Should_Have_3_Values
       resultStatus: 1
-      duration: 0.0005704
+      duration: 0.0003687
       messages: 
       output: 
       stacktrace: 
@@ -735,14 +735,14 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1033
+      parentId: 1051
       parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Generic/Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.Generic.Tests.Test_Enums+GridTypeEnum_Tests][suite]
-    - id: 1035
+    - id: 1053
       uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Generic/Tests/Test_Enums+GridTypeEnum_Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.Generic.Tests.Test_Enums+GridTypeEnum_Tests.Should_Have_The_Expected_Values]
       name: Should_Have_The_Expected_Values
       fullName: Assets.SRC.ProceduralMapGeneration.Generic.Tests.Test_Enums+GridTypeEnum_Tests.Should_Have_The_Expected_Values
       resultStatus: 1
-      duration: 0.0039853
+      duration: 0.003475
       messages: 
       output: 
       stacktrace: 
@@ -752,14 +752,14 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1033
+      parentId: 1051
       parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Generic/Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.Generic.Tests.Test_Enums+GridTypeEnum_Tests][suite]
-    - id: 1013
+    - id: 1010
       uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Generic/Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.Generic.Tests.Test_ScriptableObjects][suite]
       name: Test_ScriptableObjects
       fullName: Assets.SRC.ProceduralMapGeneration.Generic.Tests.Test_ScriptableObjects
       resultStatus: 1
-      duration: 0.0453308
+      duration: 0.058247
       messages: 
       output: 
       stacktrace: 
@@ -768,14 +768,14 @@ MonoBehaviour:
       description: 
       isSuite: 1
       categories: []
-      parentId: 1030
+      parentId: 1075
       parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Generic/[__Tests__][Assets.SRC.ProceduralMapGeneration.Generic.Tests][suite]
-    - id: 1014
+    - id: 1011
       uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Generic/Tests/Test_ScriptableObjects/[__Tests__][Assets.SRC.ProceduralMapGeneration.Generic.Tests.Test_ScriptableObjects.Should_Return_A_List_Of_GameObjects]
       name: Should_Return_A_List_Of_GameObjects
       fullName: Assets.SRC.ProceduralMapGeneration.Generic.Tests.Test_ScriptableObjects.Should_Return_A_List_Of_GameObjects
       resultStatus: 1
-      duration: 0.007731
+      duration: 0.0154283
       messages: 
       output: 'Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.ScriptableObjects.DirectionalTilesScriptableObject
         must be instantiated using the ScriptableObject.CreateInstance method instead
@@ -789,14 +789,14 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1013
+      parentId: 1010
       parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Generic/Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.Generic.Tests.Test_ScriptableObjects][suite]
-    - id: 1018
+    - id: 1057
       uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Generic/Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.Generic.Tests.Test_Structs+DirectionIDStructTests][suite]
       name: Test_Structs+DirectionIDStructTests
       fullName: Assets.SRC.ProceduralMapGeneration.Generic.Tests.Test_Structs+DirectionIDStructTests
       resultStatus: 1
-      duration: 0.0721074
+      duration: 0.0676409
       messages: 
       output: 
       stacktrace: 
@@ -805,14 +805,14 @@ MonoBehaviour:
       description: 
       isSuite: 1
       categories: []
-      parentId: 1030
+      parentId: 1075
       parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Generic/[__Tests__][Assets.SRC.ProceduralMapGeneration.Generic.Tests][suite]
-    - id: 1020
+    - id: 1059
       uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Generic/Tests/Test_Structs+DirectionIDStructTests/[__Tests__][Assets.SRC.ProceduralMapGeneration.Generic.Tests.Test_Structs+DirectionIDStructTests.Should_Be_Able_To_Set_And_Get_Values]
       name: Should_Be_Able_To_Set_And_Get_Values
       fullName: Assets.SRC.ProceduralMapGeneration.Generic.Tests.Test_Structs+DirectionIDStructTests.Should_Be_Able_To_Set_And_Get_Values
       resultStatus: 1
-      duration: 0.0044284
+      duration: 0.0026066
       messages: 
       output: 
       stacktrace: 
@@ -822,14 +822,14 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1018
+      parentId: 1057
       parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Generic/Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.Generic.Tests.Test_Structs+DirectionIDStructTests][suite]
-    - id: 1019
+    - id: 1058
       uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Generic/Tests/Test_Structs+DirectionIDStructTests/[__Tests__][Assets.SRC.ProceduralMapGeneration.Generic.Tests.Test_Structs+DirectionIDStructTests.Should_Have_Correct_Default_Values]
       name: Should_Have_Correct_Default_Values
       fullName: Assets.SRC.ProceduralMapGeneration.Generic.Tests.Test_Structs+DirectionIDStructTests.Should_Have_Correct_Default_Values
       resultStatus: 1
-      duration: 0.0009456
+      duration: 0.0009999
       messages: 
       output: 
       stacktrace: 
@@ -839,14 +839,14 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1018
+      parentId: 1057
       parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Generic/Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.Generic.Tests.Test_Structs+DirectionIDStructTests][suite]
-    - id: 1021
+    - id: 1060
       uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Generic/Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.Generic.Tests.Test_Structs+MapBuilderStructTests][suite]
       name: Test_Structs+MapBuilderStructTests
       fullName: Assets.SRC.ProceduralMapGeneration.Generic.Tests.Test_Structs+MapBuilderStructTests
       resultStatus: 1
-      duration: 0.1519922
+      duration: 0.1340154
       messages: 
       output: 
       stacktrace: 
@@ -855,14 +855,14 @@ MonoBehaviour:
       description: 
       isSuite: 1
       categories: []
-      parentId: 1036
+      parentId: 1075
       parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Generic/[__Tests__][Assets.SRC.ProceduralMapGeneration.Generic.Tests][suite]
-    - id: 1023
+    - id: 1062
       uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Generic/Tests/Test_Structs+MapBuilderStructTests/[__Tests__][Assets.SRC.ProceduralMapGeneration.Generic.Tests.Test_Structs+MapBuilderStructTests.Should_Be_Able_To_Set_And_Get_Values]
       name: Should_Be_Able_To_Set_And_Get_Values
       fullName: Assets.SRC.ProceduralMapGeneration.Generic.Tests.Test_Structs+MapBuilderStructTests.Should_Be_Able_To_Set_And_Get_Values
       resultStatus: 1
-      duration: 0.0754835
+      duration: 0.0638775
       messages: 
       output: 
       stacktrace: 
@@ -872,14 +872,14 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1021
+      parentId: 1060
       parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Generic/Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.Generic.Tests.Test_Structs+MapBuilderStructTests][suite]
-    - id: 1022
+    - id: 1061
       uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Generic/Tests/Test_Structs+MapBuilderStructTests/[__Tests__][Assets.SRC.ProceduralMapGeneration.Generic.Tests.Test_Structs+MapBuilderStructTests.Should_Have_Correct_Default_Values]
       name: Should_Have_Correct_Default_Values
       fullName: Assets.SRC.ProceduralMapGeneration.Generic.Tests.Test_Structs+MapBuilderStructTests.Should_Have_Correct_Default_Values
       resultStatus: 1
-      duration: 0.0029824
+      duration: 0.0019635
       messages: 
       output: 
       stacktrace: 
@@ -889,14 +889,14 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1021
+      parentId: 1060
       parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Generic/Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.Generic.Tests.Test_Structs+MapBuilderStructTests][suite]
-    - id: 1024
+    - id: 1063
       uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Generic/Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.Generic.Tests.Test_Structs+NeighborStructTests][suite]
       name: Test_Structs+NeighborStructTests
       fullName: Assets.SRC.ProceduralMapGeneration.Generic.Tests.Test_Structs+NeighborStructTests
       resultStatus: 1
-      duration: 0.0554724
+      duration: 0.0424325
       messages: 
       output: 
       stacktrace: 
@@ -905,14 +905,14 @@ MonoBehaviour:
       description: 
       isSuite: 1
       categories: []
-      parentId: 1036
+      parentId: 1075
       parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Generic/[__Tests__][Assets.SRC.ProceduralMapGeneration.Generic.Tests][suite]
-    - id: 1026
+    - id: 1065
       uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Generic/Tests/Test_Structs+NeighborStructTests/[__Tests__][Assets.SRC.ProceduralMapGeneration.Generic.Tests.Test_Structs+NeighborStructTests.Should_Be_Able_To_Set_And_Get_Values]
       name: Should_Be_Able_To_Set_And_Get_Values
       fullName: Assets.SRC.ProceduralMapGeneration.Generic.Tests.Test_Structs+NeighborStructTests.Should_Be_Able_To_Set_And_Get_Values
       resultStatus: 1
-      duration: 0.0007449
+      duration: 0.0007887
       messages: 
       output: 
       stacktrace: 
@@ -922,14 +922,14 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1024
+      parentId: 1063
       parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Generic/Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.Generic.Tests.Test_Structs+NeighborStructTests][suite]
-    - id: 1025
+    - id: 1064
       uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Generic/Tests/Test_Structs+NeighborStructTests/[__Tests__][Assets.SRC.ProceduralMapGeneration.Generic.Tests.Test_Structs+NeighborStructTests.Should_Have_Correct_Default_Values]
       name: Should_Have_Correct_Default_Values
       fullName: Assets.SRC.ProceduralMapGeneration.Generic.Tests.Test_Structs+NeighborStructTests.Should_Have_Correct_Default_Values
       resultStatus: 1
-      duration: 0.0003685
+      duration: 0.0003501
       messages: 
       output: 
       stacktrace: 
@@ -939,14 +939,14 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1024
+      parentId: 1063
       parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Generic/Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.Generic.Tests.Test_Structs+NeighborStructTests][suite]
     - id: 1014
       uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Generic/Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.Generic.Tests.Test_VectorMath][suite]
       name: Test_VectorMath
       fullName: Assets.SRC.ProceduralMapGeneration.Generic.Tests.Test_VectorMath
       resultStatus: 1
-      duration: 0.0480887
+      duration: 0.0440382
       messages: 
       output: 
       stacktrace: 
@@ -955,14 +955,14 @@ MonoBehaviour:
       description: 
       isSuite: 1
       categories: []
-      parentId: 1057
+      parentId: 1075
       parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Generic/[__Tests__][Assets.SRC.ProceduralMapGeneration.Generic.Tests][suite]
     - id: 1015
       uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Generic/Tests/Test_VectorMath/[__Tests__][Assets.SRC.ProceduralMapGeneration.Generic.Tests.Test_VectorMath.CalculateDistanceBetweenTwoVectors_ShouldReturnTheCorrectDistance]
       name: CalculateDistanceBetweenTwoVectors_ShouldReturnTheCorrectDistance
       fullName: Assets.SRC.ProceduralMapGeneration.Generic.Tests.Test_VectorMath.CalculateDistanceBetweenTwoVectors_ShouldReturnTheCorrectDistance
       resultStatus: 1
-      duration: 0.0040199
+      duration: 0.0041276
       messages: 
       output: 
       stacktrace: 
@@ -979,7 +979,7 @@ MonoBehaviour:
       name: Tests_Exceptions
       fullName: Assets.SRC.ProceduralMapGeneration.Generic.Tests.Tests_Exceptions
       resultStatus: 1
-      duration: 0.0427338
+      duration: 0.0408313
       messages: 
       output: 
       stacktrace: 
@@ -988,14 +988,14 @@ MonoBehaviour:
       description: 
       isSuite: 1
       categories: []
-      parentId: 1057
+      parentId: 1075
       parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Generic/[__Tests__][Assets.SRC.ProceduralMapGeneration.Generic.Tests][suite]
     - id: 1013
       uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Generic/Tests/Tests_Exceptions/[__Tests__][Assets.SRC.ProceduralMapGeneration.Generic.Tests.Tests_Exceptions.NotImplementedException_ShouldThrowNotImplementedException]
       name: NotImplementedException_ShouldThrowNotImplementedException
       fullName: Assets.SRC.ProceduralMapGeneration.Generic.Tests.Tests_Exceptions.NotImplementedException_ShouldThrowNotImplementedException
       resultStatus: 1
-      duration: 0.0006226
+      duration: 0.0034882
       messages: 
       output: 
       stacktrace: 
@@ -1007,12 +1007,12 @@ MonoBehaviour:
       - Uncategorized
       parentId: 1012
       parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Generic/Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.Generic.Tests.Tests_Exceptions][suite]
-    - id: 1019
+    - id: 1072
       uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/[Noise][suite]
       name: Noise
       fullName: Assets.SRC.ProceduralMapGeneration.Noise
       resultStatus: 1
-      duration: 0.0486559
+      duration: 0.0436291
       messages: 
       output: 
       stacktrace: 
@@ -1021,14 +1021,14 @@ MonoBehaviour:
       description: 
       isSuite: 1
       categories: []
-      parentId: 1016
+      parentId: 1069
       parentUniqueId: __Tests__.dll/Assets/SRC/[ProceduralMapGeneration][suite]
-    - id: 1020
+    - id: 1073
       uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Noise/[__Tests__][Assets.SRC.ProceduralMapGeneration.Noise.Tests][suite]
       name: Tests
       fullName: Assets.SRC.ProceduralMapGeneration.Noise.Tests
       resultStatus: 1
-      duration: 0.0400236
+      duration: 0.035341
       messages: 
       output: 
       stacktrace: 
@@ -1037,14 +1037,14 @@ MonoBehaviour:
       description: 
       isSuite: 1
       categories: []
-      parentId: 1019
+      parentId: 1072
       parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/[Noise][suite]
-    - id: 1011
+    - id: 1008
       uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Noise/Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.Noise.Tests.Test_PerlinNoiseGenerator][suite]
       name: Test_PerlinNoiseGenerator
       fullName: Assets.SRC.ProceduralMapGeneration.Noise.Tests.Test_PerlinNoiseGenerator
       resultStatus: 1
-      duration: 0.0369417
+      duration: 0.0347644
       messages: 
       output: 
       stacktrace: 
@@ -1053,14 +1053,14 @@ MonoBehaviour:
       description: 
       isSuite: 1
       categories: []
-      parentId: 1020
+      parentId: 1073
       parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Noise/[__Tests__][Assets.SRC.ProceduralMapGeneration.Noise.Tests][suite]
-    - id: 1012
+    - id: 1009
       uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Noise/Tests/Test_PerlinNoiseGenerator/[__Tests__][Assets.SRC.ProceduralMapGeneration.Noise.Tests.Test_PerlinNoiseGenerator.GeneratePerlinNoise2DTexture_Test]
       name: GeneratePerlinNoise2DTexture_Test
       fullName: Assets.SRC.ProceduralMapGeneration.Noise.Tests.Test_PerlinNoiseGenerator.GeneratePerlinNoise2DTexture_Test
       resultStatus: 1
-      duration: 0.0032781
+      duration: 0.0040163
       messages: 
       output: 
       stacktrace: 
@@ -1070,14 +1070,14 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1011
+      parentId: 1008
       parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Noise/Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.Noise.Tests.Test_PerlinNoiseGenerator][suite]
-    - id: 1017
+    - id: 1070
       uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/[PathFinding][suite]
       name: PathFinding
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding
       resultStatus: 4
-      duration: 0.9338563
+      duration: 0.926962
       messages: One or more child tests were ignored
       output: 
       stacktrace: 
@@ -1086,14 +1086,14 @@ MonoBehaviour:
       description: 
       isSuite: 1
       categories: []
-      parentId: 1016
+      parentId: 1069
       parentUniqueId: __Tests__.dll/Assets/SRC/[ProceduralMapGeneration][suite]
-    - id: 1018
+    - id: 1071
       uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/PathFinding/[__Tests__][Assets.SRC.ProceduralMapGeneration.PathFinding.Tests][suite]
       name: Tests
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests
       resultStatus: 4
-      duration: 0.9223477
+      duration: 0.9168892
       messages: One or more child tests were ignored
       output: 
       stacktrace: 
@@ -1102,14 +1102,14 @@ MonoBehaviour:
       description: 
       isSuite: 1
       categories: []
-      parentId: 1017
+      parentId: 1070
       parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/[PathFinding][suite]
-    - id: 1026
+    - id: 1045
       uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/PathFinding/Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_ChunkHandler+AssignChunkTypesTests][suite]
       name: Test_ChunkHandler+AssignChunkTypesTests
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_ChunkHandler+AssignChunkTypesTests
       resultStatus: 1
-      duration: 0.0729757
+      duration: 0.0740541
       messages: 
       output: 
       stacktrace: 
@@ -1118,14 +1118,14 @@ MonoBehaviour:
       description: 
       isSuite: 1
       categories: []
-      parentId: 1043
+      parentId: 1071
       parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/PathFinding/[__Tests__][Assets.SRC.ProceduralMapGeneration.PathFinding.Tests][suite]
-    - id: 1028
+    - id: 1047
       uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/PathFinding/Tests/Test_ChunkHandler+AssignChunkTypesTests/[__Tests__][Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_ChunkHandler+AssignChunkTypesTests.TestAssignChunkTypes_WithInvalidInput_ReturnsEmptyList]
       name: TestAssignChunkTypes_WithInvalidInput_ReturnsEmptyList
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_ChunkHandler+AssignChunkTypesTests.TestAssignChunkTypes_WithInvalidInput_ReturnsEmptyList
       resultStatus: 1
-      duration: 0.0033337
+      duration: 0.0028911
       messages: 
       output: 
       stacktrace: 
@@ -1135,14 +1135,14 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1026
+      parentId: 1045
       parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/PathFinding/Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_ChunkHandler+AssignChunkTypesTests][suite]
-    - id: 1027
+    - id: 1046
       uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/PathFinding/Tests/Test_ChunkHandler+AssignChunkTypesTests/[__Tests__][Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_ChunkHandler+AssignChunkTypesTests.TestAssignChunkTypes_WithValidInput_AssignsCorrectTypes]
       name: TestAssignChunkTypes_WithValidInput_AssignsCorrectTypes
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_ChunkHandler+AssignChunkTypesTests.TestAssignChunkTypes_WithValidInput_AssignsCorrectTypes
       resultStatus: 1
-      duration: 0.0089589
+      duration: 0.0071036
       messages: 
       output: 
       stacktrace: 
@@ -1152,14 +1152,14 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1026
+      parentId: 1045
       parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/PathFinding/Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_ChunkHandler+AssignChunkTypesTests][suite]
-    - id: 1023
+    - id: 1042
       uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/PathFinding/Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_ChunkHandler+FindChunkNeigborsTests][suite]
       name: Test_ChunkHandler+FindChunkNeigborsTests
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_ChunkHandler+FindChunkNeigborsTests
       resultStatus: 1
-      duration: 0.0876801
+      duration: 0.0831302
       messages: 
       output: 
       stacktrace: 
@@ -1168,14 +1168,14 @@ MonoBehaviour:
       description: 
       isSuite: 1
       categories: []
-      parentId: 1043
+      parentId: 1071
       parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/PathFinding/[__Tests__][Assets.SRC.ProceduralMapGeneration.PathFinding.Tests][suite]
-    - id: 1025
+    - id: 1044
       uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/PathFinding/Tests/Test_ChunkHandler+FindChunkNeigborsTests/[__Tests__][Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_ChunkHandler+FindChunkNeigborsTests.TestFindChunkNeigbors_WithInvalidInput_ReturnsEmptyList]
       name: TestFindChunkNeigbors_WithInvalidInput_ReturnsEmptyList
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_ChunkHandler+FindChunkNeigborsTests.TestFindChunkNeigbors_WithInvalidInput_ReturnsEmptyList
       resultStatus: 1
-      duration: 0.0002995
+      duration: 0.0003444
       messages: 
       output: 
       stacktrace: 
@@ -1185,14 +1185,14 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1023
+      parentId: 1042
       parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/PathFinding/Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_ChunkHandler+FindChunkNeigborsTests][suite]
-    - id: 1024
+    - id: 1043
       uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/PathFinding/Tests/Test_ChunkHandler+FindChunkNeigborsTests/[__Tests__][Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_ChunkHandler+FindChunkNeigborsTests.TestFindChunkNeigbors_WithValidInput_ReturnsCorrectNeighbors]
       name: TestFindChunkNeigbors_WithValidInput_ReturnsCorrectNeighbors
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_ChunkHandler+FindChunkNeigborsTests.TestFindChunkNeigbors_WithValidInput_ReturnsCorrectNeighbors
       resultStatus: 1
-      duration: 0.0142019
+      duration: 0.0094383
       messages: 
       output: 
       stacktrace: 
@@ -1202,14 +1202,14 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1023
+      parentId: 1042
       parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/PathFinding/Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_ChunkHandler+FindChunkNeigborsTests][suite]
-    - id: 1029
+    - id: 1048
       uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/PathFinding/Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_ChunkHandler+GenericTestsForChunkHandle][suite]
       name: Test_ChunkHandler+GenericTestsForChunkHandle
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_ChunkHandler+GenericTestsForChunkHandle
       resultStatus: 1
-      duration: 0.0913269
+      duration: 0.0903466
       messages: 
       output: 
       stacktrace: 
@@ -1218,14 +1218,14 @@ MonoBehaviour:
       description: 
       isSuite: 1
       categories: []
-      parentId: 1046
+      parentId: 1071
       parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/PathFinding/[__Tests__][Assets.SRC.ProceduralMapGeneration.PathFinding.Tests][suite]
-    - id: 1030
+    - id: 1049
       uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/PathFinding/Tests/Test_ChunkHandler+GenericTestsForChunkHandle/[__Tests__][Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_ChunkHandler+GenericTestsForChunkHandle.Error_Error]
       name: Error_Error
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_ChunkHandler+GenericTestsForChunkHandle.Error_Error
       resultStatus: 1
-      duration: 0.0178909
+      duration: 0.0166703
       messages: 
       output: 
       stacktrace: 
@@ -1235,14 +1235,14 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1029
+      parentId: 1048
       parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/PathFinding/Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_ChunkHandler+GenericTestsForChunkHandle][suite]
-    - id: 1032
+    - id: 1050
       uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/PathFinding/Tests/Test_ChunkHandler+GenericTestsForChunkHandle/[__Tests__][Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_ChunkHandler+GenericTestsForChunkHandle.Return_Collapsed]
       name: Return_Collapsed
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_ChunkHandler+GenericTestsForChunkHandle.Return_Collapsed
       resultStatus: 1
-      duration: 0.0032102
+      duration: 0.0028594
       messages: 
       output: 
       stacktrace: 
@@ -1252,14 +1252,14 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1029
+      parentId: 1048
       parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/PathFinding/Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_ChunkHandler+GenericTestsForChunkHandle][suite]
     - id: 1001
       uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/PathFinding/Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewNode][suite]
       name: Test_NewNode
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewNode
       resultStatus: 1
-      duration: 0.1167107
+      duration: 0.1052075
       messages: 
       output: 
       stacktrace: 
@@ -1268,14 +1268,14 @@ MonoBehaviour:
       description: 
       isSuite: 1
       categories: []
-      parentId: 1018
+      parentId: 1071
       parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/PathFinding/[__Tests__][Assets.SRC.ProceduralMapGeneration.PathFinding.Tests][suite]
     - id: 1002
       uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/PathFinding/Tests/Test_NewNode/[__Tests__][Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewNode.Should_Create_A_New_Node_With_A_Position]
       name: Should_Create_A_New_Node_With_A_Position
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewNode.Should_Create_A_New_Node_With_A_Position
       resultStatus: 1
-      duration: 0.0051166
+      duration: 0.0022591
       messages: 
       output: 
       stacktrace: 
@@ -1292,7 +1292,7 @@ MonoBehaviour:
       name: Should_Have_A_Default_Cost_Of_Zero
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewNode.Should_Have_A_Default_Cost_Of_Zero
       resultStatus: 1
-      duration: 0.0003538
+      duration: 0.0003343
       messages: 
       output: 
       stacktrace: 
@@ -1309,7 +1309,7 @@ MonoBehaviour:
       name: Should_Have_A_Default_Heuristic_Cost_Of_Zero
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewNode.Should_Have_A_Default_Heuristic_Cost_Of_Zero
       resultStatus: 1
-      duration: 0.000289
+      duration: 0.0002791
       messages: 
       output: 
       stacktrace: 
@@ -1326,7 +1326,7 @@ MonoBehaviour:
       name: Should_Not_Be_Closed_ByDefault
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewNode.Should_Not_Be_Closed_ByDefault
       resultStatus: 1
-      duration: 0.0002807
+      duration: 0.0003055
       messages: 
       output: 
       stacktrace: 
@@ -1343,7 +1343,7 @@ MonoBehaviour:
       name: Should_Not_Have_A_LastNode_ByDefault
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewNode.Should_Not_Have_A_LastNode_ByDefault
       resultStatus: 1
-      duration: 0.000291
+      duration: 0.0002934
       messages: 
       output: 
       stacktrace: 
@@ -1360,7 +1360,7 @@ MonoBehaviour:
       name: Should_Not_Have_An_Empty_List_Of_Neighbors_ByDefault
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewNode.Should_Not_Have_An_Empty_List_Of_Neighbors_ByDefault
       resultStatus: 1
-      duration: 0.0003844
+      duration: 0.000352
       messages: 
       output: 
       stacktrace: 
@@ -1377,7 +1377,7 @@ MonoBehaviour:
       name: Test_NewPathFinding+ConvertPathToPositionsTests
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+ConvertPathToPositionsTests
       resultStatus: 1
-      duration: 0.1028572
+      duration: 0.1138069
       messages: 
       output: 
       stacktrace: 
@@ -1393,7 +1393,7 @@ MonoBehaviour:
       name: TestConvertPathToPositions_WithEmptyGeneratedList_ReturnsEmptyList
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+ConvertPathToPositionsTests.TestConvertPathToPositions_WithEmptyGeneratedList_ReturnsEmptyList
       resultStatus: 1
-      duration: 0.0006452
+      duration: 0.0006882
       messages: 
       output: 
       stacktrace: 
@@ -1410,7 +1410,7 @@ MonoBehaviour:
       name: TestConvertPathToPositions_WithGeneratedListWithNoPositions_ReturnsEmptyList
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+ConvertPathToPositionsTests.TestConvertPathToPositions_WithGeneratedListWithNoPositions_ReturnsEmptyList
       resultStatus: 1
-      duration: 0.0003914
+      duration: 0.0004304
       messages: 
       output: 
       stacktrace: 
@@ -1427,7 +1427,7 @@ MonoBehaviour:
       name: TestConvertPathToPositions_WithValidGeneratedList_ReturnsPositions
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+ConvertPathToPositionsTests.TestConvertPathToPositions_WithValidGeneratedList_ReturnsPositions
       resultStatus: 1
-      duration: 0.0021982
+      duration: 0.0026109
       messages: 
       output: 
       stacktrace: 
@@ -1444,7 +1444,7 @@ MonoBehaviour:
       name: Test_NewPathFinding+FindActiveNodeTests
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+FindActiveNodeTests
       resultStatus: 4
-      duration: 0.0154226
+      duration: 0.0098179
       messages: One or more child tests were ignored
       output: 
       stacktrace: 
@@ -1455,12 +1455,12 @@ MonoBehaviour:
       categories: []
       parentId: 1071
       parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/PathFinding/[__Tests__][Assets.SRC.ProceduralMapGeneration.PathFinding.Tests][suite]
-    - id: 1033
+    - id: 1191
       uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/PathFinding/Tests/Test_NewPathFinding+FindActiveNodeTests/[__Tests__][Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+FindActiveNodeTests.TestFindActiveNode_WithActiveNodeWithNeighborsButNoValidEndPos_ReturnsNull]
       name: TestFindActiveNode_WithActiveNodeWithNeighborsButNoValidEndPos_ReturnsNull
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+FindActiveNodeTests.TestFindActiveNode_WithActiveNodeWithNeighborsButNoValidEndPos_ReturnsNull
-      resultStatus: 0
-      duration: 0
+      resultStatus: 4
+      duration: 0.0002752
       messages: Linq Error resulting in a null ref
       output: 
       stacktrace: 
@@ -1470,14 +1470,14 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1030
+      parentId: 1188
       parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/PathFinding/Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+FindActiveNodeTests][suite]
-    - id: 1032
+    - id: 1190
       uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/PathFinding/Tests/Test_NewPathFinding+FindActiveNodeTests/[__Tests__][Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+FindActiveNodeTests.TestFindActiveNode_WithActiveNodeWithNoNeighbors_ReturnsNull]
       name: TestFindActiveNode_WithActiveNodeWithNoNeighbors_ReturnsNull
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+FindActiveNodeTests.TestFindActiveNode_WithActiveNodeWithNoNeighbors_ReturnsNull
-      resultStatus: 0
-      duration: 0
+      resultStatus: 4
+      duration: 0.0000032
       messages: Linq Error resulting in a null ref
       output: 
       stacktrace: 
@@ -1487,14 +1487,14 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1030
+      parentId: 1188
       parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/PathFinding/Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+FindActiveNodeTests][suite]
-    - id: 1031
+    - id: 1189
       uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/PathFinding/Tests/Test_NewPathFinding+FindActiveNodeTests/[__Tests__][Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+FindActiveNodeTests.TestFindActiveNode_WithValidActiveNodeAndEndPos_ReturnsActiveNode]
       name: TestFindActiveNode_WithValidActiveNodeAndEndPos_ReturnsActiveNode
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+FindActiveNodeTests.TestFindActiveNode_WithValidActiveNodeAndEndPos_ReturnsActiveNode
-      resultStatus: 0
-      duration: 0
+      resultStatus: 4
+      duration: 0.000003
       messages: Linq Error resulting in a null ref
       output: 
       stacktrace: 
@@ -1504,14 +1504,14 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1030
+      parentId: 1188
       parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/PathFinding/Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+FindActiveNodeTests][suite]
-    - id: 1015
+    - id: 1016
       uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/PathFinding/Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+FindEnds][suite]
       name: Test_NewPathFinding+FindEnds
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+FindEnds
       resultStatus: 1
-      duration: 0.1385137
+      duration: 0.1419726
       messages: 
       output: 
       stacktrace: 
@@ -1520,14 +1520,14 @@ MonoBehaviour:
       description: 
       isSuite: 1
       categories: []
-      parentId: 1040
+      parentId: 1071
       parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/PathFinding/[__Tests__][Assets.SRC.ProceduralMapGeneration.PathFinding.Tests][suite]
-    - id: 1017
+    - id: 1018
       uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/PathFinding/Tests/Test_NewPathFinding+FindEnds/[__Tests__][Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+FindEnds.Should_Return_A_List_Of_Two_Different_Vector3s_When_Given_A_List_Of_Vector3s]
       name: Should_Return_A_List_Of_Two_Different_Vector3s_When_Given_A_List_Of_Vector3s
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+FindEnds.Should_Return_A_List_Of_Two_Different_Vector3s_When_Given_A_List_Of_Vector3s
       resultStatus: 1
-      duration: 0.0700571
+      duration: 0.0753786
       messages: 
       output: 
       stacktrace: 
@@ -1537,14 +1537,14 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1015
+      parentId: 1016
       parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/PathFinding/Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+FindEnds][suite]
-    - id: 1016
+    - id: 1017
       uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/PathFinding/Tests/Test_NewPathFinding+FindEnds/[__Tests__][Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+FindEnds.Should_Return_A_List_Of_Two_Vector3s_When_Given_A_List_Of_Vector3s]
       name: Should_Return_A_List_Of_Two_Vector3s_When_Given_A_List_Of_Vector3s
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+FindEnds.Should_Return_A_List_Of_Two_Vector3s_When_Given_A_List_Of_Vector3s
       resultStatus: 1
-      duration: 0.0005303
+      duration: 0.0005736
       messages: 
       output: 
       stacktrace: 
@@ -1554,14 +1554,14 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1015
+      parentId: 1016
       parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/PathFinding/Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+FindEnds][suite]
-    - id: 1018
+    - id: 1019
       uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/PathFinding/Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+Findpath][suite]
       name: Test_NewPathFinding+Findpath
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+Findpath
       resultStatus: 1
-      duration: 0.1397645
+      duration: 0.1459049
       messages: 
       output: 
       stacktrace: 
@@ -1570,14 +1570,14 @@ MonoBehaviour:
       description: 
       isSuite: 1
       categories: []
-      parentId: 1040
+      parentId: 1071
       parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/PathFinding/[__Tests__][Assets.SRC.ProceduralMapGeneration.PathFinding.Tests][suite]
-    - id: 1020
+    - id: 1021
       uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/PathFinding/Tests/Test_NewPathFinding+Findpath/[__Tests__][Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+Findpath.EmptyGrid]
       name: EmptyGrid
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+Findpath.EmptyGrid
       resultStatus: 1
-      duration: 0.0019737
+      duration: 0.0023164
       messages: 
       output: 
       stacktrace: 
@@ -1587,14 +1587,14 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1018
+      parentId: 1019
       parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/PathFinding/Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+Findpath][suite]
-    - id: 1022
+    - id: 1023
       uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/PathFinding/Tests/Test_NewPathFinding+Findpath/[__Tests__][Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+Findpath.EmptyPositions]
       name: EmptyPositions
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+Findpath.EmptyPositions
       resultStatus: 1
-      duration: 0.0016671
+      duration: 0.0022759
       messages: 
       output: 
       stacktrace: 
@@ -1604,14 +1604,14 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1018
+      parentId: 1019
       parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/PathFinding/Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+Findpath][suite]
-    - id: 1019
+    - id: 1020
       uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/PathFinding/Tests/Test_NewPathFinding+Findpath/[__Tests__][Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+Findpath.NullGrid]
       name: NullGrid
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+Findpath.NullGrid
       resultStatus: 1
-      duration: 0.0014985
+      duration: 0.0022551
       messages: 
       output: 
       stacktrace: 
@@ -1621,14 +1621,14 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1018
+      parentId: 1019
       parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/PathFinding/Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+Findpath][suite]
-    - id: 1021
+    - id: 1022
       uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/PathFinding/Tests/Test_NewPathFinding+Findpath/[__Tests__][Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+Findpath.NullPositions]
       name: NullPositions
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+Findpath.NullPositions
       resultStatus: 1
-      duration: 0.0016739
+      duration: 0.002341
       messages: 
       output: 
       stacktrace: 
@@ -1638,14 +1638,14 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1018
+      parentId: 1019
       parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/PathFinding/Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+Findpath][suite]
     - id: 1024
       uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/PathFinding/Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+FindpathTests][suite]
       name: Test_NewPathFinding+FindpathTests
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+FindpathTests
       resultStatus: 4
-      duration: 0.137869
+      duration: 0.1352932
       messages: One or more child tests were ignored
       output: 
       stacktrace: 
@@ -1654,14 +1654,14 @@ MonoBehaviour:
       description: 
       isSuite: 1
       categories: []
-      parentId: 1059
+      parentId: 1071
       parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/PathFinding/[__Tests__][Assets.SRC.ProceduralMapGeneration.PathFinding.Tests][suite]
     - id: 1027
       uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/PathFinding/Tests/Test_NewPathFinding+FindpathTests/[__Tests__][Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+FindpathTests.TestFindpath_WithEmptyGrid_ThrowsArgumentNullException]
       name: TestFindpath_WithEmptyGrid_ThrowsArgumentNullException
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+FindpathTests.TestFindpath_WithEmptyGrid_ThrowsArgumentNullException
       resultStatus: 1
-      duration: 0.0005096
+      duration: 0.0004886
       messages: 
       output: 
       stacktrace: 
@@ -1678,7 +1678,7 @@ MonoBehaviour:
       name: TestFindpath_WithEmptyPositions_ThrowsArgumentNullException
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+FindpathTests.TestFindpath_WithEmptyPositions_ThrowsArgumentNullException
       resultStatus: 1
-      duration: 0.0005073
+      duration: 0.0005479
       messages: 
       output: 
       stacktrace: 
@@ -1695,7 +1695,7 @@ MonoBehaviour:
       name: TestFindpath_WithNullGrid_ThrowsArgumentNullException
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+FindpathTests.TestFindpath_WithNullGrid_ThrowsArgumentNullException
       resultStatus: 1
-      duration: 0.0001592
+      duration: 0.0006207
       messages: 
       output: 
       stacktrace: 
@@ -1712,7 +1712,7 @@ MonoBehaviour:
       name: TestFindpath_WithNullPositions_ThrowsArgumentNullException
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+FindpathTests.TestFindpath_WithNullPositions_ThrowsArgumentNullException
       resultStatus: 1
-      duration: 0.0006656
+      duration: 0.0005342
       messages: 
       output: 
       stacktrace: 
@@ -1724,12 +1724,12 @@ MonoBehaviour:
       - Uncategorized
       parentId: 1024
       parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/PathFinding/Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+FindpathTests][suite]
-    - id: 1025
+    - id: 1183
       uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/PathFinding/Tests/Test_NewPathFinding+FindpathTests/[__Tests__][Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+FindpathTests.TestFindpath_WithValidGridAndPositions_ReturnsPath]
       name: TestFindpath_WithValidGridAndPositions_ReturnsPath
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+FindpathTests.TestFindpath_WithValidGridAndPositions_ReturnsPath
-      resultStatus: 0
-      duration: 0
+      resultStatus: 4
+      duration: 0.0000061
       messages: Linq Error resulting in a null ref
       output: 
       stacktrace: 
@@ -1739,14 +1739,14 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1024
+      parentId: 1182
       parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/PathFinding/Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+FindpathTests][suite]
     - id: 1034
       uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/PathFinding/Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+GeneratePathTests][suite]
       name: Test_NewPathFinding+GeneratePathTests
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+GeneratePathTests
       resultStatus: 4
-      duration: 0.0100082
+      duration: 0.0128354
       messages: One or more child tests were ignored
       output: 
       stacktrace: 
@@ -1757,12 +1757,12 @@ MonoBehaviour:
       categories: []
       parentId: 1071
       parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/PathFinding/[__Tests__][Assets.SRC.ProceduralMapGeneration.PathFinding.Tests][suite]
-    - id: 1036
+    - id: 1194
       uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/PathFinding/Tests/Test_NewPathFinding+GeneratePathTests/[__Tests__][Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+GeneratePathTests.TestGeneratePath_WithActiveNodeWithNoLastNode_ReturnsEmptyList]
       name: TestGeneratePath_WithActiveNodeWithNoLastNode_ReturnsEmptyList
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+GeneratePathTests.TestGeneratePath_WithActiveNodeWithNoLastNode_ReturnsEmptyList
-      resultStatus: 0
-      duration: 0
+      resultStatus: 4
+      duration: 0.0000063
       messages: Linq Error resulting in a null ref
       output: 
       stacktrace: 
@@ -1772,14 +1772,14 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1034
+      parentId: 1192
       parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/PathFinding/Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+GeneratePathTests][suite]
-    - id: 1037
+    - id: 1195
       uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/PathFinding/Tests/Test_NewPathFinding+GeneratePathTests/[__Tests__][Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+GeneratePathTests.TestGeneratePath_WithActiveNodeWithNoValidStartPos_ReturnsEmptyList]
       name: TestGeneratePath_WithActiveNodeWithNoValidStartPos_ReturnsEmptyList
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+GeneratePathTests.TestGeneratePath_WithActiveNodeWithNoValidStartPos_ReturnsEmptyList
-      resultStatus: 0
-      duration: 0
+      resultStatus: 4
+      duration: 0.0000036
       messages: Linq Error resulting in a null ref
       output: 
       stacktrace: 
@@ -1789,14 +1789,14 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1034
+      parentId: 1192
       parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/PathFinding/Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+GeneratePathTests][suite]
-    - id: 1035
+    - id: 1193
       uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/PathFinding/Tests/Test_NewPathFinding+GeneratePathTests/[__Tests__][Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+GeneratePathTests.TestGeneratePath_WithValidActiveNodeAndStartPos_ReturnsPath]
       name: TestGeneratePath_WithValidActiveNodeAndStartPos_ReturnsPath
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+GeneratePathTests.TestGeneratePath_WithValidActiveNodeAndStartPos_ReturnsPath
-      resultStatus: 0
-      duration: 0
+      resultStatus: 4
+      duration: 0.0000028
       messages: Linq Error resulting in a null ref
       output: 
       stacktrace: 
@@ -1806,9 +1806,9 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1034
+      parentId: 1192
       parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/PathFinding/Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+GeneratePathTests][suite]
-    m_ResultText: TestFindpath_WithNullGrid_ThrowsArgumentNullException (0,000s)
+    m_ResultText: TestFindpath_WithNullGrid_ThrowsArgumentNullException (0,001s)
     m_ResultStacktrace: 
     m_TestListState:
       scrollPos: {x: 0, y: 398}
@@ -1861,8 +1861,8 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: -32000
-    y: -31970
+    x: -1920
+    y: 73
     width: 199
     height: 918
   m_ViewDataDictionary: {fileID: 0}
@@ -1897,7 +1897,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 526c0000
     m_LastClickedID: 27730
-    m_ExpandedIDs: 00000000e8880000ea880000ec880000ee880000f0880000f2880000f4880000f6880000
+    m_ExpandedIDs: 00000000386b00003a6b00003c6b00003e6b0000406b0000426b0000446b0000466b0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1925,7 +1925,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: ffffffff00000000e8880000ea880000ec880000ee880000f0880000f2880000f4880000f6880000
+    m_ExpandedIDs: ffffffff00000000386b00003a6b00003c6b00003e6b0000406b0000426b0000446b0000466b0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -2002,8 +2002,8 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: -30281
-    y: -31970
+    x: -201
+    y: 73
     width: 200
     height: 605
   m_ViewDataDictionary: {fileID: 0}
@@ -2045,8 +2045,8 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: -31800
-    y: -31970
+    x: -1720
+    y: 73
     width: 208
     height: 918
   m_ViewDataDictionary: {fileID: 0}
@@ -2059,7 +2059,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 0e23fffff024ffff7a2dffff1032ffff5442ffffb843ffffb246ffff5e4cffff9052ffff6e57fffffe5bffff3c60ffffe264ffff9c67ffff3c73ffff2077ffff767bffffdc80ffff0e84ffff2089ffff908cffff0690ffff3893ffff5e95ffff6099ffff0a9dffff6e9effff829fffff86a3ffff06a9fffff0adfffff4bcffffdabfffffc8c3ffff6ec5fffff4ebffff9eeeffff08f0ffff4ef3ffff1af6ffff20fbffff
+      m_ExpandedIDs: 40d3ffff60d8ffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -2104,8 +2104,8 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: -31590
-    y: -31970
+    x: -1510
+    y: 73
     width: 1307
     height: 464
   m_ViewDataDictionary: {fileID: 0}
@@ -2444,8 +2444,8 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: -30281
-    y: -31344
+    x: -201
+    y: 699
     width: 200
     height: 292
   m_ViewDataDictionary: {fileID: 0}
@@ -2538,8 +2538,8 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: -30922
-    y: -31485
+    x: -842
+    y: 558
     width: 639
     height: 433
   m_ViewDataDictionary: {fileID: 0}
