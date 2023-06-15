@@ -22,7 +22,7 @@
               <Name>System.Single Assets.SRC.ProceduralMapGeneration.Assets.SRC.Shared.Assets.SRC.Shared.Utilities.VectorMath::CalculateDistanceBetweenTwoVectors(UnityEngine.Vector3, UnityEngine.Vector3)</Name>
               <FileRef uid="11" />
               <SequencePoints>
-                <SequencePoint vc="1" uspid="4951" ordinal="0" offset="0" sl="7" sc="84" el="7" ec="84" bec="0" bev="0" fileid="11">
+                <SequencePoint vc="1" uspid="5042" ordinal="0" offset="0" sl="7" sc="84" el="7" ec="84" bec="0" bev="0" fileid="11">
                   <TrackedMethodRefs>
                     <TrackedMethodRef uid="0" vc="1" />
                   </TrackedMethodRefs>

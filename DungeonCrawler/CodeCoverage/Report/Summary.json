@@ -1,32 +1,32 @@
 {
   "summary": {
-    "generatedon": "2023-06-11T15:15:03Z",
-    "parser": "MultiReportParser (121x OpenCoverParser)",
+    "generatedon": "2023-06-15T20:12:51Z",
+    "parser": "MultiReportParser (123x OpenCoverParser)",
     "assemblies": 2,
     "classes": 12,
     "files": 12,
-    "coveredlines": 305,
-    "uncoveredlines": 14,
-    "coverablelines": 319,
-    "totallines": 756,
-    "linecoverage": 95.6,
+    "coveredlines": 309,
+    "uncoveredlines": 15,
+    "coverablelines": 324,
+    "totallines": 734,
+    "linecoverage": 95.3,
     "coveredbranches": 0,
     "totalbranches": 0,
-    "coveredmethods": 46,
-    "totalmethods": 48,
-    "methodcoverage": 95.8
+    "coveredmethods": 47,
+    "totalmethods": 49,
+    "methodcoverage": 95.9
  },
   "coverage": {
     "assemblies": [
-      { "name": "ProceduralMapGenerationAssembly", "classes": 9, "coverage": 95.4, "coveredlines": 293, "coverablelines": 307, "totallines": 698, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 95.5, "coveredmethods": 43, "totalmethods": 45, "classesinassembly": [
+      { "name": "ProceduralMapGenerationAssembly", "classes": 9, "coverage": 95.1, "coveredlines": 297, "coverablelines": 312, "totallines": 676, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 95.6, "coveredmethods": 44, "totalmethods": 46, "classesinassembly": [
         { "name": "Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.PathFinding.NewPathFinding", "coverage": 98.2, "coveredlines": 110, "coverablelines": 112, "totallines": 184, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 92.3, "coveredmethods": 12, "totalmethods": 13 },
-        { "name": "Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.PathFinding.PathMapBuilder", "coverage": 82.8, "coveredlines": 29, "coverablelines": 35, "totallines": 56, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 75, "coveredmethods": 3, "totalmethods": 4 },
+        { "name": "Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.PathFinding.PathMapBuilder", "coverage": 82.8, "coveredlines": 29, "coverablelines": 35, "totallines": 58, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 75, "coveredmethods": 3, "totalmethods": 4 },
         { "name": "Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Noise.PerlinNoiseGenerator", "coverage": 100, "coveredlines": 13, "coverablelines": 13, "totallines": 29, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 100, "coveredmethods": 1, "totalmethods": 1 },
         { "name": "Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.ScriptableObjects.DirectionalTilesScriptableObject", "coverage": 100, "coveredlines": 3, "coverablelines": 3, "totallines": 146, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 100, "coveredmethods": 1, "totalmethods": 1 },
         { "name": "Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Structs.DirectionIDStruct", "coverage": 100, "coveredlines": 6, "coverablelines": 6, "totallines": 12, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 100, "coveredmethods": 12, "totalmethods": 12 },
         { "name": "Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Structs.MapBuilderStruct", "coverage": 100, "coveredlines": 3, "coverablelines": 3, "totallines": 12, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 100, "coveredmethods": 6, "totalmethods": 6 },
         { "name": "Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Utilities.ChunkHandler", "coverage": 100, "coveredlines": 72, "coverablelines": 72, "totallines": 111, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 100, "coveredmethods": 3, "totalmethods": 3 },
-        { "name": "Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Utilities.GridCreate", "coverage": 100, "coveredlines": 51, "coverablelines": 51, "totallines": 113, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 100, "coveredmethods": 4, "totalmethods": 4 },
+        { "name": "Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Utilities.GridCreate", "coverage": 98.2, "coveredlines": 55, "coverablelines": 56, "totallines": 89, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 100, "coveredmethods": 5, "totalmethods": 5 },
         { "name": "Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Utilities.PopulateTilePositions", "coverage": 50, "coveredlines": 6, "coverablelines": 12, "totallines": 35, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 100, "coveredmethods": 1, "totalmethods": 1 } ] },
       { "name": "SharedAssembly", "classes": 3, "coverage": 100, "coveredlines": 12, "coverablelines": 12, "totallines": 58, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 100, "coveredmethods": 3, "totalmethods": 3, "classesinassembly": [
         { "name": "Assets.SRC.ProceduralMapGeneration.Assets.SRC.Shared.Assets.SRC.Shared.Utilities.GenericUtilities", "coverage": 100, "coveredlines": 9, "coverablelines": 9, "totallines": 36, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 100, "coveredmethods": 1, "totalmethods": 1 },

@@ -1,4 +1,5 @@
 using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.PathFinding;
+using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Enums;
 using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.ScriptableObjects;
 using FluentAssertions;
 using NUnit.Framework;
@@ -55,8 +56,10 @@ namespace Assets.SRC.ProceduralMapGeneration.PathFinding.Tests
             Assert.That(mapTotal.All(p => p.y == 2 || p.y == 5 || p.y == 8));
             Assert.That(mapTotal.All(p => p.z == 3 || p.z == 6 || p.z == 9));
         }
-        [Test]
-        public void CreateMap_ShouldCreateAMapWithTheSpecifiedSizeAndFillPercentage()
+        [TestCase(GridTypeEnum.ThreeDimention)]
+        [TestCase(GridTypeEnum.TwoDimentionHorizontal)]
+        [TestCase(GridTypeEnum.TwoDimentionVertical)]
+        public void CreateMap_ShouldCreateAMapWithTheSpecifiedSizeAndFillPercentage(GridTypeEnum gridType)
         {
             // Arrange
             int gridSize = 3;
@@ -65,7 +68,7 @@ namespace Assets.SRC.ProceduralMapGeneration.PathFinding.Tests
             DirectionalTilesScriptableObject scriptRef = new DirectionalTilesScriptableObject();
             int mapTotalFillPercentage = 1;
             // Act
-            pathMapBuilder.CreateMap(gridSize, gridScale, gridParent.transform, scriptRef, mapTotalFillPercentage);
+            pathMapBuilder.CreateMap(gridSize, gridScale, gridParent.transform, scriptRef, mapTotalFillPercentage, gridType);
             // Assert
             Assert.Pass();
 
