@@ -1,21 +1,21 @@
 ﻿# Summary
 |||
 |:---|:---|
-| Generated on: | 2023/06/16 - 3:06:25 PM |
-| Parser: | MultiReportParser (122x OpenCoverParser) |
+| Generated on: | 2023/06/16 - 8:57:55 PM |
+| Parser: | MultiReportParser (123x OpenCoverParser) |
 | Assemblies: | 2 |
-| Classes: | 14 |
-| Files: | 14 |
+| Classes: | 16 |
+| Files: | 16 |
 | Covered lines: | 306 |
-| Uncovered lines: | 29 |
-| Coverable lines: | 335 |
-| Total lines: | 777 |
-| Line coverage: | 91.3% (306 of 335) |
+| Uncovered lines: | 45 |
+| Coverable lines: | 351 |
+| Total lines: | 825 |
+| Line coverage: | 87.1% (306 of 351) |
 | Covered branches: | 0 |
 | Total branches: | 0 |
 | Covered methods: | 47 |
-| Total methods: | 53 |
-| Method coverage: | 88.6% (47 of 53) |
+| Total methods: | 58 |
+| Method coverage: | 81% (47 of 58) |
 
 |**Name**|**Covered**|**Uncovered**|**Coverable**|**Total**|**Line coverage**|**Covered**|**Total**|**Branch coverage**|**Covered**|**Total**|**Method coverage**|
 |:---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
@@ -29,9 +29,11 @@
 |Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Utilities.ChunkHandler|72|0|72|113|100%|0|0||3|3|100%|
 |Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Utilities.GridCreate|55|1|56|87|98.2%|0|0||5|5|100%|
 |Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Utilities.PopulateTilePositions|6|6|12|35|50%|0|0||1|1|100%|
-|**SharedAssembly**|**12**|**14**|**26**|**98**|**46.1%**|**0**|**0**|****|**3**|**7**|**42.8%**|
+|**SharedAssembly**|**12**|**30**|**42**|**146**|**28.5%**|**0**|**0**|****|**3**|**12**|**25%**|
 |Assets.SRC.ProceduralMapGeneration.Assets.SRC.Shared.ActivateReflectionProbe|0|10|10|27|0%|0|0||0|3|0%|
 |Assets.SRC.ProceduralMapGeneration.Assets.SRC.Shared.Assets.SRC.Shared.Utilities.GenericUtilities|9|0|9|36|100%|0|0||1|1|100%|
 |Assets.SRC.ProceduralMapGeneration.Assets.SRC.Shared.Assets.SRC.Shared.Utilities.VectorMath|1|0|1|9|100%|0|0||1|1|100%|
+|Assets.SRC.ProceduralMapGeneration.Assets.SRC.Shared.BlinkMaterielEmission|0|7|7|23|0%|0|0||0|2|0%|
 |Assets.SRC.ProceduralMapGeneration.Assets.SRC.Shared.ClearChildren|0|4|4|13|0%|0|0||0|1|0%|
 |Assets.SRC.ProceduralMapGeneration.Assets.SRC.Shared.Exceptions.CustomExceptions|2|0|2|13|100%|0|0||1|1|100%|
+|Assets.SRC.ProceduralMapGeneration.Assets.SRC.Shared.LightControl|0|9|9|25|0%|0|0||0|3|0%|

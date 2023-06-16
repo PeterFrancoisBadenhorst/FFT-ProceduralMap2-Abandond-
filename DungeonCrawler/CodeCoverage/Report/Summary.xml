@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <CoverageReport scope="Summary">
   <Summary>
-    <Generatedon>2023/06/16 - 3:06:25 PM</Generatedon>
-    <Parser>MultiReportParser (122x OpenCoverParser)</Parser>
+    <Generatedon>2023/06/16 - 8:57:55 PM</Generatedon>
+    <Parser>MultiReportParser (123x OpenCoverParser)</Parser>
     <Assemblies>2</Assemblies>
-    <Classes>14</Classes>
-    <Files>14</Files>
+    <Classes>16</Classes>
+    <Files>16</Files>
     <Coveredlines>306</Coveredlines>
-    <Uncoveredlines>29</Uncoveredlines>
-    <Coverablelines>335</Coverablelines>
-    <Totallines>777</Totallines>
-    <Linecoverage>91.3</Linecoverage>
+    <Uncoveredlines>45</Uncoveredlines>
+    <Coverablelines>351</Coverablelines>
+    <Totallines>825</Totallines>
+    <Linecoverage>87.1</Linecoverage>
     <Coveredbranches>0</Coveredbranches>
     <Totalbranches>0</Totalbranches>
     <Coveredmethods>47</Coveredmethods>
-    <Totalmethods>53</Totalmethods>
-    <Methodcoverage>88.6</Methodcoverage>
+    <Totalmethods>58</Totalmethods>
+    <Methodcoverage>81</Methodcoverage>
   </Summary>
   <Coverage>
     <Assembly name="ProceduralMapGenerationAssembly" classes="9" coverage="95.1" coveredlines="294" coverablelines="309" totallines="679" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="44" totalmethods="46" methodcoverage="95.6">
@@ -29,12 +29,14 @@
       <Class name="Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Utilities.GridCreate" coverage="98.2" coveredlines="55" coverablelines="56" totallines="87" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="5" totalmethods="5" methodcoverage="100" />
       <Class name="Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Utilities.PopulateTilePositions" coverage="50" coveredlines="6" coverablelines="12" totallines="35" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="1" totalmethods="1" methodcoverage="100" />
     </Assembly>
-    <Assembly name="SharedAssembly" classes="5" coverage="46.1" coveredlines="12" coverablelines="26" totallines="98" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="3" totalmethods="7" methodcoverage="42.8">
+    <Assembly name="SharedAssembly" classes="7" coverage="28.5" coveredlines="12" coverablelines="42" totallines="146" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="3" totalmethods="12" methodcoverage="25">
       <Class name="Assets.SRC.ProceduralMapGeneration.Assets.SRC.Shared.ActivateReflectionProbe" coverage="0" coveredlines="0" coverablelines="10" totallines="27" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="3" methodcoverage="0" />
       <Class name="Assets.SRC.ProceduralMapGeneration.Assets.SRC.Shared.Assets.SRC.Shared.Utilities.GenericUtilities" coverage="100" coveredlines="9" coverablelines="9" totallines="36" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="1" totalmethods="1" methodcoverage="100" />
       <Class name="Assets.SRC.ProceduralMapGeneration.Assets.SRC.Shared.Assets.SRC.Shared.Utilities.VectorMath" coverage="100" coveredlines="1" coverablelines="1" totallines="9" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="1" totalmethods="1" methodcoverage="100" />
+      <Class name="Assets.SRC.ProceduralMapGeneration.Assets.SRC.Shared.BlinkMaterielEmission" coverage="0" coveredlines="0" coverablelines="7" totallines="23" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="2" methodcoverage="0" />
       <Class name="Assets.SRC.ProceduralMapGeneration.Assets.SRC.Shared.ClearChildren" coverage="0" coveredlines="0" coverablelines="4" totallines="13" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="1" methodcoverage="0" />
       <Class name="Assets.SRC.ProceduralMapGeneration.Assets.SRC.Shared.Exceptions.CustomExceptions" coverage="100" coveredlines="2" coverablelines="2" totallines="13" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="1" totalmethods="1" methodcoverage="100" />
+      <Class name="Assets.SRC.ProceduralMapGeneration.Assets.SRC.Shared.LightControl" coverage="0" coveredlines="0" coverablelines="9" totallines="25" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="3" methodcoverage="0" />
     </Assembly>
   </Coverage>
 </CoverageReport>
