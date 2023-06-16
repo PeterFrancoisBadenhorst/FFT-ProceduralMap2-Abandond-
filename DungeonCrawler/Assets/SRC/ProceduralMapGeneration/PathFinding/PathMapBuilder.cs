@@ -16,13 +16,11 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.
         private readonly ChunkHandler _chunkHandler = new();
         private readonly NewPathFinding _newPathFinding = new();
 
-        public void CreateMap(int GridSize, float GridScale, Transform GridParent, DirectionalTilesScriptableObject scriptRef, int MapTotalFillPercentage,GridTypeEnum gridType)
+        public void CreateMap(int GridSize, float GridScale, Transform GridParent, DirectionalTilesScriptableObject scriptRef, int MapTotalFillPercentage, GridTypeEnum gridType)
         {
-                
             gridRelations.Clear();
-            Vector3[] grid = _gridCreate.CreateGrid(GridSize, GridScale,gridType);
+            Vector3[] grid = _gridCreate.CreateGrid(GridSize, GridScale, gridType);
             Vector3[] mapGrid = _newPathFinding.NodeGridCreator(grid, GridScale);
-            List<object> objects = new();
             List<Vector3> mapTotal = MapTotal(mapGrid);
 
             MapTotalFillPercentage = grid.Length / MapTotalFillPercentage;
@@ -38,13 +36,14 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.
 
         public List<Vector3> MapTotal(Vector3[] mapGrid)
         {
-            List<Vector3> MapTotal = new List<Vector3>();
+            List<Vector3> MapTotal = new();
             for (int i = 0; i < mapGrid.Length; i++)
             {
                 MapTotal.Add(mapGrid[i]);
             }
             return MapTotal;
         }
+
         public void FillMap(List<Vector3> mapTotal, float MapTotalFillPercentage, Vector3[] grid, float GridScale, Vector3[] mapGrid)
         {
             while (mapTotal.Count < MapTotalFillPercentage)

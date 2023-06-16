@@ -27,16 +27,12 @@ namespace FluentAssertions.Execution
                 return majorVersion >= 2;
             }
         }
+#pragma warning disable CS0436 // Type conflicts with imported type
 
         [DoesNotReturn]
         public void Throw(string message)
         {
-            Type exceptionType = assembly.GetType("NSpec.Domain.AssertionException");
-            if (exceptionType is null)
-            {
-                throw new Exception("Failed to create the NSpec assertion type");
-            }
-
+            Type exceptionType = assembly.GetType("NSpec.Domain.AssertionException") ?? throw new Exception("Failed to create the NSpec assertion type");
             throw (Exception)Activator.CreateInstance(exceptionType, message);
         }
     }

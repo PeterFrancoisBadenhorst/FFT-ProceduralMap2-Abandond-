@@ -7,7 +7,8 @@ namespace Assets.SRC.ProceduralMapGeneration.Noise.Tests
 {
     public class Test_PerlinNoiseGenerator
     {
-            private PerlinNoiseGenerator generator = new PerlinNoiseGenerator();
+        private readonly PerlinNoiseGenerator generator = new();
+
         [Test]
         public void GeneratePerlinNoise2DTexture_Test()
         {
@@ -20,9 +21,7 @@ namespace Assets.SRC.ProceduralMapGeneration.Noise.Tests
 
             // Assert
             noiseTexture2D.width.Should().Be(size);
-            noiseTexture2D.height.Should().Be(size);           
+            noiseTexture2D.height.Should().Be(size);
         }
-    } 
+    }
 }
-        
-       

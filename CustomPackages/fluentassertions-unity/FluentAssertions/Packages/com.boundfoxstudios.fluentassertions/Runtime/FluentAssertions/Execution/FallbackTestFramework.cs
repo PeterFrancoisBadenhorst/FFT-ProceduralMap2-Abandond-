@@ -15,6 +15,8 @@ namespace FluentAssertions.Execution
         /// <summary>
         /// Throws a framework-specific exception to indicate a failing unit test.
         /// </summary>
+#pragma warning disable CS0436 // Type conflicts with imported type
+
         [DoesNotReturn]
         public void Throw(string message)
         {

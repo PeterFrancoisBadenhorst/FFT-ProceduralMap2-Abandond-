@@ -22,6 +22,7 @@ namespace Assets.SRC.ProceduralMapGeneration.Generic.Tests
                 // Assert
                 count.Should().Be(3);
             }
+
             [Test]
             public void Should_Have_The_Expected_Values()
             {
@@ -41,13 +42,11 @@ namespace Assets.SRC.ProceduralMapGeneration.Generic.Tests
                     enumValues.Should().Contain(expectedValue);
                 }
             }
-
         }
 
         [TestFixture]
         public class DirectionTypeEnum_Tests
         {
-
             [Test]
             public void Should_Have_28_Values()
             {

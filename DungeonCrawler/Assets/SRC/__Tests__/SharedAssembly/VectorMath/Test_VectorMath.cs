@@ -1,9 +1,7 @@
-using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Enums;
 using Assets.SRC.ProceduralMapGeneration.Assets.SRC.Shared.Assets.SRC.Shared.Utilities;
 using FluentAssertions;
 using NUnit.Framework;
 using UnityEngine;
-using System;
 
 namespace Assets.SRC.ProceduralMapGeneration.Generic.Tests
 {
@@ -22,6 +20,5 @@ namespace Assets.SRC.ProceduralMapGeneration.Generic.Tests
             // Assert
             actualDistance.Should().Be(expectedDistance);
         }
-
     }
 }

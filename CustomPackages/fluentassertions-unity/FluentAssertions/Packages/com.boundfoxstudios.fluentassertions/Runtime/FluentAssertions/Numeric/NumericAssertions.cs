@@ -23,7 +23,6 @@ namespace FluentAssertions.Numeric
     }
 
 #pragma warning disable CS0659 // Ignore not overriding Object.GetHashCode()
-#pragma warning disable CA1065 // Ignore throwing NotSupportedException from Equals
 
     /// <summary>
     /// Contains a number of methods to assert that an <see cref="IComparable{T}"/> is in the expected state.
@@ -142,7 +141,7 @@ namespace FluentAssertions.Numeric
         public AndConstraint<TAssertions> BePositive(string because = "", params object[] becauseArgs)
         {
             Execute.Assertion
-                .ForCondition(Subject?.CompareTo(default(T)) > 0)
+                .ForCondition(Subject?.CompareTo(default) > 0)
                 .BecauseOf(because, becauseArgs)
                 .FailWith("Expected {context:value} to be positive{reason}, but found {0}.", Subject);
 
@@ -162,7 +161,7 @@ namespace FluentAssertions.Numeric
         public AndConstraint<TAssertions> BeNegative(string because = "", params object[] becauseArgs)
         {
             Execute.Assertion
-                .ForCondition(Subject is T value && !IsNaN(value) && value.CompareTo(default(T)) < 0)
+                .ForCondition(Subject is T value && !IsNaN(value) && value.CompareTo(default) < 0)
                 .BecauseOf(because, becauseArgs)
                 .FailWith("Expected {context:value} to be negative{reason}, but found {0}.", Subject);
 

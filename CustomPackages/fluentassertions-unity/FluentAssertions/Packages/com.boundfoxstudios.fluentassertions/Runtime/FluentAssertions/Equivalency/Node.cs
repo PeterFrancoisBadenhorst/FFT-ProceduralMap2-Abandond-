@@ -135,14 +135,7 @@ namespace FluentAssertions.Equivalency
 
         public override int GetHashCode()
         {
-            unchecked
-            {
-#pragma warning disable CA1307
-                int hashCode = Type.GetHashCode();
-                hashCode = (hashCode * 397) + Path.GetHashCode();
-                hashCode = (hashCode * 397) + Name.GetHashCode();
-                return hashCode;
-            }
+            return HashCode.Combine(Type, Path, Name);
         }
 
         public override string ToString() => Description;

@@ -18,7 +18,6 @@ namespace FluentAssertions.Primitives
     }
 
 #pragma warning disable CS0659 // Ignore not overriding Object.GetHashCode()
-#pragma warning disable CA1065 // Ignore throwing NotSupportedException from Equals
 
     /// <summary>
     /// Contains a number of methods to assert that a nullable <see cref="TimeSpan"/> is in the expected state.

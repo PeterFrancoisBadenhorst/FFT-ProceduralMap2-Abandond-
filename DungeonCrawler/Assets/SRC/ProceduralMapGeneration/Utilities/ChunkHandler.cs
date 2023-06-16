@@ -18,6 +18,7 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.
             }
             return grid;
         }
+
         public List<GameObject> FindChunkNeigbors(float scale, List<GameObject> grid)
         {
             Dictionary<Vector3, GameObject> positions = new Dictionary<Vector3, GameObject>();
@@ -68,6 +69,7 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.
             }
             return grid;
         }
+
         public DirectionTypeEnum FindChunkType(NeighborStruct chunk)
         {
             if (chunk.Direction == DirectionTypeEnum.Error)

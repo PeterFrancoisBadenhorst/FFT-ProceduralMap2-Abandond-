@@ -1,7 +1,6 @@
 using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.PathFinding;
 using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Enums;
 using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.ScriptableObjects;
-using FluentAssertions;
 using NUnit.Framework;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,12 +10,13 @@ namespace Assets.SRC.ProceduralMapGeneration.PathFinding.Tests
 {
     public class PathMapBuilderTest
     {
-        PathMapBuilder pathMapBuilder = new();
+        private readonly PathMapBuilder pathMapBuilder = new();
+
         [Test]
         public void FillMap_ShouldFillTheMapToTheSpecifiedPercentage()
         {
             // Arrange
-            List<Vector3> mapTotal = new List<Vector3>();
+            List<Vector3> mapTotal = new();
             float mapTotalFillPercentage = 0.5f;
             Vector3[] grid = new Vector3[]
             {
@@ -38,6 +38,7 @@ namespace Assets.SRC.ProceduralMapGeneration.PathFinding.Tests
             // Assert
             Assert.That(mapTotal.Count, Is.EqualTo(3));
         }
+
         [Test]
         public void MapTotal_ShouldReturnAListOfAllVectorsInTheMapGrid()
         {
@@ -56,6 +57,7 @@ namespace Assets.SRC.ProceduralMapGeneration.PathFinding.Tests
             Assert.That(mapTotal.All(p => p.y == 2 || p.y == 5 || p.y == 8));
             Assert.That(mapTotal.All(p => p.z == 3 || p.z == 6 || p.z == 9));
         }
+
         [TestCase(GridTypeEnum.ThreeDimention)]
         [TestCase(GridTypeEnum.TwoDimentionHorizontal)]
         [TestCase(GridTypeEnum.TwoDimentionVertical)]
@@ -65,14 +67,12 @@ namespace Assets.SRC.ProceduralMapGeneration.PathFinding.Tests
             int gridSize = 3;
             float gridScale = 1.0f;
             GameObject gridParent = new();
-            DirectionalTilesScriptableObject scriptRef = new DirectionalTilesScriptableObject();
+            DirectionalTilesScriptableObject scriptRef = new();
             int mapTotalFillPercentage = 1;
             // Act
             pathMapBuilder.CreateMap(gridSize, gridScale, gridParent.transform, scriptRef, mapTotalFillPercentage, gridType);
             // Assert
             Assert.Pass();
-
-
         }
     }
 }

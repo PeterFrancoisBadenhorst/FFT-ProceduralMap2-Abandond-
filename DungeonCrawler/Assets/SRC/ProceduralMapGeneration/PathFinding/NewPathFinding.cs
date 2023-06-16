@@ -1,17 +1,15 @@
 using Assets.SRC.ProceduralMapGeneration.Assets.SRC.Shared.Assets.SRC.Shared.Utilities;
-using System.Collections.Generic;
-using UnityEngine;
-using System.Linq;
 using System;
-using static UnityEditor.PlayerSettings;
+using System.Collections.Generic;
+using System.Linq;
+using UnityEngine;
 
 namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.PathFinding
 {
     public class NewPathFinding
     {
-        private readonly VectorMath vMath = new VectorMath();
-        private readonly System.Random random = new System.Random();
-
+        private readonly VectorMath vMath = new ();
+        private readonly System.Random random = new();
 
         public List<NewNodeModel> SetNodeNeighbors(List<NewNodeModel> nodes, float scale)
         {
@@ -19,15 +17,15 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.
             for (int i = 0; i < nodes.Count; i++)
             {
                 var currentNode = nodes[i];
-                List<NewNodeModel> neighbornodes = new();
                 currentNode.Neighbors = FindNeighbors(currentNode, nodes, scale);
                 setNodes.Add(currentNode);
             }
             return setNodes.Distinct().ToList();
         }
+
         public static List<NewNodeModel> FindNeighbors(NewNodeModel node, List<NewNodeModel> nodes, float scale)
         {
-            List<NewNodeModel> neighbors = new List<NewNodeModel>();
+            List<NewNodeModel> neighbors = new();
             for (int i = 0; i < nodes.Count; i++)
             {
                 //IsNeighbor(node,)
@@ -39,6 +37,7 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.
 
             return neighbors;
         }
+
         public static bool ComparePositions(Vector3 poasA, Vector3 posB, float multiplier)
         {
             Vector3[] directions = new Vector3[]
@@ -81,12 +80,14 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.
 
         public List<NewNodeModel> CreateNodes(Vector3[] grid, Vector3 endPos)
         {
-            List<NewNodeModel> nodes = new List<NewNodeModel>();
+            List<NewNodeModel> nodes = new();
 
             for (int i = 0; i < grid.Length; i++)
             {
-                NewNodeModel node = new NewNodeModel();
-                node.Position = grid[i];
+                NewNodeModel node = new()
+                {
+                    Position = grid[i]
+                };
                 node.fCost = vMath.CalculateDistanceBetweenTwoVectors(node.Position, endPos);
                 nodes.Add(node);
             }
@@ -96,7 +97,6 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.
 
         public Vector3[] ReturnPath(Vector3[] grid, float scale, Vector3[] ends)
         {
-
             List<NewNodeModel> nodes = new();
             nodes = CreateNodes(grid, ends[1]);
 
@@ -105,18 +105,19 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.
 
             return path.ToArray();
         }
+
         public List<Vector3> Findpath(List<NewNodeModel> grid, Vector3[] positions)
         {
             if (grid == null || grid.Count == 0) { throw new ArgumentNullException("grid"); }
             if (positions == null || positions.Length == 0) { throw new ArgumentNullException("grid"); }
 
-            List<NewNodeModel> sortedListByPosition = new List<NewNodeModel>(grid);
+            List<NewNodeModel> sortedListByPosition = new(grid);
             sortedListByPosition.Reverse();
             NewNodeModel startPos = sortedListByPosition.Find(node => node.Position == positions[0]);
             NewNodeModel endPos = sortedListByPosition.Find(node => node.Position == positions[1]);
             NewNodeModel activeNode = startPos;
-            List<NewNodeModel> generatedList = new List<NewNodeModel>();
-            List<Vector3> convertedGeneratedList = new List<Vector3>();
+            List<NewNodeModel> generatedList = new ();
+            List<Vector3> convertedGeneratedList = new();
 
             activeNode = FindActiveNode(activeNode, endPos);
             generatedList = GeneratePath(activeNode, startPos);
@@ -124,6 +125,7 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.
 
             return convertedGeneratedList;
         }
+
         public NewNodeModel FindActiveNode(NewNodeModel activeNode, NewNodeModel endPos)
         {
             while (activeNode.Position != endPos.Position)
@@ -135,9 +137,10 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.
             if (activeNode == null) { throw new NullReferenceException(); }
             return activeNode;
         }
+
         public List<NewNodeModel> GeneratePath(NewNodeModel activeNode, NewNodeModel startPos)
         {
-            List<NewNodeModel> generatedList = new List<NewNodeModel>();
+            List<NewNodeModel> generatedList = new();
 
             while (activeNode.Position != startPos.Position)
             {
@@ -147,9 +150,10 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.
             generatedList.Reverse();
             return generatedList;
         }
+
         public List<Vector3> ConvertPathToPositions(List<NewNodeModel> generatedList)
         {
-            List<Vector3> convertedGeneratedList = new List<Vector3>();
+            List<Vector3> convertedGeneratedList = new();
 
             foreach (NewNodeModel node in generatedList)
             {
@@ -158,6 +162,7 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.
 
             return convertedGeneratedList;
         }
+
         public Vector3[] FindEnds(Vector3[] grid)
         {
             Vector3[] pos;
@@ -175,7 +180,6 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.
                 {
                     (grid[random.Next(0, grid.Length)]),
                      (grid[random.Next(0, grid.Length)])
-
                 };
             }
             return pos;

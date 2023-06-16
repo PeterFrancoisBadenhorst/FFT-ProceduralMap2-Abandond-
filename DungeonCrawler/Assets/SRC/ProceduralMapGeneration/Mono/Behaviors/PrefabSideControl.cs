@@ -17,7 +17,7 @@ public class PrefabSideControl : MonoBehaviour
     public GameObject b_side;
 
     // Start is called before the first frame update
-    private void Start()
+    private void Awake()
     {
         n_side.SetActive(!n_object.activeSelf);
         e_side.SetActive(!e_object.activeSelf);
@@ -25,10 +25,5 @@ public class PrefabSideControl : MonoBehaviour
         w_side.SetActive(!w_object.activeSelf);
         t_side.SetActive(!t_object.activeSelf);
         b_side.SetActive(!b_object.activeSelf);
-    }
-
-    // Update is called once per frame
-    private void Update()
-    {
     }
 }

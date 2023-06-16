@@ -23,13 +23,12 @@ namespace FluentAssertions.Execution
 
         #endregion Private Definitions
 
+#pragma warning disable CS0436 // Type conflicts with imported type
+
         [DoesNotReturn]
         public static void Throw(string message)
         {
-            if (testFramework is null)
-            {
-                testFramework = DetectFramework();
-            }
+            testFramework ??= DetectFramework();
 
             testFramework.Throw(message);
         }

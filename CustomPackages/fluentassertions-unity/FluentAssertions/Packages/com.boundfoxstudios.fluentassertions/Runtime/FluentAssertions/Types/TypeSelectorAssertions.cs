@@ -9,8 +9,6 @@ using System.Linq.Expressions;
 namespace FluentAssertions.Types
 {
 #pragma warning disable CS0659 // Ignore not overriding Object.GetHashCode()
-#pragma warning disable CA1065 // Ignore throwing NotSupportedException from Equals
-
     /// <summary>
     /// Contains a number of methods to assert that all <see cref="Type"/>s in a <see cref="TypeSelector"/>
     /// meet certain expectations.

@@ -9,7 +9,6 @@ namespace FluentAssertions.Execution
     /// </summary>
     [Serializable]
     public class AssertionFailedException : Exception
-#pragma warning restore CA1032, RCS1194
     {
         public AssertionFailedException(string message)
             : base(message)

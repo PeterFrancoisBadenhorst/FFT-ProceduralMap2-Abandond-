@@ -138,7 +138,7 @@ namespace FluentAssertions.Equivalency.Steps
         {
             var results = new AssertionResultSet();
             int index = 0;
-            GetTraceMessage getMessage = member => $"Comparing subject at {member.Description}[{index}] with the expectation at {member.Description}[{expectationIndex}]";
+            string getMessage(INode member) => $"Comparing subject at {member.Description}[{index}] with the expectation at {member.Description}[{expectationIndex}]";
             int indexToBeRemoved = -1;
 
             for (var metaIndex = 0; metaIndex < unmatchedSubjectIndexes.Count; metaIndex++)

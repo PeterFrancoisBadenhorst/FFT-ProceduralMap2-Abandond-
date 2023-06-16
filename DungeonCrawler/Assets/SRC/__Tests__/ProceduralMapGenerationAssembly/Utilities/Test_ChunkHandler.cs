@@ -1,13 +1,12 @@
-using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.PathFinding;
+using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Enums;
+using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Structs;
+using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Utilities;
 using Assets.SRC.ProceduralMapGeneration.Assets.SRC.Shared.Assets.SRC.Shared.Utilities;
 using FluentAssertions;
 using NUnit.Framework;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
-using System;
-using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Utilities;
-using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Structs;
-using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Enums;
 
 namespace Assets.SRC.ProceduralMapGeneration.PathFinding.Tests
 {
@@ -16,12 +15,13 @@ namespace Assets.SRC.ProceduralMapGeneration.PathFinding.Tests
         [TestFixture]
         public class FindChunkNeigborsTests
         {
-            ChunkHandler chunkHandler = new ChunkHandler();
+            private readonly ChunkHandler chunkHandler = new();
+
             [Test]
             public void TestFindChunkNeigbors_WithValidInput_ReturnsCorrectNeighbors()
             {
                 // Arrange
-                List<GameObject> grid = new List<GameObject>
+                List<GameObject> grid = new()
             {
                 new GameObject(),
                 new GameObject(),
@@ -41,20 +41,8 @@ namespace Assets.SRC.ProceduralMapGeneration.PathFinding.Tests
                 grid[5].transform.position = new Vector3(0, 1, 1);
                 grid[6].transform.position = new Vector3(1, 1, 1);
 
-
-
-                Dictionary<Vector3, GameObject> positions = new Dictionary<Vector3, GameObject>();
-                positions.Add(grid[0].transform.position, grid[0]);
-                positions.Add(grid[1].transform.position, grid[1]);
-                positions.Add(grid[2].transform.position, grid[2]);
-                positions.Add(grid[3].transform.position, grid[3]);
-                positions.Add(grid[4].transform.position, grid[4]);
-                positions.Add(grid[5].transform.position, grid[5]);
-                positions.Add(grid[6].transform.position, grid[6]);
-
                 // Act
                 List<GameObject> neighbors = chunkHandler.FindChunkNeigbors(1.0f, grid);
-
 
                 // Assert
                 neighbors.Should().NotBeNullOrEmpty();
@@ -72,14 +60,13 @@ namespace Assets.SRC.ProceduralMapGeneration.PathFinding.Tests
                 neighbors[4].Should().BeEquivalentTo(grid[4]);
                 neighbors[5].Should().BeEquivalentTo(grid[5]);
                 neighbors[6].Should().BeEquivalentTo(grid[6]);
-
             }
 
             [Test]
             public void TestFindChunkNeigbors_WithInvalidInput_ReturnsEmptyList()
             {
                 // Arrange
-                List<GameObject> grid = new List<GameObject>();
+                List<GameObject> grid = new();
 
                 // Act
                 List<GameObject> neighbors = chunkHandler.FindChunkNeigbors(1.0f, grid);
@@ -89,15 +76,17 @@ namespace Assets.SRC.ProceduralMapGeneration.PathFinding.Tests
                 Assert.IsEmpty(neighbors);
             }
         }
+
         [TestFixture]
         public class AssignChunkTypesTests
         {
-            ChunkHandler chunkHandler = new ChunkHandler();
+            private readonly ChunkHandler chunkHandler = new();
+
             [Test]
             public void TestAssignChunkTypes_WithValidInput_AssignsCorrectTypes()
             {
                 // Arrange
-                List<GameObject> grid = new List<GameObject>
+                List<GameObject> grid = new()
             {
                 new GameObject(),
                 new GameObject(),
@@ -116,19 +105,6 @@ namespace Assets.SRC.ProceduralMapGeneration.PathFinding.Tests
                 grid[4].transform.position = new Vector3(1, 0, 1);
                 grid[5].transform.position = new Vector3(0, 1, 1);
                 grid[6].transform.position = new Vector3(1, 1, 1);
-
-
-
-                Dictionary<Vector3, GameObject> positions = new Dictionary<Vector3, GameObject>();
-                positions.Add(grid[0].transform.position, grid[0]);
-                positions.Add(grid[1].transform.position, grid[1]);
-                positions.Add(grid[2].transform.position, grid[2]);
-                positions.Add(grid[3].transform.position, grid[3]);
-                positions.Add(grid[4].transform.position, grid[4]);
-                positions.Add(grid[5].transform.position, grid[5]);
-                positions.Add(grid[6].transform.position, grid[6]);
-
-                GenericUtilities _genericUtilities = new GenericUtilities();
 
                 // Act
                 List<GameObject> neighbors = chunkHandler.FindChunkNeigbors(1.0f, grid);
@@ -151,7 +127,7 @@ namespace Assets.SRC.ProceduralMapGeneration.PathFinding.Tests
             public void TestAssignChunkTypes_WithInvalidInput_ReturnsEmptyList()
             {
                 // Arrange
-                List<GameObject> grid = new List<GameObject>();
+                List<GameObject> grid = new();
 
                 // Act
                 List<GameObject> assignedTypes = chunkHandler.AssignChunkTypes(grid);
@@ -161,24 +137,30 @@ namespace Assets.SRC.ProceduralMapGeneration.PathFinding.Tests
                 Assert.IsEmpty(assignedTypes);
             }
         }
+
         [TestFixture]
         public class GenericTestsForChunkHandle
         {
             [Test]
             public void Error_Error()
             {
-                ChunkHandler chunkHandler = new ChunkHandler();
-                NeighborStruct chunk = new();
-                chunk.Direction = DirectionTypeEnum.Error;
+                ChunkHandler chunkHandler = new();
+                NeighborStruct chunk = new()
+                {
+                    Direction = DirectionTypeEnum.Error
+                };
                 Action act = () => chunkHandler.FindChunkType(chunk);
                 act.Should().Throw<ArgumentException>();
-            }           
+            }
+
             [Test]
             public void Return_Collapsed()
             {
-                ChunkHandler chunkHandler = new ChunkHandler();
-                NeighborStruct chunk = new();
-                chunk.Direction = DirectionTypeEnum.Collapsed;
+                ChunkHandler chunkHandler = new();
+                NeighborStruct chunk = new()
+                {
+                    Direction = DirectionTypeEnum.Collapsed
+                };
                 var test = chunkHandler.FindChunkType(chunk);
                 test.Should().Be(DirectionTypeEnum.Collapsed);
             }

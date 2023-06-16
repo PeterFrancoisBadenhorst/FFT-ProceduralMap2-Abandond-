@@ -9,7 +9,6 @@ namespace FluentAssertions.Equivalency.Steps
 {
     public class GenericDictionaryEquivalencyStep : IEquivalencyStep
     {
-#pragma warning disable SA1110 // Allow opening parenthesis on new line to reduce line length
 
         private static readonly MethodInfo AssertSameLengthMethod =
             new Func<IDictionary<object, object>, IDictionary<object, object>, bool>(AssertSameLength).GetMethodInfo()
@@ -20,7 +19,6 @@ namespace FluentAssertions.Equivalency.Steps
                     IDictionary<object, object>, IDictionary<object, object>>
                 (AssertDictionaryEquivalence).GetMethodInfo().GetGenericMethodDefinition();
 
-#pragma warning restore SA1110
 
         public EquivalencyResult Handle(Comparands comparands, IEquivalencyValidationContext context,
             IEquivalencyValidator nestedValidator)
