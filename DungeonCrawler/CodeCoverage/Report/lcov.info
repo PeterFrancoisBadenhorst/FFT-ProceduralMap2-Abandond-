@@ -1,154 +1,152 @@
 ﻿TN:
 SF:C:/git/Unity.DungeonCrawler/DungeonCrawler/Assets/SRC/ProceduralMapGeneration/PathFinding/NewPathFinding.cs
-FN:17,SetNodeNeighbors(System.Collections.Generic.List[NewNodeModel], System.Single)
-FN:29,FindNeighbors(Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.PathFinding.NewNodeModel, System.Collections.Generic.List[NewNodeModel], System.Single)
-FN:43,ComparePositions(UnityEngine.Vector3, UnityEngine.Vector3, System.Single)
-FN:67,NodeGridCreator(UnityEngine.Vector3[], UnityEngine.Vector3[], System.Single)
-FN:77,NodeGridCreator(UnityEngine.Vector3[], System.Single)
-FN:83,CreateNodes(UnityEngine.Vector3[], UnityEngine.Vector3)
-FN:98,ReturnPath(UnityEngine.Vector3[], System.Single, UnityEngine.Vector3[])
-FN:109,Findpath(System.Collections.Generic.List[NewNodeModel], UnityEngine.Vector3[])
-FN:128,FindActiveNode(Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.PathFinding.NewNodeModel, Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.PathFinding.NewNodeModel)
-FN:139,GeneratePath(Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.PathFinding.NewNodeModel, Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.PathFinding.NewNodeModel)
-FN:151,ConvertPathToPositions(System.Collections.Generic.List[NewNodeModel])
-FN:162,FindEnds(UnityEngine.Vector3[])
-FN:12,NewPathFinding()
-FNDA:118,SetNodeNeighbors(System.Collections.Generic.List[NewNodeModel], System.Single)
-FNDA:2026,FindNeighbors(Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.PathFinding.NewNodeModel, System.Collections.Generic.List[NewNodeModel], System.Single)
-FNDA:44867,ComparePositions(UnityEngine.Vector3, UnityEngine.Vector3, System.Single)
-FNDA:112,NodeGridCreator(UnityEngine.Vector3[], UnityEngine.Vector3[], System.Single)
+FN:15,SetNodeNeighbors(System.Collections.Generic.List[NewNodeModel], System.Single)
+FN:27,FindNeighbors(Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.PathFinding.NewNodeModel, System.Collections.Generic.List[NewNodeModel], System.Single)
+FN:42,ComparePositions(UnityEngine.Vector3, UnityEngine.Vector3, System.Single)
+FN:66,NodeGridCreator(UnityEngine.Vector3[], UnityEngine.Vector3[], System.Single)
+FN:76,NodeGridCreator(UnityEngine.Vector3[], System.Single)
+FN:82,CreateNodes(UnityEngine.Vector3[], UnityEngine.Vector3)
+FN:99,ReturnPath(UnityEngine.Vector3[], System.Single, UnityEngine.Vector3[])
+FN:110,Findpath(System.Collections.Generic.List[NewNodeModel], UnityEngine.Vector3[])
+FN:130,FindActiveNode(Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.PathFinding.NewNodeModel, Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.PathFinding.NewNodeModel)
+FN:142,GeneratePath(Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.PathFinding.NewNodeModel, Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.PathFinding.NewNodeModel)
+FN:155,ConvertPathToPositions(System.Collections.Generic.List[NewNodeModel])
+FN:167,FindEnds(UnityEngine.Vector3[])
+FN:11,NewPathFinding()
+FNDA:108,SetNodeNeighbors(System.Collections.Generic.List[NewNodeModel], System.Single)
+FNDA:2512,FindNeighbors(Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.PathFinding.NewNodeModel, System.Collections.Generic.List[NewNodeModel], System.Single)
+FNDA:64793,ComparePositions(UnityEngine.Vector3, UnityEngine.Vector3, System.Single)
+FNDA:102,NodeGridCreator(UnityEngine.Vector3[], UnityEngine.Vector3[], System.Single)
 FNDA:4,NodeGridCreator(UnityEngine.Vector3[], System.Single)
-FNDA:117,CreateNodes(UnityEngine.Vector3[], UnityEngine.Vector3)
-FNDA:117,ReturnPath(UnityEngine.Vector3[], System.Single, UnityEngine.Vector3[])
-FNDA:126,Findpath(System.Collections.Generic.List[NewNodeModel], UnityEngine.Vector3[])
-FNDA:121,FindActiveNode(Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.PathFinding.NewNodeModel, Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.PathFinding.NewNodeModel)
-FNDA:117,GeneratePath(Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.PathFinding.NewNodeModel, Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.PathFinding.NewNodeModel)
-FNDA:117,ConvertPathToPositions(System.Collections.Generic.List[NewNodeModel])
+FNDA:107,CreateNodes(UnityEngine.Vector3[], UnityEngine.Vector3)
+FNDA:107,ReturnPath(UnityEngine.Vector3[], System.Single, UnityEngine.Vector3[])
+FNDA:115,Findpath(System.Collections.Generic.List[NewNodeModel], UnityEngine.Vector3[])
+FNDA:111,FindActiveNode(Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.PathFinding.NewNodeModel, Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.PathFinding.NewNodeModel)
+FNDA:107,GeneratePath(Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.PathFinding.NewNodeModel, Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.PathFinding.NewNodeModel)
+FNDA:107,ConvertPathToPositions(System.Collections.Generic.List[NewNodeModel])
 FNDA:6,FindEnds(UnityEngine.Vector3[])
 FNDA:0,NewPathFinding()
 FNF:13
 FNH:12
 BRF:0
 BRH:0
+DA:11,0
 DA:12,0
-DA:13,0
-DA:17,118
-DA:18,118
-DA:19,4288
-DA:20,2026
-DA:21,2026
-DA:22,2026
-DA:23,2026
-DA:24,2026
-DA:25,2026
-DA:26,118
-DA:27,118
-DA:29,2026
-DA:30,2026
-DA:31,93784
-DA:32,44866
-DA:34,44866
-DA:35,7356
-DA:36,7356
-DA:37,7356
-DA:38,44866
-DA:40,2026
-DA:41,2026
-DA:43,44867
-DA:44,44867
-DA:54,578062
-DA:55,251520
-DA:56,251520
-DA:59,7356
-DA:60,7356
-DA:62,244164
-DA:63,37511
-DA:64,44867
-DA:67,112
-DA:68,112
-DA:73,112
-DA:74,110
+DA:15,108
+DA:16,108
+DA:17,5240
+DA:18,2512
+DA:19,2512
+DA:20,2512
+DA:21,2512
+DA:22,2512
+DA:23,108
+DA:24,108
+DA:27,2512
+DA:28,2512
+DA:29,134608
+DA:30,64792
+DA:32,64792
+DA:33,9804
+DA:34,9804
+DA:35,9804
+DA:36,64792
+DA:38,2512
+DA:39,2512
+DA:42,64793
+DA:43,64793
+DA:53,838882
+DA:54,364452
+DA:55,364452
+DA:58,9804
+DA:59,9804
+DA:61,354648
+DA:62,54989
+DA:63,64793
+DA:66,102
+DA:67,102
+DA:72,102
+DA:73,100
+DA:76,4
 DA:77,4
 DA:78,4
 DA:79,4
-DA:80,4
-DA:83,117
-DA:84,117
-DA:86,4278
-DA:87,2022
-DA:88,2022
-DA:89,2022
-DA:90,2022
-DA:91,2022
-DA:92,2022
-DA:94,117
-DA:95,117
-DA:98,117
-DA:100,117
-DA:101,117
-DA:103,117
-DA:104,117
-DA:106,114
-DA:107,114
-DA:109,126
-DA:110,134
-DA:111,130
-DA:113,118
-DA:114,118
-DA:115,1245
-DA:116,1131
-DA:117,118
-DA:118,118
-DA:119,118
-DA:121,118
-DA:122,114
-DA:123,114
-DA:125,114
-DA:126,114
-DA:128,121
-DA:129,385
-DA:130,268
-DA:131,1300
-DA:132,264
-DA:133,264
-DA:134,264
-DA:135,114
-DA:136,114
-DA:137,114
-DA:139,117
-DA:140,117
-DA:142,382
-DA:143,265
-DA:144,265
-DA:145,265
-DA:146,265
-DA:147,114
-DA:148,114
-DA:149,114
-DA:151,117
-DA:152,117
-DA:154,885
-DA:155,267
-DA:156,267
-DA:157,267
-DA:159,117
-DA:160,117
-DA:162,6
-DA:165,9
-DA:166,9
-DA:171,18
-DA:172,6
-DA:173,6
-DA:180,6
-DA:181,6
-DA:182,6
-LH:110
-LF:112
+DA:82,107
+DA:83,107
+DA:85,5230
+DA:86,2508
+DA:87,2508
+DA:91,2508
+DA:92,2508
+DA:93,2508
+DA:95,107
+DA:96,107
+DA:99,107
+DA:100,107
+DA:101,107
+DA:103,107
+DA:104,107
+DA:106,104
+DA:107,104
+DA:110,115
+DA:111,123
+DA:112,117
+DA:114,108
+DA:115,108
+DA:116,1477
+DA:117,1562
+DA:118,108
+DA:119,108
+DA:120,108
+DA:122,108
+DA:123,104
+DA:124,104
+DA:126,104
+DA:127,104
+DA:130,111
+DA:131,376
+DA:132,269
+DA:133,1387
+DA:134,265
+DA:135,265
+DA:136,265
+DA:137,104
+DA:138,104
+DA:139,104
+DA:142,107
+DA:143,107
+DA:145,373
+DA:146,266
+DA:147,266
+DA:148,266
+DA:149,266
+DA:150,104
+DA:151,104
+DA:152,104
+DA:155,107
+DA:156,107
+DA:158,857
+DA:159,268
+DA:160,268
+DA:161,268
+DA:163,107
+DA:164,107
+DA:167,6
+DA:170,7
+DA:171,7
+DA:176,14
+DA:177,6
+DA:178,6
+DA:184,6
+DA:185,6
+DA:186,6
+LH:108
+LF:110
 end_of_record
 SF:C:/git/Unity.DungeonCrawler/DungeonCrawler/Assets/SRC/ProceduralMapGeneration/PathFinding/PathMapBuilder.cs
 FN:20,CreateMap(System.Int32, System.Single, UnityEngine.Transform, Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.ScriptableObjects.DirectionalTilesScriptableObject, System.Int32, Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Enums.GridTypeEnum)
-FN:40,MapTotal(UnityEngine.Vector3[])
-FN:49,FillMap(System.Collections.Generic.List[Vector3], System.Single, UnityEngine.Vector3[], System.Single, UnityEngine.Vector3[])
+FN:38,MapTotal(UnityEngine.Vector3[])
+FN:48,FillMap(System.Collections.Generic.List[Vector3], System.Single, UnityEngine.Vector3[], System.Single, UnityEngine.Vector3[])
 FN:12,PathMapBuilder()
 FNDA:3,CreateMap(System.Int32, System.Single, UnityEngine.Transform, Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.ScriptableObjects.DirectionalTilesScriptableObject, System.Int32, Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Enums.GridTypeEnum)
 FNDA:4,MapTotal(UnityEngine.Vector3[])
@@ -164,37 +162,36 @@ DA:15,0
 DA:16,0
 DA:17,0
 DA:20,3
+DA:21,3
 DA:22,3
 DA:23,3
 DA:24,3
-DA:25,3
 DA:26,3
 DA:28,3
 DA:30,3
+DA:31,3
 DA:32,3
 DA:33,3
 DA:34,3
-DA:35,3
-DA:36,3
-DA:37,0
-DA:40,4
-DA:41,4
-DA:42,30
+DA:35,0
+DA:38,4
+DA:39,4
+DA:40,30
+DA:41,11
+DA:42,11
 DA:43,11
-DA:44,11
-DA:45,11
-DA:46,4
-DA:47,4
-DA:49,4
-DA:50,114
-DA:51,111
-DA:52,111
-DA:53,111
-DA:54,2426
-DA:55,110
-DA:56,3
-LH:29
-LF:35
+DA:44,4
+DA:45,4
+DA:48,4
+DA:49,104
+DA:50,101
+DA:51,101
+DA:52,101
+DA:53,2746
+DA:54,100
+DA:55,3
+LH:28
+LF:34
 end_of_record
 SF:C:/git/Unity.DungeonCrawler/DungeonCrawler/Assets/SRC/ProceduralMapGeneration/Noise/PerlinNoiseGenerator.cs
 FN:14,GeneratePerlinNoise2DTexture(System.Int32, System.Single)
@@ -295,8 +292,8 @@ LF:3
 end_of_record
 SF:C:/git/Unity.DungeonCrawler/DungeonCrawler/Assets/SRC/ProceduralMapGeneration/Utilities/ChunkHandler.cs
 FN:14,AssignChunkTypes(System.Collections.Generic.List[GameObject])
-FN:22,FindChunkNeigbors(System.Single, System.Collections.Generic.List[GameObject])
-FN:72,FindChunkType(Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Structs.NeighborStruct)
+FN:23,FindChunkNeigbors(System.Single, System.Collections.Generic.List[GameObject])
+FN:74,FindChunkType(Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Structs.NeighborStruct)
 FNDA:5,AssignChunkTypes(System.Collections.Generic.List[GameObject])
 FNDA:24,FindChunkNeigbors(System.Single, System.Collections.Generic.List[GameObject])
 FNDA:71,FindChunkType(Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Structs.NeighborStruct)
@@ -311,80 +308,80 @@ DA:17,16
 DA:18,16
 DA:19,5
 DA:20,5
-DA:22,24
 DA:23,24
 DA:24,24
-DA:26,7510
-DA:27,3731
+DA:25,24
+DA:27,7510
 DA:28,3731
 DA:29,3731
-DA:31,7510
-DA:32,3731
+DA:30,3731
+DA:32,7510
 DA:33,3731
 DA:34,3731
 DA:35,3731
-DA:37,3731
-DA:39,3731
-DA:41,3731
-DA:42,2976
-DA:43,2976
-DA:44,2976
-DA:45,3731
-DA:46,2974
-DA:47,2974
-DA:48,2974
-DA:49,3731
-DA:50,2976
-DA:51,2976
-DA:52,2976
-DA:53,3731
-DA:54,2974
-DA:55,2974
-DA:56,2974
-DA:57,3731
-DA:58,2976
-DA:59,2976
-DA:60,2976
-DA:61,3731
-DA:62,2976
-DA:63,2976
-DA:64,2976
-DA:66,3731
+DA:36,3731
+DA:38,3731
+DA:40,3731
+DA:42,3731
+DA:43,2974
+DA:44,2974
+DA:45,2974
+DA:46,3731
+DA:47,2978
+DA:48,2978
+DA:49,2978
+DA:50,3731
+DA:51,2974
+DA:52,2974
+DA:53,2974
+DA:54,3731
+DA:55,2978
+DA:56,2978
+DA:57,2978
+DA:58,3731
+DA:59,2974
+DA:60,2974
+DA:61,2974
+DA:62,3731
+DA:63,2974
+DA:64,2974
+DA:65,2974
 DA:67,3731
 DA:68,3731
-DA:69,24
+DA:69,3731
 DA:70,24
-DA:72,71
-DA:73,71
-DA:74,1
-DA:81,1
-DA:83,70
-DA:84,69
-DA:85,69
+DA:71,24
+DA:74,71
+DA:75,71
+DA:76,1
+DA:83,1
+DA:85,70
+DA:86,69
 DA:87,69
-DA:88,31
-DA:90,69
-DA:91,30
-DA:93,69
-DA:94,28
-DA:96,69
-DA:97,27
-DA:99,69
-DA:100,32
-DA:102,69
-DA:103,32
-DA:105,69
-DA:108,1
-DA:109,70
+DA:89,69
+DA:90,30
+DA:92,69
+DA:93,32
+DA:95,69
+DA:96,27
+DA:98,69
+DA:99,29
+DA:101,69
+DA:102,31
+DA:104,69
+DA:105,31
+DA:107,69
+DA:110,1
+DA:111,70
 LH:72
 LF:72
 end_of_record
 SF:C:/git/Unity.DungeonCrawler/DungeonCrawler/Assets/SRC/ProceduralMapGeneration/Utilities/GridCreate.cs
-FN:11,CreateGrid(System.Int32, System.Single, Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Enums.GridTypeEnum)
-FN:21,SquareGrid2DVertical(System.Int32, System.Single)
-FN:38,SquareGrid2DHorizontal(System.Int32, System.Single)
-FN:57,SquareGrid3D(System.Int32, System.Single)
-FN:77,PlaceGameObjectsAtGridPositions(UnityEngine.Vector3[], UnityEngine.Transform)
+FN:10,CreateGrid(System.Int32, System.Single, Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Enums.GridTypeEnum)
+FN:19,SquareGrid2DVertical(System.Int32, System.Single)
+FN:36,SquareGrid2DHorizontal(System.Int32, System.Single)
+FN:55,SquareGrid3D(System.Int32, System.Single)
+FN:75,PlaceGameObjectsAtGridPositions(UnityEngine.Vector3[], UnityEngine.Transform)
 FNDA:3,CreateGrid(System.Int32, System.Single, Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Enums.GridTypeEnum)
 FNDA:6,SquareGrid2DVertical(System.Int32, System.Single)
 FNDA:6,SquareGrid2DHorizontal(System.Int32, System.Single)
@@ -394,62 +391,62 @@ FNF:5
 FNH:5
 BRF:0
 BRH:0
-DA:11,3
+DA:10,3
+DA:12,1
 DA:13,1
 DA:14,1
-DA:15,1
-DA:16,0
-DA:21,6
-DA:22,6
-DA:23,88
-DA:24,38
-DA:25,1016
-DA:26,470
-DA:27,470
-DA:31,470
-DA:32,470
-DA:33,38
-DA:34,6
-DA:35,6
+DA:15,0
+DA:19,6
+DA:20,6
+DA:21,88
+DA:22,38
+DA:23,1016
+DA:24,470
+DA:25,470
+DA:29,470
+DA:30,470
+DA:31,38
+DA:32,6
+DA:33,6
+DA:36,6
+DA:37,6
 DA:38,6
-DA:39,6
-DA:40,6
-DA:41,88
-DA:42,38
-DA:43,1016
-DA:44,470
-DA:45,470
-DA:50,470
-DA:51,470
-DA:52,38
-DA:53,6
-DA:54,6
-DA:57,36
-DA:58,36
-DA:59,484
-DA:60,206
-DA:61,4988
-DA:62,2288
-DA:63,66884
-DA:64,31154
-DA:65,31154
-DA:69,31154
-DA:70,31154
-DA:71,2288
-DA:72,206
-DA:73,36
-DA:74,36
-DA:77,33
-DA:78,33
-DA:79,48622
+DA:39,88
+DA:40,38
+DA:41,1016
+DA:42,470
+DA:43,470
+DA:48,470
+DA:49,470
+DA:50,38
+DA:51,6
+DA:52,6
+DA:55,36
+DA:56,36
+DA:57,484
+DA:58,206
+DA:59,4988
+DA:60,2288
+DA:61,66884
+DA:62,31154
+DA:63,31154
+DA:67,31154
+DA:68,31154
+DA:69,2288
+DA:70,206
+DA:71,36
+DA:72,36
+DA:75,33
+DA:76,33
+DA:77,48622
+DA:78,24278
+DA:79,24278
 DA:80,24278
 DA:81,24278
 DA:82,24278
 DA:83,24278
-DA:84,24278
-DA:85,24278
-DA:86,33
-DA:87,33
+DA:84,33
+DA:85,33
 LH:55
 LF:56
 end_of_record
@@ -475,6 +472,30 @@ DA:33,0
 LH:6
 LF:12
 end_of_record
+SF:C:/git/Unity.DungeonCrawler/DungeonCrawler/Assets/SRC/Shared/Utilities/ActivateReflectionProbe.cs
+FN:12,Awake()
+FN:18,OnTriggerEnter(UnityEngine.Collider)
+FN:23,OnTriggerExit(UnityEngine.Collider)
+FNDA:0,Awake()
+FNDA:0,OnTriggerEnter(UnityEngine.Collider)
+FNDA:0,OnTriggerExit(UnityEngine.Collider)
+FNF:3
+FNH:0
+BRF:0
+BRH:0
+DA:12,0
+DA:13,0
+DA:14,0
+DA:15,0
+DA:18,0
+DA:19,0
+DA:20,0
+DA:23,0
+DA:24,0
+DA:25,0
+LH:0
+LF:10
+end_of_record
 SF:C:/git/Unity.DungeonCrawler/DungeonCrawler/Assets/SRC/Shared/Utilities/GenericUtilities.cs
 FN:17,NeighborsPosition(System.Single, UnityEngine.Vector3)
 FNDA:3731,NeighborsPosition(System.Single, UnityEngine.Vector3)
@@ -496,14 +517,28 @@ LF:9
 end_of_record
 SF:C:/git/Unity.DungeonCrawler/DungeonCrawler/Assets/SRC/Shared/Utilities/VectorMath.cs
 FN:7,CalculateDistanceBetweenTwoVectors(UnityEngine.Vector3, UnityEngine.Vector3)
-FNDA:2023,CalculateDistanceBetweenTwoVectors(UnityEngine.Vector3, UnityEngine.Vector3)
+FNDA:2509,CalculateDistanceBetweenTwoVectors(UnityEngine.Vector3, UnityEngine.Vector3)
 FNF:1
 FNH:1
 BRF:0
 BRH:0
-DA:7,2023
+DA:7,2509
 LH:1
 LF:1
+end_of_record
+SF:C:/git/Unity.DungeonCrawler/DungeonCrawler/Assets/SRC/Shared/Utilities/ClearChildren.cs
+FN:8,DeleteAllChildren(UnityEngine.GameObject)
+FNDA:0,DeleteAllChildren(UnityEngine.GameObject)
+FNF:1
+FNH:0
+BRF:0
+BRH:0
+DA:8,0
+DA:9,0
+DA:10,0
+DA:11,0
+LH:0
+LF:4
 end_of_record
 SF:C:/git/Unity.DungeonCrawler/DungeonCrawler/Assets/SRC/Shared/Exceptions/CustomExceptions.cs
 FN:9,NotImplementedException()

@@ -28,52 +28,52 @@
               <Name>UnityEngine.Vector3[] Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.PathFinding.NewPathFinding::FindEnds(UnityEngine.Vector3[])</Name>
               <FileRef uid="8" />
               <SequencePoints>
-                <SequencePoint vc="1" uspid="15455" ordinal="0" offset="0" sl="162" sc="9" el="162" ec="9" bec="0" bev="0" fileid="8">
+                <SequencePoint vc="1" uspid="16077" ordinal="0" offset="0" sl="167" sc="9" el="167" ec="9" bec="0" bev="0" fileid="8">
                   <TrackedMethodRefs>
                     <TrackedMethodRef uid="0" vc="1" />
                   </TrackedMethodRefs>
                 </SequencePoint>
-                <SequencePoint vc="2" uspid="15456" ordinal="0" offset="1" sl="165" sc="13" el="165" ec="13" bec="0" bev="0" fileid="8">
+                <SequencePoint vc="2" uspid="16078" ordinal="0" offset="1" sl="170" sc="13" el="170" ec="13" bec="0" bev="0" fileid="8">
                   <TrackedMethodRefs>
                     <TrackedMethodRef uid="0" vc="2" />
                   </TrackedMethodRefs>
                 </SequencePoint>
-                <SequencePoint vc="2" uspid="15457" ordinal="0" offset="2" sl="166" sc="17" el="166" ec="17" bec="0" bev="0" fileid="8">
+                <SequencePoint vc="2" uspid="16079" ordinal="0" offset="2" sl="171" sc="17" el="171" ec="17" bec="0" bev="0" fileid="8">
                   <TrackedMethodRefs>
                     <TrackedMethodRef uid="0" vc="2" />
                   </TrackedMethodRefs>
                 </SequencePoint>
-                <SequencePoint vc="2" uspid="15458" ordinal="0" offset="65" sl="171" sc="13" el="171" ec="13" bec="0" bev="0" fileid="8">
+                <SequencePoint vc="2" uspid="16080" ordinal="0" offset="65" sl="176" sc="13" el="176" ec="13" bec="0" bev="0" fileid="8">
                   <TrackedMethodRefs>
                     <TrackedMethodRef uid="0" vc="2" />
                   </TrackedMethodRefs>
                 </SequencePoint>
-                <SequencePoint vc="2" uspid="15459" ordinal="0" offset="66" sl="171" sc="15" el="171" ec="15" bec="0" bev="0" fileid="8">
+                <SequencePoint vc="2" uspid="16081" ordinal="0" offset="66" sl="176" sc="15" el="176" ec="15" bec="0" bev="0" fileid="8">
                   <TrackedMethodRefs>
                     <TrackedMethodRef uid="0" vc="2" />
                   </TrackedMethodRefs>
                 </SequencePoint>
-                <SequencePoint vc="1" uspid="15460" ordinal="0" offset="89" sl="172" sc="13" el="172" ec="13" bec="0" bev="0" fileid="8">
+                <SequencePoint vc="1" uspid="16082" ordinal="0" offset="89" sl="177" sc="13" el="177" ec="13" bec="0" bev="0" fileid="8">
                   <TrackedMethodRefs>
                     <TrackedMethodRef uid="0" vc="1" />
                   </TrackedMethodRefs>
                 </SequencePoint>
-                <SequencePoint vc="1" uspid="15461" ordinal="0" offset="90" sl="173" sc="17" el="173" ec="17" bec="0" bev="0" fileid="8">
+                <SequencePoint vc="1" uspid="16083" ordinal="0" offset="90" sl="178" sc="17" el="178" ec="17" bec="0" bev="0" fileid="8">
                   <TrackedMethodRefs>
                     <TrackedMethodRef uid="0" vc="1" />
                   </TrackedMethodRefs>
                 </SequencePoint>
-                <SequencePoint vc="1" uspid="15462" ordinal="0" offset="153" sl="180" sc="13" el="180" ec="13" bec="0" bev="0" fileid="8">
+                <SequencePoint vc="1" uspid="16084" ordinal="0" offset="153" sl="184" sc="13" el="184" ec="13" bec="0" bev="0" fileid="8">
                   <TrackedMethodRefs>
                     <TrackedMethodRef uid="0" vc="1" />
                   </TrackedMethodRefs>
                 </SequencePoint>
-                <SequencePoint vc="1" uspid="15463" ordinal="0" offset="154" sl="181" sc="13" el="181" ec="13" bec="0" bev="0" fileid="8">
+                <SequencePoint vc="1" uspid="16085" ordinal="0" offset="154" sl="185" sc="13" el="185" ec="13" bec="0" bev="0" fileid="8">
                   <TrackedMethodRefs>
                     <TrackedMethodRef uid="0" vc="1" />
                   </TrackedMethodRefs>
                 </SequencePoint>
-                <SequencePoint vc="1" uspid="15464" ordinal="0" offset="158" sl="182" sc="9" el="182" ec="9" bec="0" bev="0" fileid="8">
+                <SequencePoint vc="1" uspid="16086" ordinal="0" offset="158" sl="186" sc="9" el="186" ec="9" bec="0" bev="0" fileid="8">
                   <TrackedMethodRefs>
                     <TrackedMethodRef uid="0" vc="1" />
                   </TrackedMethodRefs>

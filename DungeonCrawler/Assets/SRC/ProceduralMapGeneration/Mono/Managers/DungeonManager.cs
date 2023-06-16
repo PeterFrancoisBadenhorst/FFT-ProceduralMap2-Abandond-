@@ -22,6 +22,6 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.
 
         private void OnEnable() => _pathMapBuilder.CreateMap(GridSize, GridScale, GridParent.transform, scriptRef, MapTotalFillPercentage, GridType);
 
-        private void OnDisable() => _clearChildren.DeleteAllChildren(GridParent);
+       // private void OnDisable() => _clearChildren.DeleteAllChildren(GridParent);
     }
 }
