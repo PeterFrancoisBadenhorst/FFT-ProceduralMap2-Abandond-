@@ -220,7 +220,7 @@ namespace FluentAssertions
             int column = frame.GetFileColumnNumber();
             if (column > 0)
             {
-                line = line.Substring(Math.Min(column - 1, line.Length - 1));
+                line = line[Math.Min(column - 1, line.Length - 1)..];
             }
 
             var sb = new CallerStatementBuilder();

@@ -1,11 +1,10 @@
 using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.PathFinding;
 using FluentAssertions;
 using NUnit.Framework;
-using System.Collections.Generic;
-using UnityEngine;
 using System;
+using System.Collections.Generic;
 using System.Linq;
-using System.Drawing;
+using UnityEngine;
 
 namespace Assets.SRC.ProceduralMapGeneration.PathFinding.Tests
 {
@@ -14,13 +13,13 @@ namespace Assets.SRC.ProceduralMapGeneration.PathFinding.Tests
         [TestFixture]
         public class FindEnds
         {
-            NewPathFinding pathFinder = new NewPathFinding();
+            private readonly NewPathFinding pathFinder = new();
+
             [Test]
             public void Should_Return_A_List_Of_Two_Vector3s_When_Given_A_List_Of_Vector3s()
             {
                 // Arrange
                 Vector3[] grid = new Vector3[] { new Vector3(1, 2, 3), new Vector3(4, 5, 6) };
-                System.Random random = new System.Random();
 
                 // Act
                 Vector3[] pos = pathFinder.FindEnds(grid);
@@ -43,30 +42,27 @@ namespace Assets.SRC.ProceduralMapGeneration.PathFinding.Tests
                 // Act
                 while (!randFailFix)
                 {
-                    System.Random random = new System.Random();
-
                     pos = pathFinder.FindEnds(grid);
 
                     if (pos[0] != pos[1])
                     {
                         randFailFix = true;
                     }
-
                 }
                 // Assert
                 pos[0].Should().NotBeEquivalentTo(pos[1]);
                 pos.Count().Should().Be(2);
-
             }
         }
+
         [TestFixture]
         public class Findpath
         {
-            NewPathFinding pathFinder = new NewPathFinding();
+            private readonly NewPathFinding pathFinder = new();
+
             [Test]
             public void NullGrid()
             {
-
                 Vector3[] positions = new Vector3[]
                 {
                 new Vector3(0, 0),
@@ -76,6 +72,7 @@ namespace Assets.SRC.ProceduralMapGeneration.PathFinding.Tests
                 Action act = () => pathFinder.Findpath(null, positions);
                 act.Should().Throw<ArgumentNullException>();
             }
+
             [Test]
             public void EmptyGrid()
             {
@@ -90,10 +87,11 @@ namespace Assets.SRC.ProceduralMapGeneration.PathFinding.Tests
                 Action act = () => pathFinder.Findpath(grid, positions);
                 act.Should().Throw<ArgumentNullException>();
             }
+
             [Test]
             public void NullPositions()
             {
-                List<NewNodeModel> grid = new List<NewNodeModel>
+                List<NewNodeModel> grid = new()
             {
                 new NewNodeModel(),
                 new NewNodeModel(),
@@ -113,10 +111,11 @@ namespace Assets.SRC.ProceduralMapGeneration.PathFinding.Tests
                 Action act = () => pathFinder.Findpath(grid, null);
                 act.Should().Throw<ArgumentNullException>();
             }
+
             [Test]
             public void EmptyPositions()
             {
-                List<NewNodeModel> grid = new List<NewNodeModel>
+                List<NewNodeModel> grid = new()
             {
                 new NewNodeModel(),
                 new NewNodeModel(),
@@ -139,15 +138,17 @@ namespace Assets.SRC.ProceduralMapGeneration.PathFinding.Tests
                 act.Should().Throw<ArgumentNullException>();
             }
         }
+
         [TestFixture]
         public class FindpathTests
         {
-            NewPathFinding pathFinder = new NewPathFinding();
+            private readonly NewPathFinding pathFinder = new();
+
             [Test]
             public void TestFindpath_WithValidGridAndPositions_ReturnsPath()
             {
                 // Arrange
-                List<NewNodeModel> grid = new List<NewNodeModel>
+                List<NewNodeModel> grid = new()
             {
                 new NewNodeModel() { Position = new Vector3(1, 2, 3) },
                 new NewNodeModel() { Position = new Vector3(4, 5, 6) },
@@ -188,7 +189,7 @@ namespace Assets.SRC.ProceduralMapGeneration.PathFinding.Tests
             public void TestFindpath_WithEmptyGrid_ThrowsArgumentNullException()
             {
                 // Arrange
-                List<NewNodeModel> grid = new List<NewNodeModel>();
+                List<NewNodeModel> grid = new();
                 Vector3[] positions = new Vector3[]
                 {
                 new Vector3(1, 2, 3),
@@ -200,16 +201,24 @@ namespace Assets.SRC.ProceduralMapGeneration.PathFinding.Tests
                 Assert.Throws<ArgumentNullException>(() => pathFinder.Findpath(grid, positions));
             }
 
+            public NewNodeModel GetNewNodeModel()
+            {
+                return new NewNodeModel();
+            }
+
             [Test]
-            public void TestFindpath_WithNullPositions_ThrowsArgumentNullException()
+            public void TestFindpath_WithNullPositions_ThrowsArgumentNullException(NewNodeModel newNodeModel)
             {
                 // Arrange
-                List<NewNodeModel> grid = new List<NewNodeModel>
+                NewNodeModel newNodeModel0 = new () { Position = new Vector3(7, 8, 9) };
+                NewNodeModel newNodeModel1 = new () { Position = new Vector3(7, 8, 9) };
+                NewNodeModel newNodeModel2 = new () { Position = new Vector3(7, 8, 9) };
+                List<NewNodeModel> grid = new()
             {
-                new NewNodeModel() { Position = new Vector3(1, 2, 3) },
-                new NewNodeModel() { Position = new Vector3(4, 5, 6) },
-                new NewNodeModel() { Position = new Vector3(7, 8, 9) },
-            };
+                    newNodeModel,
+                    newNodeModel1,
+                    newNodeModel2
+                };
 
                 // Act
                 // Assert
@@ -220,7 +229,7 @@ namespace Assets.SRC.ProceduralMapGeneration.PathFinding.Tests
             public void TestFindpath_WithEmptyPositions_ThrowsArgumentNullException()
             {
                 // Arrange
-                List<NewNodeModel> grid = new List<NewNodeModel>
+                List<NewNodeModel> grid = new()
             {
                 new NewNodeModel() { Position = new Vector3(1, 2, 3) },
                 new NewNodeModel() { Position = new Vector3(4, 5, 6) },
@@ -233,15 +242,17 @@ namespace Assets.SRC.ProceduralMapGeneration.PathFinding.Tests
                 Assert.Throws<ArgumentNullException>(() => pathFinder.Findpath(grid, positions));
             }
         }
+
         [TestFixture]
         public class FindActiveNodeTests
         {
-            NewPathFinding pathFinder = new NewPathFinding();
+            private readonly NewPathFinding pathFinder = new();
+
             [Test]
             public void TestFindActiveNode_WithValidActiveNodeAndEndPos_ReturnsActiveNode()
             {
                 // Arrange
-                NewNodeModel neighborNode = new NewNodeModel()
+                NewNodeModel neighborNode = new()
                 {
                     Position = new Vector3(1, 2, 3),
                     Closed = true,
@@ -249,7 +260,7 @@ namespace Assets.SRC.ProceduralMapGeneration.PathFinding.Tests
                     hCost = 50,
                 };
                 NewNodeModel[] neighbors = new NewNodeModel[] { neighborNode, neighborNode };
-                NewNodeModel activeNode = new NewNodeModel()
+                NewNodeModel activeNode = new()
                 {
                     Position = new Vector3(1, 2, 3),
                     Neighbors = neighbors.ToList(),
@@ -257,9 +268,8 @@ namespace Assets.SRC.ProceduralMapGeneration.PathFinding.Tests
                     fCost = 50,
                     hCost = 50,
                     LastNode = neighborNode,
-
                 };
-                NewNodeModel endPos = new NewNodeModel() { Position = new Vector3(7, 8, 9) };
+                NewNodeModel endPos = new() { Position = new Vector3(7, 8, 9) };
 
                 // Act
 
@@ -269,6 +279,7 @@ namespace Assets.SRC.ProceduralMapGeneration.PathFinding.Tests
                 foundActiveNode.Should().NotBeNull();
                 foundActiveNode.Position.Should().BeEquivalentTo(new Vector3(1, 2, 3));
             }
+
             //public class NewNodeModel
             //{
             //    public Vector3 Position;                // Position of the node
@@ -281,9 +292,12 @@ namespace Assets.SRC.ProceduralMapGeneration.PathFinding.Tests
             public void TestFindActiveNode_WithActiveNodeWithNoNeighbors_ReturnsNull()
             {
                 // Arrange
-                NewNodeModel activeNode = new NewNodeModel() { Position = new Vector3(1, 2, 3) };
-                activeNode.Neighbors = new List<NewNodeModel>();
-                NewNodeModel endPos = new NewNodeModel() { Position = new Vector3(7, 8, 9) };
+                NewNodeModel activeNode = new()
+                {
+                    Position = new Vector3(1, 2, 3),
+                    Neighbors = new()
+                };
+                NewNodeModel endPos = new() { Position = new Vector3(7, 8, 9) };
 
                 // Act
                 NewNodeModel foundActiveNode = pathFinder.FindActiveNode(activeNode, endPos);
@@ -296,13 +310,16 @@ namespace Assets.SRC.ProceduralMapGeneration.PathFinding.Tests
             public void TestFindActiveNode_WithActiveNodeWithNeighborsButNoValidEndPos_ReturnsNull()
             {
                 // Arrange
-                NewNodeModel activeNode = new NewNodeModel() { Position = new Vector3(1, 2, 3) };
-                activeNode.Neighbors = new List<NewNodeModel>
+                NewNodeModel activeNode = new()
+                {
+                    Position = new Vector3(1, 2, 3),
+                    Neighbors = new()
             {
                 new NewNodeModel() { Position = new Vector3(4, 5, 6) },
                 new NewNodeModel() { Position = new Vector3(7, 8, 9) },
-            };
-                NewNodeModel endPos = new NewNodeModel() { Position = new Vector3(10, 11, 12) };
+            }
+                };
+                NewNodeModel endPos = new() { Position = new Vector3(10, 11, 12) };
 
                 // Act
                 NewNodeModel foundActiveNode = pathFinder.FindActiveNode(activeNode, endPos);
@@ -311,16 +328,18 @@ namespace Assets.SRC.ProceduralMapGeneration.PathFinding.Tests
                 foundActiveNode.Should().NotBeNull();
             }
         }
+
         [TestFixture]
         public class GeneratePathTests
         {
-            NewPathFinding pathFinder = new NewPathFinding();
+            private readonly NewPathFinding pathFinder = new();
+
             [Test]
             public void TestGeneratePath_WithValidActiveNodeAndStartPos_ReturnsPath()
             {
                 // Arrange
-                NewNodeModel activeNode = new NewNodeModel() { Position = new Vector3(1, 2, 3) };
-                NewNodeModel startPos = new NewNodeModel() { Position = new Vector3(7, 8, 9) };
+                NewNodeModel activeNode = new() { Position = new Vector3(1, 2, 3) };
+                NewNodeModel startPos = new() { Position = new Vector3(7, 8, 9) };
 
                 // Act
                 List<NewNodeModel> generatedPath = pathFinder.GeneratePath(activeNode, startPos);
@@ -336,42 +355,46 @@ namespace Assets.SRC.ProceduralMapGeneration.PathFinding.Tests
             public void TestGeneratePath_WithActiveNodeWithNoLastNode_ReturnsEmptyList()
             {
                 // Arrange
-                NewNodeModel activeNode = new NewNodeModel() { Position = new Vector3(1, 2, 3) };
-                activeNode.LastNode = null;
-                NewNodeModel startPos = new NewNodeModel() { Position = new Vector3(7, 8, 9) };
+                NewNodeModel activeNode = new()
+                {
+                    Position = new Vector3(1, 2, 3),
+                    LastNode = null
+                };
+                NewNodeModel startPos = new() { Position = new Vector3(7, 8, 9) };
 
                 // Act
                 List<NewNodeModel> generatedPath = pathFinder.GeneratePath(activeNode, startPos);
 
                 // Assert
                 Assert.IsNotNull(generatedPath);
-
             }
 
             [Test]
             public void TestGeneratePath_WithActiveNodeWithNoValidStartPos_ReturnsEmptyList()
             {
                 // Arrange
-                NewNodeModel activeNode = new NewNodeModel() { Position = new Vector3(1, 2, 3) };
-                NewNodeModel startPos = new NewNodeModel() { Position = new Vector3(10, 11, 12) };
+                NewNodeModel activeNode = new() { Position = new Vector3(1, 2, 3) };
+                NewNodeModel startPos = new() { Position = new Vector3(10, 11, 12) };
 
                 // Act
                 List<NewNodeModel> generatedPath = pathFinder.GeneratePath(activeNode, startPos);
 
                 // Assert
                 Assert.IsNotNull(generatedPath);
-
             }
         }
+
         [TestFixture]
         public class ConvertPathToPositionsTests
         {
-            NewPathFinding pathFinder = new NewPathFinding();
+            private static readonly NewPathFinding newPathFinding = new();
+            private readonly NewPathFinding pathFinder = newPathFinding;
+
             [Test]
             public void TestConvertPathToPositions_WithValidGeneratedList_ReturnsPositions()
             {
                 // Arrange
-                List<NewNodeModel> generatedList = new List<NewNodeModel>
+                List<NewNodeModel> generatedList = new()
             {
                 new NewNodeModel() { Position = new Vector3(1, 2, 3) },
                 new NewNodeModel() { Position = new Vector3(4, 5, 6) },
@@ -393,7 +416,7 @@ namespace Assets.SRC.ProceduralMapGeneration.PathFinding.Tests
             public void TestConvertPathToPositions_WithEmptyGeneratedList_ReturnsEmptyList()
             {
                 // Arrange
-                List<NewNodeModel> generatedList = new List<NewNodeModel>();
+                List<NewNodeModel> generatedList = new();
 
                 // Act
                 List<Vector3> convertedPositions = pathFinder.ConvertPathToPositions(generatedList);
@@ -406,9 +429,11 @@ namespace Assets.SRC.ProceduralMapGeneration.PathFinding.Tests
             public void TestConvertPathToPositions_WithGeneratedListWithNoPositions_ReturnsEmptyList()
             {
                 // Arrange
-                List<NewNodeModel> generatedList = new List<NewNodeModel>();
-                generatedList.Add(new NewNodeModel());
-                generatedList.Add(new NewNodeModel());
+                List<NewNodeModel> generatedList = new()
+                {
+                    new NewNodeModel(),
+                    new NewNodeModel()
+                };
 
                 // Act
                 List<Vector3> convertedPositions = pathFinder.ConvertPathToPositions(generatedList);
@@ -417,10 +442,12 @@ namespace Assets.SRC.ProceduralMapGeneration.PathFinding.Tests
                 Assert.IsNotNull(convertedPositions);
             }
         }
+
         [TestFixture]
         public class NodeGridCreatorTests
         {
-            NewPathFinding pathFinder = new NewPathFinding();
+            private readonly NewPathFinding pathFinder = new();
+
             [Test]
             public void TestNodeGridCreatorA()
             {
@@ -447,6 +474,7 @@ namespace Assets.SRC.ProceduralMapGeneration.PathFinding.Tests
                 // Assert
                 Assert.AreEqual(2, results.Length);
             }
+
             [Test]
             public void TestNodeGridCreatoB()
             {
@@ -466,6 +494,7 @@ namespace Assets.SRC.ProceduralMapGeneration.PathFinding.Tests
                 // Assert
                 Assert.AreEqual(2, results.Length);
             }
+
             [Test]
             public void TestReturnPath()
             {
@@ -491,15 +520,17 @@ namespace Assets.SRC.ProceduralMapGeneration.PathFinding.Tests
                 Assert.AreEqual(2, results.Length);
             }
         }
+
         [TestFixture]
         public class SetNodeNeighborsTest
         {
-            NewPathFinding pathFinder = new NewPathFinding();
+            private readonly NewPathFinding pathFinder = new();
+
             [Test]
             public void TestSetNodeNeighbors()
             {
                 // Arrange
-                List<NewNodeModel> nodes = new List<NewNodeModel>
+                List<NewNodeModel> nodes = new()
             {
                 new(),
                 new(),
@@ -514,21 +545,20 @@ namespace Assets.SRC.ProceduralMapGeneration.PathFinding.Tests
                 // Assert
                 Assert.AreEqual(4, results.Count);
             }
+
             [Test]
             public void ComparePositionsTest()
             {
-
                 // Arrange
-                Vector3 poasA = new Vector3(1, 2, 3);
-                Vector3 posB = new Vector3(0, 0, 0);
+                Vector3 poasA = new(1, 2, 3);
+                Vector3 posB = new(0, 0, 0);
                 float multiplier = 1.0f;
 
                 // Act
                 bool result = NewPathFinding.ComparePositions(poasA, posB, multiplier);
 
                 // Assert
-                result.Should().BeFalse();   
-
+                result.Should().BeFalse();
             }
         }
     }

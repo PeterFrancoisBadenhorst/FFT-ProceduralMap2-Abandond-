@@ -1092,6 +1092,8 @@ namespace FluentAssertions
             InvalidShouldCall();
         }
 
+#pragma warning disable CS0436 // Type conflicts with imported type
+
         [DoesNotReturn]
         private static void InvalidShouldCall()
         {

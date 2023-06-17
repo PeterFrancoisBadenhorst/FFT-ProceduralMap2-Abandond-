@@ -7,7 +7,6 @@ namespace FluentAssertions.Equivalency.Steps
 {
     public class DictionaryEquivalencyStep : EquivalencyStep<IDictionary>
     {
-        [SuppressMessage("ReSharper", "PossibleNullReferenceException")]
         protected override EquivalencyResult OnHandle(Comparands comparands, IEquivalencyValidationContext context, IEquivalencyValidator nestedValidator)
         {
             var subject = comparands.Subject as IDictionary;

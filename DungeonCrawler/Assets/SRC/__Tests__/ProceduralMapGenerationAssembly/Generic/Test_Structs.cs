@@ -1,9 +1,7 @@
 using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Enums;
-using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.ScriptableObjects;
 using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Structs;
 using FluentAssertions;
 using NUnit.Framework;
-using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -35,7 +33,7 @@ namespace Assets.SRC.ProceduralMapGeneration.Generic.Tests
             public void Should_Be_Able_To_Set_And_Get_Values()
             {
                 // Arrange
-                var directionIDStruct = new DirectionIDStruct();
+                DirectionIDStruct directionIDStruct = new();
 
                 // Act
                 directionIDStruct.NothID = true;
@@ -152,6 +150,5 @@ namespace Assets.SRC.ProceduralMapGeneration.Generic.Tests
                 neighborStruct.BottomNeighbor.Should().BeEquivalentTo(bottomNeighbor);
             }
         }
-
     }
 }

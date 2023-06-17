@@ -8,8 +8,6 @@ namespace FluentAssertions
 {
     public static class ExceptionAssertionsExtensions
     {
-#pragma warning disable AV1755 // "Name of async method ... should end with Async"; Async suffix is too noisy in fluent API
-
         /// <summary>
         /// Asserts that the thrown exception has a message that matches <paramref name="expectedWildcardPattern" />.
         /// </summary>
@@ -195,7 +193,5 @@ namespace FluentAssertions
         {
             return (await task).WithParameterName(paramName, because, becauseArgs);
         }
-
-#pragma warning restore AV1755
     }
 }

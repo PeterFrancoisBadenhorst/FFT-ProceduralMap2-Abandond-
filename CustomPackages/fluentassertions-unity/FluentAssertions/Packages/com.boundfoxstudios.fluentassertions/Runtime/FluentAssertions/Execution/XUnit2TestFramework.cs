@@ -25,16 +25,12 @@ namespace FluentAssertions.Execution
                 }
             }
         }
+#pragma warning disable CS0436 // Type conflicts with imported type
 
         [DoesNotReturn]
         public void Throw(string message)
         {
-            Type exceptionType = assembly.GetType("Xunit.Sdk.XunitException");
-            if (exceptionType is null)
-            {
-                throw new Exception("Failed to create the XUnit assertion type");
-            }
-
+            Type exceptionType = assembly.GetType("Xunit.Sdk.XunitException") ?? throw new Exception("Failed to create the XUnit assertion type");
             throw (Exception)Activator.CreateInstance(exceptionType, message);
         }
     }

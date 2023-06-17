@@ -36,8 +36,6 @@ namespace FluentAssertions.Collections
     }
 
 #pragma warning disable CS0659 // Ignore not overriding Object.GetHashCode()
-#pragma warning disable CA1065 // Ignore throwing NotSupportedException from Equals
-
     [DebuggerNonUserCode]
     public class GenericCollectionAssertions<TCollection, T, TAssertions> :
         ReferenceTypeAssertions<TCollection, TAssertions>
@@ -192,8 +190,7 @@ namespace FluentAssertions.Collections
             // in case user needs to use them. Strict ordering improves algorithmic complexity
             // from O(n^2) to O(n). For bigger tables it is necessary in order to achieve acceptable
             // execution times.
-            Func<EquivalencyAssertionOptions<TExpectation>, EquivalencyAssertionOptions<TExpectation>> forceStrictOrderingConfig =
-                x => config(x).WithStrictOrderingFor(s => string.IsNullOrEmpty(s.Path));
+            EquivalencyAssertionOptions<TExpectation> forceStrictOrderingConfig(EquivalencyAssertionOptions<TExpectation> x) => config(x).WithStrictOrderingFor(s => string.IsNullOrEmpty(s.Path));
 
             return BeEquivalentTo(repeatedExpectation, forceStrictOrderingConfig, because, becauseArgs);
         }

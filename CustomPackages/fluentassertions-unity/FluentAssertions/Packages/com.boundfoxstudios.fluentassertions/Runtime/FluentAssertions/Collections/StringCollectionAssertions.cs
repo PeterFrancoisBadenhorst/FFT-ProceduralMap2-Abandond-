@@ -190,8 +190,7 @@ namespace FluentAssertions.Collections
             // in case user needs to use them. Strict ordering improves algorithmic complexity
             // from O(n^2) to O(n). For bigger tables it is necessary in order to achieve acceptable
             // execution times.
-            Func<EquivalencyAssertionOptions<string>, EquivalencyAssertionOptions<string>> forceStringOrderingConfig =
-                x => config(x).WithStrictOrderingFor(s => string.IsNullOrEmpty(s.Path));
+            EquivalencyAssertionOptions<string> forceStringOrderingConfig(EquivalencyAssertionOptions<string> x) => config(x).WithStrictOrderingFor(s => string.IsNullOrEmpty(s.Path));
 
             return BeEquivalentTo(repeatedExpectation, forceStringOrderingConfig, because, becauseArgs);
         }

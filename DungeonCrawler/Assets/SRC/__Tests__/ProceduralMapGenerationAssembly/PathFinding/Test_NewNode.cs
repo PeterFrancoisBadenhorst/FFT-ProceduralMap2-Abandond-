@@ -12,10 +12,10 @@ namespace Assets.SRC.ProceduralMapGeneration.PathFinding.Tests
         public void Should_Create_A_New_Node_With_A_Position()
         {
             // Arrange
-            Vector3 position = new Vector3(1, 2, 3);
+            Vector3 position = new(1, 2, 3);
 
             // Act
-            NewNodeModel node = new NewNodeModel() { Position = position };
+            NewNodeModel node = new() { Position = position };
 
             // Assert
             node.Position.Should().Be(position);
@@ -25,7 +25,7 @@ namespace Assets.SRC.ProceduralMapGeneration.PathFinding.Tests
         public void Should_Not_Have_An_Empty_List_Of_Neighbors_ByDefault()
         {
             // Arrange
-            NewNodeModel node = new NewNodeModel();
+            NewNodeModel node = new();
 
             // Act
             List<NewNodeModel> neighbors = node.Neighbors;
@@ -38,7 +38,7 @@ namespace Assets.SRC.ProceduralMapGeneration.PathFinding.Tests
         public void Should_Not_Be_Closed_ByDefault()
         {
             // Arrange
-            NewNodeModel node = new NewNodeModel();
+            NewNodeModel node = new();
 
             // Act
             bool closed = node.Closed;
@@ -51,7 +51,7 @@ namespace Assets.SRC.ProceduralMapGeneration.PathFinding.Tests
         public void Should_Have_A_Default_Cost_Of_Zero()
         {
             // Arrange
-            NewNodeModel node = new NewNodeModel();
+            NewNodeModel node = new();
 
             // Act
             float cost = node.fCost;
@@ -64,7 +64,7 @@ namespace Assets.SRC.ProceduralMapGeneration.PathFinding.Tests
         public void Should_Have_A_Default_Heuristic_Cost_Of_Zero()
         {
             // Arrange
-            NewNodeModel node = new NewNodeModel();
+            NewNodeModel node = new();
 
             // Act
             float hCost = node.hCost;
@@ -77,7 +77,7 @@ namespace Assets.SRC.ProceduralMapGeneration.PathFinding.Tests
         public void Should_Not_Have_A_LastNode_ByDefault()
         {
             // Arrange
-            NewNodeModel node = new NewNodeModel();
+            NewNodeModel node = new();
 
             // Act
             NewNodeModel lastNode = node.LastNode;

@@ -1,10 +1,6 @@
-using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Enums;
-using Assets.SRC.ProceduralMapGeneration.Assets.SRC.Shared.Assets.SRC.Shared.Utilities;
-using FluentAssertions;
-using NUnit.Framework;
-using UnityEngine;
-using System;
 using Assets.SRC.ProceduralMapGeneration.Assets.SRC.Shared.Exceptions;
+using NUnit.Framework;
+using System;
 
 namespace Assets.SRC.ProceduralMapGeneration.Generic.Tests
 {
@@ -13,7 +9,7 @@ namespace Assets.SRC.ProceduralMapGeneration.Generic.Tests
         [Test]
         public void NotImplementedException_ShouldThrowNotImplementedException()
         {
-            CustomExceptions mesh = new CustomExceptions();
+            CustomExceptions mesh = new();
 
             Assert.Throws<NotImplementedException>(
                 () => mesh.NotImplementedException());

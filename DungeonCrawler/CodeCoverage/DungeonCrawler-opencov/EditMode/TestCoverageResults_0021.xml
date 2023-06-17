@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <CoverageSession xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Version="0.0.0.0">
-  <Summary numSequencePoints="13" visitedSequencePoints="8" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="61.54" branchCoverage="0.0" maxCyclomaticComplexity="4" minCyclomaticComplexity="1" maxCrapScore="5.16" minCrapScore="1" visitedClasses="2" numClasses="2" visitedMethods="2" numMethods="2" />
+  <Summary numSequencePoints="11" visitedSequencePoints="11" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="100.0" branchCoverage="0.0" maxCyclomaticComplexity="2" minCyclomaticComplexity="2" maxCrapScore="2" minCrapScore="2" visitedClasses="1" numClasses="1" visitedMethods="1" numMethods="1" />
   <Modules>
     <Module>
-      <Summary numSequencePoints="13" visitedSequencePoints="8" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="61.54" branchCoverage="0.0" maxCyclomaticComplexity="4" minCyclomaticComplexity="1" maxCrapScore="5.16" minCrapScore="1" visitedClasses="2" numClasses="2" visitedMethods="2" numMethods="2" />
+      <Summary numSequencePoints="11" visitedSequencePoints="11" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="100.0" branchCoverage="0.0" maxCyclomaticComplexity="2" minCyclomaticComplexity="2" maxCrapScore="2" minCrapScore="2" visitedClasses="1" numClasses="1" visitedMethods="1" numMethods="1" />
       <ModuleTime>0001-01-01T00:00:00</ModuleTime>
       <ModuleName>ProceduralMapGenerationAssembly</ModuleName>
       <Files>
@@ -19,93 +19,68 @@
       </Files>
       <Classes>
         <Class>
-          <Summary numSequencePoints="12" visitedSequencePoints="7" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="58.33" branchCoverage="0.0" maxCyclomaticComplexity="4" minCyclomaticComplexity="4" maxCrapScore="5.16" minCrapScore="5.16" visitedClasses="1" numClasses="1" visitedMethods="1" numMethods="1" />
+          <Summary numSequencePoints="11" visitedSequencePoints="11" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="100.0" branchCoverage="0.0" maxCyclomaticComplexity="2" minCyclomaticComplexity="2" maxCrapScore="2" minCrapScore="2" visitedClasses="1" numClasses="1" visitedMethods="1" numMethods="1" />
           <FullName>Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.PathFinding.NewPathFinding</FullName>
           <Methods>
-            <Method visited="true" cyclomaticComplexity="4" nPathComplexity="0" sequenceCoverage="58.33" branchCoverage="0" crapScore="5.16" isConstructor="false" isStatic="false" isGetter="false" isSetter="false">
-              <Summary numSequencePoints="12" visitedSequencePoints="7" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="58.33" branchCoverage="0" maxCyclomaticComplexity="4" minCyclomaticComplexity="4" maxCrapScore="5.16" minCrapScore="5.16" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
-              <MetadataToken>100663349</MetadataToken>
-              <Name>Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.PathFinding.NewNodeModel Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.PathFinding.NewPathFinding::FindActiveNode(Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.PathFinding.NewNodeModel, Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.PathFinding.NewNodeModel)</Name>
+            <Method visited="true" cyclomaticComplexity="2" nPathComplexity="0" sequenceCoverage="100.0" branchCoverage="0" crapScore="2" isConstructor="false" isStatic="false" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="11" visitedSequencePoints="11" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="100.0" branchCoverage="0" maxCyclomaticComplexity="2" minCyclomaticComplexity="2" maxCrapScore="2" minCrapScore="2" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
+              <MetadataToken>100663351</MetadataToken>
+              <Name>System.Collections.Generic.List[Vector3] Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.PathFinding.NewPathFinding::ConvertPathToPositions(System.Collections.Generic.List[NewNodeModel])</Name>
               <FileRef uid="8" />
               <SequencePoints>
-                <SequencePoint vc="1" uspid="12856" ordinal="0" offset="0" sl="128" sc="9" el="128" ec="9" bec="0" bev="0" fileid="8">
+                <SequencePoint vc="1" uspid="15066" ordinal="0" offset="0" sl="155" sc="9" el="155" ec="9" bec="0" bev="0" fileid="8">
                   <TrackedMethodRefs>
                     <TrackedMethodRef uid="0" vc="1" />
                   </TrackedMethodRefs>
                 </SequencePoint>
-                <SequencePoint vc="2" uspid="12857" ordinal="0" offset="3" sl="130" sc="13" el="130" ec="13" bec="0" bev="0" fileid="8">
-                  <TrackedMethodRefs>
-                    <TrackedMethodRef uid="0" vc="2" />
-                  </TrackedMethodRefs>
-                </SequencePoint>
-                <SequencePoint vc="2" uspid="12858" ordinal="0" offset="4" sl="131" sc="17" el="131" ec="17" bec="0" bev="0" fileid="8">
-                  <TrackedMethodRefs>
-                    <TrackedMethodRef uid="0" vc="2" />
-                  </TrackedMethodRefs>
-                </SequencePoint>
-                <SequencePoint vc="1" uspid="12859" ordinal="0" offset="52" sl="132" sc="17" el="132" ec="17" bec="0" bev="0" fileid="8">
+                <SequencePoint vc="1" uspid="15067" ordinal="0" offset="1" sl="156" sc="13" el="156" ec="13" bec="0" bev="0" fileid="8">
                   <TrackedMethodRefs>
                     <TrackedMethodRef uid="0" vc="1" />
                   </TrackedMethodRefs>
                 </SequencePoint>
-                <SequencePoint vc="1" uspid="12860" ordinal="0" offset="59" sl="133" sc="17" el="133" ec="17" bec="0" bev="0" fileid="8">
+                <SequencePoint vc="1" uspid="15068" ordinal="0" offset="7" sl="158" sc="13" el="158" ec="13" bec="0" bev="0" fileid="8">
                   <TrackedMethodRefs>
                     <TrackedMethodRef uid="0" vc="1" />
                   </TrackedMethodRefs>
                 </SequencePoint>
-                <SequencePoint vc="1" uspid="12861" ordinal="0" offset="62" sl="134" sc="13" el="134" ec="13" bec="0" bev="0" fileid="8">
+                <SequencePoint vc="1" uspid="15069" ordinal="0" offset="8" sl="158" sc="43" el="158" ec="43" bec="0" bev="0" fileid="8">
                   <TrackedMethodRefs>
                     <TrackedMethodRef uid="0" vc="1" />
                   </TrackedMethodRefs>
                 </SequencePoint>
-                <SequencePoint vc="2" uspid="12862" ordinal="0" offset="63" sl="129" sc="13" el="129" ec="13" bec="0" bev="0" fileid="8">
+                <SequencePoint vc="2" uspid="15070" ordinal="0" offset="17" sl="158" sc="22" el="158" ec="22" bec="0" bev="0" fileid="8">
                   <TrackedMethodRefs>
                     <TrackedMethodRef uid="0" vc="2" />
                   </TrackedMethodRefs>
                 </SequencePoint>
-                <SequencePoint vc="0" uspid="12863" ordinal="0" offset="84" sl="135" sc="13" el="135" ec="13" bec="0" bev="0" fileid="8">
-                  <TrackedMethodRefs>
-                    <TrackedMethodRef uid="0" vc="0" />
-                  </TrackedMethodRefs>
-                </SequencePoint>
-                <SequencePoint vc="0" uspid="12864" ordinal="0" offset="92" sl="135" sc="37" el="135" ec="37" bec="0" bev="0" fileid="8">
-                  <TrackedMethodRefs>
-                    <TrackedMethodRef uid="0" vc="0" />
-                  </TrackedMethodRefs>
-                </SequencePoint>
-                <SequencePoint vc="0" uspid="12865" ordinal="0" offset="93" sl="135" sc="39" el="135" ec="39" bec="0" bev="0" fileid="8">
-                  <TrackedMethodRefs>
-                    <TrackedMethodRef uid="0" vc="0" />
-                  </TrackedMethodRefs>
-                </SequencePoint>
-                <SequencePoint vc="0" uspid="12866" ordinal="0" offset="99" sl="136" sc="13" el="136" ec="13" bec="0" bev="0" fileid="8">
-                  <TrackedMethodRefs>
-                    <TrackedMethodRef uid="0" vc="0" />
-                  </TrackedMethodRefs>
-                </SequencePoint>
-                <SequencePoint vc="0" uspid="12867" ordinal="0" offset="103" sl="137" sc="9" el="137" ec="9" bec="0" bev="0" fileid="8">
-                  <TrackedMethodRefs>
-                    <TrackedMethodRef uid="0" vc="0" />
-                  </TrackedMethodRefs>
-                </SequencePoint>
-              </SequencePoints>
-              <BranchPoints />
-            </Method>
-          </Methods>
-        </Class>
-        <Class>
-          <Summary numSequencePoints="1" visitedSequencePoints="1" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="100.0" branchCoverage="0.0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" maxCrapScore="1" minCrapScore="1" visitedClasses="1" numClasses="1" visitedMethods="1" numMethods="1" />
-          <FullName>Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.PathFinding.NewPathFinding/&lt;&gt;c</FullName>
-          <Methods>
-            <Method visited="true" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="100.0" branchCoverage="0" crapScore="1" isConstructor="false" isStatic="false" isGetter="false" isSetter="false">
-              <Summary numSequencePoints="1" visitedSequencePoints="1" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="100.0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" maxCrapScore="1" minCrapScore="1" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
-              <MetadataToken>100663363</MetadataToken>
-              <Name>System.Single Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.PathFinding.NewPathFinding/&lt;&gt;c::&lt;FindActiveNode&gt;b__10_0(Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.PathFinding.NewNodeModel)</Name>
-              <FileRef uid="8" />
-              <SequencePoints>
-                <SequencePoint vc="2" uspid="12940" ordinal="0" offset="0" sl="131" sc="78" el="131" ec="78" bec="0" bev="0" fileid="8">
+                <SequencePoint vc="2" uspid="15071" ordinal="0" offset="25" sl="159" sc="13" el="159" ec="13" bec="0" bev="0" fileid="8">
                   <TrackedMethodRefs>
                     <TrackedMethodRef uid="0" vc="2" />
+                  </TrackedMethodRefs>
+                </SequencePoint>
+                <SequencePoint vc="2" uspid="15072" ordinal="0" offset="26" sl="160" sc="17" el="160" ec="17" bec="0" bev="0" fileid="8">
+                  <TrackedMethodRefs>
+                    <TrackedMethodRef uid="0" vc="2" />
+                  </TrackedMethodRefs>
+                </SequencePoint>
+                <SequencePoint vc="2" uspid="15073" ordinal="0" offset="39" sl="161" sc="13" el="161" ec="13" bec="0" bev="0" fileid="8">
+                  <TrackedMethodRefs>
+                    <TrackedMethodRef uid="0" vc="2" />
+                  </TrackedMethodRefs>
+                </SequencePoint>
+                <SequencePoint vc="3" uspid="15074" ordinal="0" offset="40" sl="158" sc="40" el="158" ec="40" bec="0" bev="0" fileid="8">
+                  <TrackedMethodRefs>
+                    <TrackedMethodRef uid="0" vc="3" />
+                  </TrackedMethodRefs>
+                </SequencePoint>
+                <SequencePoint vc="1" uspid="15075" ordinal="0" offset="66" sl="163" sc="13" el="163" ec="13" bec="0" bev="0" fileid="8">
+                  <TrackedMethodRefs>
+                    <TrackedMethodRef uid="0" vc="1" />
+                  </TrackedMethodRefs>
+                </SequencePoint>
+                <SequencePoint vc="1" uspid="15076" ordinal="0" offset="70" sl="164" sc="9" el="164" ec="9" bec="0" bev="0" fileid="8">
+                  <TrackedMethodRefs>
+                    <TrackedMethodRef uid="0" vc="1" />
                   </TrackedMethodRefs>
                 </SequencePoint>
               </SequencePoints>
@@ -115,7 +90,7 @@
         </Class>
       </Classes>
       <TrackedMethods>
-        <TrackedMethod uid="0" token="100663352" name="System.Void Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding/FindActiveNodeTests::TestFindActiveNode_WithActiveNodeWithNeighborsButNoValidEndPos_ReturnsNull()" strategy="Test" />
+        <TrackedMethod uid="0" token="100663361" name="System.Void Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding/ConvertPathToPositionsTests::TestConvertPathToPositions_WithGeneratedListWithNoPositions_ReturnsEmptyList()" strategy="Test" />
       </TrackedMethods>
     </Module>
   </Modules>

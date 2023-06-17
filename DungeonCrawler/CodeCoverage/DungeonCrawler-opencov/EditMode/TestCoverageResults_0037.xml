@@ -28,52 +28,52 @@
               <Name>System.Collections.Generic.List[NewNodeModel] Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.PathFinding.NewPathFinding::GeneratePath(Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.PathFinding.NewNodeModel, Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.PathFinding.NewNodeModel)</Name>
               <FileRef uid="8" />
               <SequencePoints>
-                <SequencePoint vc="1" uspid="18964" ordinal="0" offset="0" sl="139" sc="9" el="139" ec="9" bec="0" bev="0" fileid="8">
+                <SequencePoint vc="1" uspid="22434" ordinal="0" offset="0" sl="142" sc="9" el="142" ec="9" bec="0" bev="0" fileid="8">
                   <TrackedMethodRefs>
                     <TrackedMethodRef uid="0" vc="1" />
                   </TrackedMethodRefs>
                 </SequencePoint>
-                <SequencePoint vc="1" uspid="18965" ordinal="0" offset="1" sl="140" sc="13" el="140" ec="13" bec="0" bev="0" fileid="8">
+                <SequencePoint vc="1" uspid="22435" ordinal="0" offset="1" sl="143" sc="13" el="143" ec="13" bec="0" bev="0" fileid="8">
                   <TrackedMethodRefs>
                     <TrackedMethodRef uid="0" vc="1" />
                   </TrackedMethodRefs>
                 </SequencePoint>
-                <SequencePoint vc="1" uspid="18966" ordinal="0" offset="9" sl="143" sc="13" el="143" ec="13" bec="0" bev="0" fileid="8">
+                <SequencePoint vc="1" uspid="22436" ordinal="0" offset="9" sl="146" sc="13" el="146" ec="13" bec="0" bev="0" fileid="8">
                   <TrackedMethodRefs>
                     <TrackedMethodRef uid="0" vc="1" />
                   </TrackedMethodRefs>
                 </SequencePoint>
-                <SequencePoint vc="1" uspid="18967" ordinal="0" offset="10" sl="144" sc="17" el="144" ec="17" bec="0" bev="0" fileid="8">
+                <SequencePoint vc="1" uspid="22437" ordinal="0" offset="10" sl="147" sc="17" el="147" ec="17" bec="0" bev="0" fileid="8">
                   <TrackedMethodRefs>
                     <TrackedMethodRef uid="0" vc="1" />
                   </TrackedMethodRefs>
                 </SequencePoint>
-                <SequencePoint vc="1" uspid="18968" ordinal="0" offset="18" sl="145" sc="17" el="145" ec="17" bec="0" bev="0" fileid="8">
+                <SequencePoint vc="1" uspid="22438" ordinal="0" offset="18" sl="148" sc="17" el="148" ec="17" bec="0" bev="0" fileid="8">
                   <TrackedMethodRefs>
                     <TrackedMethodRef uid="0" vc="1" />
                   </TrackedMethodRefs>
                 </SequencePoint>
-                <SequencePoint vc="1" uspid="18969" ordinal="0" offset="26" sl="146" sc="13" el="146" ec="13" bec="0" bev="0" fileid="8">
+                <SequencePoint vc="1" uspid="22439" ordinal="0" offset="26" sl="149" sc="13" el="149" ec="13" bec="0" bev="0" fileid="8">
                   <TrackedMethodRefs>
                     <TrackedMethodRef uid="0" vc="1" />
                   </TrackedMethodRefs>
                 </SequencePoint>
-                <SequencePoint vc="2" uspid="18970" ordinal="0" offset="27" sl="142" sc="13" el="142" ec="13" bec="0" bev="0" fileid="8">
+                <SequencePoint vc="2" uspid="22440" ordinal="0" offset="27" sl="145" sc="13" el="145" ec="13" bec="0" bev="0" fileid="8">
                   <TrackedMethodRefs>
                     <TrackedMethodRef uid="0" vc="2" />
                   </TrackedMethodRefs>
                 </SequencePoint>
-                <SequencePoint vc="0" uspid="18971" ordinal="0" offset="48" sl="147" sc="13" el="147" ec="13" bec="0" bev="0" fileid="8">
+                <SequencePoint vc="0" uspid="22441" ordinal="0" offset="48" sl="150" sc="13" el="150" ec="13" bec="0" bev="0" fileid="8">
                   <TrackedMethodRefs>
                     <TrackedMethodRef uid="0" vc="0" />
                   </TrackedMethodRefs>
                 </SequencePoint>
-                <SequencePoint vc="0" uspid="18972" ordinal="0" offset="55" sl="148" sc="13" el="148" ec="13" bec="0" bev="0" fileid="8">
+                <SequencePoint vc="0" uspid="22442" ordinal="0" offset="55" sl="151" sc="13" el="151" ec="13" bec="0" bev="0" fileid="8">
                   <TrackedMethodRefs>
                     <TrackedMethodRef uid="0" vc="0" />
                   </TrackedMethodRefs>
                 </SequencePoint>
-                <SequencePoint vc="0" uspid="18973" ordinal="0" offset="59" sl="149" sc="9" el="149" ec="9" bec="0" bev="0" fileid="8">
+                <SequencePoint vc="0" uspid="22443" ordinal="0" offset="59" sl="152" sc="9" el="152" ec="9" bec="0" bev="0" fileid="8">
                   <TrackedMethodRefs>
                     <TrackedMethodRef uid="0" vc="0" />
                   </TrackedMethodRefs>
@@ -85,7 +85,7 @@
         </Class>
       </Classes>
       <TrackedMethods>
-        <TrackedMethod uid="0" token="100663354" name="System.Void Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding/GeneratePathTests::TestGeneratePath_WithValidActiveNodeAndStartPos_ReturnsPath()" strategy="Test" />
+        <TrackedMethod uid="0" token="100663357" name="System.Void Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding/GeneratePathTests::TestGeneratePath_WithActiveNodeWithNoValidStartPos_ReturnsEmptyList()" strategy="Test" />
       </TrackedMethods>
     </Module>
   </Modules>

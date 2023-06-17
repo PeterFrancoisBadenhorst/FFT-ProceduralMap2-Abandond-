@@ -9,15 +9,12 @@ using UnityEngine;
 
 namespace Assets.SRC.ProceduralMapGeneration.Utilities.Tests
 {
-    
     [TestFixture]
     public class GridCreate_Tests
     {
         private GridCreate _gridCreate;
 
         public Transform GridParent { get; private set; }
-
-        #region [SetUp]&&[TearDown]
 
         [SetUp]
         public void SetUp()
@@ -31,28 +28,19 @@ namespace Assets.SRC.ProceduralMapGeneration.Utilities.Tests
             _gridCreate = null;
         }
 
-        #endregion [SetUp]&&[TearDown]
-
-        #region Validate_SquareGrid2DVertical Test Cases
-
         [Test, Order(1)]
         [TestCase(1, 1)]
         [TestCase(2, 5)]
         [TestCase(2, 15)]
         [TestCase(14, 0.5f)]
         [TestCase(16, 22.34f)]
-
-        #endregion Validate_SquareGrid2DVertical Test Cases
-
         public void Validate_SquareGrid2DVertical(int gridSize, float scale)
         {
-           var t = _gridCreate.SquareGrid2DVertical(gridSize, scale);
+            var t = _gridCreate.SquareGrid2DVertical(gridSize, scale);
             t.Should().NotBeNull();
             t.Should().NotBeEmpty();
-            t.Length.Should().Be(gridSize*gridSize);
+            t.Length.Should().Be(gridSize * gridSize);
         }
-
-        #region Validate_SquareGrid2DHorizontal Test Cases
 
         [Test, Order(1)]
         [TestCase(1, 1)]
@@ -60,9 +48,6 @@ namespace Assets.SRC.ProceduralMapGeneration.Utilities.Tests
         [TestCase(2, 15)]
         [TestCase(14, 0.5f)]
         [TestCase(16, 22.34f)]
-
-        #endregion Validate_SquareGrid2DHorizontal Test Cases
-
         public void Validate_SquareGrid2DHorizontal(int gridSize, float scale)
         {
             var t = _gridCreate.SquareGrid2DHorizontal(gridSize, scale);
@@ -71,26 +56,20 @@ namespace Assets.SRC.ProceduralMapGeneration.Utilities.Tests
             t.Length.Should().Be(gridSize * gridSize);
         }
 
-        #region Validate_SquareGrid3D Test Cases
-
         [Test, Order(1)]
         [TestCase(1, 1)]
         [TestCase(2, 5)]
         [TestCase(2, 15)]
         [TestCase(14, 0.5f)]
         [TestCase(16, 22.34f)]
-
-        #endregion Validate_SquareGrid3D Test Cases
-
         public void Validate_SquareGrid3D(int gridSize, float scale)
         {
             var t = _gridCreate.SquareGrid3D(gridSize, scale);
             t.Should().NotBeNull();
             t.Should().NotBeEmpty();
-            t.Length.Should().Be(gridSize * gridSize*gridSize);
+            t.Length.Should().Be(gridSize * gridSize * gridSize);
         }
 
-        #region Validate_PlaceGameObjectsAtGridPositions Test Cases
 
         [Test, Order(2)]
         [TestCase(1, 1)]
@@ -98,9 +77,6 @@ namespace Assets.SRC.ProceduralMapGeneration.Utilities.Tests
         [TestCase(2, 15)]
         [TestCase(14, 0.5f)]
         [TestCase(16, 22.34f)]
-
-        #endregion Validate_PlaceGameObjectsAtGridPositions Test Cases
-
         public void Validate_PlaceGameObjectsAtGridPositions(int gridSize, float scale)
         {
             // 3D Grid
@@ -131,7 +107,6 @@ namespace Assets.SRC.ProceduralMapGeneration.Utilities.Tests
                 grid2DV[i].transform.position.Should().Be(positions2DV[i]);
         }
 
-        #region Validate_FindChunkNeigbors Test Cases
 
         [Test, Order(2)]
         [TestCase(1, 1)]
@@ -139,12 +114,9 @@ namespace Assets.SRC.ProceduralMapGeneration.Utilities.Tests
         [TestCase(2, 15)]
         [TestCase(6, 0.5f)]
         [TestCase(10, 22.34f)]
-
-        #endregion Validate_FindChunkNeigbors Test Cases
-
         public void Validate_FindChunkNeigbors(int gridSize, float scale)
         {
-            ChunkHandler chunkHandler = new ChunkHandler();
+            ChunkHandler chunkHandler = new();
             var positions3D = _gridCreate.SquareGrid3D(gridSize, scale);
             var grid3D = _gridCreate.PlaceGameObjectsAtGridPositions(positions3D, GridParent);
             var positions2DH = _gridCreate.SquareGrid3D(gridSize, scale);
@@ -155,8 +127,6 @@ namespace Assets.SRC.ProceduralMapGeneration.Utilities.Tests
             List<GameObject> test3D = chunkHandler.FindChunkNeigbors(scale, grid3D);
             List<GameObject> test2DH = chunkHandler.FindChunkNeigbors(scale, grid2DH);
             List<GameObject> test2DV = chunkHandler.FindChunkNeigbors(scale, grid2DV);
-
-            var testList = new List<List<GameObject>> { test3D, test2DH, test2DV };
 
             for (int i = 0; i < test3D.Count; i++)
             {
@@ -177,8 +147,6 @@ namespace Assets.SRC.ProceduralMapGeneration.Utilities.Tests
                 t.neighborStruct.Direction.Should().NotBe(DirectionTypeEnum.Blank);
             }
         }
-
-        #region Validate_FindChunkType Test Cases
 
         //                              north, east, south, west, top, bottom
         [TestCase(DirectionTypeEnum.N, true, false, false, false, false, false)]
@@ -286,14 +254,11 @@ namespace Assets.SRC.ProceduralMapGeneration.Utilities.Tests
         [TestCase(DirectionTypeEnum.TB, false, false, false, false, true, true)]
         //                              north, east, south, west, top, bottom
         [TestCase(DirectionTypeEnum.B, false, false, false, false, false, true)]
-
-        #endregion Validate_FindChunkType Test Cases
-
         public void FindChunkType_ShouldReturnTheCorrectChunkType(DirectionTypeEnum expectedChunkType, bool northNeighbor, bool eastNeighbor, bool southNeighbor, bool westNeighbor, bool topNeighbor, bool bottomNeighbor)
         {
-            ChunkHandler chunkHandler = new ChunkHandler();
+            ChunkHandler chunkHandler = new();
             // Arrange
-            NeighborStruct chunk = new NeighborStruct();
+            NeighborStruct chunk = new ();
             if (northNeighbor) chunk.NorthNeighbor = new GameObject();
             if (eastNeighbor) chunk.EastNeighbor = new GameObject();
             if (southNeighbor) chunk.SouthNeighbor = new GameObject();
@@ -308,5 +273,4 @@ namespace Assets.SRC.ProceduralMapGeneration.Utilities.Tests
             Assert.That(chunkType, Is.EqualTo(expectedChunkType));
         }
     }
-    
 }

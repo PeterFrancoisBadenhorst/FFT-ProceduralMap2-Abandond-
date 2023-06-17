@@ -12,7 +12,7 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.
         /// <returns>A 2D Perlin noise texture.</returns>
         public Texture2D GeneratePerlinNoise2DTexture(int size, float scale)
         {
-            Texture2D noiseTexture2D = new Texture2D(size, size);
+            Texture2D noiseTexture2D = new(size, size);
             for (int x = 0; x < size; x++)
             {
                 for (int y = 0; y < size; y++)

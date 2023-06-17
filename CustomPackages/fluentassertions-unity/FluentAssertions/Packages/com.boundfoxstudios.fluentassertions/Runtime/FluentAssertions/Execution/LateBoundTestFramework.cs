@@ -8,17 +8,13 @@ namespace FluentAssertions.Execution
     internal abstract class LateBoundTestFramework : ITestFramework
     {
         private Assembly assembly;
+#pragma warning disable CS0436 // Type conflicts with imported type
 
         [DoesNotReturn]
         public void Throw(string message)
         {
-            Type exceptionType = assembly.GetType(ExceptionFullName);
-            if (exceptionType is null)
-            {
-                throw new Exception(
+            Type exceptionType = assembly.GetType(ExceptionFullName) ?? throw new Exception(
                     $"Failed to create the assertion exception for the current test framework: \"{ExceptionFullName}, {assembly.FullName}\"");
-            }
-
             throw (Exception)Activator.CreateInstance(exceptionType, message);
         }
 

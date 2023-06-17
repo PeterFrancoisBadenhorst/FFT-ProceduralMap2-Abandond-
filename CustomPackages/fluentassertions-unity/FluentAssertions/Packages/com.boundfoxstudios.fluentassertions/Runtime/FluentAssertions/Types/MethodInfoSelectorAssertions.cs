@@ -10,8 +10,6 @@ using System.Reflection;
 namespace FluentAssertions.Types
 {
 #pragma warning disable CS0659 // Ignore not overriding Object.GetHashCode()
-#pragma warning disable CA1065 // Ignore throwing NotSupportedException from Equals
-
     /// <summary>
     /// Contains assertions for the <see cref="MethodInfo"/> objects returned by the parent <see cref="MethodInfoSelector"/>.
     /// </summary>
@@ -325,9 +323,7 @@ namespace FluentAssertions.Types
         /// <summary>
         /// Returns the type of the subject the assertion applies on.
         /// </summary>
-#pragma warning disable CA1822 // Do not change signature of a public member
         protected string Context => "method";
-#pragma warning restore CA1822
 
         /// <inheritdoc/>
         public override bool Equals(object obj) =>

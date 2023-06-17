@@ -7,7 +7,6 @@ using System.Diagnostics;
 namespace FluentAssertions.Primitives
 {
 #pragma warning disable CS0659 // Ignore not overriding Object.GetHashCode()
-#pragma warning disable CA1065 // Ignore throwing NotSupportedException from Equals
 
     /// <summary>
     /// Contains a number of methods to assert that two <see cref="DateTime"/> objects differ in the expected way.
@@ -25,8 +24,7 @@ namespace FluentAssertions.Primitives
         private readonly TAssertions parentAssertions;
         private readonly TimeSpanPredicate predicate;
 
-        private readonly Dictionary<TimeSpanCondition, TimeSpanPredicate> predicates = new Dictionary
-            <TimeSpanCondition, TimeSpanPredicate>
+        private readonly Dictionary<TimeSpanCondition, TimeSpanPredicate> predicates = new()
         {
             [TimeSpanCondition.MoreThan] = new TimeSpanPredicate((ts1, ts2) => ts1 > ts2, "more than"),
             [TimeSpanCondition.AtLeast] = new TimeSpanPredicate((ts1, ts2) => ts1 >= ts2, "at least"),

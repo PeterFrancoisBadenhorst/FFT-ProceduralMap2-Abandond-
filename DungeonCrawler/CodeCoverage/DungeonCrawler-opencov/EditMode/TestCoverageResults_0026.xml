@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <CoverageSession xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Version="0.0.0.0">
-  <Summary numSequencePoints="19" visitedSequencePoints="4" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="21.05" branchCoverage="0.0" maxCyclomaticComplexity="5" minCyclomaticComplexity="5" maxCrapScore="17.30" minCrapScore="17.30" visitedClasses="1" numClasses="1" visitedMethods="1" numMethods="1" />
+  <Summary numSequencePoints="10" visitedSequencePoints="10" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="100.0" branchCoverage="0.0" maxCyclomaticComplexity="2" minCyclomaticComplexity="2" maxCrapScore="2" minCrapScore="2" visitedClasses="1" numClasses="1" visitedMethods="1" numMethods="1" />
   <Modules>
     <Module>
-      <Summary numSequencePoints="19" visitedSequencePoints="4" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="21.05" branchCoverage="0.0" maxCyclomaticComplexity="5" minCyclomaticComplexity="5" maxCrapScore="17.30" minCrapScore="17.30" visitedClasses="1" numClasses="1" visitedMethods="1" numMethods="1" />
+      <Summary numSequencePoints="10" visitedSequencePoints="10" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="100.0" branchCoverage="0.0" maxCyclomaticComplexity="2" minCyclomaticComplexity="2" maxCrapScore="2" minCrapScore="2" visitedClasses="1" numClasses="1" visitedMethods="1" numMethods="1" />
       <ModuleTime>0001-01-01T00:00:00</ModuleTime>
       <ModuleName>ProceduralMapGenerationAssembly</ModuleName>
       <Files>
@@ -19,108 +19,63 @@
       </Files>
       <Classes>
         <Class>
-          <Summary numSequencePoints="19" visitedSequencePoints="4" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="21.05" branchCoverage="0.0" maxCyclomaticComplexity="5" minCyclomaticComplexity="5" maxCrapScore="17.30" minCrapScore="17.30" visitedClasses="1" numClasses="1" visitedMethods="1" numMethods="1" />
+          <Summary numSequencePoints="10" visitedSequencePoints="10" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="100.0" branchCoverage="0.0" maxCyclomaticComplexity="2" minCyclomaticComplexity="2" maxCrapScore="2" minCrapScore="2" visitedClasses="1" numClasses="1" visitedMethods="1" numMethods="1" />
           <FullName>Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.PathFinding.NewPathFinding</FullName>
           <Methods>
-            <Method visited="true" cyclomaticComplexity="5" nPathComplexity="0" sequenceCoverage="21.05" branchCoverage="0" crapScore="17.30" isConstructor="false" isStatic="false" isGetter="false" isSetter="false">
-              <Summary numSequencePoints="19" visitedSequencePoints="4" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="21.05" branchCoverage="0" maxCyclomaticComplexity="5" minCyclomaticComplexity="5" maxCrapScore="17.30" minCrapScore="17.30" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
-              <MetadataToken>100663348</MetadataToken>
-              <Name>System.Collections.Generic.List[Vector3] Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.PathFinding.NewPathFinding::Findpath(System.Collections.Generic.List[NewNodeModel], UnityEngine.Vector3[])</Name>
+            <Method visited="true" cyclomaticComplexity="2" nPathComplexity="0" sequenceCoverage="100.0" branchCoverage="0" crapScore="2" isConstructor="false" isStatic="false" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="10" visitedSequencePoints="10" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="100.0" branchCoverage="0" maxCyclomaticComplexity="2" minCyclomaticComplexity="2" maxCrapScore="2" minCrapScore="2" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
+              <MetadataToken>100663352</MetadataToken>
+              <Name>UnityEngine.Vector3[] Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.PathFinding.NewPathFinding::FindEnds(UnityEngine.Vector3[])</Name>
               <FileRef uid="8" />
               <SequencePoints>
-                <SequencePoint vc="1" uspid="14742" ordinal="0" offset="13" sl="109" sc="9" el="109" ec="9" bec="0" bev="0" fileid="8">
+                <SequencePoint vc="2" uspid="17247" ordinal="0" offset="0" sl="167" sc="9" el="167" ec="9" bec="0" bev="0" fileid="8">
                   <TrackedMethodRefs>
-                    <TrackedMethodRef uid="0" vc="1" />
+                    <TrackedMethodRef uid="0" vc="2" />
                   </TrackedMethodRefs>
                 </SequencePoint>
-                <SequencePoint vc="1" uspid="14743" ordinal="0" offset="14" sl="110" sc="13" el="110" ec="13" bec="0" bev="0" fileid="8">
+                <SequencePoint vc="3" uspid="17248" ordinal="0" offset="1" sl="170" sc="13" el="170" ec="13" bec="0" bev="0" fileid="8">
                   <TrackedMethodRefs>
-                    <TrackedMethodRef uid="0" vc="1" />
+                    <TrackedMethodRef uid="0" vc="3" />
                   </TrackedMethodRefs>
                 </SequencePoint>
-                <SequencePoint vc="1" uspid="14744" ordinal="0" offset="35" sl="110" sc="50" el="110" ec="50" bec="0" bev="0" fileid="8">
+                <SequencePoint vc="3" uspid="17249" ordinal="0" offset="2" sl="171" sc="17" el="171" ec="17" bec="0" bev="0" fileid="8">
                   <TrackedMethodRefs>
-                    <TrackedMethodRef uid="0" vc="1" />
+                    <TrackedMethodRef uid="0" vc="3" />
                   </TrackedMethodRefs>
                 </SequencePoint>
-                <SequencePoint vc="1" uspid="14745" ordinal="0" offset="36" sl="110" sc="52" el="110" ec="52" bec="0" bev="0" fileid="8">
+                <SequencePoint vc="3" uspid="17250" ordinal="0" offset="65" sl="176" sc="13" el="176" ec="13" bec="0" bev="0" fileid="8">
                   <TrackedMethodRefs>
-                    <TrackedMethodRef uid="0" vc="1" />
+                    <TrackedMethodRef uid="0" vc="3" />
                   </TrackedMethodRefs>
                 </SequencePoint>
-                <SequencePoint vc="0" uspid="14746" ordinal="0" offset="47" sl="111" sc="13" el="111" ec="13" bec="0" bev="0" fileid="8">
+                <SequencePoint vc="3" uspid="17251" ordinal="0" offset="66" sl="176" sc="15" el="176" ec="15" bec="0" bev="0" fileid="8">
                   <TrackedMethodRefs>
-                    <TrackedMethodRef uid="0" vc="0" />
+                    <TrackedMethodRef uid="0" vc="3" />
                   </TrackedMethodRefs>
                 </SequencePoint>
-                <SequencePoint vc="0" uspid="14747" ordinal="0" offset="74" sl="111" sc="61" el="111" ec="61" bec="0" bev="0" fileid="8">
+                <SequencePoint vc="2" uspid="17252" ordinal="0" offset="89" sl="177" sc="13" el="177" ec="13" bec="0" bev="0" fileid="8">
                   <TrackedMethodRefs>
-                    <TrackedMethodRef uid="0" vc="0" />
+                    <TrackedMethodRef uid="0" vc="2" />
                   </TrackedMethodRefs>
                 </SequencePoint>
-                <SequencePoint vc="0" uspid="14748" ordinal="0" offset="75" sl="111" sc="63" el="111" ec="63" bec="0" bev="0" fileid="8">
+                <SequencePoint vc="2" uspid="17253" ordinal="0" offset="90" sl="178" sc="17" el="178" ec="17" bec="0" bev="0" fileid="8">
                   <TrackedMethodRefs>
-                    <TrackedMethodRef uid="0" vc="0" />
+                    <TrackedMethodRef uid="0" vc="2" />
                   </TrackedMethodRefs>
                 </SequencePoint>
-                <SequencePoint vc="0" uspid="14749" ordinal="0" offset="86" sl="113" sc="13" el="113" ec="13" bec="0" bev="0" fileid="8">
+                <SequencePoint vc="2" uspid="17254" ordinal="0" offset="153" sl="184" sc="13" el="184" ec="13" bec="0" bev="0" fileid="8">
                   <TrackedMethodRefs>
-                    <TrackedMethodRef uid="0" vc="0" />
+                    <TrackedMethodRef uid="0" vc="2" />
                   </TrackedMethodRefs>
                 </SequencePoint>
-                <SequencePoint vc="0" uspid="14750" ordinal="0" offset="93" sl="114" sc="13" el="114" ec="13" bec="0" bev="0" fileid="8">
+                <SequencePoint vc="2" uspid="17255" ordinal="0" offset="154" sl="185" sc="13" el="185" ec="13" bec="0" bev="0" fileid="8">
                   <TrackedMethodRefs>
-                    <TrackedMethodRef uid="0" vc="0" />
+                    <TrackedMethodRef uid="0" vc="2" />
                   </TrackedMethodRefs>
                 </SequencePoint>
-                <SequencePoint vc="0" uspid="14751" ordinal="0" offset="100" sl="115" sc="13" el="115" ec="13" bec="0" bev="0" fileid="8">
+                <SequencePoint vc="2" uspid="17256" ordinal="0" offset="158" sl="186" sc="9" el="186" ec="9" bec="0" bev="0" fileid="8">
                   <TrackedMethodRefs>
-                    <TrackedMethodRef uid="0" vc="0" />
-                  </TrackedMethodRefs>
-                </SequencePoint>
-                <SequencePoint vc="0" uspid="14752" ordinal="0" offset="119" sl="116" sc="13" el="116" ec="13" bec="0" bev="0" fileid="8">
-                  <TrackedMethodRefs>
-                    <TrackedMethodRef uid="0" vc="0" />
-                  </TrackedMethodRefs>
-                </SequencePoint>
-                <SequencePoint vc="0" uspid="14753" ordinal="0" offset="138" sl="117" sc="13" el="117" ec="13" bec="0" bev="0" fileid="8">
-                  <TrackedMethodRefs>
-                    <TrackedMethodRef uid="0" vc="0" />
-                  </TrackedMethodRefs>
-                </SequencePoint>
-                <SequencePoint vc="0" uspid="14754" ordinal="0" offset="141" sl="118" sc="13" el="118" ec="13" bec="0" bev="0" fileid="8">
-                  <TrackedMethodRefs>
-                    <TrackedMethodRef uid="0" vc="0" />
-                  </TrackedMethodRefs>
-                </SequencePoint>
-                <SequencePoint vc="0" uspid="14755" ordinal="0" offset="148" sl="119" sc="13" el="119" ec="13" bec="0" bev="0" fileid="8">
-                  <TrackedMethodRefs>
-                    <TrackedMethodRef uid="0" vc="0" />
-                  </TrackedMethodRefs>
-                </SequencePoint>
-                <SequencePoint vc="0" uspid="14756" ordinal="0" offset="155" sl="121" sc="13" el="121" ec="13" bec="0" bev="0" fileid="8">
-                  <TrackedMethodRefs>
-                    <TrackedMethodRef uid="0" vc="0" />
-                  </TrackedMethodRefs>
-                </SequencePoint>
-                <SequencePoint vc="0" uspid="14757" ordinal="0" offset="166" sl="122" sc="13" el="122" ec="13" bec="0" bev="0" fileid="8">
-                  <TrackedMethodRefs>
-                    <TrackedMethodRef uid="0" vc="0" />
-                  </TrackedMethodRefs>
-                </SequencePoint>
-                <SequencePoint vc="0" uspid="14758" ordinal="0" offset="177" sl="123" sc="13" el="123" ec="13" bec="0" bev="0" fileid="8">
-                  <TrackedMethodRefs>
-                    <TrackedMethodRef uid="0" vc="0" />
-                  </TrackedMethodRefs>
-                </SequencePoint>
-                <SequencePoint vc="0" uspid="14759" ordinal="0" offset="187" sl="125" sc="13" el="125" ec="13" bec="0" bev="0" fileid="8">
-                  <TrackedMethodRefs>
-                    <TrackedMethodRef uid="0" vc="0" />
-                  </TrackedMethodRefs>
-                </SequencePoint>
-                <SequencePoint vc="0" uspid="14760" ordinal="0" offset="193" sl="126" sc="9" el="126" ec="9" bec="0" bev="0" fileid="8">
-                  <TrackedMethodRefs>
-                    <TrackedMethodRef uid="0" vc="0" />
+                    <TrackedMethodRef uid="0" vc="2" />
                   </TrackedMethodRefs>
                 </SequencePoint>
               </SequencePoints>
@@ -130,7 +85,7 @@
         </Class>
       </Classes>
       <TrackedMethods>
-        <TrackedMethod uid="0" token="100663340" name="System.Void Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding/Findpath::EmptyGrid()" strategy="Test" />
+        <TrackedMethod uid="0" token="100663337" name="System.Void Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding/FindEnds::Should_Return_A_List_Of_Two_Different_Vector3s_When_Given_A_List_Of_Vector3s()" strategy="Test" />
       </TrackedMethods>
     </Module>
   </Modules>
