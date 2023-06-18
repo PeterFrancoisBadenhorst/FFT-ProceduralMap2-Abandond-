@@ -28,17 +28,17 @@
               <Name>System.Collections.Generic.List[GameObject] Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.ScriptableObjects.DirectionalTilesScriptableObject::RetunObjectsAsAList()</Name>
               <FileRef uid="6" />
               <SequencePoints>
-                <SequencePoint vc="1" uspid="2789" ordinal="0" offset="0" sl="77" sc="9" el="77" ec="9" bec="0" bev="0" fileid="6">
+                <SequencePoint vc="1" uspid="54085" ordinal="0" offset="0" sl="77" sc="9" el="77" ec="9" bec="0" bev="0" fileid="6">
                   <TrackedMethodRefs>
                     <TrackedMethodRef uid="0" vc="1" />
                   </TrackedMethodRefs>
                 </SequencePoint>
-                <SequencePoint vc="1" uspid="2790" ordinal="0" offset="1" sl="78" sc="13" el="78" ec="13" bec="0" bev="0" fileid="6">
+                <SequencePoint vc="1" uspid="54086" ordinal="0" offset="1" sl="78" sc="13" el="78" ec="13" bec="0" bev="0" fileid="6">
                   <TrackedMethodRefs>
                     <TrackedMethodRef uid="0" vc="1" />
                   </TrackedMethodRefs>
                 </SequencePoint>
-                <SequencePoint vc="1" uspid="2791" ordinal="0" offset="828" sl="144" sc="9" el="144" ec="9" bec="0" bev="0" fileid="6">
+                <SequencePoint vc="1" uspid="54087" ordinal="0" offset="828" sl="144" sc="9" el="144" ec="9" bec="0" bev="0" fileid="6">
                   <TrackedMethodRefs>
                     <TrackedMethodRef uid="0" vc="1" />
                   </TrackedMethodRefs>

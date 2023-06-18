@@ -28,7 +28,7 @@
               <Name>System.Collections.Generic.List[GameObject] Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Structs.MapBuilderStruct::get_grid()</Name>
               <FileRef uid="5" />
               <SequencePoints>
-                <SequencePoint vc="1" uspid="4519" ordinal="0" offset="0" sl="8" sc="40" el="8" ec="40" bec="0" bev="0" fileid="5">
+                <SequencePoint vc="1" uspid="55619" ordinal="0" offset="0" sl="8" sc="40" el="8" ec="40" bec="0" bev="0" fileid="5">
                   <TrackedMethodRefs>
                     <TrackedMethodRef uid="0" vc="1" />
                   </TrackedMethodRefs>
@@ -42,7 +42,7 @@
               <Name>UnityEngine.GameObject Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Structs.MapBuilderStruct::get_startObject()</Name>
               <FileRef uid="5" />
               <SequencePoints>
-                <SequencePoint vc="1" uspid="4521" ordinal="0" offset="0" sl="9" sc="41" el="9" ec="41" bec="0" bev="0" fileid="5">
+                <SequencePoint vc="1" uspid="55621" ordinal="0" offset="0" sl="9" sc="41" el="9" ec="41" bec="0" bev="0" fileid="5">
                   <TrackedMethodRefs>
                     <TrackedMethodRef uid="0" vc="1" />
                   </TrackedMethodRefs>
@@ -56,7 +56,7 @@
               <Name>UnityEngine.GameObject Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Structs.MapBuilderStruct::get_previousTilePos()</Name>
               <FileRef uid="5" />
               <SequencePoints>
-                <SequencePoint vc="1" uspid="4523" ordinal="0" offset="0" sl="10" sc="45" el="10" ec="45" bec="0" bev="0" fileid="5">
+                <SequencePoint vc="1" uspid="55623" ordinal="0" offset="0" sl="10" sc="45" el="10" ec="45" bec="0" bev="0" fileid="5">
                   <TrackedMethodRefs>
                     <TrackedMethodRef uid="0" vc="1" />
                   </TrackedMethodRefs>

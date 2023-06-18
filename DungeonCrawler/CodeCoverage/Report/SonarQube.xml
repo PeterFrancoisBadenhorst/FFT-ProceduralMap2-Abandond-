@@ -327,18 +327,7 @@
     <lineToCover lineNumber="32" covered="false" />
     <lineToCover lineNumber="33" covered="false" />
   </file>
-  <file path="C:/git/Unity.DungeonCrawler/DungeonCrawler/Assets/SRC/Shared/Utilities/ActivateReflectionProbe.cs">
-    <lineToCover lineNumber="12" covered="false" />
-    <lineToCover lineNumber="13" covered="false" />
-    <lineToCover lineNumber="14" covered="false" />
-    <lineToCover lineNumber="15" covered="false" />
-    <lineToCover lineNumber="18" covered="false" />
-    <lineToCover lineNumber="19" covered="false" />
-    <lineToCover lineNumber="20" covered="false" />
-    <lineToCover lineNumber="23" covered="false" />
-    <lineToCover lineNumber="24" covered="false" />
-    <lineToCover lineNumber="25" covered="false" />
-  </file>
+  <file path="C:/git/Unity.DungeonCrawler/DungeonCrawler/Assets/SRC/Shared/Utilities/ActivateReflectionProbe.cs" />
   <file path="C:/git/Unity.DungeonCrawler/DungeonCrawler/Assets/SRC/Shared/Utilities/GenericUtilities.cs">
     <lineToCover lineNumber="17" covered="true" />
     <lineToCover lineNumber="26" covered="true" />
@@ -353,34 +342,11 @@
   <file path="C:/git/Unity.DungeonCrawler/DungeonCrawler/Assets/SRC/Shared/Utilities/VectorMath.cs">
     <lineToCover lineNumber="7" covered="true" />
   </file>
-  <file path="C:/git/Unity.DungeonCrawler/DungeonCrawler/Assets/SRC/Shared/Utilities/BlinkMaterielEmission.cs">
-    <lineToCover lineNumber="14" covered="false" />
-    <lineToCover lineNumber="15" covered="false" />
-    <lineToCover lineNumber="16" covered="false" />
-    <lineToCover lineNumber="18" covered="false" />
-    <lineToCover lineNumber="19" covered="false" />
-    <lineToCover lineNumber="20" covered="false" />
-    <lineToCover lineNumber="21" covered="false" />
-  </file>
-  <file path="C:/git/Unity.DungeonCrawler/DungeonCrawler/Assets/SRC/Shared/Utilities/ClearChildren.cs">
-    <lineToCover lineNumber="8" covered="false" />
-    <lineToCover lineNumber="9" covered="false" />
-    <lineToCover lineNumber="10" covered="false" />
-    <lineToCover lineNumber="11" covered="false" />
-  </file>
+  <file path="C:/git/Unity.DungeonCrawler/DungeonCrawler/Assets/SRC/Shared/Utilities/BlinkMaterielEmission.cs" />
+  <file path="C:/git/Unity.DungeonCrawler/DungeonCrawler/Assets/SRC/Shared/Utilities/ClearChildren.cs" />
   <file path="C:/git/Unity.DungeonCrawler/DungeonCrawler/Assets/SRC/Shared/Exceptions/CustomExceptions.cs">
     <lineToCover lineNumber="9" covered="true" />
     <lineToCover lineNumber="10" covered="true" />
   </file>
-  <file path="C:/git/Unity.DungeonCrawler/DungeonCrawler/Assets/SRC/Shared/Utilities/LightControl.cs">
-    <lineToCover lineNumber="12" covered="false" />
-    <lineToCover lineNumber="13" covered="false" />
-    <lineToCover lineNumber="14" covered="false" />
-    <lineToCover lineNumber="16" covered="false" />
-    <lineToCover lineNumber="17" covered="false" />
-    <lineToCover lineNumber="18" covered="false" />
-    <lineToCover lineNumber="21" covered="false" />
-    <lineToCover lineNumber="22" covered="false" />
-    <lineToCover lineNumber="23" covered="false" />
-  </file>
+  <file path="C:/git/Unity.DungeonCrawler/DungeonCrawler/Assets/SRC/Shared/Utilities/LightControl.cs" />
 </coverage>
