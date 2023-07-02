@@ -4,12 +4,6 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.
 {
     public class PerlinNoiseGenerator
     {
-        /// <summary>
-        /// This method generates a 2D Perlin noise texture.
-        /// </summary>
-        /// <param name="size">The size of the texture.</param>
-        /// <param name="scale">The scale of the noise.</param>
-        /// <returns>A 2D Perlin noise texture.</returns>
         public Texture2D GeneratePerlinNoise2DTexture(int size, float scale)
         {
             Texture2D noiseTexture2D = new(size, size);
