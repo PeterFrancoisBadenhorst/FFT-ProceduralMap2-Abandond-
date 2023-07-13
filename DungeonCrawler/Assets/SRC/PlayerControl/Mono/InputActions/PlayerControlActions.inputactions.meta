@@ -11,4 +11,4 @@ ScriptedImporter:
   generateWrapperCode: 1
   wrapperCodePath: 
   wrapperClassName: 
-  wrapperCodeNamespace: ' Assets.SRC.ProceduralMapGeneration.Assets.SRC.Input'
+  wrapperCodeNamespace: Assets.SRC.ProceduralMapGeneration.Assets.SRC.PlayerControl.Mono
