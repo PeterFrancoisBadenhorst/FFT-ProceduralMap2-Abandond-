@@ -8,7 +8,7 @@ using UnityEngine;
 
 namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Utilities
 {
-    public partial class ChunkHandler
+    public class ChunkHandler
     {
         public List<GameObject> AssignChunkTypes(List<GameObject> grid)
         {
