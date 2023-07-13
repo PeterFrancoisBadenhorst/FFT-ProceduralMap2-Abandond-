@@ -113,7 +113,7 @@
     <lineToCover lineNumber="186" covered="true" />
   </file>
   <file path="C:/git/Unity.DungeonCrawler/DungeonCrawler/Assets/SRC/ProceduralMapGeneration/PathFinding/PathMapBuilder.cs">
-    <lineToCover lineNumber="12" covered="false" />
+    <lineToCover lineNumber="13" covered="false" />
     <lineToCover lineNumber="14" covered="false" />
     <lineToCover lineNumber="15" covered="false" />
     <lineToCover lineNumber="16" covered="false" />

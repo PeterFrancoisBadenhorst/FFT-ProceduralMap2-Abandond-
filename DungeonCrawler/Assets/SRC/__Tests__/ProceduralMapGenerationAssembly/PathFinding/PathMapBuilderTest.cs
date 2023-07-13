@@ -74,5 +74,11 @@ namespace Assets.SRC.ProceduralMapGeneration.PathFinding.Tests
             // Assert
             Assert.Pass();
         }
+
+        [Test]
+        public void VaribaleCheck   ()
+        {
+            // pathMapBuilder.
+        }
     }
 }
