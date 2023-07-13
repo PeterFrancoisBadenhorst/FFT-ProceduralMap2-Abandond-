@@ -1,18 +1,28 @@
+
+using Assets.SRC.ProceduralMapGeneration.Assets.SRC.Input;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class NewBehaviourScript : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    private PlayerControlActions input = null;
 
-    // Update is called once per frame
-    void Update()
+    private void Awake()
     {
-        
+        input = new PlayerControlActions();
+    }
+    private void OnEnable()
+    {
+      
+    }
+    private void OnDisable()
+    {
+       
+    }
+    private void OnMovementPerformed()
+    {
+
     }
 }
