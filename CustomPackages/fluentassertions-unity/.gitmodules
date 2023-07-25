@@ -1,4 +1,0 @@
-[submodule "fluentassertions-master"]
-	path = fluentassertions-master
-	url = git@github.com:fluentassertions/fluentassertions.git
-	branch = master
