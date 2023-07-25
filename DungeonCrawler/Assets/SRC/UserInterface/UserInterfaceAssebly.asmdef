@@ -2,7 +2,9 @@
     "name": "UserInterfaceAssebly",
     "rootNamespace": "",
     "references": [
-        "GUID:c8b96face5b84184f970af0d8ce16ad5"
+        "GUID:c8b96face5b84184f970af0d8ce16ad5",
+        "GUID:899ebf5c138a7e1459bd0bb08e309740",
+        "GUID:1766c60f18fd78c4eb859956280773d0"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
