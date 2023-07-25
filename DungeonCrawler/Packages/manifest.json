@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "com.boundfoxstudios.fluentassertions": "file:C:/git/Unity.DungeonCrawler/CustomPackages/fluentassertions-unity/FluentAssertions/Packages/com.boundfoxstudios.fluentassertions",
+    "com.noesis.noesisgui": "file:C:/git/Unity.DungeonCrawler/CustomPackages/NoesisGUI-Unity-3.2.1-Indie",
     "com.unity.collab-proxy": "2.0.5",
     "com.unity.ide.visualstudio": "2.0.18",
     "com.unity.ide.vscode": "1.2.5",

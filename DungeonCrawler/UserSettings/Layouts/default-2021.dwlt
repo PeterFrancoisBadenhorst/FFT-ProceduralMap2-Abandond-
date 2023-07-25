@@ -14,12 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_PixelRect:
     serializedVersion: 2
-    x: 0
+    x: -1920
     y: 43
     width: 1920
     height: 989
   m_ShowMode: 4
-  m_Title: Inspector
+  m_Title: Code Coverage
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -121,7 +121,7 @@ MonoBehaviour:
   m_MinSize: {x: 500, y: 200}
   m_MaxSize: {x: 40480, y: 16192}
   vertical: 0
-  controlID: 99
+  controlID: 46
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -198,7 +198,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 100
+  controlID: 47
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -249,7 +249,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 192
+  controlID: 57
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -267,7 +267,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 474
+    width: 291
     height: 313
   m_MinSize: {x: 102, y: 121}
   m_MaxSize: {x: 4002, y: 4021}
@@ -286,23 +286,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ConsoleWindow
+  m_Name: CodeCoverageWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 474
+    x: 291
     y: 0
-    width: 493
+    width: 676
     height: 313
-  m_MinSize: {x: 102, y: 121}
+  m_MinSize: {x: 447, y: 86}
   m_MaxSize: {x: 4002, y: 4021}
-  m_ActualView: {fileID: 21}
+  m_ActualView: {fileID: 20}
   m_Panes:
   - {fileID: 20}
   - {fileID: 21}
-  m_Selected: 1
-  m_LastSelected: 0
+  m_Selected: 0
+  m_LastSelected: 1
 --- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -327,7 +327,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 200}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 94
+  controlID: 193
 --- !u!114 &14
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -401,7 +401,7 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 573
+    x: -1347
     y: 73
     width: 965
     height: 605
@@ -741,7 +741,7 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 0
+    x: -1920
     y: 73
     width: 324
     height: 918
@@ -763,7 +763,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/SRC/PlayerControl/Mono/InputActions
+    - Assets/SRC/ProceduralMapGeneration
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 0
@@ -778,7 +778,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 526c0000
     m_LastClickedID: 27730
-    m_ExpandedIDs: 00000000b8690000ba690000bc690000be690000c0690000c2690000c4690000c6690000c8690000ca690000cc690000ce690000d0690000d2690000d4690000d6690000d8690000da690000dc690000de690000e0690000e2690000e4690000e6690000e8690000ea690000ec690000
+    m_ExpandedIDs: 000000007c6d00007e6d0000806d0000826d0000846d0000866d0000886d00008a6d00008c6d00008e6d0000906d0000926d0000946d0000966d0000986d00009a6d00009c6d00009e6d0000a06d0000a26d0000a46d0000a66d0000a86d0000aa6d0000ac6d0000ae6d0000b06d0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -803,24 +803,24 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_AssetTreeState:
-    scrollPos: {x: 0, y: 0}
+    scrollPos: {x: 0, y: 104}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: ffffffff00000000b8690000ba690000bc690000be690000c0690000c2690000c4690000c6690000c8690000ca690000cc690000ce690000d0690000d4690000d6690000d8690000da690000dc690000de690000e0690000e2690000e4690000e6690000e8690000ea690000ec6900008a750000
+    m_ExpandedIDs: ffffffff000000007c6d00007e6d0000806d0000826d0000846d0000866d0000886d00008a6d00008c6d00008e6d0000906d0000926d0000946d0000966d0000986d00009a6d00009c6d00009e6d0000a06d0000a26d0000a46d0000a66d0000a86d0000aa6d0000ac6d0000ae6d0000b06d0000247000003270000036700000447000004670000050710000567100000e750000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: PlayerActions
-      m_OriginalName: PlayerActions
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 30084
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 6}
     m_SearchString: 
@@ -883,7 +883,7 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 325
+    x: -1595
     y: 73
     width: 246
     height: 918
@@ -895,9 +895,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 84750000
+      m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 20fbffff
+      m_ExpandedIDs: 9c7cd6ff4e2cd8ff00e4d9ff8a9cdbfff05fddff1812dfff48c0e0ff0c91e2ff0441e4ff30e9e5ff7689e7fffe39e9ffd8e5eaffc0b3ecff8472eeff9027f0ffb0cdf1ffb475f3ff521af5ffaac0f6fff876f8ff3e5ffaff96f6fcff8ab7feffe2f9ffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -941,9 +941,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 573
+    x: -1347
     y: 699
-    width: 472
+    width: 289
     height: 292
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -951,7 +951,7 @@ MonoBehaviour:
     m_SaveData: []
     m_OverlaysVisible: 1
   m_Spl:
-    ID: 219
+    ID: 217
     splitterInitialOffset: 315
     currentActiveSplitter: -1
     realSizes:
@@ -1035,7 +1035,7 @@ MonoBehaviour:
       name: DungeonCrawler
       fullName: DungeonCrawler
       resultStatus: 2
-      duration: 6.0789127
+      duration: 7.0798717
       messages: One or more child tests had errors
       output: 
       stacktrace: 
@@ -1051,7 +1051,7 @@ MonoBehaviour:
       name: __Tests__.dll
       fullName: C:/git/Unity.DungeonCrawler/DungeonCrawler/Library/ScriptAssemblies/__Tests__.dll
       resultStatus: 2
-      duration: 6.0107055
+      duration: 7.0115447
       messages: One or more child tests had errors
       output: 
       stacktrace: 
@@ -1067,7 +1067,7 @@ MonoBehaviour:
       name: Assets
       fullName: Assets
       resultStatus: 2
-      duration: 6.006431
+      duration: 6.9947543
       messages: One or more child tests had errors
       output: 
       stacktrace: 
@@ -1083,7 +1083,7 @@ MonoBehaviour:
       name: SRC
       fullName: Assets.SRC
       resultStatus: 2
-      duration: 6.0028315
+      duration: 6.991515
       messages: One or more child tests had errors
       output: 
       stacktrace: 
@@ -1099,7 +1099,7 @@ MonoBehaviour:
       name: ProceduralMapGeneration
       fullName: Assets.SRC.ProceduralMapGeneration
       resultStatus: 2
-      duration: 5.9998817
+      duration: 6.9698167
       messages: One or more child tests had errors
       output: 
       stacktrace: 
@@ -1115,7 +1115,7 @@ MonoBehaviour:
       name: Generic
       fullName: Assets.SRC.ProceduralMapGeneration.Generic
       resultStatus: 1
-      duration: 0.8977921
+      duration: 0.9616071
       messages: 
       output: 
       stacktrace: 
@@ -1131,7 +1131,7 @@ MonoBehaviour:
       name: Tests
       fullName: Assets.SRC.ProceduralMapGeneration.Generic.Tests
       resultStatus: 1
-      duration: 0.8937806
+      duration: 0.9604428
       messages: 
       output: 
       stacktrace: 
@@ -1147,7 +1147,7 @@ MonoBehaviour:
       name: Test_Enums+DirectionTypeEnum_Tests
       fullName: Assets.SRC.ProceduralMapGeneration.Generic.Tests.Test_Enums+DirectionTypeEnum_Tests
       resultStatus: 1
-      duration: 0.1722875
+      duration: 0.1037741
       messages: 
       output: 
       stacktrace: 
@@ -1163,7 +1163,7 @@ MonoBehaviour:
       name: Should_Have_28_Values
       fullName: Assets.SRC.ProceduralMapGeneration.Generic.Tests.Test_Enums+DirectionTypeEnum_Tests.Should_Have_28_Values
       resultStatus: 1
-      duration: 0.0312291
+      duration: 0.0309317
       messages: 
       output: 
       stacktrace: 
@@ -1180,7 +1180,7 @@ MonoBehaviour:
       name: Should_Have_The_Expected_Values
       fullName: Assets.SRC.ProceduralMapGeneration.Generic.Tests.Test_Enums+DirectionTypeEnum_Tests.Should_Have_The_Expected_Values
       resultStatus: 1
-      duration: 0.0048714
+      duration: 0.0058138
       messages: 
       output: 
       stacktrace: 
@@ -1197,7 +1197,7 @@ MonoBehaviour:
       name: Test_Enums+GridTypeEnum_Tests
       fullName: Assets.SRC.ProceduralMapGeneration.Generic.Tests.Test_Enums+GridTypeEnum_Tests
       resultStatus: 1
-      duration: 0.055097
+      duration: 0.0680735
       messages: 
       output: 
       stacktrace: 
@@ -1213,7 +1213,7 @@ MonoBehaviour:
       name: Should_Have_3_Values
       fullName: Assets.SRC.ProceduralMapGeneration.Generic.Tests.Test_Enums+GridTypeEnum_Tests.Should_Have_3_Values
       resultStatus: 1
-      duration: 0.0003892
+      duration: 0.0003395
       messages: 
       output: 
       stacktrace: 
@@ -1230,7 +1230,7 @@ MonoBehaviour:
       name: Should_Have_The_Expected_Values
       fullName: Assets.SRC.ProceduralMapGeneration.Generic.Tests.Test_Enums+GridTypeEnum_Tests.Should_Have_The_Expected_Values
       resultStatus: 1
-      duration: 0.0048962
+      duration: 0.0039078
       messages: 
       output: 
       stacktrace: 
@@ -1247,7 +1247,7 @@ MonoBehaviour:
       name: Test_ScriptableObjects
       fullName: Assets.SRC.ProceduralMapGeneration.Generic.Tests.Test_ScriptableObjects
       resultStatus: 1
-      duration: 0.0622816
+      duration: 0.3552154
       messages: 
       output: 
       stacktrace: 
@@ -1263,7 +1263,7 @@ MonoBehaviour:
       name: Should_Return_A_List_Of_GameObjects
       fullName: Assets.SRC.ProceduralMapGeneration.Generic.Tests.Test_ScriptableObjects.Should_Return_A_List_Of_GameObjects
       resultStatus: 1
-      duration: 0.0147662
+      duration: 0.0070595
       messages: 
       output: 'Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.ScriptableObjects.DirectionalTilesScriptableObject
         must be instantiated using the ScriptableObject.CreateInstance method instead
@@ -1284,7 +1284,7 @@ MonoBehaviour:
       name: Test_Structs+DirectionIDStructTests
       fullName: Assets.SRC.ProceduralMapGeneration.Generic.Tests.Test_Structs+DirectionIDStructTests
       resultStatus: 1
-      duration: 0.0935876
+      duration: 0.0949977
       messages: 
       output: 
       stacktrace: 
@@ -1300,7 +1300,7 @@ MonoBehaviour:
       name: Should_Be_Able_To_Set_And_Get_Values
       fullName: Assets.SRC.ProceduralMapGeneration.Generic.Tests.Test_Structs+DirectionIDStructTests.Should_Be_Able_To_Set_And_Get_Values
       resultStatus: 1
-      duration: 0.0025421
+      duration: 0.0030903
       messages: 
       output: 
       stacktrace: 
@@ -1317,7 +1317,7 @@ MonoBehaviour:
       name: Should_Have_Correct_Default_Values
       fullName: Assets.SRC.ProceduralMapGeneration.Generic.Tests.Test_Structs+DirectionIDStructTests.Should_Have_Correct_Default_Values
       resultStatus: 1
-      duration: 0.0009078
+      duration: 0.0009349
       messages: 
       output: 
       stacktrace: 
@@ -1334,7 +1334,7 @@ MonoBehaviour:
       name: Test_Structs+MapBuilderStructTests
       fullName: Assets.SRC.ProceduralMapGeneration.Generic.Tests.Test_Structs+MapBuilderStructTests
       resultStatus: 1
-      duration: 0.3636126
+      duration: 0.1567004
       messages: 
       output: 
       stacktrace: 
@@ -1350,7 +1350,7 @@ MonoBehaviour:
       name: Should_Be_Able_To_Set_And_Get_Values
       fullName: Assets.SRC.ProceduralMapGeneration.Generic.Tests.Test_Structs+MapBuilderStructTests.Should_Be_Able_To_Set_And_Get_Values
       resultStatus: 1
-      duration: 0.0628982
+      duration: 0.0652497
       messages: 
       output: 
       stacktrace: 
@@ -1367,7 +1367,7 @@ MonoBehaviour:
       name: Should_Have_Correct_Default_Values
       fullName: Assets.SRC.ProceduralMapGeneration.Generic.Tests.Test_Structs+MapBuilderStructTests.Should_Have_Correct_Default_Values
       resultStatus: 1
-      duration: 0.0018811
+      duration: 0.0019389
       messages: 
       output: 
       stacktrace: 
@@ -1384,7 +1384,7 @@ MonoBehaviour:
       name: Test_Structs+NeighborStructTests
       fullName: Assets.SRC.ProceduralMapGeneration.Generic.Tests.Test_Structs+NeighborStructTests
       resultStatus: 1
-      duration: 0.0475249
+      duration: 0.0651442
       messages: 
       output: 
       stacktrace: 
@@ -1400,7 +1400,7 @@ MonoBehaviour:
       name: Should_Be_Able_To_Set_And_Get_Values
       fullName: Assets.SRC.ProceduralMapGeneration.Generic.Tests.Test_Structs+NeighborStructTests.Should_Be_Able_To_Set_And_Get_Values
       resultStatus: 1
-      duration: 0.0008449
+      duration: 0.0006547
       messages: 
       output: 
       stacktrace: 
@@ -1417,7 +1417,7 @@ MonoBehaviour:
       name: Should_Have_Correct_Default_Values
       fullName: Assets.SRC.ProceduralMapGeneration.Generic.Tests.Test_Structs+NeighborStructTests.Should_Have_Correct_Default_Values
       resultStatus: 1
-      duration: 0.0004263
+      duration: 0.0003735
       messages: 
       output: 
       stacktrace: 
@@ -1434,7 +1434,7 @@ MonoBehaviour:
       name: Test_VectorMath
       fullName: Assets.SRC.ProceduralMapGeneration.Generic.Tests.Test_VectorMath
       resultStatus: 1
-      duration: 0.0467493
+      duration: 0.0548058
       messages: 
       output: 
       stacktrace: 
@@ -1450,7 +1450,7 @@ MonoBehaviour:
       name: CalculateDistanceBetweenTwoVectors_ShouldReturnTheCorrectDistance
       fullName: Assets.SRC.ProceduralMapGeneration.Generic.Tests.Test_VectorMath.CalculateDistanceBetweenTwoVectors_ShouldReturnTheCorrectDistance
       resultStatus: 1
-      duration: 0.0038299
+      duration: 0.0038584
       messages: 
       output: 
       stacktrace: 
@@ -1467,7 +1467,7 @@ MonoBehaviour:
       name: Tests_Exceptions
       fullName: Assets.SRC.ProceduralMapGeneration.Generic.Tests.Tests_Exceptions
       resultStatus: 1
-      duration: 0.0457626
+      duration: 0.0547473
       messages: 
       output: 
       stacktrace: 
@@ -1483,7 +1483,7 @@ MonoBehaviour:
       name: NotImplementedException_ShouldThrowNotImplementedException
       fullName: Assets.SRC.ProceduralMapGeneration.Generic.Tests.Tests_Exceptions.NotImplementedException_ShouldThrowNotImplementedException
       resultStatus: 1
-      duration: 0.0033463
+      duration: 0.0036632
       messages: 
       output: 
       stacktrace: 
@@ -1500,7 +1500,7 @@ MonoBehaviour:
       name: Noise
       fullName: Assets.SRC.ProceduralMapGeneration.Noise
       resultStatus: 1
-      duration: 0.0589605
+      duration: 0.0726928
       messages: 
       output: 
       stacktrace: 
@@ -1516,7 +1516,7 @@ MonoBehaviour:
       name: Tests
       fullName: Assets.SRC.ProceduralMapGeneration.Noise.Tests
       resultStatus: 1
-      duration: 0.0474519
+      duration: 0.0601396
       messages: 
       output: 
       stacktrace: 
@@ -1532,7 +1532,7 @@ MonoBehaviour:
       name: Test_PerlinNoiseGenerator
       fullName: Assets.SRC.ProceduralMapGeneration.Noise.Tests.Test_PerlinNoiseGenerator
       resultStatus: 1
-      duration: 0.0401072
+      duration: 0.0497952
       messages: 
       output: 
       stacktrace: 
@@ -1548,7 +1548,7 @@ MonoBehaviour:
       name: GeneratePerlinNoise2DTexture_Test
       fullName: Assets.SRC.ProceduralMapGeneration.Noise.Tests.Test_PerlinNoiseGenerator.GeneratePerlinNoise2DTexture_Test
       resultStatus: 1
-      duration: 0.0043137
+      duration: 0.0028746
       messages: 
       output: 
       stacktrace: 
@@ -1565,7 +1565,7 @@ MonoBehaviour:
       name: PathFinding
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding
       resultStatus: 2
-      duration: 1.693986
+      duration: 2.1265237
       messages: One or more child tests had errors
       output: 
       stacktrace: 
@@ -1581,7 +1581,7 @@ MonoBehaviour:
       name: Tests
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests
       resultStatus: 2
-      duration: 1.6798844
+      duration: 2.1105678
       messages: One or more child tests had errors
       output: 
       stacktrace: 
@@ -1597,7 +1597,7 @@ MonoBehaviour:
       name: PathMapBuilderTest
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.PathMapBuilderTest
       resultStatus: 2
-      duration: 0.2578166
+      duration: 0.313668
       messages: One or more child tests had errors
       output: 
       stacktrace: 
@@ -1613,7 +1613,7 @@ MonoBehaviour:
       name: CreateMap_ShouldCreateAMapWithTheSpecifiedSizeAndFillPercentage
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.PathMapBuilderTest.CreateMap_ShouldCreateAMapWithTheSpecifiedSizeAndFillPercentage
       resultStatus: 2
-      duration: 0.1690868
+      duration: 0.2014927
       messages: One or more child tests had errors
       output: 
       stacktrace: 
@@ -1629,7 +1629,7 @@ MonoBehaviour:
       name: CreateMap_ShouldCreateAMapWithTheSpecifiedSizeAndFillPercentage(ThreeDimention)
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.PathMapBuilderTest.CreateMap_ShouldCreateAMapWithTheSpecifiedSizeAndFillPercentage(ThreeDimention)
       resultStatus: 2
-      duration: 0.0319104
+      duration: 0.0287709
       messages: 'System.ArgumentException : The Object you want to instantiate is
         null.'
       output: 'Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.ScriptableObjects.DirectionalTilesScriptableObject
@@ -1675,32 +1675,32 @@ MonoBehaviour:
       name: CreateMap_ShouldCreateAMapWithTheSpecifiedSizeAndFillPercentage(TwoDimentionHorizontal)
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.PathMapBuilderTest.CreateMap_ShouldCreateAMapWithTheSpecifiedSizeAndFillPercentage(TwoDimentionHorizontal)
       resultStatus: 2
-      duration: 0.002472
-      messages: 'System.ArgumentException : Must specify valid information for parsing
-        in the string.'
+      duration: 0.0024744
+      messages: 'System.ArgumentException : The Object you want to instantiate is
+        null.'
       output: 'Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.ScriptableObjects.DirectionalTilesScriptableObject
         must be instantiated using the ScriptableObject.CreateInstance method instead
         of new DirectionalTilesScriptableObject.
 
 '
-      stacktrace: "  at System.Enum+EnumResult.SetFailure (System.Enum+ParseFailureKind
-        failure, System.String failureMessageID, System.Object failureMessageFormatArgument)
-        [0x00023] in <4a4789deb75f446a81a24a1a00bdd3f9>:0 \r\n  at System.Enum.TryParseEnum
-        (System.Type enumType, System.String value, System.Boolean ignoreCase, System.Enum+EnumResult&
-        parseResult) [0x00077] in <4a4789deb75f446a81a24a1a00bdd3f9>:0 \r\n  at System.Enum.Parse
-        (System.Type enumType, System.String value, System.Boolean ignoreCase) [0x00010]
-        in <4a4789deb75f446a81a24a1a00bdd3f9>:0 \r\n  at System.Enum.Parse (System.Type
-        enumType, System.String value) [0x00000] in <4a4789deb75f446a81a24a1a00bdd3f9>:0
-        \r\n  at Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Utilities.ChunkHandler.FindChunkType
-        (Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Structs.NeighborStruct
-        chunk) [0x000ec] in C:\\git\\Unity.DungeonCrawler\\DungeonCrawler\\Assets\\SRC\\ProceduralMapGeneration\\Utilities\\ChunkHandler.cs:107
-        \r\n  at Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Utilities.ChunkHandler.AssignChunkTypes
-        (System.Collections.Generic.List`1[T] grid) [0x00006] in C:\\git\\Unity.DungeonCrawler\\DungeonCrawler\\Assets\\SRC\\ProceduralMapGeneration\\Utilities\\ChunkHandler.cs:17
+      stacktrace: "  at UnityEngine.Object.CheckNullArgument (System.Object arg,
+        System.String message) [0x00009] in <f712b1dc50b4468388b9c5f95d0d0eaf>:0
+        \r\n  at UnityEngine.Object.Instantiate (UnityEngine.Object original, UnityEngine.Vector3
+        position, UnityEngine.Quaternion rotation) [0x00001] in <f712b1dc50b4468388b9c5f95d0d0eaf>:0
+        \r\n  at UnityEngine.Object.Instantiate[T] (T original, UnityEngine.Vector3
+        position, UnityEngine.Quaternion rotation) [0x00001] in <f712b1dc50b4468388b9c5f95d0d0eaf>:0
+        \r\n  at Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Mono.Behaviors.UtilitiesBehaviour.InstantiateObject
+        (UnityEngine.GameObject gObject, UnityEngine.Vector3 position, UnityEngine.Quaternion
+        rotation) [0x00001] in C:\\git\\Unity.DungeonCrawler\\DungeonCrawler\\Assets\\SRC\\ProceduralMapGeneration\\Mono\\Behaviors\\UtilitiesBehaviour.cs:9
+        \r\n  at Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Utilities.PopulateTilePositions.SetChildTile
+        (Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.ScriptableObjects.DirectionalTilesScriptableObject
+        tolCol, System.Collections.Generic.List`1[T] parentObjects) [0x00027] in
+        C:\\git\\Unity.DungeonCrawler\\DungeonCrawler\\Assets\\SRC\\ProceduralMapGeneration\\Utilities\\PopulateTilePositions.cs:17
         \r\n  at Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.PathFinding.PathMapBuilder.CreateMap
         (System.Int32 GridSize, System.Single GridScale, UnityEngine.Transform GridParent,
         Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.ScriptableObjects.DirectionalTilesScriptableObject
         scriptRef, System.Int32 MapTotalFillPercentage, Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Enums.GridTypeEnum
-        gridType) [0x0008c] in C:\\git\\Unity.DungeonCrawler\\DungeonCrawler\\Assets\\SRC\\ProceduralMapGeneration\\PathFinding\\PathMapBuilder.cs:33
+        gridType) [0x000a3] in C:\\git\\Unity.DungeonCrawler\\DungeonCrawler\\Assets\\SRC\\ProceduralMapGeneration\\PathFinding\\PathMapBuilder.cs:34
         \r\n  at Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.PathMapBuilderTest.CreateMap_ShouldCreateAMapWithTheSpecifiedSizeAndFillPercentage
         (Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Enums.GridTypeEnum
         gridType) [0x00018] in C:\\git\\Unity.DungeonCrawler\\DungeonCrawler\\Assets\\SRC\\__Tests__\\ProceduralMapGenerationAssembly\\PathFinding\\PathMapBuilderTest.cs:73
@@ -1721,32 +1721,32 @@ MonoBehaviour:
       name: CreateMap_ShouldCreateAMapWithTheSpecifiedSizeAndFillPercentage(TwoDimentionVertical)
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.PathMapBuilderTest.CreateMap_ShouldCreateAMapWithTheSpecifiedSizeAndFillPercentage(TwoDimentionVertical)
       resultStatus: 2
-      duration: 0.0025834
-      messages: 'System.ArgumentException : Must specify valid information for parsing
-        in the string.'
+      duration: 0.0026925
+      messages: 'System.ArgumentException : The Object you want to instantiate is
+        null.'
       output: 'Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.ScriptableObjects.DirectionalTilesScriptableObject
         must be instantiated using the ScriptableObject.CreateInstance method instead
         of new DirectionalTilesScriptableObject.
 
 '
-      stacktrace: "  at System.Enum+EnumResult.SetFailure (System.Enum+ParseFailureKind
-        failure, System.String failureMessageID, System.Object failureMessageFormatArgument)
-        [0x00023] in <4a4789deb75f446a81a24a1a00bdd3f9>:0 \r\n  at System.Enum.TryParseEnum
-        (System.Type enumType, System.String value, System.Boolean ignoreCase, System.Enum+EnumResult&
-        parseResult) [0x00077] in <4a4789deb75f446a81a24a1a00bdd3f9>:0 \r\n  at System.Enum.Parse
-        (System.Type enumType, System.String value, System.Boolean ignoreCase) [0x00010]
-        in <4a4789deb75f446a81a24a1a00bdd3f9>:0 \r\n  at System.Enum.Parse (System.Type
-        enumType, System.String value) [0x00000] in <4a4789deb75f446a81a24a1a00bdd3f9>:0
-        \r\n  at Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Utilities.ChunkHandler.FindChunkType
-        (Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Structs.NeighborStruct
-        chunk) [0x000ec] in C:\\git\\Unity.DungeonCrawler\\DungeonCrawler\\Assets\\SRC\\ProceduralMapGeneration\\Utilities\\ChunkHandler.cs:107
-        \r\n  at Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Utilities.ChunkHandler.AssignChunkTypes
-        (System.Collections.Generic.List`1[T] grid) [0x00006] in C:\\git\\Unity.DungeonCrawler\\DungeonCrawler\\Assets\\SRC\\ProceduralMapGeneration\\Utilities\\ChunkHandler.cs:17
+      stacktrace: "  at UnityEngine.Object.CheckNullArgument (System.Object arg,
+        System.String message) [0x00009] in <f712b1dc50b4468388b9c5f95d0d0eaf>:0
+        \r\n  at UnityEngine.Object.Instantiate (UnityEngine.Object original, UnityEngine.Vector3
+        position, UnityEngine.Quaternion rotation) [0x00001] in <f712b1dc50b4468388b9c5f95d0d0eaf>:0
+        \r\n  at UnityEngine.Object.Instantiate[T] (T original, UnityEngine.Vector3
+        position, UnityEngine.Quaternion rotation) [0x00001] in <f712b1dc50b4468388b9c5f95d0d0eaf>:0
+        \r\n  at Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Mono.Behaviors.UtilitiesBehaviour.InstantiateObject
+        (UnityEngine.GameObject gObject, UnityEngine.Vector3 position, UnityEngine.Quaternion
+        rotation) [0x00001] in C:\\git\\Unity.DungeonCrawler\\DungeonCrawler\\Assets\\SRC\\ProceduralMapGeneration\\Mono\\Behaviors\\UtilitiesBehaviour.cs:9
+        \r\n  at Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Utilities.PopulateTilePositions.SetChildTile
+        (Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.ScriptableObjects.DirectionalTilesScriptableObject
+        tolCol, System.Collections.Generic.List`1[T] parentObjects) [0x00027] in
+        C:\\git\\Unity.DungeonCrawler\\DungeonCrawler\\Assets\\SRC\\ProceduralMapGeneration\\Utilities\\PopulateTilePositions.cs:17
         \r\n  at Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.PathFinding.PathMapBuilder.CreateMap
         (System.Int32 GridSize, System.Single GridScale, UnityEngine.Transform GridParent,
         Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.ScriptableObjects.DirectionalTilesScriptableObject
         scriptRef, System.Int32 MapTotalFillPercentage, Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Enums.GridTypeEnum
-        gridType) [0x0008c] in C:\\git\\Unity.DungeonCrawler\\DungeonCrawler\\Assets\\SRC\\ProceduralMapGeneration\\PathFinding\\PathMapBuilder.cs:33
+        gridType) [0x000a3] in C:\\git\\Unity.DungeonCrawler\\DungeonCrawler\\Assets\\SRC\\ProceduralMapGeneration\\PathFinding\\PathMapBuilder.cs:34
         \r\n  at Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.PathMapBuilderTest.CreateMap_ShouldCreateAMapWithTheSpecifiedSizeAndFillPercentage
         (Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Enums.GridTypeEnum
         gridType) [0x00018] in C:\\git\\Unity.DungeonCrawler\\DungeonCrawler\\Assets\\SRC\\__Tests__\\ProceduralMapGenerationAssembly\\PathFinding\\PathMapBuilderTest.cs:73
@@ -1767,7 +1767,7 @@ MonoBehaviour:
       name: FillMap_ShouldFillTheMapToTheSpecifiedPercentage
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.PathMapBuilderTest.FillMap_ShouldFillTheMapToTheSpecifiedPercentage
       resultStatus: 2
-      duration: 0.0009398
+      duration: 0.0010938
       messages: 'System.NullReferenceException : Object reference not set to an instance
         of an object'
       output: 
@@ -1807,7 +1807,24 @@ MonoBehaviour:
       name: MapTotal_ShouldReturnAListOfAllVectorsInTheMapGrid
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.PathMapBuilderTest.MapTotal_ShouldReturnAListOfAllVectorsInTheMapGrid
       resultStatus: 1
-      duration: 0.0050966
+      duration: 0.0050739
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1086
+      parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/PathFinding/Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.PathMapBuilderTest][suite]
+    - id: 1093
+      uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/PathFinding/Tests/PathMapBuilderTest/[__Tests__][Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.PathMapBuilderTest.VaribaleCheck]
+      name: VaribaleCheck
+      fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.PathMapBuilderTest.VaribaleCheck
+      resultStatus: 0
+      duration: 0
       messages: 
       output: 
       stacktrace: 
@@ -1824,7 +1841,7 @@ MonoBehaviour:
       name: Test_ChunkHandler+AssignChunkTypesTests
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_ChunkHandler+AssignChunkTypesTests
       resultStatus: 1
-      duration: 0.0980217
+      duration: 0.1177206
       messages: 
       output: 
       stacktrace: 
@@ -1840,7 +1857,7 @@ MonoBehaviour:
       name: TestAssignChunkTypes_WithInvalidInput_ReturnsEmptyList
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_ChunkHandler+AssignChunkTypesTests.TestAssignChunkTypes_WithInvalidInput_ReturnsEmptyList
       resultStatus: 1
-      duration: 0.0025743
+      duration: 0.0029453
       messages: 
       output: 
       stacktrace: 
@@ -1857,7 +1874,7 @@ MonoBehaviour:
       name: TestAssignChunkTypes_WithValidInput_AssignsCorrectTypes
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_ChunkHandler+AssignChunkTypesTests.TestAssignChunkTypes_WithValidInput_AssignsCorrectTypes
       resultStatus: 1
-      duration: 0.0020141
+      duration: 0.0014516
       messages: 
       output: 
       stacktrace: 
@@ -1874,7 +1891,7 @@ MonoBehaviour:
       name: Test_ChunkHandler+FindChunkNeigborsTests
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_ChunkHandler+FindChunkNeigborsTests
       resultStatus: 1
-      duration: 0.090145
+      duration: 0.1128831
       messages: 
       output: 
       stacktrace: 
@@ -1890,7 +1907,7 @@ MonoBehaviour:
       name: TestFindChunkNeigbors_WithInvalidInput_ReturnsEmptyList
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_ChunkHandler+FindChunkNeigborsTests.TestFindChunkNeigbors_WithInvalidInput_ReturnsEmptyList
       resultStatus: 1
-      duration: 0.0003183
+      duration: 0.0003108
       messages: 
       output: 
       stacktrace: 
@@ -1907,7 +1924,7 @@ MonoBehaviour:
       name: TestFindChunkNeigbors_WithValidInput_ReturnsCorrectNeighbors
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_ChunkHandler+FindChunkNeigborsTests.TestFindChunkNeigbors_WithValidInput_ReturnsCorrectNeighbors
       resultStatus: 1
-      duration: 0.0106345
+      duration: 0.0108629
       messages: 
       output: 
       stacktrace: 
@@ -1924,7 +1941,7 @@ MonoBehaviour:
       name: Test_ChunkHandler+GenericTestsForChunkHandle
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_ChunkHandler+GenericTestsForChunkHandle
       resultStatus: 1
-      duration: 0.090993
+      duration: 0.1192356
       messages: 
       output: 
       stacktrace: 
@@ -1940,7 +1957,7 @@ MonoBehaviour:
       name: Error_Error
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_ChunkHandler+GenericTestsForChunkHandle.Error_Error
       resultStatus: 1
-      duration: 0.0148111
+      duration: 0.0163467
       messages: 
       output: 
       stacktrace: 
@@ -1957,7 +1974,7 @@ MonoBehaviour:
       name: Return_Collapsed
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_ChunkHandler+GenericTestsForChunkHandle.Return_Collapsed
       resultStatus: 1
-      duration: 0.0029714
+      duration: 0.0028894
       messages: 
       output: 
       stacktrace: 
@@ -1974,7 +1991,7 @@ MonoBehaviour:
       name: Test_NewNode
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewNode
       resultStatus: 1
-      duration: 0.1217041
+      duration: 0.1553573
       messages: 
       output: 
       stacktrace: 
@@ -1990,7 +2007,7 @@ MonoBehaviour:
       name: Should_Create_A_New_Node_With_A_Position
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewNode.Should_Create_A_New_Node_With_A_Position
       resultStatus: 1
-      duration: 0.0020983
+      duration: 0.0030707
       messages: 
       output: 
       stacktrace: 
@@ -2007,7 +2024,7 @@ MonoBehaviour:
       name: Should_Have_A_Default_Cost_Of_Zero
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewNode.Should_Have_A_Default_Cost_Of_Zero
       resultStatus: 1
-      duration: 0.0003093
+      duration: 0.0002704
       messages: 
       output: 
       stacktrace: 
@@ -2024,7 +2041,7 @@ MonoBehaviour:
       name: Should_Have_A_Default_Heuristic_Cost_Of_Zero
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewNode.Should_Have_A_Default_Heuristic_Cost_Of_Zero
       resultStatus: 1
-      duration: 0.0003195
+      duration: 0.0003417
       messages: 
       output: 
       stacktrace: 
@@ -2041,7 +2058,7 @@ MonoBehaviour:
       name: Should_Not_Be_Closed_ByDefault
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewNode.Should_Not_Be_Closed_ByDefault
       resultStatus: 1
-      duration: 0.0004039
+      duration: 0.0003107
       messages: 
       output: 
       stacktrace: 
@@ -2058,7 +2075,7 @@ MonoBehaviour:
       name: Should_Not_Have_A_LastNode_ByDefault
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewNode.Should_Not_Have_A_LastNode_ByDefault
       resultStatus: 1
-      duration: 0.0005594
+      duration: 0.0003176
       messages: 
       output: 
       stacktrace: 
@@ -2075,7 +2092,7 @@ MonoBehaviour:
       name: Should_Not_Have_An_Empty_List_Of_Neighbors_ByDefault
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewNode.Should_Not_Have_An_Empty_List_Of_Neighbors_ByDefault
       resultStatus: 1
-      duration: 0.0005483
+      duration: 0.0003853
       messages: 
       output: 
       stacktrace: 
@@ -2092,7 +2109,7 @@ MonoBehaviour:
       name: Test_NewPathFinding+ConvertPathToPositionsTests
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+ConvertPathToPositionsTests
       resultStatus: 1
-      duration: 0.112874
+      duration: 0.1435485
       messages: 
       output: 
       stacktrace: 
@@ -2108,7 +2125,7 @@ MonoBehaviour:
       name: TestConvertPathToPositions_WithEmptyGeneratedList_ReturnsEmptyList
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+ConvertPathToPositionsTests.TestConvertPathToPositions_WithEmptyGeneratedList_ReturnsEmptyList
       resultStatus: 1
-      duration: 0.0003609
+      duration: 0.0003132
       messages: 
       output: 
       stacktrace: 
@@ -2125,7 +2142,7 @@ MonoBehaviour:
       name: TestConvertPathToPositions_WithGeneratedListWithNoPositions_ReturnsEmptyList
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+ConvertPathToPositionsTests.TestConvertPathToPositions_WithGeneratedListWithNoPositions_ReturnsEmptyList
       resultStatus: 1
-      duration: 0.0005091
+      duration: 0.000393
       messages: 
       output: 
       stacktrace: 
@@ -2142,7 +2159,7 @@ MonoBehaviour:
       name: TestConvertPathToPositions_WithValidGeneratedList_ReturnsPositions
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+ConvertPathToPositionsTests.TestConvertPathToPositions_WithValidGeneratedList_ReturnsPositions
       resultStatus: 1
-      duration: 0.0022982
+      duration: 0.0018926
       messages: 
       output: 
       stacktrace: 
@@ -2159,7 +2176,7 @@ MonoBehaviour:
       name: Test_NewPathFinding+FindActiveNodeTests
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+FindActiveNodeTests
       resultStatus: 2
-      duration: 0.1103243
+      duration: 0.1398646
       messages: One or more child tests had errors
       output: 
       stacktrace: 
@@ -2175,7 +2192,7 @@ MonoBehaviour:
       name: TestFindActiveNode_WithActiveNodeWithNeighborsButNoValidEndPos_ReturnsNull
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+FindActiveNodeTests.TestFindActiveNode_WithActiveNodeWithNeighborsButNoValidEndPos_ReturnsNull
       resultStatus: 2
-      duration: 0.0011955
+      duration: 0.0010117
       messages: 'System.ArgumentNullException : Value cannot be null.
 
         Parameter
@@ -2209,7 +2226,7 @@ MonoBehaviour:
       name: TestFindActiveNode_WithActiveNodeWithNoNeighbors_ReturnsNull
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+FindActiveNodeTests.TestFindActiveNode_WithActiveNodeWithNoNeighbors_ReturnsNull
       resultStatus: 2
-      duration: 0.000743
+      duration: 0.000738
       messages: 'System.InvalidOperationException : Sequence contains no elements'
       output: 
       stacktrace: "  at System.Linq.Enumerable.First[TSource] (System.Collections.Generic.IEnumerable`1[T]
@@ -2236,7 +2253,7 @@ MonoBehaviour:
       name: TestFindActiveNode_WithValidActiveNodeAndEndPos_ReturnsActiveNode
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+FindActiveNodeTests.TestFindActiveNode_WithValidActiveNodeAndEndPos_ReturnsActiveNode
       resultStatus: 2
-      duration: 0.0008047
+      duration: 0.0007525
       messages: 'System.ArgumentNullException : Value cannot be null.
 
         Parameter
@@ -2270,7 +2287,7 @@ MonoBehaviour:
       name: Test_NewPathFinding+FindEnds
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+FindEnds
       resultStatus: 1
-      duration: 0.1518989
+      duration: 0.1730747
       messages: 
       output: 
       stacktrace: 
@@ -2286,7 +2303,7 @@ MonoBehaviour:
       name: Should_Return_A_List_Of_Two_Different_Vector3s_When_Given_A_List_Of_Vector3s
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+FindEnds.Should_Return_A_List_Of_Two_Different_Vector3s_When_Given_A_List_Of_Vector3s
       resultStatus: 1
-      duration: 0.0745273
+      duration: 0.0694997
       messages: 
       output: 
       stacktrace: 
@@ -2303,7 +2320,7 @@ MonoBehaviour:
       name: Should_Return_A_List_Of_Two_Vector3s_When_Given_A_List_Of_Vector3s
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+FindEnds.Should_Return_A_List_Of_Two_Vector3s_When_Given_A_List_Of_Vector3s
       resultStatus: 1
-      duration: 0.0004191
+      duration: 0.000394
       messages: 
       output: 
       stacktrace: 
@@ -2320,7 +2337,7 @@ MonoBehaviour:
       name: Test_NewPathFinding+Findpath
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+Findpath
       resultStatus: 1
-      duration: 0.1588053
+      duration: 0.2039211
       messages: 
       output: 
       stacktrace: 
@@ -2336,7 +2353,7 @@ MonoBehaviour:
       name: EmptyGrid
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+Findpath.EmptyGrid
       resultStatus: 1
-      duration: 0.0019965
+      duration: 0.0020079
       messages: 
       output: 
       stacktrace: 
@@ -2353,7 +2370,7 @@ MonoBehaviour:
       name: EmptyPositions
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+Findpath.EmptyPositions
       resultStatus: 1
-      duration: 0.0017029
+      duration: 0.0021998
       messages: 
       output: 
       stacktrace: 
@@ -2370,7 +2387,7 @@ MonoBehaviour:
       name: NullGrid
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+Findpath.NullGrid
       resultStatus: 1
-      duration: 0.0017004
+      duration: 0.0014958
       messages: 
       output: 
       stacktrace: 
@@ -2387,7 +2404,7 @@ MonoBehaviour:
       name: NullPositions
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+Findpath.NullPositions
       resultStatus: 1
-      duration: 0.0018383
+      duration: 0.0021428
       messages: 
       output: 
       stacktrace: 
@@ -2404,7 +2421,7 @@ MonoBehaviour:
       name: Test_NewPathFinding+FindpathTests
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+FindpathTests
       resultStatus: 2
-      duration: 0.1732352
+      duration: 0.2150964
       messages: One or more child tests had errors
       output: 
       stacktrace: 
@@ -2420,7 +2437,7 @@ MonoBehaviour:
       name: TestFindpath_WithEmptyGrid_ThrowsArgumentNullException
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+FindpathTests.TestFindpath_WithEmptyGrid_ThrowsArgumentNullException
       resultStatus: 1
-      duration: 0.000744
+      duration: 0.0004937
       messages: 
       output: 
       stacktrace: 
@@ -2437,7 +2454,7 @@ MonoBehaviour:
       name: TestFindpath_WithEmptyPositions_ThrowsArgumentNullException
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+FindpathTests.TestFindpath_WithEmptyPositions_ThrowsArgumentNullException
       resultStatus: 1
-      duration: 0.000715
+      duration: 0.0005491
       messages: 
       output: 
       stacktrace: 
@@ -2454,7 +2471,7 @@ MonoBehaviour:
       name: TestFindpath_WithNullGrid_ThrowsArgumentNullException
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+FindpathTests.TestFindpath_WithNullGrid_ThrowsArgumentNullException
       resultStatus: 1
-      duration: 0.0005162
+      duration: 0.0004817
       messages: 
       output: 
       stacktrace: 
@@ -2466,7 +2483,7 @@ MonoBehaviour:
       - Uncategorized
       parentId: 1116
       parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/PathFinding/Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+FindpathTests][suite]
-    - id: 1120
+    - id: 1121
       uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/PathFinding/Tests/Test_NewPathFinding+FindpathTests/[__Tests__][Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+FindpathTests.TestFindpath_WithNullPositions_ThrowsArgumentNullException]
       name: TestFindpath_WithNullPositions_ThrowsArgumentNullException
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+FindpathTests.TestFindpath_WithNullPositions_ThrowsArgumentNullException
@@ -2481,14 +2498,14 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1116
+      parentId: 1117
       parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/PathFinding/Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+FindpathTests][suite]
     - id: 1117
       uniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/PathFinding/Tests/Test_NewPathFinding+FindpathTests/[__Tests__][Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+FindpathTests.TestFindpath_WithValidGridAndPositions_ReturnsPath]
       name: TestFindpath_WithValidGridAndPositions_ReturnsPath
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+FindpathTests.TestFindpath_WithValidGridAndPositions_ReturnsPath
       resultStatus: 2
-      duration: 0.000742
+      duration: 0.0006839
       messages: 'System.ArgumentNullException : Value cannot be null.
 
         Parameter
@@ -2525,7 +2542,7 @@ MonoBehaviour:
       name: Test_NewPathFinding+GeneratePathTests
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+GeneratePathTests
       resultStatus: 2
-      duration: 0.1094431
+      duration: 0.1413398
       messages: One or more child tests had errors
       output: 
       stacktrace: 
@@ -2541,7 +2558,7 @@ MonoBehaviour:
       name: TestGeneratePath_WithActiveNodeWithNoLastNode_ReturnsEmptyList
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+GeneratePathTests.TestGeneratePath_WithActiveNodeWithNoLastNode_ReturnsEmptyList
       resultStatus: 2
-      duration: 0.0004623
+      duration: 0.0004541
       messages: 'System.NullReferenceException : Object reference not set to an instance
         of an object'
       output: 
@@ -2568,7 +2585,7 @@ MonoBehaviour:
       name: TestGeneratePath_WithActiveNodeWithNoValidStartPos_ReturnsEmptyList
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+GeneratePathTests.TestGeneratePath_WithActiveNodeWithNoValidStartPos_ReturnsEmptyList
       resultStatus: 2
-      duration: 0.0004579
+      duration: 0.0004658
       messages: 'System.NullReferenceException : Object reference not set to an instance
         of an object'
       output: 
@@ -2595,7 +2612,7 @@ MonoBehaviour:
       name: TestGeneratePath_WithValidActiveNodeAndStartPos_ReturnsPath
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+GeneratePathTests.TestGeneratePath_WithValidActiveNodeAndStartPos_ReturnsPath
       resultStatus: 2
-      duration: 0.0005166
+      duration: 0.0004966
       messages: 'System.NullReferenceException : Object reference not set to an instance
         of an object'
       output: 
@@ -2622,7 +2639,7 @@ MonoBehaviour:
       name: Test_NewPathFinding+NodeGridCreatorTests
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+NodeGridCreatorTests
       resultStatus: 2
-      duration: 0.1172528
+      duration: 0.1585245
       messages: One or more child tests had errors
       output: 
       stacktrace: 
@@ -2638,8 +2655,8 @@ MonoBehaviour:
       name: TestNodeGridCreatoB
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+NodeGridCreatorTests.TestNodeGridCreatoB
       resultStatus: 2
-      duration: 0.0023796
-      messages: "  Expected: 2\r\n  But was:  1\r\n"
+      duration: 0.002455
+      messages: "  Expected: 2\r\n  But was:  0\r\n"
       output: 
       stacktrace: 'at Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+NodeGridCreatorTests.TestNodeGridCreatoB
         () [0x00088] in C:\git\Unity.DungeonCrawler\DungeonCrawler\Assets\SRC\__Tests__\ProceduralMapGenerationAssembly\PathFinding\Test_NewPathFinding.cs:495
@@ -2658,7 +2675,7 @@ MonoBehaviour:
       name: TestNodeGridCreatorA
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+NodeGridCreatorTests.TestNodeGridCreatorA
       resultStatus: 2
-      duration: 0.0006875
+      duration: 0.0006283
       messages: 'System.NullReferenceException : Object reference not set to an instance
         of an object'
       output: 
@@ -2694,7 +2711,7 @@ MonoBehaviour:
       name: TestReturnPath
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+NodeGridCreatorTests.TestReturnPath
       resultStatus: 2
-      duration: 0.0006198
+      duration: 0.0007578
       messages: 'System.NullReferenceException : Object reference not set to an instance
         of an object'
       output: 
@@ -2727,7 +2744,7 @@ MonoBehaviour:
       name: Test_NewPathFinding+SetNodeNeighborsTest
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+SetNodeNeighborsTest
       resultStatus: 1
-      duration: 0.0780602
+      duration: 0.1005775
       messages: 
       output: 
       stacktrace: 
@@ -2743,7 +2760,7 @@ MonoBehaviour:
       name: ComparePositionsTest
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+SetNodeNeighborsTest.ComparePositionsTest
       resultStatus: 1
-      duration: 0.0003548
+      duration: 0.0004545
       messages: 
       output: 
       stacktrace: 
@@ -2760,7 +2777,7 @@ MonoBehaviour:
       name: TestSetNodeNeighbors
       fullName: Assets.SRC.ProceduralMapGeneration.PathFinding.Tests.Test_NewPathFinding+SetNodeNeighborsTest.TestSetNodeNeighbors
       resultStatus: 1
-      duration: 0.0004219
+      duration: 0.0004643
       messages: 
       output: 
       stacktrace: 
@@ -2777,7 +2794,7 @@ MonoBehaviour:
       name: Utilities
       fullName: Assets.SRC.ProceduralMapGeneration.Utilities
       resultStatus: 1
-      duration: 3.3432724
+      duration: 3.804464
       messages: 
       output: 
       stacktrace: 
@@ -2793,7 +2810,7 @@ MonoBehaviour:
       name: Tests
       fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests
       resultStatus: 1
-      duration: 3.3326826
+      duration: 3.7918344
       messages: 
       output: 
       stacktrace: 
@@ -2809,7 +2826,7 @@ MonoBehaviour:
       name: GridCreate_Tests
       fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests
       resultStatus: 1
-      duration: 3.3282232
+      duration: 3.787321
       messages: 
       output: 
       stacktrace: 
@@ -2825,7 +2842,7 @@ MonoBehaviour:
       name: FindChunkType_ShouldReturnTheCorrectChunkType
       fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.FindChunkType_ShouldReturnTheCorrectChunkType
       resultStatus: 1
-      duration: 2.0839467
+      duration: 2.3430755
       messages: 
       output: 
       stacktrace: 
@@ -2841,7 +2858,7 @@ MonoBehaviour:
       name: FindChunkType_ShouldReturnTheCorrectChunkType(N,True,False,False,False,False,False)
       fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.FindChunkType_ShouldReturnTheCorrectChunkType(N,True,False,False,False,False,False)
       resultStatus: 1
-      duration: 0.0008665
+      duration: 0.0009603
       messages: 
       output: 
       stacktrace: 
@@ -2858,7 +2875,7 @@ MonoBehaviour:
       name: FindChunkType_ShouldReturnTheCorrectChunkType(NE,True,True,False,False,False,False)
       fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.FindChunkType_ShouldReturnTheCorrectChunkType(NE,True,True,False,False,False,False)
       resultStatus: 1
-      duration: 0.0003834
+      duration: 0.0002933
       messages: 
       output: 
       stacktrace: 
@@ -2875,7 +2892,7 @@ MonoBehaviour:
       name: FindChunkType_ShouldReturnTheCorrectChunkType(NET,True,True,False,False,True,False)
       fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.FindChunkType_ShouldReturnTheCorrectChunkType(NET,True,True,False,False,True,False)
       resultStatus: 1
-      duration: 0.0004921
+      duration: 0.0003024
       messages: 
       output: 
       stacktrace: 
@@ -2892,7 +2909,7 @@ MonoBehaviour:
       name: FindChunkType_ShouldReturnTheCorrectChunkType(NEB,True,True,False,False,False,True)
       fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.FindChunkType_ShouldReturnTheCorrectChunkType(NEB,True,True,False,False,False,True)
       resultStatus: 1
-      duration: 0.0004663
+      duration: 0.0002983
       messages: 
       output: 
       stacktrace: 
@@ -2909,7 +2926,7 @@ MonoBehaviour:
       name: FindChunkType_ShouldReturnTheCorrectChunkType(NEW,True,True,False,True,False,False)
       fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.FindChunkType_ShouldReturnTheCorrectChunkType(NEW,True,True,False,True,False,False)
       resultStatus: 1
-      duration: 0.0003974
+      duration: 0.0003013
       messages: 
       output: 
       stacktrace: 
@@ -2926,7 +2943,7 @@ MonoBehaviour:
       name: FindChunkType_ShouldReturnTheCorrectChunkType(NEWT,True,True,False,True,True,False)
       fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.FindChunkType_ShouldReturnTheCorrectChunkType(NEWT,True,True,False,True,True,False)
       resultStatus: 1
-      duration: 0.0004324
+      duration: 0.0003188
       messages: 
       output: 
       stacktrace: 
@@ -2943,7 +2960,7 @@ MonoBehaviour:
       name: FindChunkType_ShouldReturnTheCorrectChunkType(NEWB,True,True,False,True,False,True)
       fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.FindChunkType_ShouldReturnTheCorrectChunkType(NEWB,True,True,False,True,False,True)
       resultStatus: 1
-      duration: 0.0004143
+      duration: 0.0003238
       messages: 
       output: 
       stacktrace: 
@@ -2960,7 +2977,7 @@ MonoBehaviour:
       name: FindChunkType_ShouldReturnTheCorrectChunkType(NEWTB,True,True,False,True,True,True)
       fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.FindChunkType_ShouldReturnTheCorrectChunkType(NEWTB,True,True,False,True,True,True)
       resultStatus: 1
-      duration: 0.0004154
+      duration: 0.0002966
       messages: 
       output: 
       stacktrace: 
@@ -2977,7 +2994,7 @@ MonoBehaviour:
       name: FindChunkType_ShouldReturnTheCorrectChunkType(NES,True,True,True,False,False,False)
       fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.FindChunkType_ShouldReturnTheCorrectChunkType(NES,True,True,True,False,False,False)
       resultStatus: 1
-      duration: 0.0004338
+      duration: 0.0003094
       messages: 
       output: 
       stacktrace: 
@@ -2994,7 +3011,7 @@ MonoBehaviour:
       name: FindChunkType_ShouldReturnTheCorrectChunkType(NEST,True,True,True,False,True,False)
       fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.FindChunkType_ShouldReturnTheCorrectChunkType(NEST,True,True,True,False,True,False)
       resultStatus: 1
-      duration: 0.0004415
+      duration: 0.0003165
       messages: 
       output: 
       stacktrace: 
@@ -3011,7 +3028,7 @@ MonoBehaviour:
       name: FindChunkType_ShouldReturnTheCorrectChunkType(NESB,True,True,True,False,False,True)
       fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.FindChunkType_ShouldReturnTheCorrectChunkType(NESB,True,True,True,False,False,True)
       resultStatus: 1
-      duration: 0.0004056
+      duration: 0.0003574
       messages: 
       output: 
       stacktrace: 
@@ -3028,7 +3045,7 @@ MonoBehaviour:
       name: FindChunkType_ShouldReturnTheCorrectChunkType(NESTB,True,True,True,False,True,True)
       fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.FindChunkType_ShouldReturnTheCorrectChunkType(NESTB,True,True,True,False,True,True)
       resultStatus: 1
-      duration: 0.0003946
+      duration: 0.0002976
       messages: 
       output: 
       stacktrace: 
@@ -3045,7 +3062,7 @@ MonoBehaviour:
       name: FindChunkType_ShouldReturnTheCorrectChunkType(NETB,True,True,False,False,True,True)
       fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.FindChunkType_ShouldReturnTheCorrectChunkType(NETB,True,True,False,False,True,True)
       resultStatus: 1
-      duration: 0.0003944
+      duration: 0.0002987
       messages: 
       output: 
       stacktrace: 
@@ -3062,7 +3079,7 @@ MonoBehaviour:
       name: FindChunkType_ShouldReturnTheCorrectChunkType(NS,True,False,True,False,False,False)
       fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.FindChunkType_ShouldReturnTheCorrectChunkType(NS,True,False,True,False,False,False)
       resultStatus: 1
-      duration: 0.0003677
+      duration: 0.0002768
       messages: 
       output: 
       stacktrace: 
@@ -3079,7 +3096,7 @@ MonoBehaviour:
       name: FindChunkType_ShouldReturnTheCorrectChunkType(NSW,True,False,True,True,False,False)
       fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.FindChunkType_ShouldReturnTheCorrectChunkType(NSW,True,False,True,True,False,False)
       resultStatus: 1
-      duration: 0.0003699
+      duration: 0.0003738
       messages: 
       output: 
       stacktrace: 
@@ -3096,7 +3113,7 @@ MonoBehaviour:
       name: FindChunkType_ShouldReturnTheCorrectChunkType(NST,True,False,True,False,True,False)
       fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.FindChunkType_ShouldReturnTheCorrectChunkType(NST,True,False,True,False,True,False)
       resultStatus: 1
-      duration: 0.0003919
+      duration: 0.0003798
       messages: 
       output: 
       stacktrace: 
@@ -3113,7 +3130,7 @@ MonoBehaviour:
       name: FindChunkType_ShouldReturnTheCorrectChunkType(NSB,True,False,True,False,False,True)
       fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.FindChunkType_ShouldReturnTheCorrectChunkType(NSB,True,False,True,False,False,True)
       resultStatus: 1
-      duration: 0.0003793
+      duration: 0.0002792
       messages: 
       output: 
       stacktrace: 
@@ -3130,7 +3147,7 @@ MonoBehaviour:
       name: FindChunkType_ShouldReturnTheCorrectChunkType(NSTB,True,False,True,False,True,True)
       fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.FindChunkType_ShouldReturnTheCorrectChunkType(NSTB,True,False,True,False,True,True)
       resultStatus: 1
-      duration: 0.0003817
+      duration: 0.0002883
       messages: 
       output: 
       stacktrace: 
@@ -3147,7 +3164,7 @@ MonoBehaviour:
       name: FindChunkType_ShouldReturnTheCorrectChunkType(NW,True,False,False,True,False,False)
       fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.FindChunkType_ShouldReturnTheCorrectChunkType(NW,True,False,False,True,False,False)
       resultStatus: 1
-      duration: 0.0003674
+      duration: 0.0003212
       messages: 
       output: 
       stacktrace: 
@@ -3164,7 +3181,7 @@ MonoBehaviour:
       name: FindChunkType_ShouldReturnTheCorrectChunkType(NWT,True,False,False,True,True,False)
       fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.FindChunkType_ShouldReturnTheCorrectChunkType(NWT,True,False,False,True,True,False)
       resultStatus: 1
-      duration: 0.0004016
+      duration: 0.0003198
       messages: 
       output: 
       stacktrace: 
@@ -3181,7 +3198,7 @@ MonoBehaviour:
       name: FindChunkType_ShouldReturnTheCorrectChunkType(NWB,True,False,False,True,False,True)
       fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.FindChunkType_ShouldReturnTheCorrectChunkType(NWB,True,False,False,True,False,True)
       resultStatus: 1
-      duration: 0.0003874
+      duration: 0.0002975
       messages: 
       output: 
       stacktrace: 
@@ -3198,7 +3215,7 @@ MonoBehaviour:
       name: FindChunkType_ShouldReturnTheCorrectChunkType(NWTB,True,False,False,True,True,True)
       fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.FindChunkType_ShouldReturnTheCorrectChunkType(NWTB,True,False,False,True,True,True)
       resultStatus: 1
-      duration: 0.000522
+      duration: 0.0002983
       messages: 
       output: 
       stacktrace: 
@@ -3215,7 +3232,7 @@ MonoBehaviour:
       name: FindChunkType_ShouldReturnTheCorrectChunkType(NT,True,False,False,False,True,False)
       fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.FindChunkType_ShouldReturnTheCorrectChunkType(NT,True,False,False,False,True,False)
       resultStatus: 1
-      duration: 0.0003988
+      duration: 0.0003513
       messages: 
       output: 
       stacktrace: 
@@ -3232,7 +3249,7 @@ MonoBehaviour:
       name: FindChunkType_ShouldReturnTheCorrectChunkType(NTB,True,False,False,False,True,True)
       fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.FindChunkType_ShouldReturnTheCorrectChunkType(NTB,True,False,False,False,True,True)
       resultStatus: 1
-      duration: 0.0004061
+      duration: 0.0002813
       messages: 
       output: 
       stacktrace: 
@@ -3249,7 +3266,7 @@ MonoBehaviour:
       name: FindChunkType_ShouldReturnTheCorrectChunkType(NB,True,False,False,False,False,True)
       fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.FindChunkType_ShouldReturnTheCorrectChunkType(NB,True,False,False,False,False,True)
       resultStatus: 1
-      duration: 0.0004038
+      duration: 0.0005272
       messages: 
       output: 
       stacktrace: 
@@ -3266,7 +3283,7 @@ MonoBehaviour:
       name: FindChunkType_ShouldReturnTheCorrectChunkType(E,False,True,False,False,False,False)
       fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.FindChunkType_ShouldReturnTheCorrectChunkType(E,False,True,False,False,False,False)
       resultStatus: 1
-      duration: 0.000389
+      duration: 0.000298
       messages: 
       output: 
       stacktrace: 
@@ -3283,7 +3300,7 @@ MonoBehaviour:
       name: FindChunkType_ShouldReturnTheCorrectChunkType(ES,False,True,True,False,False,False)
       fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.FindChunkType_ShouldReturnTheCorrectChunkType(ES,False,True,True,False,False,False)
       resultStatus: 1
-      duration: 0.0003482
+      duration: 0.0002732
       messages: 
       output: 
       stacktrace: 
@@ -3300,7 +3317,7 @@ MonoBehaviour:
       name: FindChunkType_ShouldReturnTheCorrectChunkType(ESW,False,True,True,True,False,False)
       fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.FindChunkType_ShouldReturnTheCorrectChunkType(ESW,False,True,True,True,False,False)
       resultStatus: 1
-      duration: 0.0005014
+      duration: 0.0002872
       messages: 
       output: 
       stacktrace: 
@@ -3317,7 +3334,7 @@ MonoBehaviour:
       name: FindChunkType_ShouldReturnTheCorrectChunkType(EST,False,True,True,False,True,False)
       fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.FindChunkType_ShouldReturnTheCorrectChunkType(EST,False,True,True,False,True,False)
       resultStatus: 1
-      duration: 0.0004135
+      duration: 0.0003257
       messages: 
       output: 
       stacktrace: 
@@ -3334,7 +3351,7 @@ MonoBehaviour:
       name: FindChunkType_ShouldReturnTheCorrectChunkType(ESB,False,True,True,False,False,True)
       fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.FindChunkType_ShouldReturnTheCorrectChunkType(ESB,False,True,True,False,False,True)
       resultStatus: 1
-      duration: 0.0004544
+      duration: 0.0002985
       messages: 
       output: 
       stacktrace: 
@@ -3351,7 +3368,7 @@ MonoBehaviour:
       name: FindChunkType_ShouldReturnTheCorrectChunkType(ESTB,False,True,True,False,True,True)
       fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.FindChunkType_ShouldReturnTheCorrectChunkType(ESTB,False,True,True,False,True,True)
       resultStatus: 1
-      duration: 0.0004516
+      duration: 0.0002971
       messages: 
       output: 
       stacktrace: 
@@ -3368,7 +3385,7 @@ MonoBehaviour:
       name: FindChunkType_ShouldReturnTheCorrectChunkType(EW,False,True,False,True,False,False)
       fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.FindChunkType_ShouldReturnTheCorrectChunkType(EW,False,True,False,True,False,False)
       resultStatus: 1
-      duration: 0.0003519
+      duration: 0.0002886
       messages: 
       output: 
       stacktrace: 
@@ -3385,7 +3402,7 @@ MonoBehaviour:
       name: FindChunkType_ShouldReturnTheCorrectChunkType(EWT,False,True,False,True,True,False)
       fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.FindChunkType_ShouldReturnTheCorrectChunkType(EWT,False,True,False,True,True,False)
       resultStatus: 1
-      duration: 0.0004637
+      duration: 0.0002803
       messages: 
       output: 
       stacktrace: 
@@ -3402,7 +3419,7 @@ MonoBehaviour:
       name: FindChunkType_ShouldReturnTheCorrectChunkType(EWTB,False,True,False,True,True,True)
       fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.FindChunkType_ShouldReturnTheCorrectChunkType(EWTB,False,True,False,True,True,True)
       resultStatus: 1
-      duration: 0.0004875
+      duration: 0.0002886
       messages: 
       output: 
       stacktrace: 
@@ -3419,7 +3436,7 @@ MonoBehaviour:
       name: FindChunkType_ShouldReturnTheCorrectChunkType(EWB,False,True,False,True,False,True)
       fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.FindChunkType_ShouldReturnTheCorrectChunkType(EWB,False,True,False,True,False,True)
       resultStatus: 1
-      duration: 0.0005351
+      duration: 0.0002884
       messages: 
       output: 
       stacktrace: 
@@ -3436,7 +3453,7 @@ MonoBehaviour:
       name: FindChunkType_ShouldReturnTheCorrectChunkType(ET,False,True,False,False,True,False)
       fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.FindChunkType_ShouldReturnTheCorrectChunkType(ET,False,True,False,False,True,False)
       resultStatus: 1
-      duration: 0.0003952
+      duration: 0.0002889
       messages: 
       output: 
       stacktrace: 
@@ -3453,7 +3470,7 @@ MonoBehaviour:
       name: FindChunkType_ShouldReturnTheCorrectChunkType(ETB,False,True,False,False,True,True)
       fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.FindChunkType_ShouldReturnTheCorrectChunkType(ETB,False,True,False,False,True,True)
       resultStatus: 1
-      duration: 0.0003855
+      duration: 0.0003264
       messages: 
       output: 
       stacktrace: 
@@ -3470,7 +3487,7 @@ MonoBehaviour:
       name: FindChunkType_ShouldReturnTheCorrectChunkType(EB,False,True,False,False,False,True)
       fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.FindChunkType_ShouldReturnTheCorrectChunkType(EB,False,True,False,False,False,True)
       resultStatus: 1
-      duration: 0.0003834
+      duration: 0.0002955
       messages: 
       output: 
       stacktrace: 
@@ -3487,7 +3504,7 @@ MonoBehaviour:
       name: FindChunkType_ShouldReturnTheCorrectChunkType(S,False,False,True,False,False,False)
       fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.FindChunkType_ShouldReturnTheCorrectChunkType(S,False,False,True,False,False,False)
       resultStatus: 1
-      duration: 0.0004924
+      duration: 0.000283
       messages: 
       output: 
       stacktrace: 
@@ -3504,7 +3521,7 @@ MonoBehaviour:
       name: FindChunkType_ShouldReturnTheCorrectChunkType(SW,False,False,True,True,False,False)
       fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.FindChunkType_ShouldReturnTheCorrectChunkType(SW,False,False,True,True,False,False)
       resultStatus: 1
-      duration: 0.0004063
+      duration: 0.0003039
       messages: 
       output: 
       stacktrace: 
@@ -3521,7 +3538,7 @@ MonoBehaviour:
       name: FindChunkType_ShouldReturnTheCorrectChunkType(SWT,False,False,True,True,True,False)
       fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.FindChunkType_ShouldReturnTheCorrectChunkType(SWT,False,False,True,True,True,False)
       resultStatus: 1
-      duration: 0.0004997
+      duration: 0.0002936
       messages: 
       output: 
       stacktrace: 
@@ -3538,7 +3555,7 @@ MonoBehaviour:
       name: FindChunkType_ShouldReturnTheCorrectChunkType(SWB,False,False,True,True,False,True)
       fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.FindChunkType_ShouldReturnTheCorrectChunkType(SWB,False,False,True,True,False,True)
       resultStatus: 1
-      duration: 0.0003884
+      duration: 0.0002958
       messages: 
       output: 
       stacktrace: 
@@ -3555,7 +3572,7 @@ MonoBehaviour:
       name: FindChunkType_ShouldReturnTheCorrectChunkType(SWTB,False,False,True,True,True,True)
       fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.FindChunkType_ShouldReturnTheCorrectChunkType(SWTB,False,False,True,True,True,True)
       resultStatus: 1
-      duration: 0.0004413
+      duration: 0.0002843
       messages: 
       output: 
       stacktrace: 
@@ -3572,7 +3589,7 @@ MonoBehaviour:
       name: FindChunkType_ShouldReturnTheCorrectChunkType(ST,False,False,True,False,True,False)
       fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.FindChunkType_ShouldReturnTheCorrectChunkType(ST,False,False,True,False,True,False)
       resultStatus: 1
-      duration: 0.0005276
+      duration: 0.0003122
       messages: 
       output: 
       stacktrace: 
@@ -3589,7 +3606,7 @@ MonoBehaviour:
       name: FindChunkType_ShouldReturnTheCorrectChunkType(STB,False,False,True,False,True,True)
       fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.FindChunkType_ShouldReturnTheCorrectChunkType(STB,False,False,True,False,True,True)
       resultStatus: 1
-      duration: 0.0004026
+      duration: 0.0002959
       messages: 
       output: 
       stacktrace: 
@@ -3606,7 +3623,7 @@ MonoBehaviour:
       name: FindChunkType_ShouldReturnTheCorrectChunkType(SB,False,False,True,False,False,True)
       fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.FindChunkType_ShouldReturnTheCorrectChunkType(SB,False,False,True,False,False,True)
       resultStatus: 1
-      duration: 0.0004596
+      duration: 0.0002883
       messages: 
       output: 
       stacktrace: 
@@ -3623,7 +3640,7 @@ MonoBehaviour:
       name: FindChunkType_ShouldReturnTheCorrectChunkType(W,False,False,False,True,False,False)
       fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.FindChunkType_ShouldReturnTheCorrectChunkType(W,False,False,False,True,False,False)
       resultStatus: 1
-      duration: 0.0005049
+      duration: 0.000287
       messages: 
       output: 
       stacktrace: 
@@ -3640,7 +3657,7 @@ MonoBehaviour:
       name: FindChunkType_ShouldReturnTheCorrectChunkType(WT,False,False,False,True,True,False)
       fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.FindChunkType_ShouldReturnTheCorrectChunkType(WT,False,False,False,True,True,False)
       resultStatus: 1
-      duration: 0.0004117
+      duration: 0.000335
       messages: 
       output: 
       stacktrace: 
@@ -3657,7 +3674,7 @@ MonoBehaviour:
       name: FindChunkType_ShouldReturnTheCorrectChunkType(WTB,False,False,False,True,True,True)
       fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.FindChunkType_ShouldReturnTheCorrectChunkType(WTB,False,False,False,True,True,True)
       resultStatus: 1
-      duration: 0.0004014
+      duration: 0.0003222
       messages: 
       output: 
       stacktrace: 
@@ -3674,7 +3691,7 @@ MonoBehaviour:
       name: FindChunkType_ShouldReturnTheCorrectChunkType(WB,False,False,False,True,False,True)
       fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.FindChunkType_ShouldReturnTheCorrectChunkType(WB,False,False,False,True,False,True)
       resultStatus: 1
-      duration: 0.0003958
+      duration: 0.0002788
       messages: 
       output: 
       stacktrace: 
@@ -3691,7 +3708,7 @@ MonoBehaviour:
       name: FindChunkType_ShouldReturnTheCorrectChunkType(T,False,False,False,False,True,False)
       fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.FindChunkType_ShouldReturnTheCorrectChunkType(T,False,False,False,False,True,False)
       resultStatus: 1
-      duration: 0.0004012
+      duration: 0.0002848
       messages: 
       output: 
       stacktrace: 
@@ -3708,7 +3725,7 @@ MonoBehaviour:
       name: FindChunkType_ShouldReturnTheCorrectChunkType(TB,False,False,False,False,True,True)
       fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.FindChunkType_ShouldReturnTheCorrectChunkType(TB,False,False,False,False,True,True)
       resultStatus: 1
-      duration: 0.0003619
+      duration: 0.0002749
       messages: 
       output: 
       stacktrace: 
@@ -3725,7 +3742,7 @@ MonoBehaviour:
       name: FindChunkType_ShouldReturnTheCorrectChunkType(B,False,False,False,False,False,True)
       fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.FindChunkType_ShouldReturnTheCorrectChunkType(B,False,False,False,False,False,True)
       resultStatus: 1
-      duration: 0.0005798
+      duration: 0.0002984
       messages: 
       output: 
       stacktrace: 
@@ -3742,7 +3759,7 @@ MonoBehaviour:
       name: Validate_FindChunkNeigbors
       fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkNeigbors
       resultStatus: 1
-      duration: 0.3048445
+      duration: 0.3548938
       messages: 
       output: 
       stacktrace: 
@@ -3758,7 +3775,7 @@ MonoBehaviour:
       name: Validate_FindChunkNeigbors(1,1)
       fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkNeigbors(1,1)
       resultStatus: 1
-      duration: 0.0014896
+      duration: 0.0014996
       messages: 
       output: 
       stacktrace: 
@@ -3775,7 +3792,7 @@ MonoBehaviour:
       name: Validate_FindChunkNeigbors(2,5)
       fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkNeigbors(2,5)
       resultStatus: 1
-      duration: 0.0008257
+      duration: 0.0008442
       messages: 
       output: 
       stacktrace: 
@@ -3792,7 +3809,7 @@ MonoBehaviour:
       name: Validate_FindChunkNeigbors(2,15)
       fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkNeigbors(2,15)
       resultStatus: 1
-      duration: 0.0008459
+      duration: 0.0008579
       messages: 
       output: 
       stacktrace: 
@@ -3809,7 +3826,7 @@ MonoBehaviour:
       name: Validate_FindChunkNeigbors(6,0.5f)
       fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkNeigbors(6,0.5f)
       resultStatus: 1
-      duration: 0.0151147
+      duration: 0.0138886
       messages: 
       output: 
       stacktrace: 
@@ -3826,7 +3843,7 @@ MonoBehaviour:
       name: Validate_FindChunkNeigbors(10,22.34f)
       fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_FindChunkNeigbors(10,22.34f)
       resultStatus: 1
-      duration: 0.0731958
+      duration: 0.0627325
       messages: 
       output: 
       stacktrace: 
@@ -3843,7 +3860,7 @@ MonoBehaviour:
       name: Validate_PlaceGameObjectsAtGridPositions
       fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_PlaceGameObjectsAtGridPositions
       resultStatus: 1
-      duration: 0.348941
+      duration: 0.3596193
       messages: 
       output: 
       stacktrace: 
@@ -3859,7 +3876,7 @@ MonoBehaviour:
       name: Validate_PlaceGameObjectsAtGridPositions(1,1)
       fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_PlaceGameObjectsAtGridPositions(1,1)
       resultStatus: 1
-      duration: 0.0010505
+      duration: 0.0008679
       messages: 
       output: 
       stacktrace: 
@@ -3876,7 +3893,7 @@ MonoBehaviour:
       name: Validate_PlaceGameObjectsAtGridPositions(2,5)
       fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_PlaceGameObjectsAtGridPositions(2,5)
       resultStatus: 1
-      duration: 0.0005505
+      duration: 0.0004294
       messages: 
       output: 
       stacktrace: 
@@ -3893,7 +3910,7 @@ MonoBehaviour:
       name: Validate_PlaceGameObjectsAtGridPositions(2,15)
       fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_PlaceGameObjectsAtGridPositions(2,15)
       resultStatus: 1
-      duration: 0.000886
+      duration: 0.0004441
       messages: 
       output: 
       stacktrace: 
@@ -3910,7 +3927,7 @@ MonoBehaviour:
       name: Validate_PlaceGameObjectsAtGridPositions(14,0.5f)
       fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_PlaceGameObjectsAtGridPositions(14,0.5f)
       resultStatus: 1
-      duration: 0.0511859
+      duration: 0.0514458
       messages: 
       output: 
       stacktrace: 
@@ -3927,7 +3944,7 @@ MonoBehaviour:
       name: Validate_PlaceGameObjectsAtGridPositions(16,22.34f)
       fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_PlaceGameObjectsAtGridPositions(16,22.34f)
       resultStatus: 1
-      duration: 0.0776399
+      duration: 0.0798247
       messages: 
       output: 
       stacktrace: 
@@ -3944,7 +3961,7 @@ MonoBehaviour:
       name: Validate_SquareGrid2DHorizontal
       fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_SquareGrid2DHorizontal
       resultStatus: 1
-      duration: 0.2098595
+      duration: 0.2375285
       messages: 
       output: 
       stacktrace: 
@@ -3960,7 +3977,7 @@ MonoBehaviour:
       name: Validate_SquareGrid2DHorizontal(1,1)
       fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_SquareGrid2DHorizontal(1,1)
       resultStatus: 1
-      duration: 0.0005695
+      duration: 0.0004877
       messages: 
       output: 
       stacktrace: 
@@ -3977,7 +3994,7 @@ MonoBehaviour:
       name: Validate_SquareGrid2DHorizontal(2,5)
       fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_SquareGrid2DHorizontal(2,5)
       resultStatus: 1
-      duration: 0.0003196
+      duration: 0.0002248
       messages: 
       output: 
       stacktrace: 
@@ -3994,7 +4011,7 @@ MonoBehaviour:
       name: Validate_SquareGrid2DHorizontal(2,15)
       fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_SquareGrid2DHorizontal(2,15)
       resultStatus: 1
-      duration: 0.0004268
+      duration: 0.0002449
       messages: 
       output: 
       stacktrace: 
@@ -4011,7 +4028,7 @@ MonoBehaviour:
       name: Validate_SquareGrid2DHorizontal(14,0.5f)
       fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_SquareGrid2DHorizontal(14,0.5f)
       resultStatus: 1
-      duration: 0.0003631
+      duration: 0.0002393
       messages: 
       output: 
       stacktrace: 
@@ -4028,7 +4045,7 @@ MonoBehaviour:
       name: Validate_SquareGrid2DHorizontal(16,22.34f)
       fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_SquareGrid2DHorizontal(16,22.34f)
       resultStatus: 1
-      duration: 0.0004509
+      duration: 0.0002394
       messages: 
       output: 
       stacktrace: 
@@ -4045,7 +4062,7 @@ MonoBehaviour:
       name: Validate_SquareGrid2DVertical
       fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_SquareGrid2DVertical
       resultStatus: 1
-      duration: 0.1881874
+      duration: 0.2470887
       messages: 
       output: 
       stacktrace: 
@@ -4061,7 +4078,7 @@ MonoBehaviour:
       name: Validate_SquareGrid2DVertical(1,1)
       fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_SquareGrid2DVertical(1,1)
       resultStatus: 1
-      duration: 0.0005661
+      duration: 0.0005356
       messages: 
       output: 
       stacktrace: 
@@ -4078,7 +4095,7 @@ MonoBehaviour:
       name: Validate_SquareGrid2DVertical(2,5)
       fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_SquareGrid2DVertical(2,5)
       resultStatus: 1
-      duration: 0.0003129
+      duration: 0.0002342
       messages: 
       output: 
       stacktrace: 
@@ -4095,7 +4112,7 @@ MonoBehaviour:
       name: Validate_SquareGrid2DVertical(2,15)
       fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_SquareGrid2DVertical(2,15)
       resultStatus: 1
-      duration: 0.0004505
+      duration: 0.0002341
       messages: 
       output: 
       stacktrace: 
@@ -4112,7 +4129,7 @@ MonoBehaviour:
       name: Validate_SquareGrid2DVertical(14,0.5f)
       fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_SquareGrid2DVertical(14,0.5f)
       resultStatus: 1
-      duration: 0.0003266
+      duration: 0.0002857
       messages: 
       output: 
       stacktrace: 
@@ -4129,7 +4146,7 @@ MonoBehaviour:
       name: Validate_SquareGrid2DVertical(16,22.34f)
       fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_SquareGrid2DVertical(16,22.34f)
       resultStatus: 1
-      duration: 0.0003246
+      duration: 0.0002358
       messages: 
       output: 
       stacktrace: 
@@ -4146,7 +4163,7 @@ MonoBehaviour:
       name: Validate_SquareGrid3D
       fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_SquareGrid3D
       resultStatus: 1
-      duration: 0.1876542
+      duration: 0.2398674
       messages: 
       output: 
       stacktrace: 
@@ -4162,7 +4179,7 @@ MonoBehaviour:
       name: Validate_SquareGrid3D(1,1)
       fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_SquareGrid3D(1,1)
       resultStatus: 1
-      duration: 0.0054825
+      duration: 0.0062505
       messages: 
       output: 
       stacktrace: 
@@ -4179,7 +4196,7 @@ MonoBehaviour:
       name: Validate_SquareGrid3D(2,5)
       fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_SquareGrid3D(2,5)
       resultStatus: 1
-      duration: 0.0003793
+      duration: 0.0002304
       messages: 
       output: 
       stacktrace: 
@@ -4196,7 +4213,7 @@ MonoBehaviour:
       name: Validate_SquareGrid3D(2,15)
       fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_SquareGrid3D(2,15)
       resultStatus: 1
-      duration: 0.0003358
+      duration: 0.0002331
       messages: 
       output: 
       stacktrace: 
@@ -4213,7 +4230,7 @@ MonoBehaviour:
       name: Validate_SquareGrid3D(14,0.5f)
       fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_SquareGrid3D(14,0.5f)
       resultStatus: 1
-      duration: 0.0004154
+      duration: 0.0003379
       messages: 
       output: 
       stacktrace: 
@@ -4230,7 +4247,7 @@ MonoBehaviour:
       name: Validate_SquareGrid3D(16,22.34f)
       fullName: Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_SquareGrid3D(16,22.34f)
       resultStatus: 1
-      duration: 0.0004342
+      duration: 0.0003427
       messages: 
       output: 
       stacktrace: 
@@ -4242,13 +4259,18 @@ MonoBehaviour:
       - Uncategorized
       parentId: 1019
       parentUniqueId: __Tests__.dll/Assets/SRC/ProceduralMapGeneration/Utilities/Tests/GridCreate_Tests/[__Tests__][Assets.SRC.ProceduralMapGeneration.Utilities.Tests.GridCreate_Tests.Validate_SquareGrid3D][suite]
-    m_ResultText: TestAssignChunkTypes_WithInvalidInput_ReturnsEmptyList (0,003s)
+    m_ResultText: 'DungeonCrawler (7,080s)
+
+      ---
+
+      One or more child tests
+      had errors'
     m_ResultStacktrace: 
     m_TestListState:
-      scrollPos: {x: 0, y: 178}
-      m_SelectedIDs: 19548287
-      m_LastClickedID: -2021501927
-      m_ExpandedIDs: 15285091d1848d9ddf1dbaae5fc2feb3845235b5398827b87a7a61bd5576f9e5ce2134fbbaf95efe5687b8fe09d63b0b0b64950cdfb8b40f96ac25134e5ea5155a94ed15a59567220ae4192976c50433ba5e4c3f1123fa4d4c02844f2bfeee4f41651f50ffffff7f
+      scrollPos: {x: 0, y: 0}
+      m_SelectedIDs: 5687b8fe
+      m_LastClickedID: -21461162
+      m_ExpandedIDs: c4c8ec8515285091cd64b092fb32029532591196d1848d9d2fb4c2a1df1dbaae5fc2feb3b36e13b4845235b51710b4b6398827b87a7a61bd08aac7be0a7594e35576f9e56cbe92f0aa3b73f6ce2134fb1f47f5fdbaf95efe5687b8fec8316c00a2c5ac0009d63b0b0b64950cdfb8b40f96ac2513b6a497154e5ea5155a94ed156a1bfd18a59567220ae419297a08bb2976c50433f5ecd636ba5e4c3fede227439a26754b1123fa4d4c02844f2bfeee4f41651f505cfc8075a1145479f85fb579ffffff7f
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -4294,9 +4316,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1047
+    x: -1056
     y: 699
-    width: 491
+    width: 674
     height: 292
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -4324,9 +4346,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1047
+    x: -1056
     y: 699
-    width: 491
+    width: 674
     height: 292
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -4354,7 +4376,7 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1540
+    x: -380
     y: 73
     width: 379
     height: 644
@@ -4397,7 +4419,7 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1540
+    x: -380
     y: 738
     width: 379
     height: 253

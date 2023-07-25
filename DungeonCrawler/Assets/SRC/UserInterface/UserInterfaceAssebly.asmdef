@@ -1,0 +1,16 @@
+{
+    "name": "UserInterfaceAssebly",
+    "rootNamespace": "",
+    "references": [
+        "GUID:c8b96face5b84184f970af0d8ce16ad5"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
