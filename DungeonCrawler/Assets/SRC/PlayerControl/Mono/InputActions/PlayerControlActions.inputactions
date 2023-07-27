@@ -7,7 +7,7 @@
             "actions": [
                 {
                     "name": "Movement",
-                    "type": "Value",
+                    "type": "PassThrough",
                     "id": "adbf6760-c303-4249-b2ef-d460371864d4",
                     "expectedControlType": "Vector2",
                     "processors": "",
@@ -16,9 +16,36 @@
                 },
                 {
                     "name": "Modifier",
-                    "type": "Button",
+                    "type": "PassThrough",
                     "id": "b5869501-8994-4365-9a89-33cc507fef63",
                     "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Jump",
+                    "type": "Button",
+                    "id": "ea9cc403-76ff-43c9-bad3-dd5dd4e3eff4",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "MouseControl_X",
+                    "type": "PassThrough",
+                    "id": "479db5b9-f641-481b-9134-b87e01bb6a5b",
+                    "expectedControlType": "Axis",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "MouseControl_Y",
+                    "type": "PassThrough",
+                    "id": "bc4d82c8-1871-4833-82cb-28ac4b957593",
+                    "expectedControlType": "Axis",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
@@ -88,6 +115,39 @@
                     "processors": "",
                     "groups": "",
                     "action": "Modifier",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c9dbd035-5913-464e-9730-ccbae8af6dde",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a08514b2-706b-4832-8bc6-9af7a0a5fa20",
+                    "path": "<Mouse>/delta/x",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MouseControl_X",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "9b63090a-46e9-4e6a-ba1d-cec1da5bdced",
+                    "path": "<Mouse>/delta/y",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MouseControl_Y",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

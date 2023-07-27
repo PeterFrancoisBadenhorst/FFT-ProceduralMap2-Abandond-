@@ -31,7 +31,7 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.PlayerControl.Mono
             ""actions"": [
                 {
                     ""name"": ""Movement"",
-                    ""type"": ""Value"",
+                    ""type"": ""PassThrough"",
                     ""id"": ""adbf6760-c303-4249-b2ef-d460371864d4"",
                     ""expectedControlType"": ""Vector2"",
                     ""processors"": """",
@@ -40,9 +40,36 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.PlayerControl.Mono
                 },
                 {
                     ""name"": ""Modifier"",
-                    ""type"": ""Button"",
+                    ""type"": ""PassThrough"",
                     ""id"": ""b5869501-8994-4365-9a89-33cc507fef63"",
                     ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Jump"",
+                    ""type"": ""Button"",
+                    ""id"": ""ea9cc403-76ff-43c9-bad3-dd5dd4e3eff4"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""MouseControl_X"",
+                    ""type"": ""PassThrough"",
+                    ""id"": ""479db5b9-f641-481b-9134-b87e01bb6a5b"",
+                    ""expectedControlType"": ""Axis"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""MouseControl_Y"",
+                    ""type"": ""PassThrough"",
+                    ""id"": ""bc4d82c8-1871-4833-82cb-28ac4b957593"",
+                    ""expectedControlType"": ""Axis"",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
@@ -114,6 +141,39 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.PlayerControl.Mono
                     ""action"": ""Modifier"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""c9dbd035-5913-464e-9730-ccbae8af6dde"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Jump"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a08514b2-706b-4832-8bc6-9af7a0a5fa20"",
+                    ""path"": ""<Mouse>/delta/x"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MouseControl_X"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""9b63090a-46e9-4e6a-ba1d-cec1da5bdced"",
+                    ""path"": ""<Mouse>/delta/y"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MouseControl_Y"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -124,6 +184,9 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.PlayerControl.Mono
             m_PlayerInput = asset.FindActionMap("PlayerInput", throwIfNotFound: true);
             m_PlayerInput_Movement = m_PlayerInput.FindAction("Movement", throwIfNotFound: true);
             m_PlayerInput_Modifier = m_PlayerInput.FindAction("Modifier", throwIfNotFound: true);
+            m_PlayerInput_Jump = m_PlayerInput.FindAction("Jump", throwIfNotFound: true);
+            m_PlayerInput_MouseControl_X = m_PlayerInput.FindAction("MouseControl_X", throwIfNotFound: true);
+            m_PlayerInput_MouseControl_Y = m_PlayerInput.FindAction("MouseControl_Y", throwIfNotFound: true);
         }
 
         public void Dispose()
@@ -187,12 +250,18 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.PlayerControl.Mono
         private List<IPlayerInputActions> m_PlayerInputActionsCallbackInterfaces = new List<IPlayerInputActions>();
         private readonly InputAction m_PlayerInput_Movement;
         private readonly InputAction m_PlayerInput_Modifier;
+        private readonly InputAction m_PlayerInput_Jump;
+        private readonly InputAction m_PlayerInput_MouseControl_X;
+        private readonly InputAction m_PlayerInput_MouseControl_Y;
         public struct PlayerInputActions
         {
             private @PlayerControlActions m_Wrapper;
             public PlayerInputActions(@PlayerControlActions wrapper) { m_Wrapper = wrapper; }
             public InputAction @Movement => m_Wrapper.m_PlayerInput_Movement;
             public InputAction @Modifier => m_Wrapper.m_PlayerInput_Modifier;
+            public InputAction @Jump => m_Wrapper.m_PlayerInput_Jump;
+            public InputAction @MouseControl_X => m_Wrapper.m_PlayerInput_MouseControl_X;
+            public InputAction @MouseControl_Y => m_Wrapper.m_PlayerInput_MouseControl_Y;
             public InputActionMap Get() { return m_Wrapper.m_PlayerInput; }
             public void Enable() { Get().Enable(); }
             public void Disable() { Get().Disable(); }
@@ -208,6 +277,15 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.PlayerControl.Mono
                 @Modifier.started += instance.OnModifier;
                 @Modifier.performed += instance.OnModifier;
                 @Modifier.canceled += instance.OnModifier;
+                @Jump.started += instance.OnJump;
+                @Jump.performed += instance.OnJump;
+                @Jump.canceled += instance.OnJump;
+                @MouseControl_X.started += instance.OnMouseControl_X;
+                @MouseControl_X.performed += instance.OnMouseControl_X;
+                @MouseControl_X.canceled += instance.OnMouseControl_X;
+                @MouseControl_Y.started += instance.OnMouseControl_Y;
+                @MouseControl_Y.performed += instance.OnMouseControl_Y;
+                @MouseControl_Y.canceled += instance.OnMouseControl_Y;
             }
 
             private void UnregisterCallbacks(IPlayerInputActions instance)
@@ -218,6 +296,15 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.PlayerControl.Mono
                 @Modifier.started -= instance.OnModifier;
                 @Modifier.performed -= instance.OnModifier;
                 @Modifier.canceled -= instance.OnModifier;
+                @Jump.started -= instance.OnJump;
+                @Jump.performed -= instance.OnJump;
+                @Jump.canceled -= instance.OnJump;
+                @MouseControl_X.started -= instance.OnMouseControl_X;
+                @MouseControl_X.performed -= instance.OnMouseControl_X;
+                @MouseControl_X.canceled -= instance.OnMouseControl_X;
+                @MouseControl_Y.started -= instance.OnMouseControl_Y;
+                @MouseControl_Y.performed -= instance.OnMouseControl_Y;
+                @MouseControl_Y.canceled -= instance.OnMouseControl_Y;
             }
 
             public void RemoveCallbacks(IPlayerInputActions instance)
@@ -239,6 +326,9 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.PlayerControl.Mono
         {
             void OnMovement(InputAction.CallbackContext context);
             void OnModifier(InputAction.CallbackContext context);
+            void OnJump(InputAction.CallbackContext context);
+            void OnMouseControl_X(InputAction.CallbackContext context);
+            void OnMouseControl_Y(InputAction.CallbackContext context);
         }
     }
 }
