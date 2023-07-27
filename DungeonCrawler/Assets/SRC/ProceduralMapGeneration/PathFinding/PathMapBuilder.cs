@@ -2,19 +2,23 @@
 using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.ScriptableObjects;
 using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Utilities;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using UnityEngine;
+using UnityEngine.TestTools;
 
 namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.PathFinding
 {
     public class PathMapBuilder
     {
-        private List<GameObject> gridRelations = new();
-
-        private readonly PopulateTilePositions _populateTilePositionsBehavior = new();
-        private readonly GridCreate _gridCreate = new();
-        private readonly ChunkHandler _chunkHandler = new();
-        private readonly NewPathFinding _newPathFinding = new();
+        [assembly: InternalsVisibleTo("__Tests__")]
+        List<GameObject> gridRelations = new();
+        [assembly: InternalsVisibleTo("__Tests__")]
+        readonly PopulateTilePositions _populateTilePositionsBehavior = new();
+         readonly GridCreate _gridCreate = new();
+         readonly ChunkHandler _chunkHandler = new();
+         readonly NewPathFinding _newPathFinding = new();
 
         public void CreateMap(int GridSize, float GridScale, Transform GridParent, DirectionalTilesScriptableObject scriptRef, int MapTotalFillPercentage, GridTypeEnum gridType)
         {
@@ -32,6 +36,7 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.
             gridRelations = _chunkHandler.FindChunkNeigbors(GridScale, gridRelations);
             gridRelations = _chunkHandler.AssignChunkTypes(gridRelations);
             _populateTilePositionsBehavior.SetChildTile(scriptRef, gridRelations);
+
         }
 
         public List<Vector3> MapTotal(Vector3[] mapGrid)
