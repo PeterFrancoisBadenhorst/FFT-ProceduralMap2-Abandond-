@@ -37,6 +37,15 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.PlayerControl.Mono
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Modifier"",
+                    ""type"": ""Button"",
+                    ""id"": ""b5869501-8994-4365-9a89-33cc507fef63"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -94,6 +103,17 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.PlayerControl.Mono
                     ""action"": ""Movement"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""e12604f5-19c8-4ee8-9ab9-e5db1dd3438f"",
+                    ""path"": ""<Keyboard>/shift"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Modifier"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -103,6 +123,7 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.PlayerControl.Mono
             // PlayerInput
             m_PlayerInput = asset.FindActionMap("PlayerInput", throwIfNotFound: true);
             m_PlayerInput_Movement = m_PlayerInput.FindAction("Movement", throwIfNotFound: true);
+            m_PlayerInput_Modifier = m_PlayerInput.FindAction("Modifier", throwIfNotFound: true);
         }
 
         public void Dispose()
@@ -165,11 +186,13 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.PlayerControl.Mono
         private readonly InputActionMap m_PlayerInput;
         private List<IPlayerInputActions> m_PlayerInputActionsCallbackInterfaces = new List<IPlayerInputActions>();
         private readonly InputAction m_PlayerInput_Movement;
+        private readonly InputAction m_PlayerInput_Modifier;
         public struct PlayerInputActions
         {
             private @PlayerControlActions m_Wrapper;
             public PlayerInputActions(@PlayerControlActions wrapper) { m_Wrapper = wrapper; }
             public InputAction @Movement => m_Wrapper.m_PlayerInput_Movement;
+            public InputAction @Modifier => m_Wrapper.m_PlayerInput_Modifier;
             public InputActionMap Get() { return m_Wrapper.m_PlayerInput; }
             public void Enable() { Get().Enable(); }
             public void Disable() { Get().Disable(); }
@@ -182,6 +205,9 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.PlayerControl.Mono
                 @Movement.started += instance.OnMovement;
                 @Movement.performed += instance.OnMovement;
                 @Movement.canceled += instance.OnMovement;
+                @Modifier.started += instance.OnModifier;
+                @Modifier.performed += instance.OnModifier;
+                @Modifier.canceled += instance.OnModifier;
             }
 
             private void UnregisterCallbacks(IPlayerInputActions instance)
@@ -189,6 +215,9 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.PlayerControl.Mono
                 @Movement.started -= instance.OnMovement;
                 @Movement.performed -= instance.OnMovement;
                 @Movement.canceled -= instance.OnMovement;
+                @Modifier.started -= instance.OnModifier;
+                @Modifier.performed -= instance.OnModifier;
+                @Modifier.canceled -= instance.OnModifier;
             }
 
             public void RemoveCallbacks(IPlayerInputActions instance)
@@ -209,6 +238,7 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.PlayerControl.Mono
         public interface IPlayerInputActions
         {
             void OnMovement(InputAction.CallbackContext context);
+            void OnModifier(InputAction.CallbackContext context);
         }
     }
 }
