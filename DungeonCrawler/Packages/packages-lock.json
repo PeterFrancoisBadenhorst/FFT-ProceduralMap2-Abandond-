@@ -1,10 +1,18 @@
 {
   "dependencies": {
     "com.boundfoxstudios.fluentassertions": {
-      "version": "file:C:/git/Unity.DungeonCrawler/CustomPackages/fluentassertions-unity/FluentAssertions/Packages/com.boundfoxstudios.fluentassertions",
+      "version": "file:../CustomPackages/fluentassertions-unity/FluentAssertions/Packages/com.boundfoxstudios.fluentassertions",
       "depth": 0,
       "source": "local",
       "dependencies": {}
+    },
+    "com.noesis.noesisgui": {
+      "version": "file:../CustomPackages/NoesisGUI-Unity-3.2.1-Indie",
+      "depth": 0,
+      "source": "local",
+      "dependencies": {
+        "com.unity.inputsystem": "1.1.1"
+      }
     },
     "com.unity.burst": {
       "version": "1.8.4",
