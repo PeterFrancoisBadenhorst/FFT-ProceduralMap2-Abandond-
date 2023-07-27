@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "dgSpecHash": "P4o/cWQqloWL2SOCooeKY3X6+CliDS4kCPQy2AmVm6UAK68PDAyyt9aM8a/xBNpOGZmynmk6R9uhYowAeLb5Iw==",
+  "success": true,
+  "projectFilePath": "C:\\git\\Unity.DungeonCrawler\\DungeonCrawler\\DungeonCrawler-blend.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\peter\\.nuget\\packages\\microsoft.xaml.behaviors.wpf\\1.1.37\\microsoft.xaml.behaviors.wpf.1.1.37.nupkg.sha512",
+    "C:\\Users\\peter\\.nuget\\packages\\noesis.gui\\3.2.1\\noesis.gui.3.2.1.nupkg.sha512",
+    "C:\\Users\\peter\\.nuget\\packages\\noesis.gui.extensions\\3.0.20\\noesis.gui.extensions.3.0.20.nupkg.sha512",
+    "C:\\Users\\peter\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",
+    "C:\\Users\\peter\\.nuget\\packages\\system.memory\\4.5.5\\system.memory.4.5.5.nupkg.sha512",
+    "C:\\Users\\peter\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\peter\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.3\\system.runtime.compilerservices.unsafe.4.5.3.nupkg.sha512"
+  ],
+  "logs": []
+}

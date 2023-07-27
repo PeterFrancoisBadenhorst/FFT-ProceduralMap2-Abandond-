@@ -28,7 +28,7 @@
               <Name>System.Boolean Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Structs.DirectionIDStruct::get_NothID()</Name>
               <FileRef uid="4" />
               <SequencePoints>
-                <SequencePoint vc="1" uspid="54837" ordinal="0" offset="0" sl="5" sc="30" el="5" ec="30" bec="0" bev="0" fileid="4">
+                <SequencePoint vc="1" uspid="2862" ordinal="0" offset="0" sl="5" sc="30" el="5" ec="30" bec="0" bev="0" fileid="4">
                   <TrackedMethodRefs>
                     <TrackedMethodRef uid="0" vc="1" />
                   </TrackedMethodRefs>
@@ -42,7 +42,7 @@
               <Name>System.Boolean Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Structs.DirectionIDStruct::get_EastID()</Name>
               <FileRef uid="4" />
               <SequencePoints>
-                <SequencePoint vc="1" uspid="54839" ordinal="0" offset="0" sl="6" sc="30" el="6" ec="30" bec="0" bev="0" fileid="4">
+                <SequencePoint vc="1" uspid="2864" ordinal="0" offset="0" sl="6" sc="30" el="6" ec="30" bec="0" bev="0" fileid="4">
                   <TrackedMethodRefs>
                     <TrackedMethodRef uid="0" vc="1" />
                   </TrackedMethodRefs>
@@ -56,7 +56,7 @@
               <Name>System.Boolean Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Structs.DirectionIDStruct::get_WestID()</Name>
               <FileRef uid="4" />
               <SequencePoints>
-                <SequencePoint vc="1" uspid="54841" ordinal="0" offset="0" sl="7" sc="30" el="7" ec="30" bec="0" bev="0" fileid="4">
+                <SequencePoint vc="1" uspid="2866" ordinal="0" offset="0" sl="7" sc="30" el="7" ec="30" bec="0" bev="0" fileid="4">
                   <TrackedMethodRefs>
                     <TrackedMethodRef uid="0" vc="1" />
                   </TrackedMethodRefs>
@@ -70,7 +70,7 @@
               <Name>System.Boolean Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Structs.DirectionIDStruct::get_SouthID()</Name>
               <FileRef uid="4" />
               <SequencePoints>
-                <SequencePoint vc="1" uspid="54843" ordinal="0" offset="0" sl="8" sc="31" el="8" ec="31" bec="0" bev="0" fileid="4">
+                <SequencePoint vc="1" uspid="2868" ordinal="0" offset="0" sl="8" sc="31" el="8" ec="31" bec="0" bev="0" fileid="4">
                   <TrackedMethodRefs>
                     <TrackedMethodRef uid="0" vc="1" />
                   </TrackedMethodRefs>
@@ -84,7 +84,7 @@
               <Name>System.Boolean Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Structs.DirectionIDStruct::get_TopID()</Name>
               <FileRef uid="4" />
               <SequencePoints>
-                <SequencePoint vc="1" uspid="54845" ordinal="0" offset="0" sl="9" sc="29" el="9" ec="29" bec="0" bev="0" fileid="4">
+                <SequencePoint vc="1" uspid="2870" ordinal="0" offset="0" sl="9" sc="29" el="9" ec="29" bec="0" bev="0" fileid="4">
                   <TrackedMethodRefs>
                     <TrackedMethodRef uid="0" vc="1" />
                   </TrackedMethodRefs>
@@ -98,7 +98,7 @@
               <Name>System.Boolean Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Structs.DirectionIDStruct::get_BottomID()</Name>
               <FileRef uid="4" />
               <SequencePoints>
-                <SequencePoint vc="1" uspid="54847" ordinal="0" offset="0" sl="10" sc="32" el="10" ec="32" bec="0" bev="0" fileid="4">
+                <SequencePoint vc="1" uspid="2872" ordinal="0" offset="0" sl="10" sc="32" el="10" ec="32" bec="0" bev="0" fileid="4">
                   <TrackedMethodRefs>
                     <TrackedMethodRef uid="0" vc="1" />
                   </TrackedMethodRefs>
