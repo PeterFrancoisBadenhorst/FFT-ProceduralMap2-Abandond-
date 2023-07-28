@@ -3,33 +3,37 @@ using UnityEngine;
 
 namespace Assets.SRC.PlayerControl.Controllers
 {
+    [RequireComponent(typeof(CharacterController))]
     public class MovementController : MonoBehaviour
     {
 
-        [SerializeField] CharacterController controller;
-        [SerializeField] float speed = 11f;
-        Vector2 horizontalInput;
+        public float speed = 11f;
+        public float gravity = -30f; // -9.81
+        public LayerMask groundMask;
+        public float jumpHeight = 3.5f;
 
-        [SerializeField] float jumpHeight = 3.5f;
-        bool jump;
 
-        [SerializeField] float gravity = -30f; // -9.81
-        Vector3 verticalVelocity = Vector3.zero;
-        [SerializeField] LayerMask groundMask;
-        bool isGrounded;
+        private bool isGrounded;
+        private bool jump;
+        private Vector2 horizontalInput;
+        private CharacterController controller;
+        private Vector3 verticalVelocity = Vector3.zero;
+
+        private void Awake()
+        {
+            controller = GetComponent<CharacterController>();
+        }
 
         private void Update()
         {
             isGrounded = Physics.CheckSphere(transform.position, 0.1f, groundMask);
-            if (isGrounded)
+            if (!GroundCheck(transform, groundMask))
             {
-                verticalVelocity.y = 0;
+                verticalVelocity.y += gravity * Time.deltaTime;
+                controller.Move(verticalVelocity * Time.deltaTime);
+                return;
             }
-
-            Vector3 horizontalVelocity = (transform.right * horizontalInput.x + transform.forward * horizontalInput.y) * speed;
-            controller.Move(horizontalVelocity * Time.deltaTime);
-
-            // Jump: v = sqrt(-2 * jumpHeight * gravity)
+            if (GroundCheck(transform, groundMask)) verticalVelocity.y = 0;
             if (jump)
             {
                 if (isGrounded)
@@ -38,6 +42,10 @@ namespace Assets.SRC.PlayerControl.Controllers
                 }
                 jump = false;
             }
+
+
+            Vector3 horizontalVelocity = (transform.right * horizontalInput.x + transform.forward * horizontalInput.y) * speed;
+            controller.Move(horizontalVelocity * Time.deltaTime);
 
             verticalVelocity.y += gravity * Time.deltaTime;
             controller.Move(verticalVelocity * Time.deltaTime);
@@ -52,5 +60,7 @@ namespace Assets.SRC.PlayerControl.Controllers
         {
             jump = true;
         }
+        private bool GroundCheck(Transform transform, LayerMask mask) => Physics.CheckSphere(transform.position, 0.1f, mask);
+
     }
 }

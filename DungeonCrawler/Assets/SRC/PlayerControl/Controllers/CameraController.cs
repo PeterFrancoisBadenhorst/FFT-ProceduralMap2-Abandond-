@@ -5,20 +5,25 @@ namespace Assets.SRC.PlayerControl.Controllers
 {
     public class CameraController : MonoBehaviour
     {
-        [SerializeField] float sensitivityX = 8f;
-        [SerializeField] float sensitivityY = 0.5f;
-        float mouseX, mouseY;
+        public float sensitivityX = 8f;
+        public float sensitivityY = 0.5f;
+        public float mouseX, mouseY;
+        public Transform playerCamera;
 
-        [SerializeField] Transform playerCamera;
-        [SerializeField] float xClamp = 85f;
-        float xRotation = 0f;
+        private float xClamp = 85f;
+        private float xRotation = 0f;
 
-        private void Start()
+
+        private void OnEnable()
         {
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
         }
-
+        private void OnDisable()
+        {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = false;
+        }
         private void Update()
         {
             transform.Rotate(Vector3.up, mouseX * Time.deltaTime);

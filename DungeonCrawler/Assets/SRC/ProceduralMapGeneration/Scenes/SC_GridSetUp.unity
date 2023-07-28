@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.002001546, g: 0.0020668725, b: 0.0025974656, a: 1}
+  m_IndirectSpecularColor: {r: 0.0020015459, g: 0.0020668723, b: 0.002597462, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -815,7 +815,7 @@ MonoBehaviour:
   GridSize: 16
   GridScale: 30
   GridType: 0
-  MapTotalFillPercentage: 75
+  MapTotalFillPercentage: 25
   scriptRef: {fileID: 11400000, guid: 06745c89816422442a2913d5f404ad83, type: 2}
 --- !u!4 &1649667191
 Transform:
