@@ -12,16 +12,15 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.
         public int GridSize;
         public float GridScale;
         public GridTypeEnum GridType;
+        public GameObject PlayerPrefab;
 
         [Range(10, 75)]
         public int MapTotalFillPercentage;
 
         public DirectionalTilesScriptableObject scriptRef;
-        private readonly ClearChildren _clearChildren;
         private readonly PathMapBuilder _pathMapBuilder = new();
 
         private void OnEnable() => _pathMapBuilder.CreateMap(GridSize, GridScale, GridParent.transform, scriptRef, MapTotalFillPercentage, GridType);
 
-       // private void OnDisable() => _clearChildren.DeleteAllChildren(GridParent);
     }
 }
