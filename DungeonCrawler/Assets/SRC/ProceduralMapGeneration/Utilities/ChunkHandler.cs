@@ -1,4 +1,5 @@
-﻿using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Enums;
+﻿using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Global;
+using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Enums;
 using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Mono.Behaviors;
 using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Structs;
 using Assets.SRC.ProceduralMapGeneration.Assets.SRC.Shared.Assets.SRC.Shared.Utilities;
@@ -43,7 +44,7 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.
          *
          * @return The list of GameObjects.
          */
-        public List<GameObject> FindChunkNeigbors(float scale, List<GameObject> grid)
+        public List<GameObject> FindChunkNeigbors()
         {
             // Create a dictionary to store the positions and GameObjects.
             // This dictionary will be used to quickly look up the neighbors of a GameObject.
@@ -52,24 +53,24 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.
 
             // Iterate through the grid and add the positions and GameObjects to the dictionary.
             // This will create a mapping from a GameObject's position to the GameObject itself.
-            for (int i = 0; i < grid.Count; i++)
+            for (int i = 0; i < GlobalVariables.CreationModel.GridRelations.Count; i++)
             {
-                positions.Add(grid[i].transform.position, grid[i]);
+                positions.Add(GlobalVariables.CreationModel.GridRelations[i].transform.position, GlobalVariables.CreationModel.GridRelations[i]);
             }
 
             // Iterate through the grid again.
             // For each GameObject, find its neighbors and set the neighbors on the GameObject.
-            for (int i = 0; i < grid.Count; i++)
+            for (int i = 0; i < GlobalVariables.CreationModel.GridRelations.Count; i++)
             {
                 // If the current GameObject is active.
-                if (grid[i].activeSelf)
+                if (GlobalVariables.CreationModel.GridRelations[i].activeSelf)
                 {
                     // Find the neighbors of the current GameObject.
-                    var comparedValues = _genericUtilities.NeighborsPosition(scale, grid[i].transform.position);
+                    var comparedValues = _genericUtilities.NeighborsPosition(GlobalVariables.CreationModel.GridScale, GlobalVariables.CreationModel.GridRelations[i].transform.position);
                     // Create a ChunkBehavior component for the current GameObject if it doesn't have one already.
-                    ChunkBehavior comparedChunk = grid[i].AddComponent<ChunkBehavior>();
+                    ChunkBehavior comparedChunk = GlobalVariables.CreationModel.GridRelations[i].AddComponent<ChunkBehavior>();
                     // Set the neighbor struct of the ChunkBehavior component.
-                    comparedChunk.neighborStruct.OriginObject = grid[i];
+                    comparedChunk.neighborStruct.OriginObject = GlobalVariables.CreationModel.GridRelations[i];
 
                     if (positions.TryGetValue(comparedValues[0], out GameObject northNeighbor))
                     {
@@ -102,10 +103,10 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.
                         comparedChunk.neighborStruct.BottomNeighbor = bottomNeighbor;
                     }
                     // Set the neighbor struct of the current GameObject.
-                    grid[i].GetComponent<ChunkBehavior>().neighborStruct = comparedChunk.neighborStruct;
+                    GlobalVariables.CreationModel.GridRelations[i].GetComponent<ChunkBehavior>().neighborStruct = comparedChunk.neighborStruct;
                 }
             }
-            return grid;
+            return GlobalVariables.CreationModel.GridRelations;
         }
         /**
           * Finds the neighbors of each GameObject in the grid.
