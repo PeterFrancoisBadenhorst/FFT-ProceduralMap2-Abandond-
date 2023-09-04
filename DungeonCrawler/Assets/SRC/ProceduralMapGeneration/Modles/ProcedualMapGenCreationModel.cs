@@ -24,7 +24,12 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.
         public Vector3[] Grid;
         public Vector3[] MapGrid;
         public List<Vector3> MapTotal;
-        public List<GameObject> GridRelations = new();
+        public List<Vector3> WorkingMapPath;
+        public List<Vector3> CreatedGridTransforms;
+        public List<GameObject> GridRelations;
+        public List<GameObject> GridGa;
+        public Vector3[] WorkingEnds;
+        public List<NewNodeModel> Nodes = new();
 
         public readonly PopulateTilePositions _populateTilePositionsBehavior = new();
         public readonly GridCreate _gridCreate = new();
