@@ -17,7 +17,7 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.
          *
          * @return The list of parent objects.
          */
-        public List<GameObject> SetChildTile(ProcedualMapGenCreationModel CreationModel)
+        public List<GameObject> SetChildTile()
         {
             // Get the list of child tiles from the directional tiles scriptable object.
             var RoomCount = GlobalVariables.CreationModel.Rooms.RetunObjectsAsAList();
