@@ -1,3 +1,4 @@
+using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Global;
 using Assets.SRC.ProceduralMapGeneration.Assets.SRC.Shared.Assets.SRC.Shared.Utilities;
 using System;
 using System.Collections.Generic;
@@ -145,13 +146,16 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.
          *
          * @return The grid points.
          */
-        public Vector3[] NodeGridCreator(Vector3[] grid, float scale)
+        public Vector3[] NodeGridCreator()
         {
             // Find the start and end points of the grid.
-            var ends = FindEnds(grid);   //[0] start [1]end
+            GlobalVariables.CreationModel.WorkingEnds = FindEnds();   //[0] start [1]end
 
             // Return the path between the start and end points.
-            return ReturnPath(grid, scale, ends);
+            return ReturnPath(
+                GlobalVariables.CreationModel.Grid,
+                GlobalVariables.CreationModel.GridScale,
+                GlobalVariables.CreationModel.WorkingEnds);
         }
         /**
         * Creates a list of nodes in a grid, where each node represents the distance to the end point.
@@ -197,20 +201,21 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.
         */
         public Vector3[] ReturnPath(Vector3[] grid, float scale, Vector3[] ends)
         {
+
             // Create an empty list of nodes.
-            List<NewNodeModel> nodes = new();
+            GlobalVariables.CreationModel.Nodes = new();
 
             // Create a list of nodes in the grid.
-            nodes = CreateNodes(grid, ends[1]);
+            GlobalVariables.CreationModel.Nodes = CreateNodes(grid, ends[1]);
 
             // Set the neighbors of each node.
-            nodes = SetNodeNeighbors(nodes, scale);
+            GlobalVariables.CreationModel.Nodes = SetNodeNeighbors(GlobalVariables.CreationModel.Nodes, scale);
 
             // Find the path between the start and end points.
-            List<Vector3> path = Findpath(nodes, ends);
+            GlobalVariables.CreationModel.WorkingMapPath = Findpath(GlobalVariables.CreationModel.Nodes, GlobalVariables.CreationModel.WorkingEnds);
 
             // Return the path.
-            return path.ToArray();
+            return GlobalVariables.CreationModel.WorkingMapPath.ToArray();
         }
         /**
         * Finds the path between the start and end points of a grid using the A* algorithm.
@@ -341,24 +346,24 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.
         *
         * @return An array of two Vector3 objects that represent the start and end points.
         */
-        public Vector3[] FindEnds(Vector3[] grid)
+        public Vector3[] FindEnds()
         {
             // Create a local variable called pos and initialize it to a new array of Vector3 objects with two elements.
-            Vector3[] pos = new Vector3[]
+            GlobalVariables.CreationModel.WorkingEnds = new Vector3[]
             {
-        (grid[random.Next(0, grid.Length)]),
-        (grid[random.Next(0, grid.Length)])
+                (GlobalVariables.CreationModel.Grid[random.Next(0, GlobalVariables.CreationModel.Grid.Length)]),
+                (GlobalVariables.CreationModel.Grid[random.Next(0, GlobalVariables.CreationModel.Grid.Length)])
             };
 
             // Enter a do-while loop.
             do
             {
                 // Generate two random numbers between 0 and the length of the grid array.
-                pos[0] = grid[random.Next(0, grid.Length)];
-                pos[1] = grid[random.Next(0, grid.Length)];
+                GlobalVariables.CreationModel.WorkingEnds[0] = GlobalVariables.CreationModel.Grid[random.Next(0, GlobalVariables.CreationModel.Grid.Length)];
+                GlobalVariables.CreationModel.WorkingEnds[1] = GlobalVariables.CreationModel.Grid[random.Next(0, GlobalVariables.CreationModel.Grid.Length)];
 
                 // Check if the first and second elements of the pos array are equal.
-                if (pos[0] == pos[1])
+                if (GlobalVariables.CreationModel.WorkingEnds[0] == GlobalVariables.CreationModel.WorkingEnds[1])
                 {
                     // Go back to the beginning of the loop.
                     continue;
@@ -369,7 +374,7 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.
             } while (true);
 
             // Return the pos array.
-            return pos;
+            return GlobalVariables.CreationModel.WorkingEnds;
         }
     }
 }
