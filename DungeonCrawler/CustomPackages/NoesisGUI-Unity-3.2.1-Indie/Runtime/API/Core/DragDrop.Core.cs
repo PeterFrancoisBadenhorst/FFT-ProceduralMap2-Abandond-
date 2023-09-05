@@ -29,40 +29,48 @@ namespace Noesis
     public struct DataObject : IDataObject
     {
         public DataObject(object data) { _data = data; }
-        public DataObject(Type type, object data) : this(data) {  }
+        public DataObject(Type type, object data) : this(data) { }
 
-        public static RoutedEvent CopyingEvent {
-          get {
-            IntPtr cPtr = DataObject_CopyingEvent_get();
-            return (RoutedEvent)Noesis.Extend.GetProxy(cPtr, false);
-          }
+        public static RoutedEvent CopyingEvent
+        {
+            get
+            {
+                IntPtr cPtr = DataObject_CopyingEvent_get();
+                return (RoutedEvent)Noesis.Extend.GetProxy(cPtr, false);
+            }
         }
 
-        public static RoutedEvent PastingEvent {
-          get {
-            IntPtr cPtr = DataObject_PastingEvent_get();
-            return (RoutedEvent)Noesis.Extend.GetProxy(cPtr, false);
-          }
+        public static RoutedEvent PastingEvent
+        {
+            get
+            {
+                IntPtr cPtr = DataObject_PastingEvent_get();
+                return (RoutedEvent)Noesis.Extend.GetProxy(cPtr, false);
+            }
         }
 
         /// <summary>Adds a DataObject.Copying event handler to a specified element.</summary>
-        public static void AddCopyingHandler(DependencyObject d, DataObjectCopyingEventHandler handler) {
-          ((UIElement)d).AddHandler(CopyingEvent, handler);
+        public static void AddCopyingHandler(DependencyObject d, DataObjectCopyingEventHandler handler)
+        {
+            ((UIElement)d).AddHandler(CopyingEvent, handler);
         }
 
         /// <summary>Adds a DataObject.Pasting event handler to a specified element.</summary>
-        public static void AddPastingHandler(DependencyObject d, DataObjectPastingEventHandler handler) {
-          ((UIElement)d).AddHandler(PastingEvent, handler);
+        public static void AddPastingHandler(DependencyObject d, DataObjectPastingEventHandler handler)
+        {
+            ((UIElement)d).AddHandler(PastingEvent, handler);
         }
 
         /// <summary>Removes a DataObject.Copying event handler from a specified element.</summary>
-        public static void RemoveCopyingHandler(DependencyObject d, DataObjectCopyingEventHandler handler) {
-          ((UIElement)d).RemoveHandler(CopyingEvent, handler);
+        public static void RemoveCopyingHandler(DependencyObject d, DataObjectCopyingEventHandler handler)
+        {
+            ((UIElement)d).RemoveHandler(CopyingEvent, handler);
         }
 
         /// <summary>Removes a DataObject.Pasting event handler from a specified element.</summary>
-        public static void RemovePastingHandler(DependencyObject d, DataObjectPastingEventHandler handler) {
-          ((UIElement)d).RemoveHandler(PastingEvent, handler);
+        public static void RemovePastingHandler(DependencyObject d, DataObjectPastingEventHandler handler)
+        {
+            ((UIElement)d).RemoveHandler(PastingEvent, handler);
         }
 
         #region IDataObject

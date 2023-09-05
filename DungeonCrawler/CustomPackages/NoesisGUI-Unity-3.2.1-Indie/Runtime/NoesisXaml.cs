@@ -1,8 +1,7 @@
-using UnityEngine;
 using System.IO;
-using System;
+using UnityEngine;
 
-public class NoesisXaml: ScriptableObject
+public class NoesisXaml : ScriptableObject
 {
     void OnDisable()
     {
@@ -43,7 +42,7 @@ public class NoesisXaml: ScriptableObject
             // Self-register, we need this for hot-reloading
             NoesisXamlProvider.instance.Register(uri, this);
         }
-    
+
         if (xamls != null)
         {
             foreach (var xaml in xamls)

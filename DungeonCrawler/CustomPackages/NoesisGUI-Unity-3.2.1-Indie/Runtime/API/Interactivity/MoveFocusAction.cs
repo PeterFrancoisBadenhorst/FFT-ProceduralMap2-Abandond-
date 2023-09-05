@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace NoesisGUIExtensions
+﻿namespace NoesisGUIExtensions
 {
     public enum FocusDirection
     {

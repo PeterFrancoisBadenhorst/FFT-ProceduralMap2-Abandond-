@@ -297,7 +297,7 @@ namespace NoesisApp
 
                 FrameworkElement target = AssociatedObject;
                 Size renderSize = target.RenderSize;
-                Point center = new Point(renderSize.Width* 0.5f, renderSize.Height * 0.5f);
+                Point center = new Point(renderSize.Width * 0.5f, renderSize.Height * 0.5f);
                 Point point = e.GetPosition(target);
                 Point pointScaled = center + (point - center) * scale;
 

@@ -15,7 +15,7 @@ namespace Noesis
 
         ////////////////////////////////////////////////////////////////////////////////////////////////
         [DllImport(Library.Name)]
-        private static extern IntPtr Noesis_RegisterEnumType([MarshalAs(UnmanagedType.LPStr)]string typeName,
+        private static extern IntPtr Noesis_RegisterEnumType([MarshalAs(UnmanagedType.LPStr)] string typeName,
             int numEnums, IntPtr enumsData);
 
         ////////////////////////////////////////////////////////////////////////////////////////////////
@@ -30,7 +30,7 @@ namespace Noesis
         ////////////////////////////////////////////////////////////////////////////////////////////////
         [DllImport(Library.Name)]
         private static extern void Noesis_LaunchPropertyChangedEvent(IntPtr nativeType, IntPtr cPtr,
-            [MarshalAs(UnmanagedType.LPStr)]string propertyName);
+            [MarshalAs(UnmanagedType.LPStr)] string propertyName);
 
         ////////////////////////////////////////////////////////////////////////////////////////////////
         [DllImport(Library.Name)]

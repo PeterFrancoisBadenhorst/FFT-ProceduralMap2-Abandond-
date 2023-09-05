@@ -1,7 +1,7 @@
 internal class NoesisKeyCodes
 {
     private static System.Collections.Generic.Dictionary<UnityEngine.KeyCode, Noesis.Key> _unityToNoesis;
-    
+
     static NoesisKeyCodes()
     {
         _unityToNoesis = new System.Collections.Generic.Dictionary<UnityEngine.KeyCode, Noesis.Key>();

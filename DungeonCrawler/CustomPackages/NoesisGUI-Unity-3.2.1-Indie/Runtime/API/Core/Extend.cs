@@ -1,10 +1,10 @@
 using System;
 using System.Collections.Generic;
-using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
-using System.Reflection;
 using System.Globalization;
 using System.Linq;
+using System.Reflection;
+using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
 using System.Windows.Input;
 
 namespace Noesis
@@ -340,7 +340,7 @@ namespace Noesis
             }
         }
 
-        public class NativeTypeComponentInfo: NativeTypeInfo
+        public class NativeTypeComponentInfo : NativeTypeInfo
         {
             public Func<IntPtr, bool, BaseComponent> Creator { get; private set; }
 
@@ -362,7 +362,7 @@ namespace Noesis
             }
         }
 
-        public class NativeTypeExtendedInfo: NativeTypeInfo, INativeTypeExtended
+        public class NativeTypeExtendedInfo : NativeTypeInfo, INativeTypeExtended
         {
             public Func<object> Creator { get; private set; }
 
@@ -373,7 +373,7 @@ namespace Noesis
             }
         }
 
-        public class NativeTypePropsInfo: NativeTypeExtendedInfo
+        public class NativeTypePropsInfo : NativeTypeExtendedInfo
         {
             public List<PropertyAccessor> Properties { get; private set; }
 
@@ -384,7 +384,7 @@ namespace Noesis
             }
         }
 
-        public class NativeTypeIndexerInfo: NativeTypePropsInfo
+        public class NativeTypeIndexerInfo : NativeTypePropsInfo
         {
             public IndexerAccessor Indexer { get; private set; }
 
@@ -1244,22 +1244,22 @@ namespace Noesis
         [Flags]
         private enum ExtendTypeOverrides
         {
-            None                            = 0,
-            Object_ToString                 = 1,
-            Object_Equals                   = 2,
-            Visual_GetChildrenCount         = 4,
-            Visual_GetChild                 = 8,
-            UIElement_OnRender              = 16,
-            FrameworkElement_ConnectEvent   = 32,
-            FrameworkElement_ConnectField   = 64,
-            FrameworkElement_Measure        = 128,
-            FrameworkElement_Arrange        = 256,
-            FrameworkElement_ApplyTemplate  = 512,
-            ItemsControl_GetContainer       = 1024,
-            ItemsControl_IsContainer        = 2048,
-            Adorner_GetTransform            = 4096,
-            Freezable_Clone                 = 8192,
-            Animation_GetValueCore          = 16384
+            None = 0,
+            Object_ToString = 1,
+            Object_Equals = 2,
+            Visual_GetChildrenCount = 4,
+            Visual_GetChild = 8,
+            UIElement_OnRender = 16,
+            FrameworkElement_ConnectEvent = 32,
+            FrameworkElement_ConnectField = 64,
+            FrameworkElement_Measure = 128,
+            FrameworkElement_Arrange = 256,
+            FrameworkElement_ApplyTemplate = 512,
+            ItemsControl_GetContainer = 1024,
+            ItemsControl_IsContainer = 2048,
+            Adorner_GetTransform = 4096,
+            Freezable_Clone = 8192,
+            Animation_GetValueCore = 16384
         }
 
         private struct ExtendPropertyData
@@ -1325,7 +1325,7 @@ namespace Noesis
                 PropertyInfo indexerInfo = null;
                 IndexerAccessor indexer = null;
 
-                #if UNITY_5_3_OR_NEWER
+#if UNITY_5_3_OR_NEWER
                 if (typeof(UnityEngine.Texture).GetTypeInfo().IsAssignableFrom(type.GetTypeInfo()))
                 {
                     nativeType = Noesis.TextureSource.Extend(TypeFullName(type));
@@ -1335,7 +1335,7 @@ namespace Noesis
                     nativeType = Noesis.CroppedBitmap.Extend(TypeFullName(type));
                 }
                 else
-                #endif
+#endif
                 if (typeof(Noesis.IScrollInfo).GetTypeInfo().IsAssignableFrom(type.GetTypeInfo()) &&
                     typeof(Noesis.VirtualizingPanel).GetTypeInfo().IsAssignableFrom(type.GetTypeInfo()))
                 {
@@ -1446,12 +1446,12 @@ namespace Noesis
 #if !ENABLE_IL2CPP && !UNITY_IOS
             if (!type.GetTypeInfo().IsValueType && Platform.ID != PlatformID.iPhone)
             {
-                #if NETFX_CORE
+#if NETFX_CORE
                 var ctor = type.GetTypeInfo().DeclaredConstructors.Where(c =>
                     c.GetParameters().Count() == 0 && c.IsStatic == false).FirstOrDefault();
-                #else
+#else
                 var ctor = type.GetTypeInfo().GetConstructor(Type.EmptyTypes);
-                #endif
+#endif
 
                 if (ctor != null && !type.GetTypeInfo().IsAbstract)
                 {
@@ -1512,25 +1512,25 @@ namespace Noesis
         ////////////////////////////////////////////////////////////////////////////////////////////////
         public static MethodInfo FindMethod(Type type, string name, Type[] types)
         {
-            #if NETFX_CORE
+#if NETFX_CORE
             return type.GetRuntimeMethods()
                 .Where(m => m.Name == name && !m.IsStatic && ParametersMatch(m, types)).FirstOrDefault();
-            #else
+#else
             return type.GetMethods(BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic)
                 .Where(m => m.Name == name && ParametersMatch(m, types)).FirstOrDefault();
-            #endif
+#endif
         }
 
         ////////////////////////////////////////////////////////////////////////////////////////////////
         public static PropertyInfo FindProperty(Type type, string name)
         {
-            #if NETFX_CORE
+#if NETFX_CORE
             return type.GetRuntimeProperties()
                 .Where(p => p.Name == name && !p.GetMethod.IsStatic).FirstOrDefault;
-            #else
+#else
             return type.GetProperties(BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic)
                 .Where(p => p.Name == name).FirstOrDefault();
-            #endif
+#endif
         }
 
         ////////////////////////////////////////////////////////////////////////////////////////////////
@@ -1538,7 +1538,7 @@ namespace Noesis
         {
             ExtendTypeData typeData = new ExtendTypeData();
             typeData.type = nativeType.ToInt64();
-            #if UNITY_5_3_OR_NEWER
+#if UNITY_5_3_OR_NEWER
             if (typeof(UnityEngine.Texture).GetTypeInfo().IsAssignableFrom(type.GetTypeInfo()))
             {
                 typeData.baseType = TryGetNativeType(typeof(TextureSource)).ToInt64();
@@ -1551,9 +1551,9 @@ namespace Noesis
             {
                 typeData.baseType = EnsureNativeType(type.GetTypeInfo().BaseType).ToInt64();
             }
-            #else
+#else
                 typeData.baseType = EnsureNativeType(type.GetTypeInfo().BaseType).ToInt64();
-            #endif
+#endif
 
             var typeConverter = type.GetTypeInfo().GetCustomAttribute<System.ComponentModel.TypeConverterAttribute>();
             if (typeConverter != null)
@@ -1708,11 +1708,11 @@ namespace Noesis
         {
             string name = prop.Name + "Property";
 
-            #if NETFX_CORE
+#if NETFX_CORE
             FieldInfo field = type.GetTypeInfo().DeclaredFields.Where(f => f.IsPublic && f.IsStatic && f.Name == name).FirstOrDefault();
-            #else
+#else
             FieldInfo field = type.GetField(name, BindingFlags.Public | BindingFlags.Static | BindingFlags.DeclaredOnly);
-            #endif
+#endif
 
             return field != null && field.FieldType.Equals(typeof(Noesis.DependencyProperty));
         }
@@ -2111,7 +2111,7 @@ namespace Noesis
         ////////////////////////////////////////////////////////////////////////////////////////////////
         private delegate IntPtr Callback_VisualGetChild(IntPtr cPtr, int index,
             Visual.ChildrenCountBaseCallback countCallback, Visual.GetChildBaseCallback childCallback);
-        private static Callback_VisualGetChild _visualGetChild  = VisualGetChild;
+        private static Callback_VisualGetChild _visualGetChild = VisualGetChild;
 
         [MonoPInvokeCallback(typeof(Callback_VisualGetChild))]
         private static IntPtr VisualGetChild(IntPtr cPtr, int index,
@@ -4695,7 +4695,7 @@ namespace Noesis
         }
 
         private static T GetPropertyValueNullable<T>(PropertyAccessor prop, object instance,
-            out bool isNull) where T: struct
+            out bool isNull) where T : struct
         {
             if (!prop.IsNullable)
             {
@@ -4713,7 +4713,7 @@ namespace Noesis
         ////////////////////////////////////////////////////////////////////////////////////////////////
         [return: MarshalAs(UnmanagedType.U1)]
         private delegate bool Callback_GetPropertyValue_Bool(IntPtr nativeType, int propertyIndex,
-            IntPtr cPtr, [MarshalAs(UnmanagedType.U1)]ref bool isNull);
+            IntPtr cPtr, [MarshalAs(UnmanagedType.U1)] ref bool isNull);
         private static Callback_GetPropertyValue_Bool _getPropertyValue_Bool = GetPropertyValue_Bool;
 
         [MonoPInvokeCallback(typeof(Callback_GetPropertyValue_Bool))]
@@ -4733,7 +4733,7 @@ namespace Noesis
         }
 
         private delegate float Callback_GetPropertyValue_Float(IntPtr nativeType, int propertyIndex,
-            IntPtr cPtr, [MarshalAs(UnmanagedType.U1)]ref bool isNull);
+            IntPtr cPtr, [MarshalAs(UnmanagedType.U1)] ref bool isNull);
         private static Callback_GetPropertyValue_Float _getPropertyValue_Float = GetPropertyValue_Float;
 
         [MonoPInvokeCallback(typeof(Callback_GetPropertyValue_Float))]
@@ -4753,7 +4753,7 @@ namespace Noesis
         }
 
         private delegate double Callback_GetPropertyValue_Double(IntPtr nativeType, int propertyIndex,
-            IntPtr cPtr, [MarshalAs(UnmanagedType.U1)]ref bool isNull);
+            IntPtr cPtr, [MarshalAs(UnmanagedType.U1)] ref bool isNull);
         private static Callback_GetPropertyValue_Double _getPropertyValue_Double = GetPropertyValue_Double;
 
         [MonoPInvokeCallback(typeof(Callback_GetPropertyValue_Double))]
@@ -4773,7 +4773,7 @@ namespace Noesis
         }
 
         private delegate long Callback_GetPropertyValue_Int64(IntPtr nativeType, int propertyIndex,
-            IntPtr cPtr, [MarshalAs(UnmanagedType.U1)]ref bool isNull);
+            IntPtr cPtr, [MarshalAs(UnmanagedType.U1)] ref bool isNull);
         private static Callback_GetPropertyValue_Int64 _getPropertyValue_Int64 = GetPropertyValue_Int64;
 
         [MonoPInvokeCallback(typeof(Callback_GetPropertyValue_Int64))]
@@ -4793,7 +4793,7 @@ namespace Noesis
         }
 
         private delegate ulong Callback_GetPropertyValue_UInt64(IntPtr nativeType, int propertyIndex,
-            IntPtr cPtr, [MarshalAs(UnmanagedType.U1)]ref bool isNull);
+            IntPtr cPtr, [MarshalAs(UnmanagedType.U1)] ref bool isNull);
         private static Callback_GetPropertyValue_UInt64 _getPropertyValue_UInt64 = GetPropertyValue_UInt64;
 
         [MonoPInvokeCallback(typeof(Callback_GetPropertyValue_UInt64))]
@@ -4813,7 +4813,7 @@ namespace Noesis
         }
 
         private delegate int Callback_GetPropertyValue_Int(IntPtr nativeType, int propertyIndex,
-            IntPtr cPtr, [MarshalAs(UnmanagedType.U1)]ref bool isNull);
+            IntPtr cPtr, [MarshalAs(UnmanagedType.U1)] ref bool isNull);
         private static Callback_GetPropertyValue_Int _getPropertyValue_Int = GetPropertyValue_Int;
 
         [MonoPInvokeCallback(typeof(Callback_GetPropertyValue_Int))]
@@ -4833,7 +4833,7 @@ namespace Noesis
         }
 
         private delegate uint Callback_GetPropertyValue_UInt(IntPtr nativeType, int propertyIndex,
-            IntPtr cPtr, [MarshalAs(UnmanagedType.U1)]ref bool isNull);
+            IntPtr cPtr, [MarshalAs(UnmanagedType.U1)] ref bool isNull);
         private static Callback_GetPropertyValue_UInt _getPropertyValue_UInt = GetPropertyValue_UInt;
 
         [MonoPInvokeCallback(typeof(Callback_GetPropertyValue_UInt))]
@@ -4853,7 +4853,7 @@ namespace Noesis
         }
 
         private delegate short Callback_GetPropertyValue_Short(IntPtr nativeType, int propertyIndex,
-            IntPtr cPtr, [MarshalAs(UnmanagedType.U1)]ref bool isNull);
+            IntPtr cPtr, [MarshalAs(UnmanagedType.U1)] ref bool isNull);
         private static Callback_GetPropertyValue_Short _getPropertyValue_Short = GetPropertyValue_Short;
 
         [MonoPInvokeCallback(typeof(Callback_GetPropertyValue_Short))]
@@ -4873,12 +4873,12 @@ namespace Noesis
         }
 
         private delegate ushort Callback_GetPropertyValue_UShort(IntPtr nativeType, int propertyIndex,
-            IntPtr cPtr, [MarshalAs(UnmanagedType.U1)]ref bool isNull);
+            IntPtr cPtr, [MarshalAs(UnmanagedType.U1)] ref bool isNull);
         private static Callback_GetPropertyValue_UShort _getPropertyValue_UShort = GetPropertyValue_UShort;
 
         [MonoPInvokeCallback(typeof(Callback_GetPropertyValue_UShort))]
         private static ushort GetPropertyValue_UShort(IntPtr nativeType, int propertyIndex,
-            IntPtr cPtr, [MarshalAs(UnmanagedType.U1)]ref bool isNull)
+            IntPtr cPtr, [MarshalAs(UnmanagedType.U1)] ref bool isNull)
         {
             try
             {
@@ -4933,7 +4933,7 @@ namespace Noesis
         }
 
         private delegate void Callback_GetPropertyValue_Color(IntPtr nativeType, int propertyIndex,
-            IntPtr cPtr, ref Color value, [MarshalAs(UnmanagedType.U1)]ref bool isNull);
+            IntPtr cPtr, ref Color value, [MarshalAs(UnmanagedType.U1)] ref bool isNull);
         private static Callback_GetPropertyValue_Color _getPropertyValue_Color = GetPropertyValue_Color;
 
         [MonoPInvokeCallback(typeof(Callback_GetPropertyValue_Color))]
@@ -4952,7 +4952,7 @@ namespace Noesis
         }
 
         private delegate void Callback_GetPropertyValue_Point(IntPtr nativeType, int propertyIndex,
-            IntPtr cPtr, ref Point value, [MarshalAs(UnmanagedType.U1)]ref bool isNull);
+            IntPtr cPtr, ref Point value, [MarshalAs(UnmanagedType.U1)] ref bool isNull);
         private static Callback_GetPropertyValue_Point _getPropertyValue_Point = GetPropertyValue_Point;
 
         [MonoPInvokeCallback(typeof(Callback_GetPropertyValue_Point))]
@@ -4971,7 +4971,7 @@ namespace Noesis
         }
 
         private delegate void Callback_GetPropertyValue_Rect(IntPtr nativeType, int propertyIndex,
-            IntPtr cPtr, ref Rect value, [MarshalAs(UnmanagedType.U1)]ref bool isNull);
+            IntPtr cPtr, ref Rect value, [MarshalAs(UnmanagedType.U1)] ref bool isNull);
         private static Callback_GetPropertyValue_Rect _getPropertyValue_Rect = GetPropertyValue_Rect;
 
         [MonoPInvokeCallback(typeof(Callback_GetPropertyValue_Rect))]
@@ -5009,7 +5009,7 @@ namespace Noesis
         }
 
         private delegate void Callback_GetPropertyValue_Size(IntPtr nativeType, int propertyIndex,
-            IntPtr cPtr, ref Size value, [MarshalAs(UnmanagedType.U1)]ref bool isNull);
+            IntPtr cPtr, ref Size value, [MarshalAs(UnmanagedType.U1)] ref bool isNull);
         private static Callback_GetPropertyValue_Size _getPropertyValue_Size = GetPropertyValue_Size;
 
         [MonoPInvokeCallback(typeof(Callback_GetPropertyValue_Size))]
@@ -5028,7 +5028,7 @@ namespace Noesis
         }
 
         private delegate void Callback_GetPropertyValue_Thickness(IntPtr nativeType, int propertyIndex,
-            IntPtr cPtr, ref Thickness value, [MarshalAs(UnmanagedType.U1)]ref bool isNull);
+            IntPtr cPtr, ref Thickness value, [MarshalAs(UnmanagedType.U1)] ref bool isNull);
         private static Callback_GetPropertyValue_Thickness _getPropertyValue_Thickness = GetPropertyValue_Thickness;
 
         [MonoPInvokeCallback(typeof(Callback_GetPropertyValue_Thickness))]
@@ -5047,7 +5047,7 @@ namespace Noesis
         }
 
         private delegate void Callback_GetPropertyValue_CornerRadius(IntPtr nativeType, int propertyIndex,
-            IntPtr cPtr, ref CornerRadius value, [MarshalAs(UnmanagedType.U1)]ref bool isNull);
+            IntPtr cPtr, ref CornerRadius value, [MarshalAs(UnmanagedType.U1)] ref bool isNull);
         private static Callback_GetPropertyValue_CornerRadius _getPropertyValue_CornerRadius = GetPropertyValue_CornerRadius;
 
         [MonoPInvokeCallback(typeof(Callback_GetPropertyValue_CornerRadius))]
@@ -5066,7 +5066,7 @@ namespace Noesis
         }
 
         private delegate void Callback_GetPropertyValue_TimeSpan(IntPtr nativeType, int propertyIndex,
-            IntPtr cPtr, ref TimeSpanStruct value, [MarshalAs(UnmanagedType.U1)]ref bool isNull);
+            IntPtr cPtr, ref TimeSpanStruct value, [MarshalAs(UnmanagedType.U1)] ref bool isNull);
         private static Callback_GetPropertyValue_TimeSpan _getPropertyValue_TimeSpan = GetPropertyValue_TimeSpan;
 
         [MonoPInvokeCallback(typeof(Callback_GetPropertyValue_TimeSpan))]
@@ -5085,7 +5085,7 @@ namespace Noesis
         }
 
         private delegate void Callback_GetPropertyValue_Duration(IntPtr nativeType, int propertyIndex,
-            IntPtr cPtr, ref Duration value, [MarshalAs(UnmanagedType.U1)]ref bool isNull);
+            IntPtr cPtr, ref Duration value, [MarshalAs(UnmanagedType.U1)] ref bool isNull);
         private static Callback_GetPropertyValue_Duration _getPropertyValue_Duration = GetPropertyValue_Duration;
 
         [MonoPInvokeCallback(typeof(Callback_GetPropertyValue_Duration))]
@@ -5104,7 +5104,7 @@ namespace Noesis
         }
 
         private delegate void Callback_GetPropertyValue_KeyTime(IntPtr nativeType, int propertyIndex,
-            IntPtr cPtr, ref KeyTime value, [MarshalAs(UnmanagedType.U1)]ref bool isNull);
+            IntPtr cPtr, ref KeyTime value, [MarshalAs(UnmanagedType.U1)] ref bool isNull);
         private static Callback_GetPropertyValue_KeyTime _getPropertyValue_KeyTime = GetPropertyValue_KeyTime;
 
         [MonoPInvokeCallback(typeof(Callback_GetPropertyValue_KeyTime))]
@@ -5174,7 +5174,7 @@ namespace Noesis
         }
 
         private static void SetPropertyValueNullable<T>(PropertyAccessor prop, object instance,
-            T value, bool isNull) where T: struct
+            T value, bool isNull) where T : struct
         {
             if (!prop.IsNullable)
             {
@@ -6025,7 +6025,7 @@ namespace Noesis
                         AddExtendInfo(cPtr, instance);
                         RegisterInterfaces(instance);
 
-                        #if UNITY_5_3_OR_NEWER
+#if UNITY_5_3_OR_NEWER
                         // Automatic conversion from Unity's Texture to a TextureSource proxy
                         if (instance is UnityEngine.Texture texture)
                         {
@@ -6047,7 +6047,7 @@ namespace Noesis
                             NoesisGUI_PINVOKE.CroppedBitmap_Source_set(bmp, GetInstanceHandle(sprite.texture));
                             NoesisGUI_PINVOKE.CroppedBitmap_SourceRect_set(bmp, ref rect);
                         }
-                        #endif
+#endif
                     }
                 }
 

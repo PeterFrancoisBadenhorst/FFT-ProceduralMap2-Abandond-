@@ -207,17 +207,17 @@ namespace Noesis
                     [Flags]
                     public enum Enum
                     {
-                    //  --------------------------------------------------------------------------------
-                    //  Attr                    Interpolation       Semantic
-                    //  --------------------------------------------------------------------------------
-                        Pos         = 1,    //  linear              Position (xy)
-                        Color       = 2,    //  nointerpolation     sRGB Color (rgba)
-                        Tex0        = 4,    //  linear              TexCoord0 (uv)
-                        Tex1        = 8,    //  linear              TexCoord1 (uv)
-                        Coverage    = 16,   //  linear              Coverage (alpha)
-                        Rect        = 32,   //  nointerpolation     Rect (x0, y0, x1, y1)
-                        Tile        = 64,   //  nointerpolation     Rect (x, y, width, height)
-                        ImagePos    = 128,  //  linear              Position (xy) - Scale(zw)
+                        //  --------------------------------------------------------------------------------
+                        //  Attr                    Interpolation       Semantic
+                        //  --------------------------------------------------------------------------------
+                        Pos = 1,    //  linear              Position (xy)
+                        Color = 2,    //  nointerpolation     sRGB Color (rgba)
+                        Tex0 = 4,    //  linear              TexCoord0 (uv)
+                        Tex1 = 8,    //  linear              TexCoord1 (uv)
+                        Coverage = 16,   //  linear              Coverage (alpha)
+                        Rect = 32,   //  nointerpolation     Rect (x0, y0, x1, y1)
+                        Tile = 64,   //  nointerpolation     Rect (x, y, width, height)
+                        ImagePos = 128,  //  linear              Position (xy) - Scale(zw)
                     }
 
                     /// <summary>
@@ -328,9 +328,9 @@ namespace Noesis
     /// </summary>
     public enum BlendMode
     {
-                                //  ----------------------------------------------------
-                                //  COLOR                       ALPHA
-                                //  ----------------------------------------------------
+        //  ----------------------------------------------------
+        //  COLOR                       ALPHA
+        //  ----------------------------------------------------
         Src,                    //  cs                          as
         SrcOver,                //  cs + cd * (1 - as)          as + ad * (1 - as)
         SrcOver_Multiply,       //  cs * cd + cd * (1 - as)     as + ad * (1 - as)
@@ -1334,7 +1334,7 @@ namespace Noesis
 
         [DllImport(Library.Name)]
         static extern IntPtr Noesis_RenderDevice_CreateRenderTarget(HandleRef device,
-            [MarshalAs(UnmanagedType.LPWStr)]string label, uint width, uint height, uint sampleCount, bool needsStencil);
+            [MarshalAs(UnmanagedType.LPWStr)] string label, uint width, uint height, uint sampleCount, bool needsStencil);
 
         [DllImport(Library.Name)]
         static extern IntPtr Noesis_RenderDevice_CloneRenderTarget(HandleRef device, HandleRef surface);
@@ -1355,7 +1355,7 @@ namespace Noesis
 
         [DllImport(Library.Name)]
         static extern IntPtr Noesis_RenderDevice_CreateTexture(HandleRef device,
-            [MarshalAs(UnmanagedType.LPWStr)]string label, uint width, uint height, uint numLevels,
+            [MarshalAs(UnmanagedType.LPWStr)] string label, uint width, uint height, uint numLevels,
             int format, IntPtr data);
 
         [DllImport(Library.Name)]

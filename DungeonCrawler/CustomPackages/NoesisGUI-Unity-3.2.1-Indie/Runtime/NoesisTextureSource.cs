@@ -5,11 +5,11 @@ namespace Noesis
 {
     public partial class TextureSource
     {
-        public TextureSource(UnityEngine.Texture texture): this(Texture.WrapTexture(texture))
+        public TextureSource(UnityEngine.Texture texture) : this(Texture.WrapTexture(texture))
         {
         }
 
-        public TextureSource(UnityEngine.Texture2D texture): this(Texture.WrapTexture(texture))
+        public TextureSource(UnityEngine.Texture2D texture) : this(Texture.WrapTexture(texture))
         {
         }
 

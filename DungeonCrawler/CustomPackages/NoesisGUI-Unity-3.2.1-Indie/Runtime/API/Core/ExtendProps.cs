@@ -1,10 +1,6 @@
 using System;
 using System.Collections.Generic;
-using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
 using System.Reflection;
-using System.Globalization;
-using System.Linq;
 
 namespace Noesis
 {
@@ -26,9 +22,9 @@ namespace Noesis
             public virtual bool IsNullable { get { return false; } }
         }
 
-        public abstract class PropertyAccessorT<PropertyT>: PropertyAccessor
+        public abstract class PropertyAccessorT<PropertyT> : PropertyAccessor
         {
-            public PropertyAccessorT(PropertyInfo p): base(p) { }
+            public PropertyAccessorT(PropertyInfo p) : base(p) { }
 
             public abstract PropertyT Get(object instance);
             public virtual void Set(object instance, PropertyT value)
@@ -37,14 +33,14 @@ namespace Noesis
             }
         }
 
-        public class PropertyAccessorCastRW<PropertyT, SourceT>: PropertyAccessorT<PropertyT>
+        public class PropertyAccessorCastRW<PropertyT, SourceT> : PropertyAccessorT<PropertyT>
         {
             PropertyAccessorT<SourceT> _prop;
             Func<SourceT, PropertyT> _castTo;
             Func<PropertyT, SourceT> _castFrom;
 
             public PropertyAccessorCastRW(PropertyInfo p, PropertyAccessorT<SourceT> prop,
-                Func<SourceT, PropertyT> castTo, Func<PropertyT, SourceT> castFrom): base(p)
+                Func<SourceT, PropertyT> castTo, Func<PropertyT, SourceT> castFrom) : base(p)
             {
                 _prop = prop;
                 _castTo = castTo;
@@ -62,13 +58,13 @@ namespace Noesis
             }
         }
 
-        public class PropertyAccessorCastRO<PropertyT, SourceT>: PropertyAccessorT<PropertyT>
+        public class PropertyAccessorCastRO<PropertyT, SourceT> : PropertyAccessorT<PropertyT>
         {
             PropertyAccessorT<SourceT> _prop;
             Func<SourceT, PropertyT> _castTo;
 
             public PropertyAccessorCastRO(PropertyInfo p, PropertyAccessorT<SourceT> prop,
-                Func<SourceT, PropertyT> castTo): base(p)
+                Func<SourceT, PropertyT> castTo) : base(p)
             {
                 _prop = prop;
                 _castTo = castTo;
@@ -80,27 +76,27 @@ namespace Noesis
             }
         }
 
-        public class PropertyAccessorNullableCastRW<PropertyT, SourceT>: PropertyAccessorCastRW<PropertyT, SourceT>
+        public class PropertyAccessorNullableCastRW<PropertyT, SourceT> : PropertyAccessorCastRW<PropertyT, SourceT>
         {
             public PropertyAccessorNullableCastRW(PropertyInfo p, PropertyAccessorT<SourceT> prop,
-                Func<SourceT, PropertyT> castTo, Func<PropertyT, SourceT> castFrom): base(p, prop, castTo, castFrom) { }
+                Func<SourceT, PropertyT> castTo, Func<PropertyT, SourceT> castFrom) : base(p, prop, castTo, castFrom) { }
             public override bool IsNullable { get { return true; } }
         }
-        public class PropertyAccessorNullableCastRO<PropertyT, SourceT>: PropertyAccessorCastRO<PropertyT, SourceT>
+        public class PropertyAccessorNullableCastRO<PropertyT, SourceT> : PropertyAccessorCastRO<PropertyT, SourceT>
         {
             public PropertyAccessorNullableCastRO(PropertyInfo p, PropertyAccessorT<SourceT> prop,
-                Func<SourceT, PropertyT> castTo): base(p, prop, castTo) { }
+                Func<SourceT, PropertyT> castTo) : base(p, prop, castTo) { }
             public override bool IsNullable { get { return true; } }
         }
 
         #region Accessors using PropertyInfo
 
-        public class PropertyAccessorPropRW<PropertyT>: PropertyAccessorT<PropertyT>
+        public class PropertyAccessorPropRW<PropertyT> : PropertyAccessorT<PropertyT>
         {
             Func<object, PropertyT> _getter;
             Action<object, PropertyT> _setter;
 
-            public PropertyAccessorPropRW(PropertyInfo p): base(p)
+            public PropertyAccessorPropRW(PropertyInfo p) : base(p)
             {
                 _getter = (instance) => (PropertyT)p.GetValue(instance, null);
                 _setter = (instance, value) => p.SetValue(instance, value, null);
@@ -116,11 +112,11 @@ namespace Noesis
                 _setter(instance, value);
             }
         }
-        public class PropertyAccessorPropRO<PropertyT>: PropertyAccessorT<PropertyT>
+        public class PropertyAccessorPropRO<PropertyT> : PropertyAccessorT<PropertyT>
         {
             Func<object, PropertyT> _getter;
 
-            public PropertyAccessorPropRO(PropertyInfo p): base(p)
+            public PropertyAccessorPropRO(PropertyInfo p) : base(p)
             {
                 _getter = (instance) => (PropertyT)p.GetValue(instance, null);
             }
@@ -131,12 +127,12 @@ namespace Noesis
             }
         }
 
-        public class PropertyAccessorNullablePropRW<PropertyT>: PropertyAccessorPropRW<PropertyT>
+        public class PropertyAccessorNullablePropRW<PropertyT> : PropertyAccessorPropRW<PropertyT>
         {
             public PropertyAccessorNullablePropRW(PropertyInfo p) : base(p) { }
             public override bool IsNullable { get { return true; } }
         }
-        public class PropertyAccessorNullablePropRO<PropertyT>: PropertyAccessorPropRO<PropertyT>
+        public class PropertyAccessorNullablePropRO<PropertyT> : PropertyAccessorPropRO<PropertyT>
         {
             public PropertyAccessorNullablePropRO(PropertyInfo p) : base(p) { }
             public override bool IsNullable { get { return true; } }
@@ -148,7 +144,7 @@ namespace Noesis
 
 #if !ENABLE_IL2CPP && !UNITY_IOS
 
-        public class PropertyAccessorRW<PropertyT>: PropertyAccessorT<PropertyT>
+        public class PropertyAccessorRW<PropertyT> : PropertyAccessorT<PropertyT>
         {
             Func<object, PropertyT> _getter;
             Action<object, PropertyT> _setter;
@@ -170,7 +166,7 @@ namespace Noesis
                 _setter(instance, value);
             }
         }
-        public class PropertyAccessorRO<PropertyT>: PropertyAccessorT<PropertyT>
+        public class PropertyAccessorRO<PropertyT> : PropertyAccessorT<PropertyT>
         {
             Func<object, PropertyT> _getter;
 
@@ -186,12 +182,12 @@ namespace Noesis
             }
         }
 
-        public class PropertyAccessorNullableRW<PropertyT>: PropertyAccessorRW<PropertyT>
+        public class PropertyAccessorNullableRW<PropertyT> : PropertyAccessorRW<PropertyT>
         {
             public PropertyAccessorNullableRW(PropertyInfo p) : base(p) { }
             public override bool IsNullable { get { return true; } }
         }
-        public class PropertyAccessorNullableRO<PropertyT>: PropertyAccessorRO<PropertyT>
+        public class PropertyAccessorNullableRO<PropertyT> : PropertyAccessorRO<PropertyT>
         {
             public PropertyAccessorNullableRO(PropertyInfo p) : base(p) { }
             public override bool IsNullable { get { return true; } }
@@ -277,7 +273,7 @@ namespace Noesis
 
         public abstract class IndexerAccessor { }
 
-        public abstract class IndexerAccessorT<IndexT>: IndexerAccessor
+        public abstract class IndexerAccessorT<IndexT> : IndexerAccessor
         {
             public abstract object Get(object instance, IndexT index);
             public virtual void Set(object instance, IndexT index, object value)
@@ -288,7 +284,7 @@ namespace Noesis
 
         #region Indexer accessors using PropertyInfo
 
-        public abstract class IndexerAccessorPropT<IndexT>: IndexerAccessorT<IndexT>
+        public abstract class IndexerAccessorPropT<IndexT> : IndexerAccessorT<IndexT>
         {
             object[] _index = new object[1];
             protected object[] Index(IndexT index)
@@ -298,7 +294,7 @@ namespace Noesis
             }
         }
 
-        public class IndexerAccessorPropRW<IndexT>: IndexerAccessorPropT<IndexT>
+        public class IndexerAccessorPropRW<IndexT> : IndexerAccessorPropT<IndexT>
         {
             Func<object, IndexT, object> _getter;
             Action<object, IndexT, object> _setter;
@@ -320,7 +316,7 @@ namespace Noesis
             }
         }
 
-        public class IndexerAccessorPropRO<IndexT>: IndexerAccessorPropT<IndexT>
+        public class IndexerAccessorPropRO<IndexT> : IndexerAccessorPropT<IndexT>
         {
             Func<object, IndexT, object> _getter;
 
@@ -341,7 +337,7 @@ namespace Noesis
 
 #if !ENABLE_IL2CPP && !UNITY_IOS
 
-        public class IndexerAccessorRW<IndexT>: IndexerAccessorT<IndexT>
+        public class IndexerAccessorRW<IndexT> : IndexerAccessorT<IndexT>
         {
             Func<object, IndexT, object> _getter;
             Action<object, IndexT, object> _setter;
@@ -363,7 +359,7 @@ namespace Noesis
             }
         }
 
-        public class IndexerAccessorRO<IndexT>: IndexerAccessorT<IndexT>
+        public class IndexerAccessorRO<IndexT> : IndexerAccessorT<IndexT>
         {
             Func<object, IndexT, object> _getter;
 

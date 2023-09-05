@@ -62,50 +62,50 @@ namespace NoesisApp
                     switch (ControlStoryboardOption)
                     {
                         case ControlStoryboardOption.Play:
-                        {
-                            FrameworkElement ns = FrameworkElement.FindTreeElement(associatedObject);
-                            storyboard.Begin(target, ns, true);
-                            break;
-                        }
-                        case ControlStoryboardOption.Stop:
-                        {
-                            storyboard.Stop(target);
-                            break;
-                        }
-                        case ControlStoryboardOption.TogglePlayPause:
-                        {
-                            if (storyboard.IsPlaying(target))
-                            {
-                                if (storyboard.IsPaused(target))
-                                {
-                                    storyboard.Resume(target);
-                                }
-                                else
-                                {
-                                    storyboard.Pause(target);
-                                }
-                            }
-                            else
                             {
                                 FrameworkElement ns = FrameworkElement.FindTreeElement(associatedObject);
                                 storyboard.Begin(target, ns, true);
+                                break;
                             }
-                            break;
-                        }
+                        case ControlStoryboardOption.Stop:
+                            {
+                                storyboard.Stop(target);
+                                break;
+                            }
+                        case ControlStoryboardOption.TogglePlayPause:
+                            {
+                                if (storyboard.IsPlaying(target))
+                                {
+                                    if (storyboard.IsPaused(target))
+                                    {
+                                        storyboard.Resume(target);
+                                    }
+                                    else
+                                    {
+                                        storyboard.Pause(target);
+                                    }
+                                }
+                                else
+                                {
+                                    FrameworkElement ns = FrameworkElement.FindTreeElement(associatedObject);
+                                    storyboard.Begin(target, ns, true);
+                                }
+                                break;
+                            }
                         case ControlStoryboardOption.Pause:
-                        {
-                            storyboard.Pause(target);
-                            break;
-                        }
+                            {
+                                storyboard.Pause(target);
+                                break;
+                            }
                         case ControlStoryboardOption.Resume:
-                        {
-                            storyboard.Resume(target);
-                            break;
-                        }
+                            {
+                                storyboard.Resume(target);
+                                break;
+                            }
                         case ControlStoryboardOption.SkipToFill:
-                        {
-                            throw new NotImplementedException("Storyboard.SkipToFill");
-                        }
+                            {
+                                throw new NotImplementedException("Storyboard.SkipToFill");
+                            }
                     }
                 }
             }

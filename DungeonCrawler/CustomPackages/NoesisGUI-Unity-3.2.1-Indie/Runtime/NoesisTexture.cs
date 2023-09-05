@@ -93,7 +93,7 @@ namespace Noesis
         static extern void Noesis_RemoveEnqueuedTexture(IntPtr texturePtr);
 
         [DllImport(Library.Name)]
-        static extern IntPtr Noesis_WrapTexture(IntPtr texture, int width, int height,int numLevels);
+        static extern IntPtr Noesis_WrapTexture(IntPtr texture, int width, int height, int numLevels);
 
         [DllImport(Library.Name)]
         static extern void Noesis_SetUnregisterTextureCallback(UnregisterTextureCallback callback);

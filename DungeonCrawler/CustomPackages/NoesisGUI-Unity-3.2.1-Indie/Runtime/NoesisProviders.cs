@@ -1,19 +1,18 @@
 using Noesis;
 using System;
-using System.IO;
-using System.Runtime.InteropServices;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 
 #if UNITY_EDITOR
-using PackageInfo = UnityEditor.PackageManager.PackageInfo;
 #endif
 
 /// <summary>
 /// Xaml provider
 /// </summary>
-public class NoesisXamlProvider: XamlProvider
+public class NoesisXamlProvider : XamlProvider
 {
     public static NoesisXamlProvider instance = new NoesisXamlProvider();
 
@@ -136,7 +135,7 @@ public class NoesisXamlProvider: XamlProvider
         public NoesisRive rive;
     }
     private Dictionary<string, RiveValue> _rives;
-    
+
 #if UNITY_EDITOR
     internal static string LangServerGetXaml(Uri uri)
     {
@@ -358,7 +357,7 @@ public class NoesisShaderProvider
 /// <summary>
 /// Texture provider
 /// </summary>
-public class NoesisTextureProvider: TextureProvider
+public class NoesisTextureProvider : TextureProvider
 {
     public static NoesisTextureProvider instance = new NoesisTextureProvider();
 
@@ -568,7 +567,7 @@ public class NoesisTextureProvider: TextureProvider
 /// <summary>
 /// Font provider
 /// </summary>
-public class NoesisFontProvider: FontProvider
+public class NoesisFontProvider : FontProvider
 {
     private static LockFontCallback _lockFont = LockFont;
     private static UnlockFontCallback _unlockFont = UnlockFont;
@@ -639,8 +638,11 @@ public class NoesisFontProvider: FontProvider
                 {
                     faces.Add(new Face()
                     {
-                        index = index_, family = family_,
-                        weight = weight_, style = style_, stretch = stretch_
+                        index = index_,
+                        family = family_,
+                        weight = weight_,
+                        style = style_,
+                        stretch = stretch_
                     });
                 });
             }
@@ -703,7 +705,7 @@ public class NoesisFontProvider: FontProvider
             GCHandle h = GCHandle.FromIntPtr(handle);
             h.Free();
         }
-        catch (Exception) {}
+        catch (Exception) { }
     }
 
     public struct Value

@@ -1,13 +1,13 @@
 using System;
-using System.Runtime.InteropServices;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.Specialized;
+using System.Runtime.InteropServices;
 
 namespace Noesis
 {
 
-    public class BoxedFreezableCollection<T> : BaseFreezableCollection, IList<T>, INotifyCollectionChanged where T: struct
+    public class BoxedFreezableCollection<T> : BaseFreezableCollection, IList<T>, INotifyCollectionChanged where T : struct
     {
         protected BoxedFreezableCollection()
         {

@@ -1,4 +1,3 @@
-using System;
 using System.Runtime.InteropServices;
 
 namespace Noesis
@@ -26,8 +25,8 @@ namespace Noesis
         private static LogCallback _logCallback;
 
         private delegate void NativeLogCallback(uint level,
-            [MarshalAs(UnmanagedType.LPWStr)]string channel,
-            [MarshalAs(UnmanagedType.LPWStr)]string message);
+            [MarshalAs(UnmanagedType.LPWStr)] string channel,
+            [MarshalAs(UnmanagedType.LPWStr)] string message);
         private static NativeLogCallback _noesisLogCallback = OnLog;
 
         [MonoPInvokeCallback(typeof(NativeLogCallback))]

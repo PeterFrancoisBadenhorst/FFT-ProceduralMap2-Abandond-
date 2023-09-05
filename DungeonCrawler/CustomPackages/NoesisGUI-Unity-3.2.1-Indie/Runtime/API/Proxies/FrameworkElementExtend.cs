@@ -14,7 +14,7 @@ namespace Noesis
                 return resource;
             }
 
-            throw new InvalidOperationException("Resource not found '" + key.ToString() +  "'");
+            throw new InvalidOperationException("Resource not found '" + key.ToString() + "'");
         }
 
         public object TryFindResource(object key)

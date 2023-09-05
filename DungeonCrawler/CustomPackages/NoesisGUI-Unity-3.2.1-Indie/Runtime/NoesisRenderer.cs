@@ -40,26 +40,26 @@ public class NoesisRenderer
         // We need to activate a new encoder in the current command buffer for our Offscreen phase
         if (UnityEngine.SystemInfo.graphicsDeviceType == UnityEngine.Rendering.GraphicsDeviceType.Metal)
         {
-            UnityEngine.RenderTexture surface = UnityEngine.RenderTexture.GetTemporary(1,1);
+            UnityEngine.RenderTexture surface = UnityEngine.RenderTexture.GetTemporary(1, 1);
             commands.SetRenderTarget(surface, LoadAction.DontCare, StoreAction.DontCare, LoadAction.DontCare, StoreAction.DontCare);
             commands.ClearRenderTarget(false, false, UnityEngine.Color.clear);
             UnityEngine.RenderTexture.ReleaseTemporary(surface);
         }
 
-      #if UNITY_EDITOR
+#if UNITY_EDITOR
         // When a texture is modified and reimported its native pointer changes, so we need to
         // send the new texture native pointer to C++ to update texture provider cache
         NoesisTextureProvider.instance.UpdateTextures();
-      #endif
+#endif
 
-      #if UNITY_2022_2_OR_NEWER
+#if UNITY_2022_2_OR_NEWER
         commands.IssuePluginEventAndDataWithFlags(_renderOffscreenCallback, (int)EventId.RenderOffscreen,
             invalidate ? CustomMarkerCallbackForceInvalidateStateTracking : CustomMarkerCallbackDefault,
             view.Renderer.CPtr.Handle);
-      #else
+#else
         commands.IssuePluginEventAndData(_renderOffscreenCallback, (int)EventId.RenderOffscreen, view.Renderer.CPtr.Handle);
         if (invalidate) InvalidateState(commands);
-      #endif
+#endif
     }
 
     private static void FixMetalEncoder(UnityEngine.Rendering.CommandBuffer commands)
@@ -80,14 +80,14 @@ public class NoesisRenderer
 
         var eventId = flipY ? EventId.RenderOnscreenFlipY : EventId.RenderOnscreen;
 
-      #if UNITY_2022_2_OR_NEWER
+#if UNITY_2022_2_OR_NEWER
         commands.IssuePluginEventAndDataWithFlags(_renderOnscreenCallback, (int)eventId,
             invalidate ? CustomMarkerCallbackForceInvalidateStateTracking : CustomMarkerCallbackDefault,
             view.Renderer.CPtr.Handle);
-      #else
+#else
         commands.IssuePluginEventAndData(_renderOnscreenCallback, (int)eventId, view.Renderer.CPtr.Handle);
         if (invalidate) InvalidateState(commands);
-      #endif
+#endif
     }
 
     [StructLayoutAttribute(LayoutKind.Sequential)]
@@ -108,14 +108,14 @@ public class NoesisRenderer
 
         var eventId = flipY ? EventId.RenderOnscreenFlipY : EventId.RenderOnscreen;
 
-      #if UNITY_2022_2_OR_NEWER
+#if UNITY_2022_2_OR_NEWER
         commands.IssuePluginEventAndDataWithFlags(_renderOnscreenMtxCallback, (int)eventId,
             invalidate ? CustomMarkerCallbackForceInvalidateStateTracking : CustomMarkerCallbackDefault,
             ptr);
-      #else
+#else
         commands.IssuePluginEventAndData(_renderOnscreenMtxCallback, (int)eventId, ptr);
         if (invalidate) InvalidateState(commands);
-      #endif
+#endif
     }
 
     [StructLayoutAttribute(LayoutKind.Sequential)]
@@ -138,14 +138,14 @@ public class NoesisRenderer
 
         var eventId = flipY ? EventId.RenderOnscreenFlipY : EventId.RenderOnscreen;
 
-      #if UNITY_2022_2_OR_NEWER
+#if UNITY_2022_2_OR_NEWER
         commands.IssuePluginEventAndDataWithFlags(_renderOnscreenMtxStereoCallback, (int)eventId,
             invalidate ? CustomMarkerCallbackForceInvalidateStateTracking : CustomMarkerCallbackDefault,
             ptr);
-      #else
+#else
         commands.IssuePluginEventAndData(_renderOnscreenMtxStereoCallback, (int)eventId, ptr);
         if (invalidate) InvalidateState(commands);
-      #endif
+#endif
     }
 
     /// <summary>
@@ -213,20 +213,20 @@ public class NoesisRenderer
         switch (settings.linearRendering)
         {
             case NoesisSettings.LinearRendering._SamesAsUnity:
-            {
-                linearRendering = UnityEngine.QualitySettings.activeColorSpace == UnityEngine.ColorSpace.Linear;
-                break;
-            }
+                {
+                    linearRendering = UnityEngine.QualitySettings.activeColorSpace == UnityEngine.ColorSpace.Linear;
+                    break;
+                }
             case NoesisSettings.LinearRendering._Enabled:
-            {
-                linearRendering = true;
-                break;
-            }
+                {
+                    linearRendering = true;
+                    break;
+                }
             case NoesisSettings.LinearRendering._Disabled:
-            {
-                linearRendering = false;
-                break;
-            }
+                {
+                    linearRendering = false;
+                    break;
+                }
         }
 
         int sampleCount = 1;
@@ -234,30 +234,30 @@ public class NoesisRenderer
         switch (settings.offscreenSampleCount)
         {
             case NoesisSettings.OffscreenSampleCount._SameAsUnity:
-            {
-                sampleCount = UnityEngine.QualitySettings.antiAliasing;
-                break;
-            }
+                {
+                    sampleCount = UnityEngine.QualitySettings.antiAliasing;
+                    break;
+                }
             case NoesisSettings.OffscreenSampleCount._1x:
-            {
-                sampleCount = 1;
-                break;
-            }
+                {
+                    sampleCount = 1;
+                    break;
+                }
             case NoesisSettings.OffscreenSampleCount._2x:
-            {
-                sampleCount = 2;
-                break;
-            }
+                {
+                    sampleCount = 2;
+                    break;
+                }
             case NoesisSettings.OffscreenSampleCount._4x:
-            {
-                sampleCount = 4;
-                break;
-            }
+                {
+                    sampleCount = 4;
+                    break;
+                }
             case NoesisSettings.OffscreenSampleCount._8x:
-            {
-                sampleCount = 8;
-                break;
-            }
+                {
+                    sampleCount = 8;
+                    break;
+                }
         }
 
         uint offscreenDefaultNumSurfaces = settings.offscreenInitSurfaces;
@@ -269,35 +269,35 @@ public class NoesisRenderer
         switch (settings.glyphTextureSize)
         {
             case NoesisSettings.TextureSize._256x256:
-            {
-                glyphCacheTextureWidth = 256;
-                glyphCacheTextureHeight = 256;
-                break;
-            }
+                {
+                    glyphCacheTextureWidth = 256;
+                    glyphCacheTextureHeight = 256;
+                    break;
+                }
             case NoesisSettings.TextureSize._512x512:
-            {
-                glyphCacheTextureWidth = 512;
-                glyphCacheTextureHeight = 512;
-                break;
-            }
+                {
+                    glyphCacheTextureWidth = 512;
+                    glyphCacheTextureHeight = 512;
+                    break;
+                }
             case NoesisSettings.TextureSize._1024x1024:
-            {
-                glyphCacheTextureWidth = 1024;
-                glyphCacheTextureHeight = 1024;
-                break;
-            }
+                {
+                    glyphCacheTextureWidth = 1024;
+                    glyphCacheTextureHeight = 1024;
+                    break;
+                }
             case NoesisSettings.TextureSize._2048x2048:
-            {
-                glyphCacheTextureWidth = 2048;
-                glyphCacheTextureHeight = 2048;
-                break;
-            }
+                {
+                    glyphCacheTextureWidth = 2048;
+                    glyphCacheTextureHeight = 2048;
+                    break;
+                }
             case NoesisSettings.TextureSize._4096x4096:
-            {
-                glyphCacheTextureWidth = 4096;
-                glyphCacheTextureHeight = 4096;
-                break;
-            }
+                {
+                    glyphCacheTextureWidth = 4096;
+                    glyphCacheTextureHeight = 4096;
+                    break;
+                }
         }
 
         Noesis_RendererSettings(linearRendering, sampleCount, offscreenDefaultNumSurfaces,
