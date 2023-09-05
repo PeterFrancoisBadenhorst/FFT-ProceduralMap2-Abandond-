@@ -10,7 +10,7 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.Shared.Assets.SRC.Shared
 
         public Vector3 ConvertV2ToV3(Vector2 V2, VectorMathConvertionEnum scheme)
         {
-              Vector3 v3=Vector3.zero;
+            Vector3 v3 = Vector3.zero;
             switch (scheme)
             {
                 case VectorMathConvertionEnum.XY_XYZ:
@@ -30,7 +30,7 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.Shared.Assets.SRC.Shared
                     return v3;
                 case VectorMathConvertionEnum.XY_ZXY:
                     v3.x = V2.y;
-                    v3.y =0;
+                    v3.y = 0;
                     v3.z = V2.x;
                     return v3;
                 case VectorMathConvertionEnum.XY_YZX:
@@ -39,7 +39,7 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.Shared.Assets.SRC.Shared
                     v3.z = V2.y;
                     return v3;
                 case VectorMathConvertionEnum.XY_ZYX:
-                    v3.x =0;
+                    v3.x = 0;
                     v3.y = V2.y;
                     v3.z = V2.x;
                     return v3;
