@@ -1,8 +1,8 @@
-using UnityEngine;
-using UnityEngine.Networking;
 using System.Collections;
 using System.Net;
 using System.Threading;
+using UnityEngine;
+using UnityEngine.Networking;
 
 public sealed class GoogleAnalyticsHelper
 {
@@ -41,9 +41,9 @@ public sealed class GoogleAnalyticsHelper
         else if (SystemInfo.operatingSystemFamily == OperatingSystemFamily.Windows)
         {
             user_agent +=
-                " (" + GetWindowsNTVersion(SystemInfo.operatingSystem) + (SystemInfo.operatingSystem.Contains("64bit") ? "; WOW64)" : ")") + 
-                " Unity/" + Application.unityVersion + 
-                " (KHTML, like Gecko) Unity/" + Application.unityVersion + 
+                " (" + GetWindowsNTVersion(SystemInfo.operatingSystem) + (SystemInfo.operatingSystem.Contains("64bit") ? "; WOW64)" : ")") +
+                " Unity/" + Application.unityVersion +
+                " (KHTML, like Gecko) Unity/" + Application.unityVersion +
                 " Unity/" + Application.unityVersion;
         }
         else if (SystemInfo.operatingSystemFamily == OperatingSystemFamily.Linux)
@@ -110,7 +110,7 @@ public sealed class GoogleAnalyticsHelper
                 client.DownloadData(url);
             }
         }
-        catch (System.Exception) {}
+        catch (System.Exception) { }
     }
 
     private static long GetEpochTime()

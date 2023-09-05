@@ -1,7 +1,6 @@
 using System;
-using System.Reflection;
-using System.Runtime.InteropServices;
 using System.Collections.Generic;
+using System.Runtime.InteropServices;
 
 namespace Noesis
 {
@@ -980,15 +979,15 @@ namespace Noesis
         [DllImport(Library.Name)]
         [return: MarshalAs(UnmanagedType.U1)]
         private static extern bool Noesis_DependencyGet_Bool(IntPtr dependencyObject, IntPtr dependencyProperty,
-            bool isNullable, [MarshalAs(UnmanagedType.U1)]out bool isNull);
+            bool isNullable, [MarshalAs(UnmanagedType.U1)] out bool isNull);
 
         [DllImport(Library.Name)]
         private static extern float Noesis_DependencyGet_Float(IntPtr dependencyObject, IntPtr dependencyProperty,
-            bool isNullable, [MarshalAs(UnmanagedType.U1)]out bool isNull);
+            bool isNullable, [MarshalAs(UnmanagedType.U1)] out bool isNull);
 
         [DllImport(Library.Name)]
         private static extern double Noesis_DependencyGet_Double(IntPtr dependencyObject, IntPtr dependencyProperty,
-            bool isNullable, [MarshalAs(UnmanagedType.U1)]out bool isNull);
+            bool isNullable, [MarshalAs(UnmanagedType.U1)] out bool isNull);
 
         [DllImport(Library.Name)]
         private static extern long Noesis_DependencyGet_Int64(IntPtr dependencyObject, IntPtr dependencyProperty,
@@ -1000,19 +999,19 @@ namespace Noesis
 
         [DllImport(Library.Name)]
         private static extern int Noesis_DependencyGet_Int(IntPtr dependencyObject, IntPtr dependencyProperty,
-            bool isNullable, [MarshalAs(UnmanagedType.U1)]out bool isNull);
+            bool isNullable, [MarshalAs(UnmanagedType.U1)] out bool isNull);
 
         [DllImport(Library.Name)]
         private static extern uint Noesis_DependencyGet_UInt(IntPtr dependencyObject, IntPtr dependencyProperty,
-            bool isNullable, [MarshalAs(UnmanagedType.U1)]out bool isNull);
+            bool isNullable, [MarshalAs(UnmanagedType.U1)] out bool isNull);
 
         [DllImport(Library.Name)]
         private static extern short Noesis_DependencyGet_Short(IntPtr dependencyObject, IntPtr dependencyProperty,
-            bool isNullable, [MarshalAs(UnmanagedType.U1)]out bool isNull);
+            bool isNullable, [MarshalAs(UnmanagedType.U1)] out bool isNull);
 
         [DllImport(Library.Name)]
         private static extern ushort Noesis_DependencyGet_UShort(IntPtr dependencyObject, IntPtr dependencyProperty,
-            bool isNullable, [MarshalAs(UnmanagedType.U1)]out bool isNull);
+            bool isNullable, [MarshalAs(UnmanagedType.U1)] out bool isNull);
 
         [DllImport(Library.Name)]
         private static extern IntPtr Noesis_DependencyGet_String(IntPtr dependencyObject, IntPtr dependencyProperty);
@@ -1022,15 +1021,15 @@ namespace Noesis
 
         [DllImport(Library.Name)]
         private static extern IntPtr Noesis_DependencyGet_Color(IntPtr dependencyObject, IntPtr dependencyProperty,
-            bool isNullable, [MarshalAs(UnmanagedType.U1)]out bool isNull);
+            bool isNullable, [MarshalAs(UnmanagedType.U1)] out bool isNull);
 
         [DllImport(Library.Name)]
         private static extern IntPtr Noesis_DependencyGet_Point(IntPtr dependencyObject, IntPtr dependencyProperty,
-            bool isNullable, [MarshalAs(UnmanagedType.U1)]out bool isNull);
+            bool isNullable, [MarshalAs(UnmanagedType.U1)] out bool isNull);
 
         [DllImport(Library.Name)]
         private static extern IntPtr Noesis_DependencyGet_Rect(IntPtr dependencyObject, IntPtr dependencyProperty,
-            bool isNullable, [MarshalAs(UnmanagedType.U1)]out bool isNull);
+            bool isNullable, [MarshalAs(UnmanagedType.U1)] out bool isNull);
 
         [DllImport(Library.Name)]
         private static extern IntPtr Noesis_DependencyGet_Int32Rect(IntPtr dependencyObject, IntPtr dependencyProperty,
@@ -1038,27 +1037,27 @@ namespace Noesis
 
         [DllImport(Library.Name)]
         private static extern IntPtr Noesis_DependencyGet_Size(IntPtr dependencyObject, IntPtr dependencyProperty,
-            bool isNullable, [MarshalAs(UnmanagedType.U1)]out bool isNull);
+            bool isNullable, [MarshalAs(UnmanagedType.U1)] out bool isNull);
 
         [DllImport(Library.Name)]
         private static extern IntPtr Noesis_DependencyGet_Thickness(IntPtr dependencyObject, IntPtr dependencyProperty,
-            bool isNullable, [MarshalAs(UnmanagedType.U1)]out bool isNull);
+            bool isNullable, [MarshalAs(UnmanagedType.U1)] out bool isNull);
 
         [DllImport(Library.Name)]
         private static extern IntPtr Noesis_DependencyGet_CornerRadius(IntPtr dependencyObject, IntPtr dependencyProperty,
-            bool isNullable, [MarshalAs(UnmanagedType.U1)]out bool isNull);
+            bool isNullable, [MarshalAs(UnmanagedType.U1)] out bool isNull);
 
         [DllImport(Library.Name)]
         private static extern IntPtr Noesis_DependencyGet_TimeSpan(IntPtr dependencyObject, IntPtr dependencyProperty,
-            bool isNullable, [MarshalAs(UnmanagedType.U1)]out bool isNull);
+            bool isNullable, [MarshalAs(UnmanagedType.U1)] out bool isNull);
 
         [DllImport(Library.Name)]
         private static extern IntPtr Noesis_DependencyGet_Duration(IntPtr dependencyObject, IntPtr dependencyProperty,
-            bool isNullable, [MarshalAs(UnmanagedType.U1)]out bool isNull);
+            bool isNullable, [MarshalAs(UnmanagedType.U1)] out bool isNull);
 
         [DllImport(Library.Name)]
         private static extern IntPtr Noesis_DependencyGet_KeyTime(IntPtr dependencyObject, IntPtr dependencyProperty,
-            bool isNullable, [MarshalAs(UnmanagedType.U1)]out bool isNull);
+            bool isNullable, [MarshalAs(UnmanagedType.U1)] out bool isNull);
 
         [DllImport(Library.Name)]
         private static extern IntPtr Noesis_DependencyGet_Type(IntPtr dependencyObject, IntPtr dependencyProperty);
@@ -1105,11 +1104,11 @@ namespace Noesis
 
         [DllImport(Library.Name)]
         private static extern void Noesis_DependencySet_String(IntPtr dependencyObject, IntPtr dependencyProperty,
-            [MarshalAs(UnmanagedType.LPWStr)]string val);
+            [MarshalAs(UnmanagedType.LPWStr)] string val);
 
         [DllImport(Library.Name)]
         private static extern void Noesis_DependencySet_Uri(IntPtr dependencyObject, IntPtr dependencyProperty,
-            [MarshalAs(UnmanagedType.LPWStr)]string val);
+            [MarshalAs(UnmanagedType.LPWStr)] string val);
 
         [DllImport(Library.Name)]
         private static extern void Noesis_DependencySet_Color(IntPtr dependencyObject, IntPtr dependencyProperty,

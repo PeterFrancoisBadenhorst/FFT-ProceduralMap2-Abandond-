@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Specialized;
 using System.ComponentModel;
 
@@ -28,7 +27,7 @@ namespace NoesisGUIExtensions
         /// </summary>
         public void Refresh()
         {
-            FilterRequiredEventHandler handler =  FilterRequired;
+            FilterRequiredEventHandler handler = FilterRequired;
             if (handler != null)
             {
                 handler();
@@ -125,34 +124,34 @@ namespace NoesisGUIExtensions
             switch (e.Action)
             {
                 case NotifyCollectionChangedAction.Add:
-                {
-                    RegisterItem(e.NewItems[0]);
-                    Refresh();
-                    break;
-                }
+                    {
+                        RegisterItem(e.NewItems[0]);
+                        Refresh();
+                        break;
+                    }
                 case NotifyCollectionChangedAction.Remove:
-                {
-                    UnregisterItem(e.OldItems[0]);
-                    Refresh();
-                    break;
-                }
+                    {
+                        UnregisterItem(e.OldItems[0]);
+                        Refresh();
+                        break;
+                    }
                 case NotifyCollectionChangedAction.Replace:
-                {
-                    UnregisterItem(e.OldItems[0]);
-                    RegisterItem(e.NewItems[0]);
-                    Refresh();
-                    break;
-                }
+                    {
+                        UnregisterItem(e.OldItems[0]);
+                        RegisterItem(e.NewItems[0]);
+                        Refresh();
+                        break;
+                    }
                 case NotifyCollectionChangedAction.Move:
-                {
-                    break;
-                }
+                    {
+                        break;
+                    }
                 case NotifyCollectionChangedAction.Reset:
-                {
-                    RegisterItems(_itemsSource);
-                    Refresh();
-                    break;
-                }
+                    {
+                        RegisterItems(_itemsSource);
+                        Refresh();
+                        break;
+                    }
             }
         }
 

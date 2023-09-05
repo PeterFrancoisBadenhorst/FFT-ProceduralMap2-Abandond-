@@ -1,7 +1,7 @@
-﻿using System;
+﻿using Noesis;
+using System;
 using System.Collections.Generic;
 using System.Text;
-using Noesis;
 
 namespace NoesisGUIExtensions
 {
@@ -127,7 +127,7 @@ namespace NoesisGUIExtensions
             {
                 InlineCollection collection = textBlock.Inlines;
                 collection.Clear();
-                
+
                 TryParse((string)args.NewValue, 0, textBlock, collection, out _);
             }
         }
@@ -392,7 +392,7 @@ namespace NoesisGUIExtensions
         private static void ParseText(string input, int begin, InlineCollection inlineCollection, out int output)
         {
             StringBuilder stringBuilder = new StringBuilder();
-            
+
             int current = begin;
             for (; current < input.Length; current++)
             {
@@ -430,7 +430,7 @@ namespace NoesisGUIExtensions
         private static bool TryParseContent(string input, int begin, out string content, out int output)
         {
             StringBuilder stringBuilder = new StringBuilder();
-            
+
             int current = begin;
 
             bool useQuotationMarks = false;
@@ -668,6 +668,6 @@ namespace NoesisGUIExtensions
             }
         }
 
-#endregion
+        #endregion
     }
 }

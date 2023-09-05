@@ -1,8 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.ComponentModel;
-using UnityEngine;
 using Noesis;
+using UnityEngine;
 
 public class NoesisWorldUI : MonoBehaviour
 {

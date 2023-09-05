@@ -2,12 +2,12 @@
 
 using Noesis;
 using NoesisApp;
-using UnityEngine;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Collections.Generic;
-using System.Runtime.InteropServices;
 using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
+using UnityEngine;
 
 public class NoesisUnity
 {
@@ -20,10 +20,10 @@ public class NoesisUnity
     {
         Noesis.GUI.DisableSocketInit();
 
-      #if !UNITY_EDITOR && !DEVELOPMENT_BUILD
+#if !UNITY_EDITOR && !DEVELOPMENT_BUILD
         Noesis.GUI.DisableHotReload();
         Noesis.GUI.DisableInspector();
-      #endif
+#endif
 
         Noesis.GUI.Init();
     }
@@ -52,10 +52,10 @@ public class NoesisUnity
                 }
             }
 
-          #if UNITY_EDITOR || DEVELOPMENT_BUILD
+#if UNITY_EDITOR || DEVELOPMENT_BUILD
             SetLogLevel();
             RegisterLog();
-          #endif
+#endif
 
             RegisterError();
             RegisterProviders();
@@ -139,9 +139,9 @@ public class NoesisUnity
                 _settings.applicationResourcesHash = hash;
                 UnityEditor.AssetDatabase.RegisterCustomDependency("Noesis_ApplicationResources", hash);
 
-                #if DEBUG_IMPORTER
+#if DEBUG_IMPORTER
                     Debug.Log($"=> Noesis_ApplicationResources {hash}");
-                #endif
+#endif
             }
         }
     }
@@ -298,7 +298,7 @@ public class NoesisUnity
 #endif
     }
 
-    private delegate void UnityLogCallback(int level, [MarshalAs(UnmanagedType.LPWStr)]string message);
+    private delegate void UnityLogCallback(int level, [MarshalAs(UnmanagedType.LPWStr)] string message);
     private static UnityLogCallback _unityLog = UnityLog;
 
     public static void MuteLog()
@@ -336,30 +336,30 @@ public class NoesisUnity
             switch ((LogLevel)level)
             {
                 case LogLevel.Trace:
-                {
-                    Debug.Log("[NOESIS/T] " + message, context);
-                    break;
-                }
+                    {
+                        Debug.Log("[NOESIS/T] " + message, context);
+                        break;
+                    }
                 case LogLevel.Debug:
-                {
-                    Debug.Log("[NOESIS/D] " + message, context);
-                    break;
-                }
+                    {
+                        Debug.Log("[NOESIS/D] " + message, context);
+                        break;
+                    }
                 case LogLevel.Info:
-                {
-                    Debug.Log("[NOESIS/I] " + message, context);
-                    break;
-                }
+                    {
+                        Debug.Log("[NOESIS/I] " + message, context);
+                        break;
+                    }
                 case LogLevel.Warning:
-                {
-                    Debug.LogWarning("[NOESIS/W] " + message, context);
-                    break;
-                }
+                    {
+                        Debug.LogWarning("[NOESIS/W] " + message, context);
+                        break;
+                    }
                 case LogLevel.Error:
-                {
-                    Debug.LogError("[NOESIS/E] " + message, context);
-                    break;
-                }
+                    {
+                        Debug.LogError("[NOESIS/E] " + message, context);
+                        break;
+                    }
                 default: break;
             }
         }

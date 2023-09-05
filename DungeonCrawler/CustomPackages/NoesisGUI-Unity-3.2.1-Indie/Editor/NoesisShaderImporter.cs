@@ -1,10 +1,10 @@
 //#define DEBUG_IMPORTER
 
-using UnityEngine;
-using UnityEditor;
-using UnityEditor.AssetImporters;
 using System.IO;
 using System.Linq;
+using UnityEditor;
+using UnityEditor.AssetImporters;
+using UnityEngine;
 
 [ScriptedImporter(2, new string[] { "noesiseffect", "noesisbrush" })]
 class NoesisShaderImporter : ScriptedImporter
@@ -61,9 +61,9 @@ class NoesisShaderImporter : ScriptedImporter
 
     public override void OnImportAsset(AssetImportContext ctx)
     {
-        #if DEBUG_IMPORTER
+#if DEBUG_IMPORTER
             Debug.Log($"=> Import {ctx.assetPath}");
-        #endif
+#endif
 
         if (ctx.selectedBuildTarget == BuildTarget.StandaloneWindows || ctx.selectedBuildTarget == BuildTarget.StandaloneWindows64)
         {

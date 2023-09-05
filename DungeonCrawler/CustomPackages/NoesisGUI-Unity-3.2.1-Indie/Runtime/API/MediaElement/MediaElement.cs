@@ -1,16 +1,15 @@
 ﻿using System;
-using System.Runtime.InteropServices;
 
 namespace NoesisApp
 {
     /// <summary>
     /// Arguments for MediaFailed event.
     /// </summary>
-    public class ExceptionRoutedEventArgs: Noesis.RoutedEventArgs
+    public class ExceptionRoutedEventArgs : Noesis.RoutedEventArgs
     {
         public System.Exception ErrorException { get; private set; }
 
-        public ExceptionRoutedEventArgs(Noesis.RoutedEvent ev, object source, System.Exception err): base(ev, source)
+        public ExceptionRoutedEventArgs(Noesis.RoutedEvent ev, object source, System.Exception err) : base(ev, source)
         {
             ErrorException = err;
         }
@@ -20,7 +19,7 @@ namespace NoesisApp
         }
 
         // When compiled in Unity in the same assembly it complains about hiding RoutedEventArgs InvokeHandler member
-        #pragma warning disable 0108
+#pragma warning disable 0108
         private static void InvokeHandler(Delegate handler, IntPtr sender, IntPtr args)
         {
             ExceptionRoutedEventHandler handler_ = (ExceptionRoutedEventHandler)handler;
@@ -29,7 +28,7 @@ namespace NoesisApp
                 handler_(Noesis.BaseComponent.GetProxy(sender), new ExceptionRoutedEventArgs(args, false));
             }
         }
-        #pragma warning restore 0108
+#pragma warning restore 0108
     }
 
     public delegate void ExceptionRoutedEventHandler(object sender, ExceptionRoutedEventArgs e);
@@ -545,38 +544,38 @@ namespace NoesisApp
                     switch (_state)
                     {
                         case MediaState.Manual:
-                        {
-                            break; // ignore
-                        }
+                            {
+                                break; // ignore
+                            }
                         case MediaState.Play:
-                        {
-                            if (_player != null)
                             {
-                                _player.Play();
+                                if (_player != null)
+                                {
+                                    _player.Play();
+                                }
+                                break;
                             }
-                            break;
-                        }
                         case MediaState.Close:
-                        {
-                            DestroyMediaPlayer();
-                            break;
-                        }
+                            {
+                                DestroyMediaPlayer();
+                                break;
+                            }
                         case MediaState.Pause:
-                        {
-                            if (_player != null)
                             {
-                                _player.Pause();
+                                if (_player != null)
+                                {
+                                    _player.Pause();
+                                }
+                                break;
                             }
-                            break;
-                        }
                         case MediaState.Stop:
-                        {
-                            if (_player != null)
                             {
-                                _player.Stop();
+                                if (_player != null)
+                                {
+                                    _player.Stop();
+                                }
+                                break;
                             }
-                            break;
-                        }
                         default: break;
                     }
                 }

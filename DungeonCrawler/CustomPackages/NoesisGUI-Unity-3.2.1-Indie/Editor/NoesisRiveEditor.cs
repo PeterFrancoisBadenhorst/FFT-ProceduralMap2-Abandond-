@@ -1,14 +1,13 @@
 //#define DEBUG_IMPORTER
 
+using Noesis;
+using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.Rendering;
-using Noesis;
-using System.IO;
-using System.Collections.Generic;
 
 [CustomEditor(typeof(NoesisRive))]
-public class NoesisRiveEditor: Editor
+public class NoesisRiveEditor : Editor
 {
     private Noesis.View _view;
     private Noesis.View _viewIcon;
@@ -218,15 +217,15 @@ public class NoesisRiveEditor: Editor
                 switch (Event.current.type)
                 {
                     case UnityEngine.EventType.MouseDown:
-                    {
-                        _view.MouseButtonDown(x, y, button);
-                        break;
-                    }
+                        {
+                            _view.MouseButtonDown(x, y, button);
+                            break;
+                        }
                     case UnityEngine.EventType.MouseUp:
-                    {
-                        _view.MouseButtonUp(x, y, button);
-                        break;
-                    }
+                        {
+                            _view.MouseButtonUp(x, y, button);
+                            break;
+                        }
                 }
             }
         }
@@ -243,9 +242,9 @@ public class NoesisRiveEditor: Editor
 
             if (_viewIcon != null && _viewIcon.Content != null)
             {
-                #if DEBUG_IMPORTER
+#if DEBUG_IMPORTER
                     Debug.Log($"=> RenderStaticPreview {assetPath}");
-                #endif
+#endif
 
                 RenderTexture rt = RenderPreview(_viewIcon, width, height);
 

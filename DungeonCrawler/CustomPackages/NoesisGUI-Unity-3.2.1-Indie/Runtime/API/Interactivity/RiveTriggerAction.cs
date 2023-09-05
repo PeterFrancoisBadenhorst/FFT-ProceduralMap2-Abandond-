@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace NoesisGUIExtensions
+﻿namespace NoesisGUIExtensions
 {
     /// <summary>
     /// An action that will fire a trigger in a RiveControl.

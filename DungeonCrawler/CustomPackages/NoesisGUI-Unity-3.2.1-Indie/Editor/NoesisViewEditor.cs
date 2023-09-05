@@ -106,10 +106,10 @@ public class NoesisViewEditor : Editor
         }
         else
         {
-          #if ENABLE_URP_PACKAGE
-            view.RenderPassEvent = (RenderPassEvent)EditorGUILayout.EnumPopup(new GUIContent("Injection Point", 
+#if ENABLE_URP_PACKAGE
+            view.RenderPassEvent = (RenderPassEvent)EditorGUILayout.EnumPopup(new GUIContent("Injection Point",
                 "Controls when the UI render pass executes"), view.RenderPassEvent);
-          #endif
+#endif
 
             bool depthTesting = EditorGUILayout.Toggle(new GUIContent("World Space UI",
                 "World Space UI is positioned in the world among other objects in the Scene"
@@ -122,27 +122,27 @@ public class NoesisViewEditor : Editor
 
         EditorGUILayout.BeginHorizontal();
         GUIContent[] options = { new GUIContent("Low Quality"), new GUIContent("Medium Quality"), new GUIContent("High Quality"), new GUIContent("Custom Quality") };
-        int[] values = { 0, 1, 2, 3};
+        int[] values = { 0, 1, 2, 3 };
         float inMaxError = view.TessellationMaxPixelError;
         int value = inMaxError == 0.7f ? 0 : inMaxError == 0.4f ? 1 : inMaxError == 0.2f ? 2 : 3;
-        value = EditorGUILayout.IntPopup(new GUIContent("Tessellation Pixel Error", "Tessellation curve tolerance in screen space. " + 
+        value = EditorGUILayout.IntPopup(new GUIContent("Tessellation Pixel Error", "Tessellation curve tolerance in screen space. " +
             "'Medium Quality' is usually fine for PPAA (non-multisampled) while 'High Quality' is the recommended pixel error if you are rendering to a 8x multisampled surface"),
             value, options, values);
-        float outMaxError = value == 0 ? 0.7f : value == 1 ? 0.4f : value == 2 ? 0.2f: inMaxError;
+        float outMaxError = value == 0 ? 0.7f : value == 1 ? 0.4f : value == 2 ? 0.2f : inMaxError;
         view.TessellationMaxPixelError = Math.Max(0.01f, EditorGUILayout.FloatField(outMaxError, GUILayout.Width(64)));
         EditorGUILayout.EndHorizontal();
 
         RenderMode renderMode = (RenderMode)EditorGUILayout.EnumPopup(new GUIContent("Debug Render Flags",
-            "Enables debugging render flags." + 
-            "\n\n- Wireframe: toggles wireframe mode when rendering triangles" + 
-            "\n\n- ColorBatches: each batch submitted to the GPU is given a unique solid color" + 
+            "Enables debugging render flags." +
+            "\n\n- Wireframe: toggles wireframe mode when rendering triangles" +
+            "\n\n- ColorBatches: each batch submitted to the GPU is given a unique solid color" +
             "\n\n- Overdraw: displays pixel overdraw using blending layers. Different colors are used for each type of triangles." +
                 "'Green' for normal ones, 'Red' for opacities and 'Blue' for clipping masks"
             ), ToRenderMode(renderFlags));
         renderFlags = (renderFlags & ~(Noesis.RenderFlags.Wireframe | Noesis.RenderFlags.ColorBatches | Noesis.RenderFlags.Overdraw))
             | ToRenderFlags(renderMode);
 
-        bool ppaa = EditorGUILayout.Toggle(new GUIContent("Enable PPAA", 
+        bool ppaa = EditorGUILayout.Toggle(new GUIContent("Enable PPAA",
             "Per-Primitive Antialiasing extrudes the contours of the geometry and smooths them. " +
             "It is a 'cheap' antialiasing algorithm useful when GPU MSAA is not enabled.\n\n" +
             "Not recommended when using World Space UI or Transform3D."),
@@ -208,7 +208,7 @@ public class NoesisViewEditor : Editor
         var actionMaps = view.Actions ? view.Actions.actionMaps.Select(x => x.name).ToArray() : new string[0];
         var actionMapIndex = EditorGUILayout.Popup(new GUIContent("Action Map",
             "Set of actions being used by this view and enabled by default"), Array.IndexOf(actionMaps, view.ActionMap), actionMaps);
-        actionMapIndex = Math.Max(actionMapIndex, actionMaps.Length > 0 ? 0 : - 1);
+        actionMapIndex = Math.Max(actionMapIndex, actionMaps.Length > 0 ? 0 : -1);
         view.ActionMap = actionMapIndex != -1 ? actionMaps[actionMapIndex] : view.ActionMap;
 
         _showMatchedActions = EditorGUILayout.BeginFoldoutHeaderGroup(_showMatchedActions, "Matched Actions");
@@ -240,13 +240,13 @@ public class NoesisViewEditor : Editor
 
         EditorGUILayout.Space();
 
-      #if !ENABLE_INPUT_SYSTEM
+#if !ENABLE_INPUT_SYSTEM
         if (view.EnableActions)
         {
             EditorGUILayout.HelpBox("Actions requires 'Active Input Handling' set to " +
                 "'Input System Package (New)' or 'Both' in Player Settings", MessageType.Warning);
         }
-      #endif
+#endif
     }
 
     public override bool HasPreviewGUI()

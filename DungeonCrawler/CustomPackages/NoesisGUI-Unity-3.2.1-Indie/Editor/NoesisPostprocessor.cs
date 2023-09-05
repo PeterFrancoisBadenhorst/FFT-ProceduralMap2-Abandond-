@@ -1,14 +1,13 @@
 //#define DEBUG_IMPORTER
 
-using UnityEditor;
-using UnityEngine;
 using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Collections.Generic;
-using UnityEngine.Video;
+using UnityEditor;
 using UnityEditor.Build;
 using UnityEditor.Build.Reporting;
+using UnityEngine;
 
 public class NoesisPostprocessor : AssetPostprocessor
 {
@@ -45,9 +44,9 @@ public class NoesisPostprocessor : AssetPostprocessor
 
                                 if (xaml == NoesisSettings.Get().applicationResources)
                                 {
-                                    #if DEBUG_IMPORTER
+#if DEBUG_IMPORTER
                                         Debug.Log("=> Reloading Theme");
-                                    #endif
+#endif
 
                                     NoesisUnity.ReloadApplicationResources();
                                 }
@@ -70,9 +69,9 @@ public class NoesisPostprocessor : AssetPostprocessor
     {
         if (NoesisUnity.Initialized && NoesisSettings.Get().reloadEnabled)
         {
-            #if DEBUG_IMPORTER
+#if DEBUG_IMPORTER
                 Debug.Log($"=> Reload {uri}");
-            #endif
+#endif
 
             NoesisUnity.MuteLog();
             NoesisXamlProvider.instance.ReloadXaml(uri);
@@ -84,9 +83,9 @@ public class NoesisPostprocessor : AssetPostprocessor
     {
         if (NoesisUnity.Initialized && NoesisSettings.Get().reloadEnabled)
         {
-            #if DEBUG_IMPORTER
+#if DEBUG_IMPORTER
                 Debug.Log($"=> Reload {uri}");
-            #endif
+#endif
 
             NoesisFontProvider.instance.ReloadFont(uri);
         }
@@ -149,9 +148,9 @@ public class NoesisPostprocessor : AssetPostprocessor
         {
             if (HasNoesisLabel())
             {
-                #if DEBUG_IMPORTER
+#if DEBUG_IMPORTER
                     Debug.Log($"=> Premult {assetPath}");
-                #endif
+#endif
 
                 Color[] c = texture.GetPixels(0);
 
@@ -243,11 +242,11 @@ public class NoesisBuildProcessor : IPreprocessBuildWithReport
     public int callbackOrder { get { return 0; } }
     public void OnPreprocessBuild(BuildReport report)
     {
-        #if !UNITY_2021_2_OR_NEWER
+#if !UNITY_2021_2_OR_NEWER
             if (report.summary.platform == BuildTarget.WebGL)
             {
                 Debug.LogError("Unity 2021.2+ is required for using NoesisGUI + WebGL");
             }
-        #endif
+#endif
     }
 }

@@ -1,7 +1,5 @@
 using UnityEditor;
 using UnityEngine;
-using System;
-using System.Collections;
 
 public class NoesisAbout : EditorWindow
 {

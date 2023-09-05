@@ -133,7 +133,7 @@ namespace Noesis
             }
         }
 
-        internal TouchDevice(UIElement target, ulong id): base(target)
+        internal TouchDevice(UIElement target, ulong id) : base(target)
         {
             Id = id;
         }
@@ -473,11 +473,11 @@ namespace Noesis
 
         [DllImport(Library.Name)]
         private static extern void Noesis_Event_Bind(RaiseEventCallback callback,
-            IntPtr element, [MarshalAs(UnmanagedType.LPWStr)]string eventId);
+            IntPtr element, [MarshalAs(UnmanagedType.LPWStr)] string eventId);
 
         [DllImport(Library.Name)]
         private static extern void Noesis_Event_Unbind(RaiseEventCallback callback,
-            IntPtr element, [MarshalAs(UnmanagedType.LPWStr)]string eventId);
+            IntPtr element, [MarshalAs(UnmanagedType.LPWStr)] string eventId);
         #endregion
     }
 
@@ -879,9 +879,10 @@ namespace Noesis
         private static void RegisterRoutedEvent(RoutedEvent routedEvent,
             Type handlerType, InvokeHandlerDelegate invoker)
         {
-            _handlerTypes.Add(Key(routedEvent), new HandlerInfo 
+            _handlerTypes.Add(Key(routedEvent), new HandlerInfo
             {
-                Type = handlerType, Invoker = invoker
+                Type = handlerType,
+                Invoker = invoker
             });
         }
 
@@ -890,7 +891,8 @@ namespace Noesis
         {
             _handlerTypes.Add(Key(eventId), new HandlerInfo
             {
-                Type = handlerType, Invoker = invoker
+                Type = handlerType,
+                Invoker = invoker
             });
         }
 
@@ -915,7 +917,7 @@ namespace Noesis
         #region Imports
         [DllImport(Library.Name)]
         private static extern IntPtr Noesis_EventManager_RegisterRoutedEvent(
-            [MarshalAs(UnmanagedType.LPWStr)]string name, int routingStrategy, IntPtr ownerType);
+            [MarshalAs(UnmanagedType.LPWStr)] string name, int routingStrategy, IntPtr ownerType);
 
         [DllImport(Library.Name)]
         private static extern void Noesis_EventManager_RegisterClassHandler(IntPtr classType,

@@ -1,17 +1,17 @@
 //#define DEBUG_IMPORTER
 
+using Noesis;
+using System.Collections.Generic;
+using System.IO;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.Rendering;
-using Noesis;
-using System.IO;
-using System.Collections.Generic;
 
 [CustomEditor(typeof(NoesisFont))]
-public class NoesisFontEditor: Editor
+public class NoesisFontEditor : Editor
 {
     struct Face
-    {   
+    {
         public int index;
         public string family;
         public Noesis.FontWeight weight;
@@ -62,7 +62,7 @@ public class NoesisFontEditor: Editor
             TextBlock text = new TextBlock();
             text.Margin = new Thickness(2);
             text.Foreground = new SolidColorBrush(Colors.Black);
- 
+
             AddRun(text, 12, family);
             AddRun(text, 18, family);
             AddRun(text, 24, family);
@@ -99,7 +99,7 @@ public class NoesisFontEditor: Editor
 
             box.Child = text;
         }
-        
+
         root.Children.Add(box);
         return root;
     }
@@ -148,7 +148,7 @@ public class NoesisFontEditor: Editor
             _faces.Clear();
             Noesis.GUI.EnumFontFaces(stream, (index_, family_, weight_, style_, stretch_) =>
             {
-                _faces.Add(new Face() { index = index_, family = family_, weight = weight_, style = style_, stretch = stretch_ } );
+                _faces.Add(new Face() { index = index_, family = family_, weight = weight_, style = style_, stretch = stretch_ });
             });
         }
 
@@ -316,9 +316,9 @@ public class NoesisFontEditor: Editor
 
             if (_viewIcon != null && _viewIcon.Content != null)
             {
-                #if DEBUG_IMPORTER
+#if DEBUG_IMPORTER
                     Debug.Log($"=> RenderStaticPreview {assetPath}");
-                #endif
+#endif
 
                 RenderTexture rt = RenderPreview(_viewIcon, width, height);
 

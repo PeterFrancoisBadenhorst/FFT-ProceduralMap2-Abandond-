@@ -1,14 +1,14 @@
 //#define DEBUG_IMPORTER
 
-using UnityEngine;
-using System.Linq;
-using System.IO;
 using System;
+using System.IO;
+using System.Linq;
+using UnityEngine;
 
 /// <summary>
 /// Noesis global settings
 /// </summary>
-public class NoesisSettings: ScriptableObject
+public class NoesisSettings : ScriptableObject
 {
     private static NoesisSettings _settings;
 
@@ -30,17 +30,17 @@ public class NoesisSettings: ScriptableObject
     {
         if (_settings == null)
         {
-        #if UNITY_EDITOR
+#if UNITY_EDITOR
             string path = UnityEditor.AssetDatabase.FindAssets("t:NoesisSettings")
                 .Select(x => UnityEditor.AssetDatabase.GUIDToAssetPath(x))
                 .FirstOrDefault();
 
             _settings = (NoesisSettings)UnityEditor.AssetDatabase.LoadAssetAtPath(path, typeof(NoesisSettings));
 
-            #if DEBUG_IMPORTER
+#if DEBUG_IMPORTER
                 // IMPORTANT: Settings must not be loaded while importing assets
                 Debug.Log($"=> Settings {_settings},{_settings?.licenseName},{_settings?.applicationResources},{_settings?.defaultFont}");
-            #endif
+#endif
 
             if (_settings == null)
             {
@@ -75,15 +75,15 @@ public class NoesisSettings: ScriptableObject
             NoesisUnity.ReloadDefaultFont();
             NoesisUnity.ReloadDefaultFontParams();
 
-        #else
+#else
             _settings = Resources.FindObjectsOfTypeAll<NoesisSettings>().FirstOrDefault();
 
             if (_settings == null)
             {
                 Debug.LogError("Noesis settings asset not found");
             }
-        #endif
-         }
+#endif
+        }
 
         return _settings;
     }
@@ -345,7 +345,7 @@ public class NoesisSettings: ScriptableObject
     {
         get { return version; }
         set
-        { 
+        {
             if (version != value)
             {
                 version = value;

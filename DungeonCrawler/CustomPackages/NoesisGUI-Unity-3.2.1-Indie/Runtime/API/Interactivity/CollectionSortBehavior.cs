@@ -1,5 +1,4 @@
 ﻿using Noesis;
-using System;
 using System.Collections;
 using System.Collections.ObjectModel;
 using System.Collections.Specialized;
@@ -177,33 +176,33 @@ namespace NoesisGUIExtensions
             switch (e.Action)
             {
                 case NotifyCollectionChangedAction.Add:
-                {
-                    AddSortedItem(Comparer, SortedItems, e.NewItems[0]);
-                    break;
-                }
+                    {
+                        AddSortedItem(Comparer, SortedItems, e.NewItems[0]);
+                        break;
+                    }
                 case NotifyCollectionChangedAction.Remove:
-                {
-                    RemSortedItem(Comparer, SortedItems, e.OldItems[0]);
-                    break;
-                }
+                    {
+                        RemSortedItem(Comparer, SortedItems, e.OldItems[0]);
+                        break;
+                    }
                 case NotifyCollectionChangedAction.Replace:
-                {
-                    SortComparer comparer = Comparer;
-                    SortedCollection sorted = SortedItems;
-                    RemSortedItem(comparer, sorted, e.OldItems[0]);
-                    AddSortedItem(comparer, sorted, e.NewItems[0]);
-                    break;
-                }
+                    {
+                        SortComparer comparer = Comparer;
+                        SortedCollection sorted = SortedItems;
+                        RemSortedItem(comparer, sorted, e.OldItems[0]);
+                        AddSortedItem(comparer, sorted, e.NewItems[0]);
+                        break;
+                    }
                 case NotifyCollectionChangedAction.Move:
-                {
-                    // nothing to do
-                    break;
-                }
+                    {
+                        // nothing to do
+                        break;
+                    }
                 case NotifyCollectionChangedAction.Reset:
-                {
-                    SortItems();
-                    break;
-                }
+                    {
+                        SortItems();
+                        break;
+                    }
             }
         }
 

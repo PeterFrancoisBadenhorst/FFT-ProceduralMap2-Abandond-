@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Noesis
+﻿namespace Noesis
 {
     /// <summary>
     ///     Interface through which a layout element (such as a panel) marked
@@ -11,7 +9,7 @@ namespace Noesis
     ///     IItemContainerGenerator interface.  This is used for virtualizing
     ///     panels.
     /// </summary>
-    public interface IRecyclingItemContainerGenerator: IItemContainerGenerator
+    public interface IRecyclingItemContainerGenerator : IItemContainerGenerator
     {
         /// <summary>
         /// Recycle generated elements.

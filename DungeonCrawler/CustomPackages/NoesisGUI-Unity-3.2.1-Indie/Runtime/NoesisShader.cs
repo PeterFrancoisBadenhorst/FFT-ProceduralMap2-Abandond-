@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class NoesisShader: ScriptableObject
+public class NoesisShader : ScriptableObject
 {
     public byte[] effect_bytecode;
     public System.IntPtr effect;

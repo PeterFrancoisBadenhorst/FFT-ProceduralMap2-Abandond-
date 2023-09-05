@@ -1,8 +1,8 @@
-using UnityEditor;
 using System.IO;
+using UnityEditor;
 
 [CustomEditor(typeof(NoesisShader))]
-public class NoesisShaderEditor: Editor
+public class NoesisShaderEditor : Editor
 {
     public void OnEnable()
     {

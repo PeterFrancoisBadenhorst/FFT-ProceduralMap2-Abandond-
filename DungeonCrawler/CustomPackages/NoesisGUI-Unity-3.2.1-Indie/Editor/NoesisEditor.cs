@@ -39,7 +39,7 @@ public class NoesisEditor
     /// </summary>
     private static void HierarchyWindowItemOnGUI(int instancedID, Rect selectionRect)
     {
-        if(!selectionRect.Contains(Event.current.mousePosition))
+        if (!selectionRect.Contains(Event.current.mousePosition))
         {
             return;
         }

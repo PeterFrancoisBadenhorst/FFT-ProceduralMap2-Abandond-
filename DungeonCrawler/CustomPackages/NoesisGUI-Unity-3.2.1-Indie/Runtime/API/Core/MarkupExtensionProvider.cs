@@ -165,13 +165,13 @@ namespace Noesis
         static extern IntPtr MarkupExtensionProvider_BaseUri(HandleRef provider);
 
         [DllImport(Library.Name)]
-        static extern IntPtr MarkupExtensionProvider_ResolveType(HandleRef provider, [MarshalAs(UnmanagedType.LPWStr)]string name);
+        static extern IntPtr MarkupExtensionProvider_ResolveType(HandleRef provider, [MarshalAs(UnmanagedType.LPWStr)] string name);
 
         [DllImport(Library.Name)]
-        static extern IntPtr MarkupExtensionProvider_GetNamespace(HandleRef provider, [MarshalAs(UnmanagedType.LPWStr)]string name);
+        static extern IntPtr MarkupExtensionProvider_GetNamespace(HandleRef provider, [MarshalAs(UnmanagedType.LPWStr)] string name);
 
         [DllImport(Library.Name)]
-        static extern IntPtr MarkupExtensionProvider_ResolveName(HandleRef provider, [MarshalAs(UnmanagedType.LPWStr)]string name);
+        static extern IntPtr MarkupExtensionProvider_ResolveName(HandleRef provider, [MarshalAs(UnmanagedType.LPWStr)] string name);
 
         #endregion
     }

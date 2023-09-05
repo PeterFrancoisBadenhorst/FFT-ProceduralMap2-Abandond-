@@ -68,7 +68,7 @@ namespace Noesis
         }
 
         #region Private members
-        internal Renderer(IntPtr cPtr, bool ownMemory): base(cPtr, ownMemory)
+        internal Renderer(IntPtr cPtr, bool ownMemory) : base(cPtr, ownMemory)
         {
         }
 

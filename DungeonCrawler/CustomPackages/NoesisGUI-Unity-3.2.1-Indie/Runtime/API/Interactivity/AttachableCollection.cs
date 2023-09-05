@@ -9,7 +9,7 @@ namespace NoesisApp
     /// Represents a collection of IAttachedObject with a shared AssociatedObject and provides
     /// change notifications to its contents when that AssociatedObject changes.
     /// </summary>
-    public abstract class AttachableCollection<T> : FreezableCollection<T>, IAttachedObject where T: Freezable
+    public abstract class AttachableCollection<T> : FreezableCollection<T>, IAttachedObject where T : Freezable
     {
         protected AttachableCollection()
         {
@@ -97,45 +97,45 @@ namespace NoesisApp
             switch (e.Action)
             {
                 case NotifyCollectionChangedAction.Add:
-                {
-                    foreach (object item in e.NewItems)
                     {
-                        ItemAdded((T)item);
+                        foreach (object item in e.NewItems)
+                        {
+                            ItemAdded((T)item);
+                        }
+                        break;
                     }
-                    break;
-                }
                 case NotifyCollectionChangedAction.Remove:
-                {
-                    foreach (object item in e.OldItems)
                     {
-                        ItemRemoved((T)item);
+                        foreach (object item in e.OldItems)
+                        {
+                            ItemRemoved((T)item);
+                        }
+                        break;
                     }
-                    break;
-                }
                 case NotifyCollectionChangedAction.Replace:
-                {
-                    foreach (object item in e.OldItems)
                     {
-                        ItemRemoved((T)item);
+                        foreach (object item in e.OldItems)
+                        {
+                            ItemRemoved((T)item);
+                        }
+                        foreach (object item in e.NewItems)
+                        {
+                            ItemAdded((T)item);
+                        }
+                        break;
                     }
-                    foreach (object item in e.NewItems)
-                    {
-                        ItemAdded((T)item);
-                    }
-                    break;
-                }
                 case NotifyCollectionChangedAction.Move:
-                {
-                    break;
-                }
-                case NotifyCollectionChangedAction.Reset:
-                {
-                    foreach (object item in _items)
                     {
-                        ItemRemoved((T)item);
+                        break;
                     }
-                    break;
-                }
+                case NotifyCollectionChangedAction.Reset:
+                    {
+                        foreach (object item in _items)
+                        {
+                            ItemRemoved((T)item);
+                        }
+                        break;
+                    }
             }
 
             _items.Clear();

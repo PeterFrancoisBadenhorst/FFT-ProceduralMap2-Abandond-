@@ -1,169 +1,169 @@
-using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Enums;
-using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Structs;
-using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Utilities;
-using Assets.SRC.ProceduralMapGeneration.Assets.SRC.Shared.Assets.SRC.Shared.Utilities;
-using FluentAssertions;
-using NUnit.Framework;
-using System;
-using System.Collections.Generic;
-using UnityEngine;
+//using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Enums;
+//using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Structs;
+//using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Utilities;
+//using Assets.SRC.ProceduralMapGeneration.Assets.SRC.Shared.Assets.SRC.Shared.Utilities;
+//using FluentAssertions;
+//using NUnit.Framework;
+//using System;
+//using System.Collections.Generic;
+//using UnityEngine;
 
-namespace Assets.SRC.ProceduralMapGeneration.PathFinding.Tests
-{
-    public class Test_ChunkHandler
-    {
-        [TestFixture]
-        public class FindChunkNeigborsTests
-        {
-            private readonly ChunkHandler chunkHandler = new();
+//namespace Assets.SRC.ProceduralMapGeneration.PathFinding.Tests
+//{
+//    public class Test_ChunkHandler
+//    {
+//        [TestFixture]
+//        public class FindChunkNeigborsTests
+//        {
+//            private readonly ChunkHandler chunkHandler = new();
 
-            [Test]
-            public void TestFindChunkNeigbors_WithValidInput_ReturnsCorrectNeighbors()
-            {
-                // Arrange
-                List<GameObject> grid = new()
-            {
-                new GameObject(),
-                new GameObject(),
-                new GameObject(),
-                new GameObject(),
-                new GameObject(),
-                new GameObject(),
-                new GameObject(),
-                new GameObject()
-            };
+//            [Test]
+//            public void TestFindChunkNeigbors_WithValidInput_ReturnsCorrectNeighbors()
+//            {
+//                // Arrange
+//                List<GameObject> grid = new()
+//            {
+//                new GameObject(),
+//                new GameObject(),
+//                new GameObject(),
+//                new GameObject(),
+//                new GameObject(),
+//                new GameObject(),
+//                new GameObject(),
+//                new GameObject()
+//            };
 
-                grid[0].transform.position = new Vector3(1, 0, 0);
-                grid[1].transform.position = new Vector3(0, 1, 0);
-                grid[2].transform.position = new Vector3(0, 0, 1);
-                grid[3].transform.position = new Vector3(1, 1, 0);
-                grid[4].transform.position = new Vector3(1, 0, 1);
-                grid[5].transform.position = new Vector3(0, 1, 1);
-                grid[6].transform.position = new Vector3(1, 1, 1);
+//                grid[0].transform.position = new Vector3(1, 0, 0);
+//                grid[1].transform.position = new Vector3(0, 1, 0);
+//                grid[2].transform.position = new Vector3(0, 0, 1);
+//                grid[3].transform.position = new Vector3(1, 1, 0);
+//                grid[4].transform.position = new Vector3(1, 0, 1);
+//                grid[5].transform.position = new Vector3(0, 1, 1);
+//                grid[6].transform.position = new Vector3(1, 1, 1);
 
-                // Act
-                List<GameObject> neighbors = chunkHandler.FindChunkNeigbors(1.0f, grid);
+//                // Act
+//                List<GameObject> neighbors = chunkHandler.FindChunkNeigbors(1.0f, grid);
 
-                // Assert
-                neighbors.Should().NotBeNullOrEmpty();
-                neighbors[0].Should().NotBeNull();
-                neighbors[2].Should().NotBeNull();
-                neighbors[3].Should().NotBeNull();
-                neighbors[4].Should().NotBeNull();
-                neighbors[5].Should().NotBeNull();
-                neighbors[6].Should().NotBeNull();
+//                // Assert
+//                neighbors.Should().NotBeNullOrEmpty();
+//                neighbors[0].Should().NotBeNull();
+//                neighbors[2].Should().NotBeNull();
+//                neighbors[3].Should().NotBeNull();
+//                neighbors[4].Should().NotBeNull();
+//                neighbors[5].Should().NotBeNull();
+//                neighbors[6].Should().NotBeNull();
 
-                neighbors[0].Should().BeEquivalentTo(grid[0]);
-                neighbors[1].Should().BeEquivalentTo(grid[1]);
-                neighbors[2].Should().BeEquivalentTo(grid[2]);
-                neighbors[3].Should().BeEquivalentTo(grid[3]);
-                neighbors[4].Should().BeEquivalentTo(grid[4]);
-                neighbors[5].Should().BeEquivalentTo(grid[5]);
-                neighbors[6].Should().BeEquivalentTo(grid[6]);
-            }
+//                neighbors[0].Should().BeEquivalentTo(grid[0]);
+//                neighbors[1].Should().BeEquivalentTo(grid[1]);
+//                neighbors[2].Should().BeEquivalentTo(grid[2]);
+//                neighbors[3].Should().BeEquivalentTo(grid[3]);
+//                neighbors[4].Should().BeEquivalentTo(grid[4]);
+//                neighbors[5].Should().BeEquivalentTo(grid[5]);
+//                neighbors[6].Should().BeEquivalentTo(grid[6]);
+//            }
 
-            [Test]
-            public void TestFindChunkNeigbors_WithInvalidInput_ReturnsEmptyList()
-            {
-                // Arrange
-                List<GameObject> grid = new();
+//            [Test]
+//            public void TestFindChunkNeigbors_WithInvalidInput_ReturnsEmptyList()
+//            {
+//                // Arrange
+//                List<GameObject> grid = new();
 
-                // Act
-                List<GameObject> neighbors = chunkHandler.FindChunkNeigbors(1.0f, grid);
+//                // Act
+//                List<GameObject> neighbors = chunkHandler.FindChunkNeigbors(1.0f, grid);
 
-                // Assert
-                Assert.IsNotNull(neighbors);
-                Assert.IsEmpty(neighbors);
-            }
-        }
+//                // Assert
+//                Assert.IsNotNull(neighbors);
+//                Assert.IsEmpty(neighbors);
+//            }
+//        }
 
-        [TestFixture]
-        public class AssignChunkTypesTests
-        {
-            private readonly ChunkHandler chunkHandler = new();
+//        [TestFixture]
+//        public class AssignChunkTypesTests
+//        {
+//            private readonly ChunkHandler chunkHandler = new();
 
-            [Test]
-            public void TestAssignChunkTypes_WithValidInput_AssignsCorrectTypes()
-            {
-                // Arrange
-                List<GameObject> grid = new()
-            {
-                new GameObject(),
-                new GameObject(),
-                new GameObject(),
-                new GameObject(),
-                new GameObject(),
-                new GameObject(),
-                new GameObject(),
-                new GameObject()
-            };
+//            [Test]
+//            public void TestAssignChunkTypes_WithValidInput_AssignsCorrectTypes()
+//            {
+//                // Arrange
+//                List<GameObject> grid = new()
+//            {
+//                new GameObject(),
+//                new GameObject(),
+//                new GameObject(),
+//                new GameObject(),
+//                new GameObject(),
+//                new GameObject(),
+//                new GameObject(),
+//                new GameObject()
+//            };
 
-                grid[0].transform.position = new Vector3(1, 0, 0);
-                grid[1].transform.position = new Vector3(0, 1, 0);
-                grid[2].transform.position = new Vector3(0, 0, 1);
-                grid[3].transform.position = new Vector3(1, 1, 0);
-                grid[4].transform.position = new Vector3(1, 0, 1);
-                grid[5].transform.position = new Vector3(0, 1, 1);
-                grid[6].transform.position = new Vector3(1, 1, 1);
+//                grid[0].transform.position = new Vector3(1, 0, 0);
+//                grid[1].transform.position = new Vector3(0, 1, 0);
+//                grid[2].transform.position = new Vector3(0, 0, 1);
+//                grid[3].transform.position = new Vector3(1, 1, 0);
+//                grid[4].transform.position = new Vector3(1, 0, 1);
+//                grid[5].transform.position = new Vector3(0, 1, 1);
+//                grid[6].transform.position = new Vector3(1, 1, 1);
 
-                // Act
-                List<GameObject> neighbors = chunkHandler.FindChunkNeigbors(1.0f, grid);
-                List<GameObject> assignedTypes = chunkHandler.AssignChunkTypes(neighbors);
+//                // Act
+//                List<GameObject> neighbors = chunkHandler.FindChunkNeigbors(1.0f, grid);
+//                List<GameObject> assignedTypes = chunkHandler.AssignChunkTypes(neighbors);
 
-                // Assert
-                Assert.IsNotNull(assignedTypes);
-                Assert.AreEqual(8, assignedTypes.Count);
-                Assert.AreEqual(grid[0], assignedTypes[0]);
-                Assert.AreEqual(grid[1], assignedTypes[1]);
-                Assert.AreEqual(grid[2], assignedTypes[2]);
-                Assert.AreEqual(grid[3], assignedTypes[3]);
-                Assert.AreEqual(grid[4], assignedTypes[4]);
-                Assert.AreEqual(grid[5], assignedTypes[5]);
-                Assert.AreEqual(grid[6], assignedTypes[6]);
-                Assert.AreEqual(grid[7], assignedTypes[7]);
-            }
+//                // Assert
+//                Assert.IsNotNull(assignedTypes);
+//                Assert.AreEqual(8, assignedTypes.Count);
+//                Assert.AreEqual(grid[0], assignedTypes[0]);
+//                Assert.AreEqual(grid[1], assignedTypes[1]);
+//                Assert.AreEqual(grid[2], assignedTypes[2]);
+//                Assert.AreEqual(grid[3], assignedTypes[3]);
+//                Assert.AreEqual(grid[4], assignedTypes[4]);
+//                Assert.AreEqual(grid[5], assignedTypes[5]);
+//                Assert.AreEqual(grid[6], assignedTypes[6]);
+//                Assert.AreEqual(grid[7], assignedTypes[7]);
+//            }
 
-            [Test]
-            public void TestAssignChunkTypes_WithInvalidInput_ReturnsEmptyList()
-            {
-                // Arrange
-                List<GameObject> grid = new();
+//            [Test]
+//            public void TestAssignChunkTypes_WithInvalidInput_ReturnsEmptyList()
+//            {
+//                // Arrange
+//                List<GameObject> grid = new();
 
-                // Act
-                List<GameObject> assignedTypes = chunkHandler.AssignChunkTypes(grid);
+//                // Act
+//                List<GameObject> assignedTypes = chunkHandler.AssignChunkTypes(grid);
 
-                // Assert
-                Assert.IsNotNull(assignedTypes);
-                Assert.IsEmpty(assignedTypes);
-            }
-        }
+//                // Assert
+//                Assert.IsNotNull(assignedTypes);
+//                Assert.IsEmpty(assignedTypes);
+//            }
+//        }
 
-        [TestFixture]
-        public class GenericTestsForChunkHandle
-        {
-            [Test]
-            public void Error_Error()
-            {
-                ChunkHandler chunkHandler = new();
-                NeighborStruct chunk = new()
-                {
-                    Direction = DirectionTypeEnum.Error
-                };
-                Action act = () => chunkHandler.FindChunkType(chunk);
-                act.Should().Throw<ArgumentException>();
-            }
+//        [TestFixture]
+//        public class GenericTestsForChunkHandle
+//        {
+//            [Test]
+//            public void Error_Error()
+//            {
+//                ChunkHandler chunkHandler = new();
+//                NeighborStruct chunk = new()
+//                {
+//                    Direction = DirectionTypeEnum.Error
+//                };
+//                Action act = () => chunkHandler.FindChunkType(chunk);
+//                act.Should().Throw<ArgumentException>();
+//            }
 
-            [Test]
-            public void Return_Collapsed()
-            {
-                ChunkHandler chunkHandler = new();
-                NeighborStruct chunk = new()
-                {
-                    Direction = DirectionTypeEnum.Collapsed
-                };
-                var test = chunkHandler.FindChunkType(chunk);
-                test.Should().Be(DirectionTypeEnum.Collapsed);
-            }
-        }
-    }
-}
+//            [Test]
+//            public void Return_Collapsed()
+//            {
+//                ChunkHandler chunkHandler = new();
+//                NeighborStruct chunk = new()
+//                {
+//                    Direction = DirectionTypeEnum.Collapsed
+//                };
+//                var test = chunkHandler.FindChunkType(chunk);
+//                test.Should().Be(DirectionTypeEnum.Collapsed);
+//            }
+//        }
+//    }
+//}

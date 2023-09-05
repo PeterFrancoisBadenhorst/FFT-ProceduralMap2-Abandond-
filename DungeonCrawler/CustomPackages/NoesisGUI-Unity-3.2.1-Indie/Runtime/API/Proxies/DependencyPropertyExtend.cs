@@ -1,6 +1,6 @@
 using System;
-using System.Runtime.InteropServices;
 using System.Collections.Generic;
+using System.Runtime.InteropServices;
 
 namespace Noesis
 {
@@ -267,7 +267,7 @@ namespace Noesis
 
         [DllImport(Library.Name)]
         private static extern IntPtr Noesis_RegisterDependencyProperty(IntPtr ownerType,
-            [MarshalAs(UnmanagedType.LPStr)]string propertyName,
+            [MarshalAs(UnmanagedType.LPStr)] string propertyName,
             IntPtr propertyType, HandleRef propertyMetadata);
 
         [DllImport(Library.Name)]

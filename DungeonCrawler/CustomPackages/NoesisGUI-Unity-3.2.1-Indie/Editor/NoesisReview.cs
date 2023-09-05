@@ -1,10 +1,9 @@
+using System;
 using UnityEditor;
 using UnityEngine;
-using System;
-using System.Collections;
 
 
-public class NoesisReview: EditorWindow
+public class NoesisReview : EditorWindow
 {
     private const string ReviewStatusKey = "NoesisReviewStatus";
     private const string ReviewDateKey = "NoesisReviewDate";
@@ -121,7 +120,7 @@ public class NoesisReview: EditorWindow
             GUILayout.MinHeight(40.0f), GUILayout.MinWidth(150.0f) }))
         {
             GoogleAnalyticsHelper.LogEvent("Review", "Reviewed", 0);
-            UnityEngine.Application.OpenURL("http://u3d.as/55A"); 
+            UnityEngine.Application.OpenURL("http://u3d.as/55A");
             EditorPrefs.SetInt(ReviewStatusKey, (int)State.Reviewed);
             Close();
         }

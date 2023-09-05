@@ -1,5 +1,4 @@
 using FluentAssertions.Equivalency.Execution;
-using FluentAssertions.Equivalency.Tracing;
 using FluentAssertions.Execution;
 using System.Collections.Generic;
 using System.Linq;

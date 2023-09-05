@@ -516,11 +516,11 @@ namespace Noesis
         #endregion
 
         #region Private members
-        internal View(FrameworkElement content): this(RegisterContent(content))
+        internal View(FrameworkElement content) : this(RegisterContent(content))
         {
         }
 
-        internal View(IntPtr cPtr, bool ownMemory): base(cPtr, ownMemory)
+        internal View(IntPtr cPtr, bool ownMemory) : base(cPtr, ownMemory)
         {
         }
 

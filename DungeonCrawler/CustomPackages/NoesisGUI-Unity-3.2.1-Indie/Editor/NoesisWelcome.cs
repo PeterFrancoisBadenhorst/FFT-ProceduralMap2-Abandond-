@@ -1,8 +1,6 @@
+using System.IO;
 using UnityEditor;
 using UnityEngine;
-using System;
-using System.Collections;
-using System.IO;
 
 public class NoesisWelcome : EditorWindow
 {
