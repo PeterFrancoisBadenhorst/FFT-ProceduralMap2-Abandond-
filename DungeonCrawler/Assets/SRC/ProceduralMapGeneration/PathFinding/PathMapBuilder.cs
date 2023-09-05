@@ -1,14 +1,9 @@
 ﻿using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Global;
 using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Modles;
-using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Enums;
-using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.ScriptableObjects;
-using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Utilities;
+using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Mono.Behaviors;
 using System.Collections.Generic;
-using System.Diagnostics.CodeAnalysis;
 using System.Linq;
-using System.Runtime.CompilerServices;
 using UnityEngine;
-using UnityEngine.TestTools;
 
 namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.PathFinding
 {
@@ -30,7 +25,7 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.
             if (CreationModel == null) throw new System.ArgumentNullException(nameof(CreationModel));
 
             // Clear the grid relations list
-            GlobalVariables.CreationModel.GridRelations.Clear();
+            //GlobalVariables.CreationModel.GridRelations.Clear();
             // Create a grid.
             GlobalVariables.CreationModel.Grid = GlobalVariables.CreationModel._gridCreate.CreateGrid();
             // Create a node grid.
@@ -48,9 +43,11 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.
             GlobalVariables.CreationModel._chunkHandler.FindChunkNeigbors();
 
             // Assign the chunk types
-            GlobalVariables.CreationModel.GridRelations = GlobalVariables.CreationModel._chunkHandler.AssignChunkTypes(GlobalVariables.CreationModel.GridRelations);
+            GlobalVariables.CreationModel._chunkHandler.AssignChunkTypes();
             // Set the child tiles
             GlobalVariables.CreationModel._populateTilePositionsBehavior.SetChildTile();
+
+            UtilitiesBehaviour.Instantiate(GlobalVariables.CreationModel.PlayerPrefab, GlobalVariables.CreationModel.WorkingEnds[0],Quaternion.identity);
 
         }
 
