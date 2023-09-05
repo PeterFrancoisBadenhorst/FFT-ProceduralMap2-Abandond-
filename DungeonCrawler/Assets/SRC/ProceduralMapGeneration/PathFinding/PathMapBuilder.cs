@@ -1,6 +1,6 @@
-﻿using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Global;
-using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Modles;
-using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Mono.Behaviors;
+﻿using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Enums;
+using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.ScriptableObjects;
+using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Utilities;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -9,6 +9,13 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.
 {
     public class PathMapBuilder
     {
+        [assembly: InternalsVisibleTo("__Tests__")]
+        List<GameObject> gridRelations = new();
+        [assembly: InternalsVisibleTo("__Tests__")]
+        readonly PopulateTilePositions _populateTilePositionsBehavior = new();
+        readonly GridCreate _gridCreate = new();
+        readonly ChunkHandler _chunkHandler = new();
+        readonly NewPathFinding _newPathFinding = new();
 
         /**
         * Creates a map with the specified size, scale, and grid type. The map is then populated with objects, and the neighboring chunks are found. Finally, the chunk types are assigned.
@@ -20,34 +27,30 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.
         * @param MapTotalFillPercentage The percentage of the map that should be filled with objects.
         * @param gridType The type of grid to create.
         */
-        public void CreateMap(ProcedualMapGenCreationModel CreationModel)
+        public void CreateMap(int GridSize, float GridScale, Transform GridParent, DirectionalTilesScriptableObject scriptRef, int MapTotalFillPercentage, GridTypeEnum gridType)
         {
-            if (CreationModel == null) throw new System.ArgumentNullException(nameof(CreationModel));
-
             // Clear the grid relations list
-            //GlobalVariables.CreationModel.GridRelations.Clear();
+            gridRelations.Clear();
             // Create a grid.
-            GlobalVariables.CreationModel.Grid = GlobalVariables.CreationModel._gridCreate.CreateGrid();
+            Vector3[] grid = _gridCreate.CreateGrid(GridSize, GridScale, gridType);
             // Create a node grid.
-            GlobalVariables.CreationModel.MapGrid = GlobalVariables.CreationModel._newPathFinding.NodeGridCreator();
+            Vector3[] mapGrid = _newPathFinding.NodeGridCreator(grid, GridScale);
             // Create a list of all the points in the map grid.
-            GlobalVariables.CreationModel.MapTotal = MapTotal();
+            List<Vector3> mapTotal = MapTotal(mapGrid);
             // Set the MapTotalFillPercentage variable to the number of points in the grid divided by the MapTotalFillPercentage parameter.
-            GlobalVariables.CreationModel.MapTotalFillPercentage = GlobalVariables.CreationModel.Grid.Length / GlobalVariables.CreationModel.MapTotalFillPercentage;
+            MapTotalFillPercentage = grid.Length / MapTotalFillPercentage;
             // Populate the map with objects.
-            FillMap();
+            FillMap(mapTotal, MapTotalFillPercentage, grid, GridScale, mapGrid);
 
             // Populate the gridRelations list with the GameObjects that were placed in the map.
-            GlobalVariables.CreationModel._gridCreate.PlaceGameObjectsAtGridPositions();
+            gridRelations = _gridCreate.PlaceGameObjectsAtGridPositions(mapGrid, GridParent);
             // Find the neighboring chunks
-            GlobalVariables.CreationModel._chunkHandler.FindChunkNeigbors();
-
+            gridRelations = _chunkHandler.FindChunkNeigbors(GridScale, gridRelations);
+            gridRelations = _chunkHandler.FindChunkNeigbors(GridScale, gridRelations);
             // Assign the chunk types
-            GlobalVariables.CreationModel._chunkHandler.AssignChunkTypes();
+            gridRelations = _chunkHandler.AssignChunkTypes(gridRelations);
             // Set the child tiles
-            GlobalVariables.CreationModel._populateTilePositionsBehavior.SetChildTile();
-
-            UtilitiesBehaviour.Instantiate(GlobalVariables.CreationModel.PlayerPrefab, GlobalVariables.CreationModel.WorkingEnds[0],Quaternion.identity);
+            _populateTilePositionsBehavior.SetChildTile(scriptRef, gridRelations);
 
         }
 
@@ -58,19 +61,19 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.
          *
          * @return A list of all the points in the map grid.
          */
-        public List<Vector3> MapTotal()
+        public List<Vector3> MapTotal(Vector3[] mapGrid)
         {
             // Create a new list to store the map total.
-            GlobalVariables.CreationModel.MapTotal = new();
+            List<Vector3> MapTotal = new();
 
             // Iterate through the map grid and add each point to the map total list.
-            for (int i = 0; i < GlobalVariables.CreationModel.MapGrid.Length; i++)
+            for (int i = 0; i < mapGrid.Length; i++)
             {
-                GlobalVariables.CreationModel.MapTotal.Add(GlobalVariables.CreationModel.MapGrid[i]);
+                MapTotal.Add(mapGrid[i]);
             }
 
             // Return the map total list.
-            return GlobalVariables.CreationModel.MapTotal;
+            return MapTotal;
         }
 
         /**
@@ -82,19 +85,19 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.
          * @param GridScale The scale of the map grid.
          * @param mapGrid The current map grid.
          */
-        public void FillMap()
+        public void FillMap(List<Vector3> mapTotal, float MapTotalFillPercentage, Vector3[] grid, float GridScale, Vector3[] mapGrid)
         {
             // While the map total is less than the desired fill percentage, do the following:
-            while (GlobalVariables.CreationModel.MapTotal.Count < GlobalVariables.CreationModel.MapTotalFillPercentage)
+            while (mapTotal.Count < MapTotalFillPercentage)
             {
                 // Create a temporary grid from the current map total.
-                var tempGrid = GlobalVariables.CreationModel.MapTotal.Count == 0 ? GlobalVariables.CreationModel.MapGrid : GlobalVariables.CreationModel.MapTotal.ToArray();
+                var tempGrid = mapTotal.Count == 0 ? mapGrid : mapTotal.ToArray();
 
                 // Create a new node grid from the original grid and the temporary grid.
-                var temp = GlobalVariables.CreationModel._newPathFinding.NodeGridCreator(GlobalVariables.CreationModel.Grid, tempGrid, GlobalVariables.CreationModel.GridScale);
+                var temp = _newPathFinding.NodeGridCreator(grid, tempGrid, GridScale);
 
                 // Add all the points in the new node grid to the map total list, but only if they are not already in the list.
-                GlobalVariables.CreationModel.MapTotal.AddRange(temp.Where(p => !GlobalVariables.CreationModel.MapTotal.Any(q => p.x == q.x && p.y == q.y && p.z == q.z)));
+                mapTotal.AddRange(temp.Where(p => !mapTotal.Any(q => p.x == q.x && p.y == q.y && p.z == q.z)));
             }
         }
     }

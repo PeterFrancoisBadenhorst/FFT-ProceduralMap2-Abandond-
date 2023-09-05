@@ -1,6 +1,4 @@
-﻿using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Global;
-using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Modles;
-using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.PathFinding;
+﻿using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.PathFinding;
 using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Enums;
 using Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.ScriptableObjects;
 using UnityEngine;
@@ -9,7 +7,6 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.
 {
     internal class DungeonManager : MonoBehaviour
     {
-
         public GameObject GridParent;
         public int GridSize;
         public float GridScale;
@@ -22,21 +19,7 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.
         public DirectionalTilesScriptableObject scriptRef;
         private readonly PathMapBuilder _pathMapBuilder = new();
 
-
-        private void Awake() => _pathMapBuilder.CreateMap(PopulateCreationModel());
-
-        private ProcedualMapGenCreationModel PopulateCreationModel()
-        {
-            if (GlobalVariables.CreationModel == null) GlobalVariables.CreationModel = new();
-            GlobalVariables.CreationModel.GridParent = GridParent;
-            GlobalVariables.CreationModel.GridSize = GridSize;
-            GlobalVariables.CreationModel.GridScale = GridScale;
-            GlobalVariables.CreationModel.GridType = GridType;
-            GlobalVariables.CreationModel.PlayerPrefab = PlayerPrefab;
-            GlobalVariables.CreationModel.MapTotalFillPercentage = MapTotalFillPercentage;
-            GlobalVariables.CreationModel.Rooms = scriptRef;
-            return GlobalVariables.CreationModel;
-        }
+        private void OnEnable() => _pathMapBuilder.CreateMap(GridSize, GridScale, GridParent.transform, scriptRef, MapTotalFillPercentage, GridType);
 
     }
 }

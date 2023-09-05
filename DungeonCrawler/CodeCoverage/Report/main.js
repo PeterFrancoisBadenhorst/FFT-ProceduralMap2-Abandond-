@@ -222,33 +222,82 @@ for (i = 0, l = charts.length; i < l; i++) {
 
 var assemblies = [
   {
+    "name": "PlayerControlAssembly",
+    "classes": [
+      { "name": "BasicRigidBodyPush", "rp": "PlayerControlAssembly_BasicRigidBodyPush.html", "cl": 0, "ucl": 13, "cal": 13, "tl": 35, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [0], "bch": [], "hc": [{ "et": "2023/09/05 - 5:53:35 PM", "cl": 0, "ucl": 13, "cal": 13, "tl": 35, "lcq": 0, "cb": 0, "tb": 0, "bcq": 0 }] },
+      { "name": "StarterAssets.FirstPersonController", "rp": "PlayerControlAssembly_FirstPersonController.html", "cl": 0, "ucl": 116, "cal": 116, "tl": 268, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [0], "bch": [], "hc": [{ "et": "2023/09/05 - 5:53:35 PM", "cl": 0, "ucl": 116, "cal": 116, "tl": 268, "lcq": 0, "cb": 0, "tb": 0, "bcq": 0 }] },
+      { "name": "StarterAssets.StarterAssetsInputs", "rp": "PlayerControlAssembly_StarterAssetsInputs.html", "cl": 0, "ucl": 35, "cal": 35, "tl": 80, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [0], "bch": [], "hc": [{ "et": "2023/09/05 - 5:53:35 PM", "cl": 0, "ucl": 35, "cal": 35, "tl": 80, "lcq": 0, "cb": 0, "tb": 0, "bcq": 0 }] },
+      { "name": "StarterAssets.UICanvasControllerInput", "rp": "PlayerControlAssembly_UICanvasControllerInput.html", "cl": 0, "ucl": 12, "cal": 12, "tl": 33, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [0], "bch": [], "hc": [{ "et": "2023/09/05 - 5:53:35 PM", "cl": 0, "ucl": 12, "cal": 12, "tl": 33, "lcq": 0, "cb": 0, "tb": 0, "bcq": 0 }] },
+      { "name": "UIVirtualButton", "rp": "PlayerControlAssembly_UIVirtualButton.html", "cl": 0, "ucl": 15, "cal": 15, "tl": 41, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [0], "bch": [], "hc": [{ "et": "2023/09/05 - 5:53:35 PM", "cl": 0, "ucl": 15, "cal": 15, "tl": 41, "lcq": 0, "cb": 0, "tb": 0, "bcq": 0 }] },
+      { "name": "UIVirtualJoystick", "rp": "PlayerControlAssembly_UIVirtualJoystick.html", "cl": 0, "ucl": 60, "cal": 60, "tl": 113, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [0], "bch": [], "hc": [{ "et": "2023/09/05 - 5:53:35 PM", "cl": 0, "ucl": 60, "cal": 60, "tl": 113, "lcq": 0, "cb": 0, "tb": 0, "bcq": 0 }] },
+      { "name": "UIVirtualTouchZone", "rp": "PlayerControlAssembly_UIVirtualTouchZone.html", "cl": 0, "ucl": 64, "cal": 64, "tl": 125, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [0], "bch": [], "hc": [{ "et": "2023/09/05 - 5:53:35 PM", "cl": 0, "ucl": 64, "cal": 64, "tl": 125, "lcq": 0, "cb": 0, "tb": 0, "bcq": 0 }] },
+    ]},
+  {
     "name": "ProceduralMapGenerationAssembly",
     "classes": [
-      { "name": "Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.PathFinding.NewPathFinding", "rp": "ProceduralMapGenerationAssembly_NewPathFinding.html", "cl": 108, "ucl": 2, "cal": 110, "tl": 188, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [98.1], "bch": [], "hc": [{ "et": "2023/07/13 - 8:12:04 PM", "cl": 108, "ucl": 2, "cal": 110, "tl": 188, "lcq": 98.1, "cb": 0, "tb": 0, "bcq": 0 }, { "et": "2023/07/13 - 8:23:34 PM", "cl": 108, "ucl": 2, "cal": 110, "tl": 188, "lcq": 98.1, "cb": 0, "tb": 0, "bcq": 0 }] },
-      { "name": "Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.PathFinding.PathMapBuilder", "rp": "ProceduralMapGenerationAssembly_PathMapBuilder.html", "cl": 28, "ucl": 6, "cal": 34, "tl": 57, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [82.3], "bch": [], "hc": [{ "et": "2023/07/13 - 8:12:04 PM", "cl": 28, "ucl": 6, "cal": 34, "tl": 57, "lcq": 82.3, "cb": 0, "tb": 0, "bcq": 0 }, { "et": "2023/07/13 - 8:23:34 PM", "cl": 28, "ucl": 6, "cal": 34, "tl": 57, "lcq": 82.3, "cb": 0, "tb": 0, "bcq": 0 }] },
-      { "name": "Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Noise.PerlinNoiseGenerator", "rp": "ProceduralMapGenerationAssembly_PerlinNoiseGenerator.html", "cl": 13, "ucl": 0, "cal": 13, "tl": 23, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [100], "bch": [], "hc": [{ "et": "2023/07/13 - 8:12:04 PM", "cl": 13, "ucl": 0, "cal": 13, "tl": 23, "lcq": 100, "cb": 0, "tb": 0, "bcq": 0 }, { "et": "2023/07/13 - 8:23:34 PM", "cl": 13, "ucl": 0, "cal": 13, "tl": 23, "lcq": 100, "cb": 0, "tb": 0, "bcq": 0 }] },
-      { "name": "Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.ScriptableObjects.DirectionalTilesScriptableObject", "rp": "ProceduralMapGenerationAssembly_DirectionalTilesScriptableObject.html", "cl": 3, "ucl": 0, "cal": 3, "tl": 146, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [100], "bch": [], "hc": [{ "et": "2023/07/13 - 8:12:04 PM", "cl": 3, "ucl": 0, "cal": 3, "tl": 146, "lcq": 100, "cb": 0, "tb": 0, "bcq": 0 }, { "et": "2023/07/13 - 8:23:34 PM", "cl": 3, "ucl": 0, "cal": 3, "tl": 146, "lcq": 100, "cb": 0, "tb": 0, "bcq": 0 }] },
-      { "name": "Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Structs.DirectionIDStruct", "rp": "ProceduralMapGenerationAssembly_DirectionIDStruct.html", "cl": 6, "ucl": 0, "cal": 6, "tl": 12, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [100], "bch": [], "hc": [{ "et": "2023/07/13 - 8:12:04 PM", "cl": 6, "ucl": 0, "cal": 6, "tl": 12, "lcq": 100, "cb": 0, "tb": 0, "bcq": 0 }, { "et": "2023/07/13 - 8:23:34 PM", "cl": 6, "ucl": 0, "cal": 6, "tl": 12, "lcq": 100, "cb": 0, "tb": 0, "bcq": 0 }] },
-      { "name": "Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Structs.MapBuilderStruct", "rp": "ProceduralMapGenerationAssembly_MapBuilderStruct.html", "cl": 3, "ucl": 0, "cal": 3, "tl": 12, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [100], "bch": [], "hc": [{ "et": "2023/07/13 - 8:12:04 PM", "cl": 3, "ucl": 0, "cal": 3, "tl": 12, "lcq": 100, "cb": 0, "tb": 0, "bcq": 0 }, { "et": "2023/07/13 - 8:23:34 PM", "cl": 3, "ucl": 0, "cal": 3, "tl": 12, "lcq": 100, "cb": 0, "tb": 0, "bcq": 0 }] },
-      { "name": "Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Utilities.ChunkHandler", "rp": "ProceduralMapGenerationAssembly_ChunkHandler.html", "cl": 72, "ucl": 0, "cal": 72, "tl": 113, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [100], "bch": [], "hc": [{ "et": "2023/07/13 - 8:12:04 PM", "cl": 72, "ucl": 0, "cal": 72, "tl": 113, "lcq": 100, "cb": 0, "tb": 0, "bcq": 0 }, { "et": "2023/07/13 - 8:23:34 PM", "cl": 72, "ucl": 0, "cal": 72, "tl": 113, "lcq": 100, "cb": 0, "tb": 0, "bcq": 0 }] },
-      { "name": "Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Utilities.GridCreate", "rp": "ProceduralMapGenerationAssembly_GridCreate.html", "cl": 55, "ucl": 1, "cal": 56, "tl": 87, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [98.2], "bch": [], "hc": [{ "et": "2023/07/13 - 8:12:04 PM", "cl": 55, "ucl": 1, "cal": 56, "tl": 87, "lcq": 98.2, "cb": 0, "tb": 0, "bcq": 0 }, { "et": "2023/07/13 - 8:23:34 PM", "cl": 55, "ucl": 1, "cal": 56, "tl": 87, "lcq": 98.2, "cb": 0, "tb": 0, "bcq": 0 }] },
-      { "name": "Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Utilities.PopulateTilePositions", "rp": "ProceduralMapGenerationAssembly_PopulateTilePositions.html", "cl": 6, "ucl": 6, "cal": 12, "tl": 26, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [50], "bch": [], "hc": [{ "et": "2023/07/13 - 8:12:04 PM", "cl": 6, "ucl": 6, "cal": 12, "tl": 26, "lcq": 50, "cb": 0, "tb": 0, "bcq": 0 }, { "et": "2023/07/13 - 8:23:34 PM", "cl": 6, "ucl": 6, "cal": 12, "tl": 26, "lcq": 50, "cb": 0, "tb": 0, "bcq": 0 }] },
+      { "name": "Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.PathFinding.NewPathFinding", "rp": "ProceduralMapGenerationAssembly_NewPathFinding.html", "cl": 0, "ucl": 114, "cal": 114, "tl": 375, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [0], "bch": [], "hc": [{ "et": "2023/09/05 - 5:53:35 PM", "cl": 0, "ucl": 114, "cal": 114, "tl": 375, "lcq": 0, "cb": 0, "tb": 0, "bcq": 0 }] },
+      { "name": "Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.PathFinding.PathMapBuilder", "rp": "ProceduralMapGenerationAssembly_PathMapBuilder.html", "cl": 0, "ucl": 34, "cal": 34, "tl": 107, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [0], "bch": [], "hc": [{ "et": "2023/09/05 - 5:53:35 PM", "cl": 0, "ucl": 34, "cal": 34, "tl": 107, "lcq": 0, "cb": 0, "tb": 0, "bcq": 0 }] },
+      { "name": "Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Noise.PerlinNoiseGenerator", "rp": "ProceduralMapGenerationAssembly_PerlinNoiseGenerator.html", "cl": 0, "ucl": 13, "cal": 13, "tl": 23, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [0], "bch": [], "hc": [{ "et": "2023/09/05 - 5:53:35 PM", "cl": 0, "ucl": 13, "cal": 13, "tl": 23, "lcq": 0, "cb": 0, "tb": 0, "bcq": 0 }] },
+      { "name": "Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.ScriptableObjects.DirectionalTilesScriptableObject", "rp": "ProceduralMapGenerationAssembly_DirectionalTilesScriptableObject.html", "cl": 0, "ucl": 3, "cal": 3, "tl": 146, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [0], "bch": [], "hc": [{ "et": "2023/09/05 - 5:53:35 PM", "cl": 0, "ucl": 3, "cal": 3, "tl": 146, "lcq": 0, "cb": 0, "tb": 0, "bcq": 0 }] },
+      { "name": "Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Structs.DirectionIDStruct", "rp": "ProceduralMapGenerationAssembly_DirectionIDStruct.html", "cl": 0, "ucl": 6, "cal": 6, "tl": 19, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [0], "bch": [], "hc": [{ "et": "2023/09/05 - 5:53:35 PM", "cl": 0, "ucl": 6, "cal": 6, "tl": 19, "lcq": 0, "cb": 0, "tb": 0, "bcq": 0 }] },
+      { "name": "Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Structs.MapBuilderStruct", "rp": "ProceduralMapGenerationAssembly_MapBuilderStruct.html", "cl": 0, "ucl": 3, "cal": 3, "tl": 16, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [0], "bch": [], "hc": [{ "et": "2023/09/05 - 5:53:35 PM", "cl": 0, "ucl": 3, "cal": 3, "tl": 16, "lcq": 0, "cb": 0, "tb": 0, "bcq": 0 }] },
+      { "name": "Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Utilities.ChunkHandler", "rp": "ProceduralMapGenerationAssembly_ChunkHandler.html", "cl": 0, "ucl": 74, "cal": 74, "tl": 173, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [0], "bch": [], "hc": [{ "et": "2023/09/05 - 5:53:35 PM", "cl": 0, "ucl": 74, "cal": 74, "tl": 173, "lcq": 0, "cb": 0, "tb": 0, "bcq": 0 }] },
+      { "name": "Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Utilities.GridCreate", "rp": "ProceduralMapGenerationAssembly_GridCreate.html", "cl": 0, "ucl": 58, "cal": 58, "tl": 171, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [0], "bch": [], "hc": [{ "et": "2023/09/05 - 5:53:35 PM", "cl": 0, "ucl": 58, "cal": 58, "tl": 171, "lcq": 0, "cb": 0, "tb": 0, "bcq": 0 }] },
+      { "name": "Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Utilities.PopulateTilePositions", "rp": "ProceduralMapGenerationAssembly_PopulateTilePositions.html", "cl": 0, "ucl": 12, "cal": 12, "tl": 46, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [0], "bch": [], "hc": [{ "et": "2023/09/05 - 5:53:35 PM", "cl": 0, "ucl": 12, "cal": 12, "tl": 46, "lcq": 0, "cb": 0, "tb": 0, "bcq": 0 }] },
     ]},
   {
     "name": "SharedAssembly",
     "classes": [
-      { "name": "Assets.SRC.ProceduralMapGeneration.Assets.SRC.Shared.Assets.SRC.Shared.Utilities.GenericUtilities", "rp": "SharedAssembly_GenericUtilities.html", "cl": 9, "ucl": 0, "cal": 9, "tl": 36, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [100], "bch": [], "hc": [{ "et": "2023/07/13 - 8:12:04 PM", "cl": 9, "ucl": 0, "cal": 9, "tl": 36, "lcq": 100, "cb": 0, "tb": 0, "bcq": 0 }, { "et": "2023/07/13 - 8:23:34 PM", "cl": 9, "ucl": 0, "cal": 9, "tl": 36, "lcq": 100, "cb": 0, "tb": 0, "bcq": 0 }] },
-      { "name": "Assets.SRC.ProceduralMapGeneration.Assets.SRC.Shared.Assets.SRC.Shared.Utilities.VectorMath", "rp": "SharedAssembly_VectorMath.html", "cl": 1, "ucl": 0, "cal": 1, "tl": 9, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [100], "bch": [], "hc": [{ "et": "2023/07/13 - 8:12:04 PM", "cl": 1, "ucl": 0, "cal": 1, "tl": 9, "lcq": 100, "cb": 0, "tb": 0, "bcq": 0 }, { "et": "2023/07/13 - 8:23:34 PM", "cl": 1, "ucl": 0, "cal": 1, "tl": 9, "lcq": 100, "cb": 0, "tb": 0, "bcq": 0 }] },
-      { "name": "Assets.SRC.ProceduralMapGeneration.Assets.SRC.Shared.Exceptions.CustomExceptions", "rp": "SharedAssembly_CustomExceptions.html", "cl": 2, "ucl": 0, "cal": 2, "tl": 13, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [100], "bch": [], "hc": [{ "et": "2023/07/13 - 8:12:04 PM", "cl": 2, "ucl": 0, "cal": 2, "tl": 13, "lcq": 100, "cb": 0, "tb": 0, "bcq": 0 }, { "et": "2023/07/13 - 8:23:34 PM", "cl": 2, "ucl": 0, "cal": 2, "tl": 13, "lcq": 100, "cb": 0, "tb": 0, "bcq": 0 }] },
+      { "name": "Assets.SRC.ProceduralMapGeneration.Assets.SRC.Shared.Assets.SRC.Shared.Utilities.GenericUtilities", "rp": "SharedAssembly_GenericUtilities.html", "cl": 0, "ucl": 9, "cal": 9, "tl": 36, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [0], "bch": [], "hc": [{ "et": "2023/09/05 - 5:53:35 PM", "cl": 0, "ucl": 9, "cal": 9, "tl": 36, "lcq": 0, "cb": 0, "tb": 0, "bcq": 0 }] },
+      { "name": "Assets.SRC.ProceduralMapGeneration.Assets.SRC.Shared.Assets.SRC.Shared.Utilities.VectorMath", "rp": "SharedAssembly_VectorMath.html", "cl": 0, "ucl": 30, "cal": 30, "tl": 51, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [0], "bch": [], "hc": [{ "et": "2023/09/05 - 5:53:35 PM", "cl": 0, "ucl": 30, "cal": 30, "tl": 51, "lcq": 0, "cb": 0, "tb": 0, "bcq": 0 }] },
+      { "name": "Assets.SRC.ProceduralMapGeneration.Assets.SRC.Shared.Exceptions.CustomExceptions", "rp": "SharedAssembly_CustomExceptions.html", "cl": 0, "ucl": 2, "cal": 2, "tl": 13, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [0], "bch": [], "hc": [{ "et": "2023/09/05 - 5:53:35 PM", "cl": 0, "ucl": 2, "cal": 2, "tl": 13, "lcq": 0, "cb": 0, "tb": 0, "bcq": 0 }] },
     ]},
 ];
 
-var historicCoverageExecutionTimes = ["2023/07/13 - 8:12:04 PM"];
+var historicCoverageExecutionTimes = [];
 
 var riskHotspotMetrics = [
+      { "name": "Cyclomatic complexity", "explanationUrl": "https://en.wikipedia.org/wiki/Cyclomatic_complexity" },
+      { "name": "NPath complexity", "explanationUrl": "https://modess.io/npath-complexity-cyclomatic-complexity-explained" },
+      { "name": "Crap Score", "explanationUrl": "https://googletesting.blogspot.de/2011/02/this-code-is-crap.html" },
 ];
 
 var riskHotspots = [
+  {
+    "assembly": "ProceduralMapGenerationAssembly", "class": "Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Utilities.ChunkHandler", "reportPath": "ProceduralMapGenerationAssembly_ChunkHandler.html", "methodName": "System.Collections.Generic.List[GameObject] Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Utilities.ChunkHandler::FindChunkNeigbors(System.Single, System.Collections.Generic.List[GameObject])", "methodShortName": "FindChunkNeigbors(...)", "fileIndex": 0, "line": 47,
+    "metrics": [
+      { "value": 10, "exceeded": false },
+      { "value": 0, "exceeded": false },
+      { "value": 110, "exceeded": true },
+    ]},
+  {
+    "assembly": "ProceduralMapGenerationAssembly", "class": "Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Utilities.ChunkHandler", "reportPath": "ProceduralMapGenerationAssembly_ChunkHandler.html", "methodName": "Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Enums.DirectionTypeEnum Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Utilities.ChunkHandler::FindChunkType(Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Structs.NeighborStruct)", "methodShortName": "FindChunkType(...)", "fileIndex": 0, "line": 123,
+    "metrics": [
+      { "value": 10, "exceeded": false },
+      { "value": 0, "exceeded": false },
+      { "value": 110, "exceeded": true },
+    ]},
+  {
+    "assembly": "PlayerControlAssembly", "class": "StarterAssets.FirstPersonController", "reportPath": "PlayerControlAssembly_FirstPersonController.html", "methodName": "System.Void StarterAssets.FirstPersonController::Move()", "methodShortName": "Move()", "fileIndex": 0, "line": 155,
+    "metrics": [
+      { "value": 9, "exceeded": false },
+      { "value": 0, "exceeded": false },
+      { "value": 90, "exceeded": true },
+    ]},
+  {
+    "assembly": "PlayerControlAssembly", "class": "StarterAssets.FirstPersonController", "reportPath": "PlayerControlAssembly_FirstPersonController.html", "methodName": "System.Void StarterAssets.FirstPersonController::JumpAndGravity()", "methodShortName": "JumpAndGravity()", "fileIndex": 0, "line": 202,
+    "metrics": [
+      { "value": 8, "exceeded": false },
+      { "value": 0, "exceeded": false },
+      { "value": 72, "exceeded": true },
+    ]},
+  {
+    "assembly": "SharedAssembly", "class": "Assets.SRC.ProceduralMapGeneration.Assets.SRC.Shared.Assets.SRC.Shared.Utilities.VectorMath", "reportPath": "SharedAssembly_VectorMath.html", "methodName": "UnityEngine.Vector3 Assets.SRC.ProceduralMapGeneration.Assets.SRC.Shared.Assets.SRC.Shared.Utilities.VectorMath::ConvertV2ToV3(UnityEngine.Vector2, Assets.SRC.ProceduralMapGeneration.Assets.SRC.Shared.Assets.SRC.Shared.Enums.VectorMathConvertionEnum)", "methodShortName": "ConvertV2ToV3(...)", "fileIndex": 0, "line": 12,
+    "metrics": [
+      { "value": 8, "exceeded": false },
+      { "value": 0, "exceeded": false },
+      { "value": 72, "exceeded": true },
+    ]},
 ];
 
 var branchCoverageAvailable = true;

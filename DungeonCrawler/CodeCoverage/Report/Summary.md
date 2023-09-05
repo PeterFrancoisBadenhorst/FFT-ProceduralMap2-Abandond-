@@ -1,35 +1,43 @@
 ﻿# Summary
 |||
 |:---|:---|
-| Generated on: | 2023/07/13 - 8:23:35 PM |
-| Parser: | MultiReportParser (122x OpenCoverParser) |
-| Assemblies: | 2 |
-| Classes: | 12 |
-| Files: | 12 |
-| Covered lines: | 306 |
-| Uncovered lines: | 15 |
-| Coverable lines: | 321 |
-| Total lines: | 722 |
-| Line coverage: | 95.3% (306 of 321) |
+| Generated on: | 2023/09/05 - 5:53:35 PM |
+| Parser: | OpenCoverParser |
+| Assemblies: | 3 |
+| Classes: | 19 |
+| Files: | 19 |
+| Covered lines: | 0 |
+| Uncovered lines: | 673 |
+| Coverable lines: | 673 |
+| Total lines: | 1871 |
+| Line coverage: | 0% (0 of 673) |
 | Covered branches: | 0 |
 | Total branches: | 0 |
-| Covered methods: | 47 |
-| Total methods: | 49 |
-| Method coverage: | 95.9% (47 of 49) |
+| Covered methods: | 0 |
+| Total methods: | 110 |
+| Method coverage: | 0% (0 of 110) |
 
 |**Name**|**Covered**|**Uncovered**|**Coverable**|**Total**|**Line coverage**|**Covered**|**Total**|**Branch coverage**|**Covered**|**Total**|**Method coverage**|
 |:---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-|**ProceduralMapGenerationAssembly**|**294**|**15**|**309**|**664**|**95.1%**|**0**|**0**|****|**44**|**46**|**95.6%**|
-|Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.PathFinding.NewPathFinding|108|2|110|188|98.1%|0|0||12|13|92.3%|
-|Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.PathFinding.PathMapBuilder|28|6|34|57|82.3%|0|0||3|4|75%|
-|Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Noise.PerlinNoiseGenerator|13|0|13|23|100%|0|0||1|1|100%|
-|Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.ScriptableObjects.DirectionalTilesScriptableObject|3|0|3|146|100%|0|0||1|1|100%|
-|Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Structs.DirectionIDStruct|6|0|6|12|100%|0|0||12|12|100%|
-|Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Structs.MapBuilderStruct|3|0|3|12|100%|0|0||6|6|100%|
-|Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Utilities.ChunkHandler|72|0|72|113|100%|0|0||3|3|100%|
-|Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Utilities.GridCreate|55|1|56|87|98.2%|0|0||5|5|100%|
-|Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Utilities.PopulateTilePositions|6|6|12|26|50%|0|0||1|1|100%|
-|**SharedAssembly**|**12**|**0**|**12**|**58**|**100%**|**0**|**0**|****|**3**|**3**|**100%**|
-|Assets.SRC.ProceduralMapGeneration.Assets.SRC.Shared.Assets.SRC.Shared.Utilities.GenericUtilities|9|0|9|36|100%|0|0||1|1|100%|
-|Assets.SRC.ProceduralMapGeneration.Assets.SRC.Shared.Assets.SRC.Shared.Utilities.VectorMath|1|0|1|9|100%|0|0||1|1|100%|
-|Assets.SRC.ProceduralMapGeneration.Assets.SRC.Shared.Exceptions.CustomExceptions|2|0|2|13|100%|0|0||1|1|100%|
+|**PlayerControlAssembly**|**0**|**315**|**315**|**695**|**0%**|**0**|**0**|****|**0**|**60**|**0%**|
+|BasicRigidBodyPush|0|13|13|35|0%|0|0||0|3|0%|
+|StarterAssets.FirstPersonController|0|116|116|268|0%|0|0||0|12|0%|
+|StarterAssets.StarterAssetsInputs|0|35|35|80|0%|0|0||0|11|0%|
+|StarterAssets.UICanvasControllerInput|0|12|12|33|0%|0|0||0|4|0%|
+|UIVirtualButton|0|15|15|41|0%|0|0||0|5|0%|
+|UIVirtualJoystick|0|60|60|113|0%|0|0||0|12|0%|
+|UIVirtualTouchZone|0|64|64|125|0%|0|0||0|13|0%|
+|**ProceduralMapGenerationAssembly**|**0**|**317**|**317**|**1076**|**0%**|**0**|**0**|****|**0**|**46**|**0%**|
+|Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.PathFinding.NewPathFinding|0|114|114|375|0%|0|0||0|13|0%|
+|Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.PathFinding.PathMapBuilder|0|34|34|107|0%|0|0||0|4|0%|
+|Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Noise.PerlinNoiseGenerator|0|13|13|23|0%|0|0||0|1|0%|
+|Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.ScriptableObjects.DirectionalTilesScriptableObject|0|3|3|146|0%|0|0||0|1|0%|
+|Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Structs.DirectionIDStruct|0|6|6|19|0%|0|0||0|12|0%|
+|Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Structs.MapBuilderStruct|0|3|3|16|0%|0|0||0|6|0%|
+|Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Utilities.ChunkHandler|0|74|74|173|0%|0|0||0|3|0%|
+|Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Utilities.GridCreate|0|58|58|171|0%|0|0||0|5|0%|
+|Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Utilities.PopulateTilePositions|0|12|12|46|0%|0|0||0|1|0%|
+|**SharedAssembly**|**0**|**41**|**41**|**100**|**0%**|**0**|**0**|****|**0**|**4**|**0%**|
+|Assets.SRC.ProceduralMapGeneration.Assets.SRC.Shared.Assets.SRC.Shared.Utilities.GenericUtilities|0|9|9|36|0%|0|0||0|1|0%|
+|Assets.SRC.ProceduralMapGeneration.Assets.SRC.Shared.Assets.SRC.Shared.Utilities.VectorMath|0|30|30|51|0%|0|0||0|2|0%|
+|Assets.SRC.ProceduralMapGeneration.Assets.SRC.Shared.Exceptions.CustomExceptions|0|2|2|13|0%|0|0||0|1|0%|
