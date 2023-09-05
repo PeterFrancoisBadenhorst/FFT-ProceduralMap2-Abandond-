@@ -38,9 +38,26 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.
             Vector3[] mapGrid = _newPathFinding.NodeGridCreator(grid, GridScale);
             // Create a list of all the points in the map grid.
             List<Vector3> mapTotal = MapTotal(mapGrid);
-              Debug.Log(grid.Length+"| " + mapTotal.Count);
+            // Add branches to the map path.
+            MapTotalFillPercentage = grid.Length / MapTotalFillPercentage;
+            if (MapTotalFillPercentage < 75) MapTotalFillPercentage = 75;
+            int itt = 0;
+            while ( itt <= 4)
+            {
+                if (mapTotal.Count > MapTotalFillPercentage) break;
+
+                Debug.Log(itt+"|"+MapTotalFillPercentage+"|"+mapTotal.Count());
+                itt++;
+                var t = _newPathFinding.NodeGridCreator(grid, GridScale, mapTotal.ToArray());
+                for (int i = 0; i < t.Length; i++)
+                {
+                    mapTotal.Add(t[i]);
+                }
+            }
+            mapTotal = mapTotal.Distinct().ToList();
+
             // Populate the gridRelations list with the GameObjects that were placed in the map.
-            gridRelations = _gridCreate.PlaceGameObjectsAtGridPositions(mapGrid, GridParent);
+            gridRelations = _gridCreate.PlaceGameObjectsAtGridPositions(mapTotal.ToArray(), GridParent);
             // Find the neighboring chunks
             gridRelations = _chunkHandler.FindChunkNeigbors(GridScale, gridRelations);
             gridRelations = _chunkHandler.FindChunkNeigbors(GridScale, gridRelations);

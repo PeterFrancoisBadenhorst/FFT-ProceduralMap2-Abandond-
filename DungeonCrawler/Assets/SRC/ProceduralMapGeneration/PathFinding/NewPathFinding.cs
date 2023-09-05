@@ -154,6 +154,23 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.
             return ReturnPath(grid, scale, ends);
         }
         /**
+         * Creates a grid of the specified size, scale, and grid type.
+         *
+         * @param gridSize The size of the grid.
+         * @param scale The scale of the grid.
+         * @param gridType The type of grid to create.
+         *
+         * @return The grid points.
+         */
+        public Vector3[] NodeGridCreator(Vector3[] grid, float scale, Vector3[] exsistingPath)
+        {
+            // Find the start and end points of the grid.
+            var ends = FindEnds(exsistingPath, grid);   //[0] start [1]end
+
+            // Return the path between the start and end points.
+            return ReturnPath(grid, scale, ends);
+        }
+        /**
         * Creates a list of nodes in a grid, where each node represents the distance to the end point.
         *
         * @param grid The array of points in the grid.
@@ -353,13 +370,13 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.
             // Enter a do-while loop.
             do
             {
-                // Generate two random numbers between 0 and the length of the grid array.
-                pos[0] = grid[random.Next(0, grid.Length)];
-                pos[1] = grid[random.Next(0, grid.Length)];
 
                 // Check if the first and second elements of the pos array are equal.
                 if (pos[0] == pos[1])
                 {
+                    // Generate two random numbers between 0 and the length of the grid array.
+                    pos[0] = grid[random.Next(0, grid.Length)];
+                    pos[1] = grid[random.Next(0, grid.Length)];
                     // Go back to the beginning of the loop.
                     continue;
                 }
@@ -370,6 +387,59 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.
 
             // Return the pos array.
             return pos;
+        }
+        /**
+        * Finds two random points in a grid that are not the same point.
+        *
+        * @param grid The array of points in the grid.
+        *
+        * @return An array of two Vector3 objects that represent the start and end points.
+        */
+        public Vector3[] FindEnds(Vector3[] gridA, Vector3[] gridB)
+        {
+            gridA = Shuffle(gridA);
+            // Create a local variable called pos and initialize it to a new array of Vector3 objects with two elements.
+            Vector3[] pos = new Vector3[]
+            {
+                (gridB[random.Next(0, gridB.Length)]),
+                (gridA[random.Next(0, gridA.Length)])
+            };
+
+            // Enter a do-while loop.
+            do
+            {
+                // Check if the first and second elements of the pos array are equal.
+                if (pos[0] == pos[1])
+                {
+                    gridB = Shuffle(gridB);
+                    // Generate two random numbers between 0 and the length of the grid array.
+                    pos[0] = gridA[random.Next(0, gridA.Length)];
+                    pos[1] = gridB[random.Next(0, gridB.Length)];
+                    // Go back to the beginning of the loop.
+                    continue;
+                }
+                // Break out of the loop.
+                break;
+            } while (true);
+
+            // Return the pos array.
+            return pos;
+        }
+        public Vector3[] Shuffle(Vector3[] array)
+        {
+            System.Random rand = new();
+            Vector3[] shuffledArray = new Vector3[array.Length];
+            array.CopyTo(shuffledArray, 0);
+
+            for (int i = shuffledArray.Length - 1; i > 0; i--)
+            {
+                int j = rand.Next(0, i + 1);
+                Vector3 temp = shuffledArray[i];
+                shuffledArray[i] = shuffledArray[j];
+                shuffledArray[j] = temp;
+            }
+
+            return shuffledArray;
         }
     }
 }

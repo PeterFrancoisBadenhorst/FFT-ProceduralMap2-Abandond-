@@ -703,7 +703,7 @@ MonoBehaviour:
   GridType: 0
   PlayerPrefab: {fileID: 1379769004057763704, guid: 55f4ed126fa5a87458b144fe0c354939,
     type: 3}
-  MapTotalFillPercentage: 30
+  MapTotalFillPercentage: 75
   scriptRef: {fileID: 11400000, guid: 06745c89816422442a2913d5f404ad83, type: 2}
 --- !u!4 &1649667191
 Transform:
