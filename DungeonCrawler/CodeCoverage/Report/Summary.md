@@ -1,21 +1,21 @@
 ﻿# Summary
 |||
 |:---|:---|
-| Generated on: | 2023/09/05 - 5:53:35 PM |
+| Generated on: | 2023/09/05 - 7:23:52 PM |
 | Parser: | OpenCoverParser |
 | Assemblies: | 3 |
 | Classes: | 19 |
 | Files: | 19 |
 | Covered lines: | 0 |
-| Uncovered lines: | 673 |
-| Coverable lines: | 673 |
-| Total lines: | 1871 |
-| Line coverage: | 0% (0 of 673) |
+| Uncovered lines: | 714 |
+| Coverable lines: | 714 |
+| Total lines: | 1939 |
+| Line coverage: | 0% (0 of 714) |
 | Covered branches: | 0 |
 | Total branches: | 0 |
 | Covered methods: | 0 |
-| Total methods: | 110 |
-| Method coverage: | 0% (0 of 110) |
+| Total methods: | 113 |
+| Method coverage: | 0% (0 of 113) |
 
 |**Name**|**Covered**|**Uncovered**|**Coverable**|**Total**|**Line coverage**|**Covered**|**Total**|**Branch coverage**|**Covered**|**Total**|**Method coverage**|
 |:---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
@@ -27,9 +27,9 @@
 |UIVirtualButton|0|15|15|41|0%|0|0||0|5|0%|
 |UIVirtualJoystick|0|60|60|113|0%|0|0||0|12|0%|
 |UIVirtualTouchZone|0|64|64|125|0%|0|0||0|13|0%|
-|**ProceduralMapGenerationAssembly**|**0**|**317**|**317**|**1076**|**0%**|**0**|**0**|****|**0**|**46**|**0%**|
-|Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.PathFinding.NewPathFinding|0|114|114|375|0%|0|0||0|13|0%|
-|Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.PathFinding.PathMapBuilder|0|34|34|107|0%|0|0||0|4|0%|
+|**ProceduralMapGenerationAssembly**|**0**|**358**|**358**|**1144**|**0%**|**0**|**0**|****|**0**|**49**|**0%**|
+|Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.PathFinding.NewPathFinding|0|145|145|445|0%|0|0||0|16|0%|
+|Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.PathFinding.PathMapBuilder|0|44|44|105|0%|0|0||0|4|0%|
 |Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Noise.PerlinNoiseGenerator|0|13|13|23|0%|0|0||0|1|0%|
 |Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.ScriptableObjects.DirectionalTilesScriptableObject|0|3|3|146|0%|0|0||0|1|0%|
 |Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.Structs.DirectionIDStruct|0|6|6|19|0%|0|0||0|12|0%|
