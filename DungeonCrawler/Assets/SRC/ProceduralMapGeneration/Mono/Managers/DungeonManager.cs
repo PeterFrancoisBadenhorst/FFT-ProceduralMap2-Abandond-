@@ -19,7 +19,7 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.ProceduralMapGeneration.
         public DirectionalTilesScriptableObject scriptRef;
         private readonly PathMapBuilder _pathMapBuilder = new();
 
-        private void OnEnable() => _pathMapBuilder.CreateMap(GridSize, GridScale, GridParent.transform, scriptRef, MapTotalFillPercentage, GridType);
+        private void OnEnable() => _pathMapBuilder.CreateMap(GridSize, GridScale, GridParent.transform, scriptRef, MapTotalFillPercentage, GridType, PlayerPrefab);
 
     }
 }
