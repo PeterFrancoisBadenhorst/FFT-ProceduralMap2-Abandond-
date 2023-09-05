@@ -1,6 +1,5 @@
 using FluentAssertions.Execution;
 using System.Collections;
-using System.Diagnostics.CodeAnalysis;
 using static System.FormattableString;
 
 namespace FluentAssertions.Equivalency.Steps
