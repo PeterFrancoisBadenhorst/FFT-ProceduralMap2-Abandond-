@@ -1,13 +1,13 @@
 //#define DEBUG_IMPORTER
 
+using Noesis;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.Rendering;
-using UnityEditor;
-using Noesis;
 using UnityEngine.Video;
 
 [CustomEditor(typeof(NoesisXaml))]
-public class NoesisXamlEditor: Editor
+public class NoesisXamlEditor : Editor
 {
     private Noesis.View _viewPreview;
     private Noesis.View _viewPreviewGUI;
@@ -114,7 +114,7 @@ public class NoesisXamlEditor: Editor
 
         bool enabled = UnityEngine.GUI.enabled;
         UnityEngine.GUI.enabled = true;
-        EditorGUILayout.BeginFoldoutHeaderGroup(true, "XAML Dependencies", EditorStyles.label); 
+        EditorGUILayout.BeginFoldoutHeaderGroup(true, "XAML Dependencies", EditorStyles.label);
 
         _showTextures = EditorGUILayout.Foldout(_showTextures, $"Textures ({xaml.textures.Length})", false);
         if (_showTextures && xaml.textures != null)
@@ -263,15 +263,15 @@ public class NoesisXamlEditor: Editor
                 switch (Event.current.type)
                 {
                     case UnityEngine.EventType.MouseDown:
-                    {
-                        _viewPreview.MouseButtonDown(x, y, button);
-                        break;
-                    }
+                        {
+                            _viewPreview.MouseButtonDown(x, y, button);
+                            break;
+                        }
                     case UnityEngine.EventType.MouseUp:
-                    {
-                        _viewPreview.MouseButtonUp(x, y, button);
-                        break;
-                    }
+                        {
+                            _viewPreview.MouseButtonUp(x, y, button);
+                            break;
+                        }
                 }
             }
         }
@@ -325,9 +325,9 @@ public class NoesisXamlEditor: Editor
 
             if (_viewPreviewGUI != null && _viewPreviewGUI.Content != null)
             {
-                #if DEBUG_IMPORTER
+#if DEBUG_IMPORTER
                     Debug.Log($"=> RenderStaticPreview {assetPath}");
-                #endif
+#endif
 
                 RenderTexture rt = RenderPreview(_viewPreviewGUI, width, height, 0.0);
 

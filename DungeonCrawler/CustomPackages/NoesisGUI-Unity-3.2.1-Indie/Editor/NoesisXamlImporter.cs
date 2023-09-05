@@ -1,13 +1,13 @@
 //#define DEBUG_IMPORTER
 
-using UnityEditor;
-using UnityEngine;
-using UnityEditor.AssetImporters;
-using UnityEngine.Video;
 using System;
-using System.Linq;
-using System.IO;
 using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using UnityEditor;
+using UnityEditor.AssetImporters;
+using UnityEngine;
+using UnityEngine.Video;
 
 [ScriptedImporter(1, "xaml")]
 class NoesisXamlImporter : ScriptedImporter
@@ -67,9 +67,9 @@ class NoesisXamlImporter : ScriptedImporter
 
         if (!CachedDependencies.TryGetValue(path, out deps) || deps.timestamp != timestamp)
         {
-        #if DEBUG_IMPORTER
+#if DEBUG_IMPORTER
             Debug.Log($"=> Dependencies {path}");
-        #endif
+#endif
 
             deps = new Dependencies();
             deps.items = new List<Dependency>();
@@ -89,13 +89,13 @@ class NoesisXamlImporter : ScriptedImporter
 
                         if (type == Noesis.XamlDependencyType.Filename)
                         {
-                            deps.items.Add(new Dependency{ type = Dependency.Type.File, uri = uri});
+                            deps.items.Add(new Dependency { type = Dependency.Type.File, uri = uri });
                         }
                         else if (type == Noesis.XamlDependencyType.Font)
                         {
                             foreach (var font in FindFonts(uri))
                             {
-                                deps.items.Add(new Dependency{ type = Dependency.Type.Font, uri = font});
+                                deps.items.Add(new Dependency { type = Dependency.Type.Font, uri = font });
                             }
                         }
                         else if (type == Noesis.XamlDependencyType.UserControl)
@@ -114,7 +114,7 @@ class NoesisXamlImporter : ScriptedImporter
                                 {
                                     if (Path.GetFileNameWithoutExtension(effect) == uri.Replace("Effect", ""))
                                     {
-                                        deps.items.Add(new Dependency{ type = Dependency.Type.Shader, uri = effect});
+                                        deps.items.Add(new Dependency { type = Dependency.Type.Shader, uri = effect });
                                         break;
                                     }
                                 }
@@ -133,7 +133,7 @@ class NoesisXamlImporter : ScriptedImporter
                                 {
                                     if (Path.GetFileNameWithoutExtension(brush) == uri.Replace("Brush", ""))
                                     {
-                                        deps.items.Add(new Dependency{ type = Dependency.Type.Shader, uri = brush});
+                                        deps.items.Add(new Dependency { type = Dependency.Type.Shader, uri = brush });
                                         break;
                                     }
                                 }
@@ -154,7 +154,7 @@ class NoesisXamlImporter : ScriptedImporter
                                     {
                                         if (xaml != path)
                                         {
-                                            deps.items.Add(new Dependency{ type = Dependency.Type.UserControl, uri = xaml});
+                                            deps.items.Add(new Dependency { type = Dependency.Type.UserControl, uri = xaml });
                                         }
 
                                         break;
@@ -387,9 +387,9 @@ class NoesisXamlImporter : ScriptedImporter
     {
         NoesisUnity.InitCore();
 
-        #if DEBUG_IMPORTER
+#if DEBUG_IMPORTER
             Debug.Log($"=> Import {ctx.assetPath}");
-        #endif
+#endif
 
         NoesisXaml xaml = (NoesisXaml)ScriptableObject.CreateInstance<NoesisXaml>();
         xaml.uri = ctx.assetPath;
@@ -415,7 +415,7 @@ class NoesisXamlImporter : ScriptedImporter
         xaml.videos = videos.Select(x => new NoesisXaml.Video { uri = AssetDatabase.GetAssetPath(x), video = x }).ToArray();
         xaml.rives = rives.Select(x => new NoesisXaml.Rive { uri = AssetDatabase.GetAssetPath(x), rive = x }).ToArray();
         xaml.fonts = fonts.Select(x => new NoesisXaml.Font { uri = AssetDatabase.GetAssetPath(x), font = x }).ToArray();
-        xaml.shaders = shaders.Select(x => new NoesisXaml.Shader { uri = Path.GetFileName(AssetDatabase.GetAssetPath(x)), shader = x} ).ToArray();
+        xaml.shaders = shaders.Select(x => new NoesisXaml.Shader { uri = Path.GetFileName(AssetDatabase.GetAssetPath(x)), shader = x }).ToArray();
         xaml.RegisterDependencies();
 
         if (ctx.assetPath.StartsWith("Assets/") && root != "ResourceDictionary")

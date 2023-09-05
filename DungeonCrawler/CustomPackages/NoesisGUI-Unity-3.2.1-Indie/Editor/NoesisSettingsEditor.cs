@@ -1,10 +1,9 @@
-using UnityEngine;
-using UnityEditor;
 using System.Collections.Generic;
-using System.Runtime.InteropServices;
+using UnityEditor;
+using UnityEngine;
 
 [CustomEditor(typeof(NoesisSettings))]
-public class NoesisSettingsEditor: Editor
+public class NoesisSettingsEditor : Editor
 {
     public override void OnInspectorGUI()
     {
@@ -31,7 +30,7 @@ public class NoesisSettingsEditor: Editor
             GUI.skin.GetStyle("HelpBox").richText = true;
             EditorGUILayout.HelpBox("License not set. Get one at <a>https://www.noesisengine.com/trial</a>", MessageType.Warning);
             GUI.skin.GetStyle("HelpBox").richText = richText;
-            EditorGUIUtility.AddCursorRect(  GUILayoutUtility.GetLastRect(), MouseCursor.Link);
+            EditorGUIUtility.AddCursorRect(GUILayoutUtility.GetLastRect(), MouseCursor.Link);
 
             if (Event.current.type == EventType.MouseDown && GUILayoutUtility.GetLastRect().Contains(Event.current.mousePosition))
             {
@@ -180,10 +179,10 @@ public class NoesisSettingsEditor: Editor
                 }
             },
 
-            keywords = new HashSet<string>(new[] { "License Name", "License Key", "Application Resources", 
+            keywords = new HashSet<string>(new[] { "License Name", "License Key", "Application Resources",
                 "Default Font", "Default Font Size", "Default Font Weight", "Default Font Stretch", "Default Font Style",
                 "Glyph Texture Size", "Offscreen Sample Count", "Offscreen Init Surfaces", "Offscreen Max Surfaces",
-                "Linear Rendering", "Preview Enabled", "Log Verbosity", 
+                "Linear Rendering", "Preview Enabled", "Log Verbosity",
                 "AppStarting", "Arrow", "ArrowCD", "Cross", "Hand", "Help", "IBeam", "No", "None", "Pen", "ScrollAll",
                 "ScrollE", "ScrollN", "ScrollNE", "ScrollNS", "ScrollNW", "ScrollS", "ScrollSE", "ScrollSW",
                 "ScrollW", "ScrollWE", "SizeAll", "SizeNESW", "SizeNS", "SizeNWSE","SizeWE", "UpArrow", "Wait" })

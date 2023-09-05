@@ -1,7 +1,6 @@
+using Noesis;
 using System;
 using System.Runtime.InteropServices;
-using System.Text;
-using Noesis;
 using UnityEditor;
 
 [InitializeOnLoad]
@@ -42,7 +41,7 @@ public class NoesisLangServer
             }
         };
     }
-    
+
     private static bool _isInitialized = false;
     private static bool _isDisabled = false;
 

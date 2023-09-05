@@ -1,9 +1,9 @@
-using UnityEngine;
-using UnityEditor;
 using System;
-using System.Linq;
 using System.IO;
+using System.Linq;
 using System.Text.RegularExpressions;
+using UnityEditor;
+using UnityEngine;
 
 [InitializeOnLoad]
 public class NoesisUpdater

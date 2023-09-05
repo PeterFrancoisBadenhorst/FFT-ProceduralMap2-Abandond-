@@ -1,8 +1,8 @@
-using UnityEngine;
-using System.IO;
 using System;
-using UnityEditor;
+using System.IO;
 using System.Linq;
+using UnityEditor;
+using UnityEngine;
 
 public class NoesisMenuBlend
 {
@@ -239,6 +239,6 @@ public class NoesisMenuBlend
     private static string Sanitize(string s)
     {
         // Uses '_' for invalid symbols
-        return string.Join("", s.AsEnumerable().Select(c => char.IsLetter(c) || char.IsDigit(c) ? c.ToString() : "_" ));
+        return string.Join("", s.AsEnumerable().Select(c => char.IsLetter(c) || char.IsDigit(c) ? c.ToString() : "_"));
     }
 }

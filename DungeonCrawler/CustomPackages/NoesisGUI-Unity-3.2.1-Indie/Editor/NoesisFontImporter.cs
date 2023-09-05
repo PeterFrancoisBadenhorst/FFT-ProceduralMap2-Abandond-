@@ -1,18 +1,17 @@
 //#define DEBUG_IMPORTER
 
-using UnityEngine;
-using UnityEditor;
-using UnityEditor.AssetImporters;
 using System.IO;
+using UnityEditor.AssetImporters;
+using UnityEngine;
 
 [ScriptedImporter(2, null, new string[] { "ttf", "otf", "ttc" })]
 class NoesisFontImporter : ScriptedImporter
 {
     public override void OnImportAsset(AssetImportContext ctx)
     {
-        #if DEBUG_IMPORTER
+#if DEBUG_IMPORTER
             Debug.Log($"=> Import {ctx.assetPath}");
-        #endif
+#endif
 
         NoesisFont font = (NoesisFont)ScriptableObject.CreateInstance<NoesisFont>();
         font.uri = ctx.assetPath;
