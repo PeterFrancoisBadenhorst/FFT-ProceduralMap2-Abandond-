@@ -8,6 +8,7 @@ namespace Assets.SRC.ProceduralMapGeneration.Assets.SRC.Shared.mono
     {
         public List<GameObject> PropCollections;
         [ExcludeFromCoverage]
+        [System.Obsolete]
         private void Awake()
         {
             Instantiate(PropCollections[Random.RandomRange(0, PropCollections.Count - 1)], this.transform);
