@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3249764859209804108}
   - component: {fileID: 9005051826565381932}
+  - component: {fileID: 3656174497643164510}
   m_Layer: 3
   m_Name: Reflection Probe
   m_TagString: Untagged
@@ -65,3 +66,16 @@ ReflectionProbe:
   m_UseOcclusionCulling: 1
   m_Importance: 1
   m_CustomBakedTexture: {fileID: 0}
+--- !u!65 &3656174497643164510
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1891273793004132582}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 15, y: 5, z: 15}
+  m_Center: {x: 0, y: 0, z: 0}
